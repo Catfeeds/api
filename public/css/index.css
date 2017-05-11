@@ -1,0 +1,32 @@
+img{
+	display: block;
+	width: 100%;
+}
+.position{
+	position: absolute;
+	left: 0%;
+	right: 0%;
+	margin: auto;
+}
+.page{
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	bottom: 0%;
+	background: url(../img/3.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.text{
+	width: 56%;
+	top: 24%;
+}
+.center{
+	width: 68%;
+	top: 41%;
+}
+.btm{
+	width: 16%;
+	top: 66%;
+}
