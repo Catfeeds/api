@@ -13,6 +13,9 @@
 </head>
 <body>
 <div class="page position">
+    <div class="logo">
+        <img src="{{asset('img/logo.png')}}"/>
+    </div>
     <audio id="audio" preload>
         <source src="{{asset($path)}}"></source>
     </audio>

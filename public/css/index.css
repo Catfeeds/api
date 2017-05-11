@@ -24,9 +24,15 @@ img{
 }
 .center{
 	width: 65%;
-	top: 41%;
+	top: 40%;
 }
 .btm{
 	width: 14%;
 	top: 68%;
+}
+.logo{
+	width: 18%;
+	position: absolute;
+	left:8%;
+	top: 5%;
 }
