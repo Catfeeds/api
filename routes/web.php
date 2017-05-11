@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/test', function () {
+    return view('test');
+});
+
+/*
+ * 科思创项目
+ */
+
+Route::get('/audios/{audio}','Ksc\\AudioController@index');
