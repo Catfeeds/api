@@ -26,7 +26,7 @@
         <img src="{{asset('img/4_03.png')}}"/>
     </div>
     <div class="btm position">
-        <img id="playBtm" src="{{asset('img/2_03.png')}}"/>
+        <img id="playBtm" src="{{asset('img/audioBtn.png')}}"/>
     </div>
 </div>
 
