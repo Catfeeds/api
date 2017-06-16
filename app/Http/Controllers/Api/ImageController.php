@@ -15,6 +15,6 @@ class ImageController extends Controller
         ]);
         $path = Storage::disk('public_path')->putFile('face', $request->file('image'));
 
-        return env('APP_URL').'/'.$path;
+        return env('upload_url').'/'.$path;
     }
 }
