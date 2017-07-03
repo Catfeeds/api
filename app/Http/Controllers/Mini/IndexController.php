@@ -25,7 +25,14 @@ class IndexController extends Controller
         $session_key = $res->session_key;
 //        $run_data = $this->mini->encryptor->decryptData($session_key, $iv, $encryptedrun);
 //        return $run_data;
-        $user_data = $this->mini->encryptor->decryptData($session_key, $iv, $encrypteduser);
-        return $user_data;
+//        $user_data = $this->mini->encryptor->decryptData($session_key, $iv, $encrypteduser);
+//        return $user_data;
+
+        $decrypted = openssl_decrypt(
+            base64_decode($encryptedrun, true), 'aes-128-cbc', base64_decode($session_key, true),
+            OPENSSL_RAW_DATA | OPENSSL_NO_PADDING, base64_decode($iv, true)
+        );
+        $result = json_decode($decrypted, true);
+        return $result;
     }
 }
