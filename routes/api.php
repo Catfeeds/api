@@ -20,3 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('audio/upload', 'Api\\AudioController@upload');
 
 Route::post('image/upload', 'Api\\ImageController@upload');
+
+Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function (){
+    Route::get('/index', 'IndexController@index');
+});
