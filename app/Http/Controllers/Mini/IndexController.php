@@ -23,7 +23,7 @@ class IndexController extends Controller
         $encrypteduser = $request->input('encrypteduser');
         $res = $this->mini->sns->getSessionKey($code);
         $session_key = $res->session_key;
-        return $session_key;
-//        $this->mini->encryptor->decryptData($request);
+        $run_data = $this->mini->encryptor->decryptData($session_key, $iv, $encryptedrun);
+        return $run_data;
     }
 }
