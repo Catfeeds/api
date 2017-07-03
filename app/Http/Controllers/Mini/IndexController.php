@@ -17,8 +17,13 @@ class IndexController extends Controller
 
     public function index(Request $request)
     {
-        $val = $this->mini->sns->getSessionKey($request->code);
-
-        return $val->toJson();
+        $iv = $request->input('iv');
+        $code = $request->input('code');
+        $encryptedrun = $request->input('encryptedrun');
+        $encrypteduser = $request->input('encrypteduser');
+        $res = $this->mini->sns->getSessionKey($code);
+        $session_key = $res->session_key;
+        return $session_key;
+//        $this->mini->encryptor->decryptData($request);
     }
 }
