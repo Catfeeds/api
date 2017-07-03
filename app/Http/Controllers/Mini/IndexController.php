@@ -19,6 +19,6 @@ class IndexController extends Controller
     {
         $val = $this->mini->sns->getSessionKey($request->code);
 
-        return $val;
+        return $val->toJson();
     }
 }
