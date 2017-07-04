@@ -19,11 +19,12 @@ class IndexController extends Controller
     {
         $iv = $request->input('iv');
         $code = $request->input('code');
+        $run_iv = $request->input('runiv');
         $encryptedrun = $request->input('encryptedrun');
         $encrypteduser = $request->input('encrypteduser');
         $res = $this->mini->sns->getSessionKey($code);
         $session_key = $res->session_key;
-        $run_data = $this->mini->encryptor->decryptData($session_key, '', $encryptedrun);
+        $run_data = $this->mini->encryptor->decryptData($session_key, $run_iv, $encryptedrun);
         return $run_data;
 //        $user_data = $this->mini->encryptor->decryptData($session_key, $iv, $encrypteduser);
 //        return $user_data;
