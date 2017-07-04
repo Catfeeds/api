@@ -22,12 +22,15 @@ class IndexController extends Controller
         $run_iv = $request->input('runiv');
         $encryptedrun = $request->input('encryptedrun');
         $encrypteduser = $request->input('encrypteduser');
+        //
         $res = $this->mini->sns->getSessionKey($code);
         $session_key = $res->session_key;
         $run_data = $this->mini->encryptor->decryptData($session_key, $run_iv, $encryptedrun);
-        return last($run_data['stepInfoList']);
-//        $user_data = $this->mini->encryptor->decryptData($session_key, $iv, $encrypteduser);
-//        return $user_data;
+        $last_run_data = last($run_data['stepInfoList']); //取得最近一天的步数
+
+
+        $user_data = $this->mini->encryptor->decryptData($session_key, $iv, $encrypteduser);
+        return \GuzzleHttp\json_encode($run_data);
 
 //        $decrypted = openssl_decrypt(
 //            base64_decode($encryptedrun, true), 'aes-128-cbc', base64_decode($session_key, true),
