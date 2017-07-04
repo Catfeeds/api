@@ -55,7 +55,7 @@ class IndexController extends Controller
             $group->save();
 
             //查询所属群里的所有用户
-            $users = Group_user::select('id', 'openid', 'nickname', 'avatar', 'steps')
+            $users = Group_user::select('openid', 'nickname', 'avatar', 'steps')
                 ->where('group_id', $share_user->group_id)
                 ->orderBy('steps', 'desc')
                 ->get()
@@ -76,7 +76,7 @@ class IndexController extends Controller
             $group->save();
         }
         //查询所属群里的所有用户
-        $users = Group_user::select('id', 'openid', 'nickname', 'avatar', 'steps')
+        $users = Group_user::select('openid', 'nickname', 'avatar', 'steps')
             ->where('group_id', $user->group_id)
             ->orderBy('steps', 'desc')
             ->get()
