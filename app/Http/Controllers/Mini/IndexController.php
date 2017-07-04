@@ -59,7 +59,10 @@ class IndexController extends Controller
                 ->where('group_id', $share_user->group_id)
                 ->orderBy('steps', 'desc')
                 ->get()
-                ->toArray();
+                ->all();
+            $users = [
+                'data' => $users
+            ];
             $users = array_add($users, 'user_openid', $user_data['openId']);
             return response()->json($users);
         }
