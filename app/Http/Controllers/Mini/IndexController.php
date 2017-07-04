@@ -75,5 +75,13 @@ class IndexController extends Controller
             $group->steps += $sub_step;
             $group->save();
         }
+        //查询所属群里的所有用户
+        $users = Group_user::select('id', 'openid', 'nickname', 'avatar', 'steps')
+            ->where('group_id', $user->group_id)
+            ->orderBy('steps', 'desc')
+            ->get()
+            ->toArray();
+        $users = array_add($users, 'user_openid', $user_data['openId']);
+        return response()->json($users);
     }
 }
