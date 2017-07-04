@@ -25,7 +25,7 @@ class IndexController extends Controller
         $res = $this->mini->sns->getSessionKey($code);
         $session_key = $res->session_key;
         $run_data = $this->mini->encryptor->decryptData($session_key, $run_iv, $encryptedrun);
-        var_dump($run_data);
+        return last($run_data['stepInfoList']);
 //        $user_data = $this->mini->encryptor->decryptData($session_key, $iv, $encrypteduser);
 //        return $user_data;
 
