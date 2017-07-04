@@ -81,6 +81,9 @@ class IndexController extends Controller
             ->orderBy('steps', 'desc')
             ->get()
             ->all();
+        $users = [
+            'data' => $users
+        ];
         $users = array_add($users, 'user_openid', $user_data['openId']);
         return response()->json($users);
     }
