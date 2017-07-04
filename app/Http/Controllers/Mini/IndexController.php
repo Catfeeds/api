@@ -30,12 +30,14 @@ class IndexController extends Controller
         $res = $this->mini->sns->getSessionKey($code);
         $session_key = $res->session_key;
         $run_data = $this->mini->encryptor->decryptData($session_key, $run_iv, $encrypted_run);
-        $last_run_data = last($run_data['stepInfoList']); //取得最近一天的步数
+        $last_run_data = last($run_data['stepInfoList']); //取得最近一天的运动数据
 
         //解密用户数据
         $user_data = $this->mini->encryptor->decryptData($session_key, $iv, $encrypted_user);
 
         $user = Group_user::where('openid', $user_data['openId'])->first();
+
+        //判断是否是新用户
         if (is_null($user)) {
             //查询分享人所属群，保存新用户数据
             $share_user = Group_user::where('openid', $share_openid)->first();
@@ -53,13 +55,25 @@ class IndexController extends Controller
             $group->save();
 
             //查询所属群里的所有用户
-            $users = Group_user::select('id','openid','nickname', 'avatar', 'steps')
+            $users = Group_user::select('id', 'openid', 'nickname', 'avatar', 'steps')
                 ->where('group_id', $share_user->group_id)
+                ->orderBy('steps', 'desc')
                 ->get()
                 ->toArray();
+            $users = array_add($users, 'user_openid', $user_data['openId']);
             return response()->json($users);
-
         }
-        return $user;
+        //判断老用户步数是否更新
+        if ($user->steps < $last_run_data['step']) {
+            $sub_step = $last_run_data['step'] - $user->steps;
+            //更新用户步数
+            $user->steps = $last_run_data['step'];
+            $user->save();
+
+            //同步更新群总步数
+            $group = Group::find($user->group_id);
+            $group->steps += $sub_step;
+            $group->save();
+        }
     }
 }
