@@ -56,7 +56,7 @@ class IndexController extends Controller
             $users = Group_user::select('openid','nickname', 'avatar', 'steps')
                 ->where('group_id', $share_user->group_id)
                 ->get();
-            return $users->toJson();
+            return \GuzzleHttp\json_encode($users);
         }
         return $user;
     }
