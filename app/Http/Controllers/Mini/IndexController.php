@@ -30,7 +30,7 @@ class IndexController extends Controller
 
 
         $user_data = $this->mini->encryptor->decryptData($session_key, $iv, $encrypteduser);
-        return \GuzzleHttp\json_encode($run_data);
+        var_dump(\GuzzleHttp\json_encode($user_data));
 
 //        $decrypted = openssl_decrypt(
 //            base64_decode($encryptedrun, true), 'aes-128-cbc', base64_decode($session_key, true),
