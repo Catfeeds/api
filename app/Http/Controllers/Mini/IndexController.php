@@ -57,11 +57,8 @@ class IndexController extends Controller
                 ->where('group_id', $share_user->group_id)
                 ->get()
                 ->toArray();
-//            return response()->json($users);
-            return response()->json([
-                'name' => 'Abigail',
-                'state' => 'CA'
-            ]);
+            return response()->json($users);
+
         }
         return $user;
     }
