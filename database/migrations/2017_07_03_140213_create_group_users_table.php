@@ -16,7 +16,7 @@ class CreateGroupUsersTable extends Migration
         Schema::create('group_users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('openid',150)->unique();
-            $table->text('avatar')->default('http://api.touchworld-sh.com:8000/mini/abm.jpg');
+            $table->text('avatar')->nullable();
             $table->string('nickname', 50);
             $table->mediumInteger('steps')->default(0);
             $table->boolean('is_leader')->default(0);

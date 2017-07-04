@@ -16,9 +16,9 @@ class CreateGroupsTable extends Migration
         Schema::create('groups', function (Blueprint $table) {
             $table->increments('id');
             $table->string('gname',30)->unique();
-            $table->text('avatar')->default('http://api.touchworld-sh.com:8000/mini/abm.jpg');
-            $table->mediumInteger('steps');
-            $table->mediumInteger('step_aim');
+            $table->text('avatar')->nullable();
+            $table->mediumInteger('steps')->default(0);
+            $table->mediumInteger('step_aim')->default(1000);
             $table->text('introduction');
             $table->timestamps();
         });
