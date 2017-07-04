@@ -80,8 +80,13 @@ class IndexController extends Controller
             ->where('group_id', $user->group_id)
             ->orderBy('steps', 'desc')
             ->get()
-            ->toArray();
+            ->all();
         $users = array_add($users, 'user_openid', $user_data['openId']);
         return response()->json($users);
+    }
+
+    public function group(Request $request)
+    {
+
     }
 }
