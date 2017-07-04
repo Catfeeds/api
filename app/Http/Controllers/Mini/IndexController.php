@@ -40,7 +40,7 @@ class IndexController extends Controller
             //查询分享人所属群，保存新用户数据
             $share_user = Group_user::where('openid', $share_openid)->first();
             $user = new Group_user;
-            $user->openid = $user_data['openid'];
+            $user->openid = $user_data['openId'];
             $user->nickname = $user_data['nickName'];
             $user->avatar = $user_data['avatarUrl'];
             $user->steps = $last_run_data['step'];
