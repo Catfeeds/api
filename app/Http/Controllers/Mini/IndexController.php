@@ -19,6 +19,7 @@ class IndexController extends Controller
 
     public function index(Request $request)
     {
+
         $iv = $request->input('iv');
         $code = $request->input('code');
         $run_iv = $request->input('run_iv');
@@ -93,6 +94,26 @@ class IndexController extends Controller
 
     public function group(Request $request)
     {
+        $openid = $request->input('openid');
+        //获取所属群
+        $group_id = Group_user::select('group_id')
+            ->where('openid', $openid)
+            ->first();
+        $group = Group::select('gname', 'steps', 'avatar')->find($group_id);
+
+        //获取前100个群
+        $groups = Group::select('gname', 'steps', 'avatar')
+            ->orderBy('steps', 'desc')
+            ->limit(200)
+            ->get();
+        $arr = [
+            'groups' => $groups->all(),
+            'user_gname' => $group->gname,
+            'user_steps' => $group->steps,
+            'user_avatar' => $group->avatar
+        ];
+
+        return response()->json($arr);
 
     }
 }
