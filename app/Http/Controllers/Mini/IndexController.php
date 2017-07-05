@@ -96,11 +96,10 @@ class IndexController extends Controller
     {
         $openid = $request->input('openid');
         //获取所属群
-        $group_id = Group_user::select('group_id')
+        $group_user = Group_user::select('group_id')
             ->where('openid', $openid)
             ->first();
-        return $group_id;
-        $group = Group::find($group_id);
+        $group = Group::find($group_user->group_id);
 
         //获取前100个群
         $groups = Group::select('gname', 'steps', 'avatar')
