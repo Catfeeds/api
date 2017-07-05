@@ -26,4 +26,5 @@ Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
     Route::get('/groups', 'IndexController@group');
     Route::get('/setting', 'IndexController@setting_info');
     Route::post('/setting', 'IndexController@setting');
+    Route::get('/setting2', 'IndexController@setting2');
 });

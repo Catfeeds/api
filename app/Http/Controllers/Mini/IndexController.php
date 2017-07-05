@@ -198,4 +198,30 @@ class IndexController extends Controller
 
         return 'true';
     }
+    public function setting2(SettingRequest $request)
+    {
+        $openid = $request->input('openid');
+        $avatar = $request->file('avatar');
+        $gname = $request->input('gname');
+        $introduction = $request->input('introduction');
+        $step_aim = $request->input('step_aim');
+
+        //获取所属群
+        $group_user = Group_user::select('group_id')
+            ->where('openid', $openid)
+            ->first();
+        $group = Group::find($group_user->group_id);
+        //判断是否修改了群头像
+        if (!is_null($avatar)){
+            $path = Storage::disk('public_path')->putFile('mini', $avatar);
+            $path = env('upload_url').'/'.$path;
+            $group->avatar = $path;
+        }
+        $group->step_aim = $step_aim;
+        $group->introduction = $introduction;
+        $group->gname = $gname;
+        $group->save();
+
+        return 'true';
+    }
 }

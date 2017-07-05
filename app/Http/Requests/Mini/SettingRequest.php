@@ -38,7 +38,7 @@ class SettingRequest extends FormRequest
             'openid.required' => '非法请求',
             'gname.required' => '群名不能为空',
             'gname.between' => '群名长度在2到10之间',
-
+            'avatar.image' => '错误的图片格式',
             'step_aim.required' => '步数目标不能为空',
             'step_aim.numeric' => '请输入正确的步数目标'
         ];
