@@ -188,7 +188,7 @@ class IndexController extends Controller
         //判断是否修改了群头像
         if (!is_null($avatar)){
             $path = Storage::disk('public_path')->putFile('mini', $avatar);
-            $path = env('APP_URL').'/'.$path;
+            $path = env('upload_url').'/'.$path;
             $group->avatar = $path;
         }
         $group->step_aim = $step_aim;
