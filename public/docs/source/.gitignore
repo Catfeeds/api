@@ -1,2 +1,8 @@
 /_tmp/
 /node_modules/
+config.php
+.compare.md
+includes
+assets
+gulpfile.js
+package.json

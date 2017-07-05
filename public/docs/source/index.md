@@ -13,13 +13,13 @@ toc_footers:
 - <a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a>
 ---
 <!-- START_INFO -->
-# Info
+# 注意事项
 
-Welcome to the generated API reference.
-[Get Postman Collection](http://api.dev/docs/collection.json)
+ 接口地址为： `http://api.touchworld-sh.com:8000`
+
 <!-- END_INFO -->
 
-#general
+#主体
 <!-- START_6d6e66eb819571cd6b9d61a5318a8cec -->
 ## 微信程序初始化接口
 
@@ -64,7 +64,16 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    'data' : [
+        [
+            'openid':'xxxxxxx',
+            'nickname': 'xxxx',
+            'avatar': 'http://api.touchworld-sh.com:8000/img.jpg'
+        ]
+    ],
+    'user_if'
+}
 ```
 
 ### HTTP Request
@@ -76,12 +85,21 @@ null
 
 Parameter | Type | Status | Description
 --------- | ------- | ------- | ------- | -----------
-    code | string |  required  | 
-    encrypted_user | string |  required  | 
-    iv | string |  required  | 
-    encrypted_run | string |  required  | 
-    run_iv | string |  required  | 
-    share_openid | string |  required  | 
+    code | string |  required  | 通过wx.login获取，用于兑换sessionKey
+    encrypted_user | string |  required  | 通过`wx.getUserInfo`获取，用户加密信息
+    iv | string |  required  | 通过 `wx.getUserInfo`获取，用于解密
+    encrypted_run | string |  required  | 通过`wx.getWeRunData`获取，微信运动加密数据
+    run_iv | string |  required  | 通过`wx.getWeRunData`获取，用于解密
+    share_openid | string |  required  | 分享人的`openid`,用于判断所属群，默认为 `test`
+
+**返回参数**:
+
+>数据格式为`json`,但是会被小程序自动转化为`object`
+
+参数名 | 说明
+---|---
+data | 所属群用户集合，包含 `openid`, `nickname`, `avatar`, `steps`, `praise`
+user_openid | 小程序使用者的`openid`,服务端通过 `encrypted_user` 解密出来
 
 <!-- END_6d6e66eb819571cd6b9d61a5318a8cec -->
 
