@@ -1,12 +1,22 @@
 <?php
+/**
+ * @resource 微信运动小程序接口
+ *
+ * 微信运动小程序接口API文档
+ */
 
 namespace App\Http\Controllers\Mini;
 
+use App\Http\Requests\Mini\GroupsRequest;
+use App\Http\Requests\Mini\IndexRequest;
+use App\Http\Requests\Mini\SettingRequest;
 use App\Models\Group;
 use App\Models\Group_user;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use EasyWeChat\Foundation\Application;
+use Illuminate\Support\Facades\Storage;
+
 
 class IndexController extends Controller
 {
@@ -17,7 +27,14 @@ class IndexController extends Controller
         $this->mini = $app->mini_program;
     }
 
-    public function index(Request $request)
+    /**
+     *微信程序初始化接口
+     *
+     * @param IndexRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     *
+     */
+    public function index(IndexRequest $request)
     {
 
         $iv = $request->input('iv');
@@ -56,7 +73,7 @@ class IndexController extends Controller
             $group->save();
 
             //查询所属群里的所有用户
-            $users = Group_user::select('openid', 'nickname', 'avatar', 'steps')
+            $users = Group_user::select('openid', 'nickname', 'avatar', 'steps', 'zan')
                 ->where('group_id', $share_user->group_id)
                 ->orderBy('steps', 'desc')
                 ->get()
@@ -80,7 +97,7 @@ class IndexController extends Controller
             $group->save();
         }
         //查询所属群里的所有用户
-        $users = Group_user::select('openid', 'nickname', 'avatar', 'steps')
+        $users = Group_user::select('openid', 'nickname', 'avatar', 'steps', 'zan')
             ->where('group_id', $user->group_id)
             ->orderBy('steps', 'desc')
             ->get()
@@ -92,7 +109,14 @@ class IndexController extends Controller
         return response()->json($users);
     }
 
-    public function group(Request $request)
+    /**
+     * 微信运动群间PK接口
+     *
+     * @param GroupsRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     *
+     */
+    public function group(GroupsRequest $request)
     {
         $openid = $request->input('openid');
         //获取所属群
@@ -114,6 +138,66 @@ class IndexController extends Controller
         ];
 
         return response()->json($arr);
+    }
 
+    /**
+     * 群设置接口
+     *
+     * 返回群设置信息和用户类型（是否是群主）
+     *
+     * @param GroupsRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function setting_info(GroupsRequest $request)
+    {
+        $openid = $request->input('openid');
+        //获取所属群
+        $group_user = Group_user::select('group_id')
+            ->where('openid', $openid)
+            ->first();
+        $group = Group::find($group_user->group_id);
+
+        $arr = [
+            'avatar' => $group->avatar,
+            'gname' => $group->gname,
+            'step_aim' => $group->step_aim,
+            'introduction' => $group->introduction,
+            'is_leader' => $group_user->is_leader
+        ];
+        return response()->json($arr);
+    }
+
+    /**
+     * 保存群设置接口
+     *
+     *
+     * @param SettingRequest $request
+     * @return string
+     */
+    public function setting(SettingRequest $request)
+    {
+        $openid = $request->input('openid');
+        $avatar = $request->file('avatar');
+        $gname = $request->input('gname');
+        $introduction = $request->input('introduction');
+        $step_aim = $request->input('step_aim');
+
+        //获取所属群
+        $group_user = Group_user::select('group_id')
+            ->where('openid', $openid)
+            ->first();
+        $group = Group::find($group_user->group_id);
+        //判断是否修改了群头像
+        if (!is_null($avatar)){
+            $path = Storage::disk('public_path')->putFile('mini', $avatar);
+            $path = env('APP_URL').'/'.$path;
+            $group->avatar = $path;
+        }
+        $group->step_aim = $step_aim;
+        $group->introduction = $introduction;
+        $group->gname = $gname;
+        $group->save();
+
+        return 'true';
     }
 }

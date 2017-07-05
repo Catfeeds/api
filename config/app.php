@@ -178,7 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
         Overtrue\LaravelWechat\ServiceProvider::class,
-
+        Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
     ],
 
     /*

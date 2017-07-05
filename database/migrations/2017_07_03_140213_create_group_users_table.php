@@ -20,6 +20,7 @@ class CreateGroupUsersTable extends Migration
             $table->string('nickname', 50);
             $table->mediumInteger('steps')->default(0);
             $table->boolean('is_leader')->default(0);
+            $table->mediumInteger('zan')->default(0);
             $table->integer('group_id')->unsigned();
 
             $table->foreign('group_id')->references('id')->on('groups');
