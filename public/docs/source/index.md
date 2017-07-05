@@ -19,23 +19,21 @@ Welcome to the generated API reference.
 [Get Postman Collection](http://api.dev/docs/collection.json)
 <!-- END_INFO -->
 
-#微信运动小程序接口
-
-微信运动小程序接口API文档
+#general
 <!-- START_6d6e66eb819571cd6b9d61a5318a8cec -->
-## api/mini/index
+## 微信程序初始化接口
 
 > Example request:
 
 ```bash
-curl -X GET "http://api.dev/api/mini/index" \
+curl -X GET "http://api.touchworld-sh.com:8000/api/mini/index" \
 -H "Accept: application/json" \
-    -d "code"="sit" \
-    -d "encrypted_user"="sit" \
-    -d "iv"="sit" \
-    -d "encrypted_run"="sit" \
-    -d "run_iv"="sit" \
-    -d "share_openid"="sit" \
+    -d "code"="quaerat" \
+    -d "encrypted_user"="quaerat" \
+    -d "iv"="quaerat" \
+    -d "encrypted_run"="quaerat" \
+    -d "run_iv"="quaerat" \
+    -d "share_openid"="quaerat" \
 
 ```
 
@@ -43,15 +41,15 @@ curl -X GET "http://api.dev/api/mini/index" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://api.dev/api/mini/index",
+    "url": "http://api.touchworld-sh.com:8000/api/mini/index",
     "method": "GET",
     "data": {
-        "code": "sit",
-        "encrypted_user": "sit",
-        "iv": "sit",
-        "encrypted_run": "sit",
-        "run_iv": "sit",
-        "share_openid": "sit"
+        "code": "quaerat",
+        "encrypted_user": "quaerat",
+        "iv": "quaerat",
+        "encrypted_run": "quaerat",
+        "run_iv": "quaerat",
+        "share_openid": "quaerat"
 },
     "headers": {
         "accept": "application/json"
@@ -93,9 +91,9 @@ Parameter | Type | Status | Description
 > Example request:
 
 ```bash
-curl -X GET "http://api.dev/api/mini/groups" \
+curl -X GET "http://api.touchworld-sh.com:8000/api/mini/groups" \
 -H "Accept: application/json" \
-    -d "openid"="dolore" \
+    -d "openid"="sit" \
 
 ```
 
@@ -103,10 +101,10 @@ curl -X GET "http://api.dev/api/mini/groups" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://api.dev/api/mini/groups",
+    "url": "http://api.touchworld-sh.com:8000/api/mini/groups",
     "method": "GET",
     "data": {
-        "openid": "dolore"
+        "openid": "sit"
 },
     "headers": {
         "accept": "application/json"
@@ -136,4 +134,111 @@ Parameter | Type | Status | Description
     openid | string |  required  | 
 
 <!-- END_dc47d78648455fed5aff35e1d843865a -->
+
+<!-- START_7feb2a3705e582d632c5487e12f15058 -->
+## 群设置接口
+
+返回群设置信息和用户类型（是否是群主）
+
+> Example request:
+
+```bash
+curl -X GET "http://api.touchworld-sh.com:8000/api/mini/setting" \
+-H "Accept: application/json" \
+    -d "openid"="et" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://api.touchworld-sh.com:8000/api/mini/setting",
+    "method": "GET",
+    "data": {
+        "openid": "et"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
+```
+
+### HTTP Request
+`GET api/mini/setting`
+
+`HEAD api/mini/setting`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    openid | string |  required  | 
+
+<!-- END_7feb2a3705e582d632c5487e12f15058 -->
+
+<!-- START_e6a7f09b0f6dc85033e0d6f330a024b9 -->
+## 保存群设置接口
+
+> Example request:
+
+```bash
+curl -X POST "http://api.touchworld-sh.com:8000/api/mini/setting" \
+-H "Accept: application/json" \
+    -d "openid"="dolores" \
+    -d "gname"="3" \
+    -d "avatar"="dolores" \
+    -d "step_aim"="97" \
+    -d "introduction"="dolores" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://api.touchworld-sh.com:8000/api/mini/setting",
+    "method": "POST",
+    "data": {
+        "openid": "dolores",
+        "gname": 3,
+        "avatar": "dolores",
+        "step_aim": 97,
+        "introduction": "dolores"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/mini/setting`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    openid | string |  required  | 
+    gname | string |  required  | Between: `2` and `10`
+    avatar | image |  optional  | Must be an image (jpeg, png, bmp, gif, or svg)
+    step_aim | numeric |  required  | 
+    introduction | string |  optional  | 
+
+<!-- END_e6a7f09b0f6dc85033e0d6f330a024b9 -->
 
