@@ -99,6 +99,7 @@ class IndexController extends Controller
         $group_id = Group_user::select('group_id')
             ->where('openid', $openid)
             ->first();
+        return $group_id;
         $group = Group::find($group_id);
 
         //获取前100个群
