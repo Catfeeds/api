@@ -24,5 +24,6 @@ Route::post('image/upload', 'Api\\ImageController@upload');
 Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
     Route::get('/index', 'IndexController@index');
     Route::get('/groups', 'IndexController@group');
-
+    Route::get('/setting', 'IndexController@setting_info');
+    Route::post('/setting', 'IndexController@setting');
 });
