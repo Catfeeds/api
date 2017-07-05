@@ -152,9 +152,7 @@ class IndexController extends Controller
     {
         $openid = $request->input('openid');
         //获取所属群
-        $group_user = Group_user::select('group_id')
-            ->where('openid', $openid)
-            ->first();
+        $group_user = Group_user::where('openid', $openid)->first();
         $group = Group::find($group_user->group_id);
 
         $arr = [
