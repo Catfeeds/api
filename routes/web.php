@@ -23,3 +23,7 @@ Route::get('/test', function () {
  */
 
 Route::get('/audios/{audio}','Ksc\\AudioController@index');
+
+Route::get('/touch', function (){
+   return view('touch');
+});
