@@ -7,9 +7,9 @@
 <button id="btn1" value="t01">点击</button>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="//127.0.0.1:3000/socket.io/socket.io.js"></script>
+<script src="//api.touchworld-sh.com:3000/socket.io/socket.io.js"></script>
 <script type="application/javascript">
-    var socket = io('http://127.0.0.1:3000');
+    var socket = io('http://api.touchworld-sh.com:3000');
     //开始游戏
     socket.emit('change', 'tostart');
     $('#btn1').click(function () {
