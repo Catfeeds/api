@@ -22,8 +22,26 @@ Route::get('/test', function () {
  * 科思创项目
  */
 
-Route::get('/audios/{audio}','Ksc\\AudioController@index');
+Route::get('/audios/{audio}', 'Ksc\\AudioController@index');
 
-Route::get('/touch', function (){
-   return view('touch');
+/**
+ * 中控系统
+ */
+Route::get('/touch', function () {
+    return view('touch');
+});
+
+/**
+ *启赋有机
+ */
+
+Route::group(['prefix' => 'qf', 'middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
+    Route::get('/sign', 'Qf\QfController@sign');
+    Route::get('/pasture', 'Qf\QfController@pasture');
+    Route::get('/vr', 'Qf\QfController@vr');
+
+    Route::get('/user', function () {
+        $user = session('wechat.oauth_user'); // 拿到授权用户资料
+
+    });
 });
