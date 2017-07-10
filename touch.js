@@ -1,3 +1,5 @@
+
+//触界中控系统
 var http = require('http').Server();
 var socket = require('socket.io')(http);
 

@@ -16,11 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+//音频上传接口
 Route::post('audio/upload', 'Api\\AudioController@upload');
-
+//图片上传接口
 Route::post('image/upload', 'Api\\ImageController@upload');
-
+//微信小程序
 Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
     Route::get('/index', 'IndexController@index');
     Route::get('/groups', 'IndexController@group');
@@ -28,3 +28,5 @@ Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
     Route::post('/setting', 'IndexController@setting');
     Route::get('/setting2', 'IndexController@setting2');
 });
+//启赋有机签到接口
+Route::post('qf/user', 'Qf\QfController@user');

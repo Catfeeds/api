@@ -16,10 +16,13 @@ class CreateQifuUsersTable extends Migration
         Schema::create('qifu_users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('openid')->nullable();
-            $table->string('nickname', 50);
-            $table->text('logo');
-            $table->text('');
-            $table->timestamps();
+            $table->string('nickname', 50)->unique();
+            $table->string('name', 50)->unique();
+            $table->boolean('sign')->default(0);
+            $table->boolean('vr')->default(0);
+            $table->boolean('pasture')->default(0);
+            $table->text('logo')->nullable();
+            $table->text('shop_url')->nullable();
         });
     }
 

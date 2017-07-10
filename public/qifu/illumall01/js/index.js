@@ -2,7 +2,8 @@ $(function(){
 	//图片预加载
     var loader = new PxLoader();
     var URL = window.location.href;
-    var BASE_PATH = URL.substring(0, URL.lastIndexOf('/') - 2) + 'qifu/illumall01/';
+    // var BASE_PATH = URL.substring(0, URL.lastIndexOf('/') - 2) + 'qifu/illumall01/';
+    var BASE_PATH = 'http://api.dev/qifu/illumall01/';
     var realLoadingNum = 0;
     var fakeLoadingNum = 0;
     var myLoadingInterval = null;
@@ -109,7 +110,7 @@ $(function(){
 		// 	data: {
 		// 		openid: 123,
 		// 		nickname: 123,
-		// 		value: val
+		// 		name: val
 		// 	},
 		// 	dataType: "json",
 		// 	success: function(data) {
