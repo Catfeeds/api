@@ -54,7 +54,7 @@
         var val = $('.essence input').val();
         $.ajax({
             type: 'POST',
-            url: 'http://api.dev/api/qf/user',
+            url: 'http://api.touchworld-sh.com/api/qf/user',
             data: {
                 openid: {{ $user_info->id }},
                 nickname: {{ $user_info->nickname }},
