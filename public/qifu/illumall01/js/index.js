@@ -17,7 +17,8 @@ $(function () {
         'images/name.png',
         'images/subBtn.png',
         'images/tips.png',
-        'images/water.png',
+        'images/waterGreen.png',
+        'images/waterWhite.png',
         'images/water01.png',
         'images/water02.png',
         'images/X.png'
