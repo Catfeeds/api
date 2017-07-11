@@ -56,8 +56,8 @@
             type: 'POST',
             url: 'http://api.touchworld-sh.com/api/qf/user',
             data: {
-                openid: {{ $user_info->id }},
-                nickname: {{ $user_info->nickname }},
+                openid: '{{ $user_info->id }}',
+                nickname: '{{ $user_info->nickname }}',
                 name: val
             },
             // dataType: "json",
