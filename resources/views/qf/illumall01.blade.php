@@ -63,7 +63,7 @@
             // dataType: "json",
             success: function (data) {
                 console.log(data);
-                if (data == true) {
+                if (data) {
                     $('.essence input').fadeOut("slow");
                     $('.essence button').fadeOut("slow");
                     $('#canvas').fadeOut('slow', function () {
