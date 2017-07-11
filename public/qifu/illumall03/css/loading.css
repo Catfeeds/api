@@ -1,7 +1,7 @@
 /*loading*/
 .loading-container{background:url(../img/loading.jpg) top center no-repeat;background-size:100% auto;}
 .logo{
-	width:17.86%;
+	/*width:17.86%;*/
 	padding-bottom:9.3%;
 	background:url(../img/logo.png) top center no-repeat;
 	background-size:contain;
