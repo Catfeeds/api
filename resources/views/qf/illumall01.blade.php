@@ -62,6 +62,7 @@
             },
             // dataType: "json",
             success: function (data) {
+                console.log(data);
                 if (data == true) {
                     $('.essence input').fadeOut("slow");
                     $('.essence button').fadeOut("slow");
