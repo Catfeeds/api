@@ -52,8 +52,9 @@
 				<img src="{{asset('qifu/illumall03/images/gLeaf.png')}}" alt="" class="leaf2" />
 				<img src="{{asset('qifu/illumall03/images/mo.png')}}" alt="" class="leaf3" />
 				<img src="{{asset('qifu/illumall03/images/text.png')}}" class="text" />
-				<img src="{{asset('qifu/illumall03/images/textBtn.png')}}" alt="" class="textBtn" />
-
+				<a href="http://api.touchworld-sh.com/online/index.html" class="textBtn">
+				<img src="{{asset('qifu/illumall03/images/textBtn.png')}}" alt=""  />
+				</a>
 			</div>
 		</div>
 

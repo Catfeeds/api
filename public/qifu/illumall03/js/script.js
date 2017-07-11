@@ -1,5 +1,6 @@
-var URL = window.location.href;
-var BASE_PATH = URL.substring(0, URL.lastIndexOf('/') + 1);
+// var URL = window.location.href;
+// var BASE_PATH = URL.substring(0, URL.lastIndexOf('/') + 1);
+var BASE_PATH = 'http://api.touchworld-sh.com/qifu/illumall03/';
 
 /**
  * 图片预加载 
@@ -32,12 +33,15 @@ $(function() {
 	for(var i = 1; i <= 39; i++) {
 		fileList.push("images/" + i + ".jpg");
 	}
-	for(var i = 0; i <= 16; i++) {
-		fileList.push("images/003_0000" + i + ".jpg");
+	for(var i = 0; i <= 9; i++) {
+		fileList.push("/images/003_0000" + i + ".jpg");
 	}
+    for(var i = 10; i <= 16; i++) {
+        fileList.push("images/003_000" + i + ".jpg");
+    }
 	//把图片载入加载器
 	for(var i = 0; i < fileList.length; i++) {
-		var pxImage = new PxLoaderImage(BASE_PATH + fileList[i]);
+		var pxImage = new PxLoaderImage( BASE_PATH+fileList[i]);
 
 		pxImage.imageNumber = i + 1;
 		loader.add(pxImage);
@@ -123,23 +127,23 @@ function xuliezhen() {
 			$('.essence').show();
 		},
 		imgArr: [
-			"images/003_00000.jpg",
-			"images/003_00001.jpg",
-			"images/003_00002.jpg",
-			"images/003_00003.jpg",
-			"images/003_00004.jpg",
-			"images/003_00005.jpg",
-			"images/003_00006.jpg",
-			"images/003_00007.jpg",
-			"images/003_00008.jpg",
-			"images/003_00009.jpg",
-			"images/003_00010.jpg",
-			"images/003_00011.jpg",
-			"images/003_00012.jpg",
-			"images/003_00013.jpg",
-			"images/003_00014.jpg",
-			"images/003_00015.jpg",
-			"images/003_00016.jpg",
+			BASE_PATH+"images/003_00000.jpg",
+			BASE_PATH+"images/003_00001.jpg",
+			BASE_PATH+"images/003_00002.jpg",
+			BASE_PATH+"images/003_00003.jpg",
+			BASE_PATH+"images/003_00004.jpg",
+			BASE_PATH+"images/003_00005.jpg",
+			BASE_PATH+"images/003_00006.jpg",
+			BASE_PATH+"images/003_00007.jpg",
+			BASE_PATH+"images/003_00008.jpg",
+			BASE_PATH+"images/003_00009.jpg",
+			BASE_PATH+"images/003_00010.jpg",
+			BASE_PATH+"images/003_00011.jpg",
+			BASE_PATH+"images/003_00012.jpg",
+			BASE_PATH+"images/003_00013.jpg",
+			BASE_PATH+"images/003_00014.jpg",
+			BASE_PATH+"images/003_00015.jpg",
+			BASE_PATH+"images/003_00016.jpg",
 
 		]
 	});
@@ -163,45 +167,45 @@ $('.page2 img').click(function() {
 		},
 		imgArr: [
 
-			"images/1.jpg",
-			"images/2.jpg",
-			"images/3.jpg",
-			"images/4.jpg",
-			"images/5.jpg",
-			"images/6.jpg",
-			"images/7.jpg",
-			"images/8.jpg",
-			"images/9.jpg",
-			"images/10.jpg",
-			"images/11.jpg",
-			"images/12.jpg",
-			"images/13.jpg",
-			"images/14.jpg",
-			"images/15.jpg",
-			"images/16.jpg",
-			"images/17.jpg",
-			"images/18.jpg",
-			"images/19.jpg",
-			"images/20.jpg",
-			"images/21.jpg",
-			"images/22.jpg",
-			"images/23.jpg",
-			"images/24.jpg",
-			"images/25.jpg",
-			"images/26.jpg",
-			"images/27.jpg",
-			"images/28.jpg",
-			"images/29.jpg",
-			"images/30.jpg",
-			"images/31.jpg",
-			"images/32.jpg",
-			"images/33.jpg",
-			"images/34.jpg",
-			"images/35.jpg",
-			"images/36.jpg",
-			"images/37.jpg",
-			"images/38.jpg",
-			"images/39.jpg",
+			BASE_PATH+"images/1.jpg",
+			BASE_PATH+"images/2.jpg",
+			BASE_PATH+"images/3.jpg",
+			BASE_PATH+"images/4.jpg",
+			BASE_PATH+"images/5.jpg",
+			BASE_PATH+"images/6.jpg",
+			BASE_PATH+"images/7.jpg",
+			BASE_PATH+"images/8.jpg",
+			BASE_PATH+"images/9.jpg",
+			BASE_PATH+"images/10.jpg",
+			BASE_PATH+"images/11.jpg",
+			BASE_PATH+"images/12.jpg",
+			BASE_PATH+"images/13.jpg",
+			BASE_PATH+"images/14.jpg",
+			BASE_PATH+"images/15.jpg",
+			BASE_PATH+"images/16.jpg",
+			BASE_PATH+"images/17.jpg",
+			BASE_PATH+"images/18.jpg",
+			BASE_PATH+"images/19.jpg",
+			BASE_PATH+"images/20.jpg",
+			BASE_PATH+"images/21.jpg",
+			BASE_PATH+"images/22.jpg",
+			BASE_PATH+"images/23.jpg",
+			BASE_PATH+"images/24.jpg",
+			BASE_PATH+"images/25.jpg",
+			BASE_PATH+"images/26.jpg",
+			BASE_PATH+"images/27.jpg",
+			BASE_PATH+"images/28.jpg",
+			BASE_PATH+"images/29.jpg",
+			BASE_PATH+"images/30.jpg",
+			BASE_PATH+"images/31.jpg",
+			BASE_PATH+"images/32.jpg",
+			BASE_PATH+"images/33.jpg",
+			BASE_PATH+"images/34.jpg",
+			BASE_PATH+"images/35.jpg",
+			BASE_PATH+"images/36.jpg",
+			BASE_PATH+"images/37.jpg",
+			BASE_PATH+"images/38.jpg",
+			BASE_PATH+"images/39.jpg",
 
 		]
 	});

@@ -42,6 +42,14 @@ Route::group(['prefix' => 'qf', 'middleware' => ['web', 'wechat.oauth:snsapi_use
 
     Route::get('/user', function () {
         $user = session('wechat.oauth_user'); // 拿到授权用户资料
-
+    });
+    Route::get('/share',function (){
+        return view('qf.share');
+    });
+    Route::get('/test2', function (){
+       return view('qf.illumall02');
+    });
+    Route::get('/test3', function (){
+        return view('qf.illumall03');
     });
 });

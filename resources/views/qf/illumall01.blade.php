@@ -48,4 +48,51 @@
         <img src="{{ asset('qifu/illumall01/images/font.png') }}" class="font">
 	</div>
 </body>
+<script type="application/javascript">
+    //点击提交那妞切换动画
+    $("button").click(function () {
+        var val = $('.essence input').val();
+        $.ajax({
+            type: 'POST',
+            url: 'http://api.dev/api/qf/user',
+            data: {
+                openid: {{ $user_info->id }},
+                nickname: {{ $user_info->nickname }},
+                name: val
+            },
+            // dataType: "json",
+            success: function (data) {
+                if (data == true) {
+                    $('.essence input').fadeOut("slow");
+                    $('.essence button').fadeOut("slow");
+                    $('#canvas').fadeOut('slow', function () {
+                        $('.page1').fadeIn('slow');
+                        $('.essence img').animate({
+                            width: "198px",
+                            height: "227px",
+                            left: "120px",
+                            top: "50px"
+                        }, 800)
+                            .animate({
+                                width: "148px",
+                                height: "177px",
+                                left: "142px",
+                                top: "270px"
+                            }, 800, function () {
+                                $('.font').animate({
+                                    bottom: "150px",
+                                    opacity: 1
+                                }, 800)
+                            })
+                    });
+                } else {
+                    $(".mask").show();
+                }
+            },
+            error: function (res) {
+
+            }
+        });
+    });
+</script>
 </html>

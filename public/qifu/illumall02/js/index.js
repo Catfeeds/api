@@ -24,7 +24,8 @@ $(function(){
     //图片预加载
     var loader = new PxLoader();
     var URL = window.location.href;
-    var BASE_PATH = URL.substring(0, URL.lastIndexOf('/') + 1);
+    // var BASE_PATH = URL.substring(0, URL.lastIndexOf('/') + 1);
+    var BASE_PATH = 'http://api.touchworld-sh.com/qifu/illumall02/';
     var realLoadingNum = 0;
     var fakeLoadingNum = 0;
     var myLoadingInterval = null;
@@ -83,39 +84,39 @@ $(function(){
                     $('.essence').show();
                 },
                 imgArr: [
-                    "images/yezi2/0.jpg",
-                    "images/yezi2/1.jpg",
-                    "images/yezi2/2.jpg",
-                    "images/yezi2/3.jpg",
-                    "images/yezi2/4.jpg",
-                    "images/yezi2/5.jpg",
-                    "images/yezi2/6.jpg",
-                    "images/yezi2/7.jpg",
-                    "images/yezi2/8.jpg",
-                    "images/yezi2/9.jpg",
-                    "images/yezi2/10.jpg",
-                    "images/yezi2/11.jpg",
-                    "images/yezi2/12.jpg",
-                    "images/yezi2/13.jpg",
-                    "images/yezi2/14.jpg",
-                    "images/yezi2/15.jpg",
-                    "images/yezi2/16.jpg",
-                    "images/yezi2/17.jpg",
-                    "images/yezi2/18.jpg",
-                    "images/yezi2/19.jpg",
-                    "images/yezi2/20.jpg",
-                    "images/yezi2/21.jpg",
-                    "images/yezi2/22.jpg",
-                    "images/yezi2/23.jpg",
-                    "images/yezi2/24.jpg",
-                    "images/yezi2/25.jpg",
-                    "images/yezi2/26.jpg",
-                    "images/yezi2/27.jpg",
-                    "images/yezi2/28.jpg",
-                    "images/yezi2/29.jpg",
-                    "images/yezi2/30.jpg",
-                    "images/yezi2/31.jpg",
-                    "images/yezi2/32.jpg"
+                    BASE_PATH+"images/yezi2/0.jpg",
+                    BASE_PATH+"images/yezi2/1.jpg",
+                    BASE_PATH+"images/yezi2/2.jpg",
+                    BASE_PATH+"images/yezi2/3.jpg",
+                    BASE_PATH+"images/yezi2/4.jpg",
+                    BASE_PATH+"images/yezi2/5.jpg",
+                    BASE_PATH+"images/yezi2/6.jpg",
+                    BASE_PATH+"images/yezi2/7.jpg",
+                    BASE_PATH+"images/yezi2/8.jpg",
+                    BASE_PATH+"images/yezi2/9.jpg",
+                    BASE_PATH+"images/yezi2/10.jpg",
+                    BASE_PATH+"images/yezi2/11.jpg",
+                    BASE_PATH+"images/yezi2/12.jpg",
+                    BASE_PATH+"images/yezi2/13.jpg",
+                    BASE_PATH+"images/yezi2/14.jpg",
+                    BASE_PATH+"images/yezi2/15.jpg",
+                    BASE_PATH+"images/yezi2/16.jpg",
+                    BASE_PATH+"images/yezi2/17.jpg",
+                    BASE_PATH+"images/yezi2/18.jpg",
+                    BASE_PATH+"images/yezi2/19.jpg",
+                    BASE_PATH+"images/yezi2/20.jpg",
+                    BASE_PATH+"images/yezi2/21.jpg",
+                    BASE_PATH+"images/yezi2/22.jpg",
+                    BASE_PATH+"images/yezi2/23.jpg",
+                    BASE_PATH+"images/yezi2/24.jpg",
+                    BASE_PATH+"images/yezi2/25.jpg",
+                    BASE_PATH+"images/yezi2/26.jpg",
+                    BASE_PATH+"images/yezi2/27.jpg",
+                    BASE_PATH+"images/yezi2/28.jpg",
+                    BASE_PATH+"images/yezi2/29.jpg",
+                    BASE_PATH+"images/yezi2/30.jpg",
+                    BASE_PATH+"images/yezi2/31.jpg",
+                    BASE_PATH+"images/yezi2/32.jpg"
                 ]
             });
         }
