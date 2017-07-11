@@ -94,8 +94,18 @@ canvas{
     margin-top: 320px;
     margin-left: 100px;
 }
-.essence img{
+.essence .water{
 	position: absolute;
+	width: 431px;
+	height: 525px;
+}
+.name{
+	position: absolute;
+	top: 210px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 666;
 }
 .essence input{
 	position: absolute;

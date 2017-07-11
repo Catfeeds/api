@@ -32,7 +32,9 @@
 	</div>
 	<div class="page essence hidden">
 		<div class="essence-wrap">
-			<img src="{{ asset('qifu/illumall01/images/water.png') }}">
+		    <img src="{{ asset('qifu/illumall01/images/name.png') }}" class="name">
+		    <img src="{{ asset('qifu/illumall01/images/waterWhite.png') }}" class="water">
+			<img src="{{ asset('qifu/illumall01/images/waterGreen.png') }}" class="water waterGreen">
 			<input type="text" class="hidden">
 		</div>
 		<button class="hidden"></button>
@@ -66,6 +68,8 @@
                 if (data == 'true') {
                     $('.essence input').fadeOut("slow");
                     $('.essence button').fadeOut("slow");
+                    $('.waterGreen').fadeOut("slow");
+                    $('.name').fadeOut("slow");
                     $('#canvas').fadeOut('slow', function () {
                         $('.page1').fadeIn('slow');
                         $('.essence img').animate({

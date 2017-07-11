@@ -66,6 +66,7 @@ $(function () {
                 callback: function () {
                     $('.essence').show();
                     $('.essence input').fadeIn("slow");
+                    $('.essence button').fadeIn("slow");
                 },
                 imgArr: [
                     BASE_PATH + "images/animation/0.jpg",
@@ -97,11 +98,11 @@ $(function () {
     loader.start();
 
     //当输入框有内容时，显示提交按钮
-    $('.essence input').change(function () {
-        if ($('.essence input').val() != '') {
-            $('.essence button').fadeIn("slow");
-        }
-    })
+    // $('.essence input').change(function () {
+    //     if ($('.essence input').val() != '') {
+    //         $('.essence button').fadeIn("slow");
+    //     }
+    // });
 
 
 
@@ -134,7 +135,6 @@ $(function () {
     $(".close").click(function () {
         $(".mask").hide();
         $('.essence input').focus();
-        $('.essence button').fadeOut("slow");
     });
 
 });
