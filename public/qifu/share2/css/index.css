@@ -2,7 +2,9 @@
 	margin: 0;
 	padding: 0;
 }
-
+.hidden{
+	display: none;
+}
 .share {
 	width: 640px;
 	height: 1038px;
@@ -19,13 +21,45 @@
 	top: 55px;
 	left: 342px;
 }
-
+.share .qLogo{
+	position: absolute;
+	top: 42px;
+	left: 150px;
+}
+.share .line{
+	position: absolute;
+	top: 44px;
+	left: 320px;
+}
+.share .logo2{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 42px;
+	width: 150px;
+	height: 78px;
+}
 .share .buyBtn {
 	position: absolute;
 	top: 954px;
 	left: 0;
 	right: 0;
 	margin: auto;
+}
+.share .textPic{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 852px;
+}
+.share .textPic2{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 890px;
 }
 
 a,
