@@ -103,3 +103,10 @@ body{
 	margin: auto;
 	top: 88px;
 }
+.arrow{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 1000;
+}

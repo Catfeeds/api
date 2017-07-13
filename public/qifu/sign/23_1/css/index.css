@@ -90,16 +90,24 @@ body{
 	top: 774px;
 	text-align: center;
 }
- .text{
+.text{
 	position: absolute;
 	left: 0;
 	right: 0;
 	margin: auto;
-} .textBtn{
+} 
+.textBtn{
 	position: absolute;
 	left: 0;
 	right: 0;
 	margin: auto;
 	top: 88px;
 	width: 318px;
+}
+.arrow{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 1000;
 }

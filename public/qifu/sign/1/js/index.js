@@ -14,7 +14,7 @@ $(function(){
     var realLoadingNum = 0;
     var fakeLoadingNum = 0;
     var myLoadingInterval = null;
-    var fileList = [];
+    var fileList = ["images/jiantou.gif"];
     for (var i = 0; i <= 42; i++) {
         fileList.push("images/part01/" + i + ".jpg");
     }
@@ -59,6 +59,7 @@ $(function(){
                 speed: 100,
                 loop: false,
                 callback: function(){
+                    $('.arrow').fadeIn(500);
                     if(isAndroid || isiOS){
                         $(document).one('touchstart',bg2);
                     }else{
@@ -116,7 +117,8 @@ $(function(){
     loader.start();
 
     function bg2(e){
-        e.stopPropagation()
+        e.stopPropagation();
+        $('.arrow').fadeOut(500);
         var bg2 = new SequenceFrame({
                 id: $('#canvas2')[0],
                 width: 640,

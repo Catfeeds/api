@@ -3,7 +3,6 @@ $(function(){
     var u = navigator.userAgent;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-    console.log(isAndroid,isiOS);
     //音乐播放
     var BGM=$("#bgm")[0];
     bgm_init();
@@ -14,7 +13,7 @@ $(function(){
     var realLoadingNum = 0;
     var fakeLoadingNum = 0;
     var myLoadingInterval = null;
-    var fileList = [];
+    var fileList = ["images/jiantou.gif"];
     for (var i = 0; i <= 40; i++) {
         fileList.push("images/part01/" + i + ".jpg");
     }
@@ -59,6 +58,7 @@ $(function(){
                 speed: 100,
                 loop: false,
                 callback: function(){
+                    $('.arrow').fadeIn(500);
                     if(isAndroid || isiOS){
                         $(document).one('touchstart',bg2);
                     }else{
@@ -115,6 +115,7 @@ $(function(){
 
     function bg2(e){
         e.stopPropagation();
+        $('.arrow').fadeOut(500);
         var bg2 = new SequenceFrame({
                 id: $('#canvas2')[0],
                 width: 640,
