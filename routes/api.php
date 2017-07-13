@@ -28,5 +28,5 @@ Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
     Route::post('/setting', 'IndexController@setting');
     Route::get('/setting2', 'IndexController@setting2');
 });
-//启赋有机签到接口
-Route::post('qf/user', 'Qf\QfController@user');
+//启赋有机签到接口(弃用)
+//Route::post('qf/user', 'Qf\QfController@user');

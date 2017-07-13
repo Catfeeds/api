@@ -46,8 +46,11 @@ Route::group(['prefix' => 'qf', 'middleware' => ['web', 'wechat.oauth:snsapi_use
     Route::get('/share',function (){
         return view('qf.share');
     });
+    Route::get('/time', function (){
+        return '未到时间';
+    });
     Route::get('/test2', function (){
-       return view('qf.illumall02');
+        return redirect('http://d.laravel-china.org/docs/5.4/responses#redirects');
     });
     Route::get('/test3', function (){
         return view('qf.illumall03');
