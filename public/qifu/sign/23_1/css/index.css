@@ -84,15 +84,22 @@ body{
 	margin-top: 76px;
 }
 /*textPic*/
-.textPic{
+ .textPic{
 	position: relative;
 	z-index: 1000;
 	top: 774px;
 	text-align: center;
 }
-.text{
+ .text{
 	position: absolute;
 	left: 0;
 	right: 0;
 	margin: auto;
+} .textBtn{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 88px;
+	width: 318px;
 }
