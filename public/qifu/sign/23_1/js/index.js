@@ -18,7 +18,7 @@ $(function(){
     for (var i = 0; i <= 42; i++) {
         fileList.push("images/part01/" + i + ".jpg");
     }
-    for(var i = 0; i <= 42; i++){
+    for(var i = 0; i <= 37; i++){
         fileList.push("images/part02/" + i + ".jpg");
     }
     for(var i = 0; i < fileList.length; i++){
