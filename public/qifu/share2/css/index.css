@@ -46,6 +46,7 @@
 	left: 0;
 	right: 0;
 	margin: auto;
+	width: 200px;
 }
 .share .textPic{
 	position: absolute;
