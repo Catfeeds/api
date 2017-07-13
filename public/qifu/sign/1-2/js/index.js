@@ -104,11 +104,7 @@ $(function(){
                     "images/part01/35.jpg",
                     "images/part01/36.jpg",
                     "images/part01/37.jpg",
-                    "images/part01/38.jpg",
-                    "images/part01/39.jpg",
-                    "images/part01/40.jpg",
-                    "images/part01/41.jpg",
-                    "images/part01/42.jpg"
+ 
                 ]
             });
         }
