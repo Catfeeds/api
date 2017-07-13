@@ -50,3 +50,5 @@ Route::group(['prefix' => 'qf', 'middleware' => ['web', 'wechat.oauth:snsapi_use
         return '未到时间';
     });
 });
+
+Route::any('/wechat', 'Wechat\WechatController@serve');
