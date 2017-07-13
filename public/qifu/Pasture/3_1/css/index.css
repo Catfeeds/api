@@ -1,0 +1,105 @@
+/*通用样式*/
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color:transparent;
+}
+img{
+	display: block;
+}
+canvas{
+	position: absolute;
+	z-index: -1;
+}
+body{
+	width: 640px;
+	height: 1038px;
+	cursor:pointer;
+}
+.page{
+	position: absolute;
+	width: 640px;
+	height: 1038px;
+}
+.hidden{
+	display: none;
+}
+/*loading*/
+.loading-container{
+	background:url(../images/loading.jpg);
+}
+.loadingWrap{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40%;
+	margin: auto;
+}
+
+.loadingDripWrap{
+	position: relative;
+	width: 66px;
+	height: 78px;
+	margin: 0 auto;
+}
+.loadingDrip1{
+	background:url("../images/loadingDrip.png") top center no-repeat;
+	background-size:contain;
+	opacity: .5;
+	width: 66px;
+	height: 78px;
+	position: absolute;
+}
+.loadingDrip2{
+	position: absolute;
+	width: 100%;
+	height: 0%;
+	bottom: 0;
+	left: 0;
+	background:url("../images/loadingDrip.png") bottom center no-repeat;
+	background-size:100% auto;
+	-webkit-transform-origin: 50% 100%;
+	opacity:1;
+}
+.loadingWrap p{
+	font-size: 30px;
+	color: #c5ac7d;
+	padding-top: 15px;
+	text-align: center;
+}
+.loadingWrap .loadingText{
+	font-size: 40px;
+}
+/*frame*/
+.frame{
+	width: 100%;
+	height: 100%;
+	background:url("../images/frame.png") center center no-repeat;
+}
+.frame .logo{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-top: 76px;
+}
+/*textPic*/
+.textPic{
+	position: relative;
+	z-index: 1000;
+	top: 774px;
+	text-align: center;
+}
+.text{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.textBtn{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 88px;
+}

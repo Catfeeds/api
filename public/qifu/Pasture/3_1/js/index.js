@@ -17,7 +17,7 @@ $(function(){
     for (var i = 0; i <= 40; i++) {
         fileList.push("images/part01/" + i + ".jpg");
     }
-    for(var i = 0; i <= 62; i++){
+    for(var i = 0; i <= 52; i++){
         fileList.push("images/part02/" + i + ".jpg");
     }
     for(var i = 0; i < fileList.length; i++){
@@ -176,17 +176,7 @@ $(function(){
                     "images/part02/49.jpg",
                     "images/part02/50.jpg",
                     "images/part02/51.jpg",
-                    "images/part02/52.jpg",
-                    "images/part02/53.jpg",
-                    "images/part02/54.jpg",
-                    "images/part02/55.jpg",
-                    "images/part02/56.jpg",
-                    "images/part02/57.jpg",
-                    "images/part02/58.jpg",
-                    "images/part02/59.jpg",
-                    "images/part02/60.jpg",
-                    "images/part02/61.jpg",
-                    "images/part02/62.jpg"
+                    "images/part02/52.jpg"
                 ]
             });
     }
