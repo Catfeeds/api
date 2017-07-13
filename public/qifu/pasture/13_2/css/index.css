@@ -98,8 +98,13 @@ body{
 }
 .textBtn{
 	position: absolute;
+	width: 100%;
 	left: 0;
 	right: 0;
 	margin: auto;
 	top: 88px;
+	text-align: center;
+}
+.textBtn img{
+	display: inline;
 }
