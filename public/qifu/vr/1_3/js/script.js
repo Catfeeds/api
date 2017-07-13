@@ -24,6 +24,8 @@ $(function() {
 			'img/logo.png',
 			'img/kuang.png',
 			'img/text.png',
+			'img/jiantou.gif',
+			
 		];
 	for(var i = 60; i <= 94; i++) {
 		fileList.push("images/1-3_000"+i+".jpg");
@@ -134,9 +136,11 @@ function xuliezhen() {
 		speed: 100,
 		loop: false,
 		callback: function() {
+			$('.arrow').fadeIn(500);
 			$('.content').one('click',function(){
-				console.log(545);
+
 				frame2();
+				$('.arrow').fadeOut(500);
 			})
 		},
 		imgArr: [
