@@ -213,7 +213,7 @@ class QfController extends Controller
     public function shareTo(Request $request)
     {
         $openid = $request->oid;
-        $nickname = $request->nick;
+        $nickname = '';
         $js = $this->js;
         $qf_user = Qifu_user::where('openid', $openid)
             ->orWhere('nickname', $nickname)
