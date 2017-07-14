@@ -41,6 +41,12 @@ class QfController extends Controller
             }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
         } else {
+
+            if ($qf_user->pasture == '0' && $qf_user->vr == '0' && $qf_user->sign == '0') {
+                $qf_user->sign = '1';
+                $qf_user->save();
+                return redirect('http://api.touchworld-sh.com/qifu/sign/1/index.html');
+            }
             $qf_user->sign = '1';
             $qf_user->save();
             //判断不同次序
@@ -76,6 +82,11 @@ class QfController extends Controller
             }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
         } else {
+            if ($qf_user->pasture == '0' && $qf_user->vr == '0' && $qf_user->sign == '0') {
+                $qf_user->pasture = '1';
+                $qf_user->save();
+                return redirect('http://api.touchworld-sh.com/qifu/pasture/2/index.html');
+            }
             $qf_user->pasture = '1';
             $qf_user->save();
             //判断不同次序
@@ -131,6 +142,11 @@ class QfController extends Controller
             }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
         } else {
+            if ($qf_user->pasture == '0' && $qf_user->vr == '0' && $qf_user->sign == '0') {
+                $qf_user->vr = '1';
+                $qf_user->save();
+                return redirect('http://api.touchworld-sh.com/qifu/vr/3/index.html');
+            }
             $qf_user->vr = '1';
             $qf_user->save();
             //判断不同次序
