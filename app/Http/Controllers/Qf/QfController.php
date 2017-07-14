@@ -207,10 +207,8 @@ class QfController extends Controller
         return view('qf.share', compact('logo', 'shop_url', 'js', 'openid', 'nickname'));
     }
 
-    public function online(Request $request)
+    public function online($openid,$nickname)
     {
-        $openid = $request->oid;
-        $nickname = $request->nick;
         $js = $this->js;
         return view('qf.online', compact('openid', 'nickname', 'js'));
     }
