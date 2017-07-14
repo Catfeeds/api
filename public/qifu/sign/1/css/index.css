@@ -98,8 +98,9 @@ body{
 }
 .arrow{
 	position: absolute;
-	left: 0;
+	left: 260px;
 	right: 0;
+	bottom: 170px;
 	margin: auto;
 	z-index: 1000;
 }
