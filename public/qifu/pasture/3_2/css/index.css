@@ -15,6 +15,7 @@ body{
 	width: 640px;
 	height: 1038px;
 	cursor:pointer;
+	position: absolute;
 }
 .page{
 	position: absolute;
@@ -105,8 +106,9 @@ body{
 }
 .arrow{
 	position: absolute;
-	left: 0;
+	left: 230px;
 	right: 0;
+	bottom: 270px;
 	margin: auto;
 	z-index: 1000;
 }

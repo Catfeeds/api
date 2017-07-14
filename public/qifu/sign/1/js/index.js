@@ -13,7 +13,7 @@ $(function(){
     var realLoadingNum = 0;
     var fakeLoadingNum = 0;
     var myLoadingInterval = null;
-    var fileList = ["images/jiantou.gif"];
+    var fileList = ["images/shouzhi.gif"];
     for (var i = 0; i <= 42; i++) {
         fileList.push("images/part01/" + i + ".jpg");
     }
