@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
-    <link rel="stylesheet" href="{{ asset('qifu/share2/css/index.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('qifu/share2/css/index1.css') }}"/>
     <title></title>
 </head>
 <body>
