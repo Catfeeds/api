@@ -9,7 +9,7 @@
 <body>
 <div class="share">
     <img src="{{asset('qifu/share2/img/bg.png')}}" alt="" class="bg"/>
-    @if(isset($logo))
+    @if(!is_null($logo))
         <div class="logo1 ">
             <img src="{!! $logo !!}" alt="" class="logo"/>
             <img src="{{asset('qifu/share2/img/logo2.png') }}" alt="" class="qLogo"/>
@@ -20,7 +20,7 @@
             <img src="{{asset('qifu/share2/img/logo2.png')}}"/>
         </div>
     @endif
-    @if(isset($logo))
+    @if(!is_null($logo))
         <div class="footer ">
             <img src="{{asset('qifu/share2/img/text.png')}}" class="textPic"/>
             <a href="{!! $shop_url !!}">
