@@ -12,7 +12,7 @@
     @if(!is_null($logo))
         <div class="logo1 ">
             <div class="logo">
-                <img src="{!! $logo !!}" alt="" class="logo"/>
+                <img src="{!! $logo !!}" alt=""/>
             </div>
 
             <img src="{{asset('qifu/share2/img/logo2.png') }}" alt="" class="qLogo"/>
