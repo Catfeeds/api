@@ -195,12 +195,13 @@ class QfController extends Controller
     {
         $openid = $request->openid;
         $nickname = $request->nickname;
-        return view('qf.online', compact('openid', 'nickname'));
+        $js = $this->js;
+        return view('qf.online', compact('openid', 'nickname', 'js'));
     }
 
     public function time()
     {
-
+        return redirect('http://api.touchworld-sh.com/qifu/other/index.html');
     }
 
     public function user(Request $request)
