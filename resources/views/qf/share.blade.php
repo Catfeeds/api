@@ -52,7 +52,8 @@
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
             title: '亲和人体科技，重新定义有机', // 分享标题
-            link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",
+            {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
+            link: "http://api.touchworld-sh.com/qf/online",
             imgUrl: "http://api.touchworld-sh.com/img/qifu_logo.jpeg", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
