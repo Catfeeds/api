@@ -191,6 +191,18 @@ class QfController extends Controller
         return view('qf.share', compact('logo', 'shop_url', 'js', 'openid', 'nickname'));
     }
 
+    public function online(Request $request)
+    {
+        $openid = $request->openid;
+        $nickname = $request->nickname;
+        return view('qf.online', compact('openid', 'nickname'));
+    }
+
+    public function time()
+    {
+
+    }
+
     public function user(Request $request)
     {
 //        项目修改，原签到接口废弃，
