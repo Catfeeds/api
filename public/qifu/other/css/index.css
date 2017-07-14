@@ -1,0 +1,26 @@
+/*通用样式*/
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color:transparent;
+}
+img{
+    display: block;
+}
+body{
+    width: 640px;
+    height: 1038px;
+    cursor:pointer;
+}
+.page{
+    position: absolute;
+    width: 640px;
+    height: 1038px;
+}
+.hidden{
+    display: none;
+}
+.page img{
+    width: 640px;
+    height: 1038px;
+}

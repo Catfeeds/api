@@ -1,0 +1,95 @@
+/*通用样式*/
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color:transparent;
+}
+img{
+    display: block;
+}
+body{
+    width: 640px;
+    height: 1038px;
+    cursor:pointer;
+}
+.page{
+    position: absolute;
+    width: 640px;
+    height: 1038px;
+}
+.hidden{
+    display: none;
+}
+/*frame*/
+.frame{
+    width: 640px;
+    height: 1038px;
+    background: url("../images/format.png") no-repeat center center;
+}
+.logo{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+/*page1*/
+.water{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.ipt{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 100px;
+    margin: auto;
+    width: 320px;
+    height: 100px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 36px;
+    text-align: center;
+    color: #edbf00;
+}
+.btn{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 180px;
+    bottom: 0;
+    margin: auto;
+}
+/*page2*/
+.page2 img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 180px;
+    bottom: 0;
+    margin: auto;
+}
+/*mask*/
+.mask{
+    background-color: rgba(0,0,0,0.5);
+}
+.tips{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 200px;
+    margin: auto;
+}
+.close{
+    position: absolute;
+    left: 418px;
+    right: 0;
+    top: 0;
+    bottom: 380px;
+    margin: auto;
+}
