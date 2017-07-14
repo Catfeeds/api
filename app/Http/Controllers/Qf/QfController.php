@@ -196,8 +196,8 @@ class QfController extends Controller
 
     public function shareTo(Request $request)
     {
-        $openid = $request->openid;
-        $nickname = $request->nickname;
+        $openid = $request->oid;
+        $nickname = $request->nick;
         $js = $this->js;
         $qf_user = Qifu_user::where('openid', $openid)
             ->orWhere('nickname', $nickname)
@@ -209,8 +209,8 @@ class QfController extends Controller
 
     public function online(Request $request)
     {
-        $openid = $request->openid;
-        $nickname = $request->nickname;
+        $openid = $request->oid;
+        $nickname = $request->nick;
         $js = $this->js;
         return view('qf.online', compact('openid', 'nickname', 'js'));
     }

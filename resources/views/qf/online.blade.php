@@ -35,7 +35,7 @@
     <div data-page="1" class="page p1 cur">
         <canvas class="mainVideo" width="640" height="1100"></canvas>
         <!--<div class="logo logoVideo z2 opacity0 "></div>-->
-        <a href="http://api.touchworld-sh.com/qf/shareto?openid={{$openid}}&nickname={{$nickname}}">
+        <a href="http://api.touchworld-sh.com/qf/shareto?oid={{$openid}}&nick={{$nickname}}">
             <div class="goToExperience z2 opacity0 invisible"></div>
         </a>
         <!--滑动提示遮罩-->
