@@ -11,7 +11,10 @@
     <img src="{{asset('qifu/share2/img/bg.png')}}" alt="" class="bg"/>
     @if(!is_null($logo))
         <div class="logo1 ">
-            <img src="{!! $logo !!}" alt="" class="logo"/>
+            <div class="logo">
+                <img src="{!! $logo !!}" alt="" class="logo"/>
+            </div>
+
             <img src="{{asset('qifu/share2/img/logo2.png') }}" alt="" class="qLogo"/>
             <img src="{{asset('qifu/share2/img/line.png') }}" alt="" class="line"/>
         </div>
@@ -69,6 +72,20 @@
 
     $('.popup .cancel').click(function () {
         $('.popup').hide();
-    })
+    });
+
+
+    var imgWid = $('.logo img').width();
+    var imgHei = $('.logo img').height();
+
+    //		console.log(imgHei,imgWid)
+
+    if(imgWid > imgHei){
+        $('.logo img').css('width','100%');
+        console.log(1);
+    }else{
+        $('.logo img').css('height','100%');
+        console.log(2);
+    }
 </script>
 </html>
