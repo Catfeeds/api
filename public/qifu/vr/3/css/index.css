@@ -51,9 +51,9 @@ canvas{
 }
 .arrow{
 	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
+	left: 330px;
+	top:680px;
+
 
 	z-index: 1000;
 }
