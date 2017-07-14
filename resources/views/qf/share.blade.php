@@ -8,7 +8,8 @@
 </head>
 <body>
 <div class="share">
-    <img src="{{asset('qifu/share2/img/bg.png')}}" alt="" class="bg"/>
+    <audio id="video" src="{{asset('qifu/share2/video.mp3')}}" preload="auto" loop="loop" autoplay="autoplay"></audio>
+    <img src="{{asset('qifu/share2/img/bg2.png')}}" alt="" class="bg"/>
     @if(!is_null($logo))
         <div class="logo1 ">
             <div class="logo">
@@ -82,10 +83,22 @@
 
     if(imgWid > imgHei){
         $('.logo img').css('width','100%');
-        console.log(1);
     }else{
         $('.logo img').css('height','100%');
-        console.log(2);
+    }
+
+    //	 * ios 手机不能自动播放声音
+    // */
+    bgm_init();
+    function bgm_init(){
+        var video = document.getElementById('video');
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            video.play();
+        }, false);
+        window.addEventListener('touchstart', function firstTouch(){
+            video.play();
+            this.removeEventListener('touchstart', firstTouch);
+        });
     }
 </script>
 </html>
