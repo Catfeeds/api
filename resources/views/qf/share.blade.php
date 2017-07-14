@@ -20,7 +20,7 @@
             <img src="{{asset('qifu/share2/img/logo2.png')}}"/>
         </div>
     @endif
-    @if(!is_null($shop_url))
+    @if(!is_null($logo))
         <div class="footer ">
             <img src="{{asset('qifu/share2/img/text.png')}}" class="textPic"/>
             <a href="{!! $shop_url !!}">
@@ -28,7 +28,7 @@
             </a>
         </div>
     @else
-        <div class="footer2 hidden">
+        <div class="footer2">
             <img class="textPic2" src="{{asset('qifu/share2/img/text.png')}}"/>
         </div>
     @endif
