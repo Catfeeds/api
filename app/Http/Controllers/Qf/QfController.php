@@ -182,6 +182,7 @@ class QfController extends Controller
     {
         $openid = $request->openid;
         $nickname = $request->nickname;
+        $js = $this->js;
         $qf_user = Qifu_user::where('openid', $openid)
             ->orWhere('nickname', $nickname)
             ->first();
