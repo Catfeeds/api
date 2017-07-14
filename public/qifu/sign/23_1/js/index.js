@@ -3,7 +3,6 @@ $(function(){
     var u = navigator.userAgent;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-    console.log(isAndroid,isiOS);
     //音乐播放
     var BGM=$("#bgm")[0];
     bgm_init();
@@ -18,7 +17,7 @@ $(function(){
     for (var i = 0; i <= 42; i++) {
         fileList.push("images/part01/" + i + ".jpg");
     }
-    for(var i = 0; i <= 37; i++){
+    for(var i = 0; i <= 58; i++){
         fileList.push("images/part02/" + i + ".jpg");
     }
     for(var i = 0; i < fileList.length; i++){
@@ -167,6 +166,27 @@ $(function(){
                     "images/part02/35.jpg",
                     "images/part02/36.jpg",
                     "images/part02/37.jpg",
+                    "images/part02/38.jpg",
+                    "images/part02/39.jpg",
+                    "images/part02/40.jpg",
+                    "images/part02/41.jpg",
+                    "images/part02/42.jpg",
+                    "images/part02/43.jpg",
+                    "images/part02/44.jpg",
+                    "images/part02/45.jpg",
+                    "images/part02/46.jpg",
+                    "images/part02/47.jpg",
+                    "images/part02/48.jpg",
+                    "images/part02/49.jpg",
+                    "images/part02/50.jpg",
+                    "images/part02/51.jpg",
+                    "images/part02/52.jpg",
+                    "images/part02/53.jpg",
+                    "images/part02/54.jpg",
+                    "images/part02/55.jpg",
+                    "images/part02/56.jpg",
+                    "images/part02/57.jpg",
+                    "images/part02/58.jpg"
 
                 ]
             });
