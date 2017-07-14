@@ -64,7 +64,7 @@
             title: '亲和人体科技，重新定义有机', // 分享标题
             desc: "启赋有机，真正的全链有机", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "http://api.touchworld-sh.com/qf/online/{{$openid}}/{{$nickname}}",
+            link: "http://api.touchworld-sh.com/qf/online/{{$openid}}",
             imgUrl: "http://api.touchworld-sh.com/img/qifu_logo.jpeg", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
