@@ -5,9 +5,21 @@ namespace App\Http\Controllers\Qf;
 use App\Models\Qifu_user;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use EasyWeChat\Foundation\Application;
 
 class QfController extends Controller
 {
+    public $js;
+
+    /**
+     * QfController constructor.
+     * @param $app
+     */
+    public function __construct(Application $app)
+    {
+        $this->js = $app->js;
+    }
+
     public function sign()
     {
         $user_info = session('wechat.oauth_user');
@@ -24,6 +36,9 @@ class QfController extends Controller
             $qf_user->save();
             return redirect('http://api.touchworld-sh.com/qifu/sign/1/index.html');
         }elseif ($qf_user->sign == '1'){
+            if ($qf_user->pasture == '1' && $qf_user->vr == '1'){
+                return redirect('http://api.touchworld-sh.com/qifu/sign/23_1/index.html');
+            }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
         }else {
             $qf_user->sign = '1';
@@ -56,6 +71,9 @@ class QfController extends Controller
             $qf_user->save();
             return redirect('http://api.touchworld-sh.com/qifu/pasture/2/index.html');
         }elseif ($qf_user->pasture == '1'){
+            if ($qf_user->sign == '1' && $qf_user->vr == '1'){
+                return redirect('http://api.touchworld-sh.com/qifu/pasture/13_2/index.html');
+            }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
         }else {
             $qf_user->pasture = '1';
@@ -108,6 +126,9 @@ class QfController extends Controller
             $qf_user->save();
             return redirect('http://api.touchworld-sh.com/qifu/vr/3/index.html');
         }elseif ($qf_user->vr == '1'){
+            if ($qf_user->pasture == '1' && $qf_user->sign == '1'){
+                return redirect('http://api.touchworld-sh.com/qifu/vr/12_3/index.html');
+            }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
         }else {
             $qf_user->vr = '1';
@@ -146,12 +167,27 @@ class QfController extends Controller
     public function share()
     {
         $user_info = session('wechat.oauth_user');
+        $js = $this->js;
         $qf_user = Qifu_user::where('openid', $user_info->id)
             ->orWhere('nickname', $user_info->nickname)
             ->first();
         $logo = $qf_user->logo;
         $shop_url = $qf_user->shop_url;
-        return view('qf.share', compact('logo', 'shop_url'));
+        $openid = $user_info->id;
+        $nickname = $user_info->nickname;
+        return view('qf.share', compact('logo', 'shop_url', 'js', 'openid', 'nickname'));
+    }
+
+    public function shareTo(Request $request)
+    {
+        $openid = $request->openid;
+        $nickname = $request->nickname;
+        $qf_user = Qifu_user::where('openid', $openid)
+            ->orWhere('nickname', $nickname)
+            ->first();
+        $logo = $qf_user->logo;
+        $shop_url = $qf_user->shop_url;
+        return view('qf.share', compact('logo', 'shop_url', 'js', 'openid', 'nickname'));
     }
 
     public function user(Request $request)

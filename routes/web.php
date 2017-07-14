@@ -44,6 +44,7 @@ Route::group(['prefix' => 'qf', 'middleware' => ['web', 'wechat.oauth:snsapi_use
         $user = session('wechat.oauth_user'); // 拿到授权用户资料
     });
     Route::get('/share','Qf\QfController@share');
+    Route::get('/shareto','Qf\QfController@shareTo');
     Route::get('/time', function (){
         return '未到时间';
     });
