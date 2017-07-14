@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('online/css/style.css') }}" />
 </head>
 <body>
-<audio id="bgm" src="{{ asset('sound/music.mp3') }}" preload="auto" loop="loop" autoplay="autoplay"></audio>
+<audio id="bgm" src="{{ asset('online/sound/music.mp3') }}" preload="auto" loop="loop" autoplay="autoplay"></audio>
 <img class="imgTemp hidden ">
 <!-- loading -->
 <div class="loading-container">
