@@ -28,7 +28,7 @@
             </a>
         </div>
     @else
-        <div class="footer2 hidden">
+        <div class="footer2">
             <img class="textPic2" src="{{asset('qifu/share2/img/text.png')}}"/>
         </div>
     @endif
