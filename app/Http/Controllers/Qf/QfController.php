@@ -35,20 +35,20 @@ class QfController extends Controller
             $qf_user->sign = '1';
             $qf_user->save();
             return redirect('http://api.touchworld-sh.com/qifu/sign/1/index.html');
-        }elseif ($qf_user->sign == '1'){
-            if ($qf_user->pasture == '1' && $qf_user->vr == '1'){
+        } elseif ($qf_user->sign == '1') {
+            if ($qf_user->pasture == '1' && $qf_user->vr == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/sign/23_1/index.html');
             }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
-        }else {
+        } else {
             $qf_user->sign = '1';
             $qf_user->save();
             //判断不同次序
-            if ($qf_user->pasture == '1' && $qf_user->vr == '0'){
+            if ($qf_user->pasture == '1' && $qf_user->vr == '0') {
                 return redirect('http://api.touchworld-sh.com/qifu/sign/2_1/index.html');
-            }elseif ($qf_user->pasture == '1' && $qf_user->vr == '1'){
+            } elseif ($qf_user->pasture == '1' && $qf_user->vr == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/sign/23_1/index.html');
-            }elseif ($qf_user->pasture == '0' && $qf_user->vr == '1'){
+            } elseif ($qf_user->pasture == '0' && $qf_user->vr == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/sign/3_1/index.html');
             }
             return '出错啦～请联系管理员';
@@ -70,20 +70,20 @@ class QfController extends Controller
             $qf_user->pasture = '1';
             $qf_user->save();
             return redirect('http://api.touchworld-sh.com/qifu/pasture/2/index.html');
-        }elseif ($qf_user->pasture == '1'){
-            if ($qf_user->sign == '1' && $qf_user->vr == '1'){
+        } elseif ($qf_user->pasture == '1') {
+            if ($qf_user->sign == '1' && $qf_user->vr == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/pasture/13_2/index.html');
             }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
-        }else {
+        } else {
             $qf_user->pasture = '1';
             $qf_user->save();
             //判断不同次序
-            if ($qf_user->sign == '1' && $qf_user->vr == '0'){
+            if ($qf_user->sign == '1' && $qf_user->vr == '0') {
                 return redirect('http://api.touchworld-sh.com/qifu/pasture/1_2/index.html');
-            }elseif ($qf_user->sign == '1' && $qf_user->vr == '1'){
+            } elseif ($qf_user->sign == '1' && $qf_user->vr == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/pasture/13_2/index.html');
-            }elseif ($qf_user->sign == '0' && $qf_user->vr == '1'){
+            } elseif ($qf_user->sign == '0' && $qf_user->vr == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/pasture/3_2/index.html');
             }
             return '出错啦～请联系管理员';
@@ -125,20 +125,20 @@ class QfController extends Controller
             $qf_user->vr = '1';
             $qf_user->save();
             return redirect('http://api.touchworld-sh.com/qifu/vr/3/index.html');
-        }elseif ($qf_user->vr == '1'){
-            if ($qf_user->pasture == '1' && $qf_user->sign == '1'){
+        } elseif ($qf_user->vr == '1') {
+            if ($qf_user->pasture == '1' && $qf_user->sign == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/vr/12_3/index.html');
             }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
-        }else {
+        } else {
             $qf_user->vr = '1';
             $qf_user->save();
             //判断不同次序
-            if ($qf_user->pasture == '1' && $qf_user->sign == '0'){
+            if ($qf_user->pasture == '1' && $qf_user->sign == '0') {
                 return redirect('http://api.touchworld-sh.com/qifu/vr/1_3/index.html');
-            }elseif ($qf_user->pasture == '1' && $qf_user->sign == '1'){
+            } elseif ($qf_user->pasture == '1' && $qf_user->sign == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/vr/12_3/index.html');
-            }elseif ($qf_user->pasture == '0' && $qf_user->sign == '1'){
+            } elseif ($qf_user->pasture == '0' && $qf_user->sign == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/vr/1_3/index.html');
             }
             return '出错啦～请联系管理员';
