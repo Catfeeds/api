@@ -22,6 +22,7 @@ class QfController extends Controller
 
     public function sign()
     {
+        //获取微信用户信息
         $user_info = session('wechat.oauth_user');
 
         $qf_user = Qifu_user::where('openid', $user_info->id)
@@ -41,7 +42,10 @@ class QfController extends Controller
             }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
         } else {
-
+            //名单上的用户openid为null，添加openid
+            if ($qf_user->openid == null){
+                $qf_user->openid = $user_info->id;
+            }
             if ($qf_user->pasture == '0' && $qf_user->vr == '0' && $qf_user->sign == '0') {
                 $qf_user->sign = '1';
                 $qf_user->save();
@@ -63,6 +67,7 @@ class QfController extends Controller
 
     public function pasture()
     {
+        //获取微信用户信息
         $user_info = session('wechat.oauth_user');
 
         $qf_user = Qifu_user::where('openid', $user_info->id)
@@ -82,6 +87,11 @@ class QfController extends Controller
             }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
         } else {
+            //名单上的用户openid为null，添加openid
+            if ($qf_user->openid == null){
+                $qf_user->openid = $user_info->id;
+            }
+
             if ($qf_user->pasture == '0' && $qf_user->vr == '0' && $qf_user->sign == '0') {
                 $qf_user->pasture = '1';
                 $qf_user->save();
@@ -123,6 +133,7 @@ class QfController extends Controller
 
     public function vr()
     {
+        //获取微信用户信息
         $user_info = session('wechat.oauth_user');
 
         $qf_user = Qifu_user::where('openid', $user_info->id)
@@ -142,6 +153,11 @@ class QfController extends Controller
             }
             return redirect('http://api.touchworld-sh.com/qifu/illustrate/index.html');
         } else {
+            //名单上的用户openid为null，添加openid
+            if ($qf_user->openid == null){
+                $qf_user->openid = $user_info->id;
+            }
+
             if ($qf_user->pasture == '0' && $qf_user->vr == '0' && $qf_user->sign == '0') {
                 $qf_user->vr = '1';
                 $qf_user->save();
@@ -207,7 +223,7 @@ class QfController extends Controller
         return view('qf.share', compact('logo', 'shop_url', 'js', 'openid', 'nickname'));
     }
 
-    public function online($openid,$nickname= '')
+    public function online($openid,$nickname='')
     {
         $js = $this->js;
         return view('qf.online', compact('openid', 'nickname', 'js'));
