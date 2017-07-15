@@ -20,9 +20,11 @@
             <!--<img src="{{asset('qifu/share2/img/line.png') }}" alt="" class="line"/>-->
         </div>
     @else
-        <!--<div class="logo2">
-            <img src="{{asset('qifu/share2/img/logo2.png')}}"/>
-        </div>-->
+        <div class="logo1 ">
+            <div class="logo">
+                <img src="{{asset('qifu/share2/img/logo2.png')}}" alt=""/>
+            </div>
+        </div>
     @endif
     @if(!is_null($shop_url))
         <div class="footer">
