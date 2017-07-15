@@ -63,8 +63,8 @@
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
-            title: '亲和人体科技，重新定义有机，{{$company or ''}}携手启赋有机，共启荣耀未来！', // 分享标题
-            desc: "启赋有机，真正的全链有机", // 分享描述
+            title: '亲和人体科技，重新定义有机', // 分享标题
+            desc: "{{$company or ''}}携手启赋有机，共启荣耀未来！", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "http://api.touchworld-sh.com/qf/online/{{$openid}}",
             imgUrl: "http://api.touchworld-sh.com/img/qifu_logo.jpeg", // 分享图标
