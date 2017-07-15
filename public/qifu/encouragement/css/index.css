@@ -55,7 +55,6 @@ body{
     font-size: 36px;
     text-align: center;
     color: #edbf00;
-    background-color: white;
 }
 .btn{
     position: absolute;
@@ -93,15 +92,4 @@ body{
     top: 0;
     bottom: 380px;
     margin: auto;
-}
-#myCanvas{
-	position: absolute;
-	border: 1px solid black;
-	z-index: 1000;
-	left: 0;
-	right: 0;
-	margin: auto;
-	top: 1038px;
-	display: none;
-	background-color: white;
 }

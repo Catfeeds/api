@@ -17,8 +17,16 @@ $(function(){
     var realLoadingNum = 0;
     var fakeLoadingNum = 0;
     var myLoadingInterval = null;
-    var fileList = [];
-    for (var i = 0; i <= 269; i++) {
+    var fileList = [
+    		"images/bg.png",
+    		"images/bg2.png",
+    		"images/frame.png",
+    		"images/loading.jpg",
+    		"images/loadingDrip.png",
+    		"images/logo.png",
+    		
+    ];
+    for (var i = 0; i <= 130; i++) {
         fileList.push("images/video/" + i + ".png");
     }
     for(var i = 0; i < fileList.length; i++){
@@ -74,7 +82,7 @@ $(function(){
 
     function playVideo(){
         var imgArr = [];
-        for(var i = 0; i < 269; i++){
+        for(var i = 0; i < 131; i++){
             imgArr.push("images/video/"+ i +".png")
         }
         //绘制序列帧动态背景
