@@ -16,7 +16,7 @@
     </div>
     <div class="page page1">
         <img src="images/01.png" class="water"/>
-        <input type="text" class="ipt"/>
+        <div type="text" class="ipt"></div>
         <img src="images/button.png" class="btn"/>
     </div>
     <div class="page page2 hidden">
@@ -26,5 +26,105 @@
         <img src="images/tips.png" class="tips"/>
         <img src="images/X.png" class="close"/>
     </div>
+    <canvas id="myCanvas" ></canvas>
 </body>
+<script type="text/javascript">
+	var canvas, board,status;
+	canvas = document.getElementById('myCanvas');
+	status = 1;
+	canvas.height = 360;
+	canvas.width = 580;
+	
+	board = canvas.getContext('2d');
+	
+	var mousePress = false;
+	var last = null;
+	
+	function beginDraw() {
+		mousePress = true;
+	}
+	
+	function drawing(event) {
+		event.preventDefault();
+		if(!mousePress) return;
+		var xy = pos(event);
+		if(last != null) {
+			board.beginPath();
+			board.moveTo(last.x, last.y);
+			board.lineTo(xy.x, xy.y);
+			board.stroke();
+		}
+		last = xy;
+		
+	
+	};
+	  $('.btn').click(function(){
+        if(status != 1){
+            $('.page1').fadeOut();
+            $('.page2').fadeIn();
+            $('#myCanvas').hide();
+        }else{
+            $('.mask').fadeIn();
+            $('#myCanvas').hide();
+        }
+    });
+	
+	function endDraw(event) {
+		mousePress = false;
+		event.preventDefault();
+		last = null;
+	}
+	
+	function pos(event) {
+		var x, y;
+		if(isTouch(event)) {
+			x = event.touches[0].pageX-30;
+			y = event.touches[0].pageY-646;
+
+		} else {
+			x = event.offsetX + event.target.offsetLeft;
+			y = event.offsetY + event.target.offsetTop;
+		}
+		//               log('x='+x+' y='+y);  
+		status = 2;
+		return { x: x, y: y };
+	}
+	
+	function log(msg) {
+		var log = document.getElementById('log');
+		var val = log.value;
+		log.value = msg + '\n' + val;
+	}
+	
+	function isTouch(event) {
+		var type = event.type;
+		if(type.indexOf('touch') >= 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	//          function save(){  
+	//              //base64  
+	//              var dataUrl = canvas.toDataURL();  
+	////                dataUrl = dataUrl.replace("image/png", "image/octet-stream");  
+	//              img.src = dataUrl;  
+	//          }  
+	
+//	function clean() {
+//		board.clearRect(0, 0, canvas.width, canvas.height);
+//	
+//	}
+	
+	board.lineWidth = 1;
+	board.strokeStyle = "black";
+	
+	canvas.onmousedown = beginDraw;
+	canvas.onmousemove = drawing;
+	canvas.onmouseup = endDraw;
+	canvas.addEventListener('touchstart', beginDraw, false);
+	canvas.addEventListener('touchmove', drawing, false);
+	canvas.addEventListener('touchend', endDraw, false);
+</script>  
 </html>
