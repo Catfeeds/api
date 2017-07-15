@@ -16,13 +16,13 @@
                 <img src="{!! $logo !!}" alt=""/>
             </div>
 
-            <img src="{{asset('qifu/share2/img/logo2.png') }}" alt="" class="qLogo"/>
-            <img src="{{asset('qifu/share2/img/line.png') }}" alt="" class="line"/>
+            <!--<img src="{{asset('qifu/share2/img/logo2.png') }}" alt="" class="qLogo"/>-->
+            <!--<img src="{{asset('qifu/share2/img/line.png') }}" alt="" class="line"/>-->
         </div>
     @else
-        <div class="logo2">
+        <!--<div class="logo2">
             <img src="{{asset('qifu/share2/img/logo2.png')}}"/>
-        </div>
+        </div>-->
     @endif
     @if(!is_null($shop_url))
         <div class="footer ">
@@ -77,17 +77,17 @@
         $('.popup').hide();
     });
 
-
-    var imgWid = $('.logo img').width();
-    var imgHei = $('.logo img').height();
-
-    //		console.log(imgHei,imgWid)
-
-    if(imgWid > imgHei){
-        $('.logo img').css('width','100%');
-    }else{
-        $('.logo img').css('height','100%');
-    }
+//
+//  var imgWid = $('.logo img').width();
+//  var imgHei = $('.logo img').height();
+//
+//  //		console.log(imgHei,imgWid)
+//
+//  if(imgWid > imgHei){
+//      $('.logo img').css('width','100%');
+//  }else{
+//      $('.logo img').css('height','100%');
+//  }
 
     //	 * ios 手机不能自动播放声音
     // */
