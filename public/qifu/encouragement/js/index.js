@@ -16,5 +16,12 @@ $(function(){
     	status = 2;
     	$(this).val('');
     	$(this).css('color','#edbf00');
+    });
+    $('.ipt').blur(function(){
+    	if($(this).val() == ''){
+    		status = 1;
+    		$(this).val('请在此输入姓名');
+    		$(this).css('color','grey');
+    	}
     })
 });
