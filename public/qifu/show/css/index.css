@@ -17,6 +17,11 @@ body{
     width: 640px;
     height: 1038px;
 }
+.arrow{
+	position: absolute;
+	left: 278px;
+	top: 596px;
+}
 .hidden{
     display: none;
 }
