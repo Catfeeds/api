@@ -17,6 +17,7 @@ class CreateQifuUsersTable extends Migration
             $table->increments('id');
             $table->string('openid')->nullable();
             $table->string('nickname', 50);
+            $table->string('company', 50)->default('');
 //            $table->string('name', 50)->unique();
             $table->boolean('sign')->default(0);
             $table->boolean('vr')->default(0);

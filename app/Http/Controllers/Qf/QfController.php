@@ -207,7 +207,8 @@ class QfController extends Controller
         $shop_url = $qf_user->shop_url;
         $openid = $user_info->id;
         $nickname = $user_info->nickname;
-        return view('qf.share', compact('logo', 'shop_url', 'js', 'openid', 'nickname'));
+        $company = $qf_user->company;
+        return view('qf.share', compact('logo', 'shop_url', 'js', 'openid', 'nickname', 'company'));
     }
 
     public function shareTo(Request $request)
@@ -220,7 +221,8 @@ class QfController extends Controller
             ->first();
         $logo = $qf_user->logo;
         $shop_url = $qf_user->shop_url;
-        return view('qf.share', compact('logo', 'shop_url', 'js', 'openid', 'nickname'));
+        $company = $qf_user->company;
+        return view('qf.share', compact('logo', 'shop_url', 'js', 'openid', 'nickname', 'company'));
     }
 
     public function online($openid,$nickname='')
