@@ -67,11 +67,13 @@ body{
 /*page2*/
 .page2 img{
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 180px;
+    left: 76px;
+		
+    top: 240px;
     bottom: 0;
-    margin: auto;
+
+    width: 436px;
+   
 }
 /*mask*/
 .mask{
