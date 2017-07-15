@@ -59,9 +59,10 @@ canvas{
 }
 .arrow{
 	position: absolute;
-	left: 330px;
-	top:680px;
+	left: 387px;
+	top:626px;
 
 
 	z-index: 1000;
 }
+
