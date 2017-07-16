@@ -25,19 +25,16 @@ $(function() {
 			'img/kuang.png',
 			'img/text.png',
 			'img/jiantou.gif',
+			
 		];
-	for(var i = 60; i <= 94; i++) {
-		fileList.push("images/part2/3_000"+i+".jpg");
+
+	for(var i = 0; i <= 60; i++) {
+		fileList.push("images/part01/"+i+".jpg");
 	}
-	for(var i = 0; i <= 9; i++) {
-		fileList.push("images/part1/1003_0000"+i+".jpg");
+		for(var i = 0; i <= 17; i++) {
+		fileList.push("images/part02/"+i+".jpg");
 	}
-	for(var i = 10; i <= 99; i++) {
-		fileList.push("images/part1/1003_000"+i+".jpg");
-	}
-	for(var i = 100; i <= 121; i++) {
-		fileList.push("images/part1/1003_00"+i+".jpg");
-	}
+
 	//把图片载入加载器
 	for(var i = 0; i < fileList.length; i++) {
 		var pxImage = new PxLoaderImage(BASE_PATH + fileList[i]);
@@ -107,8 +104,7 @@ $(function() {
 
 	//启动
 	loader.start();
-	
-//	 * ios 手机不能自动播放声音
+	//	 * ios 手机不能自动播放声音
 // */
 	function bgm_init(){
 		var video = document.getElementById('video');
@@ -138,49 +134,32 @@ function xuliezhen() {
 		callback: function() {
 			$('.arrow').fadeIn(500);
 			$('.content').one('click',function(){
+
 				frame2();
 				$('.arrow').fadeOut(500);
 			})
 		},
 		imgArr: [
-			"images/part1/1003_00000.jpg",
-			"images/part1/1003_00001.jpg",
-			"images/part1/1003_00002.jpg",
-			"images/part1/1003_00003.jpg",
-			"images/part1/1003_00004.jpg",
-			"images/part1/1003_00005.jpg",
-			"images/part1/1003_00006.jpg",
-			"images/part1/1003_00007.jpg",
-			"images/part1/1003_00008.jpg",
-			"images/part1/1003_00009.jpg",
-			"images/part1/1003_00010.jpg",
-			"images/part1/1003_00011.jpg",
-			"images/part1/1003_00012.jpg",
-			"images/part1/1003_00013.jpg",
-			"images/part1/1003_00014.jpg",
-			"images/part1/1003_00015.jpg",
-			"images/part1/1003_00016.jpg",
-			"images/part1/1003_00017.jpg",
-			"images/part1/1003_00018.jpg",
-			"images/part1/1003_00019.jpg",
-			"images/part1/1003_00020.jpg",
-			"images/part1/1003_00021.jpg",
-			"images/part1/1003_00022.jpg",
-			"images/part1/1003_00023.jpg",
-			"images/part1/1003_00024.jpg",
-			"images/part1/1003_00025.jpg",
-			"images/part1/1003_00026.jpg",
-			"images/part1/1003_00027.jpg",
-			"images/part1/1003_00028.jpg",
-			"images/part1/1003_00029.jpg",
-			"images/part1/1003_00030.jpg",
-			"images/part1/1003_00031.jpg",
-			"images/part1/1003_00032.jpg",
-			"images/part1/1003_00033.jpg",
-			"images/part1/1003_00034.jpg",
-			"images/part1/1003_00035.jpg",
-			"images/part1/1003_00036.jpg",
-			"images/part1/1003_00037.jpg",
+                    "images/part01/0.jpg",
+                    "images/part01/1.jpg",
+                    "images/part01/2.jpg",
+                    "images/part01/3.jpg",
+                    "images/part01/4.jpg",
+                    "images/part01/5.jpg",
+                    "images/part01/6.jpg",
+                    "images/part01/7.jpg",
+                    "images/part01/8.jpg",
+                    "images/part01/9.jpg",
+                    "images/part01/10.jpg",
+                    "images/part01/11.jpg",
+                    "images/part01/12.jpg",
+                    "images/part01/13.jpg",
+                    "images/part01/14.jpg",
+                    "images/part01/15.jpg",
+                    "images/part01/16.jpg",
+                    "images/part01/17.jpg",
+                    "images/part01/18.jpg",
+
 		]
 	});
 }
@@ -188,13 +167,13 @@ function xuliezhen() {
 
 
 function frame2(){
-    var frame2 = new SequenceFrame({
-        id: $('#canvas1')[0],
-        width: 640,
-        height: 1038,
-        speed: 50,
-        loop: false,
-        callback: function() {
+	var frame2 = new SequenceFrame({
+		id: $('#canvas1')[0],
+		width: 640,
+		height: 1038,
+		speed: 50,
+		loop: false,
+		callback: function() {
 
             $('.arrow').fadeIn(500);
             $('.content').one('click',function(){
@@ -203,68 +182,39 @@ function frame2(){
                 $('.arrow').fadeOut(500);
             })
 
-        },
-        imgArr: [
-            "images/part1/1003_00038.jpg",
-			"images/part1/1003_00039.jpg",
-			"images/part1/1003_00040.jpg",
-			"images/part1/1003_00041.jpg",
-			"images/part1/1003_00042.jpg",
-			"images/part1/1003_00043.jpg",
-			"images/part1/1003_00044.jpg",
-			"images/part1/1003_00045.jpg",
-			"images/part1/1003_00046.jpg",
-			"images/part1/1003_00047.jpg",
-			"images/part1/1003_00048.jpg",
-			"images/part1/1003_00049.jpg",
-			"images/part1/1003_00050.jpg",
-			"images/part1/1003_00051.jpg",
-			"images/part1/1003_00052.jpg",
-			"images/part1/1003_00053.jpg",
-			"images/part1/1003_00054.jpg",
-			"images/part1/1003_00055.jpg",
-			"images/part1/1003_00056.jpg",
-			"images/part1/1003_00057.jpg",
-			"images/part1/1003_00058.jpg",
-			"images/part1/1003_00059.jpg",
-			"images/part1/1003_00060.jpg",
-			"images/part1/1003_00061.jpg",
-			"images/part1/1003_00062.jpg",
-			"images/part1/1003_00063.jpg",
-			"images/part1/1003_00064.jpg",
-			"images/part1/1003_00065.jpg",
-			"images/part1/1003_00066.jpg",
-			"images/part1/1003_00067.jpg",
-			"images/part1/1003_00068.jpg",
-			"images/part1/1003_00069.jpg",
-			"images/part1/1003_00070.jpg",
-			"images/part1/1003_00071.jpg",
-			"images/part1/1003_00072.jpg",
-			"images/part1/1003_00073.jpg",
-			"images/part1/1003_00074.jpg",
-			"images/part1/1003_00075.jpg",
-			"images/part1/1003_00076.jpg",
-			"images/part1/1003_00077.jpg",
-			"images/part1/1003_00078.jpg",
-			"images/part1/1003_00079.jpg",
-			"images/part1/1003_00080.jpg",
-			"images/part1/1003_00081.jpg",
-			"images/part1/1003_00082.jpg",
-			"images/part1/1003_00083.jpg",
-			"images/part1/1003_00084.jpg",
-            "images/part1/1003_00085.jpg",
-            "images/part1/1003_00086.jpg",
-            "images/part1/1003_00087.jpg",
-            "images/part1/1003_00088.jpg",
-            "images/part1/1003_00089.jpg",
-            "images/part1/1003_00090.jpg",
-            "images/part1/1003_00091.jpg",
-            "images/part1/1003_00092.jpg",
-            "images/part1/1003_00093.jpg",
-            "images/part1/1003_00094.jpg",
-            "images/part1/1003_00095.jpg",
-        ]
-    });
+		},
+		imgArr: [
+                    "images/part01/19.jpg",
+                    "images/part01/20.jpg",
+                    "images/part01/21.jpg",
+                    "images/part01/22.jpg",
+                    "images/part01/23.jpg",
+                    "images/part01/24.jpg",
+                    "images/part01/25.jpg",
+                    "images/part01/26.jpg",
+                    "images/part01/27.jpg",
+                    "images/part01/28.jpg",
+                    "images/part01/29.jpg",
+                    "images/part01/30.jpg",
+                    "images/part01/31.jpg",
+                    "images/part01/32.jpg",
+                    "images/part01/33.jpg",
+                    "images/part01/34.jpg",
+                    "images/part01/35.jpg",
+                    "images/part01/36.jpg",
+                    "images/part01/37.jpg",
+                    "images/part01/38.jpg",
+                    "images/part01/39.jpg",
+                    "images/part01/40.jpg",
+                    "images/part01/41.jpg",
+                    "images/part01/42.jpg",
+                    "images/part01/43.jpg",
+                    "images/part01/44.jpg",
+                    "images/part01/45.jpg",
+                    "images/part01/46.jpg",
+                    "images/part01/47.jpg",
+		]
+	});
 }
 
 function frame3(){
@@ -281,73 +231,41 @@ function frame3(){
         },
         imgArr: [
 
-             "images/part1/1003_00096.jpg",
-            "images/part1/1003_00097.jpg",
-            "images/part1/1003_00098.jpg",
-            "images/part1/1003_00099.jpg",
-            "images/part1/1003_00100.jpg",
-            "images/part1/1003_00101.jpg",
-            "images/part1/1003_00102.jpg",
-            "images/part1/1003_00103.jpg",
-            "images/part1/1003_00104.jpg",
-            "images/part1/1003_00105.jpg",
-            "images/part1/1003_00106.jpg",
-            "images/part1/1003_00107.jpg",
-            "images/part1/1003_00108.jpg",
-            "images/part1/1003_00109.jpg",
-            "images/part1/1003_00110.jpg",
-            "images/part1/1003_00111.jpg",
-            "images/part1/1003_00112.jpg",
-            "images/part1/1003_00113.jpg",
-            "images/part1/1003_00114.jpg",
-            "images/part1/1003_00115.jpg",
-            "images/part1/1003_00116.jpg",
-            "images/part1/1003_00117.jpg",
-            "images/part1/1003_00118.jpg",
-            "images/part1/1003_00119.jpg",
-            "images/part1/1003_00120.jpg",
-            "images/part1/1003_00121.jpg",
 
-            "images/part2/3_00060.jpg",
-            "images/part2/3_00061.jpg",
-            "images/part2/3_00062.jpg",
-            "images/part2/3_00063.jpg",
-            "images/part2/3_00064.jpg",
-            "images/part2/3_00065.jpg",
-            "images/part2/3_00066.jpg",
-            "images/part2/3_00067.jpg",
-            "images/part2/3_00068.jpg",
-            "images/part2/3_00068.jpg",
-            "images/part2/3_00070.jpg",
-            "images/part2/3_00071.jpg",
-            "images/part2/3_00072.jpg",
-            "images/part2/3_00073.jpg",
-            "images/part2/3_00074.jpg",
-            "images/part2/3_00075.jpg",
-            "images/part2/3_00076.jpg",
-            "images/part2/3_00077.jpg",
-            "images/part2/3_00078.jpg",
-            "images/part2/3_00079.jpg",
-            "images/part2/3_00080.jpg",
-            "images/part2/3_00081.jpg",
-            "images/part2/3_00082.jpg",
-            "images/part2/3_00083.jpg",
-            "images/part2/3_00084.jpg",
-            "images/part2/3_00085.jpg",
-            "images/part2/3_00086.jpg",
-            "images/part2/3_00087.jpg",
-            "images/part2/3_00088.jpg",
-            "images/part2/3_00089.jpg",
-            "images/part2/3_00090.jpg",
-            "images/part2/3_00091.jpg",
-            "images/part2/3_00092.jpg",
-            "images/part2/3_00093.jpg",
-            "images/part2/3_00094.jpg",
-
+            "images/part01/48.jpg",
+            "images/part01/49.jpg",
+            "images/part01/50.jpg",
+            "images/part01/51.jpg",
+            "images/part01/52.jpg",
+            "images/part01/53.jpg",
+            "images/part01/54.jpg",
+            "images/part01/55.jpg",
+            "images/part01/56.jpg",
+            "images/part01/57.jpg",
+            "images/part01/58.jpg",
+            "images/part01/59.jpg",
+            "images/part01/60.jpg",
+            "images/part02/0.jpg",
+            "images/part02/1.jpg",
+            "images/part02/2.jpg",
+            "images/part02/3.jpg",
+            "images/part02/4.jpg",
+            "images/part02/5.jpg",
+            "images/part02/6.jpg",
+            "images/part02/7.jpg",
+            "images/part02/8.jpg",
+            "images/part02/9.jpg",
+            "images/part02/10.jpg",
+            "images/part02/11.jpg",
+            "images/part02/12.jpg",
+            "images/part02/13.jpg",
+            "images/part02/14.jpg",
+            "images/part02/15.jpg",
+            "images/part02/16.jpg",
+            "images/part02/17.jpg",
 
         ]
     });
 }
-
 
 

@@ -52,7 +52,7 @@ $(function(){
 
         	'img/share.jpg',
         ];
-     for (var i = 0; i <= 689; i++) {
+     for (var i = 0; i <= 345; i++) {
         fileList.push("img/video/" + i + ".jpg");
     }
 	//把图片载入加载器

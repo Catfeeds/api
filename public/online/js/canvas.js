@@ -7,7 +7,7 @@ var CTX_VIDEO=CANVAS_VIDEO.getContext("2d");
 
 function videoImgInit() {
     var first=0;
-    var last=689;
+    var last=345;
     var html="";
     for(var i=first;i<=last;i++){
         html+="	<img src="+BASE_PATH+"img/video/"+i+".jpg id='mainVideo"+i+"'/>";
@@ -111,7 +111,7 @@ function fullScreen() {
                     i++;
                 }
             }
-            if(i>=690){  //409+1
+            if(i>=345){  //409+1
                 videoEnd();
                 // i=0     //启示为0;
             }

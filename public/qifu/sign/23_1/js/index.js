@@ -14,10 +14,10 @@ $(function(){
     var fakeLoadingNum = 0;
     var myLoadingInterval = null;
     var fileList = ["images/shouzhi.gif"];
-    for (var i = 0; i <= 42; i++) {
+    for (var i = 0; i <= 21; i++) {
         fileList.push("images/part01/" + i + ".jpg");
     }
-    for(var i = 0; i <= 58; i++){
+    for(var i = 0; i <= 29; i++){
         fileList.push("images/part02/" + i + ".jpg");
     }
     for(var i = 0; i < fileList.length; i++){
@@ -88,27 +88,27 @@ $(function(){
                     "images/part01/19.jpg",
                     "images/part01/20.jpg",
                     "images/part01/21.jpg",
-                    "images/part01/22.jpg",
-                    "images/part01/23.jpg",
-                    "images/part01/24.jpg",
-                    "images/part01/25.jpg",
-                    "images/part01/26.jpg",
-                    "images/part01/27.jpg",
-                    "images/part01/28.jpg",
-                    "images/part01/29.jpg",
-                    "images/part01/30.jpg",
-                    "images/part01/31.jpg",
-                    "images/part01/32.jpg",
-                    "images/part01/33.jpg",
-                    "images/part01/34.jpg",
-                    "images/part01/35.jpg",
-                    "images/part01/36.jpg",
-                    "images/part01/37.jpg",
-                    "images/part01/38.jpg",
-                    "images/part01/39.jpg",
-                    "images/part01/40.jpg",
-                    "images/part01/41.jpg",
-                    "images/part01/42.jpg"
+//                  "images/part01/22.jpg",
+//                  "images/part01/23.jpg",
+//                  "images/part01/24.jpg",
+//                  "images/part01/25.jpg",
+//                  "images/part01/26.jpg",
+//                  "images/part01/27.jpg",
+//                  "images/part01/28.jpg",
+//                  "images/part01/29.jpg",
+//                  "images/part01/30.jpg",
+//                  "images/part01/31.jpg",
+//                  "images/part01/32.jpg",
+//                  "images/part01/33.jpg",
+//                  "images/part01/34.jpg",
+//                  "images/part01/35.jpg",
+//                  "images/part01/36.jpg",
+//                  "images/part01/37.jpg",
+//                  "images/part01/38.jpg",
+//                  "images/part01/39.jpg",
+//                  "images/part01/40.jpg",
+//                  "images/part01/41.jpg",
+//                  "images/part01/42.jpg"
                 ]
             });
         }
@@ -157,36 +157,36 @@ $(function(){
                     "images/part02/26.jpg",
                     "images/part02/27.jpg",
                     "images/part02/28.jpg",
-                    "images/part02/29.jpg",
-                    "images/part02/30.jpg",
-                    "images/part02/31.jpg",
-                    "images/part02/32.jpg",
-                    "images/part02/33.jpg",
-                    "images/part02/34.jpg",
-                    "images/part02/35.jpg",
-                    "images/part02/36.jpg",
-                    "images/part02/37.jpg",
-                    "images/part02/38.jpg",
-                    "images/part02/39.jpg",
-                    "images/part02/40.jpg",
-                    "images/part02/41.jpg",
-                    "images/part02/42.jpg",
-                    "images/part02/43.jpg",
-                    "images/part02/44.jpg",
-                    "images/part02/45.jpg",
-                    "images/part02/46.jpg",
-                    "images/part02/47.jpg",
-                    "images/part02/48.jpg",
-                    "images/part02/49.jpg",
-                    "images/part02/50.jpg",
-                    "images/part02/51.jpg",
-                    "images/part02/52.jpg",
-                    "images/part02/53.jpg",
-                    "images/part02/54.jpg",
-                    "images/part02/55.jpg",
-                    "images/part02/56.jpg",
-                    "images/part02/57.jpg",
-                    "images/part02/58.jpg"
+//                  "images/part02/29.jpg",
+//                  "images/part02/30.jpg",
+//                  "images/part02/31.jpg",
+//                  "images/part02/32.jpg",
+//                  "images/part02/33.jpg",
+//                  "images/part02/34.jpg",
+//                  "images/part02/35.jpg",
+//                  "images/part02/36.jpg",
+//                  "images/part02/37.jpg",
+//                  "images/part02/38.jpg",
+//                  "images/part02/39.jpg",
+//                  "images/part02/40.jpg",
+//                  "images/part02/41.jpg",
+//                  "images/part02/42.jpg",
+//                  "images/part02/43.jpg",
+//                  "images/part02/44.jpg",
+//                  "images/part02/45.jpg",
+//                  "images/part02/46.jpg",
+//                  "images/part02/47.jpg",
+//                  "images/part02/48.jpg",
+//                  "images/part02/49.jpg",
+//                  "images/part02/50.jpg",
+//                  "images/part02/51.jpg",
+//                  "images/part02/52.jpg",
+//                  "images/part02/53.jpg",
+//                  "images/part02/54.jpg",
+//                  "images/part02/55.jpg",
+//                  "images/part02/56.jpg",
+//                  "images/part02/57.jpg",
+//                  "images/part02/58.jpg"
 
                 ]
             });
