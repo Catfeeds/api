@@ -233,7 +233,7 @@ class QfController extends Controller
 
     public function time()
     {
-        return redirect('http://api.touchworld-sh.com/qifu/show/index.html');
+        return redirect('http://api.touchworld-sh.com/qifu/encouragement/index.html');
     }
 
     public function user(Request $request)
