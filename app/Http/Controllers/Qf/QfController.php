@@ -61,7 +61,7 @@ class QfController extends Controller
             } elseif ($qf_user->pasture == '0' && $qf_user->vr == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/sign/3_1/index.html');
             }
-            return '出错啦～请联系管理员';
+            return '网络出现了问题';
         }
     }
 
@@ -107,7 +107,7 @@ class QfController extends Controller
             } elseif ($qf_user->sign == '0' && $qf_user->vr == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/pasture/3_2/index.html');
             }
-            return '出错啦～请联系管理员';
+            return '网络出现了问题～';
         }
 
 
@@ -173,7 +173,7 @@ class QfController extends Controller
             } elseif ($qf_user->pasture == '0' && $qf_user->sign == '1') {
                 return redirect('http://api.touchworld-sh.com/qifu/vr/1_3/index.html');
             }
-            return '出错啦～请联系管理员';
+            return '网络出现了问题～';
         }
 
 //        弃用
@@ -233,7 +233,7 @@ class QfController extends Controller
 
     public function time()
     {
-        return redirect('http://api.touchworld-sh.com/qifu/other/index.html');
+        return redirect('http://api.touchworld-sh.com/qifu/encouragement/index.html');
     }
 
     public function user(Request $request)

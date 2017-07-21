@@ -46,7 +46,8 @@ Route::group(['prefix' => 'qf', 'middleware' => ['web', 'wechat.oauth:snsapi_use
     Route::get('/share', 'Qf\QfController@share');
     Route::get('/shareto', 'Qf\QfController@shareTo');
     Route::get('/online/{openid}', 'Qf\QfController@online');
-    Route::get('/time', 'Qf\QfController@time');
 });
+
+Route::get('qf/time', 'Qf\QfController@time');
 
 Route::any('/wechat', 'Wechat\WechatController@serve');
