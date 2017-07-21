@@ -14,11 +14,18 @@ class VideoController extends Controller
 //        $this->validate($request, [
 //            'video' => 'required',
 //        ]);
-        if (is_null($request->file('video'))){
+        if (is_null($request->file('video'))) {
             return 'false';
         }
         $path = Storage::disk('public_path')->putFile('videos', $request->file('video'));
 
-        return env('APP_URL').'/'.$path;
+        return env('APP_URL') . '/jc/video?path=' . $path;
+    }
+
+    public function show(Request $request)
+    {
+        $path = $request->path;
+        $path = env('APP_URL') . '/upload/' . $path;
+        return view('jc.index', compact('path'));
     }
 }

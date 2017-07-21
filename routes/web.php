@@ -51,3 +51,8 @@ Route::group(['prefix' => 'qf', 'middleware' => ['web', 'wechat.oauth:snsapi_use
 Route::get('qf/time', 'Qf\QfController@time');
 
 Route::any('/wechat', 'Wechat\WechatController@serve');
+
+/**
+ * jc(吕)项目，用户显示上传的视频
+ */
+Route::get('/jc/video', 'Api\VideoController@show');

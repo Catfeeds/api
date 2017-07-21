@@ -1,0 +1,60 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.page{
+	width: 640px;
+	height: 1038px;
+	background: url(../img/bg.png) no-repeat center center;
+}
+.hidden{
+	display: none;
+}
+.content{
+	position: absolute;
+	top:354px;
+	left:0;
+	right: 0;
+	margin:auto;
+}
+.content .shareBtn,.content .careBtn{
+	position: absolute;
+	top:548px;
+}
+.content .shareBtn{
+	left:30px;
+}
+.content .careBtn{
+	right: 30px;
+}
+.content .kownBtn{
+	position: absolute;
+	left:0;
+	right: 0;
+	margin:auto;
+	top:548px;
+}
+.content .plane{
+	position: absolute;
+	left:230px;
+	top:108px;
+	animation: plane 1.5s ease-in-out infinite alternate;
+}
+@keyframes plane {
+
+	0%{
+		left:230px;
+		top:108px;
+	}
+	100%{
+		left:320px;
+		top:40px;
+	}
+
+}
+.zy_media{
+	width:640px;
+}
+video{
+	width: 640px;
+}
