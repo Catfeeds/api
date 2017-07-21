@@ -20,6 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('audio/upload', 'Api\\AudioController@upload');
 //图片上传接口
 Route::post('image/upload', 'Api\\ImageController@upload');
+//视频上传接口
+Route::post('video/upload', 'Api\VideoController@upload');
 //微信小程序
 Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
     Route::get('/index', 'IndexController@index');
