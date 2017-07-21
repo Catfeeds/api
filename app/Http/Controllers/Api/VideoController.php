@@ -14,7 +14,9 @@ class VideoController extends Controller
 //        $this->validate($request, [
 //            'video' => 'required',
 //        ]);
-
+        if (is_null($request->file('video'))){
+            return 'false';
+        }
         $path = Storage::disk('public_path')->putFile('videos', $request->file('video'));
 
         return env('APP_URL').'/'.$path;
