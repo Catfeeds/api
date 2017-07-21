@@ -11,9 +11,10 @@ class VideoController extends Controller
 {
     public function upload(Request $request)
     {
-        $this->validate($request, [
-            'video' => 'required',
-        ]);
+//        $this->validate($request, [
+//            'video' => 'required',
+//        ]);
+
         $path = Storage::disk('public_path')->putFile('videos', $request->file('video'));
 
         return env('APP_URL').'/'.$path;
