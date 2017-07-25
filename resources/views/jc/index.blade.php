@@ -32,7 +32,7 @@
 
 	</body>
 	<script src="{{asset('jc/js/jquery.min.js')}}"></script>
-	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
 	<script src="{{asset('jc/js/video.min.js')}}" type="text/javascript" charset="utf-8"></script>
 	<script src="{{asset('jc/js/index.js')}}"></script>
 	<script type="text/javascript">
