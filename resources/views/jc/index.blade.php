@@ -16,7 +16,7 @@
 					<source src="{!! $path !!}"> 您的浏览器不支持HTML5视频
 				</video>
 
-				<img src="{{asset('jc/img/shareBtn.png')}}" alt="" class="shareBtn hidden">
+				<img src="{{asset('jc/img/shareBtn2.png')}}" alt="" class="shareBtn hidden">
 				<img src="{{asset('jc/img/careBtn.png')}}" alt="" class="careBtn hidden">
 			</div>
 			<div class="content hidden content2">
