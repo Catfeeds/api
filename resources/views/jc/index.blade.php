@@ -55,14 +55,14 @@
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
             title: '查看我的#Own Your Juicy#专属视频', // 分享标题
-            link: "https://api.shanghaichujie.com{{ $_SERVER['REQUEST_URI'] }}",
+            link: "https://api.shanghaichujie.com{!! $_SERVER['REQUEST_URI'] !!}",
             imgUrl: "{{asset('jc/img/jc_share.png')}}" // 分享图标
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: '查看我的#Own Your Juicy#专属视频', // 分享标题
             desc: "邀你玩转Juicy时尚派对", // 分享描述
-            link: "https://api.shanghaichujie.com{{ $_SERVER['REQUEST_URI'] }}",
+            link: "https://api.shanghaichujie.com{!! $_SERVER['REQUEST_URI'] !!}",
             imgUrl: "{{asset('jc/img/jc_share.png')}}", // 分享图标
             type: 'link' // 分享类型,music、video或link，不填默认为link
         });
