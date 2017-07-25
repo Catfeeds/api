@@ -7,6 +7,15 @@
 		<link rel="stylesheet" href="{{asset('jc/css/index.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{asset('jc/css/video-js.css')}}"/>
 		<title></title>
+		<script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?8a6e9e7210f32dc650e98e3c6d78bddd";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+		</script>
 	</head>
 
 	<body>
