@@ -5,10 +5,22 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use EasyWeChat\Foundation\Application;
 
 
 class VideoController extends Controller
 {
+    public $js;
+
+    /**
+     * ConverseController constructor.
+     * @param $app
+     */
+    public function __construct(Application $app)
+    {
+        $this->js = $app->js;
+    }
+
     public function upload(Request $request)
     {
 //        $this->validate($request, [
@@ -24,8 +36,9 @@ class VideoController extends Controller
 
     public function show(Request $request)
     {
+        $js = $this->js;
         $path = $request->path;
         $path = env('APP_URL') . '/upload/' . $path;
-        return view('jc.index', compact('path'));
+        return view('jc.index', compact('path', 'js'));
     }
 }

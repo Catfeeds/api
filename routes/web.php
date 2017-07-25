@@ -55,4 +55,6 @@ Route::any('/wechat', 'Wechat\WechatController@serve');
 /**
  * jc(吕)项目，用户显示上传的视频
  */
-Route::get('/jc/video', 'Api\VideoController@show');
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
+    Route::get('/jc/video', 'Api\VideoController@show');
+});
