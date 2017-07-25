@@ -46,7 +46,7 @@
 
 <script src="{{asset('jc/js/video.min.js')}}" type="text/javascript" charset="utf-8"></script>
 <script src="{{asset('jc/js/index.js')}}"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
 
 <script type="text/javascript">
     wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
