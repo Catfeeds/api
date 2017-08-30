@@ -15,6 +15,15 @@ class ImageController extends Controller
         ]);
         $path = Storage::disk('public_path')->putFile('face', $request->file('image'));
 
-        return env('upload_url').'/'.$path;
+        return env('upload_url') . '/' . $path;
+    }
+
+    public function ali(Request $request)
+    {
+        for ($i = 0; $i < 10; $i++) {
+            Storage::disk('public_path')->putFile('ali/' . $request->id, $request->file('p' . $i));
+        }
+
+        return env('APP_URL').'/ali/'.$request->id;
     }
 }
