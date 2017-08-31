@@ -45,7 +45,7 @@
 </body>
 
 <script src="https://unpkg.com/vue@2.4.2" type="text/javascript" charset="utf-8"></script>
-<script src="//{{ Request::getHost() }}:8000/socket.io/socket.io.js"></script>
+<script src="//{{ Request::getHost() }}:8080/socket.io/socket.io.js"></script>
 <script type="application/javascript">
     var app = new Vue({
         el: '#temp3',
@@ -54,7 +54,7 @@
         }
     });
 
-    var socket = io('http://{{ Request::getHost() }}:8000');
+    var socket = io('http://{{ Request::getHost() }}:8080');
 
     socket.on('main-channel:App\\Events\\AliPhoto', function (data) {
         app.$data.uid = data.uid;

@@ -10,4 +10,4 @@ redis.on('message', function (channel, message) {
     io.emit(channel + ':' + message.event, message.data);
 });
 
-http.listen(8000);
+http.listen(8080);
