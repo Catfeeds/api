@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+}
+.all{
+    position: relative;
+}
+.all .bg{
+    position: absolute;
+}
+.all #temp3{
+    width: 1034px;
+    height: 596px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top:315px;
+    left: 36px;
+}
+.all #temp3 li{
+    position: absolute;
+    top:0;
+    width: 1034px;
+}
+.all #temp3 li img{
+    width: 1034px;
+}
+.all .declareBg{
+    position: absolute;
+    left: 1107px;
+    top:336px;
+    width: 768px;
+    color: #009844;
+    /*font-weight: bold;*/
+    font-size: 60px;
+}
+.declareBg .declareBg1{
+    width: 768px;
+    height: 111px;
+
+    background: url("../images/declareBg1.png");
+}
+.declareBg .declareBg1 p,.declareBg .declareBg2 p{
+    line-height: 111px;
+    width: 300px;
+    text-align: center;
+}
+.declareBg .declareBg3 p{
+    width: 470px;
+    text-align: center;
+    position: absolute;
+    top:92px;
+}
+.declareBg .declareBg2{
+    width: 768px;
+    height: 111px;
+    background: url("../images/declareBg2.png");
+    position: absolute;
+    top:174px;
+
+}
+.declareBg .declareBg3{
+    width: 768px;
+    height: 194px;
+    background: url("../images/declareBg3.png");
+    position: absolute;
+    top:367px;
+}

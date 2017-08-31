@@ -58,3 +58,11 @@ Route::any('/wechat', 'Wechat\WechatController@serve');
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
     Route::get('/jc/video', 'Api\VideoController@show');
 });
+
+/**
+ * 阿里巴巴公益三公里
+ */
+Route::get('ali/user/{uid}','Ali\AliController@index');
+Route::get('ali/show',function (){
+    return view('ali.show');
+});
