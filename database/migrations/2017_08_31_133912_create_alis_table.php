@@ -15,7 +15,7 @@ class CreateAlisTable extends Migration
     {
         Schema::create('alis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('uid')->unique();
+            $table->string('uid',150)->unique();
             $table->string('name');
             $table->smallInteger('hours');
             $table->timestamps();
