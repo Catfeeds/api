@@ -15,7 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test', function () {
-    return view('test');
+    event(new \App\Events\AliPhoto('666'));
+    return 'true';
 });
 
 /*
