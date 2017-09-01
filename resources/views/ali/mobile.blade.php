@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>人人三小时</title>
     <meta name="viewport" content="width=640,user-scalable=no">
     <link rel="stylesheet" href="{{ asset('alibaba/css/index.css') }}">
 </head>
@@ -13,7 +13,7 @@
         <ul class="JQ-slide-content">
             @for( $i=0;$i<10;$i++)
                 <li>
-                    <img src="{{ asset('upload/ali/') . $ali->uid  . '/p' . $i . '.png' }}"/>
+                    <img src="{{ asset('upload/ali') .'/'. $ali->uid  . '/p' . $i . '.png' }}"/>
                 </li>
             @endfor
         </ul>
