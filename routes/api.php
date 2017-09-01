@@ -37,9 +37,18 @@ Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
 Route::post('img/ali', 'Api\ImageController@ali');
 
 Route::get('test', function (Request $request){
-   return response()->json([
-       'code' => 'true',
-       'hours' => '5',
-       'name' => 'xxxx'
-   ]);
+    if ($request->id == '1'){
+        return response()->json([
+            'code' => 'true',
+            'hours' => '5',
+            'name' => 'xxxx'
+        ]);
+    }else {
+        return response()->json([
+            'code' => 'false',
+            'hours' => '',
+            'name' => ''
+        ]);
+    }
+
 });
