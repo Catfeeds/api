@@ -12,7 +12,7 @@
 <body>
 <div class="all">
     <!--背景图-->
-    <img src="{{ asset('alibaba/images/bg.png') }}" alt="" class="bg">
+    <img src="{{ asset('alibaba/images/bg1.png') }}" alt="" class="bg">
     <!--图片轮播-->
     <div id="temp3">
         <ul class="JQ-slide-content">
