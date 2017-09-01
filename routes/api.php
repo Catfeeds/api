@@ -32,3 +32,5 @@ Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
 });
 //启赋有机签到接口(弃用)
 //Route::post('qf/user', 'Qf\QfController@user');
+
+Route::post('img/ali', 'Api\ImageController@ali');
