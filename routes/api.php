@@ -38,8 +38,8 @@ Route::post('img/ali', 'Api\ImageController@ali');
 
 Route::get('test', function (){
    return response()->json([
-       'code' => 'false',
-       'hours' => '',
-       'name' => ''
+       'code' => 'true',
+       'hours' => '5',
+       'name' => 'xxxx'
    ]);
 });
