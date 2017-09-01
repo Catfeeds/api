@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 //音频上传接口
 Route::post('audio/upload', 'Api\\AudioController@upload');
-//图片上传接口
+//图片上传接口(宋-用于人脸识别比对)
 Route::post('image/upload', 'Api\\ImageController@upload');
 //视频上传接口(JC_Campaign_tech)
 Route::post('video/upload', 'Api\VideoController@upload');
@@ -33,4 +33,13 @@ Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
 //启赋有机签到接口(弃用)
 //Route::post('qf/user', 'Qf\QfController@user');
 
+//阿里公益三小时
 Route::post('img/ali', 'Api\ImageController@ali');
+
+Route::get('test', function (){
+   return response()->json([
+       'code' => 'false',
+       'hours' => '',
+       'name' => ''
+   ]);
+});

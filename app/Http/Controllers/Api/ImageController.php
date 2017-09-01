@@ -23,7 +23,7 @@ class ImageController extends Controller
     public function ali(Request $request)
     {
         //拍照上传10张照片，保存到标识文件夹
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             Storage::disk('public_path')
                 ->putFileAs('ali/' . $request->id , $request->file('p' . $i), 'p'.$i.'.png');
         }
@@ -33,7 +33,9 @@ class ImageController extends Controller
         $ali->name = $request->name;
         $ali->hours = $request->hours;
         $ali->save();
+
         event(new AliPhoto($request->id));
+
 
         return env('APP_URL') . '/ali/user/' . $request->id;
     }

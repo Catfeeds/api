@@ -17,14 +17,14 @@
     <div id="temp3">
         <ul class="JQ-slide-content">
             <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p1.png'}"/></li>
-            {{--<li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p2.png'}"/></li>--}}
-            {{--<li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p3.png'}"/></li>--}}
-            {{--<li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p4.png'}"/></li>--}}
-            {{--<li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p5.png'}"/></li>--}}
-            {{--<li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p6.png'}"/></li>--}}
-            {{--<li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p7.png'}"/></li>--}}
-            {{--<li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p8.png'}"/></li>--}}
-            {{--<li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p9.png'}"/></li>--}}
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p2.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p3.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p4.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p5.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p6.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p7.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p8.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p9.png'}"/></li>
             <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p0.png'}"/></li>
         </ul>
     </div>
@@ -69,21 +69,21 @@
             timer: 2000
         });
 
-//        setInterval(function () {
-//            $.ajax({
-//                url: "index.json",
-//                type: "GET",
-//                dataType: "json",
-//                success: function (data) {
-//                    $('.declareBg1 p').html(data.total_time)
-//                    $('.declareBg2 p').html(data.total_people)
-//                    $('.declareBg3 p').html(data.count)
-//                },
-//                error: function (res) {
-//
-//                }
-//            });
-//        }, 60000)
+        setInterval(function () {
+            $.ajax({
+                url: "index.json",
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    $('.declareBg1 p').html(data.total_time)
+                    $('.declareBg2 p').html(data.total_people)
+                    $('.declareBg3 p').html(data.count)
+                },
+                error: function (res) {
+
+                }
+            });
+        }, 60000)
 
     })
 </script>
