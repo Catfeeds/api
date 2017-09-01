@@ -24,7 +24,7 @@ class ImageController extends Controller
         //拍照上传10张照片，保存到标识文件夹
         for ($i = 0; $i < 2; $i++) {
             Storage::disk('public_path')
-                ->put('ali/' . $request->id . '//p' . $i . '.png', $request->file('p' . $i));
+                ->putFile('ali/' . $request->id , $request->file('p' . $i , 'p'.$i.'.png'));
         }
         //保存信息到数据库
         $ali = new Ali;
