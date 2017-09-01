@@ -6,6 +6,7 @@ var redis = new Redis();
 redis.subscribe('ali');
 
 redis.on('message', function (channel, message) {
+    console.log(message);
     message = JSON.parse(message);
     io.emit(channel + ':' + message.event, message.data);
 });
