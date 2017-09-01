@@ -36,7 +36,7 @@ Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
 //阿里公益三小时
 Route::post('img/ali', 'Api\ImageController@ali');
 
-Route::get('test', function (){
+Route::get('test', function (Request $request){
    return response()->json([
        'code' => 'true',
        'hours' => '5',
