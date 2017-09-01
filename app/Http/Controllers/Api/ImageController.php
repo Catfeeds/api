@@ -21,7 +21,6 @@ class ImageController extends Controller
 
     public function ali(Request $request)
     {
-        dd($request->id);
         //拍照上传10张照片，保存到标识文件夹
         for ($i = 0; $i < 2; $i++) {
             Storage::disk('public_path')
