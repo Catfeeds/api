@@ -33,10 +33,16 @@ Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
 //启赋有机签到接口(弃用)
 //Route::post('qf/user', 'Qf\QfController@user');
 
-//阿里公益三小时
+/**
+ * 阿里公益三小时项目
+ *
+ */
+//用于拍照上传生成二维码
 Route::post('img/ali', 'Api\ImageController@ali');
+//用于获取公益三小时统计数据
 
-Route::get('test', function (Request $request){
+//用于门禁和拍照
+Route::get('ali/user', function (Request $request){
     if ($request->id == '1'){
         return response()->json([
             'code' => 'true',
@@ -47,7 +53,8 @@ Route::get('test', function (Request $request){
         return response()->json([
             'code' => 'false',
             'hours' => '',
-            'name' => ''
+            'name' => '
+            '
         ]);
     }
 
