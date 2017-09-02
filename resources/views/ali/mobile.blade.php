@@ -19,7 +19,7 @@
         </ul>
     </div>
     <div class="text">
-        <p>姓名:<span>{{ $ali->name }}花名</span></p>
+        <p>姓名:<span>{{ $ali->name }}</span></p>
         <p>2018财年累计申报<span>{{ $ali->hours }}</span>公益时</p>
     </div>
 </div>
