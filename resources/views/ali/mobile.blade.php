@@ -33,7 +33,7 @@
         $("#temp3").Slide({
             effect: "fade",
             speed: "normal",
-            timer: 2000
+            timer: 100
         });
     })
 </script>
