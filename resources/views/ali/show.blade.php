@@ -71,13 +71,13 @@
 
         setInterval(function () {
             $.ajax({
-                url: "index.json",
+                url: "http://192.168.169.101/api/ali/total",
                 type: "GET",
                 dataType: "json",
                 success: function (data) {
-                    $('.declareBg1 p').html(data.total_time)
-                    $('.declareBg2 p').html(data.total_people)
-                    $('.declareBg3 p').html(data.count)
+                    $('.declareBg1 p').html(data.totalTimes);
+                    $('.declareBg2 p').html(data.totalFullCount);
+                    $('.declareBg3 p').html(data.totalCount)
                 },
                 error: function (res) {
 
