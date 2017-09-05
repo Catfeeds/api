@@ -42,20 +42,6 @@ Route::post('img/ali', 'Api\ImageController@ali');
 //用于获取公益三小时统计数据
 
 //用于门禁和拍照
-Route::get('ali/user', function (Request $request){
-    if ($request->id == '1'){
-        return response()->json([
-            'code' => 'true',
-            'hours' => '5',
-            'name' => 'xxxx'
-        ]);
-    }else {
-        return response()->json([
-            'code' => 'false',
-            'hours' => '',
-            'name' => '
-            '
-        ]);
-    }
+Route::get('ali/user', 'Ali\ApiController@user');
 
-});
+Route::get('ali/total', 'Ali\ApiController@total');

@@ -26,15 +26,26 @@
 
 </body>
 <script src="{{ asset('alibaba/js/jquery.1.4.2-min.js') }}"></script>
-<script src="{{ asset('alibaba/js/jq.Slide.js') }}"></script>
+<script src="{{ asset('alibaba/js/sequenceFrame.js') }}"></script>
 <script>
-    $(function () {
+    $(function(){
         //轮播图函数
-        $("#temp3").Slide({
-            effect: "fade",
-            speed: "normal",
-            timer: 1000
+        var imgarr = [];
+        //有多少张图片，len就等于多少;
+        var len = 10;
+        for(var i = 0 ;i < len;i ++){
+            imgarr.push('images/p'+i+'.png')
+        }
+
+        var frame2 = new SequenceFrame({
+            id: $('#canvas')[0],
+            width: 480,
+            height: 270,
+            speed: 200,
+            loop: true,
+            imgArr: imgarr
         });
+
     })
 </script>
 </html>

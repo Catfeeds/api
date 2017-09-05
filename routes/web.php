@@ -12,12 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
 });
-Route::get('/test', function () {
-    event(new \App\Events\AliPhoto('666'));
-    return 'true';
-});
+
 
 /*
  * 科思创项目
@@ -63,7 +59,7 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () 
 /**
  * 阿里巴巴公益三公里
  */
-Route::get('ali/user/{uid}','Ali\AliController@index');
-Route::get('ali/show',function (){
+Route::get('ali/user/{uid}', 'Ali\AliController@index');
+Route::get('ali/show', function () {
     return view('ali.show');
 });

@@ -8,21 +8,27 @@
     background: url("../images/bg.png") no-repeat center center;
     position: relative;
 }
-.all #temp3{
-    width:482px;
-    height: 269px;
+#canvas{
+    width:480px;
+    height: 270px;
     overflow: hidden;
     position: absolute;
     top:284px;
     left: 0;
     right: 0;
     margin:auto;
+    /*background-color: rosybrown;*/
 }
 .all #temp3 li{
     width: 482px;
     height: 269px;
     position: absolute;
     top:0;
+    display: none;
+
+}
+.all #temp3 li:nth-child(1){
+    display: block;
 }
 .all #temp3 li img{
     width: 482px;
