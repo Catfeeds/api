@@ -16,16 +16,16 @@
     <!--图片轮播-->
     <div id="temp3">
         <ul class="JQ-slide-content">
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p1.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p2.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p3.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p4.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p5.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p6.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p7.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p8.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p9.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid + '/p0.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid0 + '/p1.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid1 + '/p2.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid2 + '/p3.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid3 + '/p4.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid4 + '/p5.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid5 + '/p6.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid6 + '/p7.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid7 + '/p8.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid8 + '/p9.png'}"/></li>
+            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid9 + '/p0.png'}"/></li>
         </ul>
     </div>
     <div class="declareBg">
