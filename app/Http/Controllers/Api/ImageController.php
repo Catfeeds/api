@@ -40,12 +40,6 @@ class ImageController extends Controller
         $ali->hours = $request->hours;
         $ali->save();
 
-        $alis =Ali::select('uid')
-            ->inRandomOrder()
-            ->limit(10)
-            ->get();
-        event(new AliPhoto($alis));
-
 
         return env('APP_URL') . '/ali/user/' . $request->id;
     }

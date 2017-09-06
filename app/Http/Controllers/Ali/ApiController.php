@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
+use App\Models\Ali;
+use App\Events\AliPhoto;
 
 class ApiController extends Controller
 {
@@ -109,5 +111,19 @@ class ApiController extends Controller
             ]);
         }
 
+    }
+
+    /**
+     * @return string
+     * 阿里公益大屏改变轮播
+     */
+    public function event()
+    {
+        $alis =Ali::select('uid')
+            ->inRandomOrder()
+            ->limit(10)
+            ->get()->all();
+        event(new AliPhoto($alis));
+        return 'true';
     }
 }

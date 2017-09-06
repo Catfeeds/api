@@ -1,6 +1,5 @@
 <?php
-use App\Models\Ali;
-use App\Events\AliPhoto;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -64,14 +63,4 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () 
 Route::get('ali/user/{uid}', 'Ali\AliController@index');
 Route::get('ali/show', function () {
     return view('ali.show');
-});
-
-Route::get('ali/event', function (){
-    $alis =Ali::select('uid')
-        ->inRandomOrder()
-        ->limit(10)
-        ->get()->all();
-    event(new AliPhoto($alis));
-
-    return $alis;
 });
