@@ -46,7 +46,7 @@
             imgarr.push("{{ asset('upload/ali') .'/'. $ali->uid  . '/p' }}" + i + '.png');
         }
         for (var j = len - 1; j >= 0; j--) {
-            imgarr.push("{{ asset('upload/ali') .'/'. $ali->uid  . '/p' }}" + i + '.png');
+            imgarr.push("{{ asset('upload/ali') .'/'. $ali->uid  . '/p' }}" + j + '.png');
         }
         var frame2 = new SequenceFrame({
             id: $('#canvas')[0],
