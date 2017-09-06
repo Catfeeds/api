@@ -101,19 +101,19 @@
                 }
             });
         }, 60000);
-
-        setInterval(function () {
-            $.ajax({
-                url: "http://api.touchworld-sh.com/api/ali/event",
-                type: "GET",
-                success: function (data) {
-
-                },
-                error: function (res) {
-
-                }
-            });
-        }, 300000)
+//
+//        setInterval(function () {
+//            $.ajax({
+//                url: "http://api.touchworld-sh.com/api/ali/event",
+//                type: "GET",
+//                success: function (data) {
+//
+//                },
+//                error: function (res) {
+//
+//                }
+//            });
+//        }, 300000)
     })
 </script>
 </html>
