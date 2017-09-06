@@ -65,7 +65,7 @@ Route::get('ali/show', function () {
 });
 
 Route::get('ali/event', function (){
-   event(new \App\Events\AliPhoto('20170905143420'));
+   event(new \App\Events\AliPhoto('20170905143421'));
 
    return 'true';
 });
