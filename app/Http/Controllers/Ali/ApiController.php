@@ -11,6 +11,10 @@ use App\Events\AliPhoto;
 
 class ApiController extends Controller
 {
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     * 阿里公益小主机访问公益统计数据接口
+     */
     public function total()
     {
         $timestamp = strftime('%Y-%m-%dT%H:%M:%S.000+08:00');
@@ -51,6 +55,11 @@ class ApiController extends Controller
         }
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * 阿里公益小主机根据id访问用户公益数据接口，
+     */
     public function user(Request $request)
     {
         if ($request->id == '0000'){
@@ -92,7 +101,7 @@ class ApiController extends Controller
             if ($res->content->full) {
                 return response()->json([
                     'code' => 'true',
-                    'name' => $res->content,
+                    'name' => $res->content->name,
                     'hours' => $res->content->thisFiscalYearHours
                 ]);
             } else {
