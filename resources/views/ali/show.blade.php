@@ -75,9 +75,9 @@
                 type: "GET",
                 dataType: "json",
                 success: function (data) {
-                    $('.declareBg1 p').html(data.totalTimes);
+                    $('.declareBg1 p').html(data.totalCount);
                     $('.declareBg2 p').html(data.totalFullCount);
-                    $('.declareBg3 p').html(data.totalCount)
+                    $('.declareBg3 p').html(data.totalTimes)
                 },
                 error: function (res) {
 
