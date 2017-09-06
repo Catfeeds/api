@@ -43,6 +43,7 @@
         //有多少张图片，len就等于多少;
         var len = 10;
         for(var i = 0 ;i < len;i ++){
+            imgarr.push("{{ asset('upload/ali') .'/'. $ali->uid  . '/p' }}" + i +'.png');
             imgarr.push('images/p'+i+'.png')
         }
 
