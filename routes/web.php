@@ -63,3 +63,9 @@ Route::get('ali/user/{uid}', 'Ali\AliController@index');
 Route::get('ali/show', function () {
     return view('ali.show');
 });
+
+Route::get('ali/event', function (){
+   event(new \App\Events\AliPhoto('20170905143420'));
+
+   return 'true';
+});
