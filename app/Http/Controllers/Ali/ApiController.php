@@ -51,6 +51,13 @@ class ApiController extends Controller
 
     public function user(Request $request)
     {
+        if ($request->id == '0000'){
+            return response()->json([
+                'code' => 'true',
+                'hours' => '10.5',
+                'name' => 'test'
+            ]);
+        }
         $timestamp = strftime('%Y-%m-%dT%H:%M:%S.000+08:00');
         $nonce = sprintf('%d000%d', time(), rand(1000, 9999));
         $method = 'POST';
