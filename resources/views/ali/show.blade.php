@@ -58,7 +58,7 @@
 
     socket.on('ali:App\\Events\\AliPhoto', function (data) {
         console.log(data);
-        app.$data.uid = data.uid;
+//        app.$data.uid = data.uid;
     });
 
     $(function () {

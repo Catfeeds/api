@@ -65,7 +65,12 @@ Route::get('ali/show', function () {
 });
 
 Route::get('ali/event', function (){
-   event(new \App\Events\AliPhoto('20170905143420'));
+    $alis =Ali::select('uid')
+        ->inRandomOrder()
+        ->limit(10)
+        ->get();
+    $alis=json_encode($alis);
+    event(new AliPhoto($alis));
 
-   return 'true';
+    return $alis;
 });

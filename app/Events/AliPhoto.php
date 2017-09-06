@@ -16,7 +16,6 @@ class AliPhoto implements ShouldBroadcast
 
     public $uid;
 
-
     public function __construct($uid)
     {
         $this->uid = $uid;

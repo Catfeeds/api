@@ -20,6 +20,12 @@ class ImageController extends Controller
         return env('upload_url') . '/' . $path;
     }
 
+    /**
+     * @param Request $request
+     * @return string
+     *
+     * 阿里公益三小时活动上传拍照图片
+     */
     public function ali(Request $request)
     {
         //拍照上传10张照片，保存到标识文件夹
@@ -34,7 +40,12 @@ class ImageController extends Controller
         $ali->hours = $request->hours;
         $ali->save();
 
-        event(new AliPhoto($request->id));
+        $alis =Ali::select('uid')
+            ->inRandomOrder()
+            ->limit(10)
+            ->get();
+        $alis=json_encode($alis);
+        event(new AliPhoto($alis));
 
 
         return env('APP_URL') . '/ali/user/' . $request->id;
