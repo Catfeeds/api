@@ -67,11 +67,11 @@ Route::get('ali/show', function () {
 });
 
 Route::get('ali/event', function (){
-    $alis =Ali::select('id','uid')
+    $alis =Ali::select('uid')
         ->inRandomOrder()
         ->limit(10)
         ->get();
-    $alis=json_encode($alis);
+    dd($alis);
     event(new AliPhoto($alis));
 
     return $alis;

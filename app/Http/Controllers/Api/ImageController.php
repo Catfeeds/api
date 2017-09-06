@@ -44,7 +44,6 @@ class ImageController extends Controller
             ->inRandomOrder()
             ->limit(10)
             ->get();
-        $alis=json_encode($alis);
         event(new AliPhoto($alis));
 
 
