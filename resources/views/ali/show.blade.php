@@ -50,16 +50,32 @@
     var app = new Vue({
         el: '#temp3',
         data: {
-            uid: '21'
+            uid0: '',
+            uid1: '',
+            uid2: '',
+            uid3: '',
+            uid4: '',
+            uid5: '',
+            uid6: '',
+            uid7: '',
+            uid8: '',
+            uid9: ''
         }
     });
 
     var socket = io('http://{{ Request::getHost() }}:8080');
 
     socket.on('ali:App\\Events\\AliPhoto', function (data) {
-        console.log(data.uid);
-        console.log(data.uid[0].uid);
-//        app.$data.uid = data.uid;
+        app.$data.uid0 = data.uid[0].uid;
+        app.$data.uid1 = data.uid[1].uid;
+        app.$data.uid2 = data.uid[2].uid;
+        app.$data.uid3 = data.uid[3].uid;
+        app.$data.uid4 = data.uid[4].uid;
+        app.$data.uid5 = data.uid[5].uid;
+        app.$data.uid6 = data.uid[6].uid;
+        app.$data.uid7 = data.uid[7].uid;
+        app.$data.uid8 = data.uid[8].uid;
+        app.$data.uid9 = data.uid[9].uid;
     });
 
     $(function () {
