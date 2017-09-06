@@ -70,8 +70,7 @@ Route::get('ali/event', function (){
     $alis =Ali::select('uid')
         ->inRandomOrder()
         ->limit(10)
-        ->get();
-    dd($alis[0]->uid);
+        ->get()->all();
     event(new AliPhoto($alis));
 
     return $alis;
