@@ -57,7 +57,8 @@
     var socket = io('http://{{ Request::getHost() }}:8080');
 
     socket.on('ali:App\\Events\\AliPhoto', function (data) {
-        console.log(data);
+        console.log(data.uid);
+        console.log(data.uid[0].uid);
 //        app.$data.uid = data.uid;
     });
 
