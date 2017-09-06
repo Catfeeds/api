@@ -67,7 +67,7 @@ Route::get('ali/show', function () {
 });
 
 Route::get('ali/event', function (){
-    $alis =Ali::select('uid')
+    $alis =Ali::select('id','uid')
         ->inRandomOrder()
         ->limit(10)
         ->get();
