@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>人人三小时</title>
+    <title>人人3小时</title>
     <meta name="viewport" content="width=640,user-scalable=no">
     <link rel="stylesheet" href="{{ asset('alibaba/css/index.css') }}">
 </head>
