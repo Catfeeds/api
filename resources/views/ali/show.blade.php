@@ -11,16 +11,14 @@
 </head>
 <body>
 <div class="all">
-    <div class="all">
-        <!--背景图-->
-        <img src="{{ asset('alibaba/images/bg1.png') }}" alt="" class="bg">
-        <div class="text">
-            <p><span class="declareBg declareBg1">00000</span><span class="greyText">阿里人次申报公益时</span></p>
-            <p><span class="declareBg declareBg2">00000</span><span class="greyText">阿里人次申报>=3公益时</span></p>
-            <div>
-                <p class="textOnly">全体阿里人共申报</p>
-                <p><span class="declareBg declareBg3">00000</span><span class="greenText">公益时</span></p>
-            </div>
+    <!--背景图-->
+    <img src="{{ asset('alibaba/images/bg1.png') }}" alt="" class="bg">
+    <div class="text">
+        <p><span class="declareBg declareBg1">00000</span><span class="greyText">阿里人次申报公益时</span></p>
+        <p><span class="declareBg declareBg2">00000</span><span class="greyText">阿里人次申报>=3公益时</span></p>
+        <div>
+            <p class="textOnly">全体阿里人共申报</p>
+            <p><span class="declareBg declareBg3">00000</span><span class="greenText">公益时</span></p>
         </div>
     </div>
 
@@ -32,36 +30,36 @@
 <script src="https://unpkg.com/vue@2.4.2" type="text/javascript" charset="utf-8"></script>
 {{--<script src="//{{ Request::getHost() }}:8080/socket.io/socket.io.js"></script>--}}
 <script type="application/javascript">
-//    var app = new Vue({
-//        el: '#temp3',
-//        data: {
-//            uid0: '',
-//            uid1: '',
-//            uid2: '',
-//            uid3: '',
-//            uid4: '',
-//            uid5: '',
-//            uid6: '',
-//            uid7: '',
-//            uid8: '',
-//            uid9: ''
-//        }
-//    });
+    //    var app = new Vue({
+    //        el: '#temp3',
+    //        data: {
+    //            uid0: '',
+    //            uid1: '',
+    //            uid2: '',
+    //            uid3: '',
+    //            uid4: '',
+    //            uid5: '',
+    //            uid6: '',
+    //            uid7: '',
+    //            uid8: '',
+    //            uid9: ''
+    //        }
+    //    });
 
     {{--var socket = io('http://{{ Request::getHost() }}:8080');--}}
 
-//    socket.on('ali:App\\Events\\AliPhoto', function (data) {
-//        app.$data.uid0 = data.uid[0].uid;
-//        app.$data.uid1 = data.uid[1].uid;
-//        app.$data.uid2 = data.uid[2].uid;
-//        app.$data.uid3 = data.uid[3].uid;
-//        app.$data.uid4 = data.uid[4].uid;
-//        app.$data.uid5 = data.uid[5].uid;
-//        app.$data.uid6 = data.uid[6].uid;
-//        app.$data.uid7 = data.uid[7].uid;
-//        app.$data.uid8 = data.uid[8].uid;
-//        app.$data.uid9 = data.uid[9].uid;
-//    });
+    //    socket.on('ali:App\\Events\\AliPhoto', function (data) {
+    //        app.$data.uid0 = data.uid[0].uid;
+    //        app.$data.uid1 = data.uid[1].uid;
+    //        app.$data.uid2 = data.uid[2].uid;
+    //        app.$data.uid3 = data.uid[3].uid;
+    //        app.$data.uid4 = data.uid[4].uid;
+    //        app.$data.uid5 = data.uid[5].uid;
+    //        app.$data.uid6 = data.uid[6].uid;
+    //        app.$data.uid7 = data.uid[7].uid;
+    //        app.$data.uid8 = data.uid[8].uid;
+    //        app.$data.uid9 = data.uid[9].uid;
+    //    });
 
     $(function () {
 
