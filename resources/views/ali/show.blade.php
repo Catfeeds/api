@@ -11,34 +11,19 @@
 </head>
 <body>
 <div class="all">
-    <!--背景图-->
-    <img src="{{ asset('alibaba/images/bg1.png') }}" alt="" class="bg">
-    <!--图片轮播-->
-    <div id="temp3">
-        <ul class="JQ-slide-content">
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid0 + '/p4.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid1 + '/p4.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid2 + '/p4.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid3 + '/p4.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid4 + '/p4.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid5 + '/p4.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid6 + '/p4.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid7 + '/p4.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid8 + '/p4.png'}"/></li>
-            <li><img v-bind="{ src : '{{ asset('upload/ali') }}/' + uid9 + '/p4.png'}"/></li>
-        </ul>
-    </div>
-    <div class="declareBg">
-        <div class="declareBg1">
-            <p>00000</p>
-        </div>
-        <div class="declareBg2">
-            <p>00000</p>
-        </div>
-        <div class="declareBg3">
-            <p>00000</p>
+    <div class="all">
+        <!--背景图-->
+        <img src="{{ asset('alibaba/images/bg1.png') }}" alt="" class="bg">
+        <div class="text">
+            <p><span class="declareBg declareBg1">00000</span><span class="greyText">阿里人次申报公益时</span></p>
+            <p><span class="declareBg declareBg2">00000</span><span class="greyText">阿里人次申报>=3公益时</span></p>
+            <div>
+                <p class="textOnly">全体阿里人共申报</p>
+                <p><span class="declareBg declareBg3">00000</span><span class="greenText">公益时</span></p>
+            </div>
         </div>
     </div>
+
 
 </div>
 
@@ -65,26 +50,20 @@
 
     var socket = io('http://{{ Request::getHost() }}:8080');
 
-    socket.on('ali:App\\Events\\AliPhoto', function (data) {
-        app.$data.uid0 = data.uid[0].uid;
-        app.$data.uid1 = data.uid[1].uid;
-        app.$data.uid2 = data.uid[2].uid;
-        app.$data.uid3 = data.uid[3].uid;
-        app.$data.uid4 = data.uid[4].uid;
-        app.$data.uid5 = data.uid[5].uid;
-        app.$data.uid6 = data.uid[6].uid;
-        app.$data.uid7 = data.uid[7].uid;
-        app.$data.uid8 = data.uid[8].uid;
-        app.$data.uid9 = data.uid[9].uid;
-    });
+//    socket.on('ali:App\\Events\\AliPhoto', function (data) {
+//        app.$data.uid0 = data.uid[0].uid;
+//        app.$data.uid1 = data.uid[1].uid;
+//        app.$data.uid2 = data.uid[2].uid;
+//        app.$data.uid3 = data.uid[3].uid;
+//        app.$data.uid4 = data.uid[4].uid;
+//        app.$data.uid5 = data.uid[5].uid;
+//        app.$data.uid6 = data.uid[6].uid;
+//        app.$data.uid7 = data.uid[7].uid;
+//        app.$data.uid8 = data.uid[8].uid;
+//        app.$data.uid9 = data.uid[9].uid;
+//    });
 
     $(function () {
-        //轮播函数
-        $("#temp3").Slide({
-            effect: "fade",
-            speed: "normal",
-            timer: 2000
-        });
 
         setInterval(function () {
             $.ajax({
@@ -92,9 +71,9 @@
                 type: "GET",
                 dataType: "json",
                 success: function (data) {
-                    $('.declareBg1 p').html(data.totalCount);
-                    $('.declareBg2 p').html(data.totalFullCount);
-                    $('.declareBg3 p').html(data.totalTimes)
+                    $('.declareBg1').html(data.totalCount);
+                    $('.declareBg2').html(data.totalFullCount);
+                    $('.declareBg3').html(data.totalTimes)
                 },
                 error: function (res) {
 
