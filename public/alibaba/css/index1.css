@@ -41,9 +41,9 @@ span{
 .all .text p .declareBg{
     width: 500px;
     text-align: center;
-    font-size: 100px;
+    font-size: 130px;
     color: #009844;
-    font-weight: bold;
+    font-weight: bolder;
     height: 120px;
     line-height: 120px;
 }
