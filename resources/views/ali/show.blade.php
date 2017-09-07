@@ -30,25 +30,25 @@
 </body>
 
 <script src="https://unpkg.com/vue@2.4.2" type="text/javascript" charset="utf-8"></script>
-<script src="//{{ Request::getHost() }}:8080/socket.io/socket.io.js"></script>
+{{--<script src="//{{ Request::getHost() }}:8080/socket.io/socket.io.js"></script>--}}
 <script type="application/javascript">
-    var app = new Vue({
-        el: '#temp3',
-        data: {
-            uid0: '',
-            uid1: '',
-            uid2: '',
-            uid3: '',
-            uid4: '',
-            uid5: '',
-            uid6: '',
-            uid7: '',
-            uid8: '',
-            uid9: ''
-        }
-    });
+//    var app = new Vue({
+//        el: '#temp3',
+//        data: {
+//            uid0: '',
+//            uid1: '',
+//            uid2: '',
+//            uid3: '',
+//            uid4: '',
+//            uid5: '',
+//            uid6: '',
+//            uid7: '',
+//            uid8: '',
+//            uid9: ''
+//        }
+//    });
 
-    var socket = io('http://{{ Request::getHost() }}:8080');
+    {{--var socket = io('http://{{ Request::getHost() }}:8080');--}}
 
 //    socket.on('ali:App\\Events\\AliPhoto', function (data) {
 //        app.$data.uid0 = data.uid[0].uid;
