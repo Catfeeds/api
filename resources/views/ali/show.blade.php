@@ -30,13 +30,13 @@
     </div>
     <div class="declareBg">
         <div class="declareBg1">
-            <p>XXXXXX</p>
+            <p>00000</p>
         </div>
         <div class="declareBg2">
-            <p>XXXXX</p>
+            <p>00000</p>
         </div>
         <div class="declareBg3">
-            <p>XXXXXXX</p>
+            <p>00000</p>
         </div>
     </div>
 
