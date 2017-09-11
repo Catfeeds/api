@@ -13,9 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 //音频上传接口
 Route::post('audio/upload', 'Api\\AudioController@upload');
 //图片上传接口(宋-用于人脸识别比对)
@@ -30,8 +27,6 @@ Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
     Route::post('/setting', 'IndexController@setting');
     Route::get('/setting2', 'IndexController@setting2');
 });
-//启赋有机签到接口(弃用)
-//Route::post('qf/user', 'Qf\QfController@user');
 
 /**
  * 阿里公益三小时项目
@@ -45,3 +40,8 @@ Route::get('ali/user', 'Ali\ApiController@user');
 Route::get('ali/total', 'Ali\ApiController@total');
 //大屏更新轮播图，10张正面照片
 Route::get('ali/event','Ali\ApiController@event');
+
+/**
+ * 天麓府
+ */
+Route::get('bgy/user', 'Api\BgyController@user');

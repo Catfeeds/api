@@ -64,3 +64,10 @@ Route::get('ali/user/{uid}', 'Ali\AliController@index');
 Route::get('ali/show', function () {
     return view('ali.show');
 });
+
+/**
+ * 天麓府项目
+ */
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
+    Route::get('bgy', 'Api\BgyController@index');
+});
