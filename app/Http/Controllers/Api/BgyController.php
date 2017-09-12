@@ -21,7 +21,7 @@ class BgyController extends Controller
             ['avatar' => $userInfo->avatar, 'nickname' => $userInfo->name]
         );
 
-        return '签到成功！';
+        return view('bgy');
     }
 
     /**
