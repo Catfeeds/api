@@ -34,9 +34,9 @@ class BgyController extends Controller
         $bgy = Bgy::where('status', 0)->first();
         if (is_null($bgy)) {
             return response()->json([
-                'code' => 1,
-                'name' => '陈兆阳',
-                'url' => 'http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJuqVss6FgN8D7Vqoib1H29bicOdF5uvFa4rfRZnK7WLXsoTwZX1iaiauye91M7OydZWOZevgsWWVZUww/0'
+                'code' => 0,
+                'name' => '',
+                'url' => ''
             ]);
         }
         $bgy->status = 1;

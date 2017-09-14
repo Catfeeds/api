@@ -45,3 +45,8 @@ Route::get('ali/event','Ali\ApiController@event');
  * 天麓府
  */
 Route::get('bgy/user', 'Api\BgyController@user');
+
+/**
+ * AIA项目上传游戏数据
+ */
+Route::post('/aia/test', 'Aia\AiaController@test');
