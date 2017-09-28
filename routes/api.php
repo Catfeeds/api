@@ -42,11 +42,16 @@ Route::get('ali/total', 'Ali\ApiController@total');
 Route::get('ali/event','Ali\ApiController@event');
 
 /**
- * 天麓府
+ * 天麓府（已经结束）
  */
-Route::get('bgy/user', 'Api\BgyController@user');
+//Route::get('bgy/user', 'Api\BgyController@user');
 
 /**
- * AIA项目上传游戏数据
+ * AIA项目上传游戏数据-test
  */
 Route::post('/aia/test', 'Aia\AiaController@test');
+
+/**
+ * 阿里云栖大会线下分享
+ */
+Route::post('ali/yun/photos', 'Api\ImageController@yun');

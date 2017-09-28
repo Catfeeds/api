@@ -43,4 +43,19 @@ class ImageController extends Controller
 
         return env('APP_URL') . '/ali/user/' . $request->id;
     }
+
+    /**
+     * @param Request $request
+     * @return string
+     * 阿里云栖大会上传6秒序列帧
+     */
+    public function yun(Request $request)
+    {
+        //拍照上传10张照片，保存到标识文件夹
+        for ($i = 0; $i < 120; $i++) {
+            Storage::disk('public_path')
+                ->putFileAs('ali/' . $request->pid , $request->file('p' . $i), 'p'.$i.'.png');
+        }
+        return env('APP_URL') . '/ali/yun/' . $request->pid;
+    }
 }

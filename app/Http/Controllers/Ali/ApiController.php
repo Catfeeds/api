@@ -62,7 +62,7 @@ class ApiController extends Controller
      */
     public function user(Request $request)
     {
-        if ($request->id == '0000'){
+        if ($request->id == '0000') {
             return response()->json([
                 'code' => 'true',
                 'hours' => '10.5',
@@ -128,7 +128,7 @@ class ApiController extends Controller
      */
     public function event()
     {
-        $alis =Ali::select('uid')
+        $alis = Ali::select('uid')
             ->inRandomOrder()
             ->limit(10)
             ->get()->all();

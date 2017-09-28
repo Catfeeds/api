@@ -18,5 +18,4 @@ class AliController extends Controller
         $ali = Ali::where('uid', $uid)->first();
         return view('ali.mobile', compact('ali'));
     }
-
 }
