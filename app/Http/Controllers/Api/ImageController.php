@@ -52,10 +52,7 @@ class ImageController extends Controller
     public function yun(Request $request)
     {
         //拍照上传10张照片，保存到标识文件夹
-        for ($i = 0; $i < 120; $i++) {
-            Storage::disk('public_path')
-                ->putFileAs('ali/yun/' . $request->pid , $request->file('p' . $i), 'p'.$i.'.png');
-        }
-        return env('APP_URL') . '/ali/yun/' . $request->pid;
+        $path = Storage::disk('public_path')->putFile('ali/yun', $request->file('photo'));
+        return env('APP_URL') . '/ali/yun/' . $path;
     }
 }
