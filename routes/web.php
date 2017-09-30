@@ -69,9 +69,10 @@ Route::get('ali/bmShow', function () {
     $js = EasyWeChat::js();
     return view('ali.bm', compact('js'));
 });
-Route::get('ali/yunShow/{path}', function ($path){
-    $path = env('upload_url').'ali/yun/'.$path;
-    return view('ali.yun', compact('path'));
+Route::get('ali/yunShow', function (Request $request){
+    $path = env('upload_url').$request->path;
+    $js = EasyWeChat::js();
+    return view('ali.yun', compact('path','js'));
 });
 /**
  * 天麓府项目(已经结束)
