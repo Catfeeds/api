@@ -53,6 +53,6 @@ class ImageController extends Controller
     {
         //拍照上传10张照片，保存到标识文件夹
         $path = Storage::disk('public_path')->putFile('ali/yun', $request->file('photo'));
-        return env('APP_URL') . '/ali/yun/' . $path;
+        return env('APP_URL') . '/ali/yunShow/' . $path;
     }
 }
