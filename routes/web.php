@@ -65,9 +65,12 @@ Route::get('ali/show', function () {
     return view('ali.show');
 });
 
-/**
- * 天麓府项目
- */
-Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
-    Route::get('bgy', 'Api\BgyController@index');
+Route::get('ali/bmShow', function () {
+    return 'true';
 });
+/**
+ * 天麓府项目(已经结束)
+ */
+//Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
+//    Route::get('bgy', 'Api\BgyController@index');
+//});
