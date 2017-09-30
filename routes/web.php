@@ -70,7 +70,7 @@ Route::get('ali/bmShow', function () {
     return view('ali.bm', compact('js'));
 });
 Route::get('ali/yunShow', function (\Illuminate\Http\Request $request){
-    $path = env('upload_url').$request->path;
+    $path = env('upload_url').'/'.$request->path;
     $js = EasyWeChat::js();
     return view('ali.yun', compact('path','js'));
 });
