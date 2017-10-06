@@ -54,4 +54,7 @@ Route::post('/aia/test', 'Aia\AiaController@test');
 /**
  * 阿里云栖大会线下分享
  */
+//上传6秒视频
 Route::post('ali/yun/photos', 'Api\ImageController@yun');
+//上传拍照图片
+Route::post('ali/yun/photo', 'Api\ImageController@yunPhoto');
