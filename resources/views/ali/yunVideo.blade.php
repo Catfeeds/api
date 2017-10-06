@@ -26,7 +26,7 @@
         // loading
         (function () {
             var loader = new PxLoader();
-            var URL = window.location.href;
+            var URL = '';
             var BASE_PATH = URL.substring(0, URL.lastIndexOf('/') + 1);
             var realLoadingNum = 0;
             var fakeLoadingNum = 0;
