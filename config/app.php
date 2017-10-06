@@ -180,6 +180,7 @@ return [
         Overtrue\LaravelWechat\ServiceProvider::class,
         Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
         Overtrue\LaravelFollow\FollowServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
     ],
 
     /*

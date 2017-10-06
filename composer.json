@@ -17,7 +17,8 @@
         "mpociot/laravel-apidoc-generator": "^2.0",
         "overtrue/laravel-follow": "^1.1",
         "overtrue/laravel-wechat": "^3.1",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "simplesoftwareio/simple-qrcode": "~1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

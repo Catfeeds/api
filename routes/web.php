@@ -12,8 +12,7 @@
 |
 */
 
-Route::get('/', function () {
-});
+//Route::get('/', '');
 
 
 /*
@@ -69,11 +68,11 @@ Route::get('ali/bmShow', function () {
     $js = EasyWeChat::js();
     return view('ali.bm', compact('js'));
 });
-Route::get('ali/yunShow', function (\Illuminate\Http\Request $request){
-    $path = env('upload_url').'/'.$request->path;
-    $js = EasyWeChat::js();
-    return view('ali.yun', compact('path','js'));
-});
+/**
+ * 阿里云栖大会
+ */
+Route::get('ali/yunShow', 'Ali\AliController@yun');
+Route::get('ali/yunVideo','Ali\AliController@yunVideo');
 /**
  * 天麓府项目(已经结束)
  */

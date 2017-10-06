@@ -31,7 +31,7 @@ class ImageController extends Controller
         //拍照上传10张照片，保存到标识文件夹
         for ($i = 0; $i < 10; $i++) {
             Storage::disk('public_path')
-                ->putFileAs('ali/' . $request->id , $request->file('p' . $i), 'p'.$i.'.png');
+                ->putFileAs('ali/' . $request->id, $request->file('p' . $i), 'p' . $i . '.png');
         }
         //保存信息到数据库
         $ali = new Ali;
@@ -52,7 +52,10 @@ class ImageController extends Controller
     public function yun(Request $request)
     {
         //拍照上传10张照片，保存到标识文件夹
-        $path = Storage::disk('public_path')->putFile('ali/yun', $request->file('photo'));
-        return env('APP_URL') . '/ali/yunShow?path=' . $path;
+        $pid = $request->pid;
+        for ($i = 0; $i < 120; $i++) {
+            Storage::disk('public_path')->putFile('ali/yun/'.$pid, $request->file('p'.$i));
+        }
+        return env('APP_URL') . '/ali/yunShow?pid=' . $pid;
     }
 }

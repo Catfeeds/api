@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding: 0;
+}
+/* font */
+@font-face{
+    font-family: 'percentage';
+    src:
+            url('../font/percentage.eot?#font-spider') format('embedded-opentype'),
+            url('../font/percentage.woff') format('woff'),
+            url('../font/percentage.ttf') format('truetype'),
+            url('../font/percentage.svg') format('svg');
+}
+.hidden{
+    display: none;
+}
+
+/*loading*/
+.loading{
+    position: absolute;
+    width: 1040px;
+    height: 640px;
+    /*background: url("../img/1.png") no-repeat center center;*/
+    font-family: 'percentage';
+    left:640px;
+    top:0;
+    transform-origin: top left;
+    transform: rotate(90deg);
+    font-size: 50px;
+}
+.loading .textAll{
+    position: absolute;
+    width: 240px;
+    text-align: center;
+    left:410px;
+    top:250px;
+}
+.loading .textAll .text{
+    font-size: 70px;
+}
+.loading .textAll .num{
+    font-size: 60px;
+}
+
+/*sequenceFrame*/
+canvas{
+    position: absolute;
+    display: block;
+    width: 1040px;
+    height: 640px;
+    background-color: red;
+    left:640px;
+    top:0;
+    transform-origin: top left;
+    transform: rotate(90deg);
+}
