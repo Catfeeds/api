@@ -54,7 +54,8 @@ class ImageController extends Controller
         //拍照上传10张照片，保存到标识文件夹
         $pid = $request->pid;
         for ($i = 0; $i < 120; $i++) {
-            Storage::disk('public_path')->putFile('ali/yun/'.$pid, $request->file('p'.$i));
+            Storage::disk('public_path')
+                ->putFileAs('ali/yun/'.$pid, $request->file('p'.$i), 'p'.$i.'.png');
         }
         return env('APP_URL') . '/ali/yunShow?pid=' . $pid;
     }
