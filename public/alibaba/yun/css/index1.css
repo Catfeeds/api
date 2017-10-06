@@ -1,0 +1,17 @@
+
+*{
+    margin:0;
+    padding: 0;
+}
+/*sequenceFrame*/
+img{
+    position: absolute;
+    display: block;
+    width: 1040px;
+    height: 640px;
+    background-color: red;
+    left:640px;
+    top:0;
+    transform-origin: top left;
+    transform: rotate(90deg);
+}

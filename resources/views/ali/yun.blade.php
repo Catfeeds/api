@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=640,user-scalable=no">
     <meta name="screen-orientation" content="portrait"/>
     <meta name="x5-orientation" content="portrait">
-    <link rel="stylesheet" href="{{ asset('alibaba/yun/css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('alibaba/yun/css/index1.css') }}">
     <title>Title</title>
 </head>
 <body>
