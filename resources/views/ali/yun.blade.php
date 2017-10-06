@@ -10,7 +10,7 @@
 </head>
 <body>
     <section class="sequenceFrame hidden">
-        <img src="{!! env('APP_URL').'/alibaba/yun/'.$pid.'/p0.png' !!}" alt="">
+        <img src="{!! $path !!}" alt="">
     </section>
 </body>
 

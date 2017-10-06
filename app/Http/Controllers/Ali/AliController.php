@@ -36,13 +36,14 @@ class AliController extends Controller
 
     public function yun(Request $request)
     {
-        $pid = $request->pid;
+        $path = $request->path;
+        $path = env('APP_URL').'/upload/'.$path;
         $js = $this->js;
-        $img =Image::make(public_path('upload/ali/yun/'.$pid.'/p0.png'));
-        $qrcode= QrCode::format('png')->size(100)->generate(env('APP_URL').'/ali/yunVideo?pid='.$pid);
-        $img->insert($qrcode,'bottom-right');
-        $img->save();
-        return view('ali.yun', compact('pid', 'js'));
+//        $img =Image::make(public_path('upload/ali/yun/'.$pid.'/p0.png'));
+//        $qrcode= QrCode::format('png')->size(100)->generate(env('APP_URL').'/ali/yunVideo?pid='.$pid);
+//        $img->insert($qrcode,'bottom-right');
+//        $img->save();
+        return view('ali.yun', compact('path', 'js'));
     }
 
     public function yunVideo(Request $request)

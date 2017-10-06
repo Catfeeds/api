@@ -57,6 +57,12 @@ class ImageController extends Controller
             Storage::disk('public_path')
                 ->putFileAs('ali/yun/'.$pid, $request->file('p'.$i), 'p'.$i.'.png');
         }
-        return env('APP_URL') . '/ali/yunShow?pid=' . $pid;
+        return env('APP_URL') . '/ali/yunVideo?pid=' . $pid;
+    }
+
+    public function yunPhoto(Request $request)
+    {
+        $path = Storage::disk('public_path')->putFile('ali/yun', $request->file('photo'));
+        return env('APP_URL') . '/ali/yunShow?path=' . $path;
     }
 }
