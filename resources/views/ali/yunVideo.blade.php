@@ -7,24 +7,24 @@
     <title>阿里云栖</title>
 </head>
 <body>
-    <section class="loading">
-        <img src="{{ asset('alibaba/yun/'.$pid.'/p0.png') }}">
-        <div class="textAll">
-            <div class="text">加载中</div>
-            <div class="num">0%</div>
-        </div>
-    </section>
-    <section class="sequenceFrame hidden">
-        <canvas id="canvas"></canvas>
-    </section>
+<section class="loading">
+    <img src="{{ asset('upload/ali/yun/'.$pid.'/p0.png') }}">
+    <div class="textAll">
+        <div class="text">加载中</div>
+        <div class="num">0%</div>
+    </div>
+</section>
+<section class="sequenceFrame hidden">
+    <canvas id="canvas"></canvas>
+</section>
 </body>
 <script src="{{ asset('alibaba/yun/js/jquery-1.11.3.min.js') }}"></script>
 <script src="{{ asset('alibaba/yun/js/sequenceFrame.js') }}"></script>
 <script src="{{ asset('alibaba/yun/js/pxloader-all.min.js') }}"></script>
 <script>
-    $(function(){
+    $(function () {
         // loading
-        (function(){
+        (function () {
             var loader = new PxLoader();
             var URL = window.location.href;
             var BASE_PATH = URL.substring(0, URL.lastIndexOf('/') + 1);
@@ -33,52 +33,52 @@
             var myLoadingInterval = null;
 
             //添加图片到预加载
-            var fileList= [];
+            var fileList = [];
 
             /*---------- 后台修改部分 start ----------*/
-            for(var i = 1; i < 120; i++){
-                fileList.push('{{asset('alibaba/yun/'.$pid)}}/p'+i+'.png')
+            for (var i = 1; i < 120; i++) {
+                fileList.push('{{asset('upload/ali/yun/'.$pid)}}/p' + i + '.png')
             }
 //            for(var i = 1; i < 7;i++){
 //                fileList.push('img/'+i+'.png')
 //            }
             /*---------- 后台修改部分 end ----------*/
 
-            for(var i = 0, len = fileList.length; i < len; i++){
+            for (var i = 0, len = fileList.length; i < len; i++) {
                 var pxImage = new PxLoaderImage(BASE_PATH + fileList[i]);
                 pxImage.imageNumber = i + 1;
                 loader.add(pxImage);
             }
-            loader.addCompletionListener(function(){
-                console.log("预加载图片："+fileList.length+"张");
+            loader.addCompletionListener(function () {
+                console.log("预加载图片：" + fileList.length + "张");
             });
-            loader.addProgressListener(function(e){
-                var percent = Math.round( (e.completedCount / e.totalCount) * 100); //正序, 1-100
+            loader.addProgressListener(function (e) {
+                var percent = Math.round((e.completedCount / e.totalCount) * 100); //正序, 1-100
                 realLoadingNum = percent;
             });
-            myLoadingInterval = setInterval(function(){
+            myLoadingInterval = setInterval(function () {
                 fakeLoadingNum++;
-                if(realLoadingNum > fakeLoadingNum){
+                if (realLoadingNum > fakeLoadingNum) {
                     $(".loading .num").text(fakeLoadingNum + "%")
-                }else{
+                } else {
                     $(".loading .num").text(realLoadingNum + "%")
                 }
-                if(fakeLoadingNum >= 100 && realLoadingNum >= 100){
+                if (fakeLoadingNum >= 100 && realLoadingNum >= 100) {
                     clearInterval(myLoadingInterval);
                     $('.loading').hide();
                     $('.sequenceFrame').show();
 
                 }
-            },30);
+            }, 30);
             loader.start();
         })();
 
         //序列帧播放
-        (function(){
+        (function () {
             var imgarr = [];
             /*---------- 后台修改部分 start ----------*/
-            for(var i = 1; i < 120;i++){
-                imgarr.push('{{asset('alibaba/yun/'.$pid)}}/p'+i+'.png')
+            for (var i = 1; i < 120; i++) {
+                imgarr.push('{{asset('upload/ali/yun/'.$pid)}}/p' + i + '.png')
             }
             /*---------- 后台修改部分 end ----------*/
             frame1 = new SequenceFrame({

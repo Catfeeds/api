@@ -38,7 +38,7 @@ class AliController extends Controller
     {
         $pid = $request->pid;
         $js = $this->js;
-        $img =Image::make(public_path('alibaba/yun/img/'.$pid.'/p0.png'));
+        $img =Image::make(public_path('upload/ali/yun/'.$pid.'/p0.png'));
         $qrcode= QrCode::format('png')->size(100)->generate(env('APP_URL').'/ali/yunVideo?pid='.$pid);
         $img->insert($qrcode,'bottom-right');
         $img->save();
