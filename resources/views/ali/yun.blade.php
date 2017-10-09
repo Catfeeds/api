@@ -31,7 +31,7 @@
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: '2017杭州·云栖大会', // 分享标题
-            desc: "2017杭州·云栖大会", // 分享描述
+            desc: "我的Freestyle是今天不上班", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/ali/yunShow?path={!! $path !!}",
             imgUrl: "https://api.shanghaichujie.com/alibaba/aliShare.png", // 分享图标
