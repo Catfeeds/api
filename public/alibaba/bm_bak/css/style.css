@@ -1,0 +1,27 @@
+section{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 640px;
+	height: 1040px;
+	background: url('../images/bg.png');
+}
+video{
+	display: none;
+}
+.video1{
+	position: absolute;
+	left: 111px;
+	top: 231px;
+	width: 429px;
+	height: 238px;
+	background: red;
+}
+.video2{
+	position: absolute;
+	left: 111px;
+	top: 568px;
+	width: 429px;
+	height: 238px;
+	background: red;
+}

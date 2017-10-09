@@ -11,17 +11,11 @@ video{
 }
 .video1{
 	position: absolute;
-	left: 111px;
-	top: 231px;
-	width: 429px;
-	height: 238px;
-	background: red;
+	left: 110px;
+	top: 520px;
 }
 .video2{
 	position: absolute;
-	left: 111px;
-	top: 568px;
-	width: 429px;
-	height: 238px;
-	background: red;
+	right: 110px;
+	top: 520px;
 }
