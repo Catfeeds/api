@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640,user-scalable=no">
     <link rel="stylesheet" href="{{ asset('alibaba/yun/css/index2.css') }}">
-    <title>阿里云栖</title>
+    <title>2017杭州·云栖大会</title>
 </head>
 <body>
 <section class="loading">
@@ -85,7 +85,7 @@
                 id: $('#canvas')[0],
                 width: 1040,
                 height: 640,
-                speed: 50,
+                speed: 80,
                 loop: true,
                 autoplay: true,
                 imgArr: imgarr
