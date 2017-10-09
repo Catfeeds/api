@@ -30,7 +30,7 @@
         wx.onMenuShareTimeline({
             title: '2017杭州·云栖大会', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "https://api.shanghaichujie.com/ali/yunVideo?path={{ $pid }}",
+            link: "https://api.shanghaichujie.com/ali/yunVideo?pid={{ $pid }}",
             imgUrl: "https://api.shanghaichujie.com/alibaba/aliShare.png", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
@@ -113,7 +113,7 @@
                 id: $('#canvas')[0],
                 width: 1040,
                 height: 640,
-                speed: 80,
+                speed: 50,
                 loop: true,
                 autoplay: true,
                 imgArr: imgarr
