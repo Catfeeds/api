@@ -11,6 +11,8 @@
 <body>
 <section class="sequenceFrame hidden">
     <img src="{!! $photoPath !!}" alt="">
+    <img src="{!! $photoPath !!}" alt="">
+    <img src="{!! $photoPath !!}" alt="">
 </section>
 </body>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
