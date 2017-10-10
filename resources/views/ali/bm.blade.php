@@ -31,7 +31,7 @@
                 id="video1"
                 controls
                 preload="auto" 
-                src="{{ asset('alibaba/bm/images/video.mp4') }}"
+                src="{{ asset('alibaba/bm/bm1.mp4') }}"
                 >
             </video>
         </div>
@@ -41,7 +41,7 @@
                 id="video2"
                 controls
                 preload="auto" 
-                src="{{ asset('alibaba/bm/images/video.mp4') }}"
+                src="{{ asset('alibaba/bm/bm2.mp4') }}"
             >
             </video>
         </div>
