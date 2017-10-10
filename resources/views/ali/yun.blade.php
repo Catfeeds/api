@@ -6,7 +6,7 @@
     <meta name="screen-orientation" content="portrait"/>
     <meta name="x5-orientation" content="portrait">
     <link rel="stylesheet" href="{{ asset('alibaba/yun/css/index1.css') }}">
-    <title>2017杭州·云栖大会</title>
+    <title>我的Freestyle是今天不上班</title>
 </head>
 <body>
 <section class="sequenceFrame hidden">
