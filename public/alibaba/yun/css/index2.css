@@ -11,6 +11,9 @@
             url('../font/percentage.ttf') format('truetype'),
             url('../font/percentage.svg') format('svg');
 }
+body{
+	background-color: black;
+}
 .hidden{
     display: none;
 }
@@ -41,16 +44,49 @@
 .loading .textAll .num{
     font-size: 60px;
 }
+.can1{
+	width: 640px;
+	height: 1038px;
+	background: url(../img/bg.jpg) no-repeat center center;
+
+}
+.can1{
+
+	position: absolute;
+}
 
 /*sequenceFrame*/
-canvas{
+.can2{
     position: absolute;
-    display: block;
-    width: 1040px;
-    height: 640px;
-    background-color: red;
-    left:640px;
+	width: 640px;
+    height: 1040px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+	/*left:640px;
     top:0;
     transform-origin: top left;
-    transform: rotate(90deg);
+    transform: rotate(90deg);*/
+}
+#canvas2{
+	display: block;
+	width: 1040px;
+	height: 640px;
+	left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+#canvas1{
+	position: absolute;
+	display: block;
+	width: 578px;
+	height: 340px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 262px;
 }

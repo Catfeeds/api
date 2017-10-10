@@ -6,8 +6,12 @@
 /*sequenceFrame*/
 
 img{
-    width: 640px;
-    height: 346px;
-    margin:0;
-    padding:0;
+    position: absolute;
+    display: block;
+    width: 1040px;
+    height: 640px;
+	left:640px;
+    top:0;
+    transform-origin: top left;
+    transform: rotate(90deg);
 }
