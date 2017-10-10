@@ -135,21 +135,23 @@
         })();
         
         //判断横竖屏状态
-//        (function(){
-//
-//        	window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
-//		        if (window.orientation === 180 || window.orientation === 0) {
-////		            alert('竖屏状态！');
-//					$('.can1').show();
-//					$('.can2').hide();
-//}
-//		        if (window.orientation === 90 || window.orientation === -90 ){
-////		            alert('横屏状态！');
-//					$('.can1').hide();
-//					$('.can2').show();
-//}
-//		    }, false);
-//    })
+          (function(){
+
+          	window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+		        if (window.orientation === 180 || window.orientation === 0) {
+//		            alert('竖屏状态！');
+					$('.can1').show();
+					$('.can2').hide();
+				}
+		        if (window.orientation === 90 || window.orientation === -90 ){
+//		            alert('横屏状态！');
+					$('.can1').hide();
+					$('.can2').show();
+				}
+		    }, false);
+		  })();
+		    
+      })
 
 </script>
 </html>
