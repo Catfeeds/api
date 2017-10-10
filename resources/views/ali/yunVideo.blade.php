@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640,user-scalable=no">
     <link rel="stylesheet" href="{{ asset('alibaba/yun/css/index2.css') }}">
-    <title>我的Freestyle是今天不上班</title>
+    <title>Site:云栖大会 Do:有球必赢</title>
 </head>
 <body>
 <section class="loading">
