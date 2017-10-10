@@ -33,7 +33,7 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: '2017杭州·云栖大会', // 分享标题
+            title: 'Site:云栖大会  Do:有球必赢', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/ali/yunVideo?pid={{ $pid }}",
             imgUrl: "https://api.shanghaichujie.com/alibaba/aliShare.png", // 分享图标
@@ -43,7 +43,7 @@
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
-            title: '2017杭州·云栖大会', // 分享标题
+            title: 'Site:云栖大会 Do:有球必赢', // 分享标题
             desc: "#我在云栖大会# 孤独球败，你点开试试看", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/ali/yunVideo?pid={{ $pid }}",
