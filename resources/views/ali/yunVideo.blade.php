@@ -69,7 +69,7 @@
             var fileList = [];
 
             /*---------- 后台修改部分 start ----------*/
-            for (var i = 1; i < 120; i++) {
+            for (var i = 1; i < 110; i++) {
                 fileList.push('{{asset('upload/ali/yun/'.$pid)}}/p' + i + '.png')
             }
 //            for(var i = 1; i < 7;i++){
@@ -110,7 +110,7 @@
         (function () {
             var imgarr = [];
             /*---------- 后台修改部分 start ----------*/
-            for (var i = 1; i < 120; i++) {
+            for (var i = 1; i < 110; i++) {
                 imgarr.push('{{asset('upload/ali/yun/'.$pid)}}/p' + i + '.png')
             }
             /*---------- 后台修改部分 end ----------*/

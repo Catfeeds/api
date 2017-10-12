@@ -53,7 +53,7 @@ class ImageController extends Controller
     {
         //拍照上传10张照片，保存到标识文件夹
         $pid = $request->pid;
-        for ($i = 0; $i < 120; $i++) {
+        for ($i = 0; $i < 110; $i++) {
             Storage::disk('public_path')
                 ->putFileAs('ali/yun/'.$pid, $request->file('p'.$i), 'p'.$i.'.png');
         }
