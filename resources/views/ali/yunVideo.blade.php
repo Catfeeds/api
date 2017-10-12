@@ -8,7 +8,7 @@
 </head>
 <body>
 <section class="loading">
-    <img src="{{ asset('upload/ali/yun/'.$pid.'/p0.png') }}" style="height: 640px;width: 1040px">
+    <img class="load" src="{{ asset('upload/ali/yun/'.$pid.'/p0.png') }}">
     <div class="textAll">
         <div class="text">加载中</div>
         <div class="num">0%</div>
