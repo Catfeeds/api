@@ -9,6 +9,13 @@ class AiaController extends Controller
 {
     public function test(Request $request)
     {
-        return $request->openid.'&'.$request->score;
+        return $request->openid . '&' . $request->score;
+    }
+
+    public function phone(Request $request)
+    {
+        $phone = $request->phone;
+        $openid = $request->openid;
+        return $phone . '/' . $openid;
     }
 }

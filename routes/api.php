@@ -39,7 +39,7 @@ Route::get('ali/user', 'Ali\ApiController@user');
 //用于小主机服务器访问阿里数据接口，更新公益数据
 Route::get('ali/total', 'Ali\ApiController@total');
 //大屏更新轮播图，10张正面照片
-Route::get('ali/event','Ali\ApiController@event');
+Route::get('ali/event', 'Ali\ApiController@event');
 
 /**
  * 天麓府（已经结束）
@@ -50,7 +50,7 @@ Route::get('ali/event','Ali\ApiController@event');
  * AIA项目上传游戏数据-test
  */
 Route::post('/aia/test', 'Aia\AiaController@test');
-
+Route::post('/aia/phone', 'Aia\AiaController@phone');
 /**
  * 阿里云栖大会线下分享
  */
