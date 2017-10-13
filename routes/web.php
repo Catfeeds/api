@@ -73,9 +73,10 @@ Route::get('ali/bmShow', function () {
  */
 Route::get('ali/yunShow', 'Ali\AliController@yun');
 Route::get('ali/yunVideo','Ali\AliController@yunVideo');
+
 /**
  * 天麓府项目(已经结束)
  */
-//Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
-//    Route::get('bgy', 'Api\BgyController@index');
-//});
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
+    Route::get('bgy', 'Api\BgyController@index');
+});
