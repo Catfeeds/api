@@ -80,3 +80,10 @@ Route::get('ali/yunVideo','Ali\AliController@yunVideo');
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
     Route::get('bgy', 'Api\BgyController@index');
 });
+
+/**
+ * AIA游戏项目
+ */
+Route::group(['middleware'=> ['web', 'wechat.oauth:snsapi_base']],function (){
+    Route::get('aiaGame/index','Aia\AiaController@index');
+});

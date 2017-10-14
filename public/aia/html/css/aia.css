@@ -1,0 +1,187 @@
+
+section{
+    width: 640px;
+    height: 1038px;
+}
+.hidden{
+    display: none;
+}
+/*record*/
+.rank{
+    background: url("../img/rank_bg.png") no-repeat center center;
+}
+.rank .record{
+    width: 568px;
+    height: 602px;
+    background: url("../img/record_bg.png") no-repeat center center;
+    position: absolute;
+    top:80px;
+    left:40px;
+}
+.rank .record .recordText{
+    font-family: '方正正中黑简体';
+    margin-top: 90px;
+    margin-left: 30px;
+    width: 560px;
+    color: #72b8a0;
+    font-size: 30px;
+}
+.rank .record .recordText p{
+    line-height: 44px;
+}
+.rank .record .recordText .space{
+    margin:30px 0;
+}
+.rank .record .recordText .red{
+    color: #D58F4D;
+}
+.rank .btn{
+    position: absolute;
+    z-index: 10;
+    top:720px;
+    left:208px;
+
+}
+.rank .btn img{
+    position: absolute;
+}
+.rank .btn img.share{
+    top:134px;
+}
+.rank .hand{
+    position: absolute;
+    left:456px;
+    top: 720px;
+}
+.rank .popup{
+    width: 640px;
+    height: 1038px;
+    position: absolute;
+    z-index: 200;
+}
+
+/*food*/
+.food{
+    background: url("../img/food_bg.png") no-repeat center center;
+}
+.food .food_y{
+    position: absolute;
+    width: 554px;
+    height: 863px;
+    background: url("../img/foodY_bg.png") no-repeat center center;
+    background-size: 100% 100%;
+    left:43px;
+    top:90px;
+}
+.food form{
+    position: absolute;
+    top:540px;
+    left:20px;
+}
+.food input[type="text"]{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 340px;
+    height: 50px;
+    background: url("../img/food_ipu.png") no-repeat center center;
+    background-size: 100% 100%;
+    padding:5px 10px;
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    opacity: 0.9;
+}
+.food label img{
+    width: 340px;
+    margin-top: 16px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: white;
+
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: white;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: white;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: white;
+}
+.food .ewm{
+    position: absolute;
+    width: 112px;
+    left: 390px;
+    top:544px;
+}
+.food p{
+    width: 554px;
+    text-align: center;
+    position: absolute;
+    top:806px;
+    color: white;
+    font-size: 18px;
+}
+.food p a{
+    color: #ca9424;
+    font-weight: bold;
+    border-bottom: 2px solid #ca9424;
+    margin-right: 5px;
+}
+.food .cancel{
+    position: absolute;
+    right: -34px;
+    top:-26px;
+}
+/*popup1*/
+.custom{
+    background: url("../img/green.png") no-repeat center center;
+}
+.custom .custom_popup1{
+    width:640px;
+    height: 1040px;
+    position: absolute;
+}
+.custom .btn{
+    position: absolute;
+    z-index: 100;
+    top:650px;
+    left:206px;
+
+}
+.custom .btn .replay{
+    position: absolute;
+    top:104px;
+
+}
+.custom .greens img{
+    position: absolute;
+    left:0;
+    right: 0;
+    margin:auto;
+    z-index: 100;
+    top:248px;
+}
+
+.custom .text{
+    width: 558px;
+    text-align: center;
+    position: absolute;
+    left:44px;
+    top:372px;
+    color: #89cdb6;
+
+}
+.custom .text p{
+    font-size: 22px;
+    font-family: "黑体";
+    letter-spacing: 5px;
+    line-height: 44px;
+    font-weight: bolder;
+
+}
+.custom .text p a{
+    color: #d7995b;
+    border-bottom: 3px solid red;
+}
