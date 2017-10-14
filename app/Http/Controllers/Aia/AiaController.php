@@ -15,6 +15,8 @@ class AiaController extends Controller
         $js = EasyWeChat::js();
         $userInfo = Aia::firstOrCreate([
             'openid' => $wechatInfo['id']
+        ], [
+            'totalScore' => 0
         ]);
         dd($userInfo);
         return view('aia.index', compact('js', 'wechatInfo', 'userInfo'));
