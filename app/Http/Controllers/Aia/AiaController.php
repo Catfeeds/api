@@ -11,8 +11,9 @@ class AiaController extends Controller
 {
     public function index()
     {
-        $wechatInfo = session('wechat.oauth_user');
-        $js = EasyWeChat::js();
+        $wechatInfo = ['id'=>'test'];
+//        $wechatInfo = session('wechat.oauth_user');
+//        $js = EasyWeChat::js();
         $userInfo = Aia::firstOrCreate([
             'openid' => $wechatInfo['id']
         ], [

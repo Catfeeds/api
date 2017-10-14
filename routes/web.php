@@ -85,5 +85,5 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function
  * AIA游戏项目
  */
 Route::group(['middleware'=> ['web', 'wechat.oauth:snsapi_base']],function (){
-    Route::get('aiaGame/index','Aia\AiaController@index');
 });
+Route::get('aiaGame/index','Aia\AiaController@index');
