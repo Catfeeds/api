@@ -38,7 +38,6 @@
     <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
 
     <link rel="stylesheet" type="text/css" href="{{ asset('aia/style-mobile.css') }}"/>
-    <script src="{{ asset('aia/cocos2d-js-min.js') }}" type="text/javascript" charset="utf-8"></script>
 
 </head>
 <body>

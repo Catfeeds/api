@@ -111,8 +111,8 @@
 
             // init assets
             cc.AssetLibrary.init({
-                libraryPath: 'res/import',
-                rawAssetsBase: 'res/raw-',
+                libraryPath: '../aia/res/import',
+                rawAssetsBase: '../aia/res/raw-',
                 rawAssets: settings.rawAssets,
                 packedAssets: settings.packedAssets,
                 md5AssetsMap: settings.md5AssetsMap
@@ -146,7 +146,7 @@
 
         // jsList
         var jsList = settings.jsList;
-        var bundledScript = settings.debug ? 'project.dev.js' : 'project.js';
+        var bundledScript = settings.debug ? '../../aia/src/project.dev.js' : '../../aia/src/project.js';
         if (jsList) {
             jsList.push(bundledScript);
         }
@@ -184,7 +184,7 @@
 
         var cocos2d = document.createElement('script');
         cocos2d.async = true;
-        cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js';
+        cocos2d.src = window._CCSettings.debug ? '../aia/cocos2d-js.js' : '../aia/cocos2d-js-min.js';
 
         var engineLoaded = function () {
             document.body.removeChild(cocos2d);
