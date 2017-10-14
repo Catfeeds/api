@@ -19,6 +19,7 @@ class CreateAiasTable extends Migration
             $table->string('phone',11)->nullable();
             $table->integer('totalScore')->default(0);
             $table->integer('totalTime')->default(0);
+            $table->date('share')->nullable()->comment('分享时间');
             $table->timestamps();
         });
     }

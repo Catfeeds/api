@@ -371,7 +371,7 @@ require = function e(t, i, s) {
                         this.main = cc.find("Canvas").getComponent("Main"), this.main.title_close();
                         break;
                     case"replay":
-                        window.location.replace("http://www.baidu.com");
+                        window.location.replace("https://api.shanghaichujie.com/aiaGame/index");
                         break;
                     case"next_cp2":
                         cc.director.loadScene("check_point_2");
@@ -388,7 +388,7 @@ require = function e(t, i, s) {
                     case"finish":
                         window.aia.end_time = new Date().getTime();
                         window.aia.play_time = window.aia.end_time - window.aia.start_time;
-                        window.location.replace("http://www.baidu.com?openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time)
+                        window.location.replace("https://api.shanghaichujie.com/aiaGame/result?openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time)
                 }
             },
             feedback: function (e) {
@@ -527,7 +527,7 @@ require = function e(t, i, s) {
             send: function (e) {
                 window.aia.end_time = new Date().getTime();
                 window.aia.play_time = window.aia.end_time - window.aia.start_time;
-                window.location.replace("http://www.baidu.com?openid=" + window.aia.openid + "&scene=" + e + "&score=" + window.aia.score + "&time=" + window.aia.play_time)
+                window.location.replace("https://api.shanghaichujie.com/aiaGame/fail?openid=" + window.aia.openid + "&scene=" + e + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time)
             }
         }), cc._RF.pop()
     }, {}], Title: [function (e, t, i) {

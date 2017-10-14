@@ -17,6 +17,7 @@ class CreateAiaScoresTable extends Migration
             $table->increments('id');
             $table->string('openid');
             $table->integer('score')->default(0);
+            $table->boolean('result')->default(0);
             $table->timestamps();
         });
     }

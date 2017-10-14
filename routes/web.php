@@ -72,7 +72,7 @@ Route::get('ali/bmShow', function () {
  * 阿里云栖大会
  */
 Route::get('ali/yunShow', 'Ali\AliController@yun');
-Route::get('ali/yunVideo','Ali\AliController@yunVideo');
+Route::get('ali/yunVideo', 'Ali\AliController@yunVideo');
 
 /**
  * 天麓府项目(已经结束)
@@ -84,6 +84,13 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function
 /**
  * AIA游戏项目
  */
-Route::group(['middleware'=> ['web', 'wechat.oauth:snsapi_base']],function (){
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
+    //游戏首页
+    Route::get('aiaGame/index', 'Aia\AiaController@index');
+    //游戏战绩页面
+    Route::get('aiaGame/result', 'Aia\AiaController@result');
+    //游戏失败页面
+    Route::get('aiaGame/fail', 'Aia\AiaController@fail');
+    //游戏上传手机号参与易服务
+    Route::post('aiaGame/phone', 'Aia\AiaController@phone');
 });
-Route::get('aiaGame/index','Aia\AiaController@index');
