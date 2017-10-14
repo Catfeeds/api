@@ -25,13 +25,13 @@ class QfController extends Controller
         //获取微信用户信息
         $user_info = session('wechat.oauth_user');
 
-        $qf_user = Qifu_user::where('openid', $user_info->id)
+        $qf_user = Qifu_user::where('openid', $user_info['id'])
             ->orWhere('nickname', $user_info->nickname)
             ->first();
         if (is_null($qf_user)) {
             //0-0-0
             $qf_user = new Qifu_user;
-            $qf_user->openid = $user_info->id;
+            $qf_user->openid = $user_info['id'];
             $qf_user->nickname = $user_info->nickname;
             $qf_user->sign = '1';
             $qf_user->save();
@@ -44,7 +44,7 @@ class QfController extends Controller
         } else {
             //名单上的用户openid为null，添加openid
             if ($qf_user->openid == null){
-                $qf_user->openid = $user_info->id;
+                $qf_user->openid = $user_info['id'];
             }
             if ($qf_user->pasture == '0' && $qf_user->vr == '0' && $qf_user->sign == '0') {
                 $qf_user->sign = '1';
@@ -70,13 +70,13 @@ class QfController extends Controller
         //获取微信用户信息
         $user_info = session('wechat.oauth_user');
 
-        $qf_user = Qifu_user::where('openid', $user_info->id)
+        $qf_user = Qifu_user::where('openid', $user_info['id'])
             ->orWhere('nickname', $user_info->nickname)
             ->first();
         if (is_null($qf_user)) {
             //0-0-0
             $qf_user = new Qifu_user;
-            $qf_user->openid = $user_info->id;
+            $qf_user->openid = $user_info['id'];
             $qf_user->nickname = $user_info->nickname;
             $qf_user->pasture = '1';
             $qf_user->save();
@@ -89,7 +89,7 @@ class QfController extends Controller
         } else {
             //名单上的用户openid为null，添加openid
             if ($qf_user->openid == null){
-                $qf_user->openid = $user_info->id;
+                $qf_user->openid = $user_info['id'];
             }
 
             if ($qf_user->pasture == '0' && $qf_user->vr == '0' && $qf_user->sign == '0') {
@@ -112,7 +112,7 @@ class QfController extends Controller
 
 
 //         弃用
-//        $qf_user = Qifu_user::where('openid', $user_info->id)
+//        $qf_user = Qifu_user::where('openid', $user_info['id'])
 //            ->where('sign', '1')
 //            ->first();
 //        if (is_null($qf_user)) {
@@ -136,13 +136,13 @@ class QfController extends Controller
         //获取微信用户信息
         $user_info = session('wechat.oauth_user');
 
-        $qf_user = Qifu_user::where('openid', $user_info->id)
+        $qf_user = Qifu_user::where('openid', $user_info['id'])
             ->orWhere('nickname', $user_info->nickname)
             ->first();
         if (is_null($qf_user)) {
             //0-0-0
             $qf_user = new Qifu_user;
-            $qf_user->openid = $user_info->id;
+            $qf_user->openid = $user_info['id'];
             $qf_user->nickname = $user_info->nickname;
             $qf_user->vr = '1';
             $qf_user->save();
@@ -155,7 +155,7 @@ class QfController extends Controller
         } else {
             //名单上的用户openid为null，添加openid
             if ($qf_user->openid == null){
-                $qf_user->openid = $user_info->id;
+                $qf_user->openid = $user_info['id'];
             }
 
             if ($qf_user->pasture == '0' && $qf_user->vr == '0' && $qf_user->sign == '0') {
@@ -177,7 +177,7 @@ class QfController extends Controller
         }
 
 //        弃用
-//        $qf_user = Qifu_user::where('openid', $user_info->id)
+//        $qf_user = Qifu_user::where('openid', $user_info['id'])
 //            ->where('sign', '1')
 //            ->first();
 //        if (is_null($qf_user)) {
@@ -200,12 +200,12 @@ class QfController extends Controller
     {
         $user_info = session('wechat.oauth_user');
         $js = $this->js;
-        $qf_user = Qifu_user::where('openid', $user_info->id)
+        $qf_user = Qifu_user::where('openid', $user_info['id'])
             ->orWhere('nickname', $user_info->nickname)
             ->first();
         $logo = $qf_user->logo;
         $shop_url = $qf_user->shop_url;
-        $openid = $user_info->id;
+        $openid = $user_info['id'];
         $nickname = $user_info->nickname;
         $company = $qf_user->company;
         return view('qf.share', compact('logo', 'shop_url', 'js', 'openid', 'nickname', 'company'));

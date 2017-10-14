@@ -17,8 +17,8 @@ class BgyController extends Controller
     {
         $userInfo = session('wechat.oauth_user');
         $bgy = Bgy::updateOrCreate(
-            ['openid' => $userInfo->id],
-            ['avatar' => $userInfo->avatar, 'nickname' => $userInfo->name]
+            ['openid' => $userInfo['id']],
+            ['avatar' => $userInfo->avatar, 'nickname' => $userInfo['name']]
         );
 
         return view('bgy');

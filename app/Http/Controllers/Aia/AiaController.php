@@ -18,7 +18,6 @@ class AiaController extends Controller
         ], [
             'totalScore' => 0
         ]);
-        dd($userInfo);
         return view('aia.index', compact('js', 'wechatInfo', 'userInfo'));
     }
 
