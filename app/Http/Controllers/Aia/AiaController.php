@@ -19,7 +19,7 @@ class AiaController extends Controller
         ], [
             'totalScore' => 0
         ]);
-        return view('aia.index', compact('js', 'wechatInfo', 'userInfo'));
+        return view('aia.index', compact( 'wechatInfo', 'userInfo'));
     }
 
     public function test(Request $request)
