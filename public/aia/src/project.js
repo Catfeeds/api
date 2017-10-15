@@ -388,7 +388,16 @@ require = function e(t, i, s) {
                     case"finish":
                         window.aia.end_time = new Date().getTime();
                         window.aia.play_time = window.aia.end_time - window.aia.start_time;
-                        window.location.replace("https://api.shanghaichujie.com/aiaGame/result?openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time)
+
+                        let xhttp = new XMLHttpRequest();
+                        xhttp.open("POST", "https://api.shanghaichujie.com/api/aiaGame/resultApi", true);
+                        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                        xhttp.send("openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time);
+                        xhttp.onreadystatechange = function() {
+                            if (this.readyState == 4 && this.status == 200) {
+                                window.location.replace("https://api.shanghaichujie.com/aiaGame/result?openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time)
+                            }
+                        };
                 }
             },
             feedback: function (e) {
@@ -527,7 +536,15 @@ require = function e(t, i, s) {
             send: function (e) {
                 window.aia.end_time = new Date().getTime();
                 window.aia.play_time = window.aia.end_time - window.aia.start_time;
-                window.location.replace("https://api.shanghaichujie.com/aiaGame/fail?openid=" + window.aia.openid + "&scene=" + e + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time)
+                let xhttp = new XMLHttpRequest();
+                xhttp.open("POST", "https://api.shanghaichujie.com/api/aiaGame/resultApi", true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send("openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time);
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        window.location.replace("https://api.shanghaichujie.com/aiaGame/fail?openid=" + window.aia.openid + "&scene=" + e + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time)
+                    }
+                };
             }
         }), cc._RF.pop()
     }, {}], Title: [function (e, t, i) {

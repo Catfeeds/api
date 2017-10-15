@@ -12,11 +12,26 @@
 <section class="rank ">
     <div class="record">
         <div class="recordText">
-            <p>你已获得<span>高级技师</span>健康大厨称号,</p>
+            <p>你已获得
+                <span>
+                    @if($userInfo->totalScore < 500)
+                        初级
+                    @elseif($userInfo->totalScore<1000)
+                        中级
+                    @elseif($userInfo->totalScore<1500)
+                        高级
+                    @elseif($userInfo->totalScore<2000)
+                        技师
+                    @else
+                        高级技师
+                    @endif
+                </span>
+                健康大厨称号,
+            </p>
             <p>您本次游戏得分<span>{{ $score }}</span>,</p>
             <p>历史最高得分<span>{{ $topScore }}</span>,</p>
             <p>击败了<span>{{$rank}}</span>%的其他健康大厨.</p>
-            <p class="space">今天还有<span>{{ $userCount }}</span>次挑战机会。继续加油！</p>
+            <p class="space">今天还有<span>{{ 5-$userCount }}</span>次挑战机会。继续加油！</p>
             <p>点击"我要参加"</p>
             <p>客服节线下活动赢好礼!</p>
             <p class="red">击败80%的玩家还有机会</p>
@@ -51,7 +66,35 @@
 
 </body>
 <script src="{{ asset('aia/html/js/jquery-1.11.3.min.js') }}"></script>
-<script>
+<script><script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+    <script type="application/javascript">
+        wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
+        // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在 页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready 函数中。
+        wx.ready(function () {
+            // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
+            wx.onMenuShareTimeline({
+                title: 'AIA游戏互动', // 分享标题
+                {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
+                link: "https://api.shanghaichujie.com/aiaGame/index",
+                imgUrl: "https://api.shanghaichujie.com/alibaba/bm/share.png", // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                }
+            });
+            // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
+            wx.onMenuShareAppMessage({
+                title: 'AIA游戏互动', // 分享标题
+                desc: "AIA游戏互动", // 分享描述
+                {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
+                link: "https://api.shanghaichujie.com/aiaGame/index",
+                imgUrl: "https://api.shanghaichujie.com/alibaba/bm/share.png", // 分享图标
+                type: 'link', // 分享类型,music、video或link，不填默认为link
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                }
+            });
+        });
+
     (function () {
         var val = '{{ is_null($userInfo->phone) ? '' : $userInfo->phone }}';//用户手机号
 //        joinBtn

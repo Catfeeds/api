@@ -49,8 +49,7 @@ Route::get('ali/event', 'Ali\ApiController@event');
 /**
  * AIA项目上传游戏数据-test
  */
-Route::post('/aia/test', 'Aia\AiaController@test');
-Route::post('/aia/phone', 'Aia\AiaController@phone');
+Route::post('aiaGame/resultApi','Aia\AiaController@resultApi');
 /**
  * 阿里云栖大会线下分享
  */
