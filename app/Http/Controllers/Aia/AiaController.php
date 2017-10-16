@@ -20,6 +20,7 @@ class AiaController extends Controller
         ], [
             'totalScore' => 0
         ]);
+        dd($userInfo->totalScore);
         return view('aia.index', compact('js', 'wechatInfo', 'userInfo'));
     }
 
@@ -115,10 +116,9 @@ class AiaController extends Controller
         return 'true';
     }
 
-    public function test(Request $request)
+    public function share()
     {
-        return $request->openid . '&' . $request->score;
+        
     }
-
 
 }
