@@ -89,7 +89,7 @@ section{
     padding:5px 10px;
     color: white;
     text-align: center;
-    font-size: 34px;
+    font-size: 30px;
     opacity: 0.9;
 }
 .food label img{
@@ -102,15 +102,15 @@ section{
 
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    font-size: 26px
+    font-size: 26px;
     color: white;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    font-size: 26px
+    font-size: 26px;
     color: white;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-    font-size: 26px
+    font-size: 26px;
     color: white;
 }
 .food .ewm{
