@@ -53,21 +53,8 @@ class AiaController extends Controller
         $time = $request->time;
         $score = $request->score;
 
-        //更新用户总分，总游玩时间
+        //查询用户信息
         $userInfo = Aia::where('openid', $wechatInfo['id'])->first();
-//        $userInfo->totalTime += $time;
-//        $userInfo->totalScore += $score;
-//        $userInfo->save();
-
-        //记录用户游戏日志，用于排行，最高分
-//        AiaScore::create([
-//            'openid' => $wechatInfo['id'],
-//            'score' => $score
-//        ]);
-
-        //查询该用户最高分
-        $topScore = AiaScore::where('openid', $openid)
-            ->max('score');
 
         //今天剩余挑战次数
         $userCount = AiaScore::where('openid', $wechatInfo['id'])
@@ -75,13 +62,13 @@ class AiaController extends Controller
             ->count();
 
         //战绩排行
-        $countAll = AiaScore::count();
-        $count = AiaScore::where('score', '<=', $score)
+        $countAll = Aia::count();
+        $count = Aia::where('topScore', '<=', $userInfo->topScore)
             ->count();
         $rank = floor($count / $countAll * 100);
         $js = EasyWeChat::js();
 
-        return view('aia.record', compact('userInfo', 'userCount', 'topScore', 'score', 'rank', 'js'));
+        return view('aia.record', compact('userInfo', 'userCount', 'score', 'rank', 'js'));
     }
 
     public function phone(Request $request)
@@ -104,6 +91,9 @@ class AiaController extends Controller
         $userInfo = Aia::where('openid', $openid)->first();
         $userInfo->totalTime += $time;
         $userInfo->totalScore += $score;
+        if ($userInfo->topScore < $score) {
+            $userInfo->topScore = $score;
+        }
         $userInfo->save();
 
         //记录用户游戏日志，用于排行，最高分
@@ -115,9 +105,9 @@ class AiaController extends Controller
         return 'true';
     }
 
-    public function share()
+    public function share(Request $request)
     {
-        
+
     }
 
 }

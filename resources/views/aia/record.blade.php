@@ -79,7 +79,7 @@
             title: '【我是健康大厨】友邦客服节养生PK游戏，不但会吃还会玩，更有线下活动好礼等您拿，AIA带您玩转健康美食赢好礼！', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/aiaGame/index",
-            imgUrl: "https://api.shanghaichujie.com/aia/aiaShare.png", // 分享图标
+            imgUrl: "https://api.shanghaichujie.com/aia/aiaLogo.png", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
             }
@@ -90,7 +90,7 @@
             desc: "我已打败{{ $rank }}%健康大厨，快来和我PK吧！跟AIA一起揭秘养生餐", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/aiaGame/index",
-            imgUrl: "https://api.shanghaichujie.com/aia/aiaShare.png", // 分享图标
+            imgUrl: "https://api.shanghaichujie.com/aia/aiaLogo.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
                 // 用户确认分享后执行的回调函数
