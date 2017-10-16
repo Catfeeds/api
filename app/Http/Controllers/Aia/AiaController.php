@@ -89,7 +89,7 @@ class AiaController extends Controller
         $phone = $request->input('ipu');
         $wechatInfo = session('wechat.oauth_user');
         $userInfo = Aia::where('openid', $wechatInfo['id'])->first();
-        $userInfo->phone += $phone;
+        $userInfo->phone = $phone;
         $userInfo->save();
         return back()->with('status', 'true');
     }

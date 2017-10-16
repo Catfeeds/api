@@ -31,10 +31,10 @@
             <p>您本次游戏得分<span>{{ $score }}</span>,</p>
             <p>历史最高得分<span>{{ $topScore }}</span>,</p>
             <p>击败了<span>{{$rank}}</span>%的其他健康大厨.</p>
-            <p class="space">今天还有<span>{{ 5-$userCount }}</span>次挑战机会。继续加油！</p>
+            <p class="space">今天还有<span>{{ 3-$userCount }}</span>次挑战机会。继续加油！</p>
             <p>点击"我要参加"</p>
             <p>客服节线下活动赢好礼!</p>
-            <p class="red">击败80%的玩家还有机会</p>
+            <p class="red">击败50%的玩家还有机会</p>
             <p class="red">额外参加抽奖哦!</p>
         </div>
     </div>
@@ -74,21 +74,21 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: 'AIA游戏互动', // 分享标题
+            title: '【我是健康大厨】友邦客服节养生PK游戏，不但会吃还会玩，更有线下活动好礼等您拿，AIA带您玩转健康美食赢好礼！', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/aiaGame/index",
-            imgUrl: "https://api.shanghaichujie.com/alibaba/bm/share.png", // 分享图标
+            imgUrl: "https://api.shanghaichujie.com/aia/aiaShare.png", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
             }
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
-            title: 'AIA游戏互动', // 分享标题
-            desc: "AIA游戏互动", // 分享描述
+            title: '【我是健康大厨】友邦客服节养生PK游戏，不但会吃还会玩，更有线下活动好礼等您拿，AIA带您玩转健康美食赢好礼！', // 分享标题
+            desc: "我已打败{{ $rank }}%健康大厨，快来和我PK吧！跟AIA一起揭秘养生餐", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/aiaGame/index",
-            imgUrl: "https://api.shanghaichujie.com/alibaba/bm/share.png", // 分享图标
+            imgUrl: "https://api.shanghaichujie.com/aia/aiaShare.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
                 // 用户确认分享后执行的回调函数
