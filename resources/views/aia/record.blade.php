@@ -15,12 +15,14 @@
             <p>你已获得
                 <span>
                     @if($userInfo->totalScore < 500)
-                        初级
+                        见习
                     @elseif($userInfo->totalScore<1000)
-                        中级
+                        初级
                     @elseif($userInfo->totalScore<1500)
-                        高级
+                        中级
                     @elseif($userInfo->totalScore<2000)
+                        高级
+                    @elseif($userInfo->totalScore<3000)
                         技师
                     @else
                         高级技师
