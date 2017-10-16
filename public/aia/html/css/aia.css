@@ -19,12 +19,12 @@ section{
     left:40px;
 }
 .rank .record .recordText{
-    font-family: '方正正中黑简体';
     margin-top: 90px;
-    margin-left: 30px;
     width: 560px;
     color: #72b8a0;
     font-size: 30px;
+    text-align: center;
+    font-weight: bold;
 }
 .rank .record .recordText p{
     line-height: 44px;
@@ -89,7 +89,7 @@ section{
     padding:5px 10px;
     color: white;
     text-align: center;
-    font-size: 26px;
+    font-size: 30px;
     opacity: 0.9;
 }
 .food label img{
@@ -97,16 +97,20 @@ section{
     margin-top: 16px;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 26px;
     color: white;
 
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 26px;
     color: white;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 26px;
     color: white;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 26px;
     color: white;
 }
 .food .ewm{
