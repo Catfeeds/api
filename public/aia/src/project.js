@@ -178,7 +178,7 @@ require = function e(t, i, s) {
                         this.reduceRandom()
                 }
                 var i = this.cp3_1 * this.base1, s = this.cp3_2 * this.base2, c = this.cp3_3 * this.base3;
-                window.aia.cp3_score = i + s + c, window.aia.game_score = window.aia.cp1_score + window.aia.cp2_score + window.aia.cp3_score, this.main.set_score(window.aia.game_score), this.main.set_num(this.cp3_1, this.cp3_2, this.cp3_3), this.cp3_1 >= this.need1 && this.cp3_2 >= this.need1 && this.cp3_3 >= this.need1 && this.main.success(), this.title.update_title()
+                window.aia.cp3_score = i + s + c, window.aia.game_score = window.aia.cp1_score + window.aia.cp2_score + window.aia.cp3_score, this.main.set_score(window.aia.game_score), this.main.set_num(this.cp3_1, this.cp3_2, this.cp3_3), this.cp3_1 >= this.need1 && this.cp3_2 >= this.need2 && this.cp3_3 >= this.need3 && this.main.success(), this.title.update_title()
             },
             addRandom: function () {
                 switch (Math.floor(3 * Math.random() + 1)) {
