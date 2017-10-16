@@ -389,7 +389,7 @@ require = function e(t, i, s) {
                         window.aia.end_time = new Date().getTime();
                         window.aia.play_time = window.aia.end_time - window.aia.start_time;
 
-                        let xhttp = new XMLHttpRequest();
+                        var xhttp = new XMLHttpRequest();
                         xhttp.open("POST", "https://api.shanghaichujie.com/api/aiaGame/resultApi", true);
                         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                         xhttp.send("openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time);
