@@ -66,16 +66,17 @@
         score: 0,
         openid: '{{ $wechatInfo['id'] }}',
         server_score: {{ $userInfo->totalScore }},
-        title_score_1: 500,
-        title_score_2: 1000,
-        title_score_3: 1500,
-        title_score_4: 2000,
-        title_score_5: 3000,
+        is_times: true,
+        title_score_1: 120,
+        title_score_2: 400,
+        title_score_3: 800,
+        title_score_4: 1400,
+        title_score_5: 2000,
         title_text_1: '初级健康大厨',
         title_text_2: '中级健康大厨',
         title_text_3: '高级健康大厨',
-        title_text_4: '技师健康大厨',
-        title_text_5: '高级技师健康大厨'
+        title_text_4: '至尊健康大厨',
+        title_text_5: '食神'
     }
 </script>
 <script src="{{ asset('aia/src/settings.js') }}" charset="utf-8"></script>

@@ -362,7 +362,7 @@ require = function e(t, i, s) {
                 var e = cc.scaleTo(0, 1, 1);
                 switch (this.runAction(e), this.name) {
                     case"enter_game":
-                        cc.director.loadScene("rule");
+                        1 == window.aia.is_times ? cc.director.loadScene("rule") : this.parent.getChildByName("times").active = !0;
                         break;
                     case"start_game":
                         cc.director.loadScene("check_point_1");
@@ -386,18 +386,11 @@ require = function e(t, i, s) {
                         cc.director.loadScene("check_point_5");
                         break;
                     case"finish":
-                        window.aia.end_time = new Date().getTime();
-                        window.aia.play_time = window.aia.end_time - window.aia.start_time;
-
-                        var xhttp = new XMLHttpRequest();
-                        xhttp.open("POST", "https://api.shanghaichujie.com/api/aiaGame/resultApi", true);
-                        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                        xhttp.send("openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time);
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4 && this.status == 200) {
-                                window.location.replace("https://api.shanghaichujie.com/aiaGame/result?openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time)
-                            }
-                        };
+                        window.aia.end_time = (new Date).getTime(), window.aia.play_time = window.aia.end_time - window.aia.start_time;
+                        var t = new XMLHttpRequest;
+                        t.open("POST", "https://api.shanghaichujie.com/api/aiaGame/resultApi", !0), t.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), t.send("openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time), t.onreadystatechange = function () {
+                            4 == this.readyState && 200 == this.status && window.location.replace("https://api.shanghaichujie.com/aiaGame/result?openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time)
+                        }
                 }
             },
             feedback: function (e) {
@@ -420,7 +413,7 @@ require = function e(t, i, s) {
                 aia: cc.Prefab,
                 peanut: cc.Prefab,
                 meat: cc.Prefab,
-                padding: 100,
+                padding: 150,
                 minDownDuration: 5,
                 maxDownDuration: 10,
                 speed: 1
@@ -482,13 +475,10 @@ require = function e(t, i, s) {
                 this.line1_label.string = e, this.line2_label.string = t, this.line3_label.string = i, s && (this.line4_label = this.pannel.getChildByName("line4").getChildByName("line4_label").getComponent("cc.Label"), this.line4_label.string = s)
             },
             success: function () {
-                window.aia.end_time = new Date().getTime();
-                window.aia.play_time = window.aia.end_time - window.aia.start_time;
                 this.stopAllschedule(), this.foods_container.active = !1, this.player.active = !1, this.success_container.active = !0, this.show_popup(this.success_popup)
             },
             fail: function (e) {
-                window.aia.end_time = new Date().getTime();
-                window.aia.play_time = window.aia.end_time - window.aia.start_time;
+                window.aia.end_time = (new Date).getTime(), window.aia.play_time = window.aia.end_time - window.aia.start_time;
                 var t = 0;
                 switch (e) {
                     case"check_point_1":
@@ -514,7 +504,8 @@ require = function e(t, i, s) {
                 this.title_text.getComponent("cc.Label").string = e, this.score.getComponent("cc.Label").string = i, this.next_title.getComponent("cc.Label").string = t, this.next_score.getComponent("cc.Label").string = s
             },
             best_title_show: function () {
-                this.stopAllschedule(), this.foods_container.active = !1, this.player.active = !1, this.best_title.active = !0, this.show_popup(this.best_popup)
+                this.stopAllschedule(), this.player.active = !1, this.best_title.active = !0, this.show_popup(this.best_popup);
+                for (var e = 0, t = this.foods_container.children.length; e < t; e++) this.foods_container.children[e].pauseAllActions()
             },
             title_close: function () {
                 var e = this, t = this, i = t.cp_count.getComponent("cc.Label");
@@ -534,17 +525,11 @@ require = function e(t, i, s) {
                 e.runAction(t)
             },
             send: function (e) {
-                window.aia.end_time = new Date().getTime();
-                window.aia.play_time = window.aia.end_time - window.aia.start_time;
-                let xhttp = new XMLHttpRequest();
-                xhttp.open("POST", "https://api.shanghaichujie.com/api/aiaGame/resultApi", true);
-                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xhttp.send("openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time);
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        window.location.replace("https://api.shanghaichujie.com/aiaGame/fail?openid=" + window.aia.openid + "&scene=" + e + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time)
-                    }
-                };
+                window.aia.end_time = (new Date).getTime(), window.aia.play_time = window.aia.end_time - window.aia.start_time;
+                var t = new XMLHttpRequest;
+                t.open("POST", "https://api.shanghaichujie.com/api/aiaGame/resultApi", !0), t.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), t.send("openid=" + window.aia.openid + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time), t.onreadystatechange = function () {
+                    4 == this.readyState && 200 == this.status && window.location.replace("https://api.shanghaichujie.com/aiaGame/fail?openid=" + window.aia.openid + "&scene=" + e + "&score=" + window.aia.game_score + "&time=" + window.aia.play_time)
+                }
             }
         }), cc._RF.pop()
     }, {}], Title: [function (e, t, i) {
@@ -562,12 +547,12 @@ require = function e(t, i, s) {
                 }, this.server_score = 0, window.aia.title_score = window.aia.title_score || window.aia.server_score, this.title = "", this.title_label = this.node.getChildByName("title").getComponent("cc.Label"), this.init_title(), this.main = cc.find("Canvas").getComponent("Main")
             },
             init_title: function () {
-                this.server_score = window.aia.server_score + window.aia.game_score, this.server_score < this.level.level_score1 ? this.title = "见习" : this.server_score >= this.level.level_score1 && this.server_score < this.level.level_score2 ? this.title = "初级" : this.server_score >= this.level.level_score2 && this.server_score < this.level.level_score3 ? this.title = "中级" : this.server_score >= this.level.level_score3 && this.server_score < this.level.level_score4 ? this.title = "高级" : this.server_score >= this.level.level_score4 && this.server_score < this.level.level_score5 ? this.title = "技师" : this.server_score >= this.level.level_score5 && (this.title = "高级技师"), this.title_label.string = this.title, window.aia.title = this.title
+                this.server_score = window.aia.server_score + window.aia.game_score, this.server_score < this.level.level_score1 ? this.title = "见习" : this.server_score >= this.level.level_score1 && this.server_score < this.level.level_score2 ? this.title = "初级" : this.server_score >= this.level.level_score2 && this.server_score < this.level.level_score3 ? this.title = "中级" : this.server_score >= this.level.level_score3 && this.server_score < this.level.level_score4 ? this.title = "高级" : this.server_score >= this.level.level_score4 && this.server_score < this.level.level_score5 ? this.title = "至尊" : this.server_score >= this.level.level_score5 && (this.title = "食神"), this.title_label.string = this.title, window.aia.title = this.title
             },
             update_title: function () {
                 window.aia.score = window.aia.server_score + window.aia.game_score;
                 var e = window.aia.score;
-                window.aia.title_score < this.level.level_score1 ? e >= this.level.level_score1 && (this.title = "初级", this.main.modify_title_show(window.aia.title_text_1, window.aia.title_text_2, e, this.level.level_score2), window.aia.title_score = e) : window.aia.title_score < this.level.level_score2 ? e >= this.level.level_score2 && (this.title = "中级", this.main.modify_title_show(window.aia.title_text_2, window.aia.title_text_3, e, this.level.level_score3), window.aia.title_score = e) : window.aia.title_score < this.level.level_score3 ? e >= this.level.level_score3 && (this.title = "高级", this.main.modify_title_show(window.aia.title_text_3, window.aia.title_text_4, e, this.level.level_score4), window.aia.title_score = e) : window.aia.title_score < this.level.level_score4 ? e >= this.level.level_score4 && (this.title = "技师", this.main.modify_title_show(window.aia.title_text_4, window.aia.title_text_5, e, this.level.level_score5), window.aia.title_score = e) : window.aia.title_score < this.level.level_score5 && e >= this.level.level_score5 && (this.title = "高级技师", this.main.best_title_show(), window.aia.title_score = e), this.title_label.string = this.title, window.aia.title = this.title
+                window.aia.title_score < this.level.level_score1 ? e >= this.level.level_score1 && (this.title = "初级", this.main.modify_title_show(window.aia.title_text_1, window.aia.title_text_2, e, this.level.level_score2), window.aia.title_score = e) : window.aia.title_score < this.level.level_score2 ? e >= this.level.level_score2 && (this.title = "中级", this.main.modify_title_show(window.aia.title_text_2, window.aia.title_text_3, e, this.level.level_score3), window.aia.title_score = e) : window.aia.title_score < this.level.level_score3 ? e >= this.level.level_score3 && (this.title = "高级", this.main.modify_title_show(window.aia.title_text_3, window.aia.title_text_4, e, this.level.level_score4), window.aia.title_score = e) : window.aia.title_score < this.level.level_score4 ? e >= this.level.level_score4 && (this.title = "至尊", this.main.modify_title_show(window.aia.title_text_4, window.aia.title_text_5, e, this.level.level_score5), window.aia.title_score = e) : window.aia.title_score < this.level.level_score5 && e >= this.level.level_score5 && (this.title = "食神", this.main.best_title_show(), window.aia.title_score = e), this.title_label.string = this.title, window.aia.title = this.title
             }
         }), cc._RF.pop()
     }, {}], move: [function (e, t, i) {
