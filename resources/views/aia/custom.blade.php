@@ -21,8 +21,7 @@
         <p>可点击
             <a href="https://api.shanghaichujie.com/aiaGame/result?
                 openid={{$wechatInfo['id']}}&time={{$time}}&score={{$score}}">
-                战绩榜
-            </a>
+                战绩榜</a>
             ,点击后进入
         </p>
         <p>战绩榜页面.</p>
