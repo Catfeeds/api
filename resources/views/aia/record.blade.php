@@ -34,6 +34,7 @@
             <p>历史最高得分<span>{{ $userInfo->topScore }}</span>,</p>
             <p>击败了<span>{{$rank}}</span>%的其他健康大厨.</p>
             <p class="space">今天还有<span>{{ 3-$userCount }}</span>次挑战机会。继续加油！</p>
+            <p class="hidden">今日挑战次数已用完，欢迎明天再来挑战</p>
             <p>点击"我要参加"</p>
             <p>客服节线下活动赢好礼!</p>
             <p class="red">击败50%的玩家还有机会</p>
