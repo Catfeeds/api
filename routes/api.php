@@ -49,7 +49,7 @@ Route::get('ali/event', 'Ali\ApiController@event');
 /**
  * AIA项目上传游戏数据-test
  */
-Route::post('aiaGame/resultApi','Aia\AiaController@resultApi');
+Route::post('aiaGame/resultApi', 'Aia\AiaController@resultApi');
 /**
  * 阿里云栖大会线下分享
  */
@@ -57,3 +57,8 @@ Route::post('aiaGame/resultApi','Aia\AiaController@resultApi');
 Route::post('ali/yun/photos', 'Api\ImageController@yun');
 //上传拍照图片
 Route::post('ali/yun/photo', 'Api\ImageController@yunPhoto');
+
+/**
+ * AIA游戏分享增加次数
+ */
+Route::get('aia/share', 'Aia\AiaController@share');

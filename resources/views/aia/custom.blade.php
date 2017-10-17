@@ -64,7 +64,7 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: '【我是健康大厨】友邦客服节养生PK游戏，不但会吃还会玩，更有线下活动好礼等您拿，AIA带您玩转健康美食赢好礼！', // 分享标题
+            title: '【我是健康大厨】友邦客服节养生PK游戏，带您玩转美食赢好礼', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/aiaGame/index",
             imgUrl: "https://api.shanghaichujie.com/aia/aiaLogo.png", // 分享图标
@@ -74,7 +74,7 @@
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
-            title: '【我是健康大厨】友邦客服节养生PK游戏，不但会吃还会玩，更有线下活动好礼等您拿，AIA带您玩转健康美食赢好礼！', // 分享标题
+            title: '【我是健康大厨】友邦客服节养生PK游戏，玩转美食赢好礼', // 分享标题
             desc: "快来和我PK吧！跟AIA一起揭秘养生餐", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/aiaGame/index",

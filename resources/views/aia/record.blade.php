@@ -14,15 +14,15 @@
         <div class="recordText">
             <p>你已获得
                 <span>
-                    @if($userInfo->totalScore < 500)
+                    @if($userInfo->totalScore < 120)
                         见习
-                    @elseif($userInfo->totalScore<1000)
+                    @elseif($userInfo->totalScore<400)
                         初级
-                    @elseif($userInfo->totalScore<1500)
+                    @elseif($userInfo->totalScore<800)
                         中级
-                    @elseif($userInfo->totalScore<2000)
+                    @elseif($userInfo->totalScore<1400)
                         高级
-                    @elseif($userInfo->totalScore<3000)
+                    @elseif($userInfo->totalScore<2000)
                         技师
                     @else
                         高级技师
@@ -33,8 +33,11 @@
             <p>您本次游戏得分<span>{{ $score }}</span>,</p>
             <p>历史最高得分<span>{{ $userInfo->topScore }}</span>,</p>
             <p>击败了<span>{{$rank}}</span>%的其他健康大厨.</p>
-            <p class="space">今天还有<span>{{ 3-$userCount }}</span>次挑战机会。继续加油！</p>
-            <p class="hidden">今日挑战次数已用完，欢迎明天再来挑战</p>
+            @if($userCount < 3)
+                <p class="space">今天还有<span>{{ 3-$userCount }}</span>次挑战机会。继续加油！</p>
+            @else
+                <p class="space">今日挑战次数已用完，欢迎明天再来挑战</p>
+            @endif
             <p>点击"我要参加"</p>
             <p>客服节线下活动赢好礼!</p>
             <p class="red">击败50%的玩家还有机会</p>
@@ -77,7 +80,7 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: '【我是健康大厨】友邦客服节养生PK游戏，不但会吃还会玩，更有线下活动好礼等您拿，AIA带您玩转健康美食赢好礼！', // 分享标题
+            title: '【我是健康大厨】友邦客服节做美食赢好礼，我已打败{{ $rank }}%健康大厨', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/aiaGame/index",
             imgUrl: "https://api.shanghaichujie.com/aia/aiaLogo.png", // 分享图标
@@ -87,7 +90,7 @@
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
-            title: '【我是健康大厨】友邦客服节养生PK游戏，不但会吃还会玩，更有线下活动好礼等您拿，AIA带您玩转健康美食赢好礼！', // 分享标题
+            title: '【我是健康大厨】友邦客服节养生PK游戏，玩转美食赢好礼', // 分享标题
             desc: "我已打败{{ $rank }}%健康大厨，快来和我PK吧！跟AIA一起揭秘养生餐", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/aiaGame/index",

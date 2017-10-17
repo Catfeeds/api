@@ -20,6 +20,16 @@ class AiaController extends Controller
         ], [
             'totalScore' => 0
         ]);
+
+        //判断用户次数
+        //今天挑战次数
+        $userCount = AiaScore::where('openid', $wechatInfo['id'])
+            ->where('created_at', '>', Carbon::today())
+            ->count();
+        if (!is_null($userInfo->share) && $userInfo->share >= Carbon::today()) {
+            $userCount += 1;
+        }
+        dd($userCount);
         return view('aia.index', compact('js', 'wechatInfo', 'userInfo'));
     }
 
@@ -56,7 +66,7 @@ class AiaController extends Controller
         //查询用户信息
         $userInfo = Aia::where('openid', $wechatInfo['id'])->first();
 
-        //今天剩余挑战次数
+        //今天挑战次数
         $userCount = AiaScore::where('openid', $wechatInfo['id'])
             ->where('created_at', '>', Carbon::today())
             ->count();
@@ -107,7 +117,11 @@ class AiaController extends Controller
 
     public function share(Request $request)
     {
-
+        $openid = $request->openid;
+        $userInfo = Aia::where('openid', $openid)->first();
+        $userInfo->share = Carbon::now();
+        $userInfo->save();
+        return 'true';
     }
 
 }
