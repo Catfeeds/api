@@ -27,10 +27,9 @@ class AiaController extends Controller
             ->where('created_at', '>', Carbon::today())
             ->count();
         if (!is_null($userInfo->share) && $userInfo->share >= Carbon::today()) {
-            $userCount += 1;
+            $userCount -= 1;
         }
-        dd($userCount);
-        return view('aia.index', compact('js', 'wechatInfo', 'userInfo'));
+        return view('aia.index', compact('js', 'wechatInfo', 'userInfo', 'userCount'));
     }
 
     public function fail(Request $request)
@@ -70,6 +69,9 @@ class AiaController extends Controller
         $userCount = AiaScore::where('openid', $wechatInfo['id'])
             ->where('created_at', '>', Carbon::today())
             ->count();
+        if (!is_null($userInfo->share) && $userInfo->share >= Carbon::today()) {
+            $userCount -= 1;
+        }
 
         //战绩排行
         $countAll = Aia::count();
@@ -77,6 +79,7 @@ class AiaController extends Controller
             ->count();
         $rank = floor($count / $countAll * 100);
         $js = EasyWeChat::js();
+
 
         return view('aia.record', compact('userInfo', 'userCount', 'score', 'rank', 'js'));
     }

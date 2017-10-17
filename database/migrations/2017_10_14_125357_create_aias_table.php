@@ -20,7 +20,7 @@ class CreateAiasTable extends Migration
             $table->integer('totalScore')->default(0);
             $table->integer('totalTime')->default(0);
             $table->integer('topScore')->default(0);
-            $table->date('share')->nullable()->comment('分享时间');
+            $table->dateTime('share')->nullable()->comment('分享时间');
             $table->timestamps();
         });
     }
