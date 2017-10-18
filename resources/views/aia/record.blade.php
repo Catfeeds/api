@@ -23,9 +23,9 @@
                     @elseif($userInfo->totalScore<1400)
                         高级
                     @elseif($userInfo->totalScore<2000)
-                        技师
+                        至尊
                     @else
-                        高级技师
+                        食神
                     @endif
                 </span>
                 健康大厨称号,
