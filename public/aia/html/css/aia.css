@@ -192,4 +192,6 @@ section{
 .custom .text p a{
     color: #d7995b;
     border-bottom: 3px solid red;
+    font-size: 24px;
+    padding:3px;
 }
