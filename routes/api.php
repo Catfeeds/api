@@ -47,9 +47,11 @@ Route::get('ali/event', 'Ali\ApiController@event');
 //Route::get('bgy/user', 'Api\BgyController@user');
 
 /**
- * AIA项目上传游戏数据-test
+ * AIA项目上传游戏数据
  */
 Route::post('aiaGame/resultApi', 'Aia\AiaController@resultApi');
+Route::get('aia/share', 'Aia\AiaController@share');//AIA游戏分享增加次数
+
 /**
  * 阿里云栖大会线下分享
  */
@@ -59,6 +61,9 @@ Route::post('ali/yun/photos', 'Api\ImageController@yun');
 Route::post('ali/yun/photo', 'Api\ImageController@yunPhoto');
 
 /**
- * AIA游戏分享增加次数
+ * api接口(宋)
  */
-Route::get('aia/share', 'Aia\AiaController@share');
+Route::post('song/test', function (Request $request){
+   $test = $request->test;
+   return $test.'';
+});
