@@ -47,6 +47,7 @@
     <div class="btn">
         <img class="join" src="{{ asset('aia/html/img/join.png') }}" alt="">
         <img class="share" src="{{ asset('aia/html/img/share.png') }}" alt="">
+        <img class="reminder" src="{{ asset('aia/html/img/su.png') }}" alt="">
     </div>
     <img src="{{ asset('aia/html/img/hand.png') }}" alt="" class="hand">
     <div class="popup hidden">

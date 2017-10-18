@@ -530,7 +530,7 @@ _CCSettings = {
         "assets/texture/images/score_bg.png": "878d3",
         "assets/texture/images/startgame.png": "713dc",
         "assets/texture/images/time_bg.png": "939e5",
-        "assets/texture/images/times_none.png": "0f948",
+        "assets/texture/images/times_none.png": "562ee",
         "assets/texture/images/title_popup.png": "f13ac",
         "assets/texture/images/welcom_bg.png": "22f86"
     }
