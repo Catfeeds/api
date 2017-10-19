@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640,user-scalable=no">
     <title>AIA游戏互动</title>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?38864d7b5e167cbe62587e75b760dbc0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
     <link rel="stylesheet" href="{{ asset('aia/html/css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('aia/html/css/aia.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -149,7 +160,6 @@
 
     @if(session('status'))
     alert('手机号成功录入，感谢您的参与！');
-
     @endif
 </script>
 </html>
