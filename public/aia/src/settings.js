@@ -532,6 +532,6 @@ _CCSettings = {
         "assets/texture/images/time_bg.png": "939e5",
         "assets/texture/images/times_none.png": "562ee",
         "assets/texture/images/title_popup.png": "f13ac",
-        "assets/texture/images/welcom_bg.png": "22f86"
+        "assets/texture/images/welcom_bg.png": "22f87"
     }
 }
