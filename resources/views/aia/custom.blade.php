@@ -60,7 +60,7 @@
             </label>
         </form>
         <img src="{{ asset('aia/html/img/ewm.png') }}" alt="" class="ewm">
-        <p><a href="http://my.aia.com.cn">点击此处,</a>登录易服务即可抽奖，无人机，京东券等您来带走</p>
+        <p><a id="aiaUrl" href="http://my.aia.com.cn">点击此处,</a>登录易服务即可抽奖，无人机，京东券等您来带走</p>
         <img src="{{ asset('aia/html/img/food_cancel.png') }}" alt="" class="cancel">
     </div>
 </section>
