@@ -98,7 +98,7 @@
             success: function () {
                 let xhr = new XMLHttpRequest();
                 xhr.open("GET", 'https://api.shanghaichujie.com/api/aia/share?openid={{ $wechatInfo["id"] }}', true);
-                xhr.send('openid={{ $wechatInfo['id'] }}');            }
+                xhr.send('openid={{ $userInfo->openid  }}');            }
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
@@ -111,7 +111,7 @@
             success: function () {
                 let xhr = new XMLHttpRequest();
                 xhr.open("GET", 'https://api.shanghaichujie.com/api/aia/share?openid={{ $wechatInfo["id"] }}', true);
-                xhr.send('openid={{ $wechatInfo['id'] }}');            }
+                xhr.send('openid={{ $userInfo->openid }} }}');            }
         });
     });
 
