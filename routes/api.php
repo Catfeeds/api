@@ -67,3 +67,8 @@ Route::post('song/test', function (Request $request){
    $test = $request->test;
    return $test.'';
 });
+
+/**
+ * 和讯网签到
+ */
+Route::get('hxSign', 'Hx\HxController@sign');
