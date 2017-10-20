@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use EasyWeChat;
+use Illuminate\Support\Facades\Redis;
 
 class AiaController extends Controller
 {
@@ -127,6 +128,8 @@ class AiaController extends Controller
         $userInfo = Aia::where('openid', $openid)->first();
         $userInfo->share = Carbon::now();
         $userInfo->save();
+        Redis::INCR('aiaShare');
+
         return 'true';
     }
 

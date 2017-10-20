@@ -12,8 +12,9 @@
 |
 */
 
-//Route::get('/', '');
-
+Route::get('test',function (){
+   \Illuminate\Support\Facades\Redis::INCR('aiaShare');
+});
 
 /*
  * 科思创项目
