@@ -99,14 +99,14 @@ class AiaController extends Controller
             $grid->column('totalScore', '总分')->sortable();
             $grid->column('topScore', '最高分')->sortable();
             $grid->column('totalTime', '时长（分）')->sortable()->display(function ($totalTime) {
-                return floor($totalTime / 60);
+                return floor($totalTime / 1000 / 60);
             });
             $grid->column('游戏次数')->display(function (){
                 return AiaScore::where('openid', $this->openid)->count();
             });
             $grid->column('通关次数')->display(function (){
                 return AiaScore::where('openid',$this->openid)
-                    ->where('score','>=','')->count();
+                    ->where('result','1')->count();
             });
             $grid->created_at('首次进入')->sortable();
             $grid->updated_at('上次游戏')->sortable();
