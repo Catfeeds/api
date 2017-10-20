@@ -72,21 +72,21 @@ section{
     position: absolute;
     width: 554px;
     height: 863px;
-    background: url("../img/foodY_bg7.png") no-repeat center center;
+    background: url("../img/foodY_bg8.png") no-repeat center center;
     background-size: 100% 100%;
     left:43px;
     top:90px;
 }
 .food form{
     position: absolute;
-    top:540px;
-    left:20px;
+    top:502px;
+    left:120px;
 }
 .food input[type="text"]{
     background-color: transparent;
     outline: none;
     border: none;
-    width: 340px;
+    width: 350px;
     height: 50px;
     background: url("../img/food_ipu.png") no-repeat center center;
     background-size: 100% 100%;
@@ -97,8 +97,8 @@ section{
     opacity: 0.9;
 }
 .food label img{
-    width: 340px;
-    margin-top: 16px;
+    width: 350px;
+    margin-top: 10px;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
     font-size: 26px;
