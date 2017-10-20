@@ -79,8 +79,9 @@
             link: "https://api.shanghaichujie.com/aiaGame/index",
             imgUrl: "https://api.shanghaichujie.com/aia/aiaLogo.png", // 分享图标
             success: function () {
-                // 用户确认分享后执行的回调函数
-            }
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", 'https://api.shanghaichujie.com/api/aia/share?openid={{ $wechatInfo["id"] }}', true);
+                xhr.send('openid={{ $wechatInfo['id'] }}');            }
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
@@ -91,8 +92,9 @@
             imgUrl: "https://api.shanghaichujie.com/aia/aiaLogo.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
-                // 用户确认分享后执行的回调函数
-            }
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", 'https://api.shanghaichujie.com/api/aia/share?openid={{ $wechatInfo["id"] }}', true);
+                xhr.send('openid={{ $wechatInfo['id'] }}');            }
         });
     });
 
