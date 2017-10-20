@@ -12,7 +12,7 @@ class HxController extends Controller
         $id= $request->id;
         return response()->json([
             'name' => '张国荣',
-            'company' => '上海触界数码科技有限公司'.$id
+            'company' => '上海触界数码科技'.$id
         ]);
     }
 }
