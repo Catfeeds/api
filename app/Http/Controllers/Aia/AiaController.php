@@ -103,7 +103,7 @@ class AiaController extends Controller
         $openid = $request->openid;
         $time = $request->time;
         $score = $request->score;
-
+        $result = $request->result;
         //更新用户总分，总游玩时间
         $userInfo = Aia::where('openid', $openid)->first();
         $userInfo->totalTime += $time;
@@ -116,7 +116,8 @@ class AiaController extends Controller
         //记录用户游戏日志，用于排行，最高分
         AiaScore::create([
             'openid' => $openid,
-            'score' => $score
+            'score' => $score,
+            'result' => $result
         ]);
 
         return 'true';
