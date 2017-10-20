@@ -97,7 +97,7 @@
             imgUrl: "https://api.shanghaichujie.com/aia/aiaLogo.png", // 分享图标
             success: function () {
                 let xhr = new XMLHttpRequest();
-                xhr.open("GET", 'https://api.shanghaichujie.com/api/aia/share?openid={{ $wechatInfo["id"] }}', true);
+                xhr.open("GET", 'https://api.shanghaichujie.com/api/aia/share?openid={{ $userInfo->openid }}', true);
                 xhr.send('openid={{ $userInfo->openid  }}');            }
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
@@ -110,7 +110,7 @@
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
                 let xhr = new XMLHttpRequest();
-                xhr.open("GET", 'https://api.shanghaichujie.com/api/aia/share?openid={{ $wechatInfo["id"] }}', true);
+                xhr.open("GET", 'https://api.shanghaichujie.com/api/aia/share?openid={{ $userInfo->openid }}', true);
                 xhr.send('openid={{ $userInfo->openid }} }}');            }
         });
     });
