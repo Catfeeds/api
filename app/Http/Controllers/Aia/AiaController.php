@@ -31,8 +31,6 @@ class AiaController extends Controller
             $userCount -= 1;
         }
 
-        $userCount = -300;
-
         return view('aia.index', compact('js', 'wechatInfo', 'userInfo', 'userCount'));
     }
 
@@ -76,7 +74,6 @@ class AiaController extends Controller
         if (!is_null($userInfo->share) && $userInfo->share >= Carbon::today()) {
             $userCount -= 1;
         }
-        $userCount = -300;
         //战绩排行
         $countAll = Aia::count();
         $count = Aia::where('topScore', '<=', $userInfo->topScore)
