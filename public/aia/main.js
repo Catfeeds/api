@@ -60,9 +60,9 @@
             var progressBar = splash.querySelector('.progress-bar span');
             cc.loader.onProgress = function (completedCount, totalCount, item) {
                 var percent = 100 * completedCount / totalCount;
-                percent = parseInt(percent);
+                console.log(completedCount,totalCount,percent);
                 if (progressBar) {
-                    progressBar.innerText = percent + "%";
+                    progressBar.innerText = parseInt(percent) + "%";
                 }
             };
 
