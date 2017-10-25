@@ -11,8 +11,9 @@ class HxController extends Controller
     public function sign(Request $request)
     {
         $id= $request->id;
+        //0签到失败，1签到成功，2重复签到
         return response()->json([
-            'status' => 2,
+            'status' => 1,
             'name' => '张国荣',
             'company' => '上海触界数码科技'.$id
         ]);
