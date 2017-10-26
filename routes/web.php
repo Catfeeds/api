@@ -12,8 +12,8 @@
 |
 */
 
-Route::get('test',function (){
-   \Illuminate\Support\Facades\Redis::INCR('aiaShare');
+Route::get('test', function () {
+    \Illuminate\Support\Facades\Redis::INCR('aiaShare');
 });
 
 /*
@@ -94,4 +94,21 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () 
     Route::get('aiaGame/fail', 'Aia\AiaController@fail');
     //游戏上传手机号参与易服务
     Route::post('aiaGame/phone', 'Aia\AiaController@phone');
+});
+
+/**
+ * 和讯网签到项目
+ */
+Route::get('hxSign', function () {
+    return '和讯网签到';
+});
+Route::get('hxSign/sms', 'Hx\HxController@sms');
+
+/**
+ * 赛诺菲星球邀请函
+ */
+//杭州
+Route::get('snf/hz', function () {
+    $js = EasyWeChat::js();
+    return view('planet.hz', compact('js'));
 });
