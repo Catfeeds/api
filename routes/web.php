@@ -112,3 +112,8 @@ Route::get('snf/hz', function () {
     $js = EasyWeChat::js();
     return view('planet.hz', compact('js'));
 });
+//深圳
+Route::get('snf/sz', function () {
+    $js = EasyWeChat::js();
+    return view('planet.sz', compact('js'));
+});

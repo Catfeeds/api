@@ -13,8 +13,8 @@
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" type="text/css" href="{{ asset('Planet/h_earth/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('Planet/h_earth/css/map.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('Planet/s_earth/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('Planet/s_earth/css/map.css') }}"/>
     <script>
         (function () {
             var getQuery = function (name) {
@@ -32,11 +32,10 @@
             }
         }())
     </script>
-
 </head>
 <body>
-<audio id="myAudio" src="{{ asset('Planet/h_earth/m.mp3') }}" preload="auto" loop="loop" autoplay="autoplay"></audio>
-<img src="{{ asset('Planet/h_earth/img/audio2.png') }}" alt="" class="audioMusic">
+<img src="{{ asset('Planet/s_earth/img/audio2.png') }}" alt="" class="audioMusic">
+<audio id="myAudio" src="{{ asset('Planet/s_earth/m.mp3') }}" preload="auto" loop="loop" autoplay="autoplay"></audio>
 <div class="ns-meteor-page "></div>
 
 <div class="m-loading ">
@@ -98,23 +97,26 @@
     </div>
 </div>
 
-<div class="hz hidden a-site">
-    <div class="m-invitation">
+
+<div class="sz hidden a-site">
+    <div class="m-invitation ">
         <div class="btn-meet"></div>
     </div>
     <div class="m-agenda hidden">
         <div class="btn-site"></div>
     </div>
     <div class="m-site hidden">
-        <p>期待您的莅临</p>
         <div class="site"></div>
-        <div class="map">
-            <div id="map"></div>
+        <div class="map" onload="init()">
+            <div id="mapContainer"></div>
         </div>
+        <div class="btn-ne"></div>
+    </div>
+    <div class="last-page hidden">
+        <div class="page-bg"></div>
         <div class="btn-again"></div>
     </div>
 </div>
-
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
 <script type="application/javascript">
     wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
@@ -124,7 +126,7 @@
         wx.onMenuShareTimeline({
             title: '寻找赛诺菲星球', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "http://api.touchworld-sh.com/snf/hz",
+            link: "http://api.touchworld-sh.com/ali/snf/sz",
             imgUrl: "http://api.touchworld-sh.com/alibaba/bm/share.png", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
@@ -135,7 +137,7 @@
             title: '寻找赛诺菲星球', // 分享标题
             desc: "聚力同创，融合无界", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "http://api.touchworld-sh.com/snf/hz",
+            link: "http://api.touchworld-sh.com/snf/sz",
             imgUrl: "http://api.touchworld-sh.com/Planet/share.jpeg", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
@@ -143,7 +145,6 @@
             }
         });
     });
-
     bgm_init();
 
     function bgm_init() {
@@ -161,10 +162,10 @@
         audioMusic.addEventListener('touchstart', function () {
             if (audio.paused) {
                 audio.play();
-                audioMusic.src = '{{ asset('Planet/h_earth/img/audio2.png') }}'
+                audioMusic.src = '{{ asset('Planet/s_earth/img/audio2.png') }}'
             } else {
                 audio.pause();
-                audioMusic.src = '{{ asset('Planet/h_earth/img/audio1.png') }}'
+                audioMusic.src = '{{ asset('Planet/s_earth/img/audio1.png) }}'
 
             }
 
@@ -174,24 +175,24 @@
 </script>
 <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
 <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=您申请的key值&plugin=AMap.ToolBar"></script>
-<script src="{{ asset('Planet/h_earth/js/libs/zepto.min.js') }}"></script>
+<script src="{{ asset('Planet/s_earth/js/libs/zepto.min.js') }}"></script>
 <script>
 
-    map = new AMap.Map("map", {
+    map = new AMap.Map("mapContainer", {
         zoom: 18,
-        center: [120.161529, 30.254822]
+        center: [114.053596, 22.537159]
     });
     marker = new AMap.Marker({
         map: map,
-        position: [120.161529, 30.254822]
+        position: [114.053596, 22.537159]
     })
     marker.setLabel({
         offset: new AMap.Pixel(20, 20),//修改label相对于maker的位置
-        content: "点击蓝色光标打开高德地图"
+        content: "深圳马哥孛罗好日子酒店<br/>点击蓝色光标打开高德地图"
     });
     marker.on('click', function (e) {
         marker.markOnAMAP({
-            name: '凯悦酒店',
+            name: '马哥孛罗好日子酒店',
             position: marker.getPosition()
         })
     })
@@ -199,9 +200,8 @@
     if (AMap.UA.mobile) {
         document.getElementById('button_group').style.display = 'none';
     }
-
 </script>
-<script src="{{ asset('Planet/h_earth/js/libs/tvp.player_v2_zepto.js') }}"></script>
-<script type="text/javascript" src="{{ asset('Planet/h_earth/js/main.js') }}"></script>
+<script src="{{ asset('Planet/s_earth/js/libs/tvp.player_v2_zepto.js') }}"></script>
+<script type="text/javascript" src="{{ asset('Planet/s_earth/js/main.js') }}"></script>
 </body>
 </html>
