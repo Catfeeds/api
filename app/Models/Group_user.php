@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Overtrue\LaravelFollow\Traits\CanBeLiked;
 
+
 /**
  * App\Models\Group_user
  *
@@ -13,11 +14,11 @@ use Overtrue\LaravelFollow\Traits\CanBeLiked;
  * @property string|null $avatar
  * @property string $nickname
  * @property int $steps
- * @property int $isLeader
+ * @property int $is_leader
  * @property int $zan
- * @property int $groupId
- * @property \Carbon\Carbon|null $createdAt
- * @property \Carbon\Carbon|null $updatedAt
+ * @property int $group_id
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Group_user[] $likers
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Group_user whereAvatar($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Group_user whereCreatedAt($value)
@@ -30,10 +31,6 @@ use Overtrue\LaravelFollow\Traits\CanBeLiked;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Group_user whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Group_user whereZan($value)
  * @mixin \Eloquent
- * @property int $isLeader
- * @property int $groupId
- * @property \Carbon\Carbon|null $createdAt
- * @property \Carbon\Carbon|null $updatedAt
  */
 class Group_user extends Model
 {

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 /**
  * App\Models\Qifu_user
  *
@@ -14,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $vr
  * @property int $pasture
  * @property string|null $logo
- * @property string|null $shopUrl
+ * @property string|null $shop_url
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Qifu_user whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Qifu_user whereLogo($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Qifu_user whereNickname($value)
@@ -24,7 +25,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Qifu_user whereSign($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Qifu_user whereVr($value)
  * @mixin \Eloquent
- * @property string|null $shopUrl
  */
 class Qifu_user extends Model
 {

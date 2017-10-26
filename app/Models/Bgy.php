@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 /**
  * App\Models\Bgy
  *
@@ -12,8 +13,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $nickname
  * @property string $avatar
  * @property int $status
- * @property \Carbon\Carbon|null $createdAt
- * @property \Carbon\Carbon|null $updatedAt
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Bgy whereAvatar($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Bgy whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Bgy whereId($value)
@@ -22,8 +23,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Bgy whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Bgy whereUpdatedAt($value)
  * @mixin \Eloquent
- * @property \Carbon\Carbon|null $createdAt
- * @property \Carbon\Carbon|null $updatedAt
  */
 class Bgy extends Model
 {

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 /**
  * App\Models\Group
  *
@@ -11,10 +12,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $gname
  * @property string|null $avatar
  * @property int $steps
- * @property int $stepAim
+ * @property int $step_aim
  * @property string $introduction
- * @property \Carbon\Carbon|null $createdAt
- * @property \Carbon\Carbon|null $updatedAt
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Group whereAvatar($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Group whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Group whereGname($value)
@@ -24,9 +25,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Group whereSteps($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Group whereUpdatedAt($value)
  * @mixin \Eloquent
- * @property int $stepAim
- * @property \Carbon\Carbon|null $createdAt
- * @property \Carbon\Carbon|null $updatedAt
  */
 class Group extends Model
 {
