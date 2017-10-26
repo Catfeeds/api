@@ -851,11 +851,11 @@ body {
 }
 .m-site p{
     position: absolute;
-    top:14%;
+    top:12%;
     color: white;
     width: 100%;
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
 }
 .m-site .site{
