@@ -487,7 +487,7 @@
 
 
         // 图片路径前缀
-        Config.imgPath = 'http://api.touchworld-sh.com/Plant/s_earth/img/';
+        Config.imgPath = 'http://api.touchworld-sh.com/Planet/s_earth/img/';
 
         Config.meteorImg = Config.imgPath + 'bg_meteor.png';
 
