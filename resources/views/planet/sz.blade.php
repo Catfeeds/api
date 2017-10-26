@@ -166,7 +166,7 @@
                 audioMusic.src = '{{ asset('Planet/s_earth/img/audio2.png') }}'
             } else {
                 audio.pause();
-                audioMusic.src = '{{ asset('Planet/s_earth/img/audio1.png) }}'
+                audioMusic.src = '{{ asset('Planet/s_earth/img/audio1.png') }}'
 
             }
 
