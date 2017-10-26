@@ -127,7 +127,7 @@
             title: '寻找赛诺菲星球', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "http://api.touchworld-sh.com/ali/snf/sz",
-            imgUrl: "http://api.touchworld-sh.com/alibaba/bm/share.png", // 分享图标
+            imgUrl: "http://api.touchworld-sh.com/Planet/share.jpeg", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
             }
@@ -145,6 +145,7 @@
             }
         });
     });
+
     bgm_init();
 
     function bgm_init() {
