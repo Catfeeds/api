@@ -114,6 +114,6 @@ Route::get('snf/hz', function () {
 });
 //深圳
 Route::get('snf/sz', function () {
-    $js = EasyWeChat::js();
+//    $js = EasyWeChat::js();
     return view('planet.sz', compact('js'));
 });
