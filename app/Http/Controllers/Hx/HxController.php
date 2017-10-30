@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Hx;
 
+use App\Http\Requests\HxRegisterRequest;
 use App\Models\Hx1;
 use App\Models\Hx2;
 use Illuminate\Http\Request;
@@ -54,11 +55,17 @@ class HxController extends Controller
         return view('hx.qrcode', compact('id'));
     }
 
-    public function register(Request $request)
+    public function register(HxRegisterRequest $request)
     {
         $company = $request->input('company');
         $phone = $request->input('phone');
         $name = $request->input('name');
+        $user = new Hx2();
+        $user->name = $name;
+        $user->phone = $phone;
+        $user->company = $company;
+        $user->save();
+        return back()->with('success','提交成功');
     }
     public function sms()
     {
