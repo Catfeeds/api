@@ -150,6 +150,7 @@
 
     function bgm_init() {
         var audio = document.getElementById('myAudio');
+        audio.volume = 0.1;
         document.addEventListener("WeixinJSBridgeReady", function () {
             audio.play();
         }, false);
