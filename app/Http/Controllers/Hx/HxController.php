@@ -65,7 +65,7 @@ class HxController extends Controller
         $user->phone = $phone;
         $user->company = $company;
         $user->save();
-        return back()->with('success','提交成功');
+        return back()->with('success','提交成功!请前往人工处审核');
     }
     public function sms()
     {
