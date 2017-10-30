@@ -33,6 +33,9 @@ class HxController extends Controller
                 'company' => $userInfo->company
             ]);
         } else {
+            $userInfo->sign = 1;
+            $userInfo->save();
+
             return response()->json([
                 'status' => 1,
                 'name' => $userInfo->name,
