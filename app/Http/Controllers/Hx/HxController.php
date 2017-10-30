@@ -20,7 +20,7 @@ class HxController extends Controller
         $id = $request->id;
         //0签到失败，1签到成功，2重复签到
         $userInfo = Hx1::find($id);
-        if ($userInfo->isEmpty()) {
+        if (is_null($userInfo)) {
             return response()->json([
                 'status' => 0,
                 'name' => '空',
