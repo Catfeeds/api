@@ -2,23 +2,61 @@
 
 namespace App\Http\Controllers\Hx;
 
+use App\Models\Hx1;
+use App\Models\Hx2;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Overtrue\EasySms;
 
 class HxController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * 扫码签到接口
+     */
     public function sign(Request $request)
     {
-        $id= $request->id;
+        $id = $request->id;
         //0签到失败，1签到成功，2重复签到
-        return response()->json([
-            'status' => 1,
-            'name' => '张国荣',
-            'company' => '上海触界数码科技'.$id
-        ]);
+        $userInfo = Hx1::find($id);
+        if ($userInfo->isEmpty()) {
+            return response()->json([
+                'status' => 0,
+                'name' => '空',
+                'company' => '空'
+            ]);
+        } elseif ($userInfo->sign) {
+            return response()->json([
+                'status' => 2,
+                'name' => $userInfo->name,
+                'company' => $userInfo->company
+            ]);
+        } else {
+            return response()->json([
+                'status' => 1,
+                'name' => $userInfo->name,
+                'company' => $userInfo->company
+            ]);
+        }
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * 显示签到二维码页面
+     */
+    public function qrcode($id)
+    {
+        return view('hx.qrcode', compact('id'));
+    }
+
+    public function register(Request $request)
+    {
+        $company = $request->input('company');
+        $phone = $request->input('phone');
+        $name = $request->input('name');
+    }
     public function sms()
     {
         $config = [
@@ -47,7 +85,7 @@ class HxController extends Controller
         $easySms = new EasySms\EasySms($config);
 
         $easySms->send(13331936826, [
-            'content'  => '您的验证码为: 6379',
+            'content' => '您的验证码为: 6379',
             'template' => 'SMS_82255160',
             'data' => [
                 'customer' => '666'

@@ -1,0 +1,75 @@
+.bg_ewm,.bg_info{
+    width: 640px;
+    height: 1040px;
+}
+.bg_ewm{
+    background: url("../img/bg_ewm.jpg") no-repeat center;
+    background-size: cover;
+}
+.ewm{
+    position: absolute;
+    left:0;
+    right: 0;
+    margin:auto;
+    top:440px;
+    width: 380px;
+}
+.bg_info{
+    background: url("../img/bg_info.jpg") no-repeat center;
+    background-size: cover;
+}
+form{
+    position: absolute;
+    left:0;
+    right: 0;
+    margin:auto;
+    width: 454px;
+    top:380px;
+}
+form div{
+    height: 60px;
+    line-height: 60px;
+    margin-top: 40px;
+    font-size: 30px;
+    color: #92070a;
+}
+form div span{
+    display: inline-block;
+    width: 140px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: right;
+}
+form div span.space{
+    letter-spacing: 32px;
+}
+form div input{
+    height: 40px;
+    width: 290px;
+    border:none;
+    border:2px solid #92070a;
+    font-size: 24px;
+    color: #92070a;
+    margin-left: 5px;
+
+}
+
+form img{
+    left:0;
+    right: 0;
+    margin:auto;
+    margin-top: 70px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #c76a6c;
+
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #c76a6c;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #c76a6c;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #c76a6c;
+}

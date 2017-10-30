@@ -100,8 +100,10 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () 
  * 和讯网签到项目
  */
 Route::get('hxSign', function () {
-    return '和讯网签到';
+    return view('hx.register');
 });
+Route::post('hxSign/register','Hx\HxController@register');
+Route::get('hxSign/{id}', 'Hx\HxController@qrcode');
 Route::get('hxSign/sms', 'Hx\HxController@sms');
 
 /**
@@ -116,4 +118,11 @@ Route::get('snf/hz', function () {
 Route::get('snf/sz', function () {
     $js = EasyWeChat::js();
     return view('planet.sz', compact('js'));
+});
+
+/**
+ * 中梁翡翠滨江弹幕签到
+ */
+Route::group(['middleware' => ['wechat.oauth:snsapi_userinfo']], function () {
+    Route::get('zl/sign', 'Zl\ZlController@sign');
 });
