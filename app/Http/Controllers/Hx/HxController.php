@@ -21,28 +21,33 @@ class HxController extends Controller
         $id = $request->id;
         //0签到失败，1签到成功，2重复签到
         $userInfo = Hx1::find($id);
-        if (is_null($userInfo)) {
-            return response()->json([
-                'status' => 0,
-                'name' => '空',
-                'company' => '空'
-            ]);
-        } elseif ($userInfo->sign) {
-            return response()->json([
-                'status' => 2,
-                'name' => $userInfo->name,
-                'company' => $userInfo->company
-            ]);
-        } else {
-            $userInfo->sign = 1;
-            $userInfo->save();
-
-            return response()->json([
-                'status' => 1,
-                'name' => $userInfo->name,
-                'company' => $userInfo->company
-            ]);
-        }
+        return response()->json([
+            'status' => 1,
+            'name' => $userInfo->name,
+            'company' => $userInfo->company
+        ]);
+//        if (is_null($userInfo)) {
+//            return response()->json([
+//                'status' => 0,
+//                'name' => '空',
+//                'company' => '空'
+//            ]);
+//        } elseif ($userInfo->sign) {
+//            return response()->json([
+//                'status' => 2,
+//                'name' => $userInfo->name,
+//                'company' => $userInfo->company
+//            ]);
+//        } else {
+//            $userInfo->sign = 1;
+//            $userInfo->save();
+//
+//            return response()->json([
+//                'status' => 1,
+//                'name' => $userInfo->name,
+//                'company' => $userInfo->company
+//            ]);
+//        }
     }
 
     /**
@@ -88,7 +93,7 @@ class HxController extends Controller
                 'aliyun' => [
                     'access_key_id' => 'LTAIBA9gKn4R2Zap',
                     'access_key_secret' => 'JGrYLZeYL4vQYIc0bKCAzCbuR5zEbt',
-                    'sign_name' => '阿里云短信测试专用',
+                    'sign_name' => '和讯网',
                 ],
             ],
         ];
