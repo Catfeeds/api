@@ -13,9 +13,13 @@
 */
 
 Route::get('test', function () {
-    \Illuminate\Support\Facades\Redis::INCR('aiaShare');
+//    event(new \App\Events\ZlSign('666','666'));
+//    return  'true';
 });
 
+Route::get('test1', function () {
+    return view('test');
+});
 /*
  * 科思创项目
  */
@@ -102,9 +106,9 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () 
 Route::get('hxSign', function () {
     return view('hx.register');
 });
-Route::post('hxSign/register','Hx\HxController@register');
+Route::post('hxSign/register', 'Hx\HxController@register');
 Route::get('hxSign/{id}', 'Hx\HxController@qrcode');
-Route::get('hxSign/sms', 'Hx\HxController@sms');
+Route::get('hxSms', 'Hx\HxController@sms');
 
 /**
  * 赛诺菲星球邀请函
@@ -123,6 +127,6 @@ Route::get('snf/sz', function () {
 /**
  * 中梁翡翠滨江弹幕签到
  */
-Route::group(['middleware' => ['wechat.oauth:snsapi_userinfo']], function () {
-    Route::get('zl/sign', 'Zl\ZlController@sign');
-});
+//Route::group(['middleware' => ['wechat.oauth:snsapi_userinfo']], function () {
+//    Route::get('zl/sign', 'Zl\ZlController@sign');
+//});
