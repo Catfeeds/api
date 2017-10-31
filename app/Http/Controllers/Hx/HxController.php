@@ -21,33 +21,28 @@ class HxController extends Controller
         $id = $request->id;
         //0签到失败，1签到成功，2重复签到
         $userInfo = Hx1::find($id);
-        return response()->json([
-            'status' => 1,
-            'name' => $userInfo->name,
-            'company' => $userInfo->company
-        ]);
-//        if (is_null($userInfo)) {
-//            return response()->json([
-//                'status' => 0,
-//                'name' => '空',
-//                'company' => '空'
-//            ]);
-//        } elseif ($userInfo->sign) {
-//            return response()->json([
-//                'status' => 2,
-//                'name' => $userInfo->name,
-//                'company' => $userInfo->company
-//            ]);
-//        } else {
-//            $userInfo->sign = 1;
-//            $userInfo->save();
-//
-//            return response()->json([
-//                'status' => 1,
-//                'name' => $userInfo->name,
-//                'company' => $userInfo->company
-//            ]);
-//        }
+        if (is_null($userInfo)) {
+            return response()->json([
+                'status' => 0,
+                'name' => '空',
+                'company' => '空'
+            ]);
+        } elseif ($userInfo->sign) {
+            return response()->json([
+                'status' => 2,
+                'name' => $userInfo->name,
+                'company' => $userInfo->company
+            ]);
+        } else {
+            $userInfo->sign = 1;
+            $userInfo->save();
+
+            return response()->json([
+                'status' => 1,
+                'name' => $userInfo->name,
+                'company' => $userInfo->company
+            ]);
+        }
     }
 
     /**
@@ -74,6 +69,7 @@ class HxController extends Controller
     }
     public function sms()
     {
+        $user = Hx1::where('sms','0')->first();
         $config = [
             // HTTP 请求的超时时间（秒）
             'timeout' => 5.0,
@@ -85,27 +81,23 @@ class HxController extends Controller
 
                 // 默认可用的发送网关
                 'gateways' => [
-                    'aliyun',
+                    'yunpian',
                 ],
             ],
             // 可用的网关配置
             'gateways' => [
-                'aliyun' => [
-                    'access_key_id' => 'LTAIBA9gKn4R2Zap',
-                    'access_key_secret' => 'JGrYLZeYL4vQYIc0bKCAzCbuR5zEbt',
-                    'sign_name' => '和讯网',
-                ],
+                'yunpian' => [
+                    'api_key' => env('yunpian_key')
+                ]
             ],
         ];
         $easySms = new EasySms\EasySms($config);
 
-        $easySms->send(13331936826, [
-            'content' => '您的验证码为: 6379',
-            'template' => 'SMS_82255160',
-            'data' => [
-                'customer' => '666'
-            ],
+        $easySms->send($user->phone, [
+            'content' => '【和讯网】感谢您报名参加2017年山西证券&和讯网高峰论坛！请您于11月4日13:00莅临中国金融信息中心（上海市浦东新区东园路18号）。本短信仅限本人签到入场，转发截屏无效，请善存！现场本人签到二维码链接：https://api.shanghaichujie.com/hxSign/'.$user->id,
         ]);
-        dd($easySms);
+        $user->sms = '1';
+        $user->save();
+        return 'true';
     }
 }
