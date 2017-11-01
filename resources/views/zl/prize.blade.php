@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=3120,user-scalable=no">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <link rel="stylesheet" href="{{ asset('zhongL/sign/css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('zhongL/sign/css/draw2.css') }}">
     <title>Title</title>
@@ -30,7 +30,17 @@
 </div>
 </body>
 <script src="//api.touchworld-sh.com:6001/socket.io/socket.io.js"></script>
+<script src="{{ asset('zhongL/sign/js/jquery-1.11.3.min.js') }}"></script>
 <script src="{{ asset('js/echo.js') }}" type="text/javascript" charset="utf-8"></script>
+<script>
+    var width = $(window).width();
+    $('.draw').css({'width':width,'height':width*6/15 + 'px'});
+
+    window.onresize = function(){
+        var width = $(window).width();
+        $('.draw').css({'width':width,'height':width*6/15 + 'px'});
+    }
+</script>
 
 <script type="application/javascript">
     Echo.channel('Zl')
