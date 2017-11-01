@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/sign.css">
+</head>
+<body>
+<div class="box left">
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo" class="avatar">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+</div>
+<div class="box right">
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+    <div class="user_photo">
+        <img src="images/bg.png" class="avatar">
+    </div>
+</div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="//api.touchworld-sh.com:6001/socket.io/socket.io.js"></script>
+<script src="../../js/echo.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+    var timer = null;
+
+    var avatars = document.getElementsByClassName('avatar');
+    var index = 0;
+
+    Echo.channel('Zl')
+        .listen('ZlSign', (e) => {
+            avatars[index].src = e.avatar;
+            $('.user_photo').eq(index).addClass('animated flipInY')
+            $('.user_photo').eq(index).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $(this).removeClass('animated flipInY')
+            });
+            index++;
+            if (index == 40) {
+                index = 0;
+            }
+        });
+    // timer = setInterval(function(){
+    //     avatars[index].src = 'images/barrage_bg.png';
+    //     $('.user_photo').eq(index).addClass('animated flipInY')
+    //     $('.user_photo').eq(index).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //         $(this).removeClass('animated flipInY')
+    //     });
+    //     index++;
+    //     if(index == 40){
+    //         index = 0;
+    //     }
+    // },1000)
+
+
+    //动态计算屏幕尺寸1150*400
+    function size() {
+        var winWidth = $(window).width();
+        var winHeight = winWidth / (1150 / 400);
+        $('body').css({
+            "width": winWidth,
+            "height": winHeight
+        })
+    }
+
+    size();
+    $(window).resize(function () {
+        size();
+    });
+</script>
+</body>
+</html>

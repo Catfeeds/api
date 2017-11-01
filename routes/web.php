@@ -13,12 +13,13 @@
 */
 
 Route::get('test', function () {
-//    event(new \App\Events\ZlSign('666','666'));
-//    return  'true';
+    event(new \App\Events\ZlSign('666','http://wx.qlogo.cn/mmopen/CQFhtHfg7bll1aztrVrUPQjnwydU7cte79roAPSwvaXJCL4A8BLLMoEX0QVxeuYzHqJYwyGdJmqB2Mia2AQTZawWL2yODR3yB/0'));
+    return  'true';
 });
 
 Route::get('test1', function () {
-    return view('test');
+    event(new \App\Events\ZlBarrage('666','http://wx.qlogo.cn/mmopen/CQFhtHfg7bll1aztrVrUPQjnwydU7cte79roAPSwvaXJCL4A8BLLMoEX0QVxeuYzHqJYwyGdJmqB2Mia2AQTZawWL2yODR3yB/0','0000'));
+    return 'true';
 });
 /*
  * 科思创项目
@@ -127,6 +128,13 @@ Route::get('snf/sz', function () {
 /**
  * 中梁翡翠滨江弹幕签到
  */
-//Route::group(['middleware' => ['wechat.oauth:snsapi_userinfo']], function () {
-//    Route::get('zl/sign', 'Zl\ZlController@sign');
-//});
+Route::group(['middleware' => ['wechat.oauth:snsapi_userinfo']], function () {
+    Route::get('zl/sign', function () {
+        return view('zl.sign');
+    });
+    Route::post('zl/sign','Zl\ZlController@sign');
+    Route::get('zl/barrageSubmit', 'Zl\ZlController@barrageInput');
+    Route::post('zl/barrageSubmit', 'Zl\ZlController@barrageSubmit');
+
+});
+Route::get('zl/result','Zl\ZlController@draw');

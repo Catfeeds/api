@@ -107,6 +107,6 @@ return [
         'province' => '北京',
         'city' => '北京',
         'country' => '中国',
-        'headimgurl' => 'http://wx.qlogo.cn/mmopen/C2rEUskXQiblFYMUl9O0G05Q6pKibg7V1WpHX6CIQaic824apriabJw4r6EWxziaSt5BATrlbx1GVzwW2qjUCqtYpDvIJLjKgP1ug/1',
+        'headimgurl' => 'http://wx.qlogo.cn/mmopen/CQFhtHfg7bll1aztrVrUPQjnwydU7cte79roAPSwvaXJCL4A8BLLMoEX0QVxeuYzHqJYwyGdJmqB2Mia2AQTZawWL2yODR3yB/0',
     ],
 ];

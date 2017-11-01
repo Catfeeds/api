@@ -1,0 +1,45 @@
+.draw{
+    position: relative;
+    width: 3120px;
+    height: 1248px;
+    background: url("../img/bg_draw.png") no-repeat center;
+    background-size: cover;
+}
+ul{
+    width: 640px;
+    position: absolute;
+    top:180px;
+    height: 700px;
+
+}
+ul:nth-child(1){
+    left:460px;
+}
+ul:nth-child(2){
+    right:560px;
+}
+li{
+    width: 870px;
+    overflow: hidden;
+    margin-top: 34px;
+}
+li img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50% 50%;
+    float: left;
+}
+li div{
+    float: left;
+    margin-left: 20px;
+    width: 720px;
+    height: 60px;
+    line-height: 60px;
+    color: #161b5f;
+    background-color: #f0ead3;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: 'Adobe 黑体 Std';
+    margin-top: 36px;
+}
