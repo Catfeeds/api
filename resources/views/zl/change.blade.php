@@ -35,13 +35,13 @@
     </style>
 </head>
 <body>
-<form action="{{ url('zl/change') }}" method="post">
+<form action="{{ url('zl/control') }}" method="post">
     {{ csrf_field() }}
     <input type="hidden" value="draw" name="change">
     <input class="btn_sub1" type="submit" value="抽奖">
 </form>
 
-<form action="{{ url('zl/change') }}" method="post">
+<form action="{{ url('zl/control') }}" method="post">
     {{ csrf_field() }}
     <input type="hidden" value="barrage" name="change">
     <input class="btn_sub2" type="submit" value="返回弹幕">
