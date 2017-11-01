@@ -23,5 +23,6 @@ public/docs/images
 yarn.lock
 laravel-echo-server.json
 Thumbs.db
-
+public/js
+public/css
 public/MP_verify_OzfTWHlzdtNUN3sF.txt
