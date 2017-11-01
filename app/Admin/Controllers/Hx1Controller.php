@@ -96,7 +96,7 @@ class Hx1Controller extends Controller
             $grid->column('sms', '是否发送短信')->display(function () {
                 return $this->sms ? '是' : '否';
             });
-            $grid->column('sign', '是否签到');
+            $grid->column('sign', '是否签到')->switch();
             $grid->created_at('录入时间');
 //            $grid->updated_at();
         });
@@ -112,6 +112,7 @@ class Hx1Controller extends Controller
         return Admin::form(Hx1::class, function (Form $form) {
 
             $form->display('id', 'ID');
+            $form->switch('sign','是否签到');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });

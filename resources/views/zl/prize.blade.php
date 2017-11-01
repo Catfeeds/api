@@ -29,5 +29,15 @@
     </ul>
 </div>
 </body>
+<script src="//api.touchworld-sh.com:6001/socket.io/socket.io.js"></script>
+<script src="{{ asset('js/echo.js') }}" type="text/javascript" charset="utf-8"></script>
 
+<script type="application/javascript">
+    Echo.channel('Zl')
+        .listen('ZlChange', (e) => {
+            if (e.change === 'barrage') {
+                window.location.href = 'http://api.touchworld-sh.com/zhongL/barrage/barrage.html'
+            }
+        });
+</script>
 </html>

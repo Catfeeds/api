@@ -137,4 +137,10 @@ Route::group(['middleware' => ['wechat.oauth:snsapi_userinfo']], function () {
     Route::post('zl/barrageSubmit', 'Zl\ZlController@barrageSubmit');
 
 });
+//抽奖
 Route::get('zl/result','Zl\ZlController@draw');
+//操控
+Route::get('zl/control', function (){
+    return view('zl.change');
+});
+Route::post('zl/control','Zl\ZlController@control');
