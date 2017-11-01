@@ -33,7 +33,7 @@
     $('li').click(function () {
         $(this).css('background-color', 'grey').siblings().css('background-color', '#f0ead3');
 
-        var index = $(this).index();
+        var index = $(this).html();
 
         $('#ipu').val(index);
 
