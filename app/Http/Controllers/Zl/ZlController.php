@@ -30,6 +30,12 @@ class ZlController extends Controller
 
     public function barrageInput()
     {
+        $wechatInfo = session('wechat.oauth_user');
+        $user = Zl::where('openid', $wechatInfo['id'])
+            ->first();
+        if (is_null($user)) {
+            return view('zl.barrageSubmit')->with('success','请先签到再参与抽奖');
+        }
         return view('zl.barrageSubmit');
     }
 
