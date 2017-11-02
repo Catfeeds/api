@@ -172,7 +172,7 @@
     //动态计算屏幕尺寸1150*400
     function size() {
         var winWidth = $(window).width();
-        var winHeight = winWidth / (1150 / 400);
+        var winHeight = winWidth / (1150 / 400)+10;
         $('body').css({
             "width": winWidth,
             "height": winHeight
