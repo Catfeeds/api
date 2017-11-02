@@ -26,6 +26,9 @@
         </label>
     </form>
 </div>
+<div class="info_text hidden">
+
+</div>
 
 </body>
 <script src="{{ asset('zhongL/sign/js/jquery-1.11.3.min.js') }}"></script>
