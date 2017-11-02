@@ -43,16 +43,31 @@ class ZlController extends Controller
 
     public function draw()
     {
-        //抽取10人，3个内定，7个已经签到
-        $unofficially = Zl::where('unofficially', '1')
-            ->where('prize', '0')
-            ->get()
-            ->random(3);
+        $draw = Zl::where('prize', '1')->count();
+        if ($draw == 60){
+            //抽40人，12个内定，28个已经签到
+            $unofficially = Zl::where('unofficially', '1')
+                ->where('prize', '0')
+                ->get()
+                ->random(12);
 
-        $users = Zl::where('unofficially', '0')
-            ->where('prize', '0')
-            ->get()
-            ->random(7);
+            $users = Zl::where('unofficially', '0')
+                ->where('prize', '0')
+                ->get()
+                ->random(28);
+        }else{
+            //抽取30人，9个内定，21个已经签到
+            $unofficially = Zl::where('unofficially', '1')
+                ->where('prize', '0')
+                ->get()
+                ->random(9);
+
+            $users = Zl::where('unofficially', '0')
+                ->where('prize', '0')
+                ->get()
+                ->random(21);
+        }
+
 
         //保存中奖记录
 //        foreach ($unofficially as $item){
