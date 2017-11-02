@@ -20,7 +20,7 @@
 		var id = '#' + barrager_id;
 		var div_barrager = $("<div class='barrage' id='" + barrager_id + "'></div>").appendTo($(this));
 		var window_height = $('body').height() - 100;
-		var bottom = (barrage.bottom == 0) ? Math.floor(Math.random() * window_height + 40) : barrage.bottom;
+		var bottom = (barrage.bottom == 0) ? Math.floor(Math.random() * window_height + 250) : barrage.bottom;
 		// var bottom = (barrage.bottom == 0) ? Math.floor(Math.random() * window(_height / 4)) : barrage.bottom;
 		div_barrager.css("bottom", bottom + "px");
 		div_barrager_box = $("<div class='barrage_box cl'></div>").appendTo(div_barrager);
