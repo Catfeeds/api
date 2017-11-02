@@ -12,23 +12,23 @@ html,body{
 }
 
 ul{
-    width: 76%;
+    width: 84%;
     height: 80%;
     overflow: hidden;
     position: absolute;
-    top:8%;
-    left:12%;
+    /*top:10%;*/
+    left:6%;
 }
 li{
-    width: 13%;
-    height: 32%;
+    width: 6%;
+    height: 15%;
     background-color: #f0ead3;
     text-align: center;
     border-radius: 10%;
     float: left;
     position: relative;
-    margin-left: 6%;
-    margin-top: 4%;
+    margin-left: 4%;
+    margin-top: 2%;
 }
 
 li img{
@@ -39,7 +39,7 @@ li img{
     left:0;
     right: 0;
     margin:auto;
-    top:6%;
+    top:8%;
     /*margin-top: 40px;*/
     /*margin-left: 60px;*/
 }
@@ -49,7 +49,7 @@ li div{
     text-align: center;
     top:74%;
     font-family: "Adobe 黑体 Std";
-    font-size: 2vh;
+    font-size: 1vh;
     color: #161b5f;
     text-align: center;
 }

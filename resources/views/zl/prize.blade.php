@@ -35,10 +35,22 @@
 <script>
     var width = $(window).width();
     $('.draw').css({'width':width,'height':width*6/15 + 'px'});
+    var len = $('li').length;
+    if(len <= 30){
+        $('ul').css({'top':'16%'})
+    }else if(len >=30){
+        $('ul').css({'top':'11%'})
+    }
 
     window.onresize = function(){
         var width = $(window).width();
         $('.draw').css({'width':width,'height':width*6/15 + 'px'});
+        var len = $('li').length;
+        if(len <= 30){
+            $('ul').css({'top':'16%'})
+        }else if(len >=30){
+            $('ul').css({'top':'11%'})
+        }
     }
 </script>
 
