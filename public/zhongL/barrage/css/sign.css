@@ -8,11 +8,11 @@ body{
     height: 65%;
 }
 .left{
-    margin-left: 17%;
+    margin-left: 15%;
     float: left;
 }
 .right{
-    margin-right: 12%;
+    margin-right: 15%;
     float: right;
 }
 .user_photo{
