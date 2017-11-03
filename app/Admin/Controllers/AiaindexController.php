@@ -21,8 +21,6 @@ class AiaindexController extends Controller
             $content->header('Dashboard');
             $content->description('Description...');
 
-
-
             $content->row(function (Row $row) {
                 $infoBox1 = new InfoBox('分享次数', 'share', 'aqua', '', Redis::get('aiaShare'));
                 $row->column(2, $infoBox1);
@@ -30,8 +28,6 @@ class AiaindexController extends Controller
                 $users = Aia::count();
                 $infoBox2 = new InfoBox('总人数', 'users', 'red', '', $users);
                 $row->column(2, $infoBox2);
-
-
             });
         });
     }}
