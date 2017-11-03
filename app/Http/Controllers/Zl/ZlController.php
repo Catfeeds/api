@@ -54,22 +54,22 @@ class ZlController extends Controller
         $draw = Zl::where('prize', '0')
             ->where('unofficially', '1')
             ->count();
-        if ($draw < 3) {
+        if ($draw < 2) {
             $unofficially = Zl::where('unofficially', '1')
                 ->get()
-                ->random(3);
+                ->random(2);
         }else {
             //抽10人，3个内定，7个已经签到
             $unofficially = Zl::where('unofficially', '1')
                 ->where('prize', '0')
                 ->get()
-                ->random(3);
+                ->random(2);
         }
 
         $users = Zl::where('unofficially', '0')
             ->where('prize', '0')
             ->get()
-            ->random(7);
+            ->random(8);
 
         //保存中奖记录
 //        foreach ($unofficially as $item){
