@@ -15,39 +15,79 @@
 <script src="../../js/echo.js" type="text/javascript" charset="utf-8"></script>
 <script>
 
-    var infos = [];
+    //var infos = [];
 
 
-    Echo.channel('Zl')
-        .listen('ZlBarrage', (e) => {
-            var info = {
-                'img': e.avatar,
-                'info': e.barrage
-            }
-            infos.push(info);
+    // Echo.channel('Zl')
+    //     .listen('ZlBarrage', (e) => {
+    //         var info = {
+    //             'img': e.avatar,
+    //             'info': e.barrage
+    //         }
+    //         infos.push(info);
 
-        });
-    Echo.channel('Zl')
-        .listen('ZlSign', (e) => {
-            var info = {
-                'img': e.avatar,
-                'info': '签到成功'
-            }
-            infos.push(info);
-        });
-    Echo.channel('Zl')
-        .listen('ZlChange', (e) => {
-            if (e.change === 'draw') {
-                window.location.href = 'http://api.touchworld-sh.com/zl/result'
-            }
-        });
+    //     });
+    // Echo.channel('Zl')
+    //     .listen('ZlSign', (e) => {
+    //         var info = {
+    //             'img': e.avatar,
+    //             'info': '签到成功'
+    //         }
+    //         infos.push(info);
+    //     });
+    // Echo.channel('Zl')
+    //     .listen('ZlChange', (e) => {
+    //         if (e.change === 'draw') {
+    //             window.location.href = 'http://api.touchworld-sh.com/zl/result'
+    //         }
+    //     });
     //第一种
-    setInterval(function () {
-        if (infos.length > 0) {
-            add_barrager(infos[0]);
-            infos.shift();
+    // setInterval(function () {
+    //     if (infos.length > 0) {
+    //         add_barrager(infos[0]);
+    //         infos.shift();
+    //     }
+    // }, 1000);
+
+
+    var msgs = ['我爱丽水，我爱中梁翡翠滨江','他们说发弹幕能增加中奖率，我试试灵不灵','黄金我来啦，为中梁翡翠滨江疯狂打 call !!!!','第一次见这么高端的双屏发布会~~~','其实我主要是来看发布会的，顺便抽个奖~~']
+    var infos = [];
+    var infos_time = [];
+    var infos_use = [];
+    var state = 0;
+    $.ajax({
+        type : "GET",
+        url : 'http://api.touchworld-sh.com/api/zl/users',
+        success: function(data){
+            for(var i = 0; i < data.length; i++){
+                var msgs_index = Math.floor(Math.random() * 5)
+                var msg = msgs[msgs_index]
+                var info = {
+                    "info": msg,
+                    "img": data[i].avatar,
+                }
+                infos.push(info);
+            }
+            document.onkeyup = function(e){
+                if(e.keyCode == 49 && state == 0){
+                    state = 1;
+                    setInterval(function(){
+                        var infos_index = Math.floor(Math.random() * infos_use.length)
+                        if(infos_use.length > 0){
+                            add_barrager(infos_use[infos_index]);
+                            infos_use.splice(infos_index,1);
+                        }else{
+                            infos_use = infos_time.concat(infos)
+                        }
+                        console.log(infos_use.length);
+                    },1000);
+                }
+            }
+        },
+        error: function(){
+
         }
-    }, 1000);
+    });
 
     //第二种
     //add_barrager(info);
