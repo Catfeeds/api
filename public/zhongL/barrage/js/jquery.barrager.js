@@ -44,7 +44,7 @@
 		function barrager() {
 			var window_width = $('body').width() + 500;
 			if (i < window_width) {
-				i += 5;
+				i += 1;
 				$(id).css('margin-right', i);
 			} else {
 				clearInterval(looper);
