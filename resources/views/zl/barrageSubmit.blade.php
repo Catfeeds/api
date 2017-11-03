@@ -21,8 +21,8 @@
         {{ csrf_field() }}
         <input id="ipu" name="barrage" type="text" style="display: none">
         <label for="submit">
-            <button id="submit" type="submit" disabled>10</button>
-{{--            <img src="{{ asset('zhongL/sign/img/btn_submit.png') }}" alt="">--}}
+            <button id="submit" type="submit" @if(session('success')) disabled @endif>10</button>
+            {{--            <img src="{{ asset('zhongL/sign/img/btn_submit.png') }}" alt="">--}}
         </label>
     </form>
 </div>
@@ -40,20 +40,22 @@
 
     })
 
-    $('#submit').css({"background-color":"grey"});
+    //限制弹幕发送时间
+    @if(session('success'))
+    $('#submit').css({"background-color": "grey"});
     var n = 10;
-    var timer = setInterval(function(){
+    var timer = setInterval(function () {
         $('#submit').html(n);
         n--;
-        if(n <= 0){
+        if (n <= 0) {
             clearInterval(timer);
             $('#submit').html("提交");
-            $('#submit').css({"background-color":"#f0ead3"});
+            $('#submit').css({"background-color": "#f0ead3"});
             $('#submit').removeAttr('disabled');
 
         }
-    },1000);
-
+    }, 1000);
+    @endif
 
     @if(session('success'))
     alert('{{ session('success') }}');
