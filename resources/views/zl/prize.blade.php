@@ -5,6 +5,8 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <link rel="stylesheet" href="{{ asset('zhongL/sign/css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('zhongL/sign/css/draw2.css') }}">
+    <link rel="stylesheet" href="{{ asset('zhongL/barrage/css/animate.css') }}">
+
     <title>Title</title>
 </head>
 <body>
