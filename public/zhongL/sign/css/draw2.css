@@ -55,8 +55,10 @@ li div{
     color: red!important;
     font-weight: bold;
     text-align: center;
+    background-color: transparent!important;
 }
 li div span{
     color: red!important;
     font-weight: bold;
+    background-color: transparent!important;
 }
