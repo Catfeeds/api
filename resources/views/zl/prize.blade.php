@@ -38,7 +38,7 @@
     var len = $('li').length;
     if(len <= 30){
         $('ul').css({'top':'16%'})
-    }else if(len >=30){
+    }else if(len >30){
         $('ul').css({'top':'11%'})
     }
 
@@ -48,7 +48,7 @@
         var len = $('li').length;
         if(len <= 30){
             $('ul').css({'top':'16%'})
-        }else if(len >=30){
+        }else if(len >30){
             $('ul').css({'top':'11%'})
         }
     }
