@@ -52,9 +52,11 @@ li div{
     top:74%;
     font-family: "Adobe 黑体 Std";
     font-size: 1vh;
-    color: #161b5f!important;
+    color: red!important;
+    font-weight: bold;
     text-align: center;
 }
 li div span{
-    color: #161b5f!important;
+    color: red!important;
+    font-weight: bold;
 }
