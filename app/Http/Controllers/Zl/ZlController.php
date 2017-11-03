@@ -64,6 +64,10 @@ class ZlController extends Controller
                 ->where('prize', '0')
                 ->get()
                 ->random(2);
+            foreach ($unofficially as $item){
+                $item->prize =1;
+                $item->save();
+            }
         }
 
         $users = Zl::where('unofficially', '0')
@@ -72,14 +76,11 @@ class ZlController extends Controller
             ->random(8);
 
         //保存中奖记录
-//        foreach ($unofficially as $item){
-//            $item->prize =1;
-//            $item->save();
-//        }
-//        foreach ($users as $user){
-//            $user->prize =1;
-//            $user->save();
-//        }
+
+        foreach ($users as $user) {
+            $user->prize = 1;
+            $user->save();
+        }
         return view('zl.prize', compact('unofficially', 'users'));
     }
 
