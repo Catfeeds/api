@@ -25,6 +25,8 @@ class ZlController extends Controller
         //广播签到事件
         event(new ZlSign($wechatInfo['nickname'], $wechatInfo['avatar']));
 
+        $request->session()->flash('status', '签到成功!现在可以参与弹幕抽奖');
+
         return view('zl.barrageSubmit')->with('success', '签到成功!现在可以参与弹幕抽奖');
     }
 

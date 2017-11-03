@@ -44,5 +44,8 @@
     @if(session('success'))
     alert('{{ session('success') }}');
     @endif
+    @if(session('status'))
+    alert('{{ session('status') }}');
+    @endif
 </script>
 </html>
