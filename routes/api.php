@@ -72,3 +72,8 @@ Route::post('song/test', function (Request $request){
  * 和讯网签到
  */
 Route::get('hxSign', 'Hx\HxController@sign');
+
+/**
+ * 弹幕签到
+ */
+Route::get('zl/users', 'Zl\ZlController@users');

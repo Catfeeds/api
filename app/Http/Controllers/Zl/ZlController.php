@@ -36,7 +36,7 @@ class ZlController extends Controller
         $user = Zl::where('openid', $wechatInfo['id'])
             ->first();
         if (is_null($user)) {
-            return view('zl.sign')->with('success','请先签到再参与抽奖');
+            return view('zl.sign')->with('success', '请先签到再参与抽奖');
         }
         return view('zl.barrageSubmit');
     }
@@ -52,7 +52,7 @@ class ZlController extends Controller
     public function draw()
     {
         $draw = Zl::where('prize', '1')->count();
-        if ($draw == 60){
+        if ($draw == 60) {
             //抽40人，12个内定，28个已经签到
             $unofficially = Zl::where('unofficially', '1')
                 ->where('prize', '0')
@@ -63,7 +63,7 @@ class ZlController extends Controller
                 ->where('prize', '0')
                 ->get()
                 ->random(28);
-        }else{
+        } else {
             //抽取30人，9个内定，21个已经签到
             $unofficially = Zl::where('unofficially', '1')
                 ->where('prize', '0')
@@ -95,5 +95,11 @@ class ZlController extends Controller
         $change = $request->input('change');
         event(new ZlChange($change));
         return back()->with('success', '更改成功');
+    }
+
+    public function users()
+    {
+        $users = Zl::select(['id','avatar'])->get();
+        return $users;
     }
 }
