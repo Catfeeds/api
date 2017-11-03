@@ -20,9 +20,9 @@
         @endforeach
         @foreach($unofficially as $item)
             <li>
-                <img src="{{ $unofficially->avatar }}" alt="">
+                <img src="{{ $item->avatar }}" alt="">
                 <div>
-                    <span class="nickname">{{ $unofficially->nickname }}</span>
+                    <span class="nickname">{{ $item->nickname }}</span>
                 </div>
             </li>
         @endforeach
