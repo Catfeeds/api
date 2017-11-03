@@ -29,14 +29,14 @@
 			var img = $("<img src='' >").appendTo(id + " .barrage_box .portrait");
 			img.attr('src', barrage.img);
 		}
-		
+
 		div_barrager_box.append(" <div class='z p'></div>");
-		
+
 		var content = $("<a title=''></a>").appendTo(id + " .barrage_box .p");
 		content.attr({
 			'id': barrage.id
 		}).empty().append(barrage.info);
-		
+
 		var i = 0;
 		div_barrager.css('margin-right', i);
 		var looper = setInterval(barrager, barrage.speed);
@@ -44,7 +44,7 @@
 		function barrager() {
 			var window_width = $('body').width() + 500;
 			if (i < window_width) {
-				i += 1;
+				i += 1.1;
 				$(id).css('margin-right', i);
 			} else {
 				clearInterval(looper);
@@ -53,7 +53,7 @@
 			}
 		}
 	}
- 
+
 	$.fn.barrager.removeAll=function(){
 		 $('.barrage').remove();
 	}
