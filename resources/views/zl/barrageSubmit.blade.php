@@ -21,8 +21,8 @@
         {{ csrf_field() }}
         <input id="ipu" name="barrage" type="text" style="display: none">
         <label for="submit">
-            <input id="submit" type="submit" style="display: none">
-            <img src="{{ asset('zhongL/sign/img/btn_submit.png') }}" alt="">
+            <button id="submit" type="submit" disabled>10</button>
+{{--            <img src="{{ asset('zhongL/sign/img/btn_submit.png') }}" alt="">--}}
         </label>
     </form>
 </div>
@@ -35,12 +35,26 @@
 <script>
     $('li').click(function () {
         $(this).css('background-color', 'grey').siblings().css('background-color', '#f0ead3');
-
         var index = $(this).html();
-
         $('#ipu').val(index);
 
     })
+
+    $('#submit').css({"background-color":"grey"});
+    var n = 10;
+    var timer = setInterval(function(){
+        $('#submit').html(n);
+        n--;
+        if(n <= 0){
+            clearInterval(timer);
+            $('#submit').html("提交");
+            $('#submit').css({"background-color":"#f0ead3"});
+            $('#submit').removeAttr('disabled');
+
+        }
+    },1000);
+
+
     @if(session('success'))
     alert('{{ session('success') }}');
     @endif
