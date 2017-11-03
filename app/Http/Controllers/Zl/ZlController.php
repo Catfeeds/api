@@ -25,7 +25,7 @@ class ZlController extends Controller
         //广播签到事件
         event(new ZlSign($wechatInfo['nickname'], $wechatInfo['avatar']));
 
-        return back()->with('success', '签到成功');
+        return view('zl.barrageSubmit')->with('success', '签到成功!现在可以参与弹幕抽奖');
     }
 
     public function barrageInput()
@@ -34,7 +34,7 @@ class ZlController extends Controller
         $user = Zl::where('openid', $wechatInfo['id'])
             ->first();
         if (is_null($user)) {
-            return view('zl.barrageSubmit')->with('success','请先签到再参与抽奖');
+            return view('zl.sign')->with('success','请先签到再参与抽奖');
         }
         return view('zl.barrageSubmit');
     }
