@@ -27,7 +27,7 @@ class ZlController extends Controller
 
         $request->session()->flash('status', '签到成功!现在可以参与弹幕抽奖');
 
-        return view('zl.barrageSubmit')->with('success', '签到成功!现在可以参与弹幕抽奖');
+        return redirect()->route('zl/barrageSubmit');
     }
 
     public function barrageInput()
