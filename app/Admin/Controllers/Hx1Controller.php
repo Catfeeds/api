@@ -85,7 +85,7 @@ class Hx1Controller extends Controller
                 $filter->disableIdFilter();
 
                 // 在这里添加字段过滤器
-                $filter->uqual('phone', '手机号');
+                $filter->equal('phone', '手机号');
 
             });
 
