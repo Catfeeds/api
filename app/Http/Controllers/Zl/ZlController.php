@@ -80,7 +80,7 @@ class ZlController extends Controller
 //            $user->prize =1;
 //            $user->save();
 //        }
-        dd($unofficially);
+        dd($users);
         return view('zl.prize', compact('unofficially', 'users'));
     }
 
