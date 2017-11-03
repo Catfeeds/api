@@ -21,7 +21,7 @@
         {{ csrf_field() }}
         <input id="ipu" name="barrage" type="text" style="display: none">
         <label for="submit">
-            <button id="submit" type="submit" @if(session('success')) disabled @endif>10</button>
+            <button id="submit" type="submit" @if(session('success')) disabled @endif>提交</button>
             {{--            <img src="{{ asset('zhongL/sign/img/btn_submit.png') }}" alt="">--}}
         </label>
     </form>
