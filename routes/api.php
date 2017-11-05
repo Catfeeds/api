@@ -79,5 +79,6 @@ Route::get('hxSign', 'Hx\HxController@sign');
 Route::get('zl/users', 'Zl\ZlController@users');
 
 /**
- *
+ * MyLike180度摄影
  */
+Route::post('myLike/upload','MyLike\ApiController@upload');

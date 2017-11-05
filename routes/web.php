@@ -144,3 +144,8 @@ Route::get('zl/control', function () {
     return view('zl.change');
 });
 Route::post('zl/control', 'Zl\ZlController@control');
+
+/**
+ * 180度摄影,莱美医疗
+ */
+Route::get('myLike', 'MyLike\IndexController@index');
