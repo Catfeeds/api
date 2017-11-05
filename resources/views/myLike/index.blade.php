@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="all">
-        <img src="{{ asset('upload/myLike/') . $uid . '.gif' }}" alt="">
+        <img src="{{ asset('upload/myLike') .'/'. $uid . '.gif' }}" alt="">
     </div>
 
 </body>
