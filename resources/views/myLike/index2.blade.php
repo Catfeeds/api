@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640,user-scalable=no">
     <link rel="stylesheet" href="{{ asset('mlike/mlike2/css/index.css') }}">
-    <title></title>
+    <title>180度美丽无极限！这是你从没见过的我的另一面</title>
 </head>
 <body>
 <section class="loading">

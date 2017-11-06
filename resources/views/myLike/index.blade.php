@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>万里挑一 嗨Fun美荟</title>
+    <title>180度美丽无极限！这是你从没见过的我的另一面</title>
     <meta name="viewport" content="width=640,user-scalable=no">
     <link rel="stylesheet" href="{{ asset('mlike/css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('mlike/css/index.css') }}">
@@ -19,7 +19,7 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: '万里挑一 嗨Fun美荟', // 分享标题
+            title: '180度美丽无极限！这是你从没见过的我的另一面', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/ali/myLike?uid={{ $uid }}",
             imgUrl: "https://api.shanghaichujie.com/mlike/share.png", // 分享图标
@@ -29,11 +29,11 @@
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
-            title: '万里挑一 嗨Fun美荟', // 分享标题
-            desc: "万里挑一 嗨Fun美荟", // 分享描述
+            title: '180度美丽无极限！这是你从没见过的我的另一面', // 分享标题
+            desc: "180度美丽无极限！这是你从没见过的我的另一面", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/myLike?uid={{ $uid }}",
-            imgUrl: "https://api.shanghaichujie.com/mlike/share.png", // 分享图标
+            imgUrl: "https://api.shanghaichujie.com/mlike/share2.jpg", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
                 // 用户确认分享后执行的回调函数
