@@ -17,7 +17,6 @@ class ApiController extends Controller
         if(is_null($request->file('photo'))){
             return 'false';
         }
-        dd($request->file('photo'));
         Storage::disk('public_path')->putFileAS('myLike', $request->photo, $uid.'.gif');
         return env('APP_URL') . '/myLike/?uid=' . $uid;
     }
