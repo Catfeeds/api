@@ -114,7 +114,7 @@ $(function () {
             id: $('#canvas1')[0],
             width: 480,
             height: 270,
-            speed: 1200,
+            speed: 380,
             loop: true,
             autoplay: true,
             imgArr: imgarr
