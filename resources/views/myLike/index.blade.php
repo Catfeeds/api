@@ -21,7 +21,7 @@
         wx.onMenuShareTimeline({
             title: '万里挑一 嗨Fun美荟', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "https://api.shanghaichujie.com/ali/myLike?uid={{ $pid }}",
+            link: "https://api.shanghaichujie.com/ali/myLike?uid={{ $uid }}",
             imgUrl: "https://api.shanghaichujie.com/mlike/share.png", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
@@ -32,7 +32,7 @@
             title: '万里挑一 嗨Fun美荟', // 分享标题
             desc: "万里挑一 嗨Fun美荟", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "https://api.shanghaichujie.com/myLike?uid={{ $pid }}",
+            link: "https://api.shanghaichujie.com/myLike?uid={{ $uid }}",
             imgUrl: "https://api.shanghaichujie.com/mlike/share.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
