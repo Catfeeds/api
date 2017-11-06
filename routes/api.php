@@ -82,3 +82,4 @@ Route::get('zl/users', 'Zl\ZlController@users');
  * MyLike180度摄影
  */
 Route::post('myLike/upload','MyLike\ApiController@upload');
+Route::post('myLike2/upload', 'MyLike\ApiController@upload2');

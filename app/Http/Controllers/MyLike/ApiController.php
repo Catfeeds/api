@@ -20,4 +20,14 @@ class ApiController extends Controller
         Storage::disk('public_path')->putFileAS('myLike', $request->photo, $uid.'.gif');
         return env('APP_URL') . '/myLike/?uid=' . $uid;
     }
+
+    public function upload2(Request $request)
+    {
+        //拍照上传10张照片，保存到标识文件夹
+        for ($i = 0; $i < 10; $i++) {
+            Storage::disk('public_path')
+                ->putFileAs('myLike' . $request->uid, $request->file('p' . $i), 'p' . $i . '.png');
+        }
+        return env('APP_URL') . '/myLike2/?uid=' . $request->uid;
+    }
 }
