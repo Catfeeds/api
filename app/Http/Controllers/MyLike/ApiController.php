@@ -26,7 +26,7 @@ class ApiController extends Controller
         //拍照上传10张照片，保存到标识文件夹
         for ($i = 1; $i <= 9; $i++) {
             Storage::disk('public_path')
-                ->putFileAs('myLike' . $request->uid, $request->file('p' . $i), 'p' . $i . '.jpg');
+                ->putFileAs('myLike/' . $request->uid, $request->file('p' . $i), 'p' . $i . '.jpg');
         }
         return env('APP_URL') . '/myLike2/?uid=' . $request->uid;
     }
