@@ -26,4 +26,12 @@ class IndexController extends Controller
         $uid = $request->uid;
         return view('myLike.index', compact('uid', 'js'));
     }
+
+    public function index2(Request $request)
+    {
+        $js =$this->js;
+        $uid = $request->uid;
+        return view('myLike.index2', compact('uid', 'js'));
+
+    }
 }
