@@ -13,8 +13,7 @@
 */
 
 Route::get('test', function () {
-    event(new \App\Events\ZlSign('666', 'http://wx.qlogo.cn/mmopen/CQFhtHfg7bll1aztrVrUPQjnwydU7cte79roAPSwvaXJCL4A8BLLMoEX0QVxeuYzHqJYwyGdJmqB2Mia2AQTZawWL2yODR3yB/0'));
-    return 'true';
+    dd(phpinfo());
 });
 
 Route::get('test1', function () {
