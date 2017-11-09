@@ -16,7 +16,7 @@ class IndexController extends Controller
      */
     public function __construct(Application $app)
     {
-        $this->js = $app;
+        $this->js = $app->js;
     }
 
     public function index(Request $request)
