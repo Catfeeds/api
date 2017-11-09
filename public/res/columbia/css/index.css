@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding: 0;
+}
+div{
+    width: 640px;
+    height: 1038px;
+    background: url("../img/bg.png") no-repeat center;
+    background-size: cover;
+}
+img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top:322px;
+}

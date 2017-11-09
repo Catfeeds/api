@@ -149,3 +149,8 @@ Route::post('zl/control', 'Zl\ZlController@control');
  */
 Route::get('myLike', 'MyLike\IndexController@index');
 Route::get('myLike2', 'MyLike\IndexController@index2');
+
+/**
+ *
+ */
+Route::get('columbia', 'Columbia\IndexController@index');
