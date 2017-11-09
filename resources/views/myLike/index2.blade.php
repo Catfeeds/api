@@ -29,7 +29,7 @@ wx.ready(function () {
     wx.onMenuShareTimeline({
         title: '180度美丽无极限！这是你从没见过的我的另一面', // 分享标题
         {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-        link: "https://api.shanghaichujie.com/ali/myLike2?uid={{ $uid }}",
+        link: "https://api.shanghaichujie.com/myLike2?uid={{ $uid }}",
         imgUrl: "https://api.shanghaichujie.com/mlike/share2.jpg", // 分享图标
         success: function () {
             // 用户确认分享后执行的回调函数
