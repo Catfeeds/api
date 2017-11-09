@@ -11,20 +11,14 @@ class ApiController extends Controller
     public function upload(Request $request)
     {
         $uid = $request->uid;
-        if (is_null($uid)){
-            return 'false';
-        }
-        if(is_null($request->file('photo'))){
-            return 'false';
-        }
-        Storage::disk('public_path')->putFileAS('myLike', $request->photo, $uid.'.gif');
+        Storage::disk('public_path')->putFileAS('myLike', $request->file('photo'), $uid . '.gif');
         return env('APP_URL') . '/myLike/?uid=' . $uid;
     }
 
     public function upload2(Request $request)
     {
         //拍照上传10张照片，保存到标识文件夹
-        for ($i = 1; $i <= 9; $i++) {
+        for ($i = 1; $i <= 12; $i++) {
             Storage::disk('public_path')
                 ->putFileAs('myLike/' . $request->uid, $request->file('p' . $i), 'p' . $i . '.jpg');
         }
