@@ -12,11 +12,11 @@ class IndexController extends Controller
 
     /**
      * IndexController constructor.
-     * @param $js
+     * @param $app
      */
-    public function __construct(Application $js)
+    public function __construct(Application $app)
     {
-        $this->js = $js;
+        $this->js = $app;
     }
 
     public function index(Request $request)
