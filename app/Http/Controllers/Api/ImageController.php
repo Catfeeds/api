@@ -65,4 +65,16 @@ class ImageController extends Controller
         $path = Storage::disk('public_path')->putFile('ali/yun', $request->file('photo'));
         return env('APP_URL') . '/ali/yunShow?path=' . $path;
     }
+
+    /**
+     * @param Request $request
+     * @return string
+     * 哥伦比亚羽绒服项目上传热成像图片
+     */
+    public function columbia(Request $request)
+    {
+        $path = Storage::disk('public_path')
+            ->putFile('columbia', $request->file('photo'));
+        return env('APP_URL') . '/columbia?path=' . $path;
+    }
 }

@@ -71,7 +71,7 @@ Route::post('song/test', function (Request $request){
 /**
  * 和讯网签到
  */
-Route::get('hxSign', 'Hx\HxController@sign');
+//Route::get('hxSign', 'Hx\HxController@sign');
 
 /**
  * 弹幕签到
@@ -81,5 +81,10 @@ Route::get('zl/users', 'Zl\ZlController@users');
 /**
  * MyLike180度摄影
  */
-Route::post('myLike/upload','MyLike\ApiController@upload');
+//Route::post('myLike/upload','MyLike\ApiController@upload'); //上传gif图片
 Route::post('myLike2/upload', 'MyLike\ApiController@upload2');
+
+/**
+ * columbia 热成像图片上传接口
+ */
+Route::post('/columbia/photo', 'Api\ImageController@columbia');
