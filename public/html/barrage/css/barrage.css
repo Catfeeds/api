@@ -14,16 +14,16 @@ body{
 }
 .barrage_box{
     background-color: rgba(0,0,0,0.5)!important;
-    padding-right: 20px; 
-    height: 60px;
+    padding-right: 20px;
+    height: 40px;
     display: inline-block;
-    border-radius: 60px;
+    border-radius: 20px;
     transition: all .3s;
 }
 .barrage_box .portrait{
-    background-color: transparent!important; 
+    background-color: transparent!important;
     display: inline-block;
-    margin-top: 4px; 
+    margin-top: 4px;
     margin-left: 4px;
     width: 52px;
     height: 52px;
@@ -36,14 +36,14 @@ body{
     height: 100%;
 }
 .barrage_box div.p a{
-    background-color: transparent!important; 
-    margin-right: 2px; 
+    background-color: transparent!important;
+    margin-right: 2px;
     font-family: '微软雅黑';
     font-weight: bold;
     font-size: 18px;
     color: #fff;
-    line-height: 60px;
-    margin-left: 18px; 
+    line-height: 40px;
+    margin-left: 18px;
 }
 .barrage .z {
     background-color: transparent!important;

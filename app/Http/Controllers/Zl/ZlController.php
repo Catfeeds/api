@@ -44,8 +44,7 @@ class ZlController extends Controller
     public function barrageSubmit(Request $request)
     {
         $barrage = $request->input('barrage');
-        $wechatInfo = session('wechat.oauth_user');
-        event(new ZlBarrage($wechatInfo['nickname'], $wechatInfo['avatar'], $barrage));
+        event(new ZlBarrage($barrage));
         return back()->with('success', '弹幕提交成功');
     }
 

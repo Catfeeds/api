@@ -14,15 +14,12 @@ class ZlBarrage implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $nickname=0;
-    public $avatar;
+
     public $barrage;
 
 
-    public function __construct($nickname, $avatar, $barrage)
+    public function __construct($barrage)
     {
-        $this->nickname = $nickname;
-        $this->avatar = $avatar;
         $this->barrage = $barrage;
     }
 
