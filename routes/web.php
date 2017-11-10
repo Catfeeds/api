@@ -12,9 +12,7 @@
 |
 */
 
-Route::get('test', function () {
-    dd(phpinfo());
-});
+Route::get('test', 'TestController@test');
 
 Route::get('test1', function () {
     event(new \App\Events\ZlBarrage('666', 'http://wx.qlogo.cn/mmopen/CQFhtHfg7bll1aztrVrUPQjnwydU7cte79roAPSwvaXJCL4A8BLLMoEX0QVxeuYzHqJYwyGdJmqB2Mia2AQTZawWL2yODR3yB/0', '0000'));
