@@ -125,15 +125,15 @@ Route::get('snf/sz', function () {
 });
 
 /**
- * 中梁翡翠滨江弹幕签到
+ * 中梁翡翠滨江弹幕签到 ，现用作碧桂园弹幕
  */
 Route::group(['middleware' => ['wechat.oauth:snsapi_userinfo']], function () {
-    Route::get('zl/sign', function () {
-        return view('zl.sign');
-    });
-    Route::post('zl/sign', 'Zl\ZlController@sign');
-    Route::get('zl/barrageSubmit', 'Zl\ZlController@barrageInput');
-    Route::post('zl/barrageSubmit', 'Zl\ZlController@barrageSubmit');
+//    Route::get('zl/sign', function () {
+//        return view('zl.sign');
+//    });
+//    Route::post('zl/sign', 'Zl\ZlController@sign');
+    Route::get('barrage/barrageSubmit', 'Zl\ZlController@barrageInput');
+    Route::post('barrage/barrageSubmit', 'Zl\ZlController@barrageSubmit');
 
 });
 //抽奖
@@ -151,6 +151,6 @@ Route::get('myLike', 'MyLike\IndexController@index');
 Route::get('myLike2', 'MyLike\IndexController@index2');
 
 /**
- *
+ *哥伦比亚羽绒服显示热成像拍照
  */
 Route::get('columbia', 'Columbia\IndexController@index');
