@@ -1,4 +1,5 @@
 var str = `回民吃猪肉
+fuck
 习近平
 TMD
 毛民进党
@@ -1428,6 +1429,7 @@ yong bing chuan shuo
 他妈的靠
 meinv嫩穴淫水直流
 你奶奶
+妈的
 dao jian
 fuck系统
 毛私-服
