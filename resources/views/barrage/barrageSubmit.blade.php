@@ -30,24 +30,38 @@
 
 </body>
 <script src="{{ asset('html/barrage/zhou/js/jquery-1.11.3.min.js') }}"></script>
+<script src="{{ asset('html/barrage/zhou/js/str.js') }}"></script>
 <script>
-    $('.btn_cancel').click(function () {
+   $('.btn_cancel').click(function () {
         $('.popup').hide();
     });
-
+    var arrMg = str.split('\n');
     $('form').submit(function () {
-
         if ($('.info_text').val() == '') {
             alert('弹幕不能为空');
             return false;
-        } else if ($('.info_text').val().length > 18) {
-
+        }else if ($('.info_text').val().length > 18) {
             alert('弹幕字符不能大于18');
             $('.info_text').val('');
             return false;
+        }else if(filter($('.info_text').val())){
+            alert('弹幕不能有敏感词')
+            return false;
         }
-
     })
+
+    function filter(val){
+        var can;
+        for (var i = 0; i < arrMg.length; i++) {
+            var reg = new RegExp(arrMg[i],'ig');
+            can = reg.test(val);
+            if(can){
+                console.log(arrMg[i])
+                return can;
+            }
+        }
+        return false;
+    }
 
 </script>
 </html>
