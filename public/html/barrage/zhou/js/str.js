@@ -1,5 +1,6 @@
 var str = `回民吃猪肉
 fuck
+shit
 习近平
 TMD
 毛民进党

@@ -7,15 +7,15 @@ body{
     background-color: transparent!important;
     position: absolute;
     top:0px;
-    right:-600px;
+    right:-1100px;
     display: inline-block;
     z-index: 99999;
-    width: 500px;
+    width: 1000px;
 }
 .barrage_box{
     background-color: rgba(0,0,0,0.5)!important;
     padding-right: 20px;
-    height: 40px;
+    height: 80px;
     display: inline-block;
     border-radius: 20px;
     transition: all .3s;
@@ -40,9 +40,9 @@ body{
     margin-right: 2px;
     font-family: '微软雅黑';
     font-weight: bold;
-    font-size: 18px;
+    font-size: 42px;
     color: #fff;
-    line-height: 40px;
+    line-height: 80px;
     margin-left: 18px;
 }
 .barrage .z {

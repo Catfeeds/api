@@ -35,7 +35,7 @@
 		var i = -500;
 		// div_barrager.css('right', i);
 		// var looper = setInterval(barrager, barrage.speed);
-		$(id).animate({left: "-600px"},15000,function(){
+		$(id).animate({left: "-1100px"},20000,function(){
 			$(id).remove();
 		})
 		function barrager() {
