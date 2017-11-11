@@ -15,7 +15,7 @@ body{
 .barrage_box{
     background-color: rgba(0,0,0,0.5)!important;
     padding-right: 20px;
-    height: 80px;
+    height: 60px;
     display: inline-block;
     border-radius: 20px;
     transition: all .3s;
@@ -40,9 +40,9 @@ body{
     margin-right: 2px;
     font-family: '微软雅黑';
     font-weight: bold;
-    font-size: 42px;
+    font-size: 24px;
     color: #fff;
-    line-height: 80px;
+    line-height: 60px;
     margin-left: 18px;
 }
 .barrage .z {
