@@ -75,6 +75,6 @@ class ImageController extends Controller
     {
         $path = Storage::disk('public_path')
             ->putFile('columbia', $request->file('photo'));
-        return env('APP_URL') . '/columbia?path=' . $path;
+        return 'https://api.shanghaichujie.com/columbia?path=' . $path;
     }
 }

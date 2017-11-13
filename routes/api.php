@@ -60,13 +60,7 @@ Route::post('ali/yun/photos', 'Api\ImageController@yun');
 //上传拍照图片
 Route::post('ali/yun/photo', 'Api\ImageController@yunPhoto');
 
-/**
- * api接口(宋)
- */
-Route::post('song/test', function (Request $request){
-   $test = $request->test;
-   return $test.'';
-});
+
 
 /**
  * 和讯网签到

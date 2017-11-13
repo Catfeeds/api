@@ -14,10 +14,6 @@
 
 Route::get('test', 'TestController@test');
 
-Route::get('test1', function () {
-    event(new \App\Events\ZlBarrage('666', 'http://wx.qlogo.cn/mmopen/CQFhtHfg7bll1aztrVrUPQjnwydU7cte79roAPSwvaXJCL4A8BLLMoEX0QVxeuYzHqJYwyGdJmqB2Mia2AQTZawWL2yODR3yB/0', '0000'));
-    return 'true';
-});
 /*
  * 科思创项目
  */
@@ -27,9 +23,9 @@ Route::get('/audios/{audio}', 'Ksc\\AudioController@index');
 /**
  * 中控系统
  */
-Route::get('/touch', function () {
-    return view('touch');
-});
+//Route::get('/touch', function () {
+//    return view('touch');
+//});
 
 /**
  *启赋有机
