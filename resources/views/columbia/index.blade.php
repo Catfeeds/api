@@ -20,8 +20,8 @@
         wx.onMenuShareTimeline({
             title: '又一次突破极限？这只是个开始！', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "http://api.touchworld-sh.com/columbia?path={!! $path !!}",
-            imgUrl: "http://api.touchworld-sh.com/{!! asset('upload').'/'.$path !!}", // 分享图标
+            link: "https://api.shanghaichujie.com/columbia?path={!! $path !!}",
+            imgUrl: "{!! asset('upload').'/'.$path !!}", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
             }
@@ -31,8 +31,8 @@
             title: '又一次突破极限？这只是个开始！', // 分享标题
             desc: "当执念化作信念 任极寒肆意侵袭 在我的狂热面前 极寒撑不过3秒", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "http://api.touchworld-sh.com/columbia?path={!! $path !!}",
-            imgUrl: "http://api.touchworld-sh.com/{!! asset('upload').'/'.$path !!}", // 分享图标
+            link: "https://api.shanghaichujie.com/columbia?path={!! $path !!}",
+            imgUrl: "{!! asset('upload').'/'.$path !!}", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
                 // 用户确认分享后执行的回调函数
