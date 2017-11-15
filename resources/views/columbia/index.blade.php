@@ -18,21 +18,21 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: '让出行更智慧  斑马互联网汽车AI体验之旅', // 分享标题
+            title: '又一次突破极限？这只是个开始！', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "http://api.touchworld-sh.com/ali/bmShow",
-            imgUrl: "http://api.touchworld-sh.com/alibaba/bm/share.png", // 分享图标
+            link: "http://api.touchworld-sh.com/columbia?path={!! $path !!}",
+            imgUrl: "http://api.touchworld-sh.com/{!! asset('upload').'/'.$path !!}", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
             }
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
-            title: '让出行更智慧', // 分享标题
-            desc: "斑马互联网汽车AI体验之旅", // 分享描述
+            title: '又一次突破极限？这只是个开始！', // 分享标题
+            desc: "当执念化作信念 任极寒肆意侵袭 在我的狂热面前 极寒撑不过3秒", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "http://api.touchworld-sh.com/ali/bmShow",
-            imgUrl: "http://api.touchworld-sh.com/alibaba/bm/share.png", // 分享图标
+            link: "http://api.touchworld-sh.com/columbia?path={!! $path !!}",
+            imgUrl: "http://api.touchworld-sh.com/{!! asset('upload').'/'.$path !!}", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
                 // 用户确认分享后执行的回调函数
