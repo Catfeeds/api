@@ -30,8 +30,9 @@ class AliController extends Controller
      */
     public function index($uid)
     {
+        $js = $this->js;
         $ali = Ali::where('uid', $uid)->first();
-        return view('ali.mobile', compact('ali'));
+        return view('ali.mobile', compact('ali', 'js'));
     }
 
     public function yun(Request $request)
