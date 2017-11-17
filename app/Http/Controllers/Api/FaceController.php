@@ -13,6 +13,7 @@ class FaceController extends Controller
         $image = $request->input('photo');
         $model = $request->input('model');
 
+        return  $image;
         $app_id = env('face_app_id');
         $time_stamp = time();
         $nonce_str = rand(1, 100000);
