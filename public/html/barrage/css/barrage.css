@@ -1,5 +1,4 @@
 body{
-    background-color: transparent!important;
     position: relative;
     overflow: hidden;
 }
@@ -7,13 +6,13 @@ body{
     background-color: transparent!important;
     position: absolute;
     top:0px;
-    right:-1100px;
+    right:-2100px;
     display: inline-block;
     z-index: 99999;
-    width: 1000px;
+    width: 2000px;
 }
 .barrage_box{
-    background-color: rgba(0,0,0,0.5)!important;
+    background-color: rgba(0,0,0,0)!important;
     padding-right: 20px;
     height: 60px;
     display: inline-block;
@@ -40,7 +39,7 @@ body{
     margin-right: 2px;
     font-family: '微软雅黑';
     font-weight: bold;
-    font-size: 24px;
+    font-size: 64px;
     color: #fff;
     line-height: 60px;
     margin-left: 18px;

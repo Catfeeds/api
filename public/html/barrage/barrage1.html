@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/barrage.css">
     <style>
         body{
-            background: url(images/barrage1.png) no-repeat center center;
+            background: #000;
             background-size: 100% 100%;
         }
     </style>
@@ -136,13 +136,14 @@
             '6666666666'
         ]
 
-        Echo.channel('Zl')
-            .listen('ZlBarrage', (e) => {
-                var info1 = {
-                    'info': e.barrage
-                }
-                infos.push(info1)
-            });
+        // Echo.channel('Zl')
+        //     .listen('ZlBarrage', (e) => {
+        //         var info1 = {
+        //             'info': e.barrage
+        //         }
+        //         infos.push(info1);
+        //         msg.push(info1);
+        //     });
         
         setInterval(function(){
             if(infos.length < 30){
@@ -154,7 +155,8 @@
             }
             add_barrager(infos[0]);
             infos.shift();
-        },500);
+            //159行表示每多少毫秒出现一条弹幕
+        },300);
 
 
         //下面的不要动

@@ -16,7 +16,7 @@
 		var id = '#' + barrager_id;
 		var div_barrager = $("<div class='barrage' id='" + barrager_id + "'></div>").appendTo($(this));
 		var window_height = $('body').height() - 60;
-		var top = (barrage.top == 0) ? Math.floor(Math.random() * (window_height / 3)) : barrage.top;
+		var top = (barrage.top == 0) ? Math.floor(Math.random() * window_height) : barrage.top;
 		div_barrager.css("top", top + "px");
 		div_barrager_box = $("<div class='barrage_box cl'></div>").appendTo(div_barrager);
 		if(barrage.img){
@@ -35,7 +35,9 @@
 		var i = -500;
 		// div_barrager.css('right', i);
 		// var looper = setInterval(barrager, barrage.speed);
-		$(id).animate({left: "-1100px"},20000,function(){
+
+		//第二个参数表示多少毫秒走完全程屏幕
+		$(id).animate({left: "-2100px"},20000,function(){
 			$(id).remove();
 		})
 		function barrager() {

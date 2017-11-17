@@ -14,6 +14,7 @@
     <form action="{{ url('barrage/barrageSubmit') }}" method="post">
         {!! csrf_field() !!}
         <input class="info_text" type="text" name="barrage" placeholder="请输入弹幕内容">
+        <input class="info_phone" type="phone"  name="phone" placeholder="请输入手机号">
         <label for="submit">
             <input id="submit" type="submit" style="display: none">
             <img src="{{ asset('html/barrage/zhou/img/btn_sub.png') }}" alt="">
@@ -37,15 +38,24 @@
     });
     var arrMg = str.split('\n');
     $('form').submit(function () {
-        if ($('.info_text').val() == '') {
+        if($('.info_text').val() == '' && $('.info_phone').val() == ''){
+            alert('内容不能为空');
+            return false;
+        }else if($('.info_text').val() == ''){
             alert('弹幕不能为空');
             return false;
-        }else if ($('.info_text').val().length > 18) {
+        }else if($('.info_phone').val() == ''){
+            alert('手机号不能为空');
+            return false;
+        }else if($('.info_text').val().length > 18){
             alert('弹幕字符不能大于18');
             $('.info_text').val('');
             return false;
         }else if(filter($('.info_text').val())){
-            alert('弹幕不能有敏感词')
+            alert('弹幕不能有敏感词');
+            return false;
+        }else if(!regPhone.test($('.info_phone').val())){
+            alert('请输入正确的手机号');
             return false;
         }
     })

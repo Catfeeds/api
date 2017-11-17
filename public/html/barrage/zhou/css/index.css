@@ -1,7 +1,7 @@
 .bgy{
     width: 640px;
     height: 1040px;
-    background: url("../img/bg.png") no-repeat center;
+    background: url("../img/bg.jpg") no-repeat center;
     background-size: cover;
 }
 form{
@@ -10,17 +10,18 @@ form{
     left:0;
     right: 0;
     margin:auto;
-    top:400px;
+    top:300px;
     text-align: center;
 }
-.info_text{
+.info_text, .info_phone{
+    margin-bottom: 100px;
     width: 400px;
     border: none;
     height: 80px;
     line-height: 80px;
-    border:4px solid #d53030;
+    border:4px solid #102c4f;
     font-size: 40px;
-    color: #d53030;
+    color: #102c4f;
     box-sizing: border-box;
 }
 label img{
@@ -48,15 +49,15 @@ label img{
     display: none;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
-    color: #d53030;
+    color: #102c4f;
 
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: #d53030;
+    color: #102c4f;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: #d53030;
+    color: #102c4f;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color: #d53030;
+    color: #102c4f;
 }
