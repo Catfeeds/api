@@ -55,7 +55,7 @@
         }else if($('.info_text').val() == ''){
             alert('弹幕不能为空');
             return false;
-        }else if($('.info_phone').val() == '' || $('.info_text').val().length != 11){
+        }else if($('.info_phone').val() == '' || $('.info_phone').val().length != 11){
             alert('手机号格式错误');
             return false;
         }else if($('.info_text').val().length > 18){
