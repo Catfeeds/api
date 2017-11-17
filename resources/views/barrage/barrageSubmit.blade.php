@@ -55,8 +55,8 @@
         }else if($('.info_text').val() == ''){
             alert('弹幕不能为空');
             return false;
-        }else if($('.info_phone').val() == ''){
-            alert('手机号不能为空');
+        }else if($('.info_phone').val() == '' || $('.info_text').val().length != 11){
+            alert('手机号格式错误');
             return false;
         }else if($('.info_text').val().length > 18){
             alert('弹幕字符不能大于18');
