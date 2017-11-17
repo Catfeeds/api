@@ -44,7 +44,7 @@ Route::get('ali/event', 'Ali\ApiController@event');
 /**
  * 天麓府（已经结束）
  */
-//Route::get('bgy/user', 'Api\BgyController@user');
+Route::get('bgy/user', 'Api\BgyController@user');
 
 /**
  * AIA项目上传游戏数据
@@ -82,3 +82,8 @@ Route::post('myLike2/upload', 'MyLike\ApiController@upload2');
  * columbia 热成像图片上传接口
  */
 Route::post('/columbia/photo', 'Api\ImageController@columbia');
+
+/**
+ * 人脸融合接口
+ */
+Route::post('qq/face/upload', 'Api\FaceController@upload');
