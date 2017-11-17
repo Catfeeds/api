@@ -11,6 +11,11 @@
 </head>
 <body>
 <div class="bgy">
+    @if(isset($status))
+        <p style="font-size: 45px;color: #FFFFFF;text-align: center;padding-top: 55%">
+            {{ $status }}
+        </p>
+    @else
     <form action="{{ url('barrage/barrageSubmit') }}" method="post">
         {!! csrf_field() !!}
         <input class="info_text" type="text" name="barrage" placeholder="请输入弹幕内容">
@@ -20,12 +25,13 @@
             <img src="{{ asset('html/barrage/zhou/img/btn_sub.png') }}" alt="">
         </label>
     </form>
-
-    @if(session('success'))
-        <div class="popup">
-            <img src="{{ asset('html/barrage/zhou/img/btn_cancel.png') }}" alt="" class="btn_cancel">
-        </div>
     @endif
+
+    {{--@if(session('success'))--}}
+        {{--<div class="popup">--}}
+            {{--<img src="{{ asset('html/barrage/zhou/img/btn_cancel.png') }}" alt="" class="btn_cancel">--}}
+        {{--</div>--}}
+    {{--@endif--}}
 
 </div>
 
@@ -33,6 +39,11 @@
 <script src="{{ asset('html/barrage/zhou/js/jquery-1.11.3.min.js') }}"></script>
 <script src="{{ asset('html/barrage/zhou/js/str.js') }}"></script>
 <script>
+    @if($errors)
+        @forEach ($errors as $error)
+        alert('{{ $error }}');
+        @endforeach
+    @endif
    $('.btn_cancel').click(function () {
         $('.popup').hide();
     });

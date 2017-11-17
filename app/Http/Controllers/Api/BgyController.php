@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Events\ZlBarrage;
+use App\Http\Requests\BgySignRequest;
 use App\Models\Bgy;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -16,12 +18,32 @@ class BgyController extends Controller
     public function index()
     {
         $userInfo = session('wechat.oauth_user');
-        $bgy = Bgy::updateOrCreate(
-            ['openid' => $userInfo['id']],
-            ['avatar' => $userInfo->avatar, 'nickname' => $userInfo['name']]
-        );
 
-        return view('bgy');
+//        $bgy = Bgy::updateOrCreate(
+//            ['openid' => $userInfo['id']],
+//            ['avatar' => $userInfo->avatar, 'nickname' => $userInfo['name']]
+//        );
+        $bgy = Bgy::where('openid', $userInfo["id"])->first();
+        if (is_null($bgy)) {
+            return view('barrage.barrageSubmit');
+        }
+        return view('barrage.barrageSubmit')->with('status', '您已经签到过了！');
+    }
+
+    public function create(BgySignRequest $request)
+    {
+        $barrage = $request->input('barrage');
+        $phone = $request->input('phone');
+        event(new ZlBarrage($barrage));
+        $userInfo = session('wechat.oauth_user');
+        $bgy = new Bgy;
+        $bgy->barrage=$barrage;
+        $bgy->phone = $phone;
+        $bgy->openid = $userInfo['id'];
+        $bgy->avatar = $userInfo['avatar'];
+        $bgy->nickname = $userInfo['name'];
+        $bgy->save();
+        return view('barrage.barrageSubmit')->with('status', '提交成功');
     }
 
     /**
@@ -39,8 +61,8 @@ class BgyController extends Controller
                 'url' => ''
             ]);
         }
-        $bgy->status = 1;
-        $bgy->save();
+//        $bgy->status = 1;
+//        $bgy->save();
 
         return response()->json([
             'code' => 1,

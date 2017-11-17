@@ -127,8 +127,11 @@ Route::get('snf/sz', function () {
 //        return view('zl.sign');
 //    });
 //    Route::post('zl/sign', 'Zl\ZlController@sign');
-Route::get('barrage/barrageSubmit', 'Zl\ZlController@barrageInput');
-Route::post('barrage/barrageSubmit', 'Zl\ZlController@barrageSubmit');
+
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
+    Route::get('barrage/barrageSubmit', 'Api\BgyController@index');
+    Route::post('barrage/barrageSubmit', 'Api\BgyController@create');
+});
 
 //抽奖
 Route::get('zl/result', 'Zl\ZlController@draw');
@@ -148,3 +151,10 @@ Route::get('myLike2', 'MyLike\IndexController@index2');
  *哥伦比亚羽绒服显示热成像拍照
  */
 Route::get('columbia', 'Columbia\IndexController@index');
+
+/**
+ * 人脸融合
+ */
+Route::get('face/index', function () {
+    return view('face.test');
+});

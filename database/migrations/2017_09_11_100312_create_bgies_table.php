@@ -17,6 +17,8 @@ class CreateBgiesTable extends Migration
             $table->increments('id');
             $table->string('openid', 100)->unique();
             $table->string('nickname',20);
+            $table->string('phone',11);
+            $table->string('barrage',20);
             $table->string('avatar',200);
             $table->boolean('status')->default(0);
             $table->timestamps();
