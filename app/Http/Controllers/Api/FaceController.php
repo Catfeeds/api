@@ -13,12 +13,14 @@ class FaceController extends Controller
         $image = $request->input('photo');
         $model = $request->input('model');
 
-        return  $image;
         $app_id = env('face_app_id');
         $time_stamp = time();
         $nonce_str = rand(1, 100000);
         $app_key = env('face_app_key');
         $image = str_replace('data:image/jpeg;base64,', '' , $image);
+        $image = str_replace('data:image/png;base64,', '' , $image);
+        $image = str_replace('data:image/jpg;base64,', '' , $image);
+
         $str = 'app_id='.urlencode($app_id) . '&image=' . urlencode($image)
             . '&model=' .urlencode($model) . '&nonce_str=' . urlencode($nonce_str)
             . '&time_stamp=' . urlencode($time_stamp) . '&app_key=' . urlencode($app_key);
