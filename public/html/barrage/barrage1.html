@@ -136,14 +136,14 @@
             '6666666666'
         ]
 
-        //  Echo.channel('Zl')
-        //      .listen('ZlBarrage', (e) => {
-        //          var info1 = {
-        //              'info': e.barrage
-        //          }
-        //          infos.push(info1);
-        //          msg.push(info1.info);
-        //      });
+          Echo.channel('Zl')
+              .listen('ZlBarrage', (e) => {
+                  var info1 = {
+                      'info': e.barrage
+                  }
+                  infos.push(info1);
+                  msg.push(info1.info);
+              });
         
         setInterval(function(){
             if(infos.length < 30){
