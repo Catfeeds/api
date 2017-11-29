@@ -82,6 +82,7 @@ Route::post('myLike2/upload', 'MyLike\ApiController@upload2');
  * columbia 热成像图片上传接口
  */
 Route::post('/columbia/photo', 'Api\ImageController@columbia');
+Route::post('/columbia/photo2', 'Api\ImageController@columbia2');
 
 /**
  * 人脸融合接口

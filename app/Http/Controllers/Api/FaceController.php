@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
 
+
 class FaceController extends Controller
 {
     public function upload(Request $request)

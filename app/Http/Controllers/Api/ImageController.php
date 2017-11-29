@@ -77,4 +77,11 @@ class ImageController extends Controller
             ->putFile('columbia', $request->file('photo'));
         return 'https://api.shanghaichujie.com/columbia?path='.$path;
     }
+
+    public function columbia2(Request $request)
+    {
+        $path = Storage::disk('public_path')
+            ->putFile('columbia', $request->file('photo'));
+        return 'https://api.shanghaichujie.com/columbia?path='.$path;
+    }
 }
