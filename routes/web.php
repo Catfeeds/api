@@ -85,7 +85,7 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function
  */
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
     //游戏首页
-    Route::get('aiaGame/index', function (){
+    Route::get('aiaGame/index', function () {
         return redirect('http://cs.touchworld-sh.com/lolo/aia_end/');
     });
     //游戏战绩页面
@@ -157,4 +157,35 @@ Route::get('columbia', 'Columbia\IndexController@index');
  */
 Route::get('face/index', function () {
     return view('face.test');
+});
+
+/**
+ * 浪琴h5 8场活动
+ */
+
+Route::group(['prefix' => 'longines'], function () {
+    Route::get('sjz', function (){
+        return '尚未开放';
+    });
+    Route::get('bd', function (){
+        return '尚未开放';
+    });
+    Route::get('hhht', function (){
+        return '尚未开放';
+    });
+    Route::get('hz/jl', function (){
+        return '尚未开放';
+    });
+    Route::get('hz/yt', function (){
+        return '尚未开放';
+    });
+    Route::get('bj/lx', function (){
+        return '尚未开放';
+    });
+    Route::get('bj/sl', function (){
+        return '尚未开放';
+    });
+    Route::get('bj/ssj', function (){
+        return '尚未开放';
+    });
 });
