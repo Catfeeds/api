@@ -185,7 +185,7 @@ Route::group(['prefix' => 'longines'], function () {
     Route::get('bj/sl', function (){
         return '尚未开放';
     });
-    Route::get('bj/ssj', function (){
+    Route::get('bj/xsj', function (){
         return '尚未开放';
     });
 });
