@@ -164,9 +164,7 @@ Route::get('face/index', function () {
  */
 
 Route::group(['prefix' => 'longines'], function () {
-    Route::get('sjz', function (){
-        return '尚未开放';
-    });
+    Route::get('sjz', 'Longines\IndexController@sjz');
     Route::get('bd', function (){
         return '尚未开放';
     });
@@ -188,4 +186,7 @@ Route::group(['prefix' => 'longines'], function () {
     Route::get('bj/xsj', function (){
         return '尚未开放';
     });
+    Route::get('socket/{location}', 'Longines\HelperController@socket');
+
+    Route::get('share', 'Longines\HelperController@share');
 });

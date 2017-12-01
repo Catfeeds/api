@@ -1,0 +1,266 @@
+/* 公共样式 */
+body{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 1040px;
+    overflow: hidden;
+}
+section{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 1040px;
+    overflow: hidden;
+}
+.hidden{
+    display: none;
+}
+
+/* music */
+.switch{
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    width: 50px;
+    height: 50px;
+    z-index: 9999999;
+}
+
+/* loading */
+.loading{
+    font-size: 48px;
+    text-align: center;
+}
+.loading .num{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45%;
+    margin: auto;
+}
+.loading .text{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 55%;
+    margin: auto;
+}
+
+/* page1 */
+.page1{
+    background: #fff;
+}
+.page1 #tree{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    margin: auto;
+}
+.page1 .progress_box{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    margin: auto;
+    width: 500px;
+    height: 30px;
+    border: 2px solid #0b1f3f;
+}
+.page1 .progress_box #horse{
+    position: absolute;
+    bottom: 10px;
+    margin-left: -60px;
+}
+.page1 .progress_box span{
+    display: block;
+    width: 0;
+    height: 30px;
+    background: #0b1f3f;
+}
+
+.page1 .tips{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    margin: auto;
+    width: 500px;
+    height: 30px;
+    text-align: center;
+}
+.page1 .tips .horse{
+    position: absolute;
+    top: -120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+.page1 .tips span{
+    font-size: 24px;
+    font-family: '微软雅黑';
+    font-weight: bolder;
+}
+.page1 .popup{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: auto;
+    width: 500px;
+    height: 270px;
+    background: #0b1f3f;
+}
+.page1 p{
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+.page1 button{
+    padding: 10px 20px;
+    background: transparent;
+    outline: none;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* page2 */
+.page2{
+    background: #0b1f3f;
+}
+.page2 .select{
+    position: absolute;
+    top: 60px;
+}
+.page2 #select1{
+    left: 65px;
+}
+.page2 #select2{
+    right: 65px;
+}
+.page2 #select3{
+    top: 490px;
+    left: 65px;
+}
+.page2 #select4{
+    top: 490px;
+    right: 65px;
+}
+.page2 p{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    margin: auto;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* scene公共样式 */
+.scene #text{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    margin: auto;
+    width: 400px;;
+    height: 30px;
+    text-align: center;
+    color: #0b1f3f;
+}
+.scene #username{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 140px;
+    margin: auto;
+    width: 400px;;
+    height: 30px;
+    text-align: center;
+    color: #0b1f3f;
+}
+.scene div{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    text-align: center;
+}
+.scene button{
+    padding: 10px 20px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* scene1 */
+.scene1{
+    background: url(../images/scene1.png) no-repeat center center;
+}
+
+/* scene2 */
+.scene2{
+    background: url(../images/scene2.png) no-repeat center center;
+}
+
+/* scene3 */
+.scene3{
+    background: url(../images/scene3.png) no-repeat center center;
+}
+
+/* scene4 */
+.scene4{
+    background: url(../images/scene4.png) no-repeat center center;
+}
+
+/* show_scene */
+.show_scene{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 1040px;
+}
+.show_scene .text{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+    width: 400px;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    /* font-family: 'pianpian'; */
+}
+.show_scene .username{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+}
+.show_scene .share_box{
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    color: #fff;
+    font-size: 18px;
+}
+.show_scene .share_box img{
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    margin-left: 5px;
+}
