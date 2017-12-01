@@ -13,10 +13,10 @@ class IndexController extends Controller
         $location = "sjz";
         $status = Redis::get('sjz_status');
         if (is_null($status)) {
-            Redis::setex('sjz_status', 10, 'true');
+            Redis::setex('sjz_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待10秒后重试';
+        return '有其他用户正在游戏中～请等待15秒后重试';
     }
 
     public function bd()
@@ -24,10 +24,10 @@ class IndexController extends Controller
         $location = "bd";
         $status = Redis::get('bd_status');
         if (is_null($status)) {
-            Redis::setex('bd_status', 10, 'true');
+            Redis::setex('bd_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待10秒后重试';
+        return '有其他用户正在游戏中～请等待15秒后重试';
     }
 
     public function hhht()
@@ -35,10 +35,10 @@ class IndexController extends Controller
         $location = "hhht";
         $status = Redis::get('hhht_status');
         if (is_null($status)) {
-            Redis::setex('hhht_status', 10, 'true');
+            Redis::setex('hhht_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待10秒后重试';
+        return '有其他用户正在游戏中～请等待15秒后重试';
     }
 
     public function bjlx()
@@ -46,10 +46,10 @@ class IndexController extends Controller
         $location = "bjlx";
         $status = Redis::get('bjlx_status');
         if (is_null($status)) {
-            Redis::setex('bjlx_status', 10, 'true');
+            Redis::setex('bjlx_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待10秒后重试';
+        return '有其他用户正在游戏中～请等待15秒后重试';
     }
 
     public function bjsl()
@@ -57,10 +57,10 @@ class IndexController extends Controller
         $location = "bjsl";
         $status = Redis::get('bjsl_status');
         if (is_null($status)) {
-            Redis::setex('bjsl_status', 10, 'true');
+            Redis::setex('bjsl_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待10秒后重试';
+        return '有其他用户正在游戏中～请等待15秒后重试';
     }
 
     public function bfxsj()
@@ -68,10 +68,10 @@ class IndexController extends Controller
         $location = "bfxsj";
         $status = Redis::get('bfxsj_status');
         if (is_null($status)) {
-            Redis::setex('bfxsj_status', 10, 'true');
+            Redis::setex('bfxsj_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待10秒后重试';
+        return '有其他用户正在游戏中～请等待15秒后重试';
     }
 
     public function hzjl()
@@ -79,10 +79,10 @@ class IndexController extends Controller
         $location = "hzjl";
         $status = Redis::get('hzjl_status');
         if (is_null($status)) {
-            Redis::setex('hzjl_status', 10, 'true');
+            Redis::setex('hzjl_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待10秒后重试';
+        return '有其他用户正在游戏中～请等待15秒后重试';
     }
 
     public function hzyt()
@@ -90,10 +90,10 @@ class IndexController extends Controller
         $location = "hzyt";
         $status = Redis::get('hzyt_status');
         if (is_null($status)) {
-            Redis::setex('hzyt_status', 10, 'true');
+            Redis::setex('hzyt_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待10秒后重试';
+        return '有其他用户正在游戏中～请等待15秒后重试';
     }
 
 }
