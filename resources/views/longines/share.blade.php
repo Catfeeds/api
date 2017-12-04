@@ -41,7 +41,7 @@
         wx.onMenuShareTimeline({
             title: 'Longines', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "https://api.shanghaichujie.com/longines/share?username={{ $username }}&text={{ $text }}&scene={{ $scene }}",
+            link: encodeURI("https://api.shanghaichujie.com/longines/share?username={{ $username }}&text={{ $text }}&scene={{ $scene }}"),
             imgUrl: "{{ asset('res/longines/images/select2.png') }}", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
@@ -52,7 +52,7 @@
             title: 'Longines', // 分享标题
             desc: "我在浪琴点亮了圣诞树", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "https://api.shanghaichujie.com/longines/share?username={{ $username }}&text={{ $text }}&scene={{ $scene }}",
+            link: encodeURI("https://api.shanghaichujie.com/longines/share?username={{ $username }}&text={{ $text }}&scene={{ $scene }}"),
             imgUrl: "{{ asset('res/longines/images/select2.png') }}", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
