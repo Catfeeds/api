@@ -165,7 +165,7 @@ section{
 
 
 /* scene公共样式 */
-.scene #text{
+.scene .input_text{
     position: absolute;
     left: 0;
     right: 0;
@@ -176,7 +176,7 @@ section{
     text-align: center;
     color: #0b1f3f;
 }
-.scene #username{
+.scene .input_username{
     position: absolute;
     left: 0;
     right: 0;

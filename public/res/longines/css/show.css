@@ -1,0 +1,72 @@
+/* 公共样式 */
+body{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 1040px;
+    overflow: hidden;
+}
+section{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 1040px;
+    overflow: hidden;
+}
+.hidden{
+    display: none;
+}
+
+.switch{
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    width: 50px;
+    height: 50px;
+    z-index: 9999999;
+}
+
+
+/* show scene */
+.show_bg{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 640px;
+   height: 1040px; 
+}
+.show_scene .text{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+    width: 400px;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    /* font-family: 'pianpian'; */
+}
+.show_scene .username{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+}
+.show_scene .share_box{
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    color: #fff;
+    font-size: 18px;
+}
+.show_scene .share_box img{
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    margin-left: 5px;
+}

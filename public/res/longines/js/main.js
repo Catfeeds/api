@@ -1,10 +1,9 @@
 $(function(){
     var tree, tree_arr = [];
     var horse, horse_arr = [];
-    var audio_state = 'on';
+    
     init_img();
     init_anim();
-    init_audio();
     init_loading();
 
     document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
@@ -51,81 +50,48 @@ $(function(){
             $('.switch').attr('src', 'images/off_white.png');
         }
         $('.switch').show();
-
+       
     })
 
     // send friend
     $('button').on('touchend',function(){
+        var text, username, scene;
         switch($(this).attr('id')){
-            case 'scene1':
-                $('.show_scene .text').html($('.scene1 input').val());
-                $('.show_scene .username').html($('.scene1 input').val());
-                $('.show_scene').css({
-                    "background": 'url(images/scene1.png)'
-                }).fadeIn().siblings('section').hide();
+            case 'scene1': 
+                text = $('.scene1 .input_text').val();
+                username = $('.scene1 .input_username').val();
+                scene = 1;
                 break;
             case 'scene2':
-                $('.show_scene .text').html($('.scene2 input').val());
-                $('.show_scene .username').html($('.scene2 input').val());
-                $('.show_scene').css({
-                    "background": 'url(images/scene2.png)'
-                }).fadeIn().siblings('section').hide();
+                text = $('.scene2 .input_text').val();
+                username = $('.scene2 .input_username').val();
+                scene = 2;
                 break;
             case 'scene3':
-                $('.show_scene .text').html($('.scene3 input').val());
-                $('.show_scene .username').html($('.scene3 input').val());
-                $('.show_scene').css({
-                    "background": 'url(images/scene3.png)'
-                }).fadeIn().siblings('section').hide();
+                text = $('.scene3 .input_text').val();
+                username = $('.scene3 .input_username').val();
+                scene = 3;
                 break;
             case 'scene4':
-                $('.show_scene .text').html($('.scene4 input').val());
-                $('.show_scene .username').html($('.scene4 input').val());
-                $('.show_scene').css({
-                    "background": 'url(images/scene4.png)'
-                }).fadeIn().siblings('section').hide();
+                text = $('.scene4 .input_text').val();
+                username = $('.scene4 .input_username').val();
+                scene = 4;
                 break;
         }
-        var youzikuClient = new YouzikuClient();
-        var data = {
-            Tags: [{
-                AccessKey:'ceccf5bd7d0246da8adabd8e0cefd5ea',
-                Content: $('.show_scene .text').html(),
-                Tag: '.show_scene .text'
-            },{
-                AccessKey:'ceccf5bd7d0246da8adabd8e0cefd5ea',
-                Content: $('.show_scene .username').html(),
-                Tag: '.show_scene .username'
-            }]
-        }
-        var entity={
-            AccessKey:'ceccf5bd7d0246da8adabd8e0cefd5ea',
-            Content: $('.show_scene .text').html(),
-            Tag: '.show_scene .text'
-        };
 
-        youzikuClient.getBatchFontFace(data, function (json) {
-            if(json.Code == 200){
-                $('head').append('<style>' + json.FontfaceList[0].FontFace + '</style>');
-                for(var i = 0; i < json.FontfaceList.length; i++){
-                    var item = json.FontfaceList[i];
-                    $('head').append('<style>' + item.FontFace + '</style>');
-                    $(item.Tag).addClass('animated zoomIn').show();
-                }
-            }
-        });
-
+        //跳转地址
+        // window.location.href = 'http://www.baidu.com?text='+text+'&username='+username+'&scene='+scene;
     })
 
     function init_img(){
         //tree
         for(var i = 1; i < 56; i++){
-            tree_arr.push('../res/longines/images/step/' + i + '.png');
+            tree_arr.push('../../res/longines/images/step/' + i + '.png');
         }
 
         //horse
         for(var i = 1; i < 5; i++){
-            horse_arr.push('../res/longines/images/horse/horse' + i + '.png');
+            horse_arr.push('../../res/longines/images/horse/horse' + i + '.png');
         }
     }
 
@@ -150,7 +116,7 @@ $(function(){
             'images/select4.png',
             'images/share.png',
         ];
-
+        
         fileList = tempArr.concat(tree_arr, horse_arr);
 
         for(var i = 0, len = fileList.length; i < len; i++){
@@ -183,7 +149,7 @@ $(function(){
         },30);
         loader.start();
     }
-
+    
     function init_anim(){
         //tree
         tree = new SequenceFrame({
@@ -199,8 +165,6 @@ $(function(){
                 $('.page1 .popup').fadeIn();
                 $('.page1 .progress_box').hide();
                 progressstate = false;
-                //触发圣诞树点亮事件
-                socketIo();
             },
             img_num: function(num , allnum){
                 var percent = num / allnum * 100 + '%';
@@ -221,41 +185,6 @@ $(function(){
             loop: true,
             imgArr: horse_arr,
             autoplay: true,
-        })
-    }
-
-    function init_audio(){
-        var audio = document.getElementById('audio');
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            audio.play();
-        }, false);
-        window.addEventListener('touchstart', function firstTouch(){
-            audio.play();
-            this.removeEventListener('touchstart', firstTouch);
-        });
-        $('.switch').click(function(){
-            if($('.switch').attr('src') == 'images/on_black.png'){
-                //关闭黑色按钮
-                $('.switch').attr('src', 'images/off_black.png');
-                audio_state = 'off';
-                audio.pause();
-            }else if($('.switch').attr('src') == 'images/off_black.png'){
-                //打开黑色按钮
-                $('.switch').attr('src', 'images/on_black.png');
-                audio_state = 'on';
-                audio.play();
-            }else if($('.switch').attr('src') == 'images/on_white.png'){
-                //关闭白色按钮
-                $('.switch').attr('src', 'images/off_white.png');
-                audio_state = 'off';
-                audio.pause();
-            }else if($('.switch').attr('src') == 'images/off_white.png'){
-                //打开白色按钮
-                $('.switch').attr('src', 'images/on_white.png');
-                audio_state = 'on';
-                audio.play();
-            }
-
         })
     }
 })
