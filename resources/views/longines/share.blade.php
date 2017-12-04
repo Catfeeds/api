@@ -30,7 +30,7 @@
 </section>
 
 <script src="../../res/longines/js/jquery.js"></script>
-<script src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.service.sdk.min.js" type="text/javascript"></script>
+<script src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.service.sdk.min.js" type="text/javascript"></script>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
 <script type="application/javascript">
     wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
