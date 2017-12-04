@@ -7,7 +7,7 @@
     <meta name="x5-fullscreen" content="true">
     <meta name="full-screen" content="yes">
     <title>LONGINES</title>
-    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../../res/longines/css/normalize.css">
     <style>
         body{
             position: absolute;
@@ -30,7 +30,7 @@
             left: 0;
             top: 0;
             width: 640px;
-            height: 1040px; 
+            height: 1040px;
         }
         .busy_scene .text{
             position: absolute;
@@ -45,10 +45,10 @@
     </style>
 </head>
 <body>
-   
+
     <!-- busy scene -->
     <section class="busy_scene">
-        <img src="../images/scene3.png" class="busy_bg">
+        <img src="../../res/longines/images/scene3.png" class="busy_bg">
         <div class="text">
             有玩家正在互动中<br/>请等待15秒后重试
         </div>

@@ -1,35 +1,37 @@
-$(function(){
+$(function () {
     var tree, tree_arr = [];
     var horse, horse_arr = [];
-    
+
     init_img();
     init_anim();
     init_loading();
 
-    document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
+    document.addEventListener('touchmove', function (e) {
+        e.preventDefault()
+    }, false);
     // page1
     var movestate = true;
     var progressstate = true;
-    $('.page1').on('touchmove',function(){
-        if(movestate && progressstate){
+    $('.page1').on('touchmove', function () {
+        if (movestate && progressstate) {
             tree.play();
             $('.tips').hide();
             $('.progress_box').show();
         }
         movestate = false;
     })
-    $('.page1').on('touchend',function(){
+    $('.page1').on('touchend', function () {
         tree.pause();
         movestate = true;
     })
-    $('.page1 button').on('touchend', function(){
+    $('.page1 button').on('touchend', function () {
         $('.page2').fadeIn().siblings('section').hide();
         $('.switch').hide();
     })
 
     // page2
-    $('.page2 .select').on('touchend',function(){
-        switch($(this).attr('id')){
+    $('.page2 .select').on('touchend', function () {
+        switch ($(this).attr('id')) {
             case 'select1':
                 $('.scene1').fadeIn().siblings('section').hide();
                 break;
@@ -44,20 +46,20 @@ $(function(){
                 break;
         }
 
-        if(audio_state == 'on'){
-            $('.switch').attr('src', 'images/on_white.png');
-        }else if(audio_state == 'off'){
-            $('.switch').attr('src', 'images/off_white.png');
+        if (audio_state == 'on') {
+            $('.switch').attr('src', '../../res/longines/images/on_white.png');
+        } else if (audio_state == 'off') {
+            $('.switch').attr('src', '../../res/longines/images/off_white.png');
         }
         $('.switch').show();
-       
+
     })
 
     // send friend
-    $('button').on('touchend',function(){
+    $('.share_button').on('touchend', function () {
         var text, username, scene;
-        switch($(this).attr('id')){
-            case 'scene1': 
+        switch ($(this).attr('id')) {
+            case 'scene1':
                 text = $('.scene1 .input_text').val();
                 username = $('.scene1 .input_username').val();
                 scene = 1;
@@ -79,23 +81,27 @@ $(function(){
                 break;
         }
 
-        //跳转地址
-        // window.location.href = 'http://www.baidu.com?text='+text+'&username='+username+'&scene='+scene;
+        if (text == '' || username == '') {
+            alert('署名或祝福语不能为空');
+        } else {
+            //跳转地址
+            window.location.href = 'https://api.shanghaichujie.com/longines/share?text=' + text + '&username=' + username + '&scene=' + scene;
+        }
     })
 
-    function init_img(){
+    function init_img() {
         //tree
-        for(var i = 1; i < 56; i++){
+        for (var i = 1; i < 56; i++) {
             tree_arr.push('../../res/longines/images/step/' + i + '.png');
         }
 
         //horse
-        for(var i = 1; i < 5; i++){
+        for (var i = 1; i < 5; i++) {
             horse_arr.push('../../res/longines/images/horse/horse' + i + '.png');
         }
     }
 
-    function init_loading(){
+    function init_loading() {
         var loader = new PxLoader();
         var URL = window.location.href;
         var BASE_PATH = URL.substring(0, URL.lastIndexOf('/') + 1);
@@ -104,7 +110,7 @@ $(function(){
         var myLoadingInterval = null;
         var tempArr = [];
         //加入数组
-        var fileList= [
+        var fileList = [
             'images/page1_tree.png',
             'images/scene1.png',
             'images/scene2.png',
@@ -116,41 +122,41 @@ $(function(){
             'images/select4.png',
             'images/share.png',
         ];
-        
+
         fileList = tempArr.concat(tree_arr, horse_arr);
 
-        for(var i = 0, len = fileList.length; i < len; i++){
+        for (var i = 0, len = fileList.length; i < len; i++) {
             var pxImage = new PxLoaderImage(BASE_PATH + fileList[i]);
             pxImage.imageNumber = i + 1;
             loader.add(pxImage);
         }
-        loader.addCompletionListener(function(){
-            console.log("预加载图片："+fileList.length+"张");
+        loader.addCompletionListener(function () {
+            console.log("预加载图片：" + fileList.length + "张");
         });
-        loader.addProgressListener(function(e){
-            var percent = Math.round( (e.completedCount / e.totalCount) * 100); //正序, 1-100
+        loader.addProgressListener(function (e) {
+            var percent = Math.round((e.completedCount / e.totalCount) * 100); //正序, 1-100
             realLoadingNum = percent;
         });
         var loading = document.getElementById('loading');
         var load_num = document.getElementById('load_num');
-        myLoadingInterval = setInterval(function(){
+        myLoadingInterval = setInterval(function () {
             fakeLoadingNum++;
-            if(realLoadingNum > fakeLoadingNum){
+            if (realLoadingNum > fakeLoadingNum) {
                 $('.loading .num')[0].innerHTML = fakeLoadingNum + "%";
-            }else{
+            } else {
                 $('.loading .num')[0].innerHTML = realLoadingNum + "%";
             }
-            if(fakeLoadingNum >= 100 && realLoadingNum >= 100){
+            if (fakeLoadingNum >= 100 && realLoadingNum >= 100) {
                 $('.loading').hide();
                 $('.page1').show();
                 $('.ling').show();
                 clearInterval(myLoadingInterval);
             }
-        },30);
+        }, 30);
         loader.start();
     }
-    
-    function init_anim(){
+
+    function init_anim() {
         //tree
         tree = new SequenceFrame({
             id: $('#tree')[0],
@@ -161,12 +167,13 @@ $(function(){
             loop: false,
             imgArr: tree_arr,
             autoplay: false,
-            callback: function(){
+            callback: function () {
                 $('.page1 .popup').fadeIn();
                 $('.page1 .progress_box').hide();
                 progressstate = false;
+                socketIo();
             },
-            img_num: function(num , allnum){
+            img_num: function (num, allnum) {
                 var percent = num / allnum * 100 + '%';
                 $('.progress_box span').width(percent);
                 $('.progress_box #horse').css({

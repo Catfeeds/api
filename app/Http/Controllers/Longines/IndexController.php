@@ -16,7 +16,7 @@ class IndexController extends Controller
             Redis::setex('sjz_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待15秒后重试';
+        return view('longines.busy');
     }
 
     public function bd()
@@ -27,7 +27,7 @@ class IndexController extends Controller
             Redis::setex('bd_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待15秒后重试';
+        return view('longines.busy');
     }
 
     public function hhht()
@@ -38,7 +38,7 @@ class IndexController extends Controller
             Redis::setex('hhht_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待15秒后重试';
+        return view('longines.busy');
     }
 
     public function bjlx()
@@ -49,7 +49,7 @@ class IndexController extends Controller
             Redis::setex('bjlx_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待15秒后重试';
+        return view('longines.busy');
     }
 
     public function bjsl()
@@ -60,10 +60,10 @@ class IndexController extends Controller
             Redis::setex('bjsl_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待15秒后重试';
+        return view('longines.busy');
     }
 
-    public function bfxsj()
+    public function bjxsj()
     {
         $location = "bfxsj";
         $status = Redis::get('bfxsj_status');
@@ -71,7 +71,7 @@ class IndexController extends Controller
             Redis::setex('bfxsj_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待15秒后重试';
+        return view('longines.busy');
     }
 
     public function hzjl()
@@ -82,7 +82,7 @@ class IndexController extends Controller
             Redis::setex('hzjl_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待15秒后重试';
+        return view('longines.busy');
     }
 
     public function hzyt()
@@ -93,7 +93,7 @@ class IndexController extends Controller
             Redis::setex('hzyt_status', 15, 'true');
             return view('longines.index', compact('location'));
         }
-        return '有其他用户正在游戏中～请等待15秒后重试';
+        return view('longines.busy');
     }
 
 }

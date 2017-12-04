@@ -28,8 +28,10 @@ class HelperController extends Controller
 
     public function share(Request $request)
     {
+        $js = $this->js;
         $text = $request->text;
         $username = $request->username;
-
+        $scene = $request->scene;
+        return view('longines.share', compact('text', 'username', 'scene', 'js'));
     }
 }

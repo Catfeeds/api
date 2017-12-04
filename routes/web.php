@@ -165,27 +165,13 @@ Route::get('face/index', function () {
 
 Route::group(['prefix' => 'longines'], function () {
     Route::get('sjz', 'Longines\IndexController@sjz');
-    Route::get('bd', function (){
-        return '尚未开放';
-    });
-    Route::get('hhht', function (){
-        return '尚未开放';
-    });
-    Route::get('hz/jl', function (){
-        return '尚未开放';
-    });
-    Route::get('hz/yt', function (){
-        return '尚未开放';
-    });
-    Route::get('bj/lx', function (){
-        return '尚未开放';
-    });
-    Route::get('bj/sl', function (){
-        return '尚未开放';
-    });
-    Route::get('bj/xsj', function (){
-        return '尚未开放';
-    });
+    Route::get('bd', 'longines\IndexController@bd');
+    Route::get('hhht', 'Longines\IndexController@hhht');
+    Route::get('hz/jl', 'Longines\IndexController@hzjl');
+    Route::get('hz/yt', 'Longines\IndexController@hzyt');
+    Route::get('bj/lx', 'Longines\IndexController@bjlx');
+    Route::get('bj/sl', 'Longines\IndexController@bjsl');
+    Route::get('bj/xsj', 'Longines\IndexController@bjxsj');
     Route::get('socket/{location}', 'Longines\HelperController@socket');
 
     Route::get('share', 'Longines\HelperController@share');

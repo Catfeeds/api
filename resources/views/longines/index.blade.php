@@ -20,7 +20,7 @@
 
     <img src="../../res/longines/images/on_black.png" class="switch">
     <audio src="../../res/longines/images/music.mp3" id="audio" preload="auto" loop="loop" autoplay="autoplay"></audio>
-    
+
     <!-- page1 -->
     <section class="page1 hidden">
         <canvas id="tree"></canvas>
@@ -52,29 +52,29 @@
     <section class="scene1 scene hidden">
         <input type="text" placeholder="输入问候" class="input_text">
         <input type="text" placeholder="你的署名" class="input_username">
-        <div><button id="scene1">发送给朋友</button></div>
+        <div><button id="scene1" class="share_button" 发送给朋友</button></div>
     </section>
 
     <!-- scene2 -->
     <section class="scene2 scene hidden">
         <input type="text" placeholder="输入问候" class="input_text">
         <input type="text" placeholder="你的署名" class="input_username">
-        <div><button id="scene2">发送给朋友</button></div>
+        <div><button id="scene2" class="share_button">发送给朋友</button></div>
     </section>
 
     <!-- scene3 -->
     <section class="scene3 scene hidden">
         <input type="text" placeholder="输入问候" class="input_text">
         <input type="text" placeholder="你的署名" class="input_username">
-        <div><button id="scene3">发送给朋友</button></div>
+        <div><button id="scene3" class="share_button">发送给朋友</button></div>
     </section>
     <!-- scene4 -->
     <section class="scene4 scene hidden">
         <input type="text" placeholder="输入问候" class="input_text">
         <input type="text" placeholder="你的署名" class="input_username">
-        <div><button id="scene4">发送给朋友</button></div>
+        <div><button id="scene4" class="share_button">发送给朋友</button></div>
     </section>
-    
+
     <script src="../../res/longines/js/jquery.js"></script>
     <script src="../../res/longines/js/pxloader-all.min.js"></script>
     <script src="../../res/longines/js/sequenceFrame.js"></script>
@@ -97,26 +97,26 @@
         $('.switch').click(function(){
             if($('.switch').attr('src') == 'images/on_black.png'){
                 //关闭黑色按钮
-                $('.switch').attr('src', 'images/off_black.png');
+                $('.switch').attr('src', '../../res/longines/images/off_black.png');
                 audio_state = 'off';
                 audio.pause();
-            }else if($('.switch').attr('src') == 'images/off_black.png'){
+            }else if($('.switch').attr('src') == '../../res/longines/images/off_black.png'){
                 //打开黑色按钮
-                $('.switch').attr('src', 'images/on_black.png');
+                $('.switch').attr('src', '../../res/longines/images/on_black.png');
                 audio_state = 'on';
                 audio.play();
-            }else if($('.switch').attr('src') == 'images/on_white.png'){
+            }else if($('.switch').attr('src') == '../../res/longines/images/on_white.png'){
                 //关闭白色按钮
-                $('.switch').attr('src', 'images/off_white.png');
+                $('.switch').attr('src', '../../res/longines/images/off_white.png');
                 audio_state = 'off';
                 audio.pause();
-            }else if($('.switch').attr('src') == 'images/off_white.png'){
+            }else if($('.switch').attr('src') == '../../res/longines/images/off_white.png'){
                 //打开白色按钮
-                $('.switch').attr('src', 'images/on_white.png');
+                $('.switch').attr('src', '../../res/longines/images/on_white.png');
                 audio_state = 'on';
                 audio.play();
             }
-        
+
         })
     </script>
 </body>
