@@ -17,7 +17,7 @@ class HelperController extends Controller
      */
     public function __construct(Application $js)
     {
-        $this->js = $js;
+        $this->js = $js->js;
     }
 
     public function socket($location)
