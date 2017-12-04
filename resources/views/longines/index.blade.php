@@ -95,7 +95,7 @@
             this.removeEventListener('touchstart', firstTouch);
         });
         $('.switch').click(function(){
-            if($('.switch').attr('src') == 'images/on_black.png'){
+            if($('.switch').attr('src') == '../../res/longines/images/on_black.png'){
                 //关闭黑色按钮
                 $('.switch').attr('src', '../../res/longines/images/off_black.png');
                 audio_state = 'off';

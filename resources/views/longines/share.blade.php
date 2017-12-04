@@ -65,20 +65,20 @@
     var youzikuClient = new YouzikuClient();
     var data = {
         Tags: [{
-            AccessKey:'ceccf5bd7d0246da8adabd8e0cefd5ea',
+            AccessKey: 'ceccf5bd7d0246da8adabd8e0cefd5ea',
             Content: $('.show_scene .text').html(),
             Tag: '.show_scene .text'
-        },{
-            AccessKey:'ceccf5bd7d0246da8adabd8e0cefd5ea',
+        }, {
+            AccessKey: 'ceccf5bd7d0246da8adabd8e0cefd5ea',
             Content: $('.show_scene .username').html(),
             Tag: '.show_scene .username'
         }]
     }
 
     youzikuClient.getBatchFontFace(data, function (json) {
-        if(json.Code == 200){
+        if (json.Code == 200) {
             $('head').append('<style>' + json.FontfaceList[0].FontFace + '</style>');
-            for(var i = 0; i < json.FontfaceList.length; i++){
+            for (var i = 0; i < json.FontfaceList.length; i++) {
                 var item = json.FontfaceList[i];
                 $('head').append('<style>' + item.FontFace + '</style>');
                 $(item.Tag).addClass('animated zoomIn').show();
@@ -91,16 +91,16 @@
     document.addEventListener("WeixinJSBridgeReady", function () {
         audio.play();
     }, false);
-    window.addEventListener('touchstart', function firstTouch(){
+    window.addEventListener('touchstart', function firstTouch() {
         audio.play();
         this.removeEventListener('touchstart', firstTouch);
     });
-    $('.switch').click(function(){
-        if($('.switch').attr('src') == '../../res/longines/images/on_white.png'){
+    $('.switch').click(function () {
+        if ($('.switch').attr('src') == '../../res/longines/images/on_white.png') {
             //关闭白色按钮
             $('.switch').attr('src', '../../res/longines/images/off_white.png');
             audio.pause();
-        }else if($('.switch').attr('src') == '../images/off_white.png'){
+        } else if ($('.switch').attr('src') == '../../res/longines/images/off_white.png') {
             //打开白色按钮
             $('.switch').attr('src', '../../res/longines/images/on_white.png');
             audio.play();
