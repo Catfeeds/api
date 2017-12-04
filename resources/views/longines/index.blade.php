@@ -52,7 +52,7 @@
     <section class="scene1 scene hidden">
         <input type="text" placeholder="输入问候" class="input_text">
         <input type="text" placeholder="你的署名" class="input_username">
-        <div><button id="scene1" class="share_button" 发送给朋友</button></div>
+        <div><button id="scene1" class="share_button" >发送给朋友</button></div>
     </section>
 
     <!-- scene2 -->
