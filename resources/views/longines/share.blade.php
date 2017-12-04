@@ -27,7 +27,7 @@
     </div>
     <!-- 根据text和username参数更换div中的文字 -->
     <div class="text hidden">{{ $text }}</div>
-    <div class="username hidden">{{ $scene }}</div>
+    <div class="username hidden">{{ $username }}</div>
 </section>
 
 <script src="../../res/longines/js/jquery.js"></script>
