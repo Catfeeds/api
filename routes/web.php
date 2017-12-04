@@ -165,7 +165,7 @@ Route::get('face/index', function () {
 
 Route::group(['prefix' => 'longines'], function () {
     Route::get('sjz', 'Longines\IndexController@sjz');
-    Route::get('bd', 'longines\IndexController@bd');
+    Route::get('bd', 'Longines\IndexController@bd');
     Route::get('hhht', 'Longines\IndexController@hhht');
     Route::get('hz/jl', 'Longines\IndexController@hzjl');
     Route::get('hz/yt', 'Longines\IndexController@hzyt');
