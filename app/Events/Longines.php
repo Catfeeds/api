@@ -9,6 +9,7 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Support\Facades\Redis;
 
 class Longines implements ShouldBroadcast
 {
@@ -33,6 +34,7 @@ class Longines implements ShouldBroadcast
      */
     public function broadcastOn()
     {
+        Redis::incr('longines_count_'. $this->location);
         return new Channel('longines');
     }
 }
