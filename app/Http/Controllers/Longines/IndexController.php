@@ -65,7 +65,7 @@ class IndexController extends Controller
 
     public function bjxsj()
     {
-        $location = "bfxsj";
+        $location = "bjxsj";
         $status = Redis::get('bfxsj_status');
         if (is_null($status)) {
             Redis::setex('bfxsj_status', 15, 'true');
