@@ -6,6 +6,7 @@ use EasyWeChat\Foundation\Application;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Events\Longines;
+use Illuminate\Support\Facades\Redis;
 
 class HelperController extends Controller
 {
@@ -32,6 +33,7 @@ class HelperController extends Controller
         $text = $request->text;
         $username = $request->username;
         $scene = $request->scene;
+        Redis::incr('longines_share');
         return view('longines.share', compact('text', 'username', 'scene', 'js'));
     }
 }
