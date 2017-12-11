@@ -15,7 +15,7 @@
     <img src="{{ asset('alibaba/images/bg1.png') }}" alt="" class="bg">
     <div class="text">
         <p><span class="declareBg declareBg1">00000</span><span class="greyText">阿里人次申报公益时</span></p>
-        <p><span class="declareBg declareBg2">00000</span><span class="greyText">阿里人次申报>=3公益时</span></p>
+        <p><span class="declareBg declareBg2">00000</span><span class="greyText">阿里人申报>=3公益时</span></p>
         <div>
             <p class="textOnly">全体阿里人共申报</p>
             <p><span class="declareBg declareBg3">00000</span><span class="greenText">公益时</span></p>
