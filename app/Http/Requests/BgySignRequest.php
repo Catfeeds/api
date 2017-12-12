@@ -25,7 +25,7 @@ class BgySignRequest extends FormRequest
     {
         return [
             'phone' => 'bail|required|size:11',
-            'barrage' => 'required',
+            'name' => 'required',
         ];
     }
     public function messages()
@@ -33,7 +33,7 @@ class BgySignRequest extends FormRequest
         return [
             'phone.required' => '手机号不能为空',
             'phone.size' => '手机号格式不对',
-            'barrage.required' => '弹幕为必填项'
+            'name.required' => '姓名为必填项'
         ];
     }
 }

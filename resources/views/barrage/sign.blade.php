@@ -10,54 +10,44 @@
 </head>
 <body>
 <div class="bg_info">
-    <form action="{{ url('zl/sign') }}" method="post">
-        {{ csrf_field() }}
-        <div>
-            <span class="space">姓名</span>:
-            <input class="username" placeholder="请输入姓名" type="text" name="name" value="{{ old('name') }}"/>
-        </div>
-        <div>
-            <span class="space">电话</span>:
-            <input class="phone_number" placeholder="请输入正确的电话号码" name="phone" value="{{ old('phone') }}" type="text"/>
-        </div>
-        <label for="submit">
-            <input id="submit" type="submit" style="display: none">
-            <img src="{{ asset('zhongL/sign/img/btn_submit.png') }}" alt="">
-        </label>
-    </form>
+    @if(isset($status))
+        <p style="font-size: 45px;color: #FFFFFF;text-align: center;padding-top: 55%">
+            {{ $status }}
+        </p>
+    @else
+        <form action="{{ url('barrage/barrageSubmit') }}" method="post">
+            {{ csrf_field() }}
+            <div>
+                <span class="space">姓名</span>:
+                <input class="username" placeholder="请输入姓名" type="text" name="name" value="{{ old('name') }}"/>
+            </div>
+            <div>
+                <span class="space">电话</span>:
+                <input class="phone_number" placeholder="请输入正确的电话号码" name="phone" value="{{ old('phone') }}"
+                       type="text"/>
+            </div>
+            <label for="submit">
+                <input id="submit" type="submit" style="display: none">
+                <img src="{{ asset('zhongL/sign/img/btn_submit.png') }}" alt="">
+            </label>
+        </form>
+    @endif
 </div>
 </body>
 <script src="{{ asset('zhongL/sign/js/jquery-1.11.3.min.js') }}"></script>
 <script>
-    var status = false;
-    $('.username').blur(function () {
-        if($(this).val() == ''){
-            alert('姓名不能为空');
-            status = false;
-        }
-    });
     var reg = /^1[0-9]{10}$/;
-    $('.phone_number').blur(function () {
-        if(!reg.test($(this).val())){
-            alert('请输入正确的手机号码');
-            status = false;
-        }
-    });
-    $('form').submit(function(){
-
-        if(!status){
+    $('form').submit(function () {
+        if ($('.username').val() == "" || $('.username').val().length >= 10) {
+            alert('姓名填写有误');
             return false;
-        }else if($('.username').val() == ""){
-            alert('姓名不能为空');
-        }else if($('.phone_number').val() == ""){
-            alert('电话号码不能为空');
+        } else if ($('.phone_number').val() == "" || !reg.test($('.phone_number').val())) {
+            alert('电话号码格式错误');
+            return false;
         }
     })
-</script>
-<script type="application/javascript">
-    @if(session('success'))
-    alert('{{ session('success') }}');
-    @endif
+
+
     @if(count($errors)>0)
     @forEach($errors->all() as $error)
     @if($loop->first)

@@ -25,25 +25,25 @@ class BgyController extends Controller
 //        );
         $bgy = Bgy::where('openid', $userInfo["id"])->first();
         if (is_null($bgy)) {
-            return view('barrage.barrageSubmit');
+            return view('barrage.sign');
         }
-        return view('barrage.barrageSubmit')->with('status', '您已经签到过了！');
+        return view('barrage.sign')->with('status', '您已经签到过了！');
     }
 
     public function create(BgySignRequest $request)
     {
-        $barrage = $request->input('barrage');
+        $name = $request->input('name');
         $phone = $request->input('phone');
-        event(new ZlBarrage($barrage));
+//        event(new ZlBarrage($barrage));
         $userInfo = session('wechat.oauth_user');
         $bgy = new Bgy;
-        $bgy->barrage=$barrage;
+        $bgy->name=$name;
         $bgy->phone = $phone;
         $bgy->openid = $userInfo['id'];
         $bgy->avatar = $userInfo['avatar'];
         $bgy->nickname = $userInfo['name'];
         $bgy->save();
-        return view('barrage.barrageSubmit')->with('status', '提交成功');
+        return view('barrage.sign')->with('status', '提交成功!');
     }
 
     /**
