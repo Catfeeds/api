@@ -27,6 +27,33 @@
     </form>
 </div>
 </body>
+<script src="{{ asset('zhongL/sign/js/jquery-1.11.3.min.js') }}"></script>
+<script>
+    var status = false;
+    $('.username').blur(function () {
+        if($(this).val() == ''){
+            alert('姓名不能为空');
+            status = false;
+        }
+    });
+    var reg = /^1[0-9]{10}$/;
+    $('.phone_number').blur(function () {
+        if(!reg.test($(this).val())){
+            alert('请输入正确的手机号码');
+            status = false;
+        }
+    });
+    $('form').submit(function(){
+
+        if(!status){
+            return false;
+        }else if($('.username').val() == ""){
+            alert('姓名不能为空');
+        }else if($('.phone_number').val() == ""){
+            alert('电话号码不能为空');
+        }
+    })
+</script>
 <script type="application/javascript">
     @if(session('success'))
     alert('{{ session('success') }}');

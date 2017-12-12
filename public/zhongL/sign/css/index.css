@@ -13,7 +13,7 @@
     right: 0;
     margin:auto;
     width: 454px;
-    top:450px;
+    top:260px;
 }
 .bg_info form div{
     height: 60px;
@@ -50,9 +50,9 @@
     margin-top: 70px;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
-    color: #dac397;
+     color: #dac397;
 
-}
+ }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color: #dac397;
 }
