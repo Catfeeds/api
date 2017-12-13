@@ -87,3 +87,8 @@ Route::post('/columbia/photo', 'Api\ImageController@columbia');
  * 人脸融合接口
  */
 Route::post('qq/face/upload', 'Api\FaceController@upload');
+
+/**
+ * suning 上传参会人员信息
+ */
+Route::post('suning/userInfo', 'Api\SuningController@user');
