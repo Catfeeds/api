@@ -23,7 +23,7 @@ class SuningController extends Controller
                 'result' => false
             ]);
         }
-        $path = Storage::disk('public_path')->putFile('suning', $request->file('image'));
+        $path = Storage::disk('public_path')->putFile('suning', $request->image);
         $suning = new Suning;
         $suning->username = $request->username;
         $suning->job = $request->job;
