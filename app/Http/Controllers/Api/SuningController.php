@@ -25,7 +25,7 @@ class SuningController extends Controller
             ]);
         }
         $img = Image::make($request->image)->encode('jpg');
-        $path = public_path() . '/suning/' . str_random(30) . '.jpg';
+        $path = public_path() . '/upload/suning/' . time() . '.jpg';
         $img->save($path);
         $suning = new Suning;
         $suning->username = $request->username;
