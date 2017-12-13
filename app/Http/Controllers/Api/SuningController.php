@@ -14,7 +14,7 @@ class SuningController extends Controller
     {
         $validator = Validator::make($request->all(), [
            'username' => 'required|max:10',
-            'image' => 'required|mimes:jpeg,png,jpg',
+            'image' => 'required',
             'job' => 'required|max:20',
             'company' => 'required|max:20'
         ]);
