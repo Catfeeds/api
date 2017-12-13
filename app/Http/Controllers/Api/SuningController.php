@@ -24,14 +24,14 @@ class SuningController extends Controller
                 'result' => false
             ]);
         }
-        $img = Image::make($request->image);
+        $img = Image::make($request->image)->encode('jpg');
         $path = public_path() . '/suning/' . str_random(30) . '.jpg';
         $img->save($path);
         $suning = new Suning;
         $suning->username = $request->username;
         $suning->job = $request->job;
         $suning->company = $request->company;
-        $suning->avatar = env('APP_URL') . '/' . $path;
+        $suning->avatar = $path;
         $suning->save();
 
         return response()->json([
