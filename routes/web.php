@@ -12,7 +12,8 @@
 |
 */
 
-Route::get('test', 'TestController@test');
+Route::get('test', function (){
+});
 
 /*
  * 科思创项目
@@ -88,6 +89,7 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () 
     Route::get('aiaGame/index', function () {
         return redirect('http://cs.touchworld-sh.com/lolo/aia_end/');
     });
+    Route::get('aiaGame/show', 'Aia\AiaController@index');
     //游戏战绩页面
     Route::get('aiaGame/result', 'Aia\AiaController@result');
     //游戏失败页面
