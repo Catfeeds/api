@@ -86,10 +86,7 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function
  */
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
     //游戏首页
-    Route::get('aiaGame/index', function () {
-        return redirect('http://cs.touchworld-sh.com/lolo/aia_end/');
-    });
-    Route::get('aiaGame/show', 'Aia\AiaController@index');
+    Route::get('aiaGame/index', 'Aia\AiaController@index');
     //游戏战绩页面
     Route::get('aiaGame/result', 'Aia\AiaController@result');
     //游戏失败页面
