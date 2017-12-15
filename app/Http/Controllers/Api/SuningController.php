@@ -24,7 +24,7 @@ class SuningController extends Controller
                 'result' => false
             ]);
         }
-        $img = Image::make($request->image)->encode('jpg');
+        $img = Image::make($request->image)->encode('jpg')->resize(365,365);
         $path = public_path() . '/upload/suning/' . time() . '.jpg';
         $img->save($path);
         $suning = new Suning;
