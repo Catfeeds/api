@@ -61,8 +61,8 @@ class BgyController extends Controller
                 'url' => ''
             ]);
         }
-        $bgy->status = 1;
-        $bgy->save();
+//        $bgy->status = 1;
+//        $bgy->save();
 
         return response()->json([
             'code' => 1,
