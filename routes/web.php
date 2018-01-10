@@ -102,12 +102,12 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () 
 /**
  * 和讯网签到项目
  */
-Route::get('hxSign', function () {
-    return view('hx.register');
-});
-Route::post('hxSign/register', 'Hx\HxController@register');
-Route::get('hxSign/{id}', 'Hx\HxController@qrcode');
-Route::get('hxSms', 'Hx\HxController@sms');
+//Route::get('hxSign', function () {
+//    return view('hx.register');
+//});
+//Route::post('hxSign/register', 'Hx\HxController@register');
+//Route::get('hxSign/{id}', 'Hx\HxController@qrcode');
+//Route::get('hxSms', 'Hx\HxController@sms');
 
 /**
  * 赛诺菲星球邀请函
@@ -179,3 +179,5 @@ Route::group(['prefix' => 'longines'], function () {
 
     Route::get('share', 'Longines\HelperController@share');
 });
+
+Route::get('castrol/index', 'Castrol\CastrolController@index');

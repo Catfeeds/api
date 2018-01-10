@@ -92,3 +92,8 @@ Route::post('qq/face/upload', 'Api\FaceController@upload');
  * suning 上传参会人员信息
  */
 Route::post('suning/userInfo', 'Api\SuningController@user');
+
+/**
+ * Castrol 现场签到
+ */
+Route::post('castrol/photo/upload', 'Castrol\CastrolController@upload');
