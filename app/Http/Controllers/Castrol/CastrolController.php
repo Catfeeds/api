@@ -13,7 +13,7 @@ class CastrolController extends Controller
     {
 
         $path = Storage::disk('public_path')
-            ->putFile('castrol', $request->photo);
+            ->putFile('castrol', $request->file('photo'));
 
         $castrol = new Castrol();
         $castrol->path = $path;
