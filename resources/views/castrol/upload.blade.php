@@ -49,11 +49,14 @@
         };
         var reader2 = new FileReader();
         reader2.readAsBinaryString(this.files[0]);
+        photo =this.files[0];
     }
     $('.upload_comfirm').click(function () {
-        var formData = new FormData($('uploadForm').files[0]);
+        var formData = new FormData($('#uploadForm')[0]);
+        // console.log($('#uploadForm').files[1])
+        // formData.append('photo', $('#uploadForm')[0].files[0]);
         $.ajax({
-            url: 'https://api.shanghaichujie.com/api/castrol/photo/upload',
+            url: 'http://api.test/api/castrol/photo/upload',
             type: 'POST',
             data: formData,
             async: true,

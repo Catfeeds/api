@@ -22,7 +22,7 @@ class CastrolController extends Controller
     public function upload(Request $request)
     {
         $path = Storage::disk('public_path')
-            ->putFile('castrol', $request->file('file'));
+            ->putFile('castrol', $request->file('photo'));
         $bg = Image::make(public_path('res/castrol/img/castrol-bg.png'));
         $img = Image::make($request->file('photo'))->resize(16, 16);
 
