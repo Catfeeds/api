@@ -181,6 +181,8 @@ Route::group(['prefix' => 'longines'], function () {
 });
 
 Route::get('castrol/index', 'Castrol\CastrolController@index');
+
+Route::get('castrol/upload', 'Castrol\CastrolController@uploadPhoto');
 /**
  * 渣打银行h5兑奖
  */

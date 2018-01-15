@@ -46,4 +46,9 @@ class CastrolController extends Controller
 //        dd($paths);
         return view('castrol.index', compact('paths'));
     }
+
+    public function uploadPhoto()
+    {
+        return view('castrol.upload');
+    }
 }
