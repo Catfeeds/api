@@ -37,7 +37,7 @@
     </section>
     <div class="bigImage_popup hidden">
         <div class="bigImage">
-            <img src="../../res/castrol/img/big.png" alt="">
+            <img src="../../res/castrol/img/castrol-bg.png" alt="">
         </div>
         <div class="popup_cancel">X</div>
     </div>
