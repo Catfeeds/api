@@ -11,28 +11,39 @@
 </head>
 
 <body>
-<section id="home" class="">
-    <div class="main" id="main">
-        <div class="picAll">
+    <section id="home" class="">
+        <div class="main" id="main">
+            <div class="picAll">
+            </div>
+        </div>
+        <div class="btn">
+            <img src="../../res/castrol/img/bigImage.png" alt="" class="btn_bigImage">
+        </div>
+    </section>
+    <section id="swiper" class="hide">
+        <div class="bigImage_cancel">
+            X
+        </div>
+        <div class="swiper-container" id="swiper">
+            <!--放大图-->
+            <div class="swiper-wrapper">
+            </div>
+        </div>
+        <div class="bigImage_info">
+            <div class="bigImage_download">
+                <span>下载</span>
+            </div>
+        </div>
+    </section>
+    <div class="bigImage_popup hidden">
+        <div class="bigImage">
+            <img src="../../res/castrol/img/big.png" alt="">
+        </div>
+        <div class="popup_cancel">X</div>
+    </div>
 
-        </div>
-    </div>
-</section>
-<section id="swiper" class="hide">
-    <div class="bigImage_cancel">
-        X
-    </div>
-    <div class="swiper-container" id="swiper">
-        <!--放大图-->
-        <div class="swiper-wrapper">
-        </div>
-    </div>
-    <div class="bigImage_info">
-        <div class="bigImage_download">
-            <span>下载</span>
-        </div>
-    </div>
-</section>
+
+
 </body>
 <script src="../../res/castrol/js/jquery.js"></script>
 <script src="../../res/castrol/js/layui.js"></script>
@@ -45,6 +56,4 @@
     // .............end..............
 </script>
 <script src="../../res/castrol/js/index.js"></script>
-
-
 </html>

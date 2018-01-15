@@ -9,7 +9,6 @@
 
 
 
-
     layui.use('flow', function(){
         var flow = layui.flow;
         //按屏加载图片
@@ -71,6 +70,17 @@ function bigImage() {
 
     });
 }
+
+//上传图片;
+$('.popup_cancel').click(function () {
+    $(this).parent().hide();
+});
+$('.btn_bigImage').click(function () {
+    $('.bigImage_popup').show();
+});
+$('.upload_comfirm').click(function () {
+    $(this).parent().hide();
+})
 
 
 

@@ -17,6 +17,7 @@ class CastrolController extends Controller
      * @return string
      *
      * CASTROL现场签到合成图片
+     * 注意背景图片会被替换
      */
     public function upload(Request $request)
     {
@@ -43,6 +44,6 @@ class CastrolController extends Controller
     {
         $paths = Castrol::select('path')->get();
 //        dd($paths);
-        return view('castrol', compact('paths'));
+        return view('castrol.index', compact('paths'));
     }
 }

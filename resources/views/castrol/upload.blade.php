@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640,user-scalable=no">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/index2.css">
+    <link rel="stylesheet" href="../../res/castrol/css/reset.css">
+    <link rel="stylesheet" href="../../res/castrol/css/index2.css">
     <title>嘉实多</title>
 </head>
 <body>
@@ -14,17 +14,17 @@
         </div>
         <form id="uploadForm" enctype="multipart/form-data">
         <label for="file_input">
-            <img src="img/upload.png" alt="" class="btn_upload">
+            <img src="../../res/castrol/img/upload.png" alt="" class="btn_upload">
             <input name="photo" style="display: none" id="file_input" type="file" accept="image/*" multiple/>
         </label>
         </form>
-        <img src="img/comfirm.png" alt="" class="upload_comfirm">
+        <img src="../../res/castrol/img/comfirm.png" alt="" class="upload_comfirm">
 
 
     </section>
 
 </body>
-<script src="js/jquery.js"></script>
+<script src="../../res/castrol/js/jquery.js"></script>
 <script>
     var result;
     var photo;
@@ -49,16 +49,12 @@
         };
         var reader2 = new FileReader();
         reader2.readAsBinaryString(this.files[0]);
-        reader2.onload = function () {
-            photo = this.result;
-            console.log($())
-        }
     }
     $('.upload_comfirm').click(function () {
-        var formData = new FormData();
+        var formData = new FormData($('uploadForm').files[0]);
         formData.append('file', photo);
         $.ajax({
-            url: 'http://api.test/api/castrol/photo/upload',
+            url: 'https://api.shanghaichujie.com/api/castrol/photo/upload',
             type: 'POST',
             data: formData,
             async: true,
