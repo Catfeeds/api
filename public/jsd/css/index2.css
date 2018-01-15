@@ -1,0 +1,39 @@
+section{
+    width: 640px;
+    height: 1040px;
+    background:url("../img/p.png") no-repeat center;
+}
+img{
+    width: 240px;
+}
+.upload_image{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left:0;
+    right: 0;
+    margin:auto;
+    top:230px;
+    overflow: hidden;
+    background-color: white;
+}
+.upload_image img{
+    width: 400px;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+label{
+    position: absolute;
+    left:45px;
+    bottom: 200px;
+}
+.upload_comfirm{
+    position: absolute;
+    right: 45px;
+    bottom: 200px;
+}

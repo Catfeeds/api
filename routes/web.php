@@ -181,3 +181,9 @@ Route::group(['prefix' => 'longines'], function () {
 });
 
 Route::get('castrol/index', 'Castrol\CastrolController@index');
+/**
+ * 渣打银行h5兑奖
+ */
+Route::get('zc/index', function (){
+   return '尚未开放';
+});

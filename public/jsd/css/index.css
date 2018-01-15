@@ -1,0 +1,198 @@
+html,body{
+    width: 640px;
+    height: 1040px;
+}
+.hide{
+    display: none;
+}
+section{
+    position: absolute;
+    width: 640px;
+    height: 1040px;
+}
+
+#home{
+    background: url("../img/bg.png") no-repeat center;
+    background-size: cover;
+}
+#home .main{
+    width: 623px;
+    height: 532px;
+    position: absolute;
+    left:12px;
+    top:320px;
+    overflow-y: auto;
+}
+#home .btn{
+    position: absolute;
+    bottom:60px;
+    width: 640px;
+}
+#home .btn img{
+    position: absolute;
+    bottom: 0px;
+    left:0;
+    right: 0;
+    margin:auto;
+}
+
+#home .btn img{
+    width: 240px;
+}
+.main::-webkit-scrollbar {
+    display: none;
+}
+.main::-moz-scrollbar {
+    display: none;
+}
+.main::-ms-scrollbar {
+    display: none;
+}
+.main::-o-scrollbar {
+    display: none;
+}
+
+#home .main .box{
+    width: 91px;
+    height: 91px;
+    float: left;
+    margin-left: 28px;
+    margin-top: 13px;
+    overflow: hidden;
+}
+#home .main .box img{
+    width: 91px;
+    height: 91px;
+}
+
+
+#swiper{
+    width: 640px;
+    height: 1040px;
+    position: relative;
+    background-color: black;
+}
+.swiper-container,.bigImage_active{
+    width: 640px;
+    height: 1040px;
+    position: absolute;
+}
+.swiper-slide{
+    width: 640px;
+    text-align: center;
+    font-size: 18px;
+    float: left;
+
+}
+.swiper-slide img,.bigImage_active img{
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.bigImage_cancel{
+    position: fixed;
+    z-index: 100;
+    color: white;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background-color: grey;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    right: 10px;
+    top:10px;
+}
+.bigImage_info{
+    position: absolute;
+    z-index: 100;
+    color: white;
+    bottom: 30px;
+    right: 30px;
+
+}
+.bigImage_info div{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding:0px 20px;
+    background-color: rgba(255,255,255,0.2);
+    float: left;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.bigImage_info div span{
+    display: inline-block;
+    line-height: 50px;
+}
+.bigImage_info .bigImage_download svg{
+    display: inline-block;
+    font-size: 30px;
+    line-height: 50px;
+}
+.bigImage_popup,.upload_popup{
+    position: absolute;
+    z-index: 100;
+    width: 640px;
+    height: 1040px;
+    background: url("../img/popup.png") no-repeat center;
+}
+.bigImage img{
+    position: absolute;
+    width: 1040px;
+    left:640px;
+    transform-origin: left top;
+    transform: rotate(90deg);
+}
+.upload_image{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left:0;
+    right: 0;
+    margin:auto;
+    top:200px;
+    overflow: hidden;
+    background-color: white;
+}
+.upload_image img{
+    width: 400px;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.popup_cancel{
+    position: fixed;
+    z-index: 100;
+    color: white;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background-color: grey;
+    border:2px solid white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    right: 20px;
+    top:20px;
+}
+.upload_comfirm{
+    width: 300px;
+    position: absolute;
+    left:0;
+    right: 0;
+    margin:auto;
+    bottom: 200px;
+}
