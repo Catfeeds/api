@@ -52,7 +52,6 @@
     }
     $('.upload_comfirm').click(function () {
         var formData = new FormData($('uploadForm').files[0]);
-        formData.append('file', photo);
         $.ajax({
             url: 'https://api.shanghaichujie.com/api/castrol/photo/upload',
             type: 'POST',
