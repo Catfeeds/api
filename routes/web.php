@@ -180,9 +180,13 @@ Route::group(['prefix' => 'longines'], function () {
     Route::get('share', 'Longines\HelperController@share');
 });
 
+/**
+ * castrol工厂开业
+ */
 Route::get('castrol/index', 'Castrol\CastrolController@index');
-
 Route::get('castrol/upload', 'Castrol\CastrolController@uploadPhoto');
+Route::get('castrol/gather', 'Castrol\CastrolController@gather');
+
 /**
  * 渣打银行h5兑奖
  */
