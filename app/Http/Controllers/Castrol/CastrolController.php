@@ -28,6 +28,10 @@ class CastrolController extends Controller
 
         //获取位置坐标
         $index = Redis::get('castrol-index');
+        if ($index > 165) {
+            $index = 1;
+            Redis::set('castrol-index', 1);
+        }
         $coord = Coord::find($index);
         $bg->insert($img, 'top-left', $coord->x, $coord->y)
             ->save();
