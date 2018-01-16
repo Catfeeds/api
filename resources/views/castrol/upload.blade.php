@@ -38,7 +38,7 @@
 
     function readFile() {
         $('.upload_image').html('')
-        if (!input['value'].match(/.jpg|.gif|.png|.bmp/i)) {　　//判断上传文件格式
+        if (!input['value'].match(/.jpg|.gif|.png|.jpeg|.bmp/i)) {　　//判断上传文件格式
             return alert("上传的图片格式不正确，请重新选择")
         }
         var reader = new FileReader();

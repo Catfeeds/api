@@ -2,6 +2,7 @@ section{
     width: 640px;
     height: 1040px;
     background:url("../img/p.png") no-repeat center;
+    position: relative;
 }
 img{
     width: 240px;
