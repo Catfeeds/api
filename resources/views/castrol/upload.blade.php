@@ -56,7 +56,7 @@
         // console.log($('#uploadForm').files[1])
         // formData.append('photo', $('#uploadForm')[0].files[0]);
         $.ajax({
-            url: 'http://api.test/api/castrol/photo/upload',
+            url: 'http://api.touchworld-sh.com/api/castrol/photo/upload',
             type: 'POST',
             data: formData,
             async: true,
