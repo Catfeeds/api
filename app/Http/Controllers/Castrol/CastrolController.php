@@ -46,7 +46,9 @@ class CastrolController extends Controller
 
     public function index()
     {
-        $paths = Castrol::select('path')->get();
+        $paths = Castrol::select('path')
+            ->orderBy('created_at', 'desc')
+            ->get();
 //        dd($paths);
         return view('castrol.index', compact('paths'));
     }
