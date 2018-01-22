@@ -191,5 +191,5 @@ Route::get('castrol/gather', 'Castrol\CastrolController@gather');
  * 渣打银行h5兑奖
  */
 Route::get('zc/index', function (){
-   return '尚未开放';
+    return redirect('http://api.touchworld-sh.com:8001/vvip');
 });
