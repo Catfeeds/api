@@ -38,7 +38,7 @@
         wx.onMenuShareTimeline({
             title: '人人三小时', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "https://api.shanghaichujie.com/ali/h5",
+            link: "http://api.touchworld-sh.com/ali/h5",
             imgUrl: "http://api.touchworld-sh.com/alibaba/three/share.png", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
@@ -49,7 +49,7 @@
             title: '人人三小时', // 分享标题
             desc: "只有改变我们自己，这世界才会有一点点的改变", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "https://api.shanghaichujie.com/ali/h5",
+            link: "http://api.touchworld-sh.com/ali/h5",
             imgUrl: "http://api.touchworld-sh.com/alibaba/three/share.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
