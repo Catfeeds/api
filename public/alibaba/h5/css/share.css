@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+}
+.all{
+    width: 640px;
+    height: 1038px;
+    background: url("../images/share.png") no-repeat center center;
+    position: relative;
+}
+#canvas{
+    width:482px;
+    height: 269px;
+    overflow: hidden;
+    position: absolute;
+    top:284px;
+    left: 0;
+    right: 0;
+    margin:auto;
+    background-color: rosybrown;
+}
+
+.all .text{
+    width: 640px;
+    position: absolute;
+    top:580px;
+    text-align: center;
+}
+.all .text p{
+    font-size: 28px;
+    line-height: 56px;
+    color:#323333;
+    font-weight:500;
+    font-family: "楷体";
+}

@@ -61,6 +61,8 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () 
  * 阿里巴巴公益三公里
  */
 Route::get('ali/user/{uid}', 'Ali\AliController@index');
+Route::get('ali/h5', 'Ali\AliController@h5');
+Route::get('ali/h5share/{id}', 'Ali\AliController@h5Share');
 Route::get('ali/show', function () {
     return view('ali.show');
 });

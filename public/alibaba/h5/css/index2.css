@@ -1,0 +1,73 @@
+.all{
+    width: 640px;
+    height: 1040px;
+    position: relative;
+    overflow: hidden;
+}
+.bg{
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+}
+#clipBtn{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 30px;
+    z-index: 100;
+}
+.viewbg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 200px;
+}
+label,#code{
+    position: absolute;
+    z-index: 100;
+    width: 430px;
+    height: 86px;
+    text-align: center;
+    line-height: 86px;
+    color: #a0a0a0;
+    font-size: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+label{
+    top: 558px;
+}
+#code{
+    top: 688px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+#code::-webkit-input-placeholder{
+    color:#a0a0a0;
+}
+#code::-moz-placeholder{
+    color:#a0a0a0;
+}
+#code:-ms-placeholder{
+    color:#a0a0a0;
+}
+#clipArea{
+    width: 640px;
+    height: 666px;
+    position: absolute;
+    top: 32px;
+    left: 3px;
+}
+#view{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10000;
+    width: 410px;
+    height: 350px;
+    top: 190px;
+}

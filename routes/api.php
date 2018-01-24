@@ -34,6 +34,8 @@ Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
  */
 //用于拍照上传生成二维码
 Route::post('img/ali', 'Api\ImageController@ali');
+//用于h5上传拍照
+Route::post('ali/h5/upload', 'Ali\ApiController@h5Upload');
 //用于门禁和拍照
 Route::get('ali/user', 'Ali\ApiController@user');
 //用于小主机服务器访问阿里数据接口，更新公益数据

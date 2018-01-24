@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Ali;
 
+use App\Models\Alih5;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use App\Models\Ali;
 use App\Events\AliPhoto;
+use Intervention\Image\Facades\Image;
 
 class ApiController extends Controller
 {
@@ -134,5 +136,24 @@ class ApiController extends Controller
             ->get()->all();
         event(new AliPhoto($alis));
         return 'true';
+    }
+
+    /**
+     * @param Request $request
+     * @return string
+     * 阿里h5上传头像
+     */
+    public function h5Upload(Request $request)
+    {
+        $img = Image::make($request->photo);
+        $path = uniqid() . '.jpg';
+        $img->save(public_path('upload/ali/h5') . '/' . $path);
+
+        $h5 = new Alih5();
+        $h5->name = $request->name;
+        $h5->hours = $request->hours;
+        $h5->path = $path;
+        $h5->save();
+        return $h5->id;
     }
 }

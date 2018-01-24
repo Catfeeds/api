@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Ali;
 
 use App\Models\Ali;
+use App\Models\Alih5;
 use EasyWeChat\Foundation\Application;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
-use Intervention\Image\Facades\Image;
 
 class AliController extends Controller
 {
@@ -33,6 +32,28 @@ class AliController extends Controller
         $js = $this->js;
         $ali = Ali::where('uid', $uid)->first();
         return view('ali.mobile', compact('ali', 'js'));
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * h5入口
+     */
+    public function h5()
+    {
+        $js = $this->js;
+        return view('ali.h5', compact('js'));
+    }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * h5分享页面
+     */
+    public function h5Share($id)
+    {
+        $js = $this->js;
+        $user = Alih5::find($id);
+        return view('ali.h5share', compact('user', 'js'));
     }
 
     public function yun(Request $request)

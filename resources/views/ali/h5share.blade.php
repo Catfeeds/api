@@ -4,38 +4,19 @@
     <meta charset="UTF-8">
     <title>人人3小时</title>
     <meta name="viewport" content="width=640,user-scalable=no">
-    <link rel="stylesheet" href="{{ asset('alibaba/css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('alibaba/h5/css/share.css') }}">
 </head>
 <body>
 <div class="all">
-    <!--序列帧-->
-
-    <canvas id='canvas'></canvas>
+    <img src="{{ env('APP_URL').'/upload/ali/h5/'. $user->path }}" id='canvas'>
     <div class="text">
-        <p>姓名:<span>{{ $ali->name }}</span></p>
-        <p>2018财年累计申报<span>{{ $ali->hours }}</span>公益时</p>
+        <p>姓名:<span>{{ $user->name }}</span></p>
+        <p>2018财年累计申报<span>{{ $user->hours }}</span>公益时</p>
     </div>
 </div>
-{{--<div class="all">--}}
-{{--<!--轮播图-->--}}
-{{--<div id="temp3">--}}
-{{--<ul class="JQ-slide-content">--}}
-{{--@for( $i=0;$i<10;$i++)--}}
-{{--<li>--}}
-{{--<img src="{{ asset('upload/ali') .'/'. $ali->uid  . '/p' . $i . '.png' }}"/>--}}
-{{--</li>--}}
-{{--@endfor--}}
-{{--</ul>--}}
-{{--</div>--}}
-{{--<div class="text">--}}
-{{--<p>姓名:<span>{{ $ali->name }}</span></p>--}}
-{{--<p>2018财年累计申报<span>{{ $ali->hours }}</span>公益时</p>--}}
-{{--</div>--}}
-{{--</div>--}}
 
 </body>
-<script src="{{ asset('alibaba/js/jquery.1.4.2-min.js') }}"></script>
-<script src="{{ asset('alibaba/js/sequenceFrame.js') }}"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
 <script type="application/javascript">
     wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
@@ -45,7 +26,7 @@
         wx.onMenuShareTimeline({
             title: '人人三小时', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "https://api.shanghaichujie.com/ali/user/{{ $ali->uid }}",
+            link: "https://api.shanghaichujie.com/ali/h5share/{{ $user->id }}",
             imgUrl: "http://api.touchworld-sh.com/alibaba/three/share.png", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
@@ -56,7 +37,7 @@
             title: '人人三小时', // 分享标题
             desc: "只有改变我们自己，这世界才会有一点点的改变", // 分享描述
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
-            link: "https://api.shanghaichujie.com/ali/user/{{ $ali->uid }}",
+            link: "https://api.shanghaichujie.com/ali/h5share/{{ $user->id }}",
             imgUrl: "http://api.touchworld-sh.com/alibaba/three/share.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
@@ -64,26 +45,6 @@
             }
         });
     });
-    $(function () {
-        //轮播图函数
-        var imgarr = [];
-        //有多少张图片，len就等于多少;
-        var len = 10;
-        for (var i = 0; i < len; i++) {
-            imgarr.push("{{ asset('upload/ali') .'/'. $ali->uid  . '/p' }}" + i + '.png');
-        }
-        for (var j = len - 1; j >= 0; j--) {
-            imgarr.push("{{ asset('upload/ali') .'/'. $ali->uid  . '/p' }}" + j + '.png');
-        }
-        var frame2 = new SequenceFrame({
-            id: $('#canvas')[0],
-            width: 480,
-            height: 270,
-            speed: 300,
-            loop: true,
-            imgArr: imgarr
-        });
 
-    })
 </script>
 </html>
