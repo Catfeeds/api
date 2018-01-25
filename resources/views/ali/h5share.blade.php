@@ -24,7 +24,7 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: '人人三小时', // 分享标题
+            title: '人人三小时人人三小时人人三小时人人三小时人人三小时', // 分享标题
             {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
             link: "https://api.shanghaichujie.com/ali/h5share/{{ $user->id }}",
             imgUrl: "https://api.shanghaichujie.com/alibaba/three/share.png", // 分享图标
