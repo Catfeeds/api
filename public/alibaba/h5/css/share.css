@@ -9,11 +9,11 @@
     position: relative;
 }
 #canvas{
-    width:482px;
-    height: 269px;
+    width:410px;
+    height: 350px;
     overflow: hidden;
     position: absolute;
-    top:284px;
+    top:270px;
     left: 0;
     right: 0;
     margin:auto;
@@ -23,12 +23,12 @@
 .all .text{
     width: 640px;
     position: absolute;
-    top:580px;
+    top:620px;
     text-align: center;
 }
 .all .text p{
     font-size: 28px;
-    line-height: 56px;
+    line-height: 50px;
     color:#323333;
     font-weight:500;
     font-family: "楷体";
