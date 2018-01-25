@@ -63,7 +63,7 @@
             url: 'http://30.3.28.247/api/ali/user',
             timeout: 2000,
             error: function () {
-                alert('请接入办公网络参与活动！');
+                alert('请接入办公网络或者手机阿里郎连接vpn参与活动');
             }
         })
     })
