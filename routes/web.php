@@ -195,3 +195,7 @@ Route::get('castrol/gather', 'Castrol\CastrolController@gather');
 Route::get('zc/index', function (){
     return redirect('http://api.touchworld-sh.com:8001/vvip');
 });
+
+Route::get('vote', function (){
+    return '投票尚未开放！';
+});
