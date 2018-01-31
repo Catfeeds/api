@@ -63,7 +63,7 @@
             url: 'http://30.3.28.247/api/ali/user',
             timeout: 2000,
             error: function () {
-                alert('请接入办公网络或者手机阿里郎连接vpn参与活动');
+                alert('请在阿里内网或阿里VPN环境下使用');
             }
         })
     })
@@ -93,7 +93,7 @@
             } else {
                 $.get(`http://30.3.28.247/api/ali/user?id=${code}`, function (res) {
                     if (res.code === 'true') {
-                        if (res.hours <= 3.0) {
+                        if (res.hours < 3.0) {
                             alert(`您当前公益时长${res.hours},未达到3小时，请再接再厉`);
                         } else {
                             //上传到服务器
