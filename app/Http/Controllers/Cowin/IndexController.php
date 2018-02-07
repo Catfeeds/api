@@ -72,7 +72,8 @@ class IndexController extends Controller
     public function share($id)
     {
         $user = Cowin::find($id);
-        return view('cowin.share', compact('user'));
+        $js = EasyWeChat::js();
+        return view('cowin.share', compact('user','js'));
     }
 
     public function api()
