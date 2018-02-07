@@ -192,10 +192,15 @@ Route::get('castrol/gather', 'Castrol\CastrolController@gather');
 /**
  * 渣打银行h5兑奖
  */
-Route::get('zc/index', function (){
+Route::get('zc/index', function () {
     return redirect('http://api.touchworld-sh.com:8001/vvip');
 });
 
-Route::get('vote', function (){
-    return '投票尚未开放！';
+/**
+ * 凯翼汽车h5
+ */
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
+    Route::get('cowin/index', 'Cowin\IndexController@index');//邀请函首页
+    Route::post('cowin/greeting', 'Cowin\IndexController@greeting');
 });
+Route::get('cowin/share/{id}', 'Cowin\IndexController@share');

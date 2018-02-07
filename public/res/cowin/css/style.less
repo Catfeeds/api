@@ -1,0 +1,421 @@
+// 设计尺寸为640
+@base: 75rem;
+
+// 公共样式
+html,body{
+    width: 100%;
+    height: 100%;
+    background: #2d3132;
+    overflow: hidden;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.hidden{
+    display: none;
+}
+
+// 字体大小
+.font10{
+    font-size: 10px;
+    [data-dpr="2"] & {
+        font-size: 20px;
+    }
+    [data-dpr="3"] & {
+        font-size: 30px;
+    }
+}
+.font12{
+    font-size: 12px;
+    [data-dpr="2"] & {
+        font-size: 24px;
+    }
+    [data-dpr="3"] & {
+        font-size: 36px;
+    }
+}
+.font14{
+    font-size: 14px;
+    [data-dpr="2"] & {
+        font-size: 28px;
+    }
+    [data-dpr="3"] & {
+        font-size: 42px;
+    }
+}
+.font16{
+    font-size: 16px;
+    [data-dpr="2"] & {
+        font-size: 32px;
+    }
+    [data-dpr="3"] & {
+        font-size: 48px;
+    }
+}
+.font20{
+    font-size: 20px;
+    [data-dpr="2"] & {
+        font-size: 40px;
+    }
+    [data-dpr="3"] & {
+        font-size: 60px;
+    }
+}
+.font24{
+    font-size: 24px;
+    [data-dpr="2"] & {
+        font-size: 48px;
+    }
+    [data-dpr="3"] & {
+        font-size: 72px
+    }
+}
+.font28{
+    font-size: 28px;
+    [data-dpr="2"] & {
+        font-size: 56px;
+    }
+    [data-dpr="3"] & {
+        font-size: 84px
+    }
+}
+.font30{
+    font-size: 30px;
+    [data-dpr="2"] & {
+        font-size: 60px;
+    }
+    [data-dpr="3"] & {
+        font-size: 90px
+    }
+}
+.font36{
+    font-size: 36px;
+    [data-dpr="2"] & {
+        font-size: 72px;
+    }
+    [data-dpr="3"] & {
+        font-size: 108px
+    }
+}
+.font40{
+    font-size: 40px;
+    [data-dpr="2"] & {
+        font-size: 80px;
+    }
+    [data-dpr="3"] & {
+        font-size: 120px
+    }
+}
+
+section img.logo{
+    position: absolute;
+    top: 36/@base;
+    right: 44/@base;
+    left: auto;
+    width: 120/@base;
+    height: 100/@base;
+}
+
+.clap{
+    background: url(../images/clap.jpg) no-repeat left top;
+    background-size: 100%;
+    img{
+        position: absolute;
+        width: 458/@base;
+    }
+    .text1{
+        left: 32/@base;
+        top: 148/@base;
+    }
+    .text2{
+        left: 30/@base;
+        top: 250/@base;
+    }
+    .text3{
+        left: 148/@base;
+        top: 374/@base;
+    }
+}
+
+.hook{
+    background: url(../images/hook.jpg) no-repeat left top;
+    background-size: 100%;
+    img{
+        position: absolute;
+        left: 24/@base;
+    }
+    .text1,.text3{
+        height: 84/@base;
+    }
+    .text2,.text4{
+        height: 104/@base;
+    }
+    .text1{
+        top: 50/@base;
+    }
+    .text2{
+        top: 140/@base;
+    }
+    .text3{
+        top: 264/@base;
+    }
+    .text4{
+        top: 354/@base;
+    }
+}
+
+.flight{
+    background: url(../images/flight.jpg) no-repeat left top;
+    background-size: 100%;
+    img{
+        position: absolute;
+        width: 458/@base;
+        left: 28/@base;
+    }
+    .text1{
+        top: 180/@base;
+    }
+    .text2{
+        top: 272/@base;
+    }
+    .text3{
+        top: 386/@base;
+    }
+}
+
+.arms{
+    background: url(../images/arms.jpg) no-repeat left top;
+    background-size: 100%;
+    img{
+        position: absolute;
+        left: 30/@base;
+        height: 70/@base;
+    }
+    .text1{
+        top: 260/@base;
+    }
+    .text2{
+        top: 350/@base;
+    }
+    .text3{
+        left: 292/@base;
+        top: 350/@base;
+    }
+    .text4{
+        top: 438/@base;
+        height: 114/@base;
+    }
+}
+
+.select{
+    background: url(../images/bg.jpg) no-repeat center center;
+    background-size: cover;
+    .title{
+        position: absolute;
+        top: 350/@base;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 630/@base;
+        height: 170/@base;
+    }
+    .btn{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 284/@base;
+    }
+    .invite_btn{
+        top: 588/@base;
+    }
+    .bless_btn{
+        top: 756/@base;
+    }
+}
+
+.invite{
+    background: url(../images/bg.jpg) no-repeat center center;
+    background-size: cover;
+    .title{
+        position: absolute;
+        top: 100/@base;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 630/@base;
+        height: 170/@base;
+    }
+    .text_container{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 280/@base;
+        margin: auto;
+        width: 600/@base;
+        text-align: center;
+        color: #3864ab;
+        .font16;
+        font-weight: bold;
+        .time_location{
+            margin: 16/@base 0;
+            line-height: 36/@base;
+            i{
+                display: inline-block;
+                margin-right: 20/@base;
+            }
+            .time_icon{
+                width: 31/@base;
+                height: 31/@base;
+                background: url(../images/time_icon.png) no-repeat center center;
+                background-size: cover;
+                vertical-align: baseline;
+            }
+            .location_icon{
+                width: 28/@base;
+                height: 33/@base;
+                background: url(../images/location_icon.png) no-repeat center center;
+                background-size: cover;
+                vertical-align: baseline;
+            }
+        }
+        h2{
+            border-bottom: 4/@base solid #3864ab;
+            letter-spacing: 20/@base;
+            line-height: 70/@base;
+        }
+        .time{
+            margin: 12/@base 0;
+            .font20
+        }
+        .plan{
+            line-height: 48/@base;
+            text-align: center;
+            width: 600/@base;
+            .font14;
+            time{
+                display: inline-block;
+                width: 60%;
+            }
+            span{
+                display: inline-block;
+                width: 40%;
+                text-align: left;
+            }
+        }
+    }
+    .return{
+        margin: 20/@base auto;
+        width: 200/@base;
+    }
+}
+
+.bless{
+    background: url(../images/bg2.jpg) no-repeat center center;
+    background-size: cover;
+    form{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .textarea_box{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 150/@base;
+            margin: auto;
+            width: 520/@base;
+            height: 678/@base;
+            background: url(../images/textarea_bg.png) no-repeat center center;
+            background-size: cover;
+            textarea{
+                position: absolute;
+                left: 70/@base;
+                bottom: 40/@base;
+                width: 380/@base;
+                height: 120/@base;
+                background: transparent;
+                font-weight: bold;
+                color: #333;
+                .font14;
+                resize: none;
+                border: none;
+                outline: none;
+            }
+            .confirm{
+                position: absolute;
+                left: 10/@base;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 130/@base;
+                height: 32/@base;
+                background: url(../images/submit.png) no-repeat center center;
+                background-size: cover;
+            }
+        }
+        .popup{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.65);
+            .pannel{
+                box-sizing: border-box;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                padding: 35/@base;
+                width: 600/@base;
+                height: 390/@base;
+                background: url(../images/pannel.png) no-repeat center center;
+                background-size: cover;
+                text-align: center;
+                .phone{
+                    width: 370/@base;
+                    height: 70/@base;
+                    border: none;
+                    border-radius: 20/@base;
+                    text-align: center;
+                    color: #fff;
+                    background: url(../images/input_bg.png) no-repeat center center;
+                    background-size: cover;
+                    &::-webkit-input-placeholder {
+                        color: #fff;
+                    }
+                    &:-ms-input-placeholder { // IE10+
+                        color: #999;
+                    }
+                    inpu&t:-moz-placeholder { // Firefox4-18
+                        color: #999;
+                    }
+                    &::-moz-placeholder { // Firefox19+
+                        color: #999;
+                    }
+                }
+                .tips{
+                    width: 370/@base;
+                    margin: 10/@base auto 30/@base;
+                    text-align: left;
+                    color: #fff;
+                }
+                .submit,.reset{
+                    display: block;
+                    width: 228/@base;
+                    height: 60/@base;
+                    line-height: 60/@base;
+                    margin: 0 auto 10/@base;
+                    background: url(../images/input_bg.png) no-repeat center center;
+                    background-size: 100% 100%;
+                    border: none;
+                    border-radius: 20/@base;
+                    outline: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
