@@ -74,16 +74,11 @@
         <p>全天经销商报道</p>
         <p class='time'>2月28日</p>
         <p class='plan'>
-            <time>08:30-11:40</time>
-            <span>主题大会</span><br/>
-            <time>13:30-14:30</time>
-            <span>商务政策解读</span><br/>
-            <time>14:30-16:30</time>
-            <span>经销商培训</span><br/>
-            <time>18:00-19:30</time>
-            <span>颁奖盛典</span><br/>
-            <time>19:30-20:40</time>
-            <span>答谢晚宴</span><br/>
+            <time>08:30-11:40</time><span>主题大会</span><br/>
+            <time>13:30-14:30</time><span>商务政策解读</span><br/>
+            <time>14:30-16:30</time><span>经销商培训</span><br/>
+            <time>18:00-19:30</time><span>颁奖盛典</span><br/>
+            <time>19:30-20:40</time><span>答谢晚宴</span><br/>
         </p>
         <p class='time'>3月1日</p>
         <p>全天 返程</p>
