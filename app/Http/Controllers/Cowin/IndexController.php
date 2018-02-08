@@ -14,6 +14,7 @@ class IndexController extends Controller
     {
         $js = EasyWeChat::js();
         $wechatInfo = session('wechat.oauth_user');
+        dd($wechatInfo['name']);
         $user = Cowin::where('openid', $wechatInfo['id'])
             ->where('greeting', '!=', '')
             ->first();
