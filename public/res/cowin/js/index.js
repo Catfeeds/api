@@ -16,7 +16,7 @@ $(function(){
         });
     } else if (u.indexOf('iPhone') > -1) {
         //苹果手机
-    } 
+    }
 
     var BGM = $('audio')[0];
     document.addEventListener("WeixinJSBridgeReady", function () {
@@ -35,7 +35,7 @@ $(function(){
             MozAnimation: 'mozAnimationEnd',
             WebkitAnimation: 'webkitAnimationEnd',
         };
-        
+
         for (var t in animations) {
             if (el.style[t] !== undefined) {
             return animations[t];
@@ -89,16 +89,16 @@ $(function(){
         console.log(textareaVal)
         if(textareaVal.length >= 60){
             alert('请输入小于60字的祝福语');
-            return false;    
+            return false;
         }else if(textareaVal == '' || textareaVal == '请在此处输入最多60字祝福语'){
             alert('祝福语不能为空');
             return false;
         }else if(!phoneReg.test(phoneVal)){
-            alert('请输入有效的手机号码！');  
-            return false;  
+            alert('请输入有效的手机号码！');
+            return false;
         }else{
             $('.loading').show();
-            return false;
+            return true;
         }
     })
 
