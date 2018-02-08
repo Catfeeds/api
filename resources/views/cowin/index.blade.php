@@ -47,7 +47,7 @@
         <img class='btn invite_btn animated zoomIn' style='animation-delay:1s' src='../../res/cowin/images/invite_btn.png'>
         <img class='btn bless_btn animated zoomIn'
              @if(!empty($user))
-             touchstart="window.location.href='{{ url('cowin/share') .'/'. $user->id }}'"
+             onclick="window.location.href='{{ url('cowin/share') .'/'. $user->id }}'"
              @endif
              style='animation-delay:2s' src='../../res/cowin/images/bless_btn.png'>
     </section>
