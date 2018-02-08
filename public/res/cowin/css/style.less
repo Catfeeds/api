@@ -1,17 +1,16 @@
 // 设计尺寸为640
-@base: 75rem;
+@base: 90rem;
 
 // 公共样式
 html,body{
-    width: 100%;
-    height: 100%;
-    background: #2d3132;
-    overflow: hidden;
+    background: #fff;
 }
 section{
-    position: relative;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 900/@base;
+    height: 1600/@base;
 }
 .hidden{
     display: none;
@@ -120,221 +119,186 @@ section img.logo{
 
 .clap{
     background: url(../images/clap.jpg) no-repeat left top;
-    background-size: 100%;
+    background-size: 900/@base 1600/@base;
     img{
         position: absolute;
         width: 458/@base;
     }
     .text1{
-        left: 32/@base;
-        top: 148/@base;
+        width: 544/@base;
+        height: 93/@base;
+        left: 36/@base; 
+        top: 175/@base;
     }
     .text2{
-        left: 30/@base;
-        top: 250/@base;
+        width: 549/@base;
+        height: 130/@base;
+        left: 36/@base;
+        top: 301/@base;
     }
     .text3{
-        left: 148/@base;
-        top: 374/@base;
+        width: 549/@base;
+        height: 130/@base;
+        left: 178/@base;
+        top: 448/@base;
     }
 }
 
 .hook{
     background: url(../images/hook.jpg) no-repeat left top;
-    background-size: 100%;
+    background-size: 900/@base 1600/@base;
     img{
         position: absolute;
-        left: 24/@base;
-    }
-    .text1,.text3{
-        height: 84/@base;
-    }
-    .text2,.text4{
-        height: 104/@base;
+        left: 30 /@base;
     }
     .text1{
-        top: 50/@base;
+        width: 306/@base;
+        height: 100/@base;
+        top: 68/@base;
     }
     .text2{
-        top: 140/@base;
+        width: 584/@base;
+        height: 122/@base;
+        top: 170/@base;
     }
     .text3{
-        top: 264/@base;
+        width: 306/@base;
+        height: 110/@base;
+        top: 314/@base;
     }
     .text4{
-        top: 354/@base;
+        width: 584/@base;
+        height: 122/@base;
+        top: 428/@base;
     }
 }
 
 .flight{
     background: url(../images/flight.jpg) no-repeat left top;
-    background-size: 100%;
-    img{
+    background-size: 900/@base 1600/@base;
+    div{
         position: absolute;
-        width: 458/@base;
-        left: 28/@base;
+        left: 36/@base;
     }
     .text1{
-        top: 180/@base;
+        width: 544/@base;
+        height: 93/@base;
+        background: url(../images/clap_text1.png) no-repeat center center;
+        background-size: cover;
+        top: 216/@base;
     }
     .text2{
-        top: 272/@base;
+        width: 547/@base;
+        height: 131/@base;
+        background: url(../images/flight_text2.png) no-repeat center center;
+        background-size: cover;
+        top: 328/@base;
     }
     .text3{
-        top: 386/@base;
+        width: 547/@base;
+        height: 131/@base;
+        background: url(../images/flight_text3.png) no-repeat center center;
+        background-size: cover;
+        top: 465/@base;
     }
 }
 
 .arms{
     background: url(../images/arms.jpg) no-repeat left top;
-    background-size: 100%;
+    background-size: 900/@base 1600/@base;
     img{
         position: absolute;
-        left: 30/@base;
-        height: 70/@base;
+        left: 36/@base;
     }
     .text1{
-        top: 260/@base;
+        width: 380/@base;
+        height: 85/@base;
+        top: 314/@base;
     }
     .text2{
-        top: 350/@base;
+        width: 294/@base;
+        height: 82/@base;
+        top: 420/@base;
     }
     .text3{
-        left: 292/@base;
-        top: 350/@base;
+        width: 478/@base;
+        height: 85/@base;
+        left: 345/@base;
+        top: 420/@base;    
     }
     .text4{
-        top: 438/@base;
-        height: 114/@base;
+        width: 549/@base;
+        height: 132/@base;
+        top: 525/@base;
     }
 }
 
 .select{
     background: url(../images/bg.jpg) no-repeat center center;
-    background-size: cover;
+    background-size: 900/@base 1600/@base;
     .title{
         position: absolute;
-        top: 350/@base;
+        top: 424/@base;
         left: 0;
         right: 0;
         margin: auto;
-        width: 630/@base;
-        height: 170/@base;
+        width: 756/@base;
+        height: 201/@base;
     }
     .btn{
         position: absolute;
         left: 0;
         right: 0;
         margin: auto;
-        width: 284/@base;
     }
     .invite_btn{
-        top: 588/@base;
+        width: 343/@base;
+        height: 161/@base;
+        top: 706/@base;
     }
     .bless_btn{
-        top: 756/@base;
+        width: 338/@base;
+        height: 180/@base;
+        top: 906/@base;
     }
 }
 
 .invite{
-    background: url(../images/bg.jpg) no-repeat center center;
-    background-size: cover;
-    .title{
-        position: absolute;
-        top: 100/@base;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 630/@base;
-        height: 170/@base;
-    }
-    .text_container{
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 280/@base;
-        margin: auto;
-        width: 600/@base;
-        text-align: center;
-        color: #3864ab;
-        .font16;
-        font-weight: bold;
-        .time_location{
-            margin: 16/@base 0;
-            line-height: 36/@base;
-            i{
-                display: inline-block;
-                margin-right: 20/@base;
-            }
-            .time_icon{
-                width: 31/@base;
-                height: 31/@base;
-                background: url(../images/time_icon.png) no-repeat center center;
-                background-size: cover;
-                vertical-align: baseline;
-            }
-            .location_icon{
-                width: 28/@base;
-                height: 33/@base;
-                background: url(../images/location_icon.png) no-repeat center center;
-                background-size: cover;
-                vertical-align: baseline;
-            }
-        }
-        h2{
-            border-bottom: 4/@base solid #3864ab;
-            letter-spacing: 20/@base;
-            line-height: 70/@base;
-        }
-        .time{
-            margin: 12/@base 0;
-            .font20
-        }
-        .plan{
-            line-height: 48/@base;
-            text-align: center;
-            width: 600/@base;
-            .font14;
-            time{
-                display: inline-block;
-                width: 60%;
-            }
-            span{
-                display: inline-block;
-                width: 40%;
-                text-align: left;
-            }
-        }
-    }
+    background: url(../images/plan.jpg) no-repeat center center;
+    background-size: 900/@base 1600/@base;
+    text-align: center;
     .return{
-        margin: 20/@base auto;
-        width: 200/@base;
+        position: absolute;
+        bottom: 120/@base;
+        width: 240/@base;
+        height: 80/@base;
+        transform: translateX(-120/@base);
     }
 }
 
 .bless{
     background: url(../images/bg2.jpg) no-repeat center center;
-    background-size: cover;
+    background-size: 900/@base 1600/@base;
     form{
         position: relative;
-        width: 100%;
-        height: 100%;
+        width: 900/@base;
+        height: 1600/@base;
         .textarea_box{
             position: absolute;
             left: 0;
             right: 0;
-            top: 150/@base;
+            top: 244/@base;
             margin: auto;
-            width: 520/@base;
-            height: 678/@base;
+            width: 632/@base;
+            height: 824/@base;
             background: url(../images/textarea_bg.png) no-repeat center center;
             background-size: cover;
             textarea{
                 position: absolute;
-                left: 70/@base;
-                bottom: 40/@base;
-                width: 380/@base;
-                height: 120/@base;
+                left: 80/@base;
+                bottom: 50/@base;
+                width: 480/@base;
+                height: 150/@base;
                 background: transparent;
                 font-weight: bold;
                 color: #333;
@@ -349,10 +313,27 @@ section img.logo{
                 right: 0;
                 bottom: 0;
                 margin: auto;
-                width: 130/@base;
-                height: 32/@base;
+                width: 172/@base;
+                height: 43/@base;
                 background: url(../images/submit.png) no-repeat center center;
                 background-size: cover;
+            }
+            .hand{
+                position: absolute;
+                left: 10/@base;
+                right: 0;
+                bottom: -100/@base;
+                margin: auto;
+                width: 80/@base;
+                animation: jump linear 1s infinite alternate;
+            }
+            @keyframes jump{
+                0%{
+                    transform: translateY(-3px);
+                }
+                100%{
+                    transform: translateY(3px);
+                }
             }
         }
         .popup{
@@ -369,32 +350,20 @@ section img.logo{
                 bottom: 0;
                 margin: auto;
                 padding: 35/@base;
-                width: 600/@base;
-                height: 390/@base;
+                width: 726/@base;
+                height: 467/@base;
                 background: url(../images/pannel.png) no-repeat center center;
                 background-size: cover;
                 text-align: center;
                 .phone{
-                    width: 370/@base;
-                    height: 70/@base;
+                    width: 448/@base;
+                    height: 86/@base;
                     border: none;
                     border-radius: 20/@base;
                     text-align: center;
                     color: #fff;
                     background: url(../images/input_bg.png) no-repeat center center;
                     background-size: cover;
-                    &::-webkit-input-placeholder {
-                        color: #fff;
-                    }
-                    &:-ms-input-placeholder { // IE10+
-                        color: #999;
-                    }
-                    inpu&t:-moz-placeholder { // Firefox4-18
-                        color: #999;
-                    }
-                    &::-moz-placeholder { // Firefox19+
-                        color: #999;
-                    }
                 }
                 .tips{
                     width: 370/@base;
@@ -402,20 +371,53 @@ section img.logo{
                     text-align: left;
                     color: #fff;
                 }
-                .submit,.reset{
+                .submit{
+                    position: absolute;
                     display: block;
-                    width: 228/@base;
-                    height: 60/@base;
-                    line-height: 60/@base;
-                    margin: 0 auto 10/@base;
-                    background: url(../images/input_bg.png) no-repeat center center;
-                    background-size: 100% 100%;
+                    bottom: 128/@base;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 271/@base;
+                    height: 68/@base;
+                    background: url(../images/ok.png) no-repeat center center;
+                    background-size: cover;
                     border: none;
                     border-radius: 20/@base;
                     outline: none;
-                    color: #fff;
+                }
+                .reset{
+                    position: absolute;
+                    bottom: 41/@base;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 271/@base;
+                    height: 68/@base;
+                    background: url(../images/rest.png) no-repeat center center;
+                    background-size: cover;
+                    border: none;
                 }
             }
         }
+        .loading{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 666;
+            width: 100/@base;
+            animation: rotate linear 2s infinite;
+        }
+    }
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
     }
 }

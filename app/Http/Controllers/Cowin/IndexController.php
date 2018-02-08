@@ -33,21 +33,40 @@ class IndexController extends Controller
         $img = Image::make(public_path('res/cowin/images/greeting.jpeg'));
 
         //插入微信头像
-        $avatar=Image::make('http://wx.qlogo.cn/mmopen/vi_32/KhfASBTJxPfP3BOB3dfibmk1yFgGUPZmMRJLFGaAV6ux9wzdRgZn1TZFs1FvIz33FQajZZjoOjEaVLMDTEVCZ7Q/132')
+        $avatar = Image::make($wechatInfo['avatar'])
             ->resize(45, 45);
         $img->insert($avatar, 'top-left', 218, 493);
 
         //插入昵称,截取过长昵称
-        preg_match('/.{10}|.+/u',$wechatInfo['nickname'],$nickname);
+        preg_match('/.{10}|.+/u', $wechatInfo['nickname'], $nickname);
         $img->text($nickname[0] . ' 祝您：', 267, 534, function ($font) {
             $font->file(public_path('res/cowin/MSYHBD.TTC'));
             $font->size(24);
             $font->color('FFE198');
         });
 
-        preg_match_all('/.{12}|.+/u', $request->text, $arr);
-        $y = 609;
+        //截取祝福语
+        $text = $request->text;
+        preg_match_all('/./u', $text, $arr);
+        $len = 0;
+        $col[0] = '';
+        $index = 0;
         foreach ($arr[0] as $item) {
+            if ($len >= 23) {
+                $len = 0;
+                $index += 1;
+                $col[$index] = '';
+            }
+            if (strlen($item) > 1) {
+                $len += 2;
+            } else {
+                $len += 1;
+            }
+            $col[$index] .= $item;
+        }
+
+        $y = 609;
+        foreach ($col as $item) {
             $img->text($item, 216, $y, function ($font) {
                 $font->file(public_path('res/cowin/MSYHBD.TTC'));
                 $font->size(28);
@@ -73,7 +92,7 @@ class IndexController extends Controller
     {
         $user = Cowin::find($id);
         $js = EasyWeChat::js();
-        return view('cowin.share', compact('user','js'));
+        return view('cowin.share', compact('user', 'js'));
     }
 
     public function api()
@@ -92,4 +111,5 @@ class IndexController extends Controller
             'nickname' => $cowin->nickname
         ]);
     }
+
 }
