@@ -54,10 +54,6 @@
         var share_btn = document.getElementById('share_btn');
         var popup = document.getElementById('popup');
 
-        document.addEventListener('touchmove',function(e){
-            e.preventDefault();
-        })
-
         share_btn.addEventListener('touchstart', function(){
             popup.style.display = 'block';
         })
