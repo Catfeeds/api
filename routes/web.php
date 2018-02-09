@@ -204,3 +204,6 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function
     Route::post('cowin/greeting', 'Cowin\IndexController@greeting');
 });
 Route::get('cowin/share/{id}', 'Cowin\IndexController@share');
+Route::get('ky/index', function (){
+    return redirect('http://cs.touchworld-sh.com/lolo/cowin_auto_guide/');
+});
