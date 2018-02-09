@@ -17,14 +17,14 @@ class IndexController extends Controller
         $user = Cowin::where('openid', $wechatInfo['id'])
             ->where('greeting', '!=', '')
             ->first();
-        return view('cowin.index', compact('user', 'js'));
+        return view('cowin.index', compact('user', 'js', 'wechatInfo'));
     }
 
     public function greeting(Request $request)
     {
         $this->validate($request, [
             'text' => 'required|max:60',
-            'phone' => 'required|size:11'
+            'phone' => 'required|size:11',
         ]);
         $wechatInfo = session('wechat.oauth_user');
         $js = EasyWeChat::js();
@@ -33,8 +33,13 @@ class IndexController extends Controller
         $img = Image::make(public_path('res/cowin/images/greeting.jpeg'));
 
         //插入微信头像
-        $avatar = Image::make($wechatInfo['avatar'])
-            ->resize(45, 45);
+        if (empty($request->avatar)) {
+            $avatar = Image::make($wechatInfo['avatar'])
+                ->resize(45, 45);
+        } else {
+            $avatar = Image::make($request->avatar);
+        }
+
         $img->insert($avatar, 'top-left', 218, 493);
 
         //插入昵称,截取过长昵称
@@ -77,22 +82,28 @@ class IndexController extends Controller
         $img->save(public_path('upload/cowin/' . $wechatInfo['id'] . '.jpeg'));
 
         //保存贺卡用户信息
-        $user = new Cowin();
-        $user->openid = $wechatInfo['id'];
-        $user->avatar = $wechatInfo['avatar'];
-        $user->nickname = $wechatInfo['nickname'];
-        $user->phone = $request->phone;
-        $user->greeting = env('APP_URL') . '/upload/cowin/' . $wechatInfo['id'] . '.jpeg';
+        $user = Cowin::firstOrCreate(
+            [
+                'openid' => $wechatInfo['id']
+            ],
+            [
+                'avatar' => $wechatInfo['avatar'],
+                'nickname' => $wechatInfo['nickname'],
+                'phone' => $request->phone,
+                'greeting' => env('APP_URL') . '/upload/cowin/' . $wechatInfo['id'] . '.jpeg'
+            ]
+        );
+
         $user->save();
-        $share =0;
-        return view('cowin.share', compact('user', 'js','share'));
+        $share = 0;
+        return view('cowin.share', compact('user', 'js', 'share'));
     }
 
     public function share($id)
     {
         $user = Cowin::find($id);
         $js = EasyWeChat::js();
-        $share =1;
+        $share = 1;
         return view('cowin.share', compact('user', 'js', 'share'));
     }
 

@@ -110,37 +110,66 @@ section img.logo {
   width: 1.33333333rem;
   height: 1.11111111rem;
 }
+section img.arrow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2.77777778rem;
+  margin: auto;
+  width: 1.11111111rem;
+  animation: updown .5s linear infinite alternate;
+}
+@keyframes updown {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+  width: 10rem;
+  height: 17.77777778rem;
+}
 .clap {
   background: url(../images/clap.jpg) no-repeat left top;
   background-size: 10rem 17.77777778rem;
 }
-.clap img {
+.clap div {
   position: absolute;
-  width: 5.08888889rem;
+  opacity: 0;
 }
 .clap .text1 {
   width: 6.04444444rem;
   height: 1.03333333rem;
   left: 0.4rem;
   top: 1.94444444rem;
+  background: url(../images/clap_text1.png) no-repeat left top;
+  background-size: cover;
 }
 .clap .text2 {
   width: 6.1rem;
   height: 1.44444444rem;
   left: 0.4rem;
   top: 3.34444444rem;
+  background: url(../images/clap_text2.png) no-repeat left top;
+  background-size: cover;
 }
 .clap .text3 {
   width: 6.1rem;
   height: 1.44444444rem;
   left: 1.97777778rem;
   top: 4.97777778rem;
+  background: url(../images/clap_text3.png) no-repeat left top;
+  background-size: cover;
 }
 .hook {
   background: url(../images/hook.jpg) no-repeat left top;
   background-size: 10rem 17.77777778rem;
 }
-.hook img {
+.hook div {
   position: absolute;
   left: 0.33333333rem;
 }
@@ -148,21 +177,29 @@ section img.logo {
   width: 3.4rem;
   height: 1.11111111rem;
   top: 0.75555556rem;
+  background: url(../images/hook_text1.png) no-repeat left top;
+  background-size: cover;
 }
 .hook .text2 {
   width: 6.48888889rem;
   height: 1.35555556rem;
   top: 1.88888889rem;
+  background: url(../images/hook_text2.png) no-repeat left top;
+  background-size: cover;
 }
 .hook .text3 {
   width: 3.4rem;
   height: 1.22222222rem;
   top: 3.48888889rem;
+  background: url(../images/hook_text3.png) no-repeat left top;
+  background-size: cover;
 }
 .hook .text4 {
   width: 6.48888889rem;
   height: 1.35555556rem;
   top: 4.75555556rem;
+  background: url(../images/hook_text4.png) no-repeat left top;
+  background-size: cover;
 }
 .flight {
   background: url(../images/flight.jpg) no-repeat left top;
@@ -175,21 +212,21 @@ section img.logo {
 .flight .text1 {
   width: 6.04444444rem;
   height: 1.03333333rem;
-  background: url(../images/clap_text1.png) no-repeat center center;
+  background: url(../images/clap_text1.png) no-repeat left top;
   background-size: cover;
   top: 2.4rem;
 }
 .flight .text2 {
   width: 6.07777778rem;
   height: 1.45555556rem;
-  background: url(../images/flight_text2.png) no-repeat center center;
+  background: url(../images/flight_text2.png) no-repeat left top;
   background-size: cover;
   top: 3.64444444rem;
 }
 .flight .text3 {
   width: 6.07777778rem;
   height: 1.45555556rem;
-  background: url(../images/flight_text3.png) no-repeat center center;
+  background: url(../images/flight_text3.png) no-repeat left top;
   background-size: cover;
   top: 5.16666667rem;
 }
@@ -197,7 +234,7 @@ section img.logo {
   background: url(../images/arms.jpg) no-repeat left top;
   background-size: 10rem 17.77777778rem;
 }
-.arms img {
+.arms div {
   position: absolute;
   left: 0.4rem;
 }
@@ -205,25 +242,33 @@ section img.logo {
   width: 4.22222222rem;
   height: 0.94444444rem;
   top: 3.48888889rem;
+  background: url(../images/arms_text1.png) no-repeat left top;
+  background-size: cover;
 }
 .arms .text2 {
   width: 3.26666667rem;
   height: 0.91111111rem;
   top: 4.66666667rem;
+  background: url(../images/arms_text2.png) no-repeat left top;
+  background-size: cover;
 }
 .arms .text3 {
   width: 5.31111111rem;
   height: 0.94444444rem;
   left: 3.83333333rem;
   top: 4.66666667rem;
+  background: url(../images/arms_text3.png) no-repeat left top;
+  background-size: cover;
 }
 .arms .text4 {
   width: 6.1rem;
   height: 1.46666667rem;
   top: 5.83333333rem;
+  background: url(../images/arms_text4.png) no-repeat left top;
+  background-size: cover;
 }
 .select {
-  background: url(../images/bg.jpg) no-repeat center center;
+  background: url(../images/bg.jpg) no-repeat left top;
   background-size: 10rem 17.77777778rem;
 }
 .select .title {
@@ -252,7 +297,7 @@ section img.logo {
   top: 10.06666667rem;
 }
 .invite {
-  background: url(../images/plan.jpg) no-repeat center center;
+  background: url(../images/plan.jpg) no-repeat left top;
   background-size: 10rem 17.77777778rem;
   text-align: center;
 }
@@ -264,7 +309,7 @@ section img.logo {
   transform: translateX(-1.33333333rem);
 }
 .bless {
-  background: url(../images/bg2.jpg) no-repeat center center;
+  background: url(../images/bg2.jpg) no-repeat left top;
   background-size: 10rem 17.77777778rem;
 }
 .bless form {
@@ -280,7 +325,7 @@ section img.logo {
   margin: auto;
   width: 7.02222222rem;
   height: 9.15555556rem;
-  background: url(../images/textarea_bg.png) no-repeat center center;
+  background: url(../images/textarea_bg.png) no-repeat left top;
   background-size: cover;
 }
 .bless form .textarea_box textarea {
@@ -311,7 +356,7 @@ section img.logo {
   margin: auto;
   width: 1.91111111rem;
   height: 0.47777778rem;
-  background: url(../images/submit.png) no-repeat center center;
+  background: url(../images/submit.png) no-repeat left top;
   background-size: cover;
 }
 .bless form .textarea_box .hand {
@@ -348,7 +393,7 @@ section img.logo {
   padding: 0.38888889rem;
   width: 8.06666667rem;
   height: 5.18888889rem;
-  background: url(../images/pannel.png) no-repeat center center;
+  background: url(../images/pannel.png) no-repeat left top;
   background-size: cover;
   text-align: center;
 }
@@ -359,7 +404,7 @@ section img.logo {
   border-radius: 0.22222222rem;
   text-align: center;
   color: #fff;
-  background: url(../images/input_bg.png) no-repeat center center;
+  background: url(../images/input_bg.png) no-repeat left top;
   background-size: cover;
 }
 .bless form .popup .pannel .tips {
@@ -377,7 +422,7 @@ section img.logo {
   margin: auto;
   width: 3.01111111rem;
   height: 0.75555556rem;
-  background: url(../images/ok.png) no-repeat center center;
+  background: url(../images/ok.png) no-repeat left top;
   background-size: cover;
   border: none;
   border-radius: 0.22222222rem;
@@ -391,7 +436,7 @@ section img.logo {
   margin: auto;
   width: 3.01111111rem;
   height: 0.75555556rem;
-  background: url(../images/rest.png) no-repeat center center;
+  background: url(../images/rest.png) no-repeat left top;
   background-size: cover;
   border: none;
 }

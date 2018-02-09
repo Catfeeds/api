@@ -99,3 +99,8 @@ Route::post('suning/userInfo', 'Api\SuningController@user');
  * Castrol 现场签到
  */
 Route::post('castrol/photo/upload', 'Castrol\CastrolController@upload');
+
+/**
+ * COWIN微信头像转base64
+ */
+Route::post('cowin/image', 'Cowin\ApiController@image');

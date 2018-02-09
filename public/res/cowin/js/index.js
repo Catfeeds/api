@@ -4,6 +4,21 @@ $(function(){
     //     e.preventDefault();
     // })
 
+    //初始化swiper
+    var mySwiper = new Swiper('.swiper-container',{
+        direction: 'vertical',
+        on: {
+            init: function(){
+                swiperAnimateCache(this); //隐藏动画元素
+                swiperAnimate(this); //初始化完成开始动画
+            },
+            slideChangeTransitionEnd: function(){
+                swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+            }
+
+        }
+    });
+
     //设别识别 安卓手机输入
     var u = navigator.userAgent;
     if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
@@ -43,33 +58,38 @@ $(function(){
         }
     })(document.createElement('div'));
 
+    /*
     // clap展示完毕
     $('.clap .text3').one(animationEnd, function(){
-        delayNext('.hook')
+        //delayNext('.hook')
     });
     //hook展示完毕
     $('.hook .text4').one(animationEnd, function(){
-        delayNext('.flight')
+        //delayNext('.flight')
     });
     //flight展示完毕
     $('.flight .text3').one(animationEnd, function(){
-        delayNext('.arms')
+        //delayNext('.arms')
     });
     //arms展示完毕
     $('.arms .text4').one(animationEnd, function(){
-        delayNext('.select')
+        //delayNext('.select')
     });
+    */
 
     //跳转
     $('.invite_btn').on('touchstart', function(){
-        $('.invite').fadeIn().siblings('section').fadeOut();
+        $('.invite').fadeIn();
+        $('.swiper-container').fadeOut();
     })
     $('.return').on('click', function(){
-        $('.select').fadeIn().siblings('section').fadeOut();
+        mySwiper.slideTo(4);
+        $('.swiper-container').fadeIn().siblings().fadeOut();
     })
-    $('.bless_btn').on('touchstart', function(e){
+    $('#bless_btn').on('touchstart', function(e){
         e.preventDefault();
-        $('.bless').fadeIn().siblings('section').fadeOut();
+        $('.bless').fadeIn();
+        $('.swiper-container').fadeOut();
     })
 
     $('.confirm').on('touchstart', function(){

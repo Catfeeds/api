@@ -1,4 +1,4 @@
-// 设计尺寸为640
+// 设计尺寸为900
 @base: 90rem;
 
 // 公共样式
@@ -116,38 +116,65 @@ section img.logo{
     width: 120/@base;
     height: 100/@base;
 }
+section img.arrow{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 250/@base;
+    margin: auto;
+    width: 100/@base;
+    animation: updown .5s linear infinite alternate;
+}
+@keyframes updown{
+    from{
+        transform: translateY(-5px)
+    }
+    to{
+        transform: translateY(5px)
+    }
+}
+.swiper-container,.swiper-wrapper,.swiper-slide{
+    width: 900/@base;
+    height: 1600/@base;
+}
 
 .clap{
     background: url(../images/clap.jpg) no-repeat left top;
     background-size: 900/@base 1600/@base;
-    img{
+    div{
         position: absolute;
-        width: 458/@base;
+        opacity: 0;
     }
     .text1{
         width: 544/@base;
         height: 93/@base;
-        left: 36/@base; 
+        left: 36/@base;
         top: 175/@base;
+        background: url(../images/clap_text1.png) no-repeat left top;
+        background-size: cover;
     }
     .text2{
         width: 549/@base;
         height: 130/@base;
         left: 36/@base;
         top: 301/@base;
+        background: url(../images/clap_text2.png) no-repeat left top;
+        background-size: cover;
     }
     .text3{
         width: 549/@base;
         height: 130/@base;
         left: 178/@base;
         top: 448/@base;
+        background: url(../images/clap_text3.png) no-repeat left top;
+        background-size: cover;
     }
 }
 
 .hook{
     background: url(../images/hook.jpg) no-repeat left top;
     background-size: 900/@base 1600/@base;
-    img{
+    div{
         position: absolute;
         left: 30 /@base;
     }
@@ -155,21 +182,29 @@ section img.logo{
         width: 306/@base;
         height: 100/@base;
         top: 68/@base;
+        background: url(../images/hook_text1.png) no-repeat left top;
+        background-size: cover;
     }
     .text2{
         width: 584/@base;
         height: 122/@base;
         top: 170/@base;
+        background: url(../images/hook_text2.png) no-repeat left top;
+        background-size: cover;
     }
     .text3{
         width: 306/@base;
         height: 110/@base;
         top: 314/@base;
+        background: url(../images/hook_text3.png) no-repeat left top;
+        background-size: cover;
     }
     .text4{
         width: 584/@base;
         height: 122/@base;
         top: 428/@base;
+        background: url(../images/hook_text4.png) no-repeat left top;
+        background-size: cover;
     }
 }
 
@@ -183,21 +218,21 @@ section img.logo{
     .text1{
         width: 544/@base;
         height: 93/@base;
-        background: url(../images/clap_text1.png) no-repeat center center;
+        background: url(../images/clap_text1.png) no-repeat left top;
         background-size: cover;
         top: 216/@base;
     }
     .text2{
         width: 547/@base;
         height: 131/@base;
-        background: url(../images/flight_text2.png) no-repeat center center;
+        background: url(../images/flight_text2.png) no-repeat left top;
         background-size: cover;
         top: 328/@base;
     }
     .text3{
         width: 547/@base;
         height: 131/@base;
-        background: url(../images/flight_text3.png) no-repeat center center;
+        background: url(../images/flight_text3.png) no-repeat left top;
         background-size: cover;
         top: 465/@base;
     }
@@ -206,7 +241,7 @@ section img.logo{
 .arms{
     background: url(../images/arms.jpg) no-repeat left top;
     background-size: 900/@base 1600/@base;
-    img{
+    div{
         position: absolute;
         left: 36/@base;
     }
@@ -214,27 +249,35 @@ section img.logo{
         width: 380/@base;
         height: 85/@base;
         top: 314/@base;
+        background: url(../images/arms_text1.png) no-repeat left top;
+        background-size: cover;
     }
     .text2{
         width: 294/@base;
         height: 82/@base;
         top: 420/@base;
+        background: url(../images/arms_text2.png) no-repeat left top;
+        background-size: cover;
     }
     .text3{
         width: 478/@base;
         height: 85/@base;
         left: 345/@base;
-        top: 420/@base;    
+        top: 420/@base;
+        background: url(../images/arms_text3.png) no-repeat left top;
+        background-size: cover;
     }
     .text4{
         width: 549/@base;
         height: 132/@base;
         top: 525/@base;
+        background: url(../images/arms_text4.png) no-repeat left top;
+        background-size: cover;
     }
 }
 
 .select{
-    background: url(../images/bg.jpg) no-repeat center center;
+    background: url(../images/bg.jpg) no-repeat left top;
     background-size: 900/@base 1600/@base;
     .title{
         position: absolute;
@@ -264,7 +307,7 @@ section img.logo{
 }
 
 .invite{
-    background: url(../images/plan.jpg) no-repeat center center;
+    background: url(../images/plan.jpg) no-repeat left top;
     background-size: 900/@base 1600/@base;
     text-align: center;
     .return{
@@ -277,7 +320,7 @@ section img.logo{
 }
 
 .bless{
-    background: url(../images/bg2.jpg) no-repeat center center;
+    background: url(../images/bg2.jpg) no-repeat left top;
     background-size: 900/@base 1600/@base;
     form{
         position: relative;
@@ -291,7 +334,7 @@ section img.logo{
             margin: auto;
             width: 632/@base;
             height: 824/@base;
-            background: url(../images/textarea_bg.png) no-repeat center center;
+            background: url(../images/textarea_bg.png) no-repeat left top;
             background-size: cover;
             textarea{
                 position: absolute;
@@ -315,7 +358,7 @@ section img.logo{
                 margin: auto;
                 width: 172/@base;
                 height: 43/@base;
-                background: url(../images/submit.png) no-repeat center center;
+                background: url(../images/submit.png) no-repeat left top;
                 background-size: cover;
             }
             .hand{
@@ -352,7 +395,7 @@ section img.logo{
                 padding: 35/@base;
                 width: 726/@base;
                 height: 467/@base;
-                background: url(../images/pannel.png) no-repeat center center;
+                background: url(../images/pannel.png) no-repeat left top;
                 background-size: cover;
                 text-align: center;
                 .phone{
@@ -362,7 +405,7 @@ section img.logo{
                     border-radius: 20/@base;
                     text-align: center;
                     color: #fff;
-                    background: url(../images/input_bg.png) no-repeat center center;
+                    background: url(../images/input_bg.png) no-repeat left top;
                     background-size: cover;
                 }
                 .tips{
@@ -380,7 +423,7 @@ section img.logo{
                     margin: auto;
                     width: 271/@base;
                     height: 68/@base;
-                    background: url(../images/ok.png) no-repeat center center;
+                    background: url(../images/ok.png) no-repeat left top;
                     background-size: cover;
                     border: none;
                     border-radius: 20/@base;
@@ -394,7 +437,7 @@ section img.logo{
                     margin: auto;
                     width: 271/@base;
                     height: 68/@base;
-                    background: url(../images/rest.png) no-repeat center center;
+                    background: url(../images/rest.png) no-repeat left top;
                     background-size: cover;
                     border: none;
                 }
