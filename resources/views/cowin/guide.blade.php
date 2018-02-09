@@ -3,7 +3,7 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
-    <title>凯翼汽车</title>
+    <title>小翼管家</title>
     <script src='../../res/cowin/guide/js/flexible.js'></script>
     <link rel='stylesheet' href='../../res/cowin/guide/css/normalize.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/swiper.min.css'>

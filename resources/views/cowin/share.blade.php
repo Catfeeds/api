@@ -3,7 +3,7 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
-    <title>凯翼汽车</title>
+    <title>翼句祝福</title>
     <script src='../../res/cowin/js/flexible.js'></script>
     <link rel='stylesheet' href='../../res/cowin/css/share.css'>
 </head>
