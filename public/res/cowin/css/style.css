@@ -191,8 +191,8 @@ section img.arrow {
   width: 3.4rem;
   height: 1.22222222rem;
   top: 3.48888889rem;
-  background: url(../images/hook_text3.png) no-repeat left top;
-  background-size: cover;
+  background: url(../images/hook_text3.png) no-repeat center center;
+  background-size: 100% 100%;
 }
 .hook .text4 {
   width: 6.48888889rem;
