@@ -42,6 +42,12 @@
 <body>
     <section>
         <img id='share_btn' src="{{ asset('res/cowin/images/share_btn.png') }}">
+        @if($share)
+            <img id='share_btn'
+                 onclick="window.location.href='{{ url('cowin/index') }}'" src="{{ asset('res/cowin/images/share_btn2.png') }}">
+        @else
+            <img id='share_btn' src="{{ asset('res/cowin/images/share_btn1.png') }}">
+            @endif
         <img class='popup hidden' id='popup' src="{{ asset('res/cowin/images/share.png') }}" alt="">
     </section>
     <script>

@@ -84,15 +84,16 @@ class IndexController extends Controller
         $user->phone = $request->phone;
         $user->greeting = env('APP_URL') . '/upload/cowin/' . $wechatInfo['id'] . '.jpeg';
         $user->save();
-
-        return view('cowin.share', compact('user', 'js'));
+        $share =0;
+        return view('cowin.share', compact('user', 'js','share'));
     }
 
     public function share($id)
     {
         $user = Cowin::find($id);
         $js = EasyWeChat::js();
-        return view('cowin.share', compact('user', 'js'));
+        $share =1;
+        return view('cowin.share', compact('user', 'js', 'share'));
     }
 
     public function api()
