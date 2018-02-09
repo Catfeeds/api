@@ -147,7 +147,7 @@
     }).done(function (res) {
         $('#avatar').attr('value', res);
     }).fail(function (msg) {
-        alert('获取微信头像失败！')
+        // alert('获取微信头像失败！')
     })
 </script>
 </body>
