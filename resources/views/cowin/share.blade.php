@@ -25,19 +25,19 @@
         wx.ready(function () {
             // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
             wx.onMenuShareTimeline({
-                title: '凯翼汽车', // 分享标题
+                title: '翼句祝福', // 分享标题
                 link: "https://api.shanghaichujie.com/cowin/share/{{ $user->id }}",
-                imgUrl: "https://api.shanghaichujie.com/res/cowin/share.png", // 分享图标
+                imgUrl: "https://api.shanghaichujie.com/res/cowin/share2.png", // 分享图标
                 success: function () {
                 }
             });
             // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
             wx.onMenuShareAppMessage({
-                title: '凯翼汽车', // 分享标题
-                desc: "机遇与挑战并存,梦想与方向仍在,让我们一起携手,共筑凯翼梦!", // 分享描述
+                title: '翼句祝福', // 分享标题
+                desc: "凯翼汽车2018商务年会邀请函", // 分享描述
                 {{--link: "http://api.touchworld-sh.com/qf/online?oid={{$openid}}&nick={{$nickname}}",--}}
                 link: "https://api.shanghaichujie.com/cowin/share/{{ $user->id }}",
-                imgUrl: "https://api.shanghaichujie.com/res/cowin/share.png", // 分享图标
+                imgUrl: "https://api.shanghaichujie.com/res/cowin/share2.png", // 分享图标
                 type: 'link', // 分享类型,music、video或link，不填默认为link
                 success: function () {
                 }
