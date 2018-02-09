@@ -2,13 +2,12 @@
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <title>翼句祝福</title>
+    <script src='../../res/cowin/js/flexible.js'></script>
     <link rel='stylesheet' href='../../res/cowin/css/normalize.css'>
     <link rel='stylesheet' href='../../res/cowin/css/swiper.min.css'>
     <link rel='stylesheet' href='../../res/cowin/css/animate.min.css'>
     <link rel='stylesheet' href='../../res/cowin/css/style.css'>
-    <script src='../../res/cowin/js/flexible.js'></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>

@@ -391,8 +391,8 @@ section img.arrow {
   bottom: 0;
   margin: auto;
   padding: 0.38888889rem;
-  width: 8.06666667rem;
-  height: 5.18888889rem;
+  width: 8.27777778rem;
+  height: 5.15555556rem;
   background: url(../images/pannel.png) no-repeat left top;
   background-size: cover;
   text-align: center;
@@ -403,9 +403,16 @@ section img.arrow {
   border: none;
   border-radius: 0.22222222rem;
   text-align: center;
-  color: #fff;
-  background: url(../images/input_bg.png) no-repeat left top;
-  background-size: cover;
+  color: #b32013;
+  font-weight: bold;
+  background: transparent;
+  font-size: 20px;
+}
+[data-dpr="2"] .bless form .popup .pannel .phone {
+  font-size: 40px;
+}
+[data-dpr="3"] .bless form .popup .pannel .phone {
+  font-size: 60px;
 }
 .bless form .popup .pannel .tips {
   width: 4.11111111rem;
@@ -420,8 +427,8 @@ section img.arrow {
   left: 0;
   right: 0;
   margin: auto;
-  width: 3.01111111rem;
-  height: 0.75555556rem;
+  width: 3.21111111rem;
+  height: 0.76666667rem;
   background: url(../images/ok.png) no-repeat left top;
   background-size: cover;
   border: none;
@@ -434,8 +441,8 @@ section img.arrow {
   left: 0;
   right: 0;
   margin: auto;
-  width: 3.01111111rem;
-  height: 0.75555556rem;
+  width: 3.21111111rem;
+  height: 0.76666667rem;
   background: url(../images/rest.png) no-repeat left top;
   background-size: cover;
   border: none;
