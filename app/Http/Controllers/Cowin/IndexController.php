@@ -107,6 +107,15 @@ class IndexController extends Controller
         return view('cowin.share', compact('user', 'js', 'share'));
     }
 
+    public function guide()
+    {
+        $js = EasyWeChat::js();
+        $wechatInfo = session('wechat.oauth_user');
+        $user = Cowin::where('openid', $wechatInfo['id'])
+            ->where('cofirm', 0)->first();
+        return view('cowin.guide', compact('user', 'js', 'wechatInfo'));
+
+    }
     public function api()
     {
         $cowin = Cowin::where('status', '0')

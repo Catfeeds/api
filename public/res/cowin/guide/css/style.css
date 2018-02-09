@@ -1,0 +1,498 @@
+html,
+body {
+  width: 100%;
+  background: #2d3132;
+}
+section {
+  position: absolute;
+  width: 100%;
+  height: 16.25rem;
+}
+.hidden {
+  display: none;
+}
+.font10 {
+  font-size: 10px;
+}
+[data-dpr="2"] .font10 {
+  font-size: 20px;
+}
+[data-dpr="3"] .font10 {
+  font-size: 30px;
+}
+.font12 {
+  font-size: 12px;
+}
+[data-dpr="2"] .font12 {
+  font-size: 24px;
+}
+[data-dpr="3"] .font12 {
+  font-size: 36px;
+}
+.font14 {
+  font-size: 14px;
+}
+[data-dpr="2"] .font14 {
+  font-size: 28px;
+}
+[data-dpr="3"] .font14 {
+  font-size: 42px;
+}
+.font16 {
+  font-size: 16px;
+}
+[data-dpr="2"] .font16 {
+  font-size: 32px;
+}
+[data-dpr="3"] .font16 {
+  font-size: 48px;
+}
+.font20 {
+  font-size: 20px;
+}
+[data-dpr="2"] .font20 {
+  font-size: 40px;
+}
+[data-dpr="3"] .font20 {
+  font-size: 60px;
+}
+.font24 {
+  font-size: 24px;
+}
+[data-dpr="2"] .font24 {
+  font-size: 48px;
+}
+[data-dpr="3"] .font24 {
+  font-size: 72px;
+}
+.font28 {
+  font-size: 28px;
+}
+[data-dpr="2"] .font28 {
+  font-size: 56px;
+}
+[data-dpr="3"] .font28 {
+  font-size: 84px;
+}
+.font30 {
+  font-size: 30px;
+}
+[data-dpr="2"] .font30 {
+  font-size: 60px;
+}
+[data-dpr="3"] .font30 {
+  font-size: 90px;
+}
+.font36 {
+  font-size: 36px;
+}
+[data-dpr="2"] .font36 {
+  font-size: 72px;
+}
+[data-dpr="3"] .font36 {
+  font-size: 108px;
+}
+.font40 {
+  font-size: 40px;
+}
+[data-dpr="2"] .font40 {
+  font-size: 80px;
+}
+[data-dpr="3"] .font40 {
+  font-size: 120px;
+}
+section img.logo {
+  position: absolute;
+  top: 0.5625rem;
+  right: 0.6875rem;
+  left: auto;
+  width: 1.59375rem;
+  height: 1.171875rem;
+}
+button {
+  position: relative;
+  background: none;
+  padding: 0.46875rem 0.9375rem;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+}
+[data-dpr="2"] button {
+  font-size: 40px;
+}
+[data-dpr="3"] button {
+  font-size: 60px;
+}
+button .btn_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: btn linear 1.4s infinite;
+}
+button .return {
+  display: inline-block;
+  width: 0.625rem;
+  height: 0.625rem;
+  background: url(../images/return_icon.png) no-repeat center center;
+  background-size: cover;
+  vertical-align: text-bottom;
+  margin-right: 0.3125rem;
+}
+@keyframes btn {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes mascot {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -1.75rem 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.loading {
+  background: url(../images/bg1.jpg) no-repeat left top;
+  background-size: cover;
+  text-align: center;
+}
+.loading .mascot_loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 7.03125rem;
+  width: 1.75rem;
+  height: 1.9375rem;
+  background-image: url("../images/sprite.png");
+  background-position: 0px 0px;
+  background-size: cover;
+  animation: mascot 0.5s linear infinite;
+  animation-timing-function: steps(1, start);
+}
+.loading .progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 9.28125rem;
+  margin: auto;
+  width: 3.3125rem;
+  height: 0.21875rem;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  text-align: left;
+  overflow: hidden;
+}
+.loading .progress span {
+  display: block;
+  background: #51a6db;
+  height: 0.21875rem;
+}
+.falling {
+  background: url(../images/falling_bg.jpg) no-repeat left top;
+  background-size: 100% 100%;
+}
+.welcome {
+  background: url(../images/p1_bg.jpg) no-repeat left top;
+  background-size: cover;
+}
+.welcome .pannel {
+  box-sizing: border-box;
+  position: absolute;
+  top: 3.125rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 0.78125rem;
+  width: 8.921875rem;
+  height: 5.84375rem;
+  text-align: center;
+  color: #fff;
+  background: url(../images/pannel.png) no-repeat center center;
+  background-size: cover;
+}
+.welcome .pannel p {
+  line-height: 0.625rem;
+  font-family: '微软雅黑';
+  font-size: 14px;
+}
+[data-dpr="2"] .welcome .pannel p {
+  font-size: 28px;
+}
+[data-dpr="3"] .welcome .pannel p {
+  font-size: 42px;
+}
+.welcome .weather {
+  position: absolute;
+  top: 9.6875rem;
+  width: 100%;
+  color: #fff;
+}
+.welcome .weather .weather-line p:first-child {
+  display: inline-block;
+  width: 58%;
+  text-align: center;
+}
+.welcome .weather .weather-line p:last-child {
+  display: inline-block;
+  width: 41%;
+  text-align: left;
+}
+.welcome .weather .line {
+  margin: 0.15625rem 0;
+  width: 100%;
+  height: 2px;
+  background: #28a7e1;
+}
+.welcome .btn {
+  position: absolute;
+  bottom: 1.5625rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+.welcome .btn .mascot {
+  position: absolute;
+  right: 0;
+  top: -1.40625rem;
+  width: 1.875rem;
+  height: 1.5625rem;
+}
+.sign {
+  background: url(../images/bg1.jpg) no-repeat left top;
+  background-size: cover;
+}
+.sign .mascot {
+  position: absolute;
+  right: -1.875rem;
+  top: 3.4375rem;
+  width: 1.875rem;
+  height: 1.5625rem;
+  transform-origin: bottom left 0;
+  transform: rotate(-45deg);
+  animation: rotate linear 4s forwards;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-60deg);
+  }
+  100% {
+    transform: rotate(-60deg);
+  }
+}
+.sign .pannel {
+  box-sizing: border-box;
+  position: relative;
+  top: 5.3125rem;
+  margin: auto;
+  padding: 0.84375rem 0.40625rem;
+  width: 8.375rem;
+  height: 4.3125rem;
+  text-align: center;
+  color: #fff;
+  background: url(../images/pannel2.png) no-repeat left top;
+  background-size: 100% 100%;
+}
+.sign .pannel input {
+  width: 7.125rem;
+  height: 0.75rem;
+  border: none;
+  text-align: center;
+  color: #c2c2c2;
+}
+.sign .pannel p {
+  padding: 0.3125rem 0.15625rem;
+  text-align: left;
+  color: #c2c2c2;
+  font-size: 14px;
+}
+[data-dpr="2"] .sign .pannel p {
+  font-size: 28px;
+}
+[data-dpr="3"] .sign .pannel p {
+  font-size: 42px;
+}
+.sign .btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3.125rem;
+  margin: auto;
+  text-align: center;
+}
+.select {
+  background: url(../images/bg1.jpg) no-repeat left top;
+  background-size: cover;
+  overflow: hidden;
+}
+.select .btn {
+  margin: 0.5625rem 0;
+  text-align: center;
+}
+.select .btn button {
+  width: 4.34375rem;
+  height: 1.5625rem;
+  padding: 0;
+}
+.select .btn1 {
+  margin-top: 4.25rem;
+}
+.select .details {
+  position: absolute;
+  right: 0.9375rem;
+  bottom: 1.5625rem;
+  width: 1.90625rem;
+  height: 1.90625rem;
+}
+.select .details button {
+  width: 1.90625rem;
+  height: 1.90625rem;
+  padding: 0;
+  font-size: 14px;
+}
+[data-dpr="2"] .select .details button {
+  font-size: 28px;
+}
+[data-dpr="3"] .select .details button {
+  font-size: 42px;
+}
+.select .details button img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: btn linear 1.4s infinite;
+}
+.select .mascot {
+  position: absolute;
+  top: -0.9375rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1.34375rem;
+  height: 1.125rem;
+}
+.plan {
+  background: url(../images/bg1.jpg) no-repeat left top;
+  background-size: cover;
+  overflow: hidden;
+}
+.plan .btn {
+  margin: 1.5625rem 0;
+  text-align: center;
+}
+.plan .btn1 {
+  margin-top: 5.9375rem;
+}
+.schedule {
+  position: relative;
+  text-align: center;
+  height: 30.578125rem;
+}
+.schedule .bg {
+  width: 100%;
+}
+.schedule .return_btn {
+  position: absolute;
+  bottom: 2.1875rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.site {
+  height: 22.34375rem;
+  text-align: center;
+}
+.site .swiper-container,
+.site .swiper-wrapper,
+.site .swiper-slide {
+  width: 100%;
+  height: 22.34375rem;
+  position: relative;
+}
+.site .bg {
+  width: 100%;
+}
+.site .return_btn {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.catering {
+  text-align: center;
+  height: 16.25rem;
+}
+.catering .bg {
+  width: 100%;
+}
+.catering .return_btn {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.traffic {
+  height: 31.3125rem;
+  text-align: center;
+}
+.traffic .bg {
+  width: 100%;
+}
+.traffic .return_btn {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.call {
+  height: 22.296875rem;
+  text-align: center;
+}
+.call .bg {
+  width: 100%;
+}
+.call .return_btn {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.hotel {
+  height: 18.875rem;
+  text-align: center;
+}
+.hotel .bg {
+  width: 100%;
+}
+.hotel .return_btn {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
