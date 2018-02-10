@@ -117,10 +117,10 @@
         method: 'POST',
         data: {avatar: '{{ $wechatInfo['avatar'] }}'},
     }).done(function (res) {
-         alert('获取微信头像成功！')
+//         alert('获取微信头像成功！')
         $('#avatar').attr('value', res);
     }).fail(function (msg) {
-         alert('获取微信头像失败！')
+//         alert('获取微信头像失败！')
     })
 
     wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
