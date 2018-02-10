@@ -69,11 +69,7 @@
             <img class='btn invite_btn ani' swiper-animate-effect='zoomIn' swiper-animate-duration='1.5s'
                  swiper-animate-delay='1s' src='../../res/cowin/images/invite_btn.png'>
             <img class='btn bless_btn ani'
-                 @if(!empty($user))
-                 onclick="window.location.href='{{ url('cowin/share') .'/'. $user->id }}'"
-                 @else
                  id="bless_btn"
-                 @endif
                  swiper-animate-effect='zoomIn' swiper-animate-duration='1.5s' swiper-animate-delay='1.5s'
                  src='../../res/cowin/images/bless_btn.png'>
         </section>

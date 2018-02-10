@@ -14,10 +14,10 @@ class IndexController extends Controller
     {
         $js = EasyWeChat::js();
         $wechatInfo = session('wechat.oauth_user');
-        $user = Cowin::where('openid', $wechatInfo['id'])
-            ->where('greeting', '!=', '')
-            ->first();
-        return view('cowin.index', compact('user', 'js', 'wechatInfo'));
+//        $user = Cowin::where('openid', $wechatInfo['id'])
+//            ->where('greeting', '!=', '')
+//            ->first();
+        return view('cowin.index', compact('js', 'wechatInfo'));
     }
 
     public function greeting(Request $request)
@@ -82,11 +82,9 @@ class IndexController extends Controller
         $img->save(public_path('upload/cowin/' . $wechatInfo['id'] . '.jpeg'));
 
         //保存贺卡用户信息
-        $user = Cowin::firstOrCreate(
+        $user = Cowin::create(
             [
-                'openid' => $wechatInfo['id']
-            ],
-            [
+                'openid' => $wechatInfo['id'],
                 'avatar' => $wechatInfo['avatar'],
                 'nickname' => $wechatInfo['nickname'],
                 'phone' => $request->phone,
