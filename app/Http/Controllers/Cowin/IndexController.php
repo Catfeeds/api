@@ -114,21 +114,5 @@ class IndexController extends Controller
         return view('cowin.guide', compact('user', 'js', 'wechatInfo'));
 
     }
-    public function api()
-    {
-        $cowin = Cowin::where('status', '0')
-            ->where('confirm', '1')
-            ->first();
-        if (empty($cowin->greeting)) {
-            $url = $cowin->avatar;
-        } else {
-            $url = $cowin->greeting;
-        }
-        return response()->json([
-            'phone' => $cowin->phone,
-            'url' => $url,
-            'nickname' => $cowin->nickname
-        ]);
-    }
 
 }
