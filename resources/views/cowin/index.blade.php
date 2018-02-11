@@ -97,7 +97,7 @@
         </div>
         <div class='popup hidden'>
             <div class='pannel'>
-                <p class='phone_line'><input type='text' class='phone' name='phone' value='请输入手机号'></p>
+                <p class='phone_line'><input type='text' class='phone' name='phone' value='请在此输入手机号码'></p>
                 <input class='submit' type='submit' value=''>
                 <div class='reset'></div>
             </div>

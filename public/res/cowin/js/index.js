@@ -98,7 +98,7 @@ $(function(){
 
     $('.reset').on('touchstart', function(){
         $('textarea').val(' ');
-        $('.phone').val('请输入手机号');
+        $('.phone').val('请在此输入手机号码');
         $('.popup').hide();
     })
 

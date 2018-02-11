@@ -407,6 +407,7 @@ section img.arrow {
   font-weight: bold;
   background: transparent;
   font-size: 20px;
+  opacity: 0.8;
 }
 [data-dpr="2"] .bless form .popup .pannel .phone {
   font-size: 40px;
