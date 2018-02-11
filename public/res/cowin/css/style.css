@@ -398,22 +398,23 @@ section img.arrow {
   text-align: center;
 }
 .bless form .popup .pannel .phone {
-  width: 4.97777778rem;
-  height: 0.95555556rem;
+  width: 4.2rem;
+  height: 0.88888889rem;
   border: none;
   border-radius: 0.22222222rem;
   text-align: center;
   color: #b32013;
   font-weight: bold;
-  background: transparent;
-  font-size: 20px;
+  background: url(../images/input_bg.png) no-repeat center center;
+  background-size: 100% 100%;
+  font-size: 14px;
   opacity: 0.8;
 }
 [data-dpr="2"] .bless form .popup .pannel .phone {
-  font-size: 40px;
+  font-size: 28px;
 }
 [data-dpr="3"] .bless form .popup .pannel .phone {
-  font-size: 60px;
+  font-size: 42px;
 }
 .bless form .popup .pannel .tips {
   width: 4.11111111rem;
