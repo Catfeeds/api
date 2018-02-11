@@ -101,6 +101,9 @@ Route::post('suning/userInfo', 'Api\SuningController@user');
 Route::post('castrol/photo/upload', 'Castrol\CastrolController@upload');
 
 /**
+ * Cowin接口
  * COWIN微信头像转base64
+ * 下载抽奖头像
  */
 Route::post('cowin/image', 'Cowin\ApiController@image');
+Route::get('cowin/avatar', 'Cowin\ApiController@api');
