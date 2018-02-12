@@ -8,7 +8,7 @@
     <link rel='stylesheet' href='../../res/cowin/css/swiper.min.css'>
     <link rel='stylesheet' href='../../res/cowin/css/animate.min.css'>
     <link rel='stylesheet' href='../../res/cowin/css/style.css'>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
 </head>
 <body>
 <audio src='../../res/cowin/music.mp3' autoplay loop></audio>
