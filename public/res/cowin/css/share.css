@@ -70,6 +70,15 @@ section {
   width: 2.29333333rem;
   height: 0.56rem;
 }
+.tips {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 12.66666667rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ad0e0b;
+}
 .popup {
   position: absolute;
   left: 0;

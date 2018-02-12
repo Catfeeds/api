@@ -10,6 +10,7 @@
 <body>
     <section>
         <img class='bg' src='{{ $user->greeting }}'>
+        <p class='tips'>长按保存生成海报,为更多的人带去祝福吧!</p>
         @if($share)
             <img id='share_btn'
                  onclick="window.location.href='{{ url('cowin/index') }}'" src="{{ asset('res/cowin/images/share_btn2.png') }}">
