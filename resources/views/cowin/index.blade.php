@@ -3,8 +3,7 @@
 <head>
     <meta charset='UTF-8'>
     <title>翼句祝福</title>
-    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
-    <!-- <script src='../../res/cowin/js/flexible.js'></script> -->
+    <script src='../../res/cowin/js/flexible.js'></script>
     <link rel='stylesheet' href='../../res/cowin/css/normalize.css'>
     <link rel='stylesheet' href='../../res/cowin/css/swiper.min.css'>
     <link rel='stylesheet' href='../../res/cowin/css/animate.min.css'>
