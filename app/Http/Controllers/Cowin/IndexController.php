@@ -23,8 +23,8 @@ class IndexController extends Controller
     public function greeting(Request $request)
     {
         $this->validate($request, [
-            'text' => 'required|max:60',
-            'phone' => 'required|size:11',
+            'text' => 'required',
+            'phone' => 'required',
         ]);
         $wechatInfo = session('wechat.oauth_user');
         $js = EasyWeChat::js();
