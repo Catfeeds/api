@@ -136,7 +136,7 @@
 </section>
 <section class='hotel activity2 hidden'>
     <img class='logo' src='../../res/cowin/guide/images/logo.png'>
-    <img class='bg' src='../../res/cowin/guide/images/hotel.jpg' alt=''>
+    <img class='bg' src='../../res/cowin/guide/images/hotel1.jpg' alt=''>
     <div class='return_btn'>
         <button><img class='btn_bg' src='../../res/cowin/guide/images/btn_bg.png'><i class='return'></i>返回</button>
     </div>
