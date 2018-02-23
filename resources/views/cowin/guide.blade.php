@@ -8,7 +8,7 @@
     <link rel='stylesheet' href='../../res/cowin/guide/css/normalize.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/swiper.min.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/animate.css'>
-    <link rel='stylesheet' href='../../res/cowin/guide/css/style.css'>
+    <link rel='stylesheet' href='../../res/cowin/guide/css/style1.css'>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
