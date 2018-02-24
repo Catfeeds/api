@@ -36,6 +36,8 @@ class ApiController extends Controller
         } else {
             $url = $cowin->greeting;
         }
+        $cowin->status = '1';
+        $cowin->save();
         return response()->json([
             'phone' => $cowin->phone,
             'url' => $url,
