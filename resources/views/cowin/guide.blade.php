@@ -9,7 +9,6 @@
     <link rel='stylesheet' href='../../res/cowin/guide/css/swiper.min.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/animate.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/style1.css'>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 <audio src='../../res/cowin/guide/m1.mp3' autoplay loop></audio>
