@@ -39,6 +39,7 @@
         </button>
     </div>
 </section>
+@if(!is_null($user))
 <section class='sign hidden'>
     <img class='logo' src='../../res/cowin/guide/images/logo.png'>
     <img class='mascot' src='../../res/cowin/guide/images/mascot.png'>
@@ -50,6 +51,7 @@
         <button><img class='btn_bg' src='../../res/cowin/guide/images/btn_bg.png'>完成签到</button>
     </div>
 </section>
+@endif
 <section class='select hidden'>
     <img class='logo' src='../../res/cowin/guide/images/logo.png'>
     <div class='btn btn1 animated flipInX'>
@@ -189,7 +191,7 @@
             $('.phone').val('请输入手机号');
             alert('请输入有效的手机号码！');
         } else {
-            $('.select').delay(100).fadeIn().siblings().delay(100).fadeOut(500);
+//            $('.select').delay(100).fadeIn().siblings().delay(100).fadeOut(500);
             //ajax提交，确认后进入用以下代码进入下一步
             $.ajax({
                 url: '{{ url('api/cowin/phone') }}',
@@ -204,7 +206,7 @@
                     phone: val,
                 },
             }).done(function (res) {
-                // $('.select').delay(100).fadeIn().siblings().delay(100).fadeOut(500);
+                 $('.select').delay(100).fadeIn().siblings().delay(100).fadeOut(500);
             }).fail(function (msg) {
                 // alert('获取微信头像失败！')
             })
