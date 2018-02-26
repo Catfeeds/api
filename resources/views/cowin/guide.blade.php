@@ -9,7 +9,6 @@
     <link rel='stylesheet' href='../../res/cowin/guide/css/swiper.min.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/animate.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/style1.css'>
-    <meta name="csrf" content="{{ csrf_token() }}">
 </head>
 <body>
 <audio src='../../res/cowin/guide/m1.mp3' autoplay loop></audio>
@@ -196,7 +195,7 @@
             $.ajax({
                 url: '{{ url('api/cowin/phone') }}',
                 headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf"]').attr('content')
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 },
                 method: 'POST',
                 data: {
