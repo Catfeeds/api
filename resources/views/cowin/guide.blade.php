@@ -38,7 +38,6 @@
         </button>
     </div>
 </section>
-@if(!is_null($user))
 <section class='sign hidden'>
     <img class='logo' src='../../res/cowin/guide/images/logo.png'>
     <img class='mascot' src='../../res/cowin/guide/images/mascot.png'>
@@ -50,7 +49,6 @@
         <button><img class='btn_bg' src='../../res/cowin/guide/images/btn_bg.png'>完成签到</button>
     </div>
 </section>
-@endif
 <section class='select hidden'>
     <img class='logo' src='../../res/cowin/guide/images/logo.png'>
     <div class='btn btn1 animated flipInX'>
