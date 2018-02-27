@@ -52,7 +52,9 @@ class ApiController extends Controller
             'openid' => $request->openid,
             'nickname' => $request->nickname], [
                 'avatar' => $request->avatar,
-                'confirm' => '1']);
+                'confirm' => '1',
+                'greeting' => ''
+        ]);
         return 'true';
 
     }
