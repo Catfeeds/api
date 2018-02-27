@@ -53,7 +53,6 @@ class ApiController extends Controller
             'nickname' => $request->nickname], [
                 'avatar' => $request->avatar,
                 'confirm' => '1',
-                'greeting' => ''
         ]);
         return 'true';
 
