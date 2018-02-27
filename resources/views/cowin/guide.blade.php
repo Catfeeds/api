@@ -174,7 +174,7 @@
 
     //进入年会
     $('.welcome button').on('touchstart', function () {
-        @if(is_null($user))
+        @if($user->confirm)
         $('.sign').fadeIn().siblings().hide();
         @else
         $('.select').fadeIn().siblings().hide();
