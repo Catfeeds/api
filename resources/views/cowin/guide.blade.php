@@ -91,7 +91,7 @@
         <div class='swiper-wrapper'>
             <div class='swiper-slide slise1'>
                 <img class='logo' src='../../res/cowin/guide/images/logo.png'>
-                <img class='bg' src='../../res/cowin/guide/images/site1.png' alt=''>
+                <img class='bg' src='../../res/cowin/guide/images/site3.jpg' alt=''>
                 <div class='return_btn'>
                     <button><img class='btn_bg' src='../../res/cowin/guide/images/btn_bg.png'><i class='return'></i>返回
                     </button>
