@@ -44,4 +44,17 @@ class ApiController extends Controller
             'nickname' => $cowin->nickname
         ]);
     }
+
+    public function phone(Request $request)
+    {
+        $cowin = Cowin::updateOrCreate([
+            'phone' => $request->phone,
+            'openid' => $request->openid,
+            'nickname' => $request->nickname], [
+                'avatar' => $request->avatar,
+                'confirm' => '1',
+        ]);
+        return 'true';
+
+    }
 }

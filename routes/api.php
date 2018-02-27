@@ -107,9 +107,11 @@ Route::post('castrol/photo/upload', 'Castrol\CastrolController@upload');
  */
 Route::post('cowin/image', 'Cowin\ApiController@image');
 Route::get('cowin/avatar', 'Cowin\ApiController@api');
-
+Route::post('cowin/phone', 'Cowin\ApiController@phone');
 /**
  * 派样机判断奖品领取接口
  */
 Route::post('friso/gift', 'Friso\ApiController@gift');
+
+
 

@@ -2,14 +2,12 @@
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <script src='../../res/cowin/guide/js/flexible1.js'></script>
     <title>小翼管家</title>
-    <script src='../../res/cowin/guide/js/flexible.js'></script>
     <link rel='stylesheet' href='../../res/cowin/guide/css/normalize.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/swiper.min.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/animate.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/style1.css'>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 <audio src='../../res/cowin/guide/m1.mp3' autoplay loop></audio>
@@ -93,7 +91,7 @@
         <div class='swiper-wrapper'>
             <div class='swiper-slide slise1'>
                 <img class='logo' src='../../res/cowin/guide/images/logo.png'>
-                <img class='bg' src='../../res/cowin/guide/images/site1.png' alt=''>
+                <img class='bg' src='../../res/cowin/guide/images/site3.jpg' alt=''>
                 <div class='return_btn'>
                     <button><img class='btn_bg' src='../../res/cowin/guide/images/btn_bg.png'><i class='return'></i>返回
                     </button>
@@ -175,7 +173,7 @@
 
     //进入年会
     $('.welcome button').on('touchstart', function () {
-        @if(empty($user))
+        @if(is_null($user))
         $('.sign').fadeIn().siblings().hide();
         @else
         $('.select').fadeIn().siblings().hide();
@@ -194,7 +192,7 @@
             $.ajax({
                 url: '{{ url('api/cowin/phone') }}',
                 headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 },
                 method: 'POST',
                 data: {
@@ -204,7 +202,8 @@
                     phone: val,
                 },
             }).done(function (res) {
-                // $('.select').delay(100).fadeIn().siblings().delay(100).fadeOut(500);
+                alert('签到成功');
+                 $('.select').delay(100).fadeIn().siblings().delay(100).fadeOut(500);
             }).fail(function (msg) {
                 // alert('获取微信头像失败！')
             })
