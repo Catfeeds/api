@@ -203,6 +203,7 @@
                     phone: val,
                 },
             }).done(function (res) {
+                alert('签到成功');
                  $('.select').delay(100).fadeIn().siblings().delay(100).fadeOut(500);
             }).fail(function (msg) {
                 // alert('获取微信头像失败！')
