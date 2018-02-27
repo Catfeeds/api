@@ -202,6 +202,7 @@ Route::get('zc/index', function () {
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
     Route::get('cowin/index', 'Cowin\IndexController@index');//邀请函首页
     Route::post('cowin/greeting', 'Cowin\IndexController@greeting');
+    Route::get('ky/index', 'Cowin\IndexController@guide');
+
 });
 Route::get('cowin/share/{id}', 'Cowin\IndexController@share');
-Route::get('ky/index', 'Cowin\IndexController@guide');
