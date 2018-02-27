@@ -29,7 +29,7 @@ class ApiController extends Controller
     public function api()
     {
         $cowin = Cowin::where('status', '0')
-//            ->where('confirm', '1')
+            ->where('confirm', '1')
             ->first();
         if (empty($cowin->greeting)) {
             $url = $cowin->avatar;
