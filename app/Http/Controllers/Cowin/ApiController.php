@@ -39,6 +39,7 @@ class ApiController extends Controller
         $cowin->status = '1';
         $cowin->save();
         return response()->json([
+            'openid' => $cowin->openid,
             'phone' => $cowin->phone,
             'url' => $url,
             'nickname' => $cowin->nickname
