@@ -4,7 +4,7 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <title>小翼管家</title>
-    <script src='../../res/cowin/guide/js/flexible.js'></script>
+    <script src='../../res/cowin/guide/js/flexible1.js'></script>
     <link rel='stylesheet' href='../../res/cowin/guide/css/normalize.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/swiper.min.css'>
     <link rel='stylesheet' href='../../res/cowin/guide/css/animate.css'>
