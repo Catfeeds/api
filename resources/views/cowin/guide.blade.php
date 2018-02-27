@@ -188,7 +188,7 @@
             $('.phone').val('请输入手机号');
             alert('请输入有效的手机号码！');
         } else {
-//            $('.select').delay(100).fadeIn().siblings().delay(100).fadeOut(500);
+            $('.select').delay(100).fadeIn().siblings().delay(100).fadeOut(500);
             //ajax提交，确认后进入用以下代码进入下一步
             $.ajax({
                 url: '{{ url('api/cowin/phone') }}',
