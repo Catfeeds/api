@@ -16,7 +16,7 @@ class ApiController extends Controller
     public function gift(Request $request)
     {
         $openid = $request->openid;
-        if ($openid === 'test' || $openid==='test1'||$openid==='test2'||$openid==='test3'||$openid==='test4'||$openid==='test5') {
+        if ($openid === 'test00' || $openid==='test11'||$openid==='test22'||$openid==='test33'||$openid==='test44'||$openid==='test55') {
             return 'true';
         } else {
             return 'false';
