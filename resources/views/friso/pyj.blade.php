@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="js/flexible.js"></script>
+    <script src="{{ asset('res/friso/pyj/js/flexible.js') }}"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('res/friso/pyj/css/swiper-4.1.6.min.css') }}">
     <link rel="stylesheet" href="{{ asset('res/friso/pyj/css/index.css') }}">
@@ -26,7 +26,7 @@
     </div>
 
 </body>
-<script src="{{ asset('js/swiper-4.1.6.min.js') }}"></script>
+<script src="{{ asset('res/friso/pyj/js/swiper-4.1.6.min.js') }}"></script>
 <script>
     var mySwiper = new Swiper('.swiper-container',{
         direction:'vertical'
