@@ -14,32 +14,36 @@ class IndexController extends Controller
     {
         $wechatInfo = session('wechat.oauth_user');
 
-        $topic = Topic::where('enabled', true)->first();
+        $topic = Topic::where('enabled', true)
+            ->orderBy('created_at', 'desc')
+            ->first();
+
         if (is_null($topic)) {
             return '活动主题尚未开放';
         }
-        //获取点赞数最多的前三人 三十条评论
-        $tops = Comment::where('topic_id', $topic->id)
-            ->orderByDesc('zan')
-            ->limit(3)->get();
+        //获取点赞数最多的前十条评论
         $comments = Comment::where('topic_id', $topic->id)
-            ->orderBy('created_at')
-            ->limit(30)->get();
+            ->orderByDesc('zan')
+            ->limit(10)->get();
         //该用户已点赞评论
         $zans = Zan::where('openid', $wechatInfo['id'])->get();
     }
 
     public function screen()
     {
-        //点赞最高人和最近4位点赞人
-        $topic = Topic::where('enabled', true)->first();
+        $topic = Topic::where('enabled', true)
+            ->orderBy('created_at', 'desc')
+            ->first();
         if (is_null($topic)) {
             return '活动主题尚未开放';
         }
-        $top = Comment::where('topic_id', $topic->id)
-            ->orderBy('zan')->first();
+
         $comments = Comment::where('topic_id', $topic->id)
-            ->orderBy('created_at')
-            ->limit(30)->get();
+            ->where('check', '1')
+            ->orderByDesc('created_at')
+            ->limit(10)
+            ->get();
+
+        return view('zyhx.index', compact('comments'));
     }
 }
