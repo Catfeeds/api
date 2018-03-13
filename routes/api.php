@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 //音频上传接口
 Route::post('audio/upload', 'Api\\AudioController@upload');
-//图片上传接口(宋-用于人脸识别比对)
+//图片上传接口(宋-用于人脸识别比对 美素用于上传派样机拍照图片)
 Route::post('image/upload', 'Api\\ImageController@upload');
 //视频上传接口(JC_Campaign_tech)
 Route::post('video/upload', 'Api\VideoController@upload');

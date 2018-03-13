@@ -17,7 +17,7 @@ class ImageController extends Controller
         ]);
         $path = Storage::disk('public_path')->putFile('face', $request->file('image'));
 
-        return env('upload_url') . '/' . $path;
+        return env('APP_URL') . '/friso/pyj/' . $path;
     }
 
     /**
@@ -55,7 +55,7 @@ class ImageController extends Controller
         $pid = $request->pid;
         for ($i = 0; $i < 110; $i++) {
             Storage::disk('public_path')
-                ->putFileAs('ali/yun/'.$pid, $request->file('p'.$i), 'p'.$i.'.png');
+                ->putFileAs('ali/yun/' . $pid, $request->file('p' . $i), 'p' . $i . '.png');
         }
         return env('APP_URL') . '/ali/yunVideo?pid=' . $pid;
     }
@@ -75,6 +75,6 @@ class ImageController extends Controller
     {
         $path = Storage::disk('public_path')
             ->putFile('columbia', $request->file('photo'));
-        return 'https://api.shanghaichujie.com/columbia?path='.$path;
+        return 'https://api.shanghaichujie.com/columbia?path=' . $path;
     }
 }

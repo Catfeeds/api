@@ -206,3 +206,8 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function
 
 });
 Route::get('cowin/share/{id}', 'Cowin\IndexController@share');
+
+/**
+ * friso美素佳儿2018
+ */
+Route::get('friso/pyj/{path}', 'Friso\PyjController@index');//显示派样机领奖包
