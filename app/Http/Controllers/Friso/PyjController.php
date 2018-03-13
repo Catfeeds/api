@@ -7,8 +7,9 @@ use App\Http\Controllers\Controller;
 
 class PyjController extends Controller
 {
-    public function index($path)
+    public function index(Request $request)
     {
-        return view('friso.pyj', compact($path));
+        $path =$request->path;
+        return view('friso.pyj', compact('path'));
     }
 }

@@ -210,4 +210,4 @@ Route::get('cowin/share/{id}', 'Cowin\IndexController@share');
 /**
  * friso美素佳儿2018
  */
-Route::get('friso/pyj/{path}', 'Friso\PyjController@index');//显示派样机领奖包
+Route::get('friso/pyj', 'Friso\PyjController@index');//显示派样机领奖包
