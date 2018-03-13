@@ -16,4 +16,6 @@ Route::group([
 
     $router->resource('/hx1','Hx1Controller');
     $router->resource('/hx2', 'Hx2Controller');
+    $router->resource('/zyhx/topic', 'TopicController');
+    $router->resource('zyhx/comment', 'CommentController');
 });
