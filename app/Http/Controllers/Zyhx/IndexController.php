@@ -13,7 +13,7 @@ class IndexController extends Controller
     public function phoneIndex()
     {
         $wechatInfo = session('wechat.oauth_user');
-
+//        dd($wechatInfo);
         $topic = Topic::where('enabled', true)
             ->orderBy('created_at', 'desc')
             ->first();
@@ -23,10 +23,11 @@ class IndexController extends Controller
         }
         //获取点赞数最多的前十条评论
         $comments = Comment::where('topic_id', $topic->id)
-            ->orderByDesc('zan')
-            ->limit(10)->get();
+            ->limit(100)->get();
         //该用户已点赞评论
         $zans = Zan::where('openid', $wechatInfo['id'])->get();
+
+        return view('zyhx.phone', compact('topic', 'zans', 'comments', 'wechatInfo'));
     }
 
     public function screen()
@@ -40,7 +41,7 @@ class IndexController extends Controller
 
         $comments = Comment::where('topic_id', $topic->id)
             ->where('check', '1')
-            ->orderByDesc('created_at')
+            ->orderByDesc('zan')
             ->limit(10)
             ->get();
 
