@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Zyhx;
 
 use App\Models\Comment;
+use App\Models\Zan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -30,6 +31,17 @@ class ApiController extends Controller
         $comment->openid=$openid;
         $comment->topic_id = $topic_id;
         $comment->save();
+        return 'true';
+    }
+
+    public function zan(Request $request)
+    {
+        $openid =$request->openid;
+        $commentId = $request->commentId;
+        $zan = new Zan();
+        $zan->openid = $openid;
+        $zan->comment_id = $commentId;
+        $zan->save();
         return 'true';
     }
 }

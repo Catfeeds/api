@@ -118,3 +118,4 @@ Route::post('friso/gift', 'Friso\ApiController@gift');
  */
 Route::get('zyhx/comments', 'Zyhx\ApiController@getComments');
 Route::post('zyhx/comment', 'Zyhx\ApiController@comment');
+Route::post('zyhx/zan', 'Zyhx\ApiController@zan');

@@ -139,8 +139,23 @@
                 }, 2000)
             },
             toggleFavorite: function (id) {
+                let self = this;
                 this.infos.favorites.push(id);
-
+                $.ajax({
+                    url: '{{ url('api/zyhx/zan') }}',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    method: 'POST',
+                    data: {
+                        openid: self.openid,
+                        commentId: id
+                    },
+                }).done(function (res) {
+                    console.log(res)
+                }).fail(function (msg) {
+                    console.log(msg.responseText)
+                })
             },
             p_open: function () {
                 this.p_state = true;
