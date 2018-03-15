@@ -12,7 +12,7 @@
 <body>
 <section id="app" class="barrage">
     <div class="titleWrapper">
-        <h1 style="color: #fff9ec">{{ $topic->topic }}</h1>
+        <h1 style="color: #fff9ec">{{ $topic->topic }} </h1>
     </div>
     <div class="infoPannel" ref="infoPannel">
         <div>
@@ -45,6 +45,7 @@
 </section>
 <script src="{{ asset('res/zyhx/lolo/js/vue.js') }}"></script>
 <script src="{{ asset('res/zyhx/lolo/js/bscroll.js') }}"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script>
     var app = new Vue({
         el: '#app',
@@ -53,6 +54,7 @@
             p_state: false,
             isPullUpLoad: false,
             openid: '{{  $wechatInfo['id'] }}',
+            finalId: {{ $comments->last()->id }},
             infos: {
                 favorites: [
                     @foreach($zans as $zan)
@@ -71,6 +73,19 @@
         },
         created: function () {
             //ajax第一次申请数据，将数据加入this.infos
+            $.ajax({
+                url: '{{ url('api/zyhx/comments') }}',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                method: 'POST',
+                data: {
+                    openid: this.openid,
+                    finalId: this.finalId
+                },
+            }).done(function (res) {
+            }).fail(function (msg) {
+            })
         },
         mounted: function () {
             this.initScroll();
