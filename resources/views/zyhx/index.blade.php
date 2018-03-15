@@ -12,7 +12,7 @@
 <div class="container-fluid">
     <div class="container">
         <div class="page-header text-center title">
-            <img src="{{ asset('res/zyhx/zhou/images/text.png') }}" alt="">
+            <h1>2018腾讯移动游戏合作伙伴大会</h1>
         </div>
     </div>
     <img src="{{ asset('res/zyhx/zhou/images/line.png') }}" style="width:104%;position:relative;left:-2%;" alt="">
