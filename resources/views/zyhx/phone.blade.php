@@ -53,8 +53,9 @@
             text: '',
             p_state: false,
             isPullUpLoad: false,
+            topic_id:{{ isset($topic) ? $topic->id : 0 }},
             openid: '{{  $wechatInfo['id'] }}',
-            finalId: {{ $comments->last()->id }},
+            finalId: {{ is_null($comments) ? $comments->last()->id : 0  }},
             infos: {
                 favorites: [
                     @foreach($zans as $zan)
@@ -73,14 +74,14 @@
         },
         created: function () {
             //ajax第一次申请数据，将数据加入this.infos
+            let self = this;
             $.ajax({
                 url: '{{ url('api/zyhx/comments') }}',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 },
-                method: 'POST',
+                method: 'GET',
                 data: {
-                    openid: this.openid,
                     finalId: this.finalId
                 },
             }).done(function (res) {
@@ -150,8 +151,27 @@
             },
             submit: function () {
                 //ajax提交信息
-                this.p_state = false;
-                this.text = '';
+
+                let self = this;
+                $.ajax({
+                    url: '{{ url('api/zyhx/comment') }}',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    method: 'POST',
+                    data: {
+                        text: self.text,
+                        openid: self.openid,
+                        topic: self.topic_id
+                    },
+                }).done(function (res) {
+                    alert('提交成功')
+                }).fail(function (msg) {
+                    console.log(msg)
+                })
+
+                self.p_state = false;
+                self.text = '';
             }
         }
     })

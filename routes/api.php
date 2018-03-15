@@ -113,5 +113,8 @@ Route::post('cowin/phone', 'Cowin\ApiController@phone');
  */
 Route::post('friso/gift', 'Friso\ApiController@gift');
 
-
-
+/**
+ * 2018腾讯大会评论互动
+ */
+Route::get('zyhx/comments', 'Zyhx\ApiController@getComments');
+Route::post('zyhx/comment', 'Zyhx\ApiController@comment');

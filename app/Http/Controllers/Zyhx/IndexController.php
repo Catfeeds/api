@@ -23,6 +23,7 @@ class IndexController extends Controller
         }
         //获取评论
         $comments = Comment::where('topic_id', $topic->id)
+            ->where('check', '1')
             ->limit(100)->get();
         //该用户已点赞评论
         $zans = Zan::where('openid', $wechatInfo['id'])->get();
@@ -44,6 +45,6 @@ class IndexController extends Controller
             ->limit(10)
             ->get();
 
-        return view('zyhx.index', compact('comments'));
+        return view('zyhx.index', compact('comments', 'topic'));
     }
 }
