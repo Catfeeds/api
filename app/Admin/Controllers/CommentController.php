@@ -94,6 +94,7 @@ class CommentController extends Controller
                $topic = Topic::find($topic_id);
                return $topic->topic;
             });
+            $grid->column('nickname', '昵称');
             $grid->column('comment', '评论内容');
             $grid->column('zan', '点赞数量')->editable()->sortable();
             $grid->column('check', '是否审核')->switch();
@@ -111,6 +112,7 @@ class CommentController extends Controller
     {
         return Admin::form(Comment::class, function (Form $form) {
             $form->hidden('openid')->default('admin');
+            $form->hidden('nickname')->default('admin');
             $form->select('topic_id', '主题栏目')->options(function () {
                $topics = Topic::all();
                $a = array();

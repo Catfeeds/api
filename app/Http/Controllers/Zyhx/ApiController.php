@@ -26,10 +26,12 @@ class ApiController extends Controller
         $openid =$request->openid;
         $text = $request->text;
         $topic_id = $request->topic;
+        $nickname = $request->nickname;
         $comment = new Comment();
         $comment->comment= $text;
         $comment->openid=$openid;
         $comment->topic_id = $topic_id;
+        $comment->nickname = $nickname;
         $comment->save();
         return 'true';
     }
@@ -42,6 +44,9 @@ class ApiController extends Controller
         $zan->openid = $openid;
         $zan->comment_id = $commentId;
         $zan->save();
+        $comment = Comment::find($commentId);
+        $comment->zan +=1;
+        $comment->save();
         return 'true';
     }
 }

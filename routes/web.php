@@ -216,6 +216,6 @@ Route::get('friso/pyj', 'Friso\PyjController@index');//显示派样机领奖包
  * 2018腾讯大会评论互动
  */
 Route::get('zyhx/index', 'Zyhx\IndexController@screen');
-Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
     Route::get('zyhx/phone', 'Zyhx\IndexController@phoneIndex');
 });

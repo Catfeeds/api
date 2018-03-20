@@ -57,6 +57,7 @@
             isPullUpLoad: false,
             topic_id:{{ isset($topic) ? $topic->id : 0 }},
             openid: '{{  $wechatInfo['id'] }}',
+            nickname: '{{ $wechatInfo['name'] }}',
             finalId: {{ is_null($comments) ? $comments->last()->id : 0  }},
             infos: {
                 favorites: [
@@ -179,7 +180,8 @@
                     data: {
                         text: self.text,
                         openid: self.openid,
-                        topic: self.topic_id
+                        topic: self.topic_id,
+                        nickname: self.nickname,
                     },
                 }).done(function (res) {
                     alert('提交成功')

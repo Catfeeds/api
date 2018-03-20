@@ -16,7 +16,7 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->string('openid', 120);
-//            $table->string('nickname', 50);
+            $table->string('nickname', 50);
 //            $table->text('headimgurl')->comment('头像');
             $table->text('comment')->comment('评论和问题内容');
             $table->integer('zan')->default(0);
