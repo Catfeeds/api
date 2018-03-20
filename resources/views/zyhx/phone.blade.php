@@ -27,6 +27,8 @@
                 </li>
             </ul>
             <div class="loading" v-if="isPullUpLoad">loading...</div>
+            <div v-show="infos.infosList.length < 5" style="height:1200px;width:100px;"></div>
+        </div>
         </div>
     </div>
     <div class="inputWrapper">
