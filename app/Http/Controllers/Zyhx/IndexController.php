@@ -21,12 +21,13 @@ class IndexController extends Controller
         if (is_null($topic)) {
             return '活动主题尚未开放';
         }
-        //获取评论
+        //获取点赞数最多的评论
         $comments = Comment::where('topic_id', $topic->id)
             ->where('check', '1')
             ->limit(100)->get();
         //该用户已点赞评论
         $zans = Zan::where('openid', $wechatInfo['id'])->get();
+
         return view('zyhx.phone', compact('topic', 'zans', 'comments', 'wechatInfo'));
     }
 
