@@ -18,18 +18,18 @@ html,body{
     }
     .arrow{
         position: absolute;
-        z-index: 100;
-        bottom: 120 / @base;
-        width: 80/@base;
+        z-index: 200;
+        bottom: 60 / @base;
+        width: 40/@base;
         left: 50%;
         transform: translateX(-50%);
         animation:arr 1.2s infinite;
         img{
             position: absolute;
-            width:80/@base;
+            width:40/@base;
         }
         img:nth-child(2){
-            top: 30/@base;
+            top: 20/@base;
         }
     }
 }
@@ -50,4 +50,32 @@ html,body{
         top: 50%;
         transform: translate(-50%,-50%)
     }
+}
+.btn{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 40/@base;
+    z-index: 100;
+    width: 300/@base;
+    img{
+        width: 100%;
+    }
+}
+p{
+    width: 200/@base;
+    height: 60/@base;
+    line-height:60/@base;
+    border-radius: 60/@base;
+    background-color: grey;
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 300;
+    top: 360/@base;
+    opacity: 0.6;
 }

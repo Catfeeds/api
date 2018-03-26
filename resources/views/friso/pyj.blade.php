@@ -17,7 +17,10 @@
                     <img src="{{ asset('res/friso/pyj/img/arrow.png') }}" alt="" >
                     <img src="{{ asset('res/friso/pyj/img/arrow.png') }}" alt="">
                 </div>
-
+                <a class="btn" href="">
+                    <img  src="{{ asset('res/friso/pyj/img/btn.png') }}" alt="">
+                </a>
+                <p>长按保存图片</p>
             </div>
             <div class="swiper-slide page2">
                 <img src="{{ asset('res/friso/pyj/img/ewm.png') }}" alt="">
