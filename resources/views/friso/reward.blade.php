@@ -10,7 +10,7 @@
 <body>
 <div class="all">
     <section>
-        <div style="position: absolute; left: 132px;top: 160px;">
+        <div style="position: absolute; left: 132px;top: 260px;">
             {!! QrCode::size('376')->margin('0')->generate($openid) !!}
         </div>
         <img src="{{ asset('res/friso/reward/img/popup.png') }}" alt="" class="popup hide">
