@@ -23,7 +23,7 @@ class ApiController extends Controller
         $openid = $request->openid;
         $client = new Client([
             'base_uri' => 'https://gw.rfc-china.com/',
-            'timeout'  => 3.0,
+            'timeout'  => 5.0,
         ]);
         $res = $client->request('GET', 'api/sso/access_token?appid=demo.TangJi&appsecret=demo.TangJi');
         $body = $res->getBody();
