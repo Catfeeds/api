@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.all {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url("../img/bg.png") no-repeat center;
+  background-size: cover;
+}
+.all section {
+  width: 640px;
+  height: 1040px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url('../img/content.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.all .ewm {
+  width: 376px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 180px;
+}
+.all .popup {
+  position: absolute;
+  z-index: 100;
+}
+.hide {
+  display: none;
+}

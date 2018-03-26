@@ -8,6 +8,7 @@ use App\Models\FrisoLog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redis;
+use GuzzleHttp\Client;
 
 class ApiController extends Controller
 {
@@ -20,16 +21,25 @@ class ApiController extends Controller
     public function gift(Request $request)
     {
         $openid = $request->openid;
-        if ($openid === 'testtest') {
-            return 'true';
-        }
-        for ($i = 0; $i <= 100; $i++) {
-            if ($openid === 'user' . $i) {
-                return 'true';
-            }
-        }
-        return 'false';
+        $client = new Client([
+            'base_uri' => 'https://gw.rfc-china.com/',
+            'timeout'  => 3.0,
+        ]);
+        $res = $client->request('GET', 'api/sso/access_token?appid=demo.TangJi&appsecret=demo.TangJi');
+        $body = $res->getBody();
+        $code = json_decode((string)$body)->data;
+        $res = $client->request('GET', 'api/customer/customer/getcustomer?openid='.$openid, [
+            'headers' => [
+                'authorization' => 'bearer '.$code,
+            ]
+        ]);
+        $body = $res->getBody();
+        $code = json_decode((string)$body)->data;
 
+        if (is_null($code)) {
+            return 'false';
+        }
+        return 'true';
     }
 
     /**
