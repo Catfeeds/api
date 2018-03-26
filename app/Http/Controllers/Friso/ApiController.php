@@ -37,9 +37,9 @@ class ApiController extends Controller
         $code = json_decode((string)$body)->data;
 
         if (is_null($code)) {
-            return $res->getBody();
+            return $openid;
         }
-        return 'true';
+        return $openid;
     }
 
     /**
