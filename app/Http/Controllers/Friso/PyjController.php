@@ -20,7 +20,7 @@ class PyjController extends Controller
         $openid = $request->openid;
         $client = new Client([
             'base_uri' => 'https://gw.rfc-china.com/',
-            'timeout' => 3.0,
+            'timeout' => 5.0,
         ]);
         $res = $client->request('GET', 'api/sso/access_token?appid=demo.TangJi&appsecret=demo.TangJi');
         $body = $res->getBody();
@@ -33,7 +33,7 @@ class PyjController extends Controller
         $body = $res->getBody();
         $data = json_decode((string)$body)->data;
 
-        if (is_null($code)) {
+        if (is_null($data)) {
             return redirect('http://frisowechat.rfc-china.com/frontPage/Reg.aspx?regsourceid=180&retUrl=https%3a%2f%2fapi.shanghaichujie.com%2ffriso%2freward%3Fopenid=oSG6Njto383u5YW9KCm0DyT0uCzs
 ');
         }
