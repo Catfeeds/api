@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <script src="{{ asset('res/friso/pyj/js/flexible.js') }}"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('res/friso/pyj/css/swiper-4.1.6.min.css') }}">
     <link rel="stylesheet" href="{{ asset('res/friso/pyj/css/index.css') }}">
     <title>美素</title>
 </head>
@@ -13,26 +12,13 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide page1">
                 <img class="bg" src="{!! env('upload_url') . '/' . $path !!}" alt="">
-                <div class="arrow">
-                    <img src="{{ asset('res/friso/pyj/img/arrow.png') }}" alt="" >
-                    <img src="{{ asset('res/friso/pyj/img/arrow.png') }}" alt="">
-                </div>
-                <a class="btn" href="">
+                <a class="btn" href="http://frisowechat.rfc-china.com/frontPage/Reg.aspx?regsourceid=180&retUrl=https%3a%2f%2fapi.shanghaichujie.com%2ffriso%2freward">
                     <img  src="{{ asset('res/friso/pyj/img/btn.png') }}" alt="">
                 </a>
                 <p>长按保存图片</p>
-            </div>
-            <div class="swiper-slide page2">
-                <img src="{{ asset('res/friso/pyj/img/ewm.png') }}" alt="">
             </div>
         </div>
     </div>
 
 </body>
-<script src="{{ asset('res/friso/pyj/js/swiper-4.1.6.min.js') }}"></script>
-<script>
-    var mySwiper = new Swiper('.swiper-container',{
-        direction:'vertical'
-    })
-</script>
 </html>
