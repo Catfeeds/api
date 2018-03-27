@@ -61,16 +61,24 @@ body {
   width: 100%;
 }
 p {
+  font-size: 15;
   width: 3.125rem;
   height: 0.9375rem;
   line-height: 0.9375rem;
   border-radius: 0.9375rem;
   text-align: center;
-  color: white;
+  color: #004494;
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
   z-index: 300;
-  bottom: 1.71875rem;
+  bottom: 1.8125rem;
+  font-weight: bold;
+}
+[data-dpr="2"] p {
+  font-size: 30px;
+}
+[data-dpr="3"] p {
+  font-size: 45px;
 }
