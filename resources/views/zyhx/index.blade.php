@@ -24,10 +24,10 @@
                     @foreach($comments as $comment)
                         <li class="row">
                             <div class="col-md-1" style="text-align:right">
-                                <h2>Q{{ $loop->index +1 }}:</h2>
+                                <h3>Q{{ $loop->index +1 }}:</h3>
                             </div>
                             <div class="col-xs-9">
-                                <h2>{{ $comment->comment }}</h2>
+                                <h3>{{ $comment->comment }}</h3>
                             </div>
                             <div class="col-xs-2" style="padding-left:5%">
                                 <div class="row" style="">
@@ -48,5 +48,16 @@
 </body>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="{{ asset('res/zyhx/zhou/js/bootstrap.js') }}"></script>
+<script>
+  <script>
+        time();
+        function time(){
+            setTimeout(function(){
+                window.location.reload();
+                time();
+            },10000);
+        }
+  </script>
+</script>
 <!-- <script src="js/index.js"></script> -->
 </html>
