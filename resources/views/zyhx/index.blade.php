@@ -10,13 +10,13 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class="container">
+    <div class="container-fuild">
         <div class="page-header text-center title">
             <h1>{{ $topic->topic }}</h1>
         </div>
     </div>
     <img src="{{ asset('res/zyhx/zhou/images/line.png') }}" style="width:104%;position:relative;left:-2%;" alt="">
-    <div class="container">
+    <div class="container-fuild">
         <div class="content">
             <ul class="ulCon">
                 @if(is_null($comments))

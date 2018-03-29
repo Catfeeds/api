@@ -11,10 +11,13 @@ h1 {
   color: #badafd;
   font-size: 44px;
 }
-h3{
+h3 {
   font-size: 36px;
-  margin: 24px 0px;
   line-height: 46px;
+}
+.page-header {
+  margin: 0;
+  padding: 0;
 }
 ul {
   list-style: none;
