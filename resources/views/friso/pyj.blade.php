@@ -5,7 +5,7 @@
     <script src="{{ asset('res/friso/pyj/js/flexible.js') }}"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('res/friso/pyj/css/index.css') }}">
-    <title>美素</title>
+    <title>美素佳儿</title>
 </head>
 <body>
     <div class="swiper-container">

@@ -63,19 +63,28 @@ html,body{
         width: 100%;
     }
 }
+.fontSize(@size){
+    font-size: @size;
+    [data-dpr = "2"] & {
+        font-size:@size * 2px;
+    }
+    [data-dpr = "3"] & {
+        font-size:@size * 3px;
+    }
+}
 p{
+    .fontSize(15);
     width: 200/@base;
     height: 60/@base;
     line-height:60/@base;
     border-radius: 60/@base;
-    background-color: grey;
     text-align: center;
-    color: white;
+    color: #004494;
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
     z-index: 300;
-    top: 360/@base;
-    opacity: 0.6;
+    bottom: 116/@base;
+    font-weight: bold;
 }
