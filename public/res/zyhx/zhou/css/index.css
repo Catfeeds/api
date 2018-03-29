@@ -11,10 +11,10 @@ h1 {
   color: #badafd;
   font-size: 44px;
 }
-
 h3{
   font-size: 36px;
-  margin: 30px 0px;
+  margin: 24px 0px;
+  line-height: 46px;
 }
 ul {
   list-style: none;
