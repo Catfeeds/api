@@ -43,7 +43,7 @@ class IndexController extends Controller
         $comments = Comment::where('topic_id', $topic->id)
             ->where('check', '1')
             ->orderByDesc('zan')
-            ->limit(10)
+            ->limit(5)
             ->get();
 
         return view('zyhx.index', compact('comments', 'topic'));
