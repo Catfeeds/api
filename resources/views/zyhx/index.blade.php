@@ -51,7 +51,7 @@
 <script>
     setTimeout(function(){
         window.location.reload();
-    },5000);
+    },8000);
 </script>
 <!-- <script src="js/index.js"></script> -->
 </html>
