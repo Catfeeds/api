@@ -123,22 +123,10 @@
                 //将setTimeout换成ajax更新数据
                 setTimeout(function () {
                     var newData = [
-                        {
-                            id: 7,
-                            text: '我们的使命是通过产业投资促进社会繁荣发展。  '
-                        },
-                        {
-                            id: 8,
-                            text: '我们的愿景是打造中国领先的多元化产业投资与专业金融服务集团。'
-                        },
-                        {
-                            id: 9,
-                            text: '横跨“大健康、文化、旅游、地产、科技、金融”六大产业于一体的大型民营企业集团。'
-                        },
-                        {
-                            id: 10,
-                            text: '打造数据采集平台、数据分析平台、金融服务平台、为所有客户提供标准化、差异化、综合性的金融解决方案。'
-                        }
+                        // {
+                        //     id: 7,
+                        //     text: '我们的使命是通过产业投资促进社会繁荣发展。  '
+                        // },
                     ];
                     //ajax更新数据newData, 将数据加入self.infos
                     self.infos.infosList = self.infos.infosList.concat(newData);
