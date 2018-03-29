@@ -9,11 +9,11 @@
 h1 {
   font-family: myFirstFont;
   color: #badafd;
-  font-size: 48px;
+  font-size: 50px;
 }
 h3 {
-  font-size: 44px;
-  line-height: 50px;
+  font-size: 46px;
+  line-height: 52px;
 }
 .page-header {
   margin: 0;
