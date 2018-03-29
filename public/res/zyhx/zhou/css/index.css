@@ -10,8 +10,13 @@ h1 {
   font-family: myFirstFont;
   color: #badafd;
 }
-h3 {
-  font-size: 20px;
+h3{
+  font-size: 26px;
+  margin-bottom: 0px;
+}
+.page-header{
+  margin: 0;
+  padding: 0;
 }
 ul {
   list-style: none;
