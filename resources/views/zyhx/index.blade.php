@@ -26,10 +26,10 @@
                             <div class="col-md-1" style="text-align:right">
                                 <h3>Q{{ $loop->index +1 }}:</h3>
                             </div>
-                            <div class="col-xs-9">
+                            <div class="col-xs-10">
                                 <h3>{{ $comment->comment }}</h3>
                             </div>
-                            <div class="col-xs-2" style="padding-left:5%">
+                            <div class="col-xs-1" style="padding-left:1%">
                                 <div class="row" style="">
                                     <h3>
                                         <img src="{{ asset('res/zyhx/zhou/images/heart.png') }}" alt="">
