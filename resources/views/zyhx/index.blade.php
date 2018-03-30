@@ -51,10 +51,8 @@
 <script>
     setTimeout(function(){
         window.location.reload();
-    },8000);
+    },12000);
     var len = $('.len').text().length;
-    console.log(len);
-    console.log($('.len'));
     if(len < 100){
         $('h3').css({'font-size':'54px','line-height':'2'});
     }else if(len < 200){
