@@ -24,14 +24,14 @@
                     @foreach($comments as $comment)
                         <li class="row">
                             <div class="col-md-1" style="text-align:right">
-                                <h3 class="len">Q{{ $loop->index +1 }}:</h3>
+                                <h3>Q{{ $loop->index +1 }}:</h3>
                             </div>
                             <div class="col-xs-10">
                                 <h3 class="len">{{ $comment->comment }}</h3>
                             </div>
                             <div class="col-xs-1" style="padding-left:1%">
                                 <div class="row" style="">
-                                    <h3 class="len">
+                                    <h3>
                                         <img src="{{ asset('res/zyhx/zhou/images/heart.png') }}" alt="">
                                         <span>{{ $comment->zan }}</span>
                                     </h3>
