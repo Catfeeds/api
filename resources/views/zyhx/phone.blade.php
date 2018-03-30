@@ -110,9 +110,9 @@
             },
             pullUpLoad: function () {
                 this.scroll.on('pullingUp', () => {
-                    this.isPullUpLoad = true;
+                    this.isPullUpLoad = false;
                     this.scroll.refresh();
-                    this.updateData();
+                    //this.updateData();
                 });
             },
             updateData: function () {
