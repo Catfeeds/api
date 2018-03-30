@@ -49,9 +49,6 @@
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="{{ asset('res/zyhx/zhou/js/bootstrap.js') }}"></script>
 <script>
-    setTimeout(function(){
-        window.location.reload();
-    },12000);
     var len = $('.len').text().length;
     if(len < 100){
         $('h3').css({'font-size':'54px','line-height':'2'});
@@ -64,6 +61,9 @@
     }else if(len < 500){
         $('h3').css({'font-size':'38px','line-height':'1.3'});
     }
+    setTimeout(function(){
+        window.location.reload();
+    },12000);
 </script>
 <!-- <script src="js/index.js"></script> -->
 </html>
