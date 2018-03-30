@@ -14,13 +14,13 @@ class IndexController extends Controller
     {
         $wechatInfo = session('wechat.oauth_user');
 //        dd($wechatInfo);
-        $topic = Topic::where('enabled', true)
+        $topic = Topic::where('enabled', '1')
             ->orderBy('created_at', 'desc')
             ->first();
-
-        if (is_null($topic)) {
-            return '活动主题尚未开放';
-        }
+//
+//        if (is_null($topic)) {
+//            return '活动主题尚未开放';
+//        }
         //获取点赞数最多的评论
         $comments = Comment::where('topic_id', $topic->id)
             ->where('check', '1')

@@ -9,13 +9,11 @@
     <link rel="stylesheet" href="{{ asset('res/zyhx/lolo/css/icon.css') }}">
     <link rel="stylesheet" href="{{ asset('res/zyhx/lolo/css/index.css') }}">
     <style>
-        [v-cloak] {
-            display: none;
-        }
+
     </style>
 </head>
 <body>
-<section id="app" class="barrage" v-cloak>
+<section id="app" class="barrage" >
     <div class="titleWrapper">
         <h1 style="color: #fff9ec">{{ $topic->topic }} </h1>
     </div>
@@ -35,7 +33,6 @@
             <div v-show="infos.infosList.length < 5" style="height:1200px;width:100px;"></div>
         </div>
         </div>
-    </div>
     <div class="inputWrapper">
         <button class="btn" @click="p_open">我要发言</button>
     </div>
