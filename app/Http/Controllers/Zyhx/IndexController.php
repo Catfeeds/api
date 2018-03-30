@@ -24,6 +24,7 @@ class IndexController extends Controller
         //获取点赞数最多的评论
         $comments = Comment::where('topic_id', $topic->id)
             ->where('check', '1')
+            ->orderBy('created_at', 'desc')
             ->limit(100)->get();
         //该用户已点赞评论
         $zans = Zan::where('openid', $wechatInfo['id'])->get();
