@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="{{ asset('res/zyhx/lolo/css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('res/zyhx/lolo/css/icon.css') }}">
     <link rel="stylesheet" href="{{ asset('res/zyhx/lolo/css/index.css') }}">
-    <style>
-        [v-cloak] {
-            display: none;
-        }
-    </style>
 </head>
 <body>
 <section id="app" class="barrage" v-cloak>
