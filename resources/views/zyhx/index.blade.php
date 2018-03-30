@@ -62,7 +62,7 @@
     }else if(len < 300){
         $('h3').css({'font-size':'48px','line-height':'1.2'});
     }else if(len < 400){
-        $('h3').css({'font-size':'44px','line-height':'1.4'});
+        $('h3').css({'font-size':'44px','line-height':'1.3'});
     }else if(len < 500){
         $('h3').css({'font-size':'38px','line-height':'1.3'});
     }
