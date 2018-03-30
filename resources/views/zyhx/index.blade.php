@@ -49,18 +49,18 @@
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="{{ asset('res/zyhx/zhou/js/bootstrap.js') }}"></script>
 <script>
-    var len = $('.len').text().length;
-    if(len < 100){
-        $('h3').css({'font-size':'54px','line-height':'2'});
-    }else if(len < 200){
-        $('h3').css({'font-size':'50px','line-height':'1.5'});
-    }else if(len < 300){
-        $('h3').css({'font-size':'48px','line-height':'1.2'});
-    }else if(len < 400){
-        $('h3').css({'font-size':'44px','line-height':'1.3'});
-    }else if(len < 500){
-        $('h3').css({'font-size':'38px','line-height':'1.3'});
-    }
+    // var len = $('.len').text().length;
+    // if(len < 100){
+    //     $('h3').css({'font-size':'54px','line-height':'2'});
+    // }else if(len < 200){
+    //     $('h3').css({'font-size':'50px','line-height':'1.5'});
+    // }else if(len < 300){
+    //     $('h3').css({'font-size':'48px','line-height':'1.2'});
+    // }else if(len < 400){
+    //     $('h3').css({'font-size':'44px','line-height':'1.3'});
+    // }else if(len < 500){
+    //     $('h3').css({'font-size':'38px','line-height':'1.3'});
+    // }
     setTimeout(function(){
         window.location.reload();
     },12000);
