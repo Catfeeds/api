@@ -14,7 +14,7 @@ class IndexController extends Controller
     {
         $wechatInfo = session('wechat.oauth_user');
 //        dd($wechatInfo);
-        $topic = Topic::where('enabled', true)
+        $topic = Topic::where('enabled', '1')
             ->orderBy('created_at', 'desc')
             ->first();
 
