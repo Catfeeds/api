@@ -63,7 +63,7 @@
     // }
     setTimeout(function(){
         window.location.reload();
-    },12000);
+    },8000);
 </script>
 <!-- <script src="js/index.js"></script> -->
 </html>
