@@ -9,13 +9,11 @@
     <link rel="stylesheet" href="{{ asset('res/zyhx/lolo/css/icon.css') }}">
     <link rel="stylesheet" href="{{ asset('res/zyhx/lolo/css/index.css') }}">
     <style>
-        [v-cloak] {
-            display: none;
-        }
+
     </style>
 </head>
 <body>
-<section id="app" class="barrage" v-cloak>
+<section id="app" class="barrage" >
     <div class="titleWrapper">
         <h1 style="color: #fff9ec">{{ $topic->topic }} </h1>
     </div>
@@ -49,7 +47,7 @@
         </div>
     </div>
 </section>
-<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="{{ asset('res/zyhx/lolo/js/vue.js') }}"></script>
 <script src="{{ asset('res/zyhx/lolo/js/bscroll.js') }}"></script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script>
