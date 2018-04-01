@@ -124,3 +124,8 @@ Route::post('zyhx/zan', 'Zyhx\ApiController@zan');
  * 中泰证券
  */
 Route::post('zt/user', 'Api\ZtController@user');
+
+/**
+ * 纯悦互动展厅
+ */
+Route::post('dew/upload', 'Api\ImageController@dew');//拍照上传

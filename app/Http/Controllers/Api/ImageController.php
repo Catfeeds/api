@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return string
+     *
+     * 2018美素佳儿派样机上传图片接口
+     */
     public function upload(Request $request)
     {
         $this->validate($request, [
@@ -17,7 +23,23 @@ class ImageController extends Controller
         ]);
         $path = Storage::disk('public_path')->putFile('face', $request->file('image'));
 
-        return env('APP_URL') . '/friso/pyj?path='. $path;
+        return env('APP_URL') . '/friso/pyj?path=' . $path;
+    }
+
+    /**
+     * @param Request $request
+     * @return string
+     *
+     * 2018纯悦展厅项目互动上传照片
+     */
+    public function dew(Request $request)
+    {
+        $this->validate($request, [
+            'image' => 'required',
+        ]);
+        $path = Storage::disk('public_path')->putFile('dew', $request->file('image'));
+
+        return env('APP_URL') . '/dew/upload/' . $path;
     }
 
     /**
