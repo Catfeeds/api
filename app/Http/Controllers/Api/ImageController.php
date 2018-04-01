@@ -39,7 +39,7 @@ class ImageController extends Controller
         ]);
         $path = Storage::disk('public_path')->putFile('dew', $request->file('image'));
 
-        return env('APP_URL') . '/dew/upload/' . $path;
+        return env('APP_URL') . '/upload/' . $path;
     }
 
     /**
