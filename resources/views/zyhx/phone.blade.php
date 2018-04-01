@@ -35,7 +35,6 @@
             <div v-show="infos.infosList.length < 5" style="height:1200px;width:100px;"></div>
         </div>
         </div>
-    </div>
     <div class="inputWrapper">
         <button class="btn" @click="p_open">我要发言</button>
     </div>
@@ -113,9 +112,9 @@
             },
             pullUpLoad: function () {
                 this.scroll.on('pullingUp', () => {
-                    this.isPullUpLoad = true;
+                    this.isPullUpLoad = false;
                     this.scroll.refresh();
-                    this.updateData();
+                    //this.updateData();
                 });
             },
             updateData: function () {

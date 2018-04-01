@@ -10,13 +10,13 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class="container">
+    <div class="container-fuild">
         <div class="page-header text-center title">
             <h1>{{ $topic->topic }}</h1>
         </div>
     </div>
     <img src="{{ asset('res/zyhx/zhou/images/line.png') }}" style="width:104%;position:relative;left:-2%;" alt="">
-    <div class="container">
+    <div class="container-fuild">
         <div class="content">
             <ul class="ulCon">
                 @if(is_null($comments))
@@ -24,12 +24,12 @@
                     @foreach($comments as $comment)
                         <li class="row">
                             <div class="col-md-1" style="text-align:right">
-                                <h2>Q{{ $loop->index +1 }}:</h2>
+                                <h3>Q{{ $loop->index +1 }}:</h3>
                             </div>
-                            <div class="col-xs-9">
-                                <h2>{{ $comment->comment }}</h2>
+                            <div class="col-xs-10">
+                                <h3 class="len">{{ $comment->comment }}</h3>
                             </div>
-                            <div class="col-xs-2" style="padding-left:5%">
+                            <div class="col-xs-1" style="padding-left:1%">
                                 <div class="row" style="">
                                     <h3>
                                         <img src="{{ asset('res/zyhx/zhou/images/heart.png') }}" alt="">
@@ -48,5 +48,22 @@
 </body>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="{{ asset('res/zyhx/zhou/js/bootstrap.js') }}"></script>
+<script>
+    // var len = $('.len').text().length;
+    // if(len < 100){
+    //     $('h3').css({'font-size':'54px','line-height':'2'});
+    // }else if(len < 200){
+    //     $('h3').css({'font-size':'50px','line-height':'1.5'});
+    // }else if(len < 300){
+    //     $('h3').css({'font-size':'48px','line-height':'1.2'});
+    // }else if(len < 400){
+    //     $('h3').css({'font-size':'44px','line-height':'1.3'});
+    // }else if(len < 500){
+    //     $('h3').css({'font-size':'38px','line-height':'1.3'});
+    // }
+    setTimeout(function(){
+        window.location.reload();
+    },8000);
+</script>
 <!-- <script src="js/index.js"></script> -->
 </html>

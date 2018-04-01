@@ -1,7 +1,30 @@
 *{
     margin: 0;
     padding: 0;
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+    -o-box-sizing: border-box; 
+    -ms-box-sizing: border-box; 
+    box-sizing: border-box;
 }
+li{
+    padding-right:30px;
+}
+@font-face{
+    font-family: myFirstFont;
+    src: url('../fonts/TT0154M.TTF')
+}
+h1{
+    font-family: myFirstFont; 
+    color: #badafd;
+    font-size: 54px;
+}
+h3{
+    font-size:40px;
+    line-height: 1.3;
+    margin: 20px 0px;
+}
+
 ul{
     list-style:none;
 }
@@ -23,8 +46,6 @@ html,body{
    
 }
 .content{
-    height: 820px;
-    overflow: hidden;
     position: relative;
     .ulCon{
         width: 100%;
