@@ -129,3 +129,5 @@ Route::post('zt/user', 'Api\ZtController@user');
  * 纯悦互动展厅
  */
 Route::post('dew/upload', 'Api\ImageController@dew');//拍照上传
+Route::post('dew/user', 'Dew\ApiController@user');
+Route::post('dew/score', 'Dew\ApiController@score');
