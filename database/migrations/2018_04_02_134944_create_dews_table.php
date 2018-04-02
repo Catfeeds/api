@@ -15,7 +15,7 @@ class CreateDewsTable extends Migration
     {
         Schema::create('dews', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('openid', 100);
+            $table->string('openid', 100)->unique();
             $table->string('username');
             $table->string('connect');
             $table->integer('score')->default(0);
