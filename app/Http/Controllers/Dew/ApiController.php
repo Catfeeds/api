@@ -50,4 +50,12 @@ class ApiController extends Controller
         }
         return 'true';
     }
+
+    public function rank()
+    {
+        $dew = Dew::select(['username', 'score'])
+            ->orderByDesc('score')
+            ->limit(100)->get();
+        return response()->json($dew->all());
+    }
 }

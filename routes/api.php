@@ -131,3 +131,4 @@ Route::post('zt/user', 'Api\ZtController@user');
 Route::post('dew/upload', 'Api\ImageController@dew');//拍照上传
 Route::post('dew/user', 'Dew\ApiController@user');
 Route::post('dew/score', 'Dew\ApiController@score');
+Route::get('dew/rank', 'Dew\ApiController@rank');
