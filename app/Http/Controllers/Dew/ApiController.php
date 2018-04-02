@@ -42,13 +42,16 @@ class ApiController extends Controller
             'openid' => 'required',
             'score' => 'required',
         ]);
-
-        $dew = Dew::where('openid', $request->openid)->first();
-        if ($dew->score < $request->score) {
-            $dew->score = $request->score;
-            $dew->save();
+        try {
+            $dew = Dew::where('openid', $request->openid)->first();
+            if ($dew->score < $request->score) {
+                $dew->score = $request->score;
+                $dew->save();
+            }
+            return 'true';
+        }catch (\Exception $e) {
+            return 'false';
         }
-        return 'true';
     }
 
     public function rank()
@@ -56,6 +59,9 @@ class ApiController extends Controller
         $dew = Dew::select(['username', 'score'])
             ->orderByDesc('score')
             ->limit(100)->get();
+        if (empty($dew)) {
+            return response()->json([]);
+        }
         return response()->json($dew->all());
     }
 }
