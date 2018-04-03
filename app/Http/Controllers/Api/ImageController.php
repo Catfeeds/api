@@ -26,21 +26,6 @@ class ImageController extends Controller
         return env('APP_URL') . '/friso/pyj?path=' . $path;
     }
 
-    /**
-     * @param Request $request
-     * @return string
-     *
-     * 2018纯悦展厅项目互动上传照片
-     */
-    public function dew(Request $request)
-    {
-        $this->validate($request, [
-            'image' => 'required',
-        ]);
-        $path = Storage::disk('public_path')->putFile('dew', $request->file('image'));
-
-        return env('APP_URL') . '/upload/' . $path;
-    }
 
     /**
      * @param Request $request

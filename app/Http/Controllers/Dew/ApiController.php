@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dew;
 use App\Models\Dew;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ApiController extends Controller
 {
@@ -54,6 +55,11 @@ class ApiController extends Controller
         }
     }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     *
+     * 返回排行榜信息
+     */
     public function rank()
     {
         $dew = Dew::select(['username', 'score'])
@@ -63,5 +69,21 @@ class ApiController extends Controller
             return response()->json([]);
         }
         return response()->json($dew->all());
+    }
+
+    /**
+     * @param Request $request
+     * @return string
+     *
+     * 2018纯悦展厅项目互动上传照片
+     */
+    public function dew(Request $request)
+    {
+        $this->validate($request, [
+            'image' => 'required',
+        ]);
+        $path = Storage::disk('public_path')->putFile('dew', $request->file('image'));
+
+        return env('APP_URL') . '/upload/' . $path;
     }
 }
