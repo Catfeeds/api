@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dew;
 use App\Models\Dew;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Storage;
 
 class ApiController extends Controller
@@ -28,6 +29,7 @@ class ApiController extends Controller
         $dew->connect = $request->connect;
         $dew->save();
 
+        Redis::icre('dew_num');
         return 'true';
     }
 
@@ -68,6 +70,7 @@ class ApiController extends Controller
         if (empty($dew)) {
             return response()->json([]);
         }
+        Redis::incre('dew_share');
         return response()->json($dew->all());
     }
 
