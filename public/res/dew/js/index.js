@@ -127,6 +127,7 @@ $(function(){
   })
 
   function get_rank(){
+    alert('gatrank');
     $.ajax({
       url: 'https://api.shanghaichujie.com/api/dew/rank',
       type: 'GET',
@@ -139,6 +140,7 @@ $(function(){
         $('.ranking').show().siblings('section:not(.checkPoint3)').hide();
       }
     });
+
   }
 
   /* 游戏逻辑 */
