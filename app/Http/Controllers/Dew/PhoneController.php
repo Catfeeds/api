@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dew;
 use App\Models\Dew;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use EasyWeChat;
 
 class PhoneController extends Controller
 {
