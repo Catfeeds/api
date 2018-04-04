@@ -126,22 +126,7 @@ $(function(){
     //get_rank()
   })
 
-  function get_rank(){
-    alert('gatrank');
-    $.ajax({
-      url: 'https://api.shanghaichujie.com/api/dew/rank',
-      type: 'GET',
-      success: function(data){
-        var html = '';
-        for(var i = 0, m = data.length; i < m; i++){
-          html += '<li><div class="no">' + (i + 1) +'</div><div class="username">'+ data[i].username +'</div><div class="num">' + data[i].score + '</div></li>'
-        }
-        $('.ranking ul').append(html);
-        $('.ranking').show().siblings('section:not(.checkPoint3)').hide();
-      }
-    });
 
-  }
 
   /* 游戏逻辑 */
   $('.point').on('touchend', function(e){
