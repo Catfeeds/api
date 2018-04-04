@@ -219,3 +219,9 @@ Route::get('zyhx/index', 'Zyhx\IndexController@screen');
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
     Route::get('zyhx/phone', 'Zyhx\IndexController@phoneIndex');
 });
+/**
+ * 纯悦项目
+ */
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
+    Route::get('dew/index', 'Dew\PhoneController@index');
+});

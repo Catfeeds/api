@@ -1,0 +1,741 @@
+@r: 75rem;
+.fontSize(@size){
+  font-size: @size * 1px;
+  [data-dpr='2'] & {
+    font-size: @size * 2 * 1px
+  }
+  [data-dpr='3'] & {
+    font-size: @size * 3 * 1px
+  }
+}
+.point(@left,@top,@width,@height){
+  position: absolute;
+  left: @left/@r;
+  top: @top/@r;
+  width: @width/@r;
+  height: @height/@r;
+  // background: rgba(255, 0, 255, .5);
+}
+.point_light{
+  background: url(../images/light.png) no-repeat;
+  background-size: 100% 100%;
+  animation: rotate 5s linear infinite;
+}
+//公共样式
+html, body{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #2d3132;
+  transform: translate3d(0,0,0);
+  .body{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 750/@r;
+    height: 1206/@r;
+  }
+}
+section{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.hide{
+  display: none;
+}
+//每关的提示
+.tips{
+  // display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  line-height: 70/@r;
+  text-align: center;
+  background: rgba(0, 0, 0, .8);
+  // font-family: '冬青黑体简体中文';
+  font-weight: bolder;
+  .fontSize(16);
+  color: #fff;
+  letter-spacing: 4/@r;
+  h2{
+    .fontSize(30);
+    color: #fdbb0d;
+  }
+  span{
+    .fontSize(19);
+    color: #fdbb0d;
+  }
+  strong{
+    letter-spacing: 1/@r;
+    color: #fdbb0d;
+  }
+  .play{
+    width: 217/@r;
+  }
+}
+//头部时间与分数
+.main{
+  position: relative;
+  .title{
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 666;
+    width: 100%;
+    overflow: hidden;
+    padding-left:42/@r;
+    padding-top: 35/@r;
+    padding: 35/@r;
+    pointer-events: none;
+    div{
+      display: inline-block;
+      padding: 7/@r 14/@r;
+      border: 5/@r solid #fdbb0d;
+      border-radius: 50/@r;
+      background: #fff;
+      // font-family: '冬青黑体简体中文';
+      font-weight: bolder;
+      .fontSize(16);
+    }
+    .time_container{
+      float: left;
+    }
+    .score_container{
+      float: right;
+      img{
+        width: 22/@r;
+      }
+      span{
+        display: inline-block;
+        width: 120/@r;
+        text-align: center;
+      }
+    }
+  }
+}
+//获得的水晶icon
+.icon{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+  .light{
+    width: 300/@r;
+    height: 310/@r;
+    animation: rotate 5s linear infinite;
+  }
+  .gold{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 130/@r;
+    height: 215/@r;
+    margin: auto;
+  }
+}
+//进入游戏界面
+.login{
+  background: url(../images/login_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  .logo{
+    width: 130/@r;
+    height: 276/@r;
+    margin: 56/@r auto 20/@r;
+    background: url(../images/logo.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  .title{
+    margin: 0 auto;
+    width: 545/@r;
+    height: 56/@r;
+    background: url(../images/title.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  .start{
+    margin: 0 auto;
+    width: 359/@r;
+    height: 100/@r;
+    margin-top: 59/@r;
+    background: url(../images/start_btn.png) no-repeat;
+    background-size: 100% 100%;
+  }
+}
+//动画效果
+@keyframes rotate{
+  from{
+    transform: rotate(0)
+  }
+  to{
+    transform: rotate(360deg)
+  }
+}
+
+//第一关
+.checkPoint1{
+  background: url(../images/checkPoint1_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  .main{
+    width: 100%;
+    height: 100%;
+    .content{
+      .point1{
+        .point(416, 780, 80, 180);
+      }
+      .point2{
+        .point(120, 400, 226, 250);
+      }
+      .point3{
+        .point(470, 170, 190, 170);
+      }
+      .point6{
+        .point(390, 1076, 280, 130);
+      }
+      .point7{
+        .point(0, 800, 120, 320);
+      }
+      .point15{
+        .point(40, 80, 180, 150);
+      }
+    }
+  }
+}
+
+//第二关
+.checkPoint2{
+  background: url(../images/checkPoint2_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  .main{
+    width: 100%;
+    height: 100%;
+    .content{
+      .point1{
+        .point(650, 910, 50, 110);
+      }
+      .point2{
+        .point(460, 680, 150, 150);
+      }
+      .point3{
+        .point(680, 530, 70, 100);
+      }
+      .point6{
+        .point(610, 1066, 140, 140);
+      }
+      .point7{
+        .point(370, 850, 150, 280);
+      }
+      .point8{
+        .point(330, 980, 40, 110);
+      }
+      .point9{
+        .point(280, 690, 90, 190);
+      }
+      .point10{
+        .point(170, 890, 130, 200);
+      }
+      .point11{
+        .point(130, 740, 170, 240);
+      }
+      .point12{
+        .point(180, 380, 210, 330);
+      }
+      .point13{
+        .point(120, 520, 60, 160);
+      }
+      .point14{
+        .point(60, 320, 210, 330);
+      }
+      .point15{
+        .point(420, 490, 100, 70);
+      }
+      .point16{
+        .point(440, 320, 300, 230);
+      }
+      .point17{
+        .point(460, 310, 36, 120);
+      }
+      .point18{
+        .point(490, 290, 40, 120);
+      }
+      .point26{
+        .point(390, 100, 60, 100);
+      }
+      .point27{
+        .point(110, 100, 60, 150);
+      }
+      .point28{
+        .point(50, 880, 80, 140);
+      }
+    }
+  }
+}
+
+//第三关
+.checkPoint3{
+  .main{
+    width: 100%;
+    height: 100%;
+    .scroll_container{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      .content{
+        width: 1485/@r;
+        height: 1958/@r;
+        background: url(../images/checkPoint3_bg.png) no-repeat;
+        background-size: 100% 100%;
+        .point1{
+          .point(714, 998, 50, 100);
+        }
+        .point2{
+          .point(518, 738, 150, 170);
+        }
+        .point3{
+          .point(760, 574, 120, 125);
+        }
+        .point4{
+          .point(918, 588, 38, 114);
+        }
+        .point5{
+          .point(985, 1031, 165, 152);
+        }
+        .point6{
+          .point(693, 1176, 197, 213);
+        }
+        .point7{
+          .point(412, 942, 167, 280);
+        }
+        .point8{
+          .point(370, 1072, 50, 100);
+        }
+        .point9{
+          .point(314, 750, 96, 198);
+        }
+        .point10{
+          .point(200, 964, 134, 210);
+        }
+        .point11{
+          .point(151, 800, 178, 270);
+        }
+        .point12{
+          .point(195, 410, 230, 364);
+        }
+        .point13{
+          .point(142, 580, 64, 130);
+        }
+        .point14{
+          .point(70, 350, 230, 356);
+        }
+        .point15{
+          .point(468, 526, 102, 82);
+        }
+        .point16{
+          .point(486, 330, 322, 260);
+        }
+        .point17{
+          .point(520, 340, 30, 120);
+        }
+        .point18{
+          .point(554, 322, 24, 118);
+        }
+        .point19{
+          .point(756, 314, 190, 158);
+        }
+        .point20{
+          .point(925, 190, 30, 85);
+        }
+        .point21{
+          .point(1200, 260, 180, 180);
+        }
+        .point22{
+          .point(1180, 520, 146, 140);
+        }
+        .point23{
+          .point(1174, 780, 170, 270);
+        }
+        .point24{
+          .point(1416, 498, 40, 136);
+        }
+        .point25{
+          .point(1368, 82, 110, 274);
+        }
+        .point26{
+          .point(440, 110, 52, 98);
+        }
+        .point27{
+          .point(138, 124, 46, 122);
+        }
+        .point28{
+          .point(66, 958, 80, 130);
+        }
+        .point29{
+          .point(80, 1270, 36, 80);
+        }
+        .point30{
+          .point(422, 1530, 46, 116);
+        }
+        .point31{
+          .point(0, 1640, 250, 294);
+        }
+        .point32{
+          .point(202, 1798, 50, 128);
+        }
+        .point33{
+          .point(658, 1446, 144, 90);
+        }
+        .point34{
+          .point(710, 1584, 60, 82);
+        }
+        .point35{
+          .point(838, 1560, 50, 120);
+        }
+        .point36{
+          .point(1156, 1350, 54, 108);
+        }
+        .point37{
+          .point(1156, 1236, 128, 140);
+        }
+        .point38{
+          .point(986, 1684, 204, 244);
+        }
+        .point39{
+          .point(896, 1824, 64, 98);
+        }
+        .point40{
+          .point(1230, 1778, 70, 110);
+        }
+      }
+    }
+  }
+}
+
+//信息录入
+.info{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  .logo_icon{
+    position: relative;
+    text-align: center;
+    .light{
+      width: 669/@r;
+      height: 644/@r;
+      animation: rotate 5s linear infinite;
+    }
+    .logo{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 190/@r;
+      width: 201/@r;
+      height: 326/@r;
+      margin: auto;
+    }
+  }
+  .pannel{
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 222/@r;
+    margin: auto;
+    padding: 285/@r 40/@r 0 40/@r;
+    width: 552/@r;
+    height: 650/@r;
+    background: url(../images/input_bg.png) no-repeat;
+    background-size: 100% 100%;
+    // font-family: '冬青黑体简体中文';
+    font-weight: bolder;
+    input{
+      box-sizing: border-box;
+      width: 317/@r;
+      height: 70/@r;
+      padding: 10/@r;
+      border: 4/@r solid #000;
+      border-radius: 50/@r;
+      background: #d7cbe4;
+      text-align: center;
+      font-family: '微软雅黑';
+      font-weight: bolder;
+      .fontSize(16);
+    }
+    .username_box{
+      display: flex;
+      height: 70/@r;
+      margin: 50/@r 0 50/@r 0;
+      .username_text{
+        flex: 4;
+        line-height: 62/@r;
+        .fontSize(16)
+      }
+      .input_box{
+        flex: 7;
+      }
+    }
+    .contact_box{
+      display: flex;
+      .contact_text{
+        display: flex;
+        flex-direction: column;
+        flex: 4;
+        .fontSize(16);
+        span{
+          .fontSize(8)
+        }
+      }
+      .input_box{
+        flex: 7;
+      }
+    }
+  }
+  .confirm{
+    position: absolute;
+    bottom: 86/@r;
+    width: 100%;
+    text-align: center;
+    button{
+      width: 210/@r;
+      height: 70/@r;
+      border: 4/@r solid #000;
+      border-radius: 50/@r;
+      background: #ffbe21;
+      // font-family: '冬青黑体简体中文';
+      font-weight: bolder;
+      .fontSize(18)
+    }
+  }
+}
+
+//结果页
+.result{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, .8);
+  .logo_icon{
+    position: relative;
+    text-align: center;
+    .light{
+      width: 669/@r;
+      height: 644/@r;
+      animation: rotate 5s linear infinite;
+    }
+    .logo{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 190/@r;
+      margin: auto;
+      width: 201/@r;
+      height: 326/@r;
+    }
+    p{
+      position: absolute;
+      left: 0;
+      right: 12/@r;
+      bottom: 320/@r;
+      z-index: 666;
+      .fontSize(30);
+      color: #fff;
+      .num{
+        // font-family: '冬青黑体简体中文';
+        font-weight: bolder;
+        .fontSize(20);
+      }
+    }
+  }
+  .pannel{
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 289/@r;
+    margin: auto;
+    padding: 285/@r 40/@r 0 40/@r;
+    width: 552/@r;
+    height: 573/@r;
+    // font-family: '冬青黑体简体中文';
+    font-weight: bolder;
+  }
+  .confirm{
+    position: absolute;
+    bottom: 86/@r;
+    width: 100%;
+    text-align: center;
+    button{
+      margin: 0 32/@r;
+      padding: 8/@r 30/@r;
+      border: 4/@r solid #000;
+      border-radius: 50/@r;
+      background: #ffbe21;
+      // font-family: '冬青黑体简体中文';
+      font-weight: bolder;
+      .fontSize(18)
+    }
+  }
+}
+.result1{
+  .pannel{
+    background: url(../images/result2000_bg.png) no-repeat;
+    background-size: 100% 100%;
+  }
+}
+.result2{
+  .pannel{
+    background: url(../images/result2700_bg.png) no-repeat;
+    background-size: 100% 100%;
+  }
+}
+.result3{
+  .pannel{
+    background: url(../images/result3400_bg.png) no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+// 分享
+.share{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, .8);
+  img{
+    position: absolute;
+    right: 71/@r;
+    top: 40/@r;
+    width: 412/@r;
+    height: 165/@r;
+  }
+}
+
+//排行榜
+.ranking{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  .logo_icon{
+    position: relative;
+    text-align: center;
+    .light{
+      width: 669/@r;
+      height: 644/@r;
+      margin-top: -100/@r;
+      animation: rotate 5s linear infinite;
+    }
+    .logo{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50/@r;
+      width: 177/@r;
+      height: 287/@r;
+      margin: auto;
+    }
+  }
+  .content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 354/@r;
+    margin: auto;
+    color: #ffba00;
+    h2{
+      text-align: center;
+      // font-family: '冬青黑体简体中文';
+      font-weight: bolder;
+      .fontSize(23);
+    }
+    .title{
+      display: flex;
+      flex-direction: row;
+      margin: 14/@r 90/@r 0;
+      padding-bottom: 8/@r;
+      border-bottom: 2/@r solid #ffba00;
+      .fontSize(14);
+      font-weight: bolder;
+      .no{
+        flex: 1;
+        text-align: center;
+      }
+      .username{
+        flex: 3;
+        text-align: center;
+      }
+      .num{
+        flex: 4;
+        padding-right: 20/@r;
+        text-align: right;
+      }
+    }
+    ul{
+      height: 610/@r;
+      overflow: auto;
+      padding: 0 90/@r;
+      li{
+        display: flex;
+        flex-direction: row;
+        padding: 14/@r 0 8/@r;
+        border-bottom: 2/@r solid #ffba00;
+        .fontSize(14);
+        font-weight: bolder;
+        .no{
+          flex: 1;
+          text-align: center;
+        }
+        .username{
+          flex: 3;
+          text-align: center;
+        }
+        .num{
+          flex: 4;
+          padding-right: 20/@r;
+          text-align: right;
+        }
+      }  
+    }
+  }
+  .tips2{
+    margin-top: 30/@r;
+    text-align: center;
+    // font-family: '冬青黑体简体中文';
+    font-weight: bolder;
+    .fontSize(11);
+    color: #ffba00;
+  }
+}

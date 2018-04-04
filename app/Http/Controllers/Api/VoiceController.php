@@ -13,7 +13,7 @@ class VoiceController extends Controller
     {
         $token = $this->token();
         $text = urlencode($request->text);
-        return 'https://tsn.baidu.com/text2audio?tex='.$text.'&lan=zh&cuid=xxx&ctp=1&per=3&tok='.$token;
+        return 'https://tsn.baidu.com/text2audio?tex='.$text.'&lan=zh&cuid=xxx&ctp=1&per=4&tok='.$token;
     }
 
     public function token()

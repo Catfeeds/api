@@ -1,0 +1,1039 @@
+.point_light {
+  background: url(../images/light.png) no-repeat;
+  background-size: 100% 100%;
+  animation: rotate 5s linear infinite;
+}
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #2d3132;
+  transform: translate3d(0, 0, 0);
+}
+html .body,
+body .body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 10rem;
+  height: 16.08rem;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.hide {
+  display: none;
+}
+.tips {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  line-height: 0.93333333rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  font-weight: bolder;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0.05333333rem;
+}
+[data-dpr='2'] .tips {
+  font-size: 32px;
+}
+[data-dpr='3'] .tips {
+  font-size: 48px;
+}
+.tips h2 {
+  font-size: 30px;
+  color: #fdbb0d;
+}
+[data-dpr='2'] .tips h2 {
+  font-size: 60px;
+}
+[data-dpr='3'] .tips h2 {
+  font-size: 90px;
+}
+.tips span {
+  font-size: 19px;
+  color: #fdbb0d;
+}
+[data-dpr='2'] .tips span {
+  font-size: 38px;
+}
+[data-dpr='3'] .tips span {
+  font-size: 57px;
+}
+.tips strong {
+  letter-spacing: 0.01333333rem;
+  color: #fdbb0d;
+}
+.tips .play {
+  width: 2.89333333rem;
+}
+.main {
+  position: relative;
+}
+.main .title {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 666;
+  width: 100%;
+  overflow: hidden;
+  padding-left: 0.56rem;
+  padding-top: 0.46666667rem;
+  padding: 0.46666667rem;
+  pointer-events: none;
+}
+.main .title div {
+  display: inline-block;
+  padding: 0.09333333rem 0.18666667rem;
+  border: 0.06666667rem solid #fdbb0d;
+  border-radius: 0.66666667rem;
+  background: #fff;
+  font-weight: bolder;
+  font-size: 16px;
+}
+[data-dpr='2'] .main .title div {
+  font-size: 32px;
+}
+[data-dpr='3'] .main .title div {
+  font-size: 48px;
+}
+.main .title .time_container {
+  float: left;
+}
+.main .title .score_container {
+  float: right;
+}
+.main .title .score_container img {
+  width: 0.29333333rem;
+}
+.main .title .score_container span {
+  display: inline-block;
+  width: 1.6rem;
+  text-align: center;
+}
+.icon {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+}
+.icon .light {
+  width: 4rem;
+  height: 4.13333333rem;
+  animation: rotate 5s linear infinite;
+}
+.icon .gold {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1.73333333rem;
+  height: 2.86666667rem;
+  margin: auto;
+}
+.login {
+  background: url(../images/login_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+.login img {
+  width: 100%;
+  height: 100%;
+}
+.login .logo {
+  width: 1.73333333rem;
+  height: 3.68rem;
+  margin: 0.74666667rem auto 0.26666667rem;
+  background: url(../images/logo.png) no-repeat;
+  background-size: 100% 100%;
+}
+.login .title {
+  margin: 0 auto;
+  width: 7.26666667rem;
+  height: 0.74666667rem;
+  background: url(../images/title.png) no-repeat;
+  background-size: 100% 100%;
+}
+.login .start {
+  margin: 0 auto;
+  width: 4.78666667rem;
+  height: 1.33333333rem;
+  margin-top: 0.78666667rem;
+  background: url(../images/start_btn.png) no-repeat;
+  background-size: 100% 100%;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.checkPoint1 {
+  background: url(../images/checkPoint1_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.checkPoint1 .main {
+  width: 100%;
+  height: 100%;
+}
+.checkPoint1 .main .content .point1 {
+  position: absolute;
+  left: 5.54666667rem;
+  top: 10.4rem;
+  width: 1.06666667rem;
+  height: 2.4rem;
+}
+.checkPoint1 .main .content .point2 {
+  position: absolute;
+  left: 1.6rem;
+  top: 5.33333333rem;
+  width: 3.01333333rem;
+  height: 3.33333333rem;
+}
+.checkPoint1 .main .content .point3 {
+  position: absolute;
+  left: 6.26666667rem;
+  top: 2.26666667rem;
+  width: 2.53333333rem;
+  height: 2.26666667rem;
+}
+.checkPoint1 .main .content .point6 {
+  position: absolute;
+  left: 5.2rem;
+  top: 14.34666667rem;
+  width: 3.73333333rem;
+  height: 1.73333333rem;
+}
+.checkPoint1 .main .content .point7 {
+  position: absolute;
+  left: 0rem;
+  top: 10.66666667rem;
+  width: 1.6rem;
+  height: 4.26666667rem;
+}
+.checkPoint1 .main .content .point15 {
+  position: absolute;
+  left: 0.53333333rem;
+  top: 1.06666667rem;
+  width: 2.4rem;
+  height: 2rem;
+}
+.checkPoint2 {
+  background: url(../images/checkPoint2_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.checkPoint2 .main {
+  width: 100%;
+  height: 100%;
+}
+.checkPoint2 .main .content .point1 {
+  position: absolute;
+  left: 8.66666667rem;
+  top: 12.13333333rem;
+  width: 0.66666667rem;
+  height: 1.46666667rem;
+}
+.checkPoint2 .main .content .point2 {
+  position: absolute;
+  left: 6.13333333rem;
+  top: 9.06666667rem;
+  width: 2rem;
+  height: 2rem;
+}
+.checkPoint2 .main .content .point3 {
+  position: absolute;
+  left: 9.06666667rem;
+  top: 7.06666667rem;
+  width: 0.93333333rem;
+  height: 1.33333333rem;
+}
+.checkPoint2 .main .content .point6 {
+  position: absolute;
+  left: 8.13333333rem;
+  top: 14.21333333rem;
+  width: 1.86666667rem;
+  height: 1.86666667rem;
+}
+.checkPoint2 .main .content .point7 {
+  position: absolute;
+  left: 4.93333333rem;
+  top: 11.33333333rem;
+  width: 2rem;
+  height: 3.73333333rem;
+}
+.checkPoint2 .main .content .point8 {
+  position: absolute;
+  left: 4.4rem;
+  top: 13.06666667rem;
+  width: 0.53333333rem;
+  height: 1.46666667rem;
+}
+.checkPoint2 .main .content .point9 {
+  position: absolute;
+  left: 3.73333333rem;
+  top: 9.2rem;
+  width: 1.2rem;
+  height: 2.53333333rem;
+}
+.checkPoint2 .main .content .point10 {
+  position: absolute;
+  left: 2.26666667rem;
+  top: 11.86666667rem;
+  width: 1.73333333rem;
+  height: 2.66666667rem;
+}
+.checkPoint2 .main .content .point11 {
+  position: absolute;
+  left: 1.73333333rem;
+  top: 9.86666667rem;
+  width: 2.26666667rem;
+  height: 3.2rem;
+}
+.checkPoint2 .main .content .point12 {
+  position: absolute;
+  left: 2.4rem;
+  top: 5.06666667rem;
+  width: 2.8rem;
+  height: 4.4rem;
+}
+.checkPoint2 .main .content .point13 {
+  position: absolute;
+  left: 1.6rem;
+  top: 6.93333333rem;
+  width: 0.8rem;
+  height: 2.13333333rem;
+}
+.checkPoint2 .main .content .point14 {
+  position: absolute;
+  left: 0.8rem;
+  top: 4.26666667rem;
+  width: 2.8rem;
+  height: 4.4rem;
+}
+.checkPoint2 .main .content .point15 {
+  position: absolute;
+  left: 5.6rem;
+  top: 6.53333333rem;
+  width: 1.33333333rem;
+  height: 0.93333333rem;
+}
+.checkPoint2 .main .content .point16 {
+  position: absolute;
+  left: 5.86666667rem;
+  top: 4.26666667rem;
+  width: 4rem;
+  height: 3.06666667rem;
+}
+.checkPoint2 .main .content .point17 {
+  position: absolute;
+  left: 6.13333333rem;
+  top: 4.13333333rem;
+  width: 0.48rem;
+  height: 1.6rem;
+}
+.checkPoint2 .main .content .point18 {
+  position: absolute;
+  left: 6.53333333rem;
+  top: 3.86666667rem;
+  width: 0.53333333rem;
+  height: 1.6rem;
+}
+.checkPoint2 .main .content .point26 {
+  position: absolute;
+  left: 5.2rem;
+  top: 1.33333333rem;
+  width: 0.8rem;
+  height: 1.33333333rem;
+}
+.checkPoint2 .main .content .point27 {
+  position: absolute;
+  left: 1.46666667rem;
+  top: 1.33333333rem;
+  width: 0.8rem;
+  height: 2rem;
+}
+.checkPoint2 .main .content .point28 {
+  position: absolute;
+  left: 0.66666667rem;
+  top: 11.73333333rem;
+  width: 1.06666667rem;
+  height: 1.86666667rem;
+}
+.checkPoint3 .main {
+  width: 100%;
+  height: 100%;
+}
+.checkPoint3 .main .scroll_container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.checkPoint3 .main .scroll_container .content {
+  width: 19.8rem;
+  height: 26.10666667rem;
+  background: url(../images/checkPoint3_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.checkPoint3 .main .scroll_container .content .point1 {
+  position: absolute;
+  left: 9.52rem;
+  top: 13.30666667rem;
+  width: 0.66666667rem;
+  height: 1.33333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point2 {
+  position: absolute;
+  left: 6.90666667rem;
+  top: 9.84rem;
+  width: 2rem;
+  height: 2.26666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point3 {
+  position: absolute;
+  left: 10.13333333rem;
+  top: 7.65333333rem;
+  width: 1.6rem;
+  height: 1.66666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point4 {
+  position: absolute;
+  left: 12.24rem;
+  top: 7.84rem;
+  width: 0.50666667rem;
+  height: 1.52rem;
+}
+.checkPoint3 .main .scroll_container .content .point5 {
+  position: absolute;
+  left: 13.13333333rem;
+  top: 13.74666667rem;
+  width: 2.2rem;
+  height: 2.02666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point6 {
+  position: absolute;
+  left: 9.24rem;
+  top: 15.68rem;
+  width: 2.62666667rem;
+  height: 2.84rem;
+}
+.checkPoint3 .main .scroll_container .content .point7 {
+  position: absolute;
+  left: 5.49333333rem;
+  top: 12.56rem;
+  width: 2.22666667rem;
+  height: 3.73333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point8 {
+  position: absolute;
+  left: 4.93333333rem;
+  top: 14.29333333rem;
+  width: 0.66666667rem;
+  height: 1.33333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point9 {
+  position: absolute;
+  left: 4.18666667rem;
+  top: 10rem;
+  width: 1.28rem;
+  height: 2.64rem;
+}
+.checkPoint3 .main .scroll_container .content .point10 {
+  position: absolute;
+  left: 2.66666667rem;
+  top: 12.85333333rem;
+  width: 1.78666667rem;
+  height: 2.8rem;
+}
+.checkPoint3 .main .scroll_container .content .point11 {
+  position: absolute;
+  left: 2.01333333rem;
+  top: 10.66666667rem;
+  width: 2.37333333rem;
+  height: 3.6rem;
+}
+.checkPoint3 .main .scroll_container .content .point12 {
+  position: absolute;
+  left: 2.6rem;
+  top: 5.46666667rem;
+  width: 3.06666667rem;
+  height: 4.85333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point13 {
+  position: absolute;
+  left: 1.89333333rem;
+  top: 7.73333333rem;
+  width: 0.85333333rem;
+  height: 1.73333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point14 {
+  position: absolute;
+  left: 0.93333333rem;
+  top: 4.66666667rem;
+  width: 3.06666667rem;
+  height: 4.74666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point15 {
+  position: absolute;
+  left: 6.24rem;
+  top: 7.01333333rem;
+  width: 1.36rem;
+  height: 1.09333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point16 {
+  position: absolute;
+  left: 6.48rem;
+  top: 4.4rem;
+  width: 4.29333333rem;
+  height: 3.46666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point17 {
+  position: absolute;
+  left: 6.93333333rem;
+  top: 4.53333333rem;
+  width: 0.4rem;
+  height: 1.6rem;
+}
+.checkPoint3 .main .scroll_container .content .point18 {
+  position: absolute;
+  left: 7.38666667rem;
+  top: 4.29333333rem;
+  width: 0.32rem;
+  height: 1.57333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point19 {
+  position: absolute;
+  left: 10.08rem;
+  top: 4.18666667rem;
+  width: 2.53333333rem;
+  height: 2.10666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point20 {
+  position: absolute;
+  left: 12.33333333rem;
+  top: 2.53333333rem;
+  width: 0.4rem;
+  height: 1.13333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point21 {
+  position: absolute;
+  left: 16rem;
+  top: 3.46666667rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.checkPoint3 .main .scroll_container .content .point22 {
+  position: absolute;
+  left: 15.73333333rem;
+  top: 6.93333333rem;
+  width: 1.94666667rem;
+  height: 1.86666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point23 {
+  position: absolute;
+  left: 15.65333333rem;
+  top: 10.4rem;
+  width: 2.26666667rem;
+  height: 3.6rem;
+}
+.checkPoint3 .main .scroll_container .content .point24 {
+  position: absolute;
+  left: 18.88rem;
+  top: 6.64rem;
+  width: 0.53333333rem;
+  height: 1.81333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point25 {
+  position: absolute;
+  left: 18.24rem;
+  top: 1.09333333rem;
+  width: 1.46666667rem;
+  height: 3.65333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point26 {
+  position: absolute;
+  left: 5.86666667rem;
+  top: 1.46666667rem;
+  width: 0.69333333rem;
+  height: 1.30666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point27 {
+  position: absolute;
+  left: 1.84rem;
+  top: 1.65333333rem;
+  width: 0.61333333rem;
+  height: 1.62666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point28 {
+  position: absolute;
+  left: 0.88rem;
+  top: 12.77333333rem;
+  width: 1.06666667rem;
+  height: 1.73333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point29 {
+  position: absolute;
+  left: 1.06666667rem;
+  top: 16.93333333rem;
+  width: 0.48rem;
+  height: 1.06666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point30 {
+  position: absolute;
+  left: 5.62666667rem;
+  top: 20.4rem;
+  width: 0.61333333rem;
+  height: 1.54666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point31 {
+  position: absolute;
+  left: 0rem;
+  top: 21.86666667rem;
+  width: 3.33333333rem;
+  height: 3.92rem;
+}
+.checkPoint3 .main .scroll_container .content .point32 {
+  position: absolute;
+  left: 2.69333333rem;
+  top: 23.97333333rem;
+  width: 0.66666667rem;
+  height: 1.70666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point33 {
+  position: absolute;
+  left: 8.77333333rem;
+  top: 19.28rem;
+  width: 1.92rem;
+  height: 1.2rem;
+}
+.checkPoint3 .main .scroll_container .content .point34 {
+  position: absolute;
+  left: 9.46666667rem;
+  top: 21.12rem;
+  width: 0.8rem;
+  height: 1.09333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point35 {
+  position: absolute;
+  left: 11.17333333rem;
+  top: 20.8rem;
+  width: 0.66666667rem;
+  height: 1.6rem;
+}
+.checkPoint3 .main .scroll_container .content .point36 {
+  position: absolute;
+  left: 15.41333333rem;
+  top: 18rem;
+  width: 0.72rem;
+  height: 1.44rem;
+}
+.checkPoint3 .main .scroll_container .content .point37 {
+  position: absolute;
+  left: 15.41333333rem;
+  top: 16.48rem;
+  width: 1.70666667rem;
+  height: 1.86666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point38 {
+  position: absolute;
+  left: 13.14666667rem;
+  top: 22.45333333rem;
+  width: 2.72rem;
+  height: 3.25333333rem;
+}
+.checkPoint3 .main .scroll_container .content .point39 {
+  position: absolute;
+  left: 11.94666667rem;
+  top: 24.32rem;
+  width: 0.85333333rem;
+  height: 1.30666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point40 {
+  position: absolute;
+  left: 16.4rem;
+  top: 23.70666667rem;
+  width: 0.93333333rem;
+  height: 1.46666667rem;
+}
+.info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.info .logo_icon {
+  position: relative;
+  text-align: center;
+}
+.info .logo_icon .light {
+  width: 8.92rem;
+  height: 8.58666667rem;
+  animation: rotate 5s linear infinite;
+}
+.info .logo_icon .logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 2.53333333rem;
+  width: 2.68rem;
+  height: 4.34666667rem;
+  margin: auto;
+}
+.info .pannel {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2.96rem;
+  margin: auto;
+  padding: 3.8rem 0.53333333rem 0 0.53333333rem;
+  width: 7.36rem;
+  height: 8.66666667rem;
+  background: url(../images/input_bg.png) no-repeat;
+  background-size: 100% 100%;
+  font-weight: bolder;
+}
+.info .pannel input {
+  box-sizing: border-box;
+  width: 4.22666667rem;
+  height: 0.93333333rem;
+  padding: 0.13333333rem;
+  border: 0.05333333rem solid #000;
+  border-radius: 0.66666667rem;
+  background: #d7cbe4;
+  text-align: center;
+  font-family: '微软雅黑';
+  font-weight: bolder;
+  font-size: 16px;
+}
+[data-dpr='2'] .info .pannel input {
+  font-size: 32px;
+}
+[data-dpr='3'] .info .pannel input {
+  font-size: 48px;
+}
+.info .pannel .username_box {
+  display: flex;
+  height: 0.93333333rem;
+  margin: 0.66666667rem 0 0.66666667rem 0;
+}
+.info .pannel .username_box .username_text {
+  flex: 4;
+  line-height: 0.82666667rem;
+  font-size: 16px;
+}
+[data-dpr='2'] .info .pannel .username_box .username_text {
+  font-size: 32px;
+}
+[data-dpr='3'] .info .pannel .username_box .username_text {
+  font-size: 48px;
+}
+.info .pannel .username_box .input_box {
+  flex: 7;
+}
+.info .pannel .contact_box {
+  display: flex;
+}
+.info .pannel .contact_box .contact_text {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  font-size: 16px;
+}
+[data-dpr='2'] .info .pannel .contact_box .contact_text {
+  font-size: 32px;
+}
+[data-dpr='3'] .info .pannel .contact_box .contact_text {
+  font-size: 48px;
+}
+.info .pannel .contact_box .contact_text span {
+  font-size: 8px;
+}
+[data-dpr='2'] .info .pannel .contact_box .contact_text span {
+  font-size: 16px;
+}
+[data-dpr='3'] .info .pannel .contact_box .contact_text span {
+  font-size: 24px;
+}
+.info .pannel .contact_box .input_box {
+  flex: 7;
+}
+.info .confirm {
+  position: absolute;
+  bottom: 1.14666667rem;
+  width: 100%;
+  text-align: center;
+}
+.info .confirm button {
+  width: 2.8rem;
+  height: 0.93333333rem;
+  border: 0.05333333rem solid #000;
+  border-radius: 0.66666667rem;
+  background: #ffbe21;
+  font-weight: bolder;
+  font-size: 18px;
+}
+[data-dpr='2'] .info .confirm button {
+  font-size: 36px;
+}
+[data-dpr='3'] .info .confirm button {
+  font-size: 54px;
+}
+.result {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+}
+.result .logo_icon {
+  position: relative;
+  text-align: center;
+}
+.result .logo_icon .light {
+  width: 8.92rem;
+  height: 8.58666667rem;
+  animation: rotate 5s linear infinite;
+}
+.result .logo_icon .logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 2.53333333rem;
+  margin: auto;
+  width: 2.68rem;
+  height: 4.34666667rem;
+}
+.result .logo_icon p {
+  position: absolute;
+  left: 0;
+  right: 0.16rem;
+  bottom: 4.26666667rem;
+  z-index: 666;
+  font-size: 30px;
+  color: #fff;
+}
+[data-dpr='2'] .result .logo_icon p {
+  font-size: 60px;
+}
+[data-dpr='3'] .result .logo_icon p {
+  font-size: 90px;
+}
+.result .logo_icon p .num {
+  font-weight: bolder;
+  font-size: 20px;
+}
+[data-dpr='2'] .result .logo_icon p .num {
+  font-size: 40px;
+}
+[data-dpr='3'] .result .logo_icon p .num {
+  font-size: 60px;
+}
+.result .pannel {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3.85333333rem;
+  margin: auto;
+  padding: 3.8rem 0.53333333rem 0 0.53333333rem;
+  width: 7.36rem;
+  height: 7.64rem;
+  font-weight: bolder;
+}
+.result .confirm {
+  position: absolute;
+  bottom: 1.14666667rem;
+  width: 100%;
+  text-align: center;
+}
+.result .confirm button {
+  margin: 0 0.42666667rem;
+  padding: 0.10666667rem 0.4rem;
+  border: 0.05333333rem solid #000;
+  border-radius: 0.66666667rem;
+  background: #ffbe21;
+  font-weight: bolder;
+  font-size: 18px;
+}
+[data-dpr='2'] .result .confirm button {
+  font-size: 36px;
+}
+[data-dpr='3'] .result .confirm button {
+  font-size: 54px;
+}
+.result1 .pannel {
+  background: url(../images/result2000_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.result2 .pannel {
+  background: url(../images/result2700_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.result3 .pannel {
+  background: url(../images/result3400_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.share {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+}
+.share img {
+  position: absolute;
+  right: 0.94666667rem;
+  top: 0.53333333rem;
+  width: 5.49333333rem;
+  height: 2.2rem;
+}
+.ranking {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.ranking .logo_icon {
+  position: relative;
+  text-align: center;
+}
+.ranking .logo_icon .light {
+  width: 8.92rem;
+  height: 8.58666667rem;
+  margin-top: -1.33333333rem;
+  animation: rotate 5s linear infinite;
+}
+.ranking .logo_icon .logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.66666667rem;
+  width: 2.36rem;
+  height: 3.82666667rem;
+  margin: auto;
+}
+.ranking .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4.72rem;
+  margin: auto;
+  color: #ffba00;
+}
+.ranking .content h2 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 23px;
+}
+[data-dpr='2'] .ranking .content h2 {
+  font-size: 46px;
+}
+[data-dpr='3'] .ranking .content h2 {
+  font-size: 69px;
+}
+.ranking .content .title {
+  display: flex;
+  flex-direction: row;
+  margin: 0.18666667rem 1.2rem 0;
+  padding-bottom: 0.10666667rem;
+  border-bottom: 0.02666667rem solid #ffba00;
+  font-size: 14px;
+  font-weight: bolder;
+}
+[data-dpr='2'] .ranking .content .title {
+  font-size: 28px;
+}
+[data-dpr='3'] .ranking .content .title {
+  font-size: 42px;
+}
+.ranking .content .title .no {
+  flex: 1;
+  text-align: center;
+}
+.ranking .content .title .username {
+  flex: 3;
+  text-align: center;
+}
+.ranking .content .title .num {
+  flex: 4;
+  padding-right: 0.26666667rem;
+  text-align: right;
+}
+.ranking .content ul {
+  height: 8.13333333rem;
+  overflow: auto;
+  padding: 0 1.2rem;
+}
+.ranking .content ul li {
+  display: flex;
+  flex-direction: row;
+  padding: 0.18666667rem 0 0.10666667rem;
+  border-bottom: 0.02666667rem solid #ffba00;
+  font-size: 14px;
+  font-weight: bolder;
+}
+[data-dpr='2'] .ranking .content ul li {
+  font-size: 28px;
+}
+[data-dpr='3'] .ranking .content ul li {
+  font-size: 42px;
+}
+.ranking .content ul li .no {
+  flex: 1;
+  text-align: center;
+}
+.ranking .content ul li .username {
+  flex: 3;
+  text-align: center;
+}
+.ranking .content ul li .num {
+  flex: 4;
+  padding-right: 0.26666667rem;
+  text-align: right;
+}
+.ranking .tips2 {
+  margin-top: 0.4rem;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 11px;
+  color: #ffba00;
+}
+[data-dpr='2'] .ranking .tips2 {
+  font-size: 22px;
+}
+[data-dpr='3'] .ranking .tips2 {
+  font-size: 33px;
+}
