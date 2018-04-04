@@ -27,9 +27,8 @@
         <div class="tips">
             <h2>第一关</h2>
             <p>
-                寻找纯悦钻石品质<br/>
                 <span>7秒</span>限时<br/>
-                找寻纯悦元素相关宝藏<br/>
+                寻找纯悦元素<br/>
                 赢取纯悦钻石积分<br/>
                 看好你<br/>
                 <img src="../../res/dew/images/icon1.png"><br/>
@@ -56,9 +55,8 @@
         <div class="tips">
             <h2>第二关</h2>
             <p>
-                寻找纯悦钻石品质<br/>
-                <span>10秒</span>限时<br/>
-                找寻纯悦元素相关宝藏<br/>
+                <span>12秒</span>限时<br/>
+                寻找正确的铺货渠道<br/>
                 赢取纯悦钻石积分<br/>
                 看好你<br/>
                 <img src="../../res/dew/images/icon1.png"><br/>
@@ -67,7 +65,7 @@
         </div>
         <div class="main">
             <div class="title">
-                <div class="time_container">时间: 00:<span class='time'>10</span></div>
+                <div class="time_container">时间: 00:<span class='time'>12</span></div>
                 <div class="score_container"><img src="../../res/dew/images/gold.png"><span class='score'>0</span></div>
             </div>
             <div class="content">
@@ -98,19 +96,18 @@
         <div class="tips">
             <h2>第三关</h2>
             <p>
-                寻找纯悦钻石品质<br/>
-                <span>15秒</span>限时<br/>
-                搜寻纯悦钻石品质铺货渠道<br/>
+                <span>20秒</span>限时<br/>
+                发现正确的饮用场合<br/>
                 赢取纯悦钻石积分<br/>
                 看好你<br/>
-                <strong>此关屏幕可以左右移动</strong><br/>
+                此关屏幕可左右移动<br/>
                 <img src="../../res/dew/images/icon1.png"><br/>
                 <img class="play" src="../../res/dew/images/play_btn.png">
             </p>
         </div>
         <div class="main">
             <div class="title">
-                <div class="time_container">时间: 00:<span class='time'>15</span></div>
+                <div class="time_container">时间: 00:<span class='time'>20</span></div>
                 <div class="score_container"><img src="../../res/dew/images/gold.png"><span class='score'>0</span></div>
             </div>
             <div class='scroll_container'>
@@ -155,6 +152,8 @@
                     <div class="point point38" data-point='true'></div>
                     <div class="point point39" data-point='true'></div>
                     <div class="point point40" data-point='true'></div>
+                    <div class="point point41" data-point='true'></div>
+                    <div class="point point42" data-point='true'></div>
                 </div>
             </div>
         </div>

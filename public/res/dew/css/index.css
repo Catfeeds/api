@@ -42,7 +42,7 @@ section {
   align-items: center;
   width: 100%;
   height: 100%;
-  line-height: 0.93333333rem;
+  line-height: 0.8rem;
   text-align: center;
   background: rgba(0, 0, 0, 0.8);
   font-weight: bolder;
@@ -57,28 +57,27 @@ section {
   font-size: 48px;
 }
 .tips h2 {
-  font-size: 30px;
-  color: #fdbb0d;
+  margin-bottom: 0.26666667rem;
+  font-size: 40px;
+  color: #3d1a65;
+  text-shadow: 0 0.02666667rem #fff, 0.02666667rem 0 #fff, -0.02666667rem 0 #fff, 0 -0.02666667rem #fff;
 }
 [data-dpr='2'] .tips h2 {
-  font-size: 60px;
+  font-size: 80px;
 }
 [data-dpr='3'] .tips h2 {
-  font-size: 90px;
+  font-size: 120px;
 }
 .tips span {
-  font-size: 19px;
-  color: #fdbb0d;
+  font-size: 22px;
+  color: #3d1a65;
+  text-shadow: 0 0.02666667rem #fff, 0.02666667rem 0 #fff, -0.02666667rem 0 #fff, 0 -0.02666667rem #fff;
 }
 [data-dpr='2'] .tips span {
-  font-size: 38px;
+  font-size: 44px;
 }
 [data-dpr='3'] .tips span {
-  font-size: 57px;
-}
-.tips strong {
-  letter-spacing: 0.01333333rem;
-  color: #fdbb0d;
+  font-size: 66px;
 }
 .tips .play {
   width: 2.89333333rem;
@@ -98,13 +97,14 @@ section {
   padding-top: 0.46666667rem;
   padding: 0.46666667rem;
   pointer-events: none;
+  color: #fff;
 }
 .main .title div {
   display: inline-block;
   padding: 0.09333333rem 0.18666667rem;
-  border: 0.06666667rem solid #fdbb0d;
+  border: 0.06666667rem solid #fff;
   border-radius: 0.66666667rem;
-  background: #fff;
+  background: #3d1a65;
   font-weight: bolder;
   font-size: 16px;
 }
@@ -159,10 +159,10 @@ section {
   height: 100%;
 }
 .login .logo {
-  width: 1.73333333rem;
-  height: 3.68rem;
+  width: 2.68rem;
+  height: 4.34666667rem;
   margin: 0.74666667rem auto 0.26666667rem;
-  background: url(../images/logo.png) no-repeat;
+  background: url(../images/logo_icon.png) no-repeat;
   background-size: 100% 100%;
 }
 .login .title {
@@ -202,6 +202,7 @@ section {
   top: 10.4rem;
   width: 1.06666667rem;
   height: 2.4rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint1 .main .content .point2 {
   position: absolute;
@@ -209,6 +210,7 @@ section {
   top: 5.33333333rem;
   width: 3.01333333rem;
   height: 3.33333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint1 .main .content .point3 {
   position: absolute;
@@ -216,6 +218,7 @@ section {
   top: 2.26666667rem;
   width: 2.53333333rem;
   height: 2.26666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint1 .main .content .point6 {
   position: absolute;
@@ -223,6 +226,7 @@ section {
   top: 14.34666667rem;
   width: 3.73333333rem;
   height: 1.73333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint1 .main .content .point7 {
   position: absolute;
@@ -230,6 +234,7 @@ section {
   top: 10.66666667rem;
   width: 1.6rem;
   height: 4.26666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint1 .main .content .point15 {
   position: absolute;
@@ -237,6 +242,7 @@ section {
   top: 1.06666667rem;
   width: 2.4rem;
   height: 2rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 {
   background: url(../images/checkPoint2_bg.jpg) no-repeat;
@@ -252,6 +258,7 @@ section {
   top: 12.13333333rem;
   width: 0.66666667rem;
   height: 1.46666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point2 {
   position: absolute;
@@ -259,6 +266,7 @@ section {
   top: 9.06666667rem;
   width: 2rem;
   height: 2rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point3 {
   position: absolute;
@@ -266,6 +274,7 @@ section {
   top: 7.06666667rem;
   width: 0.93333333rem;
   height: 1.33333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point6 {
   position: absolute;
@@ -273,6 +282,7 @@ section {
   top: 14.21333333rem;
   width: 1.86666667rem;
   height: 1.86666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point7 {
   position: absolute;
@@ -280,6 +290,7 @@ section {
   top: 11.33333333rem;
   width: 2rem;
   height: 3.73333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point8 {
   position: absolute;
@@ -287,6 +298,7 @@ section {
   top: 13.06666667rem;
   width: 0.53333333rem;
   height: 1.46666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point9 {
   position: absolute;
@@ -294,6 +306,7 @@ section {
   top: 9.2rem;
   width: 1.2rem;
   height: 2.53333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point10 {
   position: absolute;
@@ -301,6 +314,7 @@ section {
   top: 11.86666667rem;
   width: 1.73333333rem;
   height: 2.66666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point11 {
   position: absolute;
@@ -308,6 +322,7 @@ section {
   top: 9.86666667rem;
   width: 2.26666667rem;
   height: 3.2rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point12 {
   position: absolute;
@@ -315,6 +330,7 @@ section {
   top: 5.06666667rem;
   width: 2.8rem;
   height: 4.4rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point13 {
   position: absolute;
@@ -322,6 +338,7 @@ section {
   top: 6.93333333rem;
   width: 0.8rem;
   height: 2.13333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point14 {
   position: absolute;
@@ -329,6 +346,7 @@ section {
   top: 4.26666667rem;
   width: 2.8rem;
   height: 4.4rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point15 {
   position: absolute;
@@ -336,6 +354,7 @@ section {
   top: 6.53333333rem;
   width: 1.33333333rem;
   height: 0.93333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point16 {
   position: absolute;
@@ -343,6 +362,7 @@ section {
   top: 4.26666667rem;
   width: 4rem;
   height: 3.06666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point17 {
   position: absolute;
@@ -350,6 +370,7 @@ section {
   top: 4.13333333rem;
   width: 0.48rem;
   height: 1.6rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point18 {
   position: absolute;
@@ -357,6 +378,7 @@ section {
   top: 3.86666667rem;
   width: 0.53333333rem;
   height: 1.6rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point26 {
   position: absolute;
@@ -364,6 +386,7 @@ section {
   top: 1.33333333rem;
   width: 0.8rem;
   height: 1.33333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point27 {
   position: absolute;
@@ -371,13 +394,15 @@ section {
   top: 1.33333333rem;
   width: 0.8rem;
   height: 2rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint2 .main .content .point28 {
   position: absolute;
-  left: 0.66666667rem;
-  top: 11.73333333rem;
-  width: 1.06666667rem;
-  height: 1.86666667rem;
+  left: 0.26666667rem;
+  top: 13.06666667rem;
+  width: 2rem;
+  height: 1.6rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main {
   width: 100%;
@@ -403,6 +428,7 @@ section {
   top: 13.30666667rem;
   width: 0.66666667rem;
   height: 1.33333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point2 {
   position: absolute;
@@ -410,6 +436,7 @@ section {
   top: 9.84rem;
   width: 2rem;
   height: 2.26666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point3 {
   position: absolute;
@@ -417,6 +444,7 @@ section {
   top: 7.65333333rem;
   width: 1.6rem;
   height: 1.66666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point4 {
   position: absolute;
@@ -424,6 +452,7 @@ section {
   top: 7.84rem;
   width: 0.50666667rem;
   height: 1.52rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point5 {
   position: absolute;
@@ -431,6 +460,7 @@ section {
   top: 13.74666667rem;
   width: 2.2rem;
   height: 2.02666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point6 {
   position: absolute;
@@ -438,6 +468,7 @@ section {
   top: 15.68rem;
   width: 2.62666667rem;
   height: 2.84rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point7 {
   position: absolute;
@@ -445,6 +476,7 @@ section {
   top: 12.56rem;
   width: 2.22666667rem;
   height: 3.73333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point8 {
   position: absolute;
@@ -452,6 +484,7 @@ section {
   top: 14.29333333rem;
   width: 0.66666667rem;
   height: 1.33333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point9 {
   position: absolute;
@@ -459,6 +492,7 @@ section {
   top: 10rem;
   width: 1.28rem;
   height: 2.64rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point10 {
   position: absolute;
@@ -466,6 +500,7 @@ section {
   top: 12.85333333rem;
   width: 1.78666667rem;
   height: 2.8rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point11 {
   position: absolute;
@@ -473,6 +508,7 @@ section {
   top: 10.66666667rem;
   width: 2.37333333rem;
   height: 3.6rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point12 {
   position: absolute;
@@ -480,6 +516,7 @@ section {
   top: 5.46666667rem;
   width: 3.06666667rem;
   height: 4.85333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point13 {
   position: absolute;
@@ -487,6 +524,7 @@ section {
   top: 7.73333333rem;
   width: 0.85333333rem;
   height: 1.73333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point14 {
   position: absolute;
@@ -494,6 +532,7 @@ section {
   top: 4.66666667rem;
   width: 3.06666667rem;
   height: 4.74666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point15 {
   position: absolute;
@@ -501,6 +540,7 @@ section {
   top: 7.01333333rem;
   width: 1.36rem;
   height: 1.09333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point16 {
   position: absolute;
@@ -508,6 +548,7 @@ section {
   top: 4.4rem;
   width: 4.29333333rem;
   height: 3.46666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point17 {
   position: absolute;
@@ -515,6 +556,7 @@ section {
   top: 4.53333333rem;
   width: 0.4rem;
   height: 1.6rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point18 {
   position: absolute;
@@ -522,6 +564,7 @@ section {
   top: 4.29333333rem;
   width: 0.32rem;
   height: 1.57333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point19 {
   position: absolute;
@@ -529,6 +572,7 @@ section {
   top: 4.18666667rem;
   width: 2.53333333rem;
   height: 2.10666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point20 {
   position: absolute;
@@ -536,6 +580,7 @@ section {
   top: 2.53333333rem;
   width: 0.4rem;
   height: 1.13333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point21 {
   position: absolute;
@@ -543,6 +588,7 @@ section {
   top: 3.46666667rem;
   width: 2.4rem;
   height: 2.4rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point22 {
   position: absolute;
@@ -550,6 +596,7 @@ section {
   top: 6.93333333rem;
   width: 1.94666667rem;
   height: 1.86666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point23 {
   position: absolute;
@@ -557,6 +604,7 @@ section {
   top: 10.4rem;
   width: 2.26666667rem;
   height: 3.6rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point24 {
   position: absolute;
@@ -564,6 +612,7 @@ section {
   top: 6.64rem;
   width: 0.53333333rem;
   height: 1.81333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point25 {
   position: absolute;
@@ -571,6 +620,7 @@ section {
   top: 1.09333333rem;
   width: 1.46666667rem;
   height: 3.65333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point26 {
   position: absolute;
@@ -578,6 +628,7 @@ section {
   top: 1.46666667rem;
   width: 0.69333333rem;
   height: 1.30666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point27 {
   position: absolute;
@@ -585,13 +636,15 @@ section {
   top: 1.65333333rem;
   width: 0.61333333rem;
   height: 1.62666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point28 {
   position: absolute;
-  left: 0.88rem;
-  top: 12.77333333rem;
-  width: 1.06666667rem;
-  height: 1.73333333rem;
+  left: 0.53333333rem;
+  top: 14rem;
+  width: 2rem;
+  height: 1.86666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point29 {
   position: absolute;
@@ -599,6 +652,7 @@ section {
   top: 16.93333333rem;
   width: 0.48rem;
   height: 1.06666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point30 {
   position: absolute;
@@ -606,6 +660,7 @@ section {
   top: 20.4rem;
   width: 0.61333333rem;
   height: 1.54666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point31 {
   position: absolute;
@@ -613,6 +668,7 @@ section {
   top: 21.86666667rem;
   width: 3.33333333rem;
   height: 3.92rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point32 {
   position: absolute;
@@ -620,6 +676,7 @@ section {
   top: 23.97333333rem;
   width: 0.66666667rem;
   height: 1.70666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point33 {
   position: absolute;
@@ -627,6 +684,7 @@ section {
   top: 19.28rem;
   width: 1.92rem;
   height: 1.2rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point34 {
   position: absolute;
@@ -634,6 +692,7 @@ section {
   top: 21.12rem;
   width: 0.8rem;
   height: 1.09333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point35 {
   position: absolute;
@@ -641,6 +700,7 @@ section {
   top: 20.8rem;
   width: 0.66666667rem;
   height: 1.6rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point36 {
   position: absolute;
@@ -648,6 +708,7 @@ section {
   top: 18rem;
   width: 0.72rem;
   height: 1.44rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point37 {
   position: absolute;
@@ -655,6 +716,7 @@ section {
   top: 16.48rem;
   width: 1.70666667rem;
   height: 1.86666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point38 {
   position: absolute;
@@ -662,6 +724,7 @@ section {
   top: 22.45333333rem;
   width: 2.72rem;
   height: 3.25333333rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point39 {
   position: absolute;
@@ -669,6 +732,7 @@ section {
   top: 24.32rem;
   width: 0.85333333rem;
   height: 1.30666667rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .checkPoint3 .main .scroll_container .content .point40 {
   position: absolute;
@@ -676,6 +740,23 @@ section {
   top: 23.70666667rem;
   width: 0.93333333rem;
   height: 1.46666667rem;
+  background: rgba(255, 0, 255, 0.5);
+}
+.checkPoint3 .main .scroll_container .content .point41 {
+  position: absolute;
+  left: 18.13333333rem;
+  top: 9.46666667rem;
+  width: 1.6rem;
+  height: 2rem;
+  background: rgba(255, 0, 255, 0.5);
+}
+.checkPoint3 .main .scroll_container .content .point42 {
+  position: absolute;
+  left: 13.73333333rem;
+  top: 21.2rem;
+  width: 2.26666667rem;
+  height: 1.6rem;
+  background: rgba(255, 0, 255, 0.5);
 }
 .info {
   position: absolute;
@@ -793,10 +874,11 @@ section {
 .info .confirm button {
   width: 2.8rem;
   height: 0.93333333rem;
-  border: 0.05333333rem solid #000;
+  border: 0.02666667rem solid #59197e;
   border-radius: 0.66666667rem;
-  background: #ffbe21;
+  background: rgba(89, 25, 125, 0.5);
   font-weight: bolder;
+  color: #fff;
   font-size: 18px;
 }
 [data-dpr='2'] .info .confirm button {
@@ -877,11 +959,12 @@ section {
 .result .confirm button {
   margin: 0 0.42666667rem;
   padding: 0.10666667rem 0.4rem;
-  border: 0.05333333rem solid #000;
+  border: 0.02666667rem solid #59197e;
   border-radius: 0.66666667rem;
-  background: #ffbe21;
+  background: rgba(89, 25, 125, 0.5);
   font-weight: bolder;
   font-size: 18px;
+  color: #fff;
 }
 [data-dpr='2'] .result .confirm button {
   font-size: 36px;
@@ -890,15 +973,15 @@ section {
   font-size: 54px;
 }
 .result1 .pannel {
-  background: url(../images/result2000_bg.png) no-repeat;
+  background: url(../images/result1_bg.png) no-repeat;
   background-size: 100% 100%;
 }
 .result2 .pannel {
-  background: url(../images/result2700_bg.png) no-repeat;
+  background: url(../images/result2_bg.png) no-repeat;
   background-size: 100% 100%;
 }
 .result3 .pannel {
-  background: url(../images/result3400_bg.png) no-repeat;
+  background: url(../images/result3_bg.png) no-repeat;
   background-size: 100% 100%;
 }
 .share {
@@ -951,7 +1034,7 @@ section {
   right: 0;
   top: 4.72rem;
   margin: auto;
-  color: #ffba00;
+  color: #fff;
 }
 .ranking .content h2 {
   text-align: center;
@@ -969,7 +1052,7 @@ section {
   flex-direction: row;
   margin: 0.18666667rem 1.2rem 0;
   padding-bottom: 0.10666667rem;
-  border-bottom: 0.02666667rem solid #ffba00;
+  border-bottom: 0.02666667rem solid #fff;
   font-size: 14px;
   font-weight: bolder;
 }
@@ -1001,7 +1084,7 @@ section {
   display: flex;
   flex-direction: row;
   padding: 0.18666667rem 0 0.10666667rem;
-  border-bottom: 0.02666667rem solid #ffba00;
+  border-bottom: 0.02666667rem solid #fff;
   font-size: 14px;
   font-weight: bolder;
 }
@@ -1029,7 +1112,7 @@ section {
   text-align: center;
   font-weight: bolder;
   font-size: 11px;
-  color: #ffba00;
+  color: #fff;
 }
 [data-dpr='2'] .ranking .tips2 {
   font-size: 22px;
