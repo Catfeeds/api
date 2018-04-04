@@ -29,7 +29,6 @@ class ApiController extends Controller
         $dew->connect = $request->connect;
         $dew->save();
 
-        Redis::incr('dew_num');
         return 'true';
     }
 
@@ -45,6 +44,7 @@ class ApiController extends Controller
             'openid' => 'required',
             'score' => 'required',
         ]);
+        Redis::incr('dew_num');//统计游戏次数
         try {
             $dew = Dew::where('openid', $request->openid)->first();
             if ($dew->score < $request->score) {
@@ -70,7 +70,7 @@ class ApiController extends Controller
         if (empty($dew)) {
             return response()->json([]);
         }
-        Redis::incr('dew_share');
+        Redis::incr('dew_share');//统计分享次数
         return response()->json($dew->all());
     }
 
