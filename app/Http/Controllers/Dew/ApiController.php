@@ -29,7 +29,7 @@ class ApiController extends Controller
         $dew->connect = $request->connect;
         $dew->save();
 
-        Redis::icre('dew_num');
+        Redis::incr('dew_num');
         return 'true';
     }
 
@@ -70,7 +70,7 @@ class ApiController extends Controller
         if (empty($dew)) {
             return response()->json([]);
         }
-        Redis::incre('dew_share');
+        Redis::incr('dew_share');
         return response()->json($dew->all());
     }
 
