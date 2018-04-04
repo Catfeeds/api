@@ -283,6 +283,7 @@
             imgUrl: "https://api.shanghaichujie.com/res/dew/images/share_wechat.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
+                alert(status);
                 if (status) {
                     $.ajax({
                         url: 'https://api.shanghaichujie.com/api/dew/rank',
