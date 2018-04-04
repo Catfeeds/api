@@ -259,7 +259,7 @@
             link: "https://api.shanghaichujie.com/dew/index",
             imgUrl: "https://api.shanghaichujie.com/res/dew/images/share_wechat.png", // 分享图标
             success: function () {
-                if (status === 1) {
+                if (status == 1) {
                     $.ajax({
                         url: 'https://api.shanghaichujie.com/api/dew/rank',
                         type: 'GET',
@@ -283,7 +283,7 @@
             imgUrl: "https://api.shanghaichujie.com/res/dew/images/share_wechat.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
-                if (status === 1) {
+                if (status == 1) {
                     $.ajax({
                         url: 'https://api.shanghaichujie.com/api/dew/rank',
                         type: 'GET',
