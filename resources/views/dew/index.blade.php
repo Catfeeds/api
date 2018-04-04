@@ -258,6 +258,7 @@
             link: "https://api.shanghaichujie.com/dew/index",
             imgUrl: "https://api.shanghaichujie.com/res/dew/images/share_wechat.png", // 分享图标
             success: function () {
+                alert('已分享');
                 get_rank();
             }
         });
@@ -269,6 +270,7 @@
             imgUrl: "https://api.shanghaichujie.com/res/dew/images/share_wechat.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
+                alert('已分享');
                 get_rank();
             }
         });
