@@ -244,6 +244,7 @@
 <script type="application/javascript">
     var isRegister = {{ is_null($user) ? 'false' : 'true' }};
     var openid = '{{ $wechatInfo['id'] }}';
+    var status = 0;
 </script>
 <script src="../../res/dew/js/index.js"></script>
 </body>
@@ -258,19 +259,20 @@
             link: "https://api.shanghaichujie.com/dew/index",
             imgUrl: "https://api.shanghaichujie.com/res/dew/images/share_wechat.png", // 分享图标
             success: function () {
-                $.ajax({
-                    url: 'https://api.shanghaichujie.com/api/dew/rank',
-                    type: 'GET',
-                    success: function (data) {
-                        var html = '';
-                        for (var i = 0, m = data.length; i < m; i++) {
-                            html += '<li><div class="no">' + (i + 1) + '</div><div class="username">' + data[i].username + '</div><div class="num">' + data[i].score + '</div></li>'
+                if (status) {
+                    $.ajax({
+                        url: 'https://api.shanghaichujie.com/api/dew/rank',
+                        type: 'GET',
+                        success: function (data) {
+                            var html = '';
+                            for (var i = 0, m = data.length; i < m; i++) {
+                                html += '<li><div class="no">' + (i + 1) + '</div><div class="username">' + data[i].username + '</div><div class="num">' + data[i].score + '</div></li>'
+                            }
+                            $('.ranking ul').append(html);
+                            $('.ranking').show().siblings('section:not(.checkPoint3)').hide();
                         }
-                        $('.ranking ul').append(html);
-                        $('.ranking').show().siblings('section:not(.checkPoint3)').hide();
-                    }
-                });
-
+                    });
+                }
             }
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
@@ -281,19 +283,20 @@
             imgUrl: "https://api.shanghaichujie.com/res/dew/images/share_wechat.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
-                $.ajax({
-                    url: 'https://api.shanghaichujie.com/api/dew/rank',
-                    type: 'GET',
-                    success: function (data) {
-                        var html = '';
-                        for (var i = 0, m = data.length; i < m; i++) {
-                            html += '<li><div class="no">' + (i + 1) + '</div><div class="username">' + data[i].username + '</div><div class="num">' + data[i].score + '</div></li>'
+                if (status) {
+                    $.ajax({
+                        url: 'https://api.shanghaichujie.com/api/dew/rank',
+                        type: 'GET',
+                        success: function (data) {
+                            var html = '';
+                            for (var i = 0, m = data.length; i < m; i++) {
+                                html += '<li><div class="no">' + (i + 1) + '</div><div class="username">' + data[i].username + '</div><div class="num">' + data[i].score + '</div></li>'
+                            }
+                            $('.ranking ul').append(html);
+                            $('.ranking').show().siblings('section:not(.checkPoint3)').hide();
                         }
-                        $('.ranking ul').append(html);
-                        $('.ranking').show().siblings('section:not(.checkPoint3)').hide();
-                    }
-                });
-
+                    });
+                }
             }
         });
     });
