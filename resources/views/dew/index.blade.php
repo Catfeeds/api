@@ -226,7 +226,7 @@
             <img class='logo' src="../../res/dew/images/logo_icon.png">
         </div>
         <div class='content'>
-            <h2>钻石排名</h2>
+            <h2>钻石积分排名</h2>
             <div class='title'>
                 <div class='no'>名次</div>
                 <div class='username'>姓名</div>
