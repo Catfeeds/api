@@ -254,7 +254,7 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: '纯悦 2018', // 分享标题
+            title: '动动手指 开启纯悦钻石品质探寻之旅', // 分享标题
             link: "https://api.shanghaichujie.com/dew/index",
             imgUrl: "https://api.shanghaichujie.com/res/dew/images/share_wechat.png", // 分享图标
             success: function () {
@@ -276,7 +276,7 @@
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
-            title: '纯悦 2018', // 分享标题
+            title: '动动手指 开启纯悦钻石品质探寻之旅', // 分享标题
             desc: "在厦门系统大会发现不同", // 分享描述
             link: "https://api.shanghaichujie.com/dew/index",
             imgUrl: "https://api.shanghaichujie.com/res/dew/images/share_wechat.png", // 分享图标
