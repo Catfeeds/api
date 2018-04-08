@@ -42,7 +42,7 @@ section {
   align-items: center;
   width: 100%;
   height: 100%;
-  line-height: 0.93333333rem;
+  line-height: 0.8rem;
   text-align: center;
   background: rgba(0, 0, 0, 0.8);
   font-weight: bolder;
@@ -57,28 +57,27 @@ section {
   font-size: 48px;
 }
 .tips h2 {
-  font-size: 30px;
-  color: #fdbb0d;
+  margin-bottom: 0.26666667rem;
+  font-size: 40px;
+  color: #3d1a65;
+  text-shadow: 0 0.02666667rem #fff, 0.02666667rem 0 #fff, -0.02666667rem 0 #fff, 0 -0.02666667rem #fff;
 }
 [data-dpr='2'] .tips h2 {
-  font-size: 60px;
+  font-size: 80px;
 }
 [data-dpr='3'] .tips h2 {
-  font-size: 90px;
+  font-size: 120px;
 }
 .tips span {
-  font-size: 19px;
-  color: #fdbb0d;
+  font-size: 22px;
+  color: #3d1a65;
+  text-shadow: 0 0.02666667rem #fff, 0.02666667rem 0 #fff, -0.02666667rem 0 #fff, 0 -0.02666667rem #fff;
 }
 [data-dpr='2'] .tips span {
-  font-size: 38px;
+  font-size: 44px;
 }
 [data-dpr='3'] .tips span {
-  font-size: 57px;
-}
-.tips strong {
-  letter-spacing: 0.01333333rem;
-  color: #fdbb0d;
+  font-size: 66px;
 }
 .tips .play {
   width: 2.89333333rem;
@@ -98,13 +97,14 @@ section {
   padding-top: 0.46666667rem;
   padding: 0.46666667rem;
   pointer-events: none;
+  color: #fff;
 }
 .main .title div {
   display: inline-block;
   padding: 0.09333333rem 0.18666667rem;
-  border: 0.06666667rem solid #fdbb0d;
+  border: 0.06666667rem solid #fff;
   border-radius: 0.66666667rem;
-  background: #fff;
+  background: #3d1a65;
   font-weight: bolder;
   font-size: 16px;
 }
@@ -159,10 +159,10 @@ section {
   height: 100%;
 }
 .login .logo {
-  width: 1.73333333rem;
-  height: 3.68rem;
+  width: 2.68rem;
+  height: 4.34666667rem;
   margin: 0.74666667rem auto 0.26666667rem;
-  background: url(../images/logo.png) no-repeat;
+  background: url(../images/logo_icon.png) no-repeat;
   background-size: 100% 100%;
 }
 .login .title {
@@ -374,10 +374,10 @@ section {
 }
 .checkPoint2 .main .content .point28 {
   position: absolute;
-  left: 0.66666667rem;
-  top: 11.73333333rem;
-  width: 1.06666667rem;
-  height: 1.86666667rem;
+  left: 0.26666667rem;
+  top: 13.06666667rem;
+  width: 2rem;
+  height: 1.6rem;
 }
 .checkPoint3 .main {
   width: 100%;
@@ -588,10 +588,10 @@ section {
 }
 .checkPoint3 .main .scroll_container .content .point28 {
   position: absolute;
-  left: 0.88rem;
-  top: 12.77333333rem;
-  width: 1.06666667rem;
-  height: 1.73333333rem;
+  left: 0.53333333rem;
+  top: 14rem;
+  width: 2rem;
+  height: 1.86666667rem;
 }
 .checkPoint3 .main .scroll_container .content .point29 {
   position: absolute;
@@ -676,6 +676,20 @@ section {
   top: 23.70666667rem;
   width: 0.93333333rem;
   height: 1.46666667rem;
+}
+.checkPoint3 .main .scroll_container .content .point41 {
+  position: absolute;
+  left: 18.13333333rem;
+  top: 9.46666667rem;
+  width: 1.6rem;
+  height: 2rem;
+}
+.checkPoint3 .main .scroll_container .content .point42 {
+  position: absolute;
+  left: 13.73333333rem;
+  top: 21.2rem;
+  width: 2.26666667rem;
+  height: 1.6rem;
 }
 .info {
   position: absolute;
@@ -793,10 +807,11 @@ section {
 .info .confirm button {
   width: 2.8rem;
   height: 0.93333333rem;
-  border: 0.05333333rem solid #000;
+  border: 0.02666667rem solid #59197e;
   border-radius: 0.66666667rem;
-  background: #ffbe21;
+  background: rgba(89, 25, 125, 0.5);
   font-weight: bolder;
+  color: #fff;
   font-size: 18px;
 }
 [data-dpr='2'] .info .confirm button {
@@ -877,11 +892,12 @@ section {
 .result .confirm button {
   margin: 0 0.42666667rem;
   padding: 0.10666667rem 0.4rem;
-  border: 0.05333333rem solid #000;
+  border: 0.02666667rem solid #59197e;
   border-radius: 0.66666667rem;
-  background: #ffbe21;
+  background: rgba(89, 25, 125, 0.5);
   font-weight: bolder;
   font-size: 18px;
+  color: #fff;
 }
 [data-dpr='2'] .result .confirm button {
   font-size: 36px;
@@ -890,15 +906,15 @@ section {
   font-size: 54px;
 }
 .result1 .pannel {
-  background: url(../images/result2000_bg.png) no-repeat;
+  background: url(../images/result1_bg.png) no-repeat;
   background-size: 100% 100%;
 }
 .result2 .pannel {
-  background: url(../images/result2700_bg.png) no-repeat;
+  background: url(../images/result2_bg.png) no-repeat;
   background-size: 100% 100%;
 }
 .result3 .pannel {
-  background: url(../images/result3400_bg.png) no-repeat;
+  background: url(../images/result3_bg.png) no-repeat;
   background-size: 100% 100%;
 }
 .share {
@@ -914,7 +930,7 @@ section {
   position: absolute;
   right: 0.94666667rem;
   top: 0.53333333rem;
-  width: 5.49333333rem;
+  width: 6.76rem;
   height: 2.2rem;
 }
 .ranking {
@@ -951,7 +967,7 @@ section {
   right: 0;
   top: 4.72rem;
   margin: auto;
-  color: #ffba00;
+  color: #fff;
 }
 .ranking .content h2 {
   text-align: center;
@@ -969,7 +985,7 @@ section {
   flex-direction: row;
   margin: 0.18666667rem 1.2rem 0;
   padding-bottom: 0.10666667rem;
-  border-bottom: 0.02666667rem solid #ffba00;
+  border-bottom: 0.02666667rem solid #fff;
   font-size: 14px;
   font-weight: bolder;
 }
@@ -1001,7 +1017,7 @@ section {
   display: flex;
   flex-direction: row;
   padding: 0.18666667rem 0 0.10666667rem;
-  border-bottom: 0.02666667rem solid #ffba00;
+  border-bottom: 0.02666667rem solid #fff;
   font-size: 14px;
   font-weight: bolder;
 }
@@ -1029,7 +1045,7 @@ section {
   text-align: center;
   font-weight: bolder;
   font-size: 11px;
-  color: #ffba00;
+  color: #fff;
 }
 [data-dpr='2'] .ranking .tips2 {
   font-size: 22px;

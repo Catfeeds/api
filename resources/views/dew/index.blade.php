@@ -27,9 +27,8 @@
         <div class="tips">
             <h2>第一关</h2>
             <p>
-                寻找纯悦钻石品质<br/>
                 <span>7秒</span>限时<br/>
-                找寻纯悦元素相关宝藏<br/>
+                寻找纯悦元素<br/>
                 赢取纯悦钻石积分<br/>
                 看好你<br/>
                 <img src="../../res/dew/images/icon1.png"><br/>
@@ -56,9 +55,8 @@
         <div class="tips">
             <h2>第二关</h2>
             <p>
-                寻找纯悦钻石品质<br/>
-                <span>10秒</span>限时<br/>
-                找寻纯悦元素相关宝藏<br/>
+                <span>12秒</span>限时<br/>
+                寻找正确的铺货渠道<br/>
                 赢取纯悦钻石积分<br/>
                 看好你<br/>
                 <img src="../../res/dew/images/icon1.png"><br/>
@@ -67,7 +65,7 @@
         </div>
         <div class="main">
             <div class="title">
-                <div class="time_container">时间: 00:<span class='time'>10</span></div>
+                <div class="time_container">时间: 00:<span class='time'>12</span></div>
                 <div class="score_container"><img src="../../res/dew/images/gold.png"><span class='score'>0</span></div>
             </div>
             <div class="content">
@@ -98,19 +96,18 @@
         <div class="tips">
             <h2>第三关</h2>
             <p>
-                寻找纯悦钻石品质<br/>
-                <span>15秒</span>限时<br/>
-                搜寻纯悦钻石品质铺货渠道<br/>
+                <span>20秒</span>限时<br/>
+                发现正确的饮用场合<br/>
                 赢取纯悦钻石积分<br/>
                 看好你<br/>
-                <strong>此关屏幕可以左右移动</strong><br/>
+                此关屏幕可左右移动<br/>
                 <img src="../../res/dew/images/icon1.png"><br/>
                 <img class="play" src="../../res/dew/images/play_btn.png">
             </p>
         </div>
         <div class="main">
             <div class="title">
-                <div class="time_container">时间: 00:<span class='time'>15</span></div>
+                <div class="time_container">时间: 00:<span class='time'>20</span></div>
                 <div class="score_container"><img src="../../res/dew/images/gold.png"><span class='score'>0</span></div>
             </div>
             <div class='scroll_container'>
@@ -155,6 +152,8 @@
                     <div class="point point38" data-point='true'></div>
                     <div class="point point39" data-point='true'></div>
                     <div class="point point40" data-point='true'></div>
+                    <div class="point point41" data-point='true'></div>
+                    <div class="point point42" data-point='true'></div>
                 </div>
             </div>
         </div>
@@ -227,7 +226,7 @@
             <img class='logo' src="../../res/dew/images/logo_icon.png">
         </div>
         <div class='content'>
-            <h2>钻石排名</h2>
+            <h2>钻石积分排名</h2>
             <div class='title'>
                 <div class='no'>名次</div>
                 <div class='username'>姓名</div>
@@ -236,7 +235,7 @@
             <ul>
 
             </ul>
-            <p class='tips2'>排名滚动更新, 前十大奖揭晓时间为XXXX</p>
+            <p class='tips2'>排名滚动更新, 前十名获奖者揭晓时间为4月10日下午6点</p>
         </div>
     </section>
 </div>
@@ -255,7 +254,7 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: '纯悦 2018', // 分享标题
+            title: '动动手指 开启纯悦钻石品质探寻之旅', // 分享标题
             link: "https://api.shanghaichujie.com/dew/index",
             imgUrl: "https://api.shanghaichujie.com/res/dew/images/share_wechat.png", // 分享图标
             success: function () {
@@ -277,7 +276,7 @@
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
-            title: '纯悦 2018', // 分享标题
+            title: '动动手指 开启纯悦钻石品质探寻之旅', // 分享标题
             desc: "在厦门系统大会发现不同", // 分享描述
             link: "https://api.shanghaichujie.com/dew/index",
             imgUrl: "https://api.shanghaichujie.com/res/dew/images/share_wechat.png", // 分享图标

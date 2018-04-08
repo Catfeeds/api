@@ -26,7 +26,7 @@ $(function () {
     //第二关
     $('.checkPoint2 .play').on('touchend', function () {
         $('.checkPoint2 .tips').hide();
-        chunyue.countDown(10, $('.time')[1], function () {
+        chunyue.countDown(12, $('.time')[1], function () {
             $('.checkPoint3').show().siblings('section').hide()
             //第三关场景居中
             var scrollLeft = $('.checkPoint3 .content').width() / 4;
@@ -39,7 +39,7 @@ $(function () {
     //点击开始
     $('.checkPoint3 .play').on('touchend', function () {
         $('.checkPoint3 .tips').hide();
-        chunyue.countDown(15, $('.time')[2], function () {
+        chunyue.countDown(20, $('.time')[2], function () {
             //不需要
             //$('.info').show().siblings('section:not(.checkPoint3)').hide();
             if (isRegister) {

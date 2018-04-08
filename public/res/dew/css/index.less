@@ -61,7 +61,7 @@ section{
   align-items: center;
   width: 100%;
   height: 100%;
-  line-height: 70/@r;
+  line-height: 60/@r;
   text-align: center;
   background: rgba(0, 0, 0, .8);
   // font-family: '冬青黑体简体中文';
@@ -70,16 +70,15 @@ section{
   color: #fff;
   letter-spacing: 4/@r;
   h2{
-    .fontSize(30);
-    color: #fdbb0d;
+    margin-bottom: 20/@r;
+    .fontSize(40);
+    color: #3d1a65;
+    text-shadow: 0 2/@r #fff, 2/@r 0 #fff, -2/@r 0 #fff, 0 -2/@r #fff;
   }
   span{
-    .fontSize(19);
-    color: #fdbb0d;
-  }
-  strong{
-    letter-spacing: 1/@r;
-    color: #fdbb0d;
+    .fontSize(22);
+    color: #3d1a65;
+    text-shadow: 0 2/@r #fff, 2/@r 0 #fff, -2/@r 0 #fff, 0 -2/@r #fff;
   }
   .play{
     width: 217/@r;
@@ -100,12 +99,13 @@ section{
     padding-top: 35/@r;
     padding: 35/@r;
     pointer-events: none;
+    color: #fff;
     div{
       display: inline-block;
       padding: 7/@r 14/@r;
-      border: 5/@r solid #fdbb0d;
+      border: 5/@r solid #fff;
       border-radius: 50/@r;
-      background: #fff;
+      background: #3d1a65;
       // font-family: '冬青黑体简体中文';
       font-weight: bolder;
       .fontSize(16);
@@ -158,10 +158,10 @@ section{
     height: 100%;
   }
   .logo{
-    width: 130/@r;
-    height: 276/@r;
+    width: 201/@r;
+    height: 326/@r;
     margin: 56/@r auto 20/@r;
-    background: url(../images/logo.png) no-repeat;
+    background: url(../images/logo_icon.png) no-repeat;
     background-size: 100% 100%;
   }
   .title{
@@ -283,7 +283,7 @@ section{
         .point(110, 100, 60, 150);
       }
       .point28{
-        .point(50, 880, 80, 140);
+        .point(20, 980, 150, 120);
       }
     }
   }
@@ -388,7 +388,7 @@ section{
           .point(138, 124, 46, 122);
         }
         .point28{
-          .point(66, 958, 80, 130);
+          .point(40, 1050, 150, 140);
         }
         .point29{
           .point(80, 1270, 36, 80);
@@ -425,6 +425,12 @@ section{
         }
         .point40{
           .point(1230, 1778, 70, 110);
+        }
+        .point41{
+          .point(1360, 710, 120, 150);
+        }
+        .point42{
+          .point(1030, 1590, 170, 120);
         }
       }
     }
@@ -523,11 +529,12 @@ section{
     button{
       width: 210/@r;
       height: 70/@r;
-      border: 4/@r solid #000;
+      border: 2/@r solid #59197e;
       border-radius: 50/@r;
-      background: #ffbe21;
+      background: rgba(89, 25, 125, 0.5);
       // font-family: '冬青黑体简体中文';
       font-weight: bolder;
+      color: #fff;
       .fontSize(18)
     }
   }
@@ -594,30 +601,31 @@ section{
     button{
       margin: 0 32/@r;
       padding: 8/@r 30/@r;
-      border: 4/@r solid #000;
+      border: 2/@r solid #59197e;
       border-radius: 50/@r;
-      background: #ffbe21;
+      background: rgba(89, 25, 125, 0.5);
       // font-family: '冬青黑体简体中文';
       font-weight: bolder;
-      .fontSize(18)
+      .fontSize(18);
+      color: #fff;
     }
   }
 }
 .result1{
   .pannel{
-    background: url(../images/result2000_bg.png) no-repeat;
+    background: url(../images/result1_bg.png) no-repeat;
     background-size: 100% 100%;
   }
 }
 .result2{
   .pannel{
-    background: url(../images/result2700_bg.png) no-repeat;
+    background: url(../images/result2_bg.png) no-repeat;
     background-size: 100% 100%;
   }
 }
 .result3{
   .pannel{
-    background: url(../images/result3400_bg.png) no-repeat;
+    background: url(../images/result3_bg.png) no-repeat;
     background-size: 100% 100%;
   }
 }
@@ -635,7 +643,7 @@ section{
     position: absolute;
     right: 71/@r;
     top: 40/@r;
-    width: 412/@r;
+    width: 507/@r;
     height: 165/@r;
   }
 }
@@ -674,7 +682,7 @@ section{
     right: 0;
     top: 354/@r;
     margin: auto;
-    color: #ffba00;
+    color: #fff;
     h2{
       text-align: center;
       // font-family: '冬青黑体简体中文';
@@ -686,7 +694,7 @@ section{
       flex-direction: row;
       margin: 14/@r 90/@r 0;
       padding-bottom: 8/@r;
-      border-bottom: 2/@r solid #ffba00;
+      border-bottom: 2/@r solid #fff;
       .fontSize(14);
       font-weight: bolder;
       .no{
@@ -711,7 +719,7 @@ section{
         display: flex;
         flex-direction: row;
         padding: 14/@r 0 8/@r;
-        border-bottom: 2/@r solid #ffba00;
+        border-bottom: 2/@r solid #fff;
         .fontSize(14);
         font-weight: bolder;
         .no{
@@ -736,6 +744,6 @@ section{
     // font-family: '冬青黑体简体中文';
     font-weight: bolder;
     .fontSize(11);
-    color: #ffba00;
+    color: #fff;
   }
 }
