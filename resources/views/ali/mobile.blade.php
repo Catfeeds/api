@@ -13,7 +13,7 @@
     <canvas id='canvas'></canvas>
     <div class="text">
         <p>姓名:<span>{{ $ali->name }}</span></p>
-        <p>2018财年累计申报<span>{{ $ali->hours }}</span>公益时</p>
+        <p>2019财年累计申报<span>{{ $ali->hours }}</span>公益时</p>
     </div>
 </div>
 {{--<div class="all">--}}
