@@ -135,3 +135,8 @@ Route::get('dew/rank', 'Dew\ApiController@rank');
 
 //百度语音
 Route::get('baidu/voice', 'Api\VoiceController@voice');
+
+//名爵车展接口
+Route::get('mc/user/check', 'Mc\ApiController@userCheck');
+Route::post('mc/sms', 'Mc\ApiController@sms');
+Route::post('mc/user/store', 'Mc\ApiController@userStore');
