@@ -140,3 +140,5 @@ Route::get('baidu/voice', 'Api\VoiceController@voice');
 Route::get('mc/user/check', 'Mc\ApiController@userCheck');
 Route::post('mc/sms', 'Mc\ApiController@sms');
 Route::post('mc/user/store', 'Mc\ApiController@userStore');
+Route::get('mc/qrcode/check', 'Mc\ApiController@qrcodeCheck');
+Route::get('mc/qrcode/scan', 'Mc\ApiController@qrcodeScan');

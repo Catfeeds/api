@@ -12,6 +12,11 @@ use Validator;
 
 class ApiController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * 发送短信
+     */
     public function sms(Request $request)
     {
         $this->validate($request, [
@@ -48,11 +53,18 @@ class ApiController extends Controller
                 'result' => '今日发送数量超过5条！'
             ]);
         } else {
+            $user = Mc::where('phone', $request->phone)->first();
+            if (!is_null($user)) {
+                return response()->json([
+                    'code' => 0,
+                    'result' => '重复手机号！'
+                ]);
+            }
             $code = random_int(000000, 999999);
             $easySms->send($request->phone, [
                 'content' => '【上汽名爵】您的验证码是' . $code,
             ]);
-            Redis::setex($request->phone.'_' . $request->openid, 180, $code);//录入验证码
+            Redis::setex($request->phone . '_' . $request->openid, 180, $code);//录入验证码
             Redis::incr(Carbon::today()->format('ydm') . $request->openid);
             return response()->json([
                 'code' => 1,
@@ -61,6 +73,11 @@ class ApiController extends Controller
         }
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * 存储用户信息
+     */
     public function userStore(Request $request)
     {
         $this->validate($request, [
@@ -99,6 +116,11 @@ class ApiController extends Controller
         }
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * 判断是否注册
+     */
     public function userCheck(Request $request)
     {
         $this->validate($request, [
@@ -117,5 +139,73 @@ class ApiController extends Controller
             'code' => 1,
             'userInfo' => $user->all(),
         ]);
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * 检验二维码有没有被扫过
+     */
+    public function qrcodeCheck(Request $request)
+    {
+        $type = $request->type;
+        $openid = $request->openid;
+
+        $user = Mc::select($type,'coin')
+            ->where('openid', $openid)
+            ->first();
+        return response()->json([
+            'code' => $user->{$type},
+            'coin' => $user->coin,
+        ]);
+
+    }
+
+    public function qrcodeScan(Request $request)
+    {
+        $type = $request->type;
+        $openid = $request->openid;
+
+        $user = Mc::where('openid', $openid)->first();
+        if ($user->{$type} === 1) {
+            return response()->json([
+                'code' => 0,
+                'result' => '二维码已经扫过!',
+            ]);
+        } else {
+            switch ($type) {
+                case 'sign' :
+                    $user->{$type} = 1;
+                    $user->coin += config('gift_mc.sign');
+                    $user->save();
+                    break;
+                case 'car':
+                    $user->{$type} = 1;
+                    $user->coin += config('gift_mc.car');
+                    $user->save();
+                    break;
+                case 'show':
+                    $user->{$type} = 1;
+                    $user->coin += config('gift_mc.show');
+                    $user->save();
+                    break;
+                case 'vr':
+                    $user->{$type} = 1;
+                    $user->coin += config('gift_mc.ar');
+                    $user->save();
+                    break;
+                default:
+                    for ($i = 1; $i <= 12; $i++) {
+                        if ($type == 'gift' . $i) {
+                            $user->coin -= config('gift_mc.gift' . $i);
+                            $user->save();
+                        }
+                    }
+            }
+            return response()->json([
+                'code' => 1,
+                'result' => '扫码成功',
+            ]);
+        }
     }
 }
