@@ -170,8 +170,8 @@ class ApiController extends Controller
             ->where('openid', $openid)
             ->first();
         return response()->json([
-            'code' => $user->{$type},
-            'coin' => $user->coin,
+            'code' => is_null($user)? 0 : $user->{$type},
+            'coin' => is_null($user)? 0 : $user->coin,
         ]);
 
     }
