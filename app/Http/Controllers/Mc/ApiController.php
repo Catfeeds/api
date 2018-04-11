@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Mc;
 
 use App\Models\Mc;
 use Carbon\Carbon;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redis;
@@ -90,18 +91,32 @@ class ApiController extends Controller
         if (Redis::exists($request->phone . '_' . $request->openid)) {
             $sms = Redis::get($request->phone . '_' . $request->openid);
             if ($sms == $request->sms) {
-                //保存用户信息
-                $mc = new Mc();
-                $mc->username = $request->username;
-                $mc->openid = $request->openid;
-                $mc->intention = $request->intention;
-                $mc->phone = $request->phone;
-                $mc->save();
+                try {
+                    //保存用户信息
+                    $mc = new Mc();
+                    $mc->username = $request->username;
+                    $mc->openid = $request->openid;
+                    $mc->intention = $request->intention;
+                    $mc->phone = $request->phone;
+                    $mc->save();
 
-                return response()->json([
-                    'code' => 1,
-                    'result' => '提交成功!'
-                ]);
+                    //提交信息给客户系统
+                    $client = new Client();
+                    $client->request('GET', 'http://cep.saicmg.com/cep/saic-sis-api?act=5&track_id=2&username='.
+                        $request->username .'&mobile=' . $request->phone .
+                        '&brand=3362&terminal_type=1&url=api.shanghaichujie.com&cartype='. $request->intention);
+
+                    return response()->json([
+                        'code' => 1,
+                        'result' => '提交成功!'
+                    ]);
+                } catch (\Exception $e) {
+                    return response()->json([
+                        'code' => 0,
+                        'result' => '录入失败，已经注册过了！'
+                    ]);
+                }
+
             } else {
                 return response()->json([
                     'code' => 0,
@@ -111,8 +126,8 @@ class ApiController extends Controller
         } else {
             return response()->json([
                 'code' => 0,
-                'result' => '验证码不匹配！'
-            ]);
+                'result' => '验证码不匹配！
+            ']);
         }
     }
 
@@ -129,10 +144,10 @@ class ApiController extends Controller
 
         $user = Mc::where('openid', $request->openid)->first();
 
-        if (is_null($user)) {
+        if (is_null($user) || is_null($user->phone)) {
             return response()->json([
                 'code' => 0,
-                'userInfo' => null
+                'userInfo' => is_null($user) ? null : $user
             ]);
         }
         return response()->json([
@@ -151,7 +166,7 @@ class ApiController extends Controller
         $type = $request->type;
         $openid = $request->openid;
 
-        $user = Mc::select($type,'coin')
+        $user = Mc::select($type, 'coin')
             ->where('openid', $openid)
             ->first();
         return response()->json([
@@ -167,7 +182,10 @@ class ApiController extends Controller
         $openid = $request->openid;
 
         $user = Mc::where('openid', $openid)->first();
-        if ($user->{$type} === 1) {
+        if (is_null($user)) {
+            $user = new Mc();
+            $user->openid = $openid;
+        }elseif ($user->{$type} === 1) {
             return response()->json([
                 'code' => 0,
                 'result' => '二维码已经扫过!',

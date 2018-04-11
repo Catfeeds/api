@@ -16,9 +16,9 @@ class CreateMcsTable extends Migration
         Schema::create('mcs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('openid', 100)->unique();
-            $table->string('username');
-            $table->string('phone',11)->unique();
-            $table->string('intention')->comment('购车意向');
+            $table->string('username')->nullable();
+            $table->string('phone',11)->nullable();
+            $table->string('intention')->nullable()->comment('购车意向');
             $table->integer('coin')->default(0)->comment('积分');
             $table->boolean('sign')->default(0)->comment('签到');
             $table->boolean('discover')->default(0)->comment('寻宝');
