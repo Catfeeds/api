@@ -213,6 +213,11 @@ class ApiController extends Controller
                     $user->coin += config('gift_mc.ar');
                     $user->save();
                     break;
+                case 'discover':
+                    $user->{$type} = 1;
+                    $user->coin += config('gift_mc.discover');
+                    $user->save();
+                    break;
                 default:
                     for ($i = 1; $i <= 12; $i++) {
                         if ($type == 'gift' . $i) {
