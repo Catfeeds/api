@@ -25,18 +25,6 @@ class CreateMcsTable extends Migration
             $table->boolean('ar')->default(0)->comment('AR');
             $table->boolean('car')->default(0)->comment('car');
             $table->boolean('show')->default(0)->comment('自我秀');
-            $table->boolean('gift1')->default(0);
-            $table->boolean('gift2')->default(0);
-            $table->boolean('gift3')->default(0);
-            $table->boolean('gift4')->default(0);
-            $table->boolean('gift5')->default(0);
-            $table->boolean('gift6')->default(0);
-            $table->boolean('gift7')->default(0);
-            $table->boolean('gift8')->default(0);
-            $table->boolean('gift9')->default(0);
-            $table->boolean('gift10')->default(0);
-            $table->boolean('gift11')->default(0);
-            $table->boolean('gift12')->default(0);
             $table->timestamps();
         });
     }

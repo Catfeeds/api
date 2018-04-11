@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Mc;
 
+use App\Models\Goods;
 use App\Models\Mc;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
@@ -102,9 +103,9 @@ class ApiController extends Controller
 
                     //提交信息给客户系统
                     $client = new Client();
-                    $client->request('GET', 'http://cep.saicmg.com/cep/saic-sis-api?act=5&track_id=2&username='.
-                        $request->username .'&mobile=' . $request->phone .
-                        '&brand=3362&terminal_type=1&url=api.shanghaichujie.com&cartype='. $request->intention);
+                    $client->request('GET', 'http://cep.saicmg.com/cep/saic-sis-api?act=5&track_id=2&username=' .
+                        $request->username . '&mobile=' . $request->phone .
+                        '&brand=3362&terminal_type=1&url=api.shanghaichujie.com&cartype=' . $request->intention);
 
                     return response()->json([
                         'code' => 1,
@@ -170,8 +171,8 @@ class ApiController extends Controller
             ->where('openid', $openid)
             ->first();
         return response()->json([
-            'code' => is_null($user)? 0 : $user->{$type},
-            'coin' => is_null($user)? 0 : $user->coin,
+            'code' => is_null($user) ? 0 : $user->{$type},
+            'coin' => is_null($user) ? 0 : $user->coin,
         ]);
 
     }
@@ -186,50 +187,102 @@ class ApiController extends Controller
             $user = new Mc();
             $user->openid = $openid;
         }
-        if ($user->{$type} === 1) {
-            return response()->json([
-                'code' => 0,
-                'result' => '二维码已经扫过!',
-            ]);
-        } else {
-            switch ($type) {
-                case 'sign' :
-                    $user->{$type} = 1;
-                    $user->coin += config('gift_mc.sign');
-                    $user->save();
-                    break;
-                case 'car':
-                    $user->{$type} = 1;
-                    $user->coin += config('gift_mc.car');
-                    $user->save();
-                    break;
-                case 'show':
-                    $user->{$type} = 1;
-                    $user->coin += config('gift_mc.show');
-                    $user->save();
-                    break;
-                case 'ar':
-                    $user->{$type} = 1;
-                    $user->coin += config('gift_mc.ar');
-                    $user->save();
-                    break;
-                case 'discover':
-                    $user->{$type} = 1;
-                    $user->coin += config('gift_mc.discover');
-                    $user->save();
-                    break;
-                default:
-                    for ($i = 1; $i <= 12; $i++) {
-                        if ($type == 'gift' . $i) {
-                            $user->coin -= config('gift_mc.gift' . $i);
-                            $user->save();
-                        }
+
+        switch ($type) {
+            case 'sign' :
+                if ($user->{$type} === 1) {
+                    return response()->json([
+                        'code' => 0,
+                        'result' => '二维码已经扫过!',
+                    ]);
+                }
+                $user->{$type} = 1;
+                $user->coin += config('gift_mc.sign');
+                $user->save();
+                break;
+            case 'car':
+                if ($user->{$type} === 1) {
+                    return response()->json([
+                        'code' => 0,
+                        'result' => '二维码已经扫过!',
+                    ]);
+                }
+                $user->{$type} = 1;
+                $user->coin += config('gift_mc.car');
+                $user->save();
+                break;
+            case 'show':
+                if ($user->{$type} === 1) {
+                    return response()->json([
+                        'code' => 0,
+                        'result' => '二维码已经扫过!',
+                    ]);
+                }
+                $user->{$type} = 1;
+                $user->coin += config('gift_mc.show');
+                $user->save();
+                break;
+            case 'ar':
+                if ($user->{$type} === 1) {
+                    return response()->json([
+                        'code' => 0,
+                        'result' => '二维码已经扫过!',
+                    ]);
+                }
+                $user->{$type} = 1;
+                $user->coin += config('gift_mc.ar');
+                $user->save();
+                break;
+            case 'discover':
+                if ($user->{$type} === 1) {
+                    return response()->json([
+                        'code' => 0,
+                        'result' => '二维码已经扫过!',
+                    ]);
+                }
+                $user->{$type} = 1;
+                $user->coin += config('gift_mc.discover');
+                $user->save();
+                break;
+            default:
+                $goods = Goods::where('name', $type)->first();
+                //判断异常情况
+                if (is_null($goods)) {
+                    return response()->json([
+                        'code' => 0,
+                        'result' => '未找到商品!',
+                    ]);
+                } elseif ($goods->amount == 0) {
+                    return response()->json([
+                        'code' => 0,
+                        'result' => '该商品库存不足!',
+                    ]);
+
+                }else {
+                    if ($user->coin < $goods->coin){
+                        return response()->json([
+                            'code' => 0,
+                            'result' => '积分不足以兑换该商品!',
+                        ]);
                     }
-            }
-            return response()->json([
-                'code' => 1,
-                'result' => '扫码成功',
-            ]);
+
+                    $user->coin -= $goods->coin;
+                    $user->save();
+                    $goods->amount -= 1;
+                    $goods->save();
+
+                }
+
         }
+        return response()->json([
+            'code' => 1,
+            'result' => '扫码成功',
+        ]);
+    }
+
+    public function goods()
+    {
+        $goods = Goods::where('amount' , '>', 0)->get()->all();
+        return response()->json($goods);
     }
 }
