@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Mc;
 
 use App\Models\Goods;
 use App\Models\Mc;
+use App\Models\Mclog;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -64,7 +65,7 @@ class ApiController extends Controller
             }
             $code = random_int(000000, 999999);
             $easySms->send($request->phone, [
-                'content' => '【上汽名爵】您的验证码是' . $code,
+                'content' => '【上汽名爵】您的验证码是' . $code . '，有效期三分钟',
             ]);
             Redis::setex($request->phone . '_' . $request->openid, 180, $code);//录入验证码
             Redis::incr(Carbon::today()->format('ydm') . $request->openid);
@@ -177,6 +178,11 @@ class ApiController extends Controller
 
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * 扫码接口
+     */
     public function qrcodeScan(Request $request)
     {
         $type = $request->type;
@@ -199,6 +205,9 @@ class ApiController extends Controller
                 $user->{$type} = 1;
                 $user->coin += config('gift_mc.sign');
                 $user->save();
+
+                //记录积分变更
+                $this->log($openid, '签到', '增加', config('gift_mc.sign'));
                 break;
             case 'car':
                 if ($user->{$type} === 1) {
@@ -210,6 +219,9 @@ class ApiController extends Controller
                 $user->{$type} = 1;
                 $user->coin += config('gift_mc.car');
                 $user->save();
+
+                //记录积分变更
+                $this->log($openid, '赛车对爵', '增加', config('gift_mc.car'));
                 break;
             case 'show':
                 if ($user->{$type} === 1) {
@@ -221,6 +233,9 @@ class ApiController extends Controller
                 $user->{$type} = 1;
                 $user->coin += config('gift_mc.show');
                 $user->save();
+
+                //记录积分变更
+                $this->log($openid, '爵对自我秀', '增加', config('gift_mc.show'));
                 break;
             case 'ar':
                 if ($user->{$type} === 1) {
@@ -232,6 +247,9 @@ class ApiController extends Controller
                 $user->{$type} = 1;
                 $user->coin += config('gift_mc.ar');
                 $user->save();
+
+                //记录积分变更
+                $this->log($openid, '奇妙AR', '增加', config('gift_mc.ar'));
                 break;
             case 'discover':
                 if ($user->{$type} === 1) {
@@ -243,6 +261,9 @@ class ApiController extends Controller
                 $user->{$type} = 1;
                 $user->coin += config('gift_mc.discover');
                 $user->save();
+
+                //记录积分变更
+                $this->log($openid, '透镜寻觅', '增加', config('gift_mc.discover'));
                 break;
             default:
                 $goods = Goods::where('name', $type)->first();
@@ -258,8 +279,8 @@ class ApiController extends Controller
                         'result' => '该商品库存不足!',
                     ]);
 
-                }else {
-                    if ($user->coin < $goods->coin){
+                } else {
+                    if ($user->coin < $goods->coin) {
                         return response()->json([
                             'code' => 0,
                             'result' => '积分不足以兑换该商品!',
@@ -271,6 +292,8 @@ class ApiController extends Controller
                     $goods->amount -= 1;
                     $goods->save();
 
+                    //记录积分变更
+                    $this->log($openid, $type, '减少', $goods->coin);
                 }
 
         }
@@ -280,9 +303,31 @@ class ApiController extends Controller
         ]);
     }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     * 返回商品信息
+     */
     public function goods()
     {
-        $goods = Goods::where('amount' , '>', 0)->get()->all();
+        $goods = Goods::where('amount', '>', 0)->get()->all();
         return response()->json($goods);
+    }
+
+    /**
+     * @param $openid
+     * @param $type
+     * @param $handle
+     * @param $coin
+     *
+     * 存储积分变更数据
+     */
+    public function log($openid, $type, $handle, $coin)
+    {
+        $log = new Mclog();
+        $log->openid = $openid;
+        $log->type = $type;
+        $log->handle = $handle;
+        $log->coin = $coin;
+        $log->save();
     }
 }
