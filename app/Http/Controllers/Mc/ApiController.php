@@ -185,7 +185,8 @@ class ApiController extends Controller
         if (is_null($user)) {
             $user = new Mc();
             $user->openid = $openid;
-        }elseif ($user->{$type} === 1) {
+        }
+        if ($user->{$type} === 1) {
             return response()->json([
                 'code' => 0,
                 'result' => '二维码已经扫过!',
