@@ -208,7 +208,7 @@ class ApiController extends Controller
                     $user->coin += config('gift_mc.show');
                     $user->save();
                     break;
-                case 'vr':
+                case 'ar':
                     $user->{$type} = 1;
                     $user->coin += config('gift_mc.ar');
                     $user->save();
