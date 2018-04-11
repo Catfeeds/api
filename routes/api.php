@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
+/**
+ * 公共接口
+ */
+//二维码生成接口
+Route::get('qrcode/generate', 'Api\QrcodeController@qrcode');
+
 //音频上传接口
 Route::post('audio/upload', 'Api\\AudioController@upload');
 //图片上传接口(宋-用于人脸识别比对 美素用于上传派样机拍照图片)
