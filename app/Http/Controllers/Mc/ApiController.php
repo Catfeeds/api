@@ -103,10 +103,10 @@ class ApiController extends Controller
                     $mc->save();
 
                     //提交信息给客户系统
-                    $client = new Client();
-                    $client->request('GET', 'http://cep.saicmg.com/cep/saic-sis-api?act=5&track_id=2&username=' .
-                        $request->username . '&mobile=' . $request->phone .
-                        '&brand=3362&terminal_type=1&url=api.shanghaichujie.com&cartype=' . $request->intention);
+//                    $client = new Client();
+//                    $client->request('GET', 'http://cep.saicmg.com/cep/saic-sis-api?act=5&track_id=2&username=' .
+//                        $request->username . '&mobile=' . $request->phone .
+//                        '&brand=3362&terminal_type=1&url=api.shanghaichujie.com&cartype=' . $request->intention);
 
                     return response()->json([
                         'code' => 1,
