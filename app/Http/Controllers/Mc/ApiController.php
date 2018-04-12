@@ -322,7 +322,9 @@ class ApiController extends Controller
     public function exchange(Request $request)
     {
         $openid = $request->openid;
-        $num = Mclog::where('openid', $openid)->get()->count();
+        $num = Mclog::where('openid', $openid)
+            ->where('handle', '减少')
+            ->get()->count();
         return $num;
     }
     /**
