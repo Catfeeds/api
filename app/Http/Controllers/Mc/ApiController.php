@@ -154,7 +154,7 @@ class ApiController extends Controller
         }
         return response()->json([
             'code' => 1,
-            'userInfo' => $user->all(),
+            'userInfo' => $user,
         ]);
     }
 
