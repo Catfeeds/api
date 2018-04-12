@@ -142,10 +142,13 @@ Route::get('dew/rank', 'Dew\ApiController@rank');
 //百度语音
 Route::get('baidu/voice', 'Api\VoiceController@voice');
 
-//名爵车展接口
+/**
+ * 名爵互动车展小程序接口
+ */
 Route::get('mc/user/check', 'Mc\ApiController@userCheck');
 Route::post('mc/sms', 'Mc\ApiController@sms');
 Route::post('mc/user/store', 'Mc\ApiController@userStore');
 Route::get('mc/qrcode/check', 'Mc\ApiController@qrcodeCheck');
 Route::get('mc/qrcode/scan', 'Mc\ApiController@qrcodeScan');
 Route::get('mc/goods', 'Mc\ApiController@goods');
+Route::get('mc/exchange', 'Mc\ApiController@exchange');

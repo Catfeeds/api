@@ -95,7 +95,7 @@ class ApiController extends Controller
             if ($sms == $request->sms) {
                 try {
                     //保存用户信息
-                    $mc = new Mc();
+                    $mc = Mc::where('openid', $request->openid)->first();
                     $mc->username = $request->username;
                     $mc->openid = $request->openid;
                     $mc->intention = $request->intention;
@@ -313,6 +313,18 @@ class ApiController extends Controller
         return response()->json($goods);
     }
 
+    /**
+     * @param Request $request
+     * @return int
+     *
+     * 该用户已经兑换的礼品数量
+     */
+    public function exchange(Request $request)
+    {
+        $openid = $request->openid;
+        $num = Mclog::where('openid', $openid)->get()->count();
+        return $num;
+    }
     /**
      * @param $openid
      * @param $type
