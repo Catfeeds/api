@@ -217,7 +217,7 @@ class ApiController extends Controller
                     ]);
                 }
                 $user->{$type} = 1;
-                $user->coin += config('gift_mc.car');
+                $user->coin += $request->coin;
                 $user->save();
 
                 //记录积分变更
