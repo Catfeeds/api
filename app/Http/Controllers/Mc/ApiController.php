@@ -283,7 +283,7 @@ class ApiController extends Controller
                     if ($user->coin < $goods->coin) {
                         return response()->json([
                             'code' => 0,
-                            'result' => '积分不足以兑换该商品!',
+                            'result' => '当前积分'. $user->coin .'不足以兑换该商品!',
                         ]);
                     }
 

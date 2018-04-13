@@ -18,6 +18,7 @@ class QrcodeController extends Controller
     public function qrcode(Request $request)
     {
         $qrcode=QrCode::format('png')
+            ->encoding('UTF-8')
             ->size('400')
             ->margin(2)
             ->generate($request->text);
