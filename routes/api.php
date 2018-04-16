@@ -152,3 +152,4 @@ Route::get('mc/qrcode/check', 'Mc\ApiController@qrcodeCheck');
 Route::get('mc/qrcode/scan', 'Mc\ApiController@qrcodeScan');
 Route::get('mc/goods', 'Mc\ApiController@goods');
 Route::get('mc/exchange', 'Mc\ApiController@exchange');
+Route::get('mc/openid', 'Mc\ApiController@openid');

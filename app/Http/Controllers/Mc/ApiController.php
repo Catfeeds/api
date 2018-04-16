@@ -327,6 +327,16 @@ class ApiController extends Controller
             ->get()->count();
         return $num;
     }
+
+    public function openid(Request $request)
+    {
+        $code = $request->jscode;
+        $client = new Client();
+        $appid= env('mc_appid');
+        $secret= env('mc_secret');
+        $res = $client->request('GET', 'https://api.weixin.qq.com/sns/jscode2session?appid={$appid}&secret={$secret}&js_code={$code}&grant_type=authorization_code');
+        return $res->getBody();
+    }
     /**
      * @param $openid
      * @param $type
