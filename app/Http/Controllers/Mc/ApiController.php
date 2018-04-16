@@ -334,8 +334,8 @@ class ApiController extends Controller
         $client = new Client();
         $appid= env('mc_appid');
         $secret= env('mc_secret');
-        $res = $client->request('GET', 'https://api.weixin.qq.com/sns/jscode2session?appid={$appid}&secret={$secret}&js_code={$code}&grant_type=authorization_code');
-        return 'https://api.weixin.qq.com/sns/jscode2session?appid={$appid}&secret={$secret}&js_code={$code}&grant_type=authorization_code';
+        $res = $client->request('GET', 'https://api.weixin.qq.com/sns/jscode2session?appid='.$appid.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code');
+        return $res->getBody();
     }
     /**
      * @param $openid
