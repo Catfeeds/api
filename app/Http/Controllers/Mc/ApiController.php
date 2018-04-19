@@ -209,6 +209,10 @@ class ApiController extends Controller
 
                 //记录积分变更
                 $this->log($openid, '签到', '增加', config('gift_mc.sign'));
+                return response()->json([
+                    'code' => 1,
+                    'result' => '签到成功',
+                ]);
                 break;
             case 'car':
                 if ($user->{$type} === 1) {
@@ -223,6 +227,10 @@ class ApiController extends Controller
 
                 //记录积分变更
                 $this->log($openid, '赛车对爵', '增加', config('gift_mc.car'));
+                return response()->json([
+                    'code' => 1,
+                    'result' => '赛车对爵扫码成功',
+                ]);
                 break;
             case 'show':
                 if ($user->{$type} === 1) {
@@ -237,6 +245,10 @@ class ApiController extends Controller
 
                 //记录积分变更
                 $this->log($openid, '爵对自我秀', '增加', config('gift_mc.show'));
+                return response()->json([
+                    'code' => 1,
+                    'result' => '自我秀成功',
+                ]);
                 break;
             case 'ar':
                 if ($user->{$type} === 1) {
@@ -251,6 +263,10 @@ class ApiController extends Controller
 
                 //记录积分变更
                 $this->log($openid, '奇妙AR', '增加', config('gift_mc.ar'));
+                return response()->json([
+                    'code' => 1,
+                    'result' => '奇妙AR扫码成功',
+                ]);
                 break;
             case 'discover':
                 if ($user->{$type} === 1) {
@@ -265,6 +281,10 @@ class ApiController extends Controller
 
                 //记录积分变更
                 $this->log($openid, '透镜寻觅', '增加', config('gift_mc.discover'));
+                return response()->json([
+                    'code' => 1,
+                    'result' => '透镜寻觅扫码成功',
+                ]);
                 break;
             default:
                 $goods = Goods::where('name', $type)->first();
@@ -296,12 +316,11 @@ class ApiController extends Controller
                     //记录积分变更
                     $this->log($openid, $type, '减少', $goods->coin);
                 }
-
+                return response()->json([
+                    'code' => 1,
+                    'result' => "成功兑换{$type}",
+                ]);
         }
-        return response()->json([
-            'code' => 1,
-            'result' => '扫码成功',
-        ]);
     }
 
     /**
