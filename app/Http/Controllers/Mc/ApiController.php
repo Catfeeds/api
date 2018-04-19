@@ -226,7 +226,7 @@ class ApiController extends Controller
                 $user->save();
 
                 //记录积分变更
-                $this->log($openid, '赛车对爵', '增加', config('gift_mc.car'));
+                $this->log($openid, '赛车对爵', '增加', $request->coin);
                 return response()->json([
                     'code' => 1,
                     'result' => '赛车对爵扫码成功',
@@ -247,7 +247,7 @@ class ApiController extends Controller
                 $this->log($openid, '爵对自我秀', '增加', config('gift_mc.show'));
                 return response()->json([
                     'code' => 1,
-                    'result' => '自我秀成功',
+                    'result' => '自我秀扫码成功',
                 ]);
                 break;
             case 'ar':
