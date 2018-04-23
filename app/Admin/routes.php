@@ -19,3 +19,9 @@ Route::group([
     $router->resource('/zyhx/topic', 'TopicController');
     $router->resource('zyhx/comment', 'CommentController');
 });
+Route::group([
+    'prefix'        => config('admin.route.prefix'),
+    'namespace'     => config('admin.route.namespace'),
+], function (Router $router) {
+    $router->get('/mg/index', 'MgController@index');
+});

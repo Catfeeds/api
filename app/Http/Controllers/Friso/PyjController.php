@@ -87,8 +87,8 @@ class PyjController extends Controller
             case 5:
                 //非会员
                 $warning = '请先注册会员';
-                return redirect('http://frisowechat.rfc-china.com/frontPage/Reg.aspx?regsourceid=180&retUrl=https%3a%2f%2fapi.shanghaichujie.com%2ffriso%2freward%3Fopenid=oSG6Njto383u5YW9KCm0DyT0uCzs');
-                //return view('friso.warning', compact('warning'));
+//                return redirect('http://frisowechat.rfc-china.com/frontPage/Reg.aspx?regsourceid=180&retUrl=https%3a%2f%2fapi.shanghaichujie.com%2ffriso%2freward%3Fopenid=oSG6Njto383u5YW9KCm0DyT0uCzs');
+                return view('friso.warning', compact('warning'));
                 break;
             default:
                 $warning = '出现错误，请联系工作人员解决';
