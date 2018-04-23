@@ -13,9 +13,10 @@ Route::group([
     $router->get('/', 'HomeController@index');
     $router->get('/aia', 'AiaController@index');
     $router->get('/aia/index', 'AiaindexController@index');
-
+    $router->get('mg/index', 'MgController@index');
     $router->resource('/hx1','Hx1Controller');
     $router->resource('/hx2', 'Hx2Controller');
     $router->resource('/zyhx/topic', 'TopicController');
     $router->resource('zyhx/comment', 'CommentController');
+
 });
