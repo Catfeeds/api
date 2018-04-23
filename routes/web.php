@@ -13,7 +13,7 @@
 */
 
 Route::get('test', function () {
-//    return phpinfo();
+
 });
 
 /*
