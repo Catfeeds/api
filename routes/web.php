@@ -225,3 +225,4 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
     Route::get('dew/index', 'Dew\PhoneController@index');
 });
+Route::get('mg/index', 'App\Admin\Controllers\MgController@index');
