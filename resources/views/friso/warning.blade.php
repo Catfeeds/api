@@ -9,9 +9,7 @@
 </head>
 <body>
     <section>
-        <p>请到现场<br/>
-            工作人员处领取
-        </p>
+        <p style="width: 60%;margin-left: 20%">{{ $warning }}</p>
     </section>
 </body>
 </html>
