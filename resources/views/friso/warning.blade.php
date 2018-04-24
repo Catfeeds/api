@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="{{ asset('res/friso/warning/css/index.css') }}">
 </head>
 <body>
-    <div class="all">
-        <section>
-            <p>{{ $warning }}</p>
-        </section>
-    </div>
+    <section>
+        <p>请到现场<br/>
+            工作人员处领取
+        </p>
+    </section>
 </body>
 </html>
