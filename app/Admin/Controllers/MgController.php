@@ -112,11 +112,6 @@ class MgController extends Controller
     protected function form()
     {
         return Admin::form(Mclog::class, function (Form $form) {
-
-            $form->display('id', 'ID');
-            $form->text('topic', '栏目主题');
-            $form->switch('enabled','是否显示');
-            $form->display('created_at', '创建时间');
         });
     }
 }

@@ -212,6 +212,9 @@ Route::get('cowin/share/{id}', 'Cowin\IndexController@share');
  */
 Route::get('friso/pyj', 'Friso\PyjController@index');//显示派样机领奖包
 Route::get('friso/reward', 'Friso\PyjController@reward');
+Route::get('friso/h5/index', function () {
+    return '活动尚未开始';
+});
 /**
  * 2018腾讯大会评论互动
  */
@@ -225,3 +228,8 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
     Route::get('dew/index', 'Dew\PhoneController@index');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('tmail/admin', 'Tmail\TmailController@index');
