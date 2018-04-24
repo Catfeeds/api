@@ -71,7 +71,9 @@ class MgController extends Controller
     protected function grid()
     {
         return Admin::grid(Mclog::class, function (Grid $grid) {
-            $grid->model()->orderBy('created_at', 'desc');
+            $grid->model()
+                ->where('handle', '减少')
+                ->orderBy('created_at', 'desc');
 
             $grid->actions(function ($actions) {
                 $actions->disableDelete();
