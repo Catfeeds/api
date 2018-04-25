@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tmail extends Model
+class Tmaillog extends Model
 {
     protected $guarded = ['id'];
+
 }

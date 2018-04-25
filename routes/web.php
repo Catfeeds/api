@@ -232,4 +232,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('tmail/admin', 'Tmail\TmailController@index');
+Route::get('tmail/admin', 'Tmail\AdminController@index');
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
+    Route::get('tmail/index', 'Tmail\IndexController@index');
+});

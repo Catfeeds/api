@@ -153,3 +153,10 @@ Route::get('mc/qrcode/scan', 'Mc\ApiController@qrcodeScan');
 Route::get('mc/goods', 'Mc\ApiController@goods');
 Route::get('mc/exchange', 'Mc\ApiController@exchange');
 Route::get('mc/openid', 'Mc\ApiController@openid');
+
+/**
+ * 天猫精品h5
+ */
+Route::post('tmail/coin/sub', 'Tmail\ApiController@subCoin');
+Route::post('tmail/coin/add', 'Tmail\ApiController@addCoin');
+Route::get('tmail/statistic', 'Tmail\ApiController@statistic');
