@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="../../res/tmail/js/flexible.js"></script>
-    <title>奇屋妙享 大牌们的N次方</title>
+    <title>奇屋妙享-大牌们的N次方</title>
     <link rel="stylesheet" href="../../res/tmail/css/normalize.css">
     <link rel="stylesheet" href="../../res/tmail/css/index.css">
 </head>
@@ -212,7 +212,7 @@
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: '奇屋妙想-大牌们的N次方', // 分享标题
-            desc: "大牌们的奇屋空间 妙想好礼 即刻体验 全数拥有", // 分享描述
+            desc: "天猫超级品牌日 妙想好礼 即刻体验 全数拥有", // 分享描述
             link: "{{ url('tmail/index') }}",
             imgUrl: "{{ url('res/tmail/share.jpg') }}", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
