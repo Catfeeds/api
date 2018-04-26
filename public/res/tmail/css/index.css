@@ -638,7 +638,7 @@ section {
 .share .share_wrapper .share_box .content {
   padding: 0.78125rem 0.234375rem;
   text-indent: 2em;
-  line-height: 0.78125rem;
+  line-height: 0.703125rem;
   letter-spacing: 0.03125rem;
   font-weight: bold;
   font-size: 12px;
@@ -671,6 +671,9 @@ section {
 }
 [data-dpr='3'] .share .share_wrapper .share_box .content .btn button {
   font-size: 48px;
+}
+.share .share_wrapper .share_box .content .username {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
 }
 .share .share_wrapper .share_box .content span {
   font-size: 18px;
