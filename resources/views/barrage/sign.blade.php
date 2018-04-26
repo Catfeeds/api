@@ -11,7 +11,7 @@
 <body>
 <div class="bg_info">
     @if(isset($status))
-        <p style="font-size: 45px;color: #FFFFFF;text-align: center;padding-top: 55%">
+        <p style="font-size: 45px;color: #FFFFFF;text-align: center;padding-top: 500px">
             {{ $status }}
         </p>
     @else

@@ -139,18 +139,18 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function
 });
 
 //抽奖
-Route::get('zl/result', 'Zl\ZlController@draw');
+//Route::get('zl/result', 'Zl\ZlController@draw');
 //操控
-Route::get('zl/control', function () {
-    return view('zl.change');
-});
-Route::post('zl/control', 'Zl\ZlController@control');
+//Route::get('zl/control', function () {
+//    return view('zl.change');
+//});
+//Route::post('zl/control', 'Zl\ZlController@control');
 
 /**
  * 180度摄影,莱美医疗
  */
-Route::get('myLike', 'MyLike\IndexController@index');
-Route::get('myLike2', 'MyLike\IndexController@index2');
+//Route::get('myLike', 'MyLike\IndexController@index');
+//Route::get('myLike2', 'MyLike\IndexController@index2');
 
 /**
  *哥伦比亚羽绒服显示热成像拍照
