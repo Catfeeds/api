@@ -11,7 +11,7 @@ $(function(){
   /********** 图片加载 **********/
   //序列帧图片
   var frame_arr= [];
-  for(var i = 0; i < 225; i++){
+  for(var i = 0; i < 225; i+=2){
     if(i < 10){
       frame_arr.push('../res/tmail/images/video/1_0000' + i + '.jpg')
     }else if(i < 100){
@@ -84,7 +84,7 @@ $(function(){
           frame.replay();
           clearInterval(myLoadingInterval);
       }
-  },30);
+  },50);
   loader.start();
 
   /********** 开头动画 **********/
