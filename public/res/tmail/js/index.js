@@ -52,7 +52,7 @@ $(function(){
   var fakeLoadingNum = 0;
   var myLoadingInterval = null;
   var tempArr = [];
-  
+
   var fileList= [];
   fileList = tempArr.concat(frame_arr,img_arr);
 
@@ -85,7 +85,7 @@ $(function(){
           clearInterval(myLoadingInterval);
       }
   },30);
-  // loader.start();
+  loader.start();
 
   /********** 开头动画 **********/
   frame = new SequenceFrame({
@@ -187,7 +187,7 @@ $(function(){
   // var oysho_num = 5;
   //抽奖状态
   var isRotate = false;
-  
+
   function lotteryDraw(product) {
     //是否有使用次数
     // switch(product){
@@ -216,7 +216,7 @@ $(function(){
     //     return
     // }
 
-    //抽奖逻辑 
+    //抽奖逻辑
     var chance = rnd(0, 100);
     var index = 0;
     //概率控制
