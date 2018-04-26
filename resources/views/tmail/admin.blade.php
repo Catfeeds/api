@@ -23,7 +23,7 @@
     <br>
     <row style="margin-top: 1em">
         <i-col span="3" offset="6">
-            <label for="userId">{{ Auth::user()->name }}用户编号：</label>
+            <label for="userId">兑奖编号(用户手机上查看幸运值)：</label>
             <i-input v-model="userId" size="large" placeholder=""></i-input>
         </i-col>
         <i-col span="3" offset="1">
@@ -55,7 +55,7 @@
             visible: false,
             table_construct: [
                 {
-                    title: '编号',
+                    title: '兑奖编号',
                     key: 'id'
                 },
                 {
@@ -75,8 +75,8 @@
             table_data: {!! $users !!},
             table2_construct: [
                 {
-                    title: '编号',
-                    key: 'id'
+                    title: '兑奖编号',
+                    key: 'uid'
                 },
                 {
                     title: '微信昵称',
