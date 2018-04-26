@@ -360,6 +360,8 @@ section {
   height: 2.21875rem;
   background: url('../images/mac_start.png') no-repeat;
   background-size: 100% 100%;
+  -webkit-animation: breathing_scale 0.5s linear infinite alternate-reverse;
+  animation: breathing_scale 0.5s linear infinite alternate-reverse;
 }
 .mac_lottery .return {
   position: absolute;
@@ -416,6 +418,8 @@ section {
   height: 2.21875rem;
   background: url('../images/pocky_start.png') no-repeat;
   background-size: 100% 100%;
+  -webkit-animation: breathing_scale 0.5s linear infinite alternate-reverse;
+  animation: breathing_scale 0.5s linear infinite alternate-reverse;
 }
 .pocky_lottery .return {
   position: absolute;
@@ -472,6 +476,8 @@ section {
   height: 2.21875rem;
   background: url('../images/oysho_start.png') no-repeat;
   background-size: 100% 100%;
+  -webkit-animation: breathing_scale 0.5s linear infinite alternate-reverse;
+  animation: breathing_scale 0.5s linear infinite alternate-reverse;
 }
 .oysho_lottery .return {
   position: absolute;
