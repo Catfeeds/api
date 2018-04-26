@@ -84,7 +84,7 @@ $(function(){
           frame.replay();
           clearInterval(myLoadingInterval);
       }
-  },50);
+  },40);
   loader.start();
 
   /********** 开头动画 **********/
