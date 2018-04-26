@@ -220,11 +220,11 @@ $(function(){
     var chance = rnd(0, 100);
     var index = 0;
     //概率控制
-    if(chance < 10){
+    if(chance < 5){
       index = 0;  //幸运值+3
-    }else if(chance < 30){
+    }else if(chance < 10){
       index = 2;  //幸运值+2
-    }else if(chance < 40){
+    }else if(chance < 30){
       index = 4;  //幸运值+1
     }else{
       index = rnd135();
