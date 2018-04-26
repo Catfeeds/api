@@ -38,8 +38,11 @@
     </row>
     <br>
     <row>
-        <i-col span="18" offset="3">
+        <i-col span="9" offset="3">
             <i-table stripe :columns="table_construct" :data="table_data"></i-table>
+        </i-col>
+        <i-col span="9" offset="1">
+            <i-table stripe :columns="table2_construct" :data="table2_data"></i-table>
         </i-col>
     </row>
 </div>
@@ -70,13 +73,32 @@
             ],
             table_data_bak: {!! $users !!},
             table_data: {!! $users !!},
+            table2_construct: [
+                {
+                    title: '编号',
+                    key: 'id'
+                },
+                {
+                    title: '微信昵称',
+                    key: 'nickname'
+                },
+                {
+                    title: '兑换时间',
+                    key: 'created_at'
+                }
+            ],
+            table2_data: {!! $reward !!},
+            table2_data_bak: {!! $reward !!},
 
         },
         methods: {
             infotext: function (title, content) {
                 this.$Modal.info({
                     title: title,
-                    content:content
+                    content:content,
+                    onOk: ()=>{
+                        window.location.reload();
+                    }
                 });
             },
 
@@ -106,12 +128,20 @@
             search: function () {
                 if (this.userId !=='') {
                     let arr = [];
-                    this.table_data.map(obj => {
+                    this.table_data_bak.map(obj => {
                         if (obj.id == this.userId) {
                             arr.push(obj);
                         }
                     });
                     this.table_data = arr;
+
+                    let arr = [];
+                    this.table2_data_bak.map(obj => {
+                        if (obj.id == this.userId) {
+                            arr.push(obj);
+                        }
+                    });
+                    this.table2_data = arr;
                 }
             }
         }
