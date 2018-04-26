@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="../../res/tmail/js/flexible.js"></script>
-    <title>奇屋妙享-大牌们的N次方</title>
+    <title>奇屋妙想-大牌们的N次方</title>
     <link rel="stylesheet" href="../../res/tmail/css/normalize.css">
     <link rel="stylesheet" href="../../res/tmail/css/index.css">
 </head>
@@ -155,8 +155,9 @@
     <div class="share_wrapper">
         <div class="share_box">
             <div class="content">
-                <p>{{ substr($user->nickname, 0, 8) }}，恭喜您获得<span class="coin">X</span>个幸运值, 点击右下角查看最新分值</p>
+                <p><span class="username">{{ substr($user->nickname, 0, 8) }}</span>，恭喜您获得<span class="coin">X</span>个幸运值, 点击右下角查看最新分值</p>
                 <p>点击右上角分享朋友圈，带上你的小伙伴一起体验奇屋驾到的福利吧!</p>
+                <p>奇屋妙想尽在4月28日阿里巴巴西溪园区—亲橙里。</p>
                 <div class="btn">
                     <button>再来一次</button>
                 </div>
