@@ -42,6 +42,54 @@ class ApiController extends Controller
         return 'true';
     }
 
+    public function qr(Request $request)
+    {
+        $type = $request->type;
+        $openid = $request->openid;
+        $location = $request->location;
+
+        $client = new Client([
+            'base_uri' => 'https://gw.rfc-china.com/',
+            'timeout'  => 5.0,
+        ]);
+        $res = $client->request('GET', 'api/sso/access_token?appid=demo.TangJi&appsecret=demo.TangJi');
+        $body = $res->getBody();
+        $code = json_decode((string)$body)->data;
+        $res = $client->request('GET', 'api/customer/customer/getcustomer?openid='.$openid, [
+            'headers' => [
+                'authorization' => 'bearer '.$code,
+            ]
+        ]);
+        $body = $res->getBody();
+        $code = json_decode((string)$body)->data;
+
+        if (is_null($code)) {
+            return response()->json([
+                'code' => 0,
+                'result' => '该用户尚未成为美素佳儿会员！'
+            ]);
+        }
+
+        $user = Friso::firstOrNew([
+            'openid' => $openid
+        ]);
+        if (is_null($user->reward)) {
+            //没有领取过
+            $user->reward = "在 {$location} 兑换过 {$type}";
+            $user->save();
+
+            return response()->json([
+                'code' => 1,
+                'result' => "兑换{$type}成功！"
+            ]);
+        }else{
+            return response()->json([
+                'code' => 0,
+                'result' => "已经{$user->reward}"
+            ]);
+        }
+    }
+
     /**
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
@@ -164,4 +212,6 @@ class ApiController extends Controller
             'queueId' => $queueId
         ];
     }
+
+
 }

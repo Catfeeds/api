@@ -115,10 +115,10 @@ Route::post('cowin/image', 'Cowin\ApiController@image');
 Route::get('cowin/avatar', 'Cowin\ApiController@api');
 Route::post('cowin/phone', 'Cowin\ApiController@phone');
 /**
- * 派样机判断奖品领取接口
+ * 美素2018路演
  */
-Route::post('friso/gift', 'Friso\ApiController@gift');
-
+Route::post('friso/gift', 'Friso\ApiController@gift');//派样机判断奖品领取接口
+Route::post('friso/reward', 'Friso\ApiController@qr');//现场h5核销二维码
 /**
  * 2018腾讯大会评论互动
  */
