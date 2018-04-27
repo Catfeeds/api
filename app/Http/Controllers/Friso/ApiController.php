@@ -82,6 +82,7 @@ class ApiController extends Controller
         $user = Friso::firstOrNew([
             'openid' => $openid
         ]);
+        $reward =$type;
         switch ($type) {
             case ('type1') :
                 $reward = '储蓄罐';
