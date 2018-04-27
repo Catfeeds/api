@@ -163,6 +163,6 @@ Route::get('tmail/statistic', 'Tmail\ApiController@statistic');
 /**
  * 阿玛尼20180501
  */
-Route::get('armani/mail','Armani\EmailController@mail');
+Route::get('armani/email','Armani\EmailController@mail');
 //视频上传接口(用于armani项目，20180530)
 Route::post('video/upload', 'Armani\VideoController@upload');
