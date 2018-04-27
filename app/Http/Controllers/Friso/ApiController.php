@@ -57,27 +57,27 @@ class ApiController extends Controller
             ]);
         }
 
-//        $client = new Client([
-//            'base_uri' => 'https://gw.rfc-china.com/',
-//            'timeout'  => 5.0,
-//        ]);
-//        $res = $client->request('GET', 'api/sso/access_token?appid=demo.TangJi&appsecret=demo.TangJi');
-//        $body = $res->getBody();
-//        $code = json_decode((string)$body)->data;
-//        $res = $client->request('GET', 'api/customer/customer/getcustomer?openid='.$openid, [
-//            'headers' => [
-//                'authorization' => 'bearer '.$code,
-//            ]
-//        ]);
-//        $body = $res->getBody();
-//        $code = json_decode((string)$body)->data;
-//
-//        if (is_null($code)) {
-//            return response()->json([
-//                'code' => 0,
-//                'result' => '该用户尚未成为美素佳儿会员！'
-//            ]);
-//        }
+        $client = new Client([
+            'base_uri' => 'https://gw.rfc-china.com/',
+            'timeout'  => 5.0,
+        ]);
+        $res = $client->request('GET', 'api/sso/access_token?appid=demo.TangJi&appsecret=demo.TangJi');
+        $body = $res->getBody();
+        $code = json_decode((string)$body)->data;
+        $res = $client->request('GET', 'api/customer/customer/getcustomer?openid='.$openid, [
+            'headers' => [
+                'authorization' => 'bearer '.$code,
+            ]
+        ]);
+        $body = $res->getBody();
+        $data = json_decode((string)$body)->data;
+
+        if (is_null($data)) {
+            return response()->json([
+                'code' => 0,
+                'result' => '该用户尚未成为美素佳儿会员！'
+            ]);
+        }
 
         $user = Friso::firstOrNew([
             'openid' => $openid
@@ -85,6 +85,8 @@ class ApiController extends Controller
         if (is_null($user->reward)) {
             //没有领取过
             $user->location = $location;
+            $user->nickname =$data->Name;
+            $user->phone = $data->Mobile;
             //减少库存
             $loc->{$type} -=1;
             $loc->save();
