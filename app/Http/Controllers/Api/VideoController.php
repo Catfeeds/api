@@ -38,7 +38,8 @@ class VideoController extends Controller
     {
         $js = $this->js;
         $path = $request->path;
+        $url = env('APP_URL') . '/armani/video?path=' . $path;
         $path = env('APP_URL') . '/upload/' . $path;
-        return view('armani.index', compact('path', 'js'));
+        return view('armani.index', compact('path', 'js', 'url'));
     }
 }
