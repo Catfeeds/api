@@ -79,6 +79,7 @@
 
     // 提交邮箱
     $('.submit')[0].addEventListener('touchstart',submit);
+    var isClick = true;
     function submit(){
         var val = $('input').val();
         var reg = /^\w+@[a-z0-9]+(\.[a-z]+){1,3}$/;
@@ -88,8 +89,13 @@
             alert('请输入正确的邮箱格式');
         }else{
             // alert('提交成功');
-            $('.rta').show();
-            email(val);
+            if(isClick){
+                $('.rta').show();
+                email(val);
+            }else{
+                alert('您已发送过视频，请勿重新发送')
+            }
+            
         }
     }
     var path = '{{ $videoPath }}';
@@ -103,7 +109,8 @@
         }).done(function (res) {
             alert('发送成功');
             $('.rta').hide();
-            $('.submit')[0].removeEventListener('touchstart',submit)
+            isClick = false;
+            
         }).fail(function (res) {
             alert('发送失败');
         })
