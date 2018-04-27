@@ -212,9 +212,7 @@ Route::get('cowin/share/{id}', 'Cowin\IndexController@share');
  */
 Route::get('friso/pyj', 'Friso\PyjController@index');//显示派样机领奖包
 Route::get('friso/reward', 'Friso\PyjController@reward');
-Route::get('friso/h5/index', function () {
-    return '活动尚未开始';
-});
+Route::get('friso/h5/index', 'Friso\H5Controller@index');
 /**
  * 2018腾讯大会评论互动
  */

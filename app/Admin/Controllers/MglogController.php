@@ -23,11 +23,13 @@ class MglogController extends Controller
             $content->description('Description...');
 
             $content->row(function (Row $row) {
-                $goods = Goods::where('created_at', '>=', Carbon::now());
+                $goods = Goods::all();
                 foreach ($goods as $good) {
                     $infoBox = new InfoBox($good->name . '库存剩余', 'good', 'aqua', '', $good->amount);
                     $row->column(2, $infoBox);
-                    $count = Mclog::where('type', $good->name)->get()->count();
+                    $count = Mclog::where('type', $good->name)
+                        ->where('created_at', '>=', Carbon::today())
+                        ->get()->count();
                     $infoBox = new InfoBox($good->name . '兑换数量', 'users', 'green', '', $count);
                     $row->column(2, $infoBox);
                 }

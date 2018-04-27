@@ -16,11 +16,13 @@ class CreateFrisoLocsTable extends Migration
         Schema::create('friso_locs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('location');//场次
-            $table->boolean('enabled')->default(1);//是否显示
-            $table->string('verify');//场次验证码
-            $table->enum('category', ['vr', 'kinect'])->comment('游戏类别');
-            $table->smallInteger('count')->default(0);//数量统计
-            $table->softDeletes();
+            $table->dateTime('start')->comment('开始时间');
+            $table->dateTime('end')->comment('结束时间');
+            $table->integer('type1')->default(0)->comment('礼品1');
+            $table->integer('type2')->default(0)->comment('礼品2');
+            $table->integer('type3')->default(0)->comment('礼品3');
+            $table->integer('type4')->default(0)->comment('礼品4');
+            $table->integer('type5')->default(0)->comment('礼品5');
             $table->timestamps();
         });
     }

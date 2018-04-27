@@ -18,10 +18,8 @@ class CreateFrisosTable extends Migration
             $table->string('openid',120)->unique();
             $table->string('nickname')->nullable();
             $table->text('headimg')->nullable();
-            //1为获胜，2为失败，3为尚未参加,4为领取过两次奖品
-            $table->enum('vr', [1,2,3,4])->default(3)->comment('vr游戏');
-            $table->enum('kinect', [1,2,3,4])->default(3)->comment('kinect游戏');
-            $table->string('reward')->nullable();
+            $table->string('location')->nullable()->omment('场次名称');
+            $table->string('reward')->nullable()->comment('获得奖品');
             $table->timestamps();
         });
     }
