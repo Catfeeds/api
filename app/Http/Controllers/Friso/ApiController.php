@@ -52,8 +52,8 @@ class ApiController extends Controller
         $loc = FrisoLoc::where('location', $location)->first();
         if ($loc->{$type} == 0) {
             return response()->json([
-                'code' => 1,
-                'result' => "兑换{$type}成功!"
+                'code' => 0,
+                'result' => "该礼品库存不足!"
             ]);
         }
 

@@ -59,7 +59,7 @@
 
     function qrcode(item, location) {
         document.getElementById('qrcode').src = 'https://api.shanghaichujie.com/api/qrcode/generate?text='
-            + encodeURIComponent(`openid={{ $openid }}&type=${item}&location=${location}`)
+            + encodeURIComponent(`openid={{ $openid }}&type=type${item}&location=${location}`)
     }
 
 
