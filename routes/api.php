@@ -23,8 +23,7 @@ Route::get('qrcode/generate', 'Api\QrcodeController@qrcode');
 Route::post('audio/upload', 'Api\\AudioController@upload');
 //图片上传接口(宋-用于人脸识别比对 美素用于上传派样机拍照图片)
 Route::post('image/upload', 'Api\\ImageController@upload');
-//视频上传接口(JC_Campaign_tech)
-Route::post('video/upload', 'Api\VideoController@upload');
+
 //微信小程序
 Route::group(['namespace' => 'Mini', 'prefix' => 'mini'], function () {
     Route::get('/index', 'IndexController@index');
@@ -160,3 +159,10 @@ Route::get('mc/openid', 'Mc\ApiController@openid');
 Route::post('tmail/coin/sub', 'Tmail\ApiController@subCoin');
 Route::post('tmail/coin/add', 'Tmail\ApiController@addCoin');
 Route::get('tmail/statistic', 'Tmail\ApiController@statistic');
+
+/**
+ * 阿玛尼20180501
+ */
+Route::get('armani/mail','Armani\EmailController@mail');
+//视频上传接口(用于armani项目，20180530)
+Route::post('video/upload', 'Armani\VideoController@upload');

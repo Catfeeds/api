@@ -238,4 +238,4 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function
 /**
  * 阿玛尼视频上传显示
  */
-Route::get('armani/video', 'Api\VideoController@show');
+Route::get('armani/video', 'Armani\VideoController@show');

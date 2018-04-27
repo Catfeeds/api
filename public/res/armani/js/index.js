@@ -57,7 +57,7 @@ window.onload = function(){
         if(val == ''){
             alert('请输入正确的邮箱地址')
         }else{
-            alert('提交成功');
+            email(val);
         }
     })
 }

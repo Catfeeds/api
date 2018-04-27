@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Armani;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -39,7 +39,7 @@ class VideoController extends Controller
         $js = $this->js;
         $path = $request->path;
         $url = env('APP_URL') . '/armani/video?path=' . $path;
-        $path = env('APP_URL') . '/upload/' . $path;
-        return view('armani.index', compact('path', 'js', 'url'));
+        $videoPath = env('APP_URL') . '/upload/' . $path;
+        return view('armani.index', compact('path', 'js', 'url', 'videoPath'));
     }
 }
