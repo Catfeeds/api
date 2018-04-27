@@ -24,7 +24,7 @@
             autoplay
             loop="loop"
             ></video>
-            <a class="btnDownloadShare" download="" > 下载您的视频</a>
+            <a class="btnDownloadShare" href="{{ $videoPath }}" download="" > 下载您的视频</a>
             <a class="btnVideoShare"> 分享您的视频</a>
             <div class="ipopup hide">
                 <div class="con-wrapper">

@@ -17,7 +17,6 @@ window.onload = function(){
                 $('.apopup').hide();
             } else if (/android/.test(ua)) {
                     // alert("android");
-                $(this).css('href', path);
                 $('.text span').html('在浏览器中进行下载');
                 $('.apopup').show();
                 $('.ipopup').hide();
