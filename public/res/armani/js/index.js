@@ -13,7 +13,7 @@ window.onload = function(){
         if (isWeixin){
             if (/iphone|ipad|ipod/.test(ua)) {
                 // alert("iphone");
-                $(this).css('href','#');
+                $(this).attr('href','#');
                 $('.ipopup').show();
                 $('.apopup').hide();
             } else if (/android/.test(ua)) {
