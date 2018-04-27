@@ -35,7 +35,7 @@
                     </div>
                     <p>请输入你的邮箱地址，系统自动将您的视频发送到您的邮箱</p>
                     <div class="rta hide">
-                        <img src="img/loading.png" alt="">
+                        <img src="{{ asset('res/armani/img/loading.png') }}" alt="">
                     </div>
                 </div>
             </div>
