@@ -59,5 +59,8 @@ window.onload = function(){
         $('.ipopup').hide();
         $('.rta').hide();
     })
-    
+    //视频播放后，改变背景色
+    $('video')[0].addEventListener('play',function(){
+        $('video').css('background-color','transparent')
+    })
 }
