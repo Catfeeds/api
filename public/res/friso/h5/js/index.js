@@ -15,9 +15,9 @@
 
             })
             //点击隐藏礼品层
-            $('.popup').click(function(){
-                $(this).hide()
-            })
+            // $('.popup').click(function(){
+            //     $(this).hide()
+            // })
             draw();
         }
         //抽奖流程函数
