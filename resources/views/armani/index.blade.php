@@ -77,6 +77,21 @@
         });
     });
 
+    // 提交邮箱
+    $('.submit')[0].addEventListener('touchstart',submit);
+    function submit(){
+        var val = $('input').val();
+        var reg = /^\w+@[a-z0-9]+(\.[a-z]+){1,3}$/;
+        if(val == ''){
+            alert('请输入正确的邮箱地址');
+        }else if(!reg.test(val)){
+            alert('请输入正确的邮箱格式');
+        }else{
+            // alert('提交成功');
+            $('.rta').show();
+            email(val);
+        }
+    }
     var path = '{{ $videoPath }}';
     function email(email) {
         $.ajax({
@@ -87,6 +102,8 @@
             method: 'GET',
         }).done(function (res) {
             alert('发送成功');
+            $('.rta').hide();
+            $('.submit')[0].removeEventListener('touchstart',submit)
         }).fail(function (res) {
             alert('发送失败');
         })
