@@ -82,6 +82,23 @@ class ApiController extends Controller
         $user = Friso::firstOrNew([
             'openid' => $openid
         ]);
+        switch ($type) {
+            case ('type1') :
+                $reward = '储蓄罐';
+                break;
+            case ('type2'):
+                $reward = '行李箱';
+                break;
+            case ('type3'):
+                $reward = '折叠推车';
+                break;
+            case ('type4'):
+                $reward = '滑板车';
+                break;
+            case ('type5'):
+                $reward = '餐具套装';
+                break;
+        }
         if (is_null($user->reward)) {
             //没有领取过
             $user->location = $location;
@@ -91,34 +108,19 @@ class ApiController extends Controller
             $loc->{$type} -=1;
             $loc->save();
 
-            switch ($type) {
-                case ('type1') :
-                    $type = '储蓄罐';
-                    break;
-                case ('type2'):
-                    $type = '行李箱';
-                    break;
-                case ('type3'):
-                    $type = '折叠推车';
-                    break;
-                case ('type4'):
-                    $type = '滑板车';
-                    break;
-                case ('type5'):
-                    $type = '餐具套装';
-                    break;
-            }
+
             $user->reward = $type;
             $user->save();
 
             return response()->json([
                 'code' => 1,
-                'result' => "兑换{$type}成功！"
+                'result' => "兑换{$reward}成功！"
             ]);
         } else {
+
             return response()->json([
                 'code' => 0,
-                'result' => "已经在{$location}兑换过{$type}",
+                'result' => "已经在{$location}兑换过{$reward}",
             ]);
         }
     }
