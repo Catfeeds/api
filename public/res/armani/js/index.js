@@ -36,6 +36,13 @@ window.onload = function(){
             }
         }
     });
+    //再浏览器中，苹果手机下载视频的按钮隐藏
+    if(!isWeixin){
+        if (/iphone|ipad|ipod/.test(ua)) {
+            $('.btnDownloadShare').hide();  
+            $('.btnVideoShare').addClass('iosBtnVideoShare');          
+        }
+    }
     //分享到微博
     $('.btnVideoShare').click(function(){
         if(isWeixin){
@@ -50,14 +57,34 @@ window.onload = function(){
     //苹果手机得弹窗关闭
     $('.close').click(function(){
         $('.ipopup').hide();
+        $('.rta').hide();
     })
     // 提交邮箱
-    $('.submit').click(function(){
+    $('.submit')[0].addEventListener('touchstart',submit);
+    function submit(){
         var val = $('input').val();
         if(val == ''){
             alert('请输入正确的邮箱地址')
         }else{
-            email(val);
+            // alert('提交成功');
+            $('.rta').show();
+            // $.ajax({
+            //     type: 'POST',
+            //     url: '',
+            //     dataType: 'json',
+            //     data: {
+            //         val:val
+            //     },
+            //     success: function(data){
+            //         $('.rta').hide();
+            //         $('.submit')[0].removeEventListener('touchstart',submit)
+            //     },
+            //     error: function(data){
+            //         //提交失败
+            //         $('.rta').hide();
+                    
+            //     }
+            // })
         }
-    })
+    }
 }
