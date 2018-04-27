@@ -23,14 +23,14 @@ class ApiController extends Controller
         $openid = $request->openid;
         $client = new Client([
             'base_uri' => 'https://gw.rfc-china.com/',
-            'timeout'  => 5.0,
+            'timeout' => 5.0,
         ]);
         $res = $client->request('GET', 'api/sso/access_token?appid=demo.TangJi&appsecret=demo.TangJi');
         $body = $res->getBody();
         $code = json_decode((string)$body)->data;
-        $res = $client->request('GET', 'api/customer/customer/getcustomer?openid='.$openid, [
+        $res = $client->request('GET', 'api/customer/customer/getcustomer?openid=' . $openid, [
             'headers' => [
-                'authorization' => 'bearer '.$code,
+                'authorization' => 'bearer ' . $code,
             ]
         ]);
         $body = $res->getBody();
@@ -47,6 +47,15 @@ class ApiController extends Controller
         $type = $request->type;
         $openid = $request->openid;
         $location = $request->location;
+
+        //判断是否有库存
+        $loc = FrisoLoc::where('location', $location)->first();
+        if ($loc->{$type} == 0) {
+            return response()->json([
+                'code' => 1,
+                'result' => "兑换{$type}成功!"
+            ]);
+        }
 
 //        $client = new Client([
 //            'base_uri' => 'https://gw.rfc-china.com/',
@@ -75,17 +84,39 @@ class ApiController extends Controller
         ]);
         if (is_null($user->reward)) {
             //没有领取过
-            $user->reward = "在 {$location} 兑换过 {$type}";
+            $user->location = $location;
+            //减少库存
+            $loc->{$type} -=1;
+            $loc->save();
+
+            switch ($type) {
+                case ('type1') :
+                    $type = '储蓄罐';
+                    break;
+                case ('type2'):
+                    $type = '行李箱';
+                    break;
+                case ('type3'):
+                    $type = '折叠推车';
+                    break;
+                case ('type4'):
+                    $type = '滑板车';
+                    break;
+                case ('type5'):
+                    $type = '餐具套装';
+                    break;
+            }
+            $user->reward = $type;
             $user->save();
 
             return response()->json([
                 'code' => 1,
                 'result' => "兑换{$type}成功！"
             ]);
-        }else{
+        } else {
             return response()->json([
                 'code' => 0,
-                'result' => "已经{$user->reward}"
+                'result' => "已经在{$location}兑换过{$type}",
             ]);
         }
     }
