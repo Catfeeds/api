@@ -234,3 +234,8 @@ Route::get('tmail/admin', 'Tmail\AdminController@index');
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
     Route::get('tmail/index', 'Tmail\IndexController@index');
 });
+
+/**
+ * 阿玛尼视频上传显示
+ */
+Route::get('armani/video', 'Api\VideoController@show');

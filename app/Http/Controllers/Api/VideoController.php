@@ -31,7 +31,7 @@ class VideoController extends Controller
         }
         $path = Storage::disk('public_path')->putFile('videos', $request->file('video'));
 
-        return env('APP_URL') . '/jc/video?path=' . $path;
+        return env('APP_URL') . '/armani/video?path=' . $path;
     }
 
     public function show(Request $request)
@@ -39,6 +39,6 @@ class VideoController extends Controller
         $js = $this->js;
         $path = $request->path;
         $path = env('APP_URL') . '/upload/' . $path;
-        return view('jc.index', compact('path', 'js'));
+        return view('armani.index', compact('path', 'js'));
     }
 }
