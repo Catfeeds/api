@@ -72,6 +72,20 @@ class FrisolocController extends Controller
     protected function grid()
     {
         return Admin::grid(FrisoLoc::class, function (Grid $grid) {
+            $grid->actions(function ($actions) {
+                $actions->disableDelete();
+//                $actions->disableEdit();
+            });
+            $grid->disableRowSelector();
+//            $grid->disableActions();
+            $grid->disableCreation();
+
+            $grid->filter(function($filter){
+
+                // 去掉默认的id过滤器
+                $filter->disableIdFilter();
+
+            });
 
             $grid->id('ID')->sortable();
             $grid->column('location', '场次');
