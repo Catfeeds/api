@@ -18,7 +18,7 @@ class CreateFrisosTable extends Migration
             $table->string('openid',120)->unique();
             $table->string('nickname')->nullable();
             $table->text('headimg')->nullable();
-            $table->string('location')->nullable()->omment('场次名称');
+            $table->string('location')->nullable()->comment('场次名称');
             $table->string('reward')->nullable()->comment('获得奖品');
             $table->timestamps();
         });

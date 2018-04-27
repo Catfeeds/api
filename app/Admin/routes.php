@@ -20,4 +20,5 @@ Route::group([
     $router->resource('/zyhx/topic', 'TopicController');
     $router->resource('zyhx/comment', 'CommentController');
     $router->resource('friso/location', 'FrisolocController');
+    $router->resource('friso/log', 'FrisologController');
 });
