@@ -52,71 +52,76 @@ class ApiController extends Controller
         $loc = FrisoLoc::where('location', $location)->first();
         if ($loc->{$type} == 0) {
             return response()->json([
-                'code' => 1,
-                'result' => "兑换{$type}成功!"
+                'code' => 0,
+                'result' => "该礼品库存不足!"
             ]);
         }
 
-//        $client = new Client([
-//            'base_uri' => 'https://gw.rfc-china.com/',
-//            'timeout'  => 5.0,
-//        ]);
-//        $res = $client->request('GET', 'api/sso/access_token?appid=demo.TangJi&appsecret=demo.TangJi');
-//        $body = $res->getBody();
-//        $code = json_decode((string)$body)->data;
-//        $res = $client->request('GET', 'api/customer/customer/getcustomer?openid='.$openid, [
-//            'headers' => [
-//                'authorization' => 'bearer '.$code,
-//            ]
-//        ]);
-//        $body = $res->getBody();
-//        $code = json_decode((string)$body)->data;
-//
-//        if (is_null($code)) {
-//            return response()->json([
-//                'code' => 0,
-//                'result' => '该用户尚未成为美素佳儿会员！'
-//            ]);
-//        }
+        $client = new Client([
+            'base_uri' => 'https://gw.rfc-china.com/',
+            'timeout'  => 5.0,
+        ]);
+        $res = $client->request('GET', 'api/sso/access_token?appid=demo.TangJi&appsecret=demo.TangJi');
+        $body = $res->getBody();
+        $code = json_decode((string)$body)->data;
+        $res = $client->request('GET', 'api/customer/customer/getcustomer?openid='.$openid, [
+            'headers' => [
+                'authorization' => 'bearer '.$code,
+            ]
+        ]);
+        $body = $res->getBody();
+        $data = json_decode((string)$body)->data;
+
+        if (is_null($data)) {
+            return response()->json([
+                'code' => 0,
+                'result' => '该用户尚未成为美素佳儿会员！'
+            ]);
+        }
 
         $user = Friso::firstOrNew([
             'openid' => $openid
         ]);
+        $reward =$type;
+        switch ($type) {
+            case ('type1') :
+                $reward = '储蓄罐';
+                break;
+            case ('type2'):
+                $reward = '行李箱';
+                break;
+            case ('type3'):
+                $reward = '折叠推车';
+                break;
+            case ('type4'):
+                $reward = '滑板车';
+                break;
+            case ('type5'):
+                $reward = '餐具套装';
+                break;
+        }
         if (is_null($user->reward)) {
             //没有领取过
             $user->location = $location;
+            $user->nickname =$data->Name;
+            $user->phone = $data->Mobile;
             //减少库存
             $loc->{$type} -=1;
             $loc->save();
 
-            switch ($type) {
-                case ('type1') :
-                    $type = '储蓄罐';
-                    break;
-                case ('type2'):
-                    $type = '行李箱';
-                    break;
-                case ('type3'):
-                    $type = '折叠推车';
-                    break;
-                case ('type4'):
-                    $type = '滑板车';
-                    break;
-                case ('type5'):
-                    $type = '餐具套装';
-                    break;
-            }
+
             $user->reward = $type;
             $user->save();
 
             return response()->json([
                 'code' => 1,
-                'result' => "兑换{$type}成功！"
+                'result' => "兑换{$reward}成功！"
             ]);
         } else {
+
             return response()->json([
                 'code' => 0,
-                'result' => "已经在{$location}兑换过{$type}",
+                'result' => "已经在{$location}兑换过{$reward}",
             ]);
         }
     }

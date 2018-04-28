@@ -54,11 +54,15 @@
 <script src="{{ asset('res/friso/h5/js/awardRotate.js') }}"></script>
 <script src="{{ asset('res/friso/h5/js/index.js') }}"></script>
 <script type="application/javascript">
-    var item = {{ $item }};
     //抽奖过程
+    window.locs = {!! $locs !!};
 
-    document.getElementById('qrcode').src = 'https://api.shanghaichujie.com/api/qrcode/generate?text='
-        + encodeURIComponent(`openid={{ $openid }}&type=${item}&location=${location}`)
+    function qrcode(item, location) {
+        document.getElementById('qrcode').src = 'https://api.shanghaichujie.com/api/qrcode/generate?text='
+            + encodeURIComponent(`openid={{ $openid }}&type=type${item}&location=${location}`)
+    }
+
+
 </script>
 
 </html>

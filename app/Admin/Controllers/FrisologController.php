@@ -90,6 +90,7 @@ class FrisologController extends Controller
 
             $grid->id('ID')->sortable();
             $grid->column('nickname','称呼');
+            $grid->column('phone','手机号');
             $grid->column('location', '场次');
             $grid->column('reward', '兑换礼品');
             $grid->created_at('兑换时间');

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('res/armani/css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('res/armani/css/index.css') }}">
-    <title>阿玛尼</title>
+    <title>GIORGIO ARMANI</title>
 </head>
 <body>
     <div class="wrapper">
@@ -95,7 +95,7 @@
             }else{
                 alert('您已发送过视频，请勿重新发送')
             }
-            
+
         }
     }
     var path = '{{ $videoPath }}';
@@ -110,7 +110,7 @@
             alert('发送成功');
             $('.rta').hide();
             isClick = false;
-            
+
         }).fail(function (res) {
             alert('发送失败');
         })
