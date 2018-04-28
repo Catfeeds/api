@@ -38,10 +38,13 @@ window.onload = function(){
     });
     //再浏览器中，苹果手机下载视频的按钮隐藏
     if(!isWeixin){
-        $('video').css('background-color','transparent')
+        $('video').css('background-color','transparent');
+        $('.btnShare').show();
+        $('.btnVideoShare').hide();
         if (/iphone|ipad|ipod/.test(ua)) {
             $('.btnDownloadShare').hide();  
-            $('.btnVideoShare').addClass('iosBtnVideoShare');          
+            $('.btnVideoShare').addClass('iosBtnVideoShare');  
+            $('.btnShare').addClass('iosBtnShare') ;        
         }
     }
     //分享到微博

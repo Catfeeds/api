@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:wb="http://open.weibo.com/wb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640,user-scalable=no">
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('res/armani/css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('res/armani/css/index.css') }}">
     <title>GIORGIO ARMANI</title>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -25,6 +26,9 @@
             loop="loop"
             ></video>
             <a class="btnDownloadShare" href="{{ $videoPath }}" download="" > 下载您的视频</a>
+            <div class="btnShare">
+                <wb:share-button class="wb" appkey="1643480269" addition="simple" type="button" default_text="查看我的#Armani Box#专属视频"></wb:share-button>
+            </div>
             <a class="btnVideoShare"> 分享您的视频</a>
             <div class="ipopup hide">
                 <div class="con-wrapper">
