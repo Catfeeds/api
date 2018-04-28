@@ -35,7 +35,7 @@ body {
 .wrapper section .active {
   top: 0px;
   width: 640px;
-  height: 710px;
+  height: 720px;
   background-color: black;
 }
 .wrapper section .btnDownloadShare,
