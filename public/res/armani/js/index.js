@@ -38,6 +38,7 @@ window.onload = function(){
     });
     //再浏览器中，苹果手机下载视频的按钮隐藏
     if(!isWeixin){
+        $('video').css('background-color','transparent')
         if (/iphone|ipad|ipod/.test(ua)) {
             $('.btnDownloadShare').hide();  
             $('.btnVideoShare').addClass('iosBtnVideoShare');          
