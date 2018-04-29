@@ -20,12 +20,12 @@ $(function () {
         //根据选择场次计算中奖
         function rand(select) {
             window.locs.forEach(function (loc) {
-                console.log(select);
                 if (loc.location === select) {
                     let sum = loc.type1 + loc.type2 + loc.type3 + loc.type4 + loc.type5;
                     var item = 0;
                     let rand = Math.floor(Math.random() * (0 - sum + 1) + sum);
-                    if (0 < rand < loc.type1) {
+                    console.log(rand);
+                    if (rand>0 && rand < loc.type1) {
                         item = 1;
                     } else if (rand < loc.type1 + loc.type2) {
                         item = 2;
@@ -37,6 +37,7 @@ $(function () {
                         item = 5;
                     }
                     window.item = item;
+                    console.log(window.item);
                     if (item === 0) {
                         alert('该场次礼品库存不足')
                     } else {
