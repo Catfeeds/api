@@ -22,6 +22,9 @@ $(function () {
             window.locs.forEach(function (loc) {
                 if (loc.location === select) {
                     let sum = loc.type1 + loc.type2 + loc.type3 + loc.type4 + loc.type5;
+                    if (sum===0){
+                        alert('该场次礼品库存不足')
+                    }
                     var item = 0;
                     let rand = Math.floor(Math.random() * (0 - sum + 1) + sum);
                     console.log(rand);
