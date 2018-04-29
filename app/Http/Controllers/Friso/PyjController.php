@@ -38,8 +38,7 @@ class PyjController extends Controller
         $body = $res->getBody();
         $data = json_decode((string)$body)->data;
         if (is_null($data)) {
-            return redirect('http://frisowechat.rfc-china.com/frontPage/Reg.aspx?regsourceid=180&retUrl=https%3a%2f%2fapi.shanghaichujie.com%2ffriso%2freward%3Fopenid=oSG6Njto383u5YW9KCm0DyT0uCzs
-');
+            return redirect('http://frisowechat.rfc-china.com/frontPage/Reg.aspx?regsourceid=180&retUrl=https%3a%2f%2fapi.shanghaichujie.com%2ffriso%2freward%3Fopenid='.$openid);
         }
         $baby = $data->CustomerBaby;
         $birthday = new Carbon($baby[0]->BabyBirthday);
@@ -81,7 +80,7 @@ class PyjController extends Controller
                 break;
             case 3:
                 //不符合条件
-                $warning = '不符合领取条件，请到现场工作人员处';
+                $warning = '您不符合领取条件';
                 return view('friso.warning', compact('warning'));
                 break;
             case 5:
