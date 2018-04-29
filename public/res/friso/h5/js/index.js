@@ -25,7 +25,7 @@ $(function () {
                     var item = 0;
                     let rand = Math.floor(Math.random() * (0 - sum + 1) + sum);
                     console.log(rand);
-                    if (rand>0 && rand < loc.type1) {
+                    if (rand>0 && rand <= loc.type1) {
                         item = 1;
                     } else if (rand < loc.type1 + loc.type2) {
                         item = 2;
