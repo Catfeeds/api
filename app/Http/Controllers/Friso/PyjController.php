@@ -81,7 +81,7 @@ class PyjController extends Controller
                 break;
             case 3:
                 //不符合条件
-                $warning = '请到现场工作人员处领取';
+                $warning = '不符合领取条件，请到现场工作人员处';
                 return view('friso.warning', compact('warning'));
                 break;
             case 5:
