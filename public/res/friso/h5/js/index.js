@@ -27,13 +27,13 @@ $(function () {
                     console.log(rand);
                     if (rand>0 && rand <= loc.type1) {
                         item = 1;
-                    } else if (rand < loc.type1 + loc.type2) {
+                    } else if (rand <= loc.type1 + loc.type2) {
                         item = 2;
-                    } else if (rand < loc.type1 + loc.type2 + loc.type3) {
+                    } else if (rand <= loc.type1 + loc.type2 + loc.type3) {
                         item = 3;
-                    } else if (rand < loc.type1 + loc.type2 + loc.type3 + loc.type4) {
+                    } else if (rand <= loc.type1 + loc.type2 + loc.type3 + loc.type4) {
                         item = 4;
-                    } else if (rand < sum) {
+                    } else if (rand <= sum) {
                         item = 5;
                     }
                     window.item = item;
