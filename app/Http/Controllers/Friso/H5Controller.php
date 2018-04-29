@@ -32,7 +32,7 @@ class H5Controller extends Controller
         $body = $res->getBody();
         $data = json_decode((string)$body)->data;
         if (is_null($data)) {
-            return redirect('http://frisowechat.rfc-china.com/frontPage/Reg.aspx?regsourceid=180&retUrl=https%3a%2f%2fapi.shanghaichujie.com%2ffriso%2freward%3Fopenid=oSG6Njto383u5YW9KCm0DyT0uCzs
+            return redirect('http://frisowechat.rfc-china.com/frontPage/Reg.aspx?regsourceid=180&retUrl=https%3a%2f%2fapi.shanghaichujie.com%2ffriso%2fh5%2findex%3Fopenid=oSG6Njto383u5YW9KCm0DyT0uCzs
 ');
         }
         $locs = FrisoLoc::where('start', '<=', Carbon::now())
