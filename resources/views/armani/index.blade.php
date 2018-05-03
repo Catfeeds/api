@@ -28,7 +28,7 @@
             ></video>
             <a class="btnDownloadShare" href="{{ $videoPath }}" download="" > 下载您的视频</a>
             <div class="btnShare">
-                <wb:share-button class="wb" appkey="1643480269" addition="simple" type="button" default_text="查看我的Armani Box专属视频 {{ $url }}"></wb:share-button>
+                <wb:share-button class="wb" appkey="1643480269" addition="simple" type="button" default_text="查看我的Armani Box专属视频"></wb:share-button>
             </div>
             <a class="btnVideoShare"> 分享您的视频</a>
             <div class="ipopup hide">
