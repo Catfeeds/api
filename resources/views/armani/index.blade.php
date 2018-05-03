@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="{{ asset('res/armani/css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('res/armani/css/index.css') }}">
     <title>GIORGIO ARMANI</title>
