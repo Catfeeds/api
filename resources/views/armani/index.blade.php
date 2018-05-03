@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:wb="http://open.weibo.com/wb">
+<html xmlns:wb="https://open.weibo.com/wb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640,user-scalable=no">
