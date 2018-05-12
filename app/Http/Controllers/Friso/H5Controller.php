@@ -105,7 +105,6 @@ class H5Controller extends Controller
             $type = $user->reward;
         }
 
-        dd($user);
         return view('friso.draw', compact('openid', 'location', 'type', 'user'));
 
     }
