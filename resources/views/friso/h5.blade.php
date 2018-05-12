@@ -45,6 +45,7 @@
                     <img id="qrcode" src="" alt="">
                 </div>
                 <img src="{{ asset('res/friso/h5/img/text.png') }}" alt="" class="text">
+                <p>当前礼品剩余：<span>10</span></p>
             </div>
         </div>
     </section>

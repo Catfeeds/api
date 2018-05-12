@@ -23,30 +23,28 @@ $(function () {
                 if (loc.location === select) {
                     let sum = loc.type1 + loc.type2 + loc.type3 + loc.type4 + loc.type5;
                     console.log(sum);
-                    if (sum===0){
-                        alert('该场次礼品库存不足')
-                    }
-                    var item = 0;
-                    let rand = Math.round(Math.random() * (sum - 1)) + 1;
-                    console.log(rand);
-                    if (rand>0 && rand <= loc.type1) {
-                        item = 1;
-                    } else if (rand <= loc.type1 + loc.type2) {
-                        item = 2;
-                    } else if (rand <= loc.type1 + loc.type2 + loc.type3) {
-                        item = 3;
-                    } else if (rand <= loc.type1 + loc.type2 + loc.type3 + loc.type4) {
-                        item = 4;
-                    } else if (rand <= sum) {
-                        item = 5;
-                    }
-                    window.item = item;
-                    console.log(window.item);
-                    if (item === 0) {
+                    if (sum == 0) {
                         alert('该场次礼品库存不足')
                     } else {
+                        var item = 0;
+                        let rand = Math.round(Math.random() * (sum - 1)) + 1;
+                        console.log(rand);
+                        if (rand > 0 && rand <= loc.type1) {
+                            item = 1;
+                        } else if (rand <= loc.type1 + loc.type2) {
+                            item = 2;
+                        } else if (rand <= loc.type1 + loc.type2 + loc.type3) {
+                            item = 3;
+                        } else if (rand <= loc.type1 + loc.type2 + loc.type3 + loc.type4) {
+                            item = 4;
+                        } else if (rand <= sum) {
+                            item = 5;
+                        }
+                        window.item = item;
+                        console.log(window.item);
                         draw()
                     }
+
                 }
             })
         }
