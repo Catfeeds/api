@@ -114,13 +114,13 @@ class ApiController extends Controller
 //            $user->save();
 
             return response()->json([
-                'code' => 1,
-                'result' => "在{$location}兑换{$reward}"
+                'code' => 0,
+                'result' => "查询不到记录"
             ]);
         }
         return response()->json([
             'code' => 0,
-            'result' => "已经在{$location}兑换过{$reward}",
+            'result' => "{$user->created_at}在{$location}中{$reward}",
         ]);
 
     }
