@@ -59,14 +59,14 @@ class ApiController extends Controller
 
         $client = new Client([
             'base_uri' => 'https://gw.rfc-china.com/',
-            'timeout'  => 5.0,
+            'timeout' => 5.0,
         ]);
         $res = $client->request('GET', 'api/sso/access_token?appid=demo.TangJi&appsecret=demo.TangJi');
         $body = $res->getBody();
         $code = json_decode((string)$body)->data;
-        $res = $client->request('GET', 'api/customer/customer/getcustomer?openid='.$openid, [
+        $res = $client->request('GET', 'api/customer/customer/getcustomer?openid=' . $openid, [
             'headers' => [
-                'authorization' => 'bearer '.$code,
+                'authorization' => 'bearer ' . $code,
             ]
         ]);
         $body = $res->getBody();
@@ -82,7 +82,7 @@ class ApiController extends Controller
         $user = Friso::firstOrNew([
             'openid' => $openid
         ]);
-        $reward =$type;
+        $reward = $type;
         switch ($type) {
             case ('type1') :
                 $reward = '储蓄罐';
@@ -100,30 +100,29 @@ class ApiController extends Controller
                 $reward = '餐具套装';
                 break;
         }
-        if (is_null($user->reward)) {
-            //没有领取过
-            $user->location = $location;
-            $user->nickname =$data->Name;
-            $user->phone = $data->Mobile;
-            //减少库存
-            $loc->{$type} -=1;
-            $loc->save();
-
-
-            $user->reward = $type;
-            $user->save();
+        if ($user->exists()) {
+//            //没有领取过
+//            $user->location = $location;
+//            $user->nickname =$data->Name;
+//            $user->phone = $data->Mobile;
+//            //减少库存
+//            $loc->{$type} -=1;
+//            $loc->save();
+//
+//
+//            $user->reward = $type;
+//            $user->save();
 
             return response()->json([
                 'code' => 1,
-                'result' => "兑换{$reward}成功！"
-            ]);
-        } else {
-
-            return response()->json([
-                'code' => 0,
-                'result' => "已经在{$location}兑换过{$reward}",
+                'result' => "在{$location}兑换{$reward}"
             ]);
         }
+        return response()->json([
+            'code' => 0,
+            'result' => "已经在{$location}兑换过{$reward}",
+        ]);
+
     }
 
     /**

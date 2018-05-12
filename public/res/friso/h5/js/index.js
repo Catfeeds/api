@@ -61,7 +61,7 @@ $(function () {
         var globalTxt = null;
         //点击中间按钮开始抽奖
         $('.btn_draw').click(function () {
-            qrcode(item, locate);
+            qrcode();
             if (bRotate) return;
             switch (item) {
                 case 5:

@@ -92,7 +92,28 @@ class FrisologController extends Controller
             $grid->column('nickname','称呼');
             $grid->column('phone','手机号');
             $grid->column('location', '场次');
-            $grid->column('reward', '兑换礼品');
+            $grid->column('reward', '兑换礼品')->display(function () {
+                switch ($this->reward) {
+                    case ('type1') :
+                        $reward = '储蓄罐';
+                        break;
+                    case ('type2'):
+                        $reward = '行李箱';
+                        break;
+                    case ('type3'):
+                        $reward = '折叠推车';
+                        break;
+                    case ('type4'):
+                        $reward = '滑板车';
+                        break;
+                    case ('type5'):
+                        $reward = '餐具套装';
+                        break;
+                    default:
+                        $reward = null;
+                }
+                return $reward;
+            });
             $grid->created_at('兑换时间');
         });
     }

@@ -11,7 +11,9 @@
 <body>
 <div class="wrapper">
     <section class="session ">
-        <form action="">
+        <form action="{{ url('friso/h5/draw') }}" method="post" id="form">
+            {{ csrf_field() }}
+            <input type="hidden" name="openid" value="{{ $openid }}">
             {{--<div class="date">--}}
             {{--<i></i>--}}
             {{--<select name="" id="">--}}
@@ -20,7 +22,7 @@
             {{--</div>--}}
             <div class="activity">
                 <i></i>
-                <select name="" id="">
+                <select name="location" id="location">
                     <option>点击此处选择本次的活动场次</option>
                     @foreach($locs as $loc)
                         <option value="{{ $loc->location }}">{{ $loc->location }}</option>
@@ -31,39 +33,23 @@
 
         </form>
     </section>
-    <section class="draw hide">
-        <div class="turntable">
-            <img class="pointer" src="{{ asset('res/friso/h5/img/pointer.png') }}" id="rotate" alt="">
-            <img src="{{ asset('res/friso/h5/img/rta_gift.png') }}" alt="" class="rta_gift">
-            <img src="{{ asset('res/friso/h5/img/rta.png') }}" alt="" class="rotate">
-        </div>
-        <img src="{{ asset('res/friso/h5/img/btn_draw.png') }}" alt="" class="btn_draw">
-        <div class="popup hide">
-            <img class="bg_popup" src="{{ asset('res/friso/h5/img/draw_0.png') }}" alt="">
-            <div class="mask">
-                <div class="ewm">
-                    <img id="qrcode" src="" alt="">
-                </div>
-                <img src="{{ asset('res/friso/h5/img/text.png') }}" alt="" class="text">
-                <p>当前礼品剩余：<span>10</span></p>
-            </div>
-        </div>
-    </section>
 </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script src="{{ asset('res/friso/h5/js/awardRotate.js') }}"></script>
-<script src="{{ asset('res/friso/h5/js/index.js') }}"></script>
 <script type="application/javascript">
-    //抽奖过程
-    window.locs = {!! $locs !!};
-
-    function qrcode(item, location) {
-        document.getElementById('qrcode').src = 'https://api.shanghaichujie.com/api/qrcode/generate?text='
-            + encodeURIComponent(`openid={{ $openid }}&type=type${item}&location=${location}`)
-    }
-
-
+    // 表单提交
+    $('.btn_submit').click(function () {
+        // var data = $('.date select').val();
+        var locate = $('.activity select').val();
+        window.locate = locate;
+        if ($('.activity select')[0].selectedIndex == 0) {
+            alert('请选择活动场次')
+        } else {
+            // $('.draw').show().siblings().hide();
+            $('#form').submit();
+        }
+    })
 </script>
 
 </html>
