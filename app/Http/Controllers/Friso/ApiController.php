@@ -100,7 +100,7 @@ class ApiController extends Controller
                 $reward = '餐具套装';
                 break;
         }
-        if ($user->exists()) {
+        if (is_null($user->reward)) {
 //            //没有领取过
 //            $user->location = $location;
 //            $user->nickname =$data->Name;
