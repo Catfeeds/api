@@ -102,6 +102,7 @@ class H5Controller extends Controller
                 $loc->save();
             }
         }else {
+            dd($user);
             $type = $user->reward;
         }
 
