@@ -73,7 +73,7 @@ class H5Controller extends Controller
         $user = Friso::firstOrNew([
             'openid' => $openid
         ]);
-        dd($user->exists());
+        dd($user);
         if (!$user->exists()) {
             $loc = FrisoLoc::where('location', $location)->first();
             $sum = $loc->type1 + $loc->type2 + $loc->type3 + $loc->type4 + $loc->type5;
