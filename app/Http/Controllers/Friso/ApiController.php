@@ -50,12 +50,12 @@ class ApiController extends Controller
 
         //判断是否有库存
         $loc = FrisoLoc::where('location', $location)->first();
-        if ($loc->{$type} == 0) {
-            return response()->json([
-                'code' => 0,
-                'result' => "该礼品库存不足!"
-            ]);
-        }
+//        if ($loc->{$type} == 0) {
+//            return response()->json([
+//                'code' => 0,
+//                'result' => "该礼品库存不足!"
+//            ]);
+//        }
 
         $client = new Client([
             'base_uri' => 'https://gw.rfc-china.com/',
