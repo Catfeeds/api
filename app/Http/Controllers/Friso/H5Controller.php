@@ -16,7 +16,7 @@ class H5Controller extends Controller
         $openid = $request->openid;
         $client = new Client([
             'base_uri' => 'https://gw.rfc-china.com/',
-            'timeout' => 5.0,
+            'timeout' => 8.0,
         ]);
 
         //获取access—token
@@ -49,7 +49,7 @@ class H5Controller extends Controller
 
         $client = new Client([
             'base_uri' => 'https://gw.rfc-china.com/',
-            'timeout' => 5.0,
+            'timeout' => 8.0,
         ]);
 
         //获取access—token
