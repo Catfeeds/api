@@ -21,6 +21,7 @@ class CreateFrisosTable extends Migration
             $table->text('headimg')->nullable();
             $table->string('location')->nullable()->comment('场次名称');
             $table->string('reward')->nullable()->comment('获得奖品');
+            $table->boolean('status')->default(false)->comment('是否核销');
             $table->timestamps();
         });
     }

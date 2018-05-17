@@ -114,6 +114,7 @@ class FrisologController extends Controller
                 }
                 return $reward;
             });
+            $grid->column('status','是否核销');
             $grid->created_at('兑换时间')->sortable();
         });
     }

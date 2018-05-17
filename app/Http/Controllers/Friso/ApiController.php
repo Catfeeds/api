@@ -118,9 +118,17 @@ class ApiController extends Controller
                 'result' => "查询不到记录"
             ]);
         }
+        if ($user->status) {
+           return response()->json([
+                'code' => 0,
+                'result' => "该用户已经核销过"
+            ]);
+        }
+        $user->status = true;
+        $user->save();
         return response()->json([
-            'code' => 0,
-            'result' => "{$user->created_at}在{$location}中{$reward}",
+            'code' => 1,
+            'result' => "{$user->created_at}在{$location}中{$reward}核销成功",
         ]);
 
     }
