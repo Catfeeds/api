@@ -51,6 +51,8 @@
         $('.btn_draw').click(function () {
             @if($location!=$user->location && !is_null($user->location))
             alert('您已经在 {{ $user->location }} 参与过抽奖');
+            @elseif($user->status)
+            alert('您已经核销过了');
             @else
             @if($type!='type0')
             qrcode();
