@@ -85,7 +85,7 @@ class FrisologController extends Controller
 
                 // 去掉默认的id过滤器
                 $filter->disableIdFilter();
-
+                $filter->equal('phone', '手机号');
             });
 
             $grid->id('ID')->sortable();
