@@ -123,7 +123,7 @@
         wx.onMenuShareTimeline({
             title: 'FedEx Shanghai', // 分享标题
             link: window.location.href,
-            imgUrl: "{{ asset('res/fed/logo.png') }}", // 分享图标
+            imgUrl: "{{ asset('res/fed/share.png') }}", // 分享图标
             success: function () {
             }
         });
@@ -132,7 +132,7 @@
             title: 'FedEx Shanghai', // 分享标题
             desc: " ", // 分享描述
             link: window.location.href,
-            imgUrl: "{{ asset('res/fed/logo.png') }}", // 分享图标
+            imgUrl: "{{ asset('res/fed/share.png') }}", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
             }
