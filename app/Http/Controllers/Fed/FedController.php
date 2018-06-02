@@ -11,8 +11,8 @@ class FedController extends Controller
     public function index(Request $request)
     {
         $path = $request->path;
-
-        return view('fed',compact('path'));
+        $js= \EasyWeChat::js();
+        return view('fed',compact('path','js'));
     }
 
     public function api(Request $request)
