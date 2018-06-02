@@ -166,3 +166,8 @@ Route::get('tmail/statistic', 'Tmail\ApiController@statistic');
 Route::get('armani/email','Armani\EmailController@mail');
 //视频上传接口(用于armani项目，20180530)
 Route::post('video/upload', 'Armani\VideoController@upload');
+
+/**
+ * 联邦快递
+ */
+Route::post('fed/upload', 'Fed\FedController@api');
