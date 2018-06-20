@@ -21,7 +21,7 @@ class PyjController extends Controller
         $openid = $request->openid;
         $client = new Client([
             'base_uri' => 'https://gw.rfc-china.com/',
-            'timeout' => 5.0,
+            'timeout' => 10.0,
         ]);
 
         //获取access—token
