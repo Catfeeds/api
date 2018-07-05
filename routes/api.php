@@ -174,5 +174,6 @@ Route::post('fed/upload', 'Fed\FedController@api');
 /**
  * ar 素材接口
  */
+Route::get('ar/audio', 'Material@audio');
 Route::get('ar/material/android', 'Material@android');
 Route::get('ar/material/ios', 'Material@ios');
