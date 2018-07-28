@@ -28,14 +28,18 @@ class ApiController extends Controller
             ->where('status', 0)
             ->orderBy('created_at', 'desc')
             ->first();
-        $code = is_null($absout) ? 0 : 1;
         if ($absout) {
             $absout->status = 1;
             $absout->save();
+
+            return response()->json([
+                'code' => 1,
+                'image' => $absout->imgUrl
+            ]);
         }
         return response()->json([
-            'code' => $code,
-            'image' => $absout->imgUrl
+            'code' => 0,
+            'image' => null
         ]);
     }
 
