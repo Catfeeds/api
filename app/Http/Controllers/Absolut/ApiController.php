@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Absolut;
 
 use App\Models\Absolut;
+use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class ApiController extends Controller
 {
@@ -13,10 +15,11 @@ class ApiController extends Controller
     {
         $lid = $request->location_id;
         $image = $request->input('img');
-        $image = str_replace('data:image/jpeg;base64,', '' , $image);
-        $image = str_replace('data:image/png;base64,', '' , $image);
-        $image = str_replace('data:image/jpg;base64,', '' , $image);
-        $path = Storage::disk('oss')->putFileAs('absolut', $image, uniqid().'.jpg');
+//        $image = str_replace('data:image/jpeg;base64,', '' , $image);
+//        $image = str_replace('data:image/png;base64,', '' , $image);
+//        $image = str_replace('data:image/jpg;base64,', '' , $image);
+        $image= Image::make($image)->save(public_path('upload/absoult.jpg'));
+        $path = Storage::disk('oss')->putFileAs('absolut', new File(public_path('upload/absoult.jpg')), uniqid().'.jpg');
 
         $item = new Absolut();
         $item->locationId = $lid;
