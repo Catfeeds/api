@@ -42,7 +42,7 @@ class ApiController extends Controller
 
             return response()->json([
                 'code' => 1,
-                'image' => $absout->imgUrl
+                'image' => $absout->imgUrl . '?x-oss-process=style/absolut'
             ]);
         }
         return response()->json([
