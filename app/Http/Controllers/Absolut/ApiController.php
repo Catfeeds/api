@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Absolut;
 
 use App\Models\Absolut;
+use Carbon\Carbon;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -33,7 +34,7 @@ class ApiController extends Controller
     {
         $absout = Absolut::where('locationId', $request->location_id)
             ->where('status', 0)
-            ->orderBy('created_at', 'desc')
+            ->where('created_at', '>',  Carbon::today())
             ->first();
         if ($absout) {
             $absout->status = 1;
