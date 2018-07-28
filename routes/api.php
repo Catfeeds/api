@@ -181,6 +181,6 @@ Route::get('ar/material/ios', 'Material@ios');
 /**
  * absolut 接口
  */
-Route::post('absolut/upload/image', 'Absolut\ApiController@uploadImg');
+Route::get('absolut/upload/image', 'Absolut\ApiController@uploadImg');
 Route::get('absolut/print/image', 'Absolut\ApiController@printImg');
 Route::get('absolut/print/confirm', 'Absolut\ApiController@printConfirm');
