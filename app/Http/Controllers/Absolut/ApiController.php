@@ -45,7 +45,7 @@ class ApiController extends Controller
 
     public function printConfirm(Request $request)
     {
-        $absolut = Absolut::find($request->id);
+        $absolut = Absolut::where('imgUrl', $request->imgUrl)->first();
         $absolut->status = 0;
         $absolut->save();
 
