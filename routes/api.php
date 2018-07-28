@@ -177,3 +177,10 @@ Route::post('fed/upload', 'Fed\FedController@api');
 Route::get('ar/audio', 'Material@audio');
 Route::get('ar/material/android', 'Material@android');
 Route::get('ar/material/ios', 'Material@ios');
+
+/**
+ * absolut 接口
+ */
+Route::post('absolut/upload/image', 'Absolut\ApiController@uploadImg');
+Route::get('absolut/print/image', 'Absolut\ApiController@printImg');
+Route::get('absolut/print/confirm', 'Absolut\ApiController@printConfirm');
