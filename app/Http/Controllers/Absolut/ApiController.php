@@ -12,7 +12,11 @@ class ApiController extends Controller
     public function uploadImg(Request $request)
     {
         $lid = $request->location_id;
-        $path = Storage::disk('oss')->putFileAs('absolut', $request->file('img'), uniqid().'.jpg');
+        $image = $request->input('img');
+        $image = str_replace('data:image/jpeg;base64,', '' , $image);
+        $image = str_replace('data:image/png;base64,', '' , $image);
+        $image = str_replace('data:image/jpg;base64,', '' , $image);
+        $path = Storage::disk('oss')->putFileAs('absolut', $image, uniqid().'.jpg');
 
         $item = new Absolut();
         $item->locationId = $lid;
