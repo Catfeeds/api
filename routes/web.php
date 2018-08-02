@@ -244,7 +244,7 @@ Route::get('armani/video', 'Armani\VideoController@show');
  */
 Route::get('fed/index', 'Fed\FedController@index');
 
-Route::get('tencent/share', function(\Illuminate\Support\Facades\Request $request) {
+Route::get('tencent/share', function(\Illuminate\Http\Request $request) {
     $path = $request->path;
     $js = EasyWeChat::js();
     return view('tencent', compact('js', 'path'));
