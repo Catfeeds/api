@@ -12,8 +12,7 @@
 |
 */
 
-Route::get('test', function () {
-});
+Route::get('test', 'TestController@test');
 
 /*
  * 科思创项目
@@ -244,3 +243,9 @@ Route::get('armani/video', 'Armani\VideoController@show');
  * 联邦照片
  */
 Route::get('fed/index', 'Fed\FedController@index');
+
+Route::get('tencent/share', function(\Illuminate\Support\Facades\Request $request) {
+    $path = $request->path;
+    $js = EasyWeChat::js();
+    return view('tencent', compact('js', 'path'));
+});
