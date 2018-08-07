@@ -16,11 +16,8 @@ class ApiController extends Controller
     {
         $lid = $request->location_id;
         $image = $request->input('img');
-//        $image = str_replace('data:image/jpeg;base64,', '' , $image);
-//        $image = str_replace('data:image/png;base64,', '' , $image);
-//        $image = str_replace('data:image/jpg;base64,', '' , $image);
-        $image= Image::make($image)->save(public_path('upload/absoult.jpg'));
-        $path = Storage::disk('oss')->putFileAs('absolut', new File(public_path('upload/absoult.jpg')), uniqid().'.jpg');
+        Image::make($image)->save(public_path('upload/absoult.png'));
+        $path = Storage::disk('oss')->putFileAs('absolut', new File(public_path('upload/absoult.png')), uniqid().'.png');
 
         $item = new Absolut();
         $item->locationId = $lid;
