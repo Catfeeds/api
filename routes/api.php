@@ -152,8 +152,8 @@ Route::get('mc/qrcode/scan', 'Mc\ApiController@qrcodeScan');
 Route::get('mc/goods', 'Mc\ApiController@goods');
 Route::get('mc/exchange', 'Mc\ApiController@exchange');
 Route::get('mc/openid', 'Mc\ApiController@openid');
-Route::get('mc/game/start', 'Mc\GameController@gameStart');
-Route::get('mc/game/over', 'Mc\GameController@gameOver');
+Route::post('mc/game/start', 'Mc\GameController@gameStart');
+Route::post('mc/game/over', 'Mc\GameController@gameOver');
 
 
 /**
