@@ -15,8 +15,12 @@ class ApiController extends Controller
     public function uploadImg(Request $request)
     {
         $lid = $request->location_id;
-        $image = $request->input('img');
-        Image::make($image)->save(public_path('upload/absoult.png'));
+        $img = $request->input('img');
+        $base = Image::make(public_path('res/absolut/base_bg.png'));
+        $img =Image::make($img)->resize(1767,2473);
+
+        $base->insert($img, 'top-left', 154, 114)->save(public_path('upload/absoult.png'));
+
         $path = Storage::disk('oss')->putFileAs('absolut', new File(public_path('upload/absoult.png')), uniqid().'.png');
 
         $item = new Absolut();
