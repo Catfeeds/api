@@ -21,7 +21,7 @@ class GameController extends Controller
     /*
      * 游戏结束上传分数,通知游戏结束
      */
-    public function score(Request $request)
+    public function gameOver(Request $request)
     {
         event(new GameOver($request->openid, $request->score));
         return 'true';
