@@ -153,7 +153,7 @@ Route::get('mc/goods', 'Mc\ApiController@goods');
 Route::get('mc/exchange', 'Mc\ApiController@exchange');
 Route::get('mc/openid', 'Mc\ApiController@openid');
 Route::get('mc/game/start', 'Mc\GameController@gameStart');
-Route::get('mc/game/over', 'Mc\GameController@gameStart');
+Route::get('mc/game/over', 'Mc\GameController@gameOver');
 
 
 /**
