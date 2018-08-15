@@ -12,21 +12,37 @@ use Intervention\Image\Facades\Image;
 
 class ApiController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return string
+     *
+     */
     public function uploadImg(Request $request)
     {
         $lid = $request->location_id;
         $img = $request->input('img');
+        $platform = $request->platform; //区分平台
+        $uniqid = uniqid();
+
+        if ($platform == 'pad') {
+            //上传源文件
+            Image::make($img)->save(public_path('upload/absolut/'.$uniqid.'.png'));
+            $path = Storage::disk('oss')->putFileAs('absolut', new File(public_path('upload/absolut/'.$uniqid.'.png')), uniqid().'.png');
+            //保存pad端源文件用于打印
+            $item = new Absolut();
+            $item->locationId = $lid;
+            $item->imgUrl = config('filesystems.disks.oss.oss_url').$path;
+            $item->save();
+
+        }
         $base = Image::make(public_path('res/absolut/base_bg.png'));
         $img =Image::make($img)->resize(1767,2473);
 
-        $base->insert($img, 'top-left', 154, 114)->save(public_path('upload/absoult.png'));
+        $base->insert($img, 'top-left', 154, 114)->save(public_path('upload/absolut/'.$uniqid.'.png'));
 
-        $path = Storage::disk('oss')->putFileAs('absolut', new File(public_path('upload/absoult.png')), uniqid().'.png');
+        $path = Storage::disk('oss')->putFileAs('absolut', new File(public_path('upload/absolut/'.$uniqid.'.png')), uniqid().'.png');
 
-        $item = new Absolut();
-        $item->locationId = $lid;
-        $item->imgUrl = config('filesystems.disks.oss.oss_url').$path;
-        $item->save();
+
 
         return config('filesystems.disks.oss.oss_url').$path;
     }
