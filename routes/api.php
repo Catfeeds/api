@@ -187,3 +187,8 @@ Route::get('ar/material/ios', 'Material@ios');
 Route::post('absolut/upload/image', 'Absolut\ApiController@uploadImg');
 Route::get('absolut/print/image', 'Absolut\ApiController@printImg');
 Route::get('absolut/print/confirm', 'Absolut\ApiController@printConfirm');
+
+/*
+ * 滴露跑酷游戏
+ */
+Route::post('dettol/rank', 'Dettol\DettolController@api');
