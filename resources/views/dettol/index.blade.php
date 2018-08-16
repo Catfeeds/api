@@ -128,8 +128,6 @@
         var username = prompt('请输入您的名字');
         document.querySelector('.username').innerHTML = username
 
-        var score = 350
-
         var index = createCodeIndex(score)
         text.adj = adjArr[createAdjIndex()]
         text.n = nArr[index]
