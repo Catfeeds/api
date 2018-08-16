@@ -25,7 +25,7 @@ html, body {
   position: absolute;
   left: 0;
   top: 0;
-  // z-index: -1;
+  z-index: -1;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -124,16 +124,17 @@ html, body {
     }
     .page2 {
       position: absolute;
-      top: PX(80);
+      top: PX(140);
       left: 50%;
       transform: translate3d(-50%, 0, 0);
-      width: PX(456);
-      height: PX(365);
+      width: PX(361);
+      height: PX(201);
       background: url('../resource/ui/other/pannel_text2.png') no-repeat;
       background-size: 100% 100%;
       .copy {
         position: absolute;
-        top: PX(380);
+        left: PX(-40);
+        top: PX(280);
         width: PX(459);
         height: PX(93);
         border: none;
@@ -149,6 +150,31 @@ html, body {
     transform: translate3d(-50%, 0, 0);
     width: PX(308);
     height: PX(292);
+  }
+}
+.saveTips {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99999;
+  width: PX(400);
+  height: PX(100);
+  line-height: PX(100);
+  text-align: center;
+  // padding: PX(20) PX(50);
+  transform: translate3d(-50%, -50%, 0);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: PX(45);
+  animation: saveAni 0.5s;
+}
+@keyframes saveAni {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(0)
+  }
+  100% {
+    display: block;
+    transform: translate3d(-50%, -50%, 0) scale(1)
   }
 }
 
