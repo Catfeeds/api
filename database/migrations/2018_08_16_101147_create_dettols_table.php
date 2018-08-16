@@ -15,6 +15,8 @@ class CreateDettolsTable extends Migration
     {
         Schema::create('dettols', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('openid');
+            $table->integer('score');
             $table->timestamps();
         });
     }
