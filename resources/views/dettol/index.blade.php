@@ -79,7 +79,7 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: '滴露探索乐园', // 分享标题
+            title: '世界那么大，和林心如一起去探索吧', // 分享标题
             link: "https://api.shanghaichujie.com/res/dettol/index",
             imgUrl: "https://api.shanghaichujie.com/res/dettol/resource/ui/share.png", // 分享图标
             success: function () {
@@ -89,7 +89,7 @@
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: '滴露探索乐园', // 分享标题
-            desc: "无菌无束 聚享探索", // 分享描述
+            desc: "世界那么大，和林心如一起去探索吧", // 分享描述
             link: "https://api.shanghaichujie.com/res/dettol/index",
             imgUrl: "https://api.shanghaichujie.com/res/dettol/resource/ui/share.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
