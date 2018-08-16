@@ -137,7 +137,7 @@
             method: 'post',
             url: 'https://api.shanghaichujie.com/api/dettol/rank',
             data: {
-                openid: "{{ $wechat['id'] }}",
+                openid: "xxx",
                 score: score
             }
         }).then(function (res) {
