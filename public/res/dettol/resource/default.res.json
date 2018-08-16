@@ -1,0 +1,1144 @@
+{
+	"groups": [
+		{
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,人物_02_png,抑菌洗手液_png,泡沫洗手液_png,消毒液_png,聊天框_png,背景_png,海洋改731_jpg,点击进入按钮_png,背景_jpg,太空场景背景_jpg,细菌_png,细菌1_png,细菌2_png,细菌3_png,细菌4_png,font1_fnt,font1_png,font2_fnt,font2_png,太空台阶1-04_02_png,太空台阶1-04_01_png,太空台阶1-04_03_png,森林台阶1-02_01_png,森林台阶1-02_02_png,森林台阶1-02_03_png,海洋台阶1-02_01_png,海洋台阶1-02_02_png,海洋台阶1-02_03_png,加速冲刺_png,子弹时间道具_png,保护罩_png,保护罩2_png,子弹时间道具2_png,加速冲刺2_png,选择道具选中后的背景框_03_png,选择道具界面背景_jpg,拉上伙伴选中后的背景框_03_png,开始游戏按钮_png,伙伴选中_png,伙伴底框_png,滴露消毒液选中后_png,滴露消毒液未选中_png,滴露泡沫洗手液选中状态_png,滴露泡沫洗手液选中后_png,滴露泡沫洗手液未选中_png,滴露免洗手液选中状态_png,滴露免洗手液未选中状态_png,滴露管家选中后_png,滴露管家未选中_png,滴露宝贝选中后_png,滴露宝贝未选中_png,合成 2_00005_jpg,合成 2_00006_jpg,合成 2_00007_jpg,合成 2_00008_jpg,合成 2_00009_jpg,合成 2_00010_jpg,合成 2_00011_jpg,合成 2_00012_jpg,合成 2_00013_jpg,合成 2_00014_jpg,合成 2_00015_jpg,合成 2_00016_jpg,合成 2_00017_jpg,合成 2_00018_jpg,合成 2_00019_jpg,合成 2_00020_jpg,合成 2_00021_jpg,合成 2_00022_jpg,合成 2_00023_jpg,合成 2_00024_jpg,合成 2_00025_jpg,合成 2_00026_jpg,合成 2_00027_jpg,合成 2_00028_jpg,合成 2_00029_jpg,合成 2_00030_jpg,合成 2_00031_jpg,合成 2_00032_jpg,合成 2_00033_jpg,合成 2_00034_jpg,合成 2_00035_jpg,合成 2_00036_jpg,合成 2_00037_jpg,合成 2_00038_jpg,合成 2_00039_jpg,合成 2_00040_jpg,合成 2_00041_jpg,合成 2_00042_jpg,合成 2_00043_jpg,合成 2_00044_jpg,合成 2_00045_jpg,合成 2_00046_jpg,合成 2_00047_jpg,合成 2_00048_jpg,合成 2_00049_jpg,合成 2_00050_jpg,合成 2_00051_jpg,合成 2_00052_jpg,合成 2_00053_jpg,合成 2_00054_jpg,合成 2_00055_jpg,合成 2_00056_jpg,合成 2_00057_jpg,合成 2_00058_jpg,合成 2_00059_jpg,合成 2_00060_jpg,合成 2_00061_jpg,合成 2_00062_jpg,合成 2_00000_jpg,合成 2_00001_jpg,合成 2_00002_jpg,合成 2_00003_jpg,合成 2_00004_jpg,dead_png,dead2_png,子弹_png,Comp 3_00009_png,Comp 3_00010_png,Comp 3_00011_png,Comp 3_00012_png,Comp 3_00013_png,Comp 3_00014_png,Comp 3_00015_png,Comp 3_00000_png,Comp 3_00001_png,Comp 3_00002_png,Comp 3_00003_png,Comp 3_00004_png,Comp 3_00005_png,Comp 3_00006_png,Comp 3_00007_png,Comp 3_00008_png,婴儿爬 2_00014_png,婴儿爬 2_00000_png,婴儿爬 2_00001_png,婴儿爬 2_00002_png,婴儿爬 2_00003_png,婴儿爬 2_00004_png,婴儿爬 2_00005_png,婴儿爬 2_00006_png,婴儿爬 2_00007_png,婴儿爬 2_00008_png,婴儿爬 2_00009_png,婴儿爬 2_00010_png,婴儿爬 2_00011_png,婴儿爬 2_00012_png,婴儿爬 2_00013_png,侧面男B 5_00015_png,侧面男B 5_00000_png,侧面男B 5_00001_png,侧面男B 5_00002_png,侧面男B 5_00003_png,侧面男B 5_00004_png,侧面男B 5_00005_png,侧面男B 5_00006_png,侧面男B 5_00007_png,侧面男B 5_00008_png,侧面男B 5_00009_png,侧面男B 5_00010_png,侧面男B 5_00011_png,侧面男B 5_00012_png,侧面男B 5_00013_png,侧面男B 5_00014_png,选择人物字幕_png,bgmusic_mp3,daojiashi3_png,daojiashi1_png,daojiashi2_png,起飞时加入字_png,呼吸灯_png,按钮二_png,按钮三_png,按钮一_png,游戏分享界面背景_jpg,字幕1_png,字幕2_png,字幕3_png,音乐播放小图标_png,音乐暂停小图标_png,conglin_mp3,taikong_mp3,haiyang_mp3,游戏结束弹窗_png,box_png,copy_btn_png,forest_bg_jpg,forest_center_png,logo_png,next_png,pannel_png,pannel_text1_png,pannel_text2_png,qr_code_png,sea_bg_jpg,sea_center_png,space_bg_jpg,space_center_png",
+			"name": "preload"
+		},
+		{
+			"keys": "logo_png",
+			"name": "loading"
+		}
+	],
+	"resources": [
+		{
+			"url": "ui/other/box.png",
+			"type": "image",
+			"name": "box_png"
+		},
+		{
+			"url": "ui/other/copy_btn.png",
+			"type": "image",
+			"name": "copy_btn_png"
+		},
+		{
+			"url": "ui/other/forest_bg.jpg",
+			"type": "image",
+			"name": "forest_bg_jpg"
+		},
+		{
+			"url": "ui/other/forest_center.png",
+			"type": "image",
+			"name": "forest_center_png"
+		},
+		{
+			"url": "ui/other/logo.png",
+			"type": "image",
+			"name": "logo_png"
+		},
+		{
+			"url": "ui/other/next.png",
+			"type": "image",
+			"name": "next_png"
+		},
+		{
+			"url": "ui/other/pannel.png",
+			"type": "image",
+			"name": "pannel_png"
+		},
+		{
+			"url": "ui/other/pannel_text1.png",
+			"type": "image",
+			"name": "pannel_text1_png"
+		},
+		{
+			"url": "ui/other/pannel_text2.png",
+			"type": "image",
+			"name": "pannel_text2_png"
+		},
+		{
+			"url": "ui/other/qr_code.png",
+			"type": "image",
+			"name": "qr_code_png"
+		},
+		{
+			"url": "ui/other/sea_bg.jpg",
+			"type": "image",
+			"name": "sea_bg_jpg"
+		},
+		{
+			"url": "ui/other/sea_center.png",
+			"type": "image",
+			"name": "sea_center_png"
+		},
+		{
+			"url": "ui/other/space_bg.jpg",
+			"type": "image",
+			"name": "space_bg_jpg"
+		},
+		{
+			"url": "ui/other/space_center.png",
+			"type": "image",
+			"name": "space_center_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "assets/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "assets/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "assets/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "assets/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "ui/道具和字幕摆放/images/人物_02.png",
+			"type": "image",
+			"name": "人物_02_png"
+		},
+		{
+			"url": "ui/道具和字幕摆放/抑菌洗手液.png",
+			"type": "image",
+			"name": "抑菌洗手液_png"
+		},
+		{
+			"url": "ui/道具和字幕摆放/泡沫洗手液.png",
+			"type": "image",
+			"name": "泡沫洗手液_png"
+		},
+		{
+			"url": "ui/道具和字幕摆放/消毒液.png",
+			"type": "image",
+			"name": "消毒液_png"
+		},
+		{
+			"url": "ui/道具和字幕摆放/聊天框.png",
+			"type": "image",
+			"name": "聊天框_png"
+		},
+		{
+			"url": "ui/道具和字幕摆放/背景.png",
+			"type": "image",
+			"name": "背景_png"
+		},
+		{
+			"url": "ui/海洋场景/海洋改731.jpg",
+			"type": "image",
+			"name": "海洋改731_jpg"
+		},
+		{
+			"url": "ui/首页邀请/点击进入按钮.png",
+			"type": "image",
+			"name": "点击进入按钮_png"
+		},
+		{
+			"url": "ui/首页邀请/背景.jpg",
+			"type": "image",
+			"name": "背景_jpg"
+		},
+		{
+			"url": "ui/太空/太空场景背景.jpg",
+			"type": "image",
+			"name": "太空场景背景_jpg"
+		},
+		{
+			"url": "ui/xiju/细菌.png",
+			"type": "image",
+			"name": "细菌_png"
+		},
+		{
+			"url": "ui/xiju/细菌1.png",
+			"type": "image",
+			"name": "细菌1_png"
+		},
+		{
+			"url": "ui/xiju/细菌2.png",
+			"type": "image",
+			"name": "细菌2_png"
+		},
+		{
+			"url": "ui/xiju/细菌3.png",
+			"type": "image",
+			"name": "细菌3_png"
+		},
+		{
+			"url": "ui/xiju/细菌2.png",
+			"type": "image",
+			"name": "细菌22_png"
+		},
+		{
+			"url": "ui/xiju/细菌3.png",
+			"type": "image",
+			"name": "细菌32_png"
+		},
+		{
+			"url": "ui/xiju/细菌.png",
+			"type": "image",
+			"name": "细菌4_png"
+		},
+		{
+			"url": "ui/xiju/细菌1.png",
+			"type": "image",
+			"name": "细菌12_png"
+		},
+		{
+			"url": "fonts/font1.fnt",
+			"type": "font",
+			"name": "font1_fnt"
+		},
+		{
+			"url": "fonts/font1.png",
+			"type": "image",
+			"name": "font1_png"
+		},
+		{
+			"url": "fonts/font2.fnt",
+			"type": "font",
+			"name": "font2_fnt"
+		},
+		{
+			"url": "fonts/font2.png",
+			"type": "image",
+			"name": "font2_png"
+		},
+		{
+			"url": "ui/太空/太空台阶1-04_02.png",
+			"type": "image",
+			"name": "太空台阶1-04_02_png"
+		},
+		{
+			"url": "ui/太空/太空台阶1-04_01.png",
+			"type": "image",
+			"name": "太空台阶1-04_01_png"
+		},
+		{
+			"url": "ui/太空/太空台阶1-04_03.png",
+			"type": "image",
+			"name": "太空台阶1-04_03_png"
+		},
+		{
+			"url": "ui/森林/森林台阶1-02_01.png",
+			"type": "image",
+			"name": "森林台阶1-02_01_png"
+		},
+		{
+			"url": "ui/森林/森林台阶1-02_02.png",
+			"type": "image",
+			"name": "森林台阶1-02_02_png"
+		},
+		{
+			"url": "ui/森林/森林台阶1-02_03.png",
+			"type": "image",
+			"name": "森林台阶1-02_03_png"
+		},
+		{
+			"url": "ui/海洋场景/海洋台阶1-02_01.png",
+			"type": "image",
+			"name": "海洋台阶1-02_01_png"
+		},
+		{
+			"url": "ui/海洋场景/海洋台阶1-02_02.png",
+			"type": "image",
+			"name": "海洋台阶1-02_02_png"
+		},
+		{
+			"url": "ui/海洋场景/海洋台阶1-02_03.png",
+			"type": "image",
+			"name": "海洋台阶1-02_03_png"
+		},
+		{
+			"url": "ui/daojuxiaoguo/加速冲刺.png",
+			"type": "image",
+			"name": "加速冲刺_png"
+		},
+		{
+			"url": "ui/daojuxiaoguo/子弹时间道具.png",
+			"type": "image",
+			"name": "子弹时间道具_png"
+		},
+		{
+			"url": "ui/daojuxiaoguo/保护罩.png",
+			"type": "image",
+			"name": "保护罩_png"
+		},
+		{
+			"url": "ui/daojuxiaoguo/保护罩.png",
+			"type": "image",
+			"name": "保护罩2_png"
+		},
+		{
+			"url": "ui/daojuxiaoguo/子弹时间道具.png",
+			"type": "image",
+			"name": "子弹时间道具2_png"
+		},
+		{
+			"url": "ui/daojuxiaoguo/加速冲刺.png",
+			"type": "image",
+			"name": "加速冲刺2_png"
+		},
+		{
+			"url": "ui/选择道具界面/伙伴底框.png",
+			"type": "image",
+			"name": "伙伴底框_png"
+		},
+		{
+			"url": "ui/选择道具界面/伙伴选中.png",
+			"type": "image",
+			"name": "伙伴选中_png"
+		},
+		{
+			"url": "ui/选择道具界面/开始游戏按钮.png",
+			"type": "image",
+			"name": "开始游戏按钮_png"
+		},
+		{
+			"url": "ui/选择道具界面/拉上伙伴选中后的背景框_03.png",
+			"type": "image",
+			"name": "拉上伙伴选中后的背景框_03_png"
+		},
+		{
+			"url": "ui/选择道具界面/滴露免洗手液未选中状态.png",
+			"type": "image",
+			"name": "滴露免洗手液未选中状态_png"
+		},
+		{
+			"url": "ui/选择道具界面/滴露免洗手液选中状态.png",
+			"type": "image",
+			"name": "滴露免洗手液选中状态_png"
+		},
+		{
+			"url": "ui/选择道具界面/滴露宝贝未选中.png",
+			"type": "image",
+			"name": "滴露宝贝未选中_png"
+		},
+		{
+			"url": "ui/选择道具界面/滴露宝贝选中后.png",
+			"type": "image",
+			"name": "滴露宝贝选中后_png"
+		},
+		{
+			"url": "ui/选择道具界面/滴露泡沫洗手液未选中.png",
+			"type": "image",
+			"name": "滴露泡沫洗手液未选中_png"
+		},
+		{
+			"url": "ui/选择道具界面/滴露泡沫洗手液选中后.png",
+			"type": "image",
+			"name": "滴露泡沫洗手液选中后_png"
+		},
+		{
+			"url": "ui/选择道具界面/滴露泡沫洗手液选中状态.png",
+			"type": "image",
+			"name": "滴露泡沫洗手液选中状态_png"
+		},
+		{
+			"url": "ui/选择道具界面/滴露消毒液未选中.png",
+			"type": "image",
+			"name": "滴露消毒液未选中_png"
+		},
+		{
+			"url": "ui/选择道具界面/滴露消毒液选中后.png",
+			"type": "image",
+			"name": "滴露消毒液选中后_png"
+		},
+		{
+			"url": "ui/选择道具界面/滴露管家未选中.png",
+			"type": "image",
+			"name": "滴露管家未选中_png"
+		},
+		{
+			"url": "ui/选择道具界面/滴露管家选中后.png",
+			"type": "image",
+			"name": "滴露管家选中后_png"
+		},
+		{
+			"url": "ui/选择道具界面/选择道具界面背景.jpg",
+			"type": "image",
+			"name": "选择道具界面背景_jpg"
+		},
+		{
+			"url": "ui/选择道具界面/选择道具选中后的背景框_03.png",
+			"type": "image",
+			"name": "选择道具选中后的背景框_03_png"
+		},
+		{
+			"url": "Transitions/合成 2_00005.jpg",
+			"type": "image",
+			"name": "合成 2_00005_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00006.jpg",
+			"type": "image",
+			"name": "合成 2_00006_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00007.jpg",
+			"type": "image",
+			"name": "合成 2_00007_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00008.jpg",
+			"type": "image",
+			"name": "合成 2_00008_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00009.jpg",
+			"type": "image",
+			"name": "合成 2_00009_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00010.jpg",
+			"type": "image",
+			"name": "合成 2_00010_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00011.jpg",
+			"type": "image",
+			"name": "合成 2_00011_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00012.jpg",
+			"type": "image",
+			"name": "合成 2_00012_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00013.jpg",
+			"type": "image",
+			"name": "合成 2_00013_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00014.jpg",
+			"type": "image",
+			"name": "合成 2_00014_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00015.jpg",
+			"type": "image",
+			"name": "合成 2_00015_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00016.jpg",
+			"type": "image",
+			"name": "合成 2_00016_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00017.jpg",
+			"type": "image",
+			"name": "合成 2_00017_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00018.jpg",
+			"type": "image",
+			"name": "合成 2_00018_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00019.jpg",
+			"type": "image",
+			"name": "合成 2_00019_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00020.jpg",
+			"type": "image",
+			"name": "合成 2_00020_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00021.jpg",
+			"type": "image",
+			"name": "合成 2_00021_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00022.jpg",
+			"type": "image",
+			"name": "合成 2_00022_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00023.jpg",
+			"type": "image",
+			"name": "合成 2_00023_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00024.jpg",
+			"type": "image",
+			"name": "合成 2_00024_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00025.jpg",
+			"type": "image",
+			"name": "合成 2_00025_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00026.jpg",
+			"type": "image",
+			"name": "合成 2_00026_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00027.jpg",
+			"type": "image",
+			"name": "合成 2_00027_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00028.jpg",
+			"type": "image",
+			"name": "合成 2_00028_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00029.jpg",
+			"type": "image",
+			"name": "合成 2_00029_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00030.jpg",
+			"type": "image",
+			"name": "合成 2_00030_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00031.jpg",
+			"type": "image",
+			"name": "合成 2_00031_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00032.jpg",
+			"type": "image",
+			"name": "合成 2_00032_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00033.jpg",
+			"type": "image",
+			"name": "合成 2_00033_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00034.jpg",
+			"type": "image",
+			"name": "合成 2_00034_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00035.jpg",
+			"type": "image",
+			"name": "合成 2_00035_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00036.jpg",
+			"type": "image",
+			"name": "合成 2_00036_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00037.jpg",
+			"type": "image",
+			"name": "合成 2_00037_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00038.jpg",
+			"type": "image",
+			"name": "合成 2_00038_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00039.jpg",
+			"type": "image",
+			"name": "合成 2_00039_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00040.jpg",
+			"type": "image",
+			"name": "合成 2_00040_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00041.jpg",
+			"type": "image",
+			"name": "合成 2_00041_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00042.jpg",
+			"type": "image",
+			"name": "合成 2_00042_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00043.jpg",
+			"type": "image",
+			"name": "合成 2_00043_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00044.jpg",
+			"type": "image",
+			"name": "合成 2_00044_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00045.jpg",
+			"type": "image",
+			"name": "合成 2_00045_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00046.jpg",
+			"type": "image",
+			"name": "合成 2_00046_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00047.jpg",
+			"type": "image",
+			"name": "合成 2_00047_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00048.jpg",
+			"type": "image",
+			"name": "合成 2_00048_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00049.jpg",
+			"type": "image",
+			"name": "合成 2_00049_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00050.jpg",
+			"type": "image",
+			"name": "合成 2_00050_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00051.jpg",
+			"type": "image",
+			"name": "合成 2_00051_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00052.jpg",
+			"type": "image",
+			"name": "合成 2_00052_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00053.jpg",
+			"type": "image",
+			"name": "合成 2_00053_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00054.jpg",
+			"type": "image",
+			"name": "合成 2_00054_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00055.jpg",
+			"type": "image",
+			"name": "合成 2_00055_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00056.jpg",
+			"type": "image",
+			"name": "合成 2_00056_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00057.jpg",
+			"type": "image",
+			"name": "合成 2_00057_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00058.jpg",
+			"type": "image",
+			"name": "合成 2_00058_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00059.jpg",
+			"type": "image",
+			"name": "合成 2_00059_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00060.jpg",
+			"type": "image",
+			"name": "合成 2_00060_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00061.jpg",
+			"type": "image",
+			"name": "合成 2_00061_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00062.jpg",
+			"type": "image",
+			"name": "合成 2_00062_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00000.jpg",
+			"type": "image",
+			"name": "合成 2_00000_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00001.jpg",
+			"type": "image",
+			"name": "合成 2_00001_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00002.jpg",
+			"type": "image",
+			"name": "合成 2_00002_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00003.jpg",
+			"type": "image",
+			"name": "合成 2_00003_jpg"
+		},
+		{
+			"url": "Transitions/合成 2_00004.jpg",
+			"type": "image",
+			"name": "合成 2_00004_jpg"
+		},
+		{
+			"url": "girl/dead.png",
+			"type": "image",
+			"name": "dead_png"
+		},
+		{
+			"url": "girl/dead.png",
+			"type": "image",
+			"name": "dead2_png"
+		},
+		{
+			"url": "ui/daojuxiaoguo/子弹.png",
+			"type": "image",
+			"name": "子弹_png"
+		},
+		{
+			"url": "girl/Comp 3_00009.png",
+			"type": "image",
+			"name": "Comp 3_00009_png"
+		},
+		{
+			"url": "girl/Comp 3_00010.png",
+			"type": "image",
+			"name": "Comp 3_00010_png"
+		},
+		{
+			"url": "girl/Comp 3_00011.png",
+			"type": "image",
+			"name": "Comp 3_00011_png"
+		},
+		{
+			"url": "girl/Comp 3_00012.png",
+			"type": "image",
+			"name": "Comp 3_00012_png"
+		},
+		{
+			"url": "girl/Comp 3_00013.png",
+			"type": "image",
+			"name": "Comp 3_00013_png"
+		},
+		{
+			"url": "girl/Comp 3_00014.png",
+			"type": "image",
+			"name": "Comp 3_00014_png"
+		},
+		{
+			"url": "girl/Comp 3_00015.png",
+			"type": "image",
+			"name": "Comp 3_00015_png"
+		},
+		{
+			"url": "girl/Comp 3_00000.png",
+			"type": "image",
+			"name": "Comp 3_00000_png"
+		},
+		{
+			"url": "girl/Comp 3_00001.png",
+			"type": "image",
+			"name": "Comp 3_00001_png"
+		},
+		{
+			"url": "girl/Comp 3_00002.png",
+			"type": "image",
+			"name": "Comp 3_00002_png"
+		},
+		{
+			"url": "girl/Comp 3_00003.png",
+			"type": "image",
+			"name": "Comp 3_00003_png"
+		},
+		{
+			"url": "girl/Comp 3_00004.png",
+			"type": "image",
+			"name": "Comp 3_00004_png"
+		},
+		{
+			"url": "girl/Comp 3_00005.png",
+			"type": "image",
+			"name": "Comp 3_00005_png"
+		},
+		{
+			"url": "girl/Comp 3_00006.png",
+			"type": "image",
+			"name": "Comp 3_00006_png"
+		},
+		{
+			"url": "girl/Comp 3_00007.png",
+			"type": "image",
+			"name": "Comp 3_00007_png"
+		},
+		{
+			"url": "girl/Comp 3_00008.png",
+			"type": "image",
+			"name": "Comp 3_00008_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00014.png",
+			"type": "image",
+			"name": "婴儿爬 2_00014_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00000.png",
+			"type": "image",
+			"name": "婴儿爬 2_00000_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00001.png",
+			"type": "image",
+			"name": "婴儿爬 2_00001_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00002.png",
+			"type": "image",
+			"name": "婴儿爬 2_00002_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00003.png",
+			"type": "image",
+			"name": "婴儿爬 2_00003_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00004.png",
+			"type": "image",
+			"name": "婴儿爬 2_00004_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00005.png",
+			"type": "image",
+			"name": "婴儿爬 2_00005_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00006.png",
+			"type": "image",
+			"name": "婴儿爬 2_00006_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00007.png",
+			"type": "image",
+			"name": "婴儿爬 2_00007_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00008.png",
+			"type": "image",
+			"name": "婴儿爬 2_00008_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00009.png",
+			"type": "image",
+			"name": "婴儿爬 2_00009_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00010.png",
+			"type": "image",
+			"name": "婴儿爬 2_00010_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00011.png",
+			"type": "image",
+			"name": "婴儿爬 2_00011_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00012.png",
+			"type": "image",
+			"name": "婴儿爬 2_00012_png"
+		},
+		{
+			"url": "baby/婴儿爬 2_00013.png",
+			"type": "image",
+			"name": "婴儿爬 2_00013_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00015.png",
+			"type": "image",
+			"name": "侧面男B 5_00015_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00000.png",
+			"type": "image",
+			"name": "侧面男B 5_00000_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00001.png",
+			"type": "image",
+			"name": "侧面男B 5_00001_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00002.png",
+			"type": "image",
+			"name": "侧面男B 5_00002_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00003.png",
+			"type": "image",
+			"name": "侧面男B 5_00003_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00004.png",
+			"type": "image",
+			"name": "侧面男B 5_00004_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00005.png",
+			"type": "image",
+			"name": "侧面男B 5_00005_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00006.png",
+			"type": "image",
+			"name": "侧面男B 5_00006_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00007.png",
+			"type": "image",
+			"name": "侧面男B 5_00007_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00008.png",
+			"type": "image",
+			"name": "侧面男B 5_00008_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00009.png",
+			"type": "image",
+			"name": "侧面男B 5_00009_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00010.png",
+			"type": "image",
+			"name": "侧面男B 5_00010_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00011.png",
+			"type": "image",
+			"name": "侧面男B 5_00011_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00012.png",
+			"type": "image",
+			"name": "侧面男B 5_00012_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00013.png",
+			"type": "image",
+			"name": "侧面男B 5_00013_png"
+		},
+		{
+			"url": "guanjia/侧面男B 5_00014.png",
+			"type": "image",
+			"name": "侧面男B 5_00014_png"
+		},
+		{
+			"url": "ui/选择道具界面/选择人物字幕.png",
+			"type": "image",
+			"name": "选择人物字幕_png"
+		},
+		{
+			"url": "sound/bgmusic.mp3",
+			"type": "sound",
+			"name": "bgmusic_mp3"
+		},
+		{
+			"url": "ui/daojiashi3.png",
+			"type": "image",
+			"name": "daojiashi3_png"
+		},
+		{
+			"url": "ui/daojiashi1.png",
+			"type": "image",
+			"name": "daojiashi1_png"
+		},
+		{
+			"url": "ui/daojiashi2.png",
+			"type": "image",
+			"name": "daojiashi2_png"
+		},
+		{
+			"url": "ui/起飞时加入字.png",
+			"type": "image",
+			"name": "起飞时加入字_png"
+		},
+		{
+			"url": "ui/选择道具界面/呼吸灯.png",
+			"type": "image",
+			"name": "呼吸灯_png"
+		},
+		{
+			"url": "ui/结束界面/按钮二.png",
+			"type": "image",
+			"name": "按钮二_png"
+		},
+		{
+			"url": "ui/结束界面/按钮三.png",
+			"type": "image",
+			"name": "按钮三_png"
+		},
+		{
+			"url": "ui/结束界面/按钮一.png",
+			"type": "image",
+			"name": "按钮一_png"
+		},
+		{
+			"url": "ui/结束界面/游戏分享界面背景.jpg",
+			"type": "image",
+			"name": "游戏分享界面背景_jpg"
+		},
+		{
+			"url": "ui/结束界面/字幕1.png",
+			"type": "image",
+			"name": "字幕1_png"
+		},
+		{
+			"url": "ui/结束界面/字幕2.png",
+			"type": "image",
+			"name": "字幕2_png"
+		},
+		{
+			"url": "ui/结束界面/字幕3.png",
+			"type": "image",
+			"name": "字幕3_png"
+		},
+		{
+			"url": "ui/音乐播放小图标.png",
+			"type": "image",
+			"name": "音乐播放小图标_png"
+		},
+		{
+			"url": "ui/音乐暂停小图标.png",
+			"type": "image",
+			"name": "音乐暂停小图标_png"
+		},
+		{
+			"url": "sound/conglin.mp3",
+			"type": "sound",
+			"name": "conglin_mp3"
+		},
+		{
+			"url": "sound/taikong.mp3",
+			"type": "sound",
+			"name": "taikong_mp3"
+		},
+		{
+			"url": "sound/haiyang.mp3",
+			"type": "sound",
+			"name": "haiyang_mp3"
+		},
+		{
+			"url": "ui/logo.png",
+			"type": "image",
+			"name": "logo_png"
+		},
+		{
+			"name": "游戏结束弹窗_png",
+			"type": "image",
+			"url": "ui/over/游戏结束弹窗.png"
+		}
+	]
+}

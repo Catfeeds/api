@@ -249,3 +249,10 @@ Route::get('tencent/share', function(\Illuminate\Http\Request $request) {
     $js = EasyWeChat::js();
     return view('tencent', compact('js', 'path'));
 });
+
+/*
+ * 滴露跑酷游戏
+ */
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
+    Route::get('res/dettol/index', 'Dettol\DettolController@index');
+});
