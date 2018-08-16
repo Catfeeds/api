@@ -133,8 +133,8 @@ html, body {
   top: 1.86667rem;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
-  width: 4.81333rem;
-  height: 2.68rem;
+  width: 5.17333rem;
+  height: 3.65333rem;
   background: url("../resource/ui/other/pannel_text2.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -142,7 +142,7 @@ html, body {
 .popup .pannel .page2 .copy {
   position: absolute;
   left: -0.53333rem;
-  top: 3.73333rem;
+  top: 4.13333rem;
   width: 6.12rem;
   height: 1.24rem;
   border: none;
