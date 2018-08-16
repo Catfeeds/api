@@ -40,9 +40,9 @@
      data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
 </div>
 <section class="lastPage hide">
-    <img class="logo" src="{{ asset('res/dettol/images/logo.png') }}">
-    <img class="qrCode" src="{{ asset('res/dettol/images/qr_code.png') }}">
-    <img class="center" src="{{ asset('res/dettol/images/space_center.png') }}">
+    <img class="logo" src="{{ asset('res/dettol/resource/ui/other/logo.png') }}">
+    <img class="qrCode" src="{{ asset('res/dettol/resource/ui/other/qr_code.png') }}">
+    <img class="center" src="{{ asset('res/dettol/resource/ui/other/space_center.png') }}">
     <div class="title">
         <p>
             <span class="username"></span>
@@ -58,9 +58,9 @@
         <div class="page2 hide">
             <button class="copy" data-clipboard-text="【Dettol滴露官方...】，復·制这段描述€3Uy4b1qHBr7€后咑閞淘♂寳♀"></button>
         </div>
-        <img class="next" src="{{ asset('res/dettol/images/next.png') }}">
+        <img class="next" src="{{ asset('res/dettol/resource/ui/other/next.png') }}">
     </div>
-    <img class="box" src="{{ asset('res/dettol/images/box.png') }}">
+    <img class="box" src="{{ asset('res/dettol/resource/ui/other/box.png') }}">
 </section>
 <section class="lastImgBox hide"></section>
 
@@ -137,7 +137,7 @@
             method: 'post',
             url: 'https://api.shanghaichujie.com/api/dettol/rank',
             data: {
-                openid: "xxx",
+                openid: "xxxg",
                 score: score
             }
         }).then(function (res) {
