@@ -178,7 +178,7 @@
 
     function playSound() {
         var sound = document.getElementById("bgmusic");
-        sound.volume = 0.1;
+        sound.volume = 1;
         sound.play();
     }
 
