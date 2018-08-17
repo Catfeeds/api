@@ -1,0 +1,149 @@
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.logo {
+  position: absolute;
+  left: 0.23438rem;
+  top: 0.46875rem;
+  width: 4.28125rem;
+  height: 1.1875rem;
+  background: url("../images/logo.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.required {
+  position: absolute;
+  left: 0.65625rem;
+  top: 2.1875rem;
+  color: #e9aa59;
+  font-size: 0.46875rem;
+}
+
+.required p {
+  width: 6.78125rem;
+  height: 0.59375rem;
+  line-height: 0.59375rem;
+  margin: 0.09375rem 0;
+  padding: 0 0.15625rem;
+  background: #464248;
+  color: #fff;
+  font-size: 0.3125rem;
+}
+
+.required p:last-child {
+  background: transparent;
+}
+
+.required .updatePic {
+  margin: 0;
+  padding: 0;
+  width: 7.09375rem;
+}
+
+.required .updatePic span {
+  display: inline-block;
+  padding: 0 0 0 0.15625rem;
+  width: 5.78125rem;
+  height: 0.59375rem;
+  line-height: 0.59375rem;
+  background: #464248;
+}
+
+.required .updatePic span strong {
+  font-weight: lighter;
+}
+
+.required .updatePic button {
+  float: right;
+  width: 1.03125rem;
+  height: 0.5625rem;
+  line-height: 0.5625rem;
+  text-align: center;
+  border: none;
+  background: linear-gradient(#fbfbfb, #767377);
+}
+
+.required input {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 0.3125rem;
+}
+
+#file {
+  position: absolute;
+  left: -15.625rem;
+  top: -15.625rem;
+}
+
+.selection {
+  position: absolute;
+  left: 0.46875rem;
+  top: 6.84375rem;
+  width: 8.98438rem;
+  height: 9.0625rem;
+  box-sizing: border-box;
+  padding: 0.3125rem 0.23438rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.3125rem;
+  color: #e9aa59;
+  font-size: 0.46875rem;
+}
+
+.selection p {
+  height: 0.59375rem;
+  line-height: 0.59375rem;
+  margin: 0.09375rem 0;
+  padding: 0 0.15625rem;
+  color: #fff;
+  font-size: 0.28125rem;
+}
+
+.selection p span {
+  margin-right: 0.78125rem;
+}
+
+.selection .radio {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  margin-top: -0.07812rem;
+  vertical-align: middle;
+  border: 1px solid #fff;
+}
+
+.selection .checkbox {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  vertical-align: middle;
+  border: 1px solid #fff;
+}
+
+.selection input[checked="checked"] {
+  background: url("../images/tick.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.selection .invitecode input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.selection .submit {
+  text-align: center;
+}
+
+.selection .submit button {
+  width: 2.8125rem;
+  height: 0.82812rem;
+  margin: 0.3125rem auto;
+  border: none;
+  background: url("../images/submit.png") no-repeat;
+  background-size: 100% 100%;
+}
