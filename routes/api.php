@@ -171,7 +171,7 @@ Route::get('armani/email','Armani\EmailController@mail');
 Route::post('video/upload', 'Armani\VideoController@upload');
 
 /**
- * 联邦快递
+ * 联邦快递(永久)
  */
 Route::post('fed/upload', 'Fed\FedController@api');
 /**
@@ -192,3 +192,8 @@ Route::get('absolut/print/confirm', 'Absolut\ApiController@printConfirm');
  * 滴露跑酷游戏
  */
 Route::post('dettol/rank', 'Dettol\DettolController@api');
+
+/**
+ * 阿里云oss
+ */
+Route::post('ali/oss/upload/image', 'Api\ImageController@aliOssUploadImage');
