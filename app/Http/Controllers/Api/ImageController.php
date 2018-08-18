@@ -13,8 +13,8 @@ class ImageController extends Controller
 
     public function aliOssUploadImage(Request $request)
     {
-        $path = Storage::disk('oss')->putFileAs('unity-img', $request->file('image'), uniqid() . '.png');
-        return 'https://h5-touch.oss-cn-shanghai.aliyuncs.com/'.$path;
+        $path = Storage::disk('unitytouch')->putFileAs('unity-img', $request->file('image'), uniqid() . '.png');
+        return 'https://unitytouch.oss-cn-shanghai.aliyuncs.com/'.$path;
     }
     /**
      * @param Request $request
