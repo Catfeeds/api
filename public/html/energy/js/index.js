@@ -1,4 +1,21 @@
 $(function(){
+  var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical',
+    on: {
+      init: function(){
+        swiperAnimateCache(this); //隐藏动画元素 
+        swiperAnimate(this); //初始化完成开始动画
+      }, 
+      slideChangeTransitionEnd: function(){ 
+        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+      }
+    }
+  }) 
+
+  // $('.content').addClass('ani')
+  // $('.content').attr('swiper-animate-effect', 'zoomIn')
+
+
   var photoid = ''
   var name = ''
   var mobile = ''
@@ -89,7 +106,8 @@ $(function(){
         data: data,
         success: function (result) {
           if (result.Success) {
-            location.href = 'index2.html'
+            $('.swiper-container').hide()
+            $('.page9').show()
           } else {
             alert('注册失败')
           }

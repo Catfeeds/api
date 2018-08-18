@@ -6,17 +6,208 @@ html, body {
   background-size: 100% 100%;
 }
 
-.logo {
-  position: absolute;
-  left: 0.23438rem;
-  top: 0.46875rem;
-  width: 4.28125rem;
-  height: 1.1875rem;
-  background: url("../images/logo.png") no-repeat;
-  background-size: 100% 100%;
+section {
+  position: relative;
+  width: 10rem;
+  height: 16.25rem;
 }
 
-.required {
+.hide {
+  display: none;
+}
+
+.swiper-container {
+  width: 10rem;
+  height: 16.25rem;
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  bottom: 0.78125rem;
+  width: 0.73438rem;
+  height: 0.625rem;
+  animation: jump 0.5s infinite alternate;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, -10px, 0);
+  }
+}
+
+.page1 img {
+  position: absolute;
+}
+
+.page1 .logo {
+  top: 1.90625rem;
+  left: 50%;
+  width: 7.73438rem;
+  margin-left: -3.875rem;
+  height: 2.71875rem;
+}
+
+.page1 .invitation {
+  top: 7.03125rem;
+  left: 50%;
+  width: 5.76562rem;
+  margin-left: -2.89062rem;
+  height: 1.73438rem;
+}
+
+.page1 .subTitle {
+  top: 9.76562rem;
+  left: 50%;
+  width: 7.73438rem;
+  margin-left: -3.875rem;
+  height: 0.48438rem;
+}
+
+.page2 img {
+  position: absolute;
+}
+
+.page2 .logo {
+  top: 0.625rem;
+  left: 0.23438rem;
+  width: 7.89062rem;
+  height: 1.46875rem;
+}
+
+.page2 .title {
+  top: 3.20312rem;
+  left: 50%;
+  width: 6.65625rem;
+  margin-left: -3.32812rem;
+  height: 1.40625rem;
+}
+
+.page2 .content {
+  top: 5.07812rem;
+  left: 50%;
+  width: 9.26562rem;
+  margin-left: -4.64062rem;
+  height: 8.73438rem;
+}
+
+.page3 img {
+  position: absolute;
+}
+
+.page3 .logo {
+  top: 0.625rem;
+  left: 0.23438rem;
+  width: 4.45312rem;
+  height: 1.20312rem;
+}
+
+.page3 .content {
+  top: 3.4375rem;
+  left: 50%;
+  width: 9.46875rem;
+  margin-left: -4.73438rem;
+  height: 9.10938rem;
+}
+
+.page4 img {
+  position: absolute;
+}
+
+.page4 .logo {
+  top: 0.625rem;
+  left: 0.23438rem;
+  width: 4.45312rem;
+  height: 1.20312rem;
+}
+
+.page4 .content {
+  top: 3.4375rem;
+  left: 50%;
+  margin-left: -4.75rem;
+  width: 9.48438rem;
+  height: 3.26562rem;
+}
+
+.page5 img {
+  position: absolute;
+}
+
+.page5 .logo {
+  top: 0.625rem;
+  left: 0.23438rem;
+  width: 3.3125rem;
+  height: 1.1875rem;
+}
+
+.page5 .content {
+  top: 3.28125rem;
+  left: 50%;
+  width: 8.8125rem;
+  margin-left: -4.40625rem;
+  height: 10.5rem;
+}
+
+.page6 img {
+  position: absolute;
+}
+
+.page6 .logo {
+  top: 0.625rem;
+  left: 0.23438rem;
+  width: 3.3125rem;
+  height: 1.1875rem;
+}
+
+.page6 .content {
+  top: 3.28125rem;
+  left: 50%;
+  width: 8.85938rem;
+  margin-left: -4.4375rem;
+  height: 9.8125rem;
+}
+
+.page7 img {
+  position: absolute;
+}
+
+.page7 .logo {
+  top: 0.625rem;
+  left: 0.23438rem;
+  width: 3.3125rem;
+  height: 1.1875rem;
+}
+
+.page7 .content {
+  top: 3.28125rem;
+  left: 50%;
+  width: 7.82812rem;
+  margin-left: -3.92188rem;
+  height: 6.48438rem;
+}
+
+.page8 img {
+  position: absolute;
+}
+
+.page8 .logo {
+  top: 0.625rem;
+  left: 0.23438rem;
+  width: 4.28125rem;
+  height: 1.1875rem;
+}
+
+.page8 #file {
+  position: absolute;
+  left: -15.625rem;
+  top: -15.625rem;
+}
+
+.page8 .required {
   position: absolute;
   left: 0.65625rem;
   top: 2.1875rem;
@@ -24,7 +215,7 @@ html, body {
   font-size: 0.46875rem;
 }
 
-.required p {
+.page8 .required p {
   width: 6.78125rem;
   height: 0.59375rem;
   line-height: 0.59375rem;
@@ -35,17 +226,17 @@ html, body {
   font-size: 0.3125rem;
 }
 
-.required p:last-child {
+.page8 .required p:last-child {
   background: transparent;
 }
 
-.required .updatePic {
+.page8 .required .updatePic {
   margin: 0;
   padding: 0;
   width: 7.09375rem;
 }
 
-.required .updatePic span {
+.page8 .required .updatePic span {
   display: inline-block;
   padding: 0 0 0 0.15625rem;
   width: 5.78125rem;
@@ -54,11 +245,11 @@ html, body {
   background: #464248;
 }
 
-.required .updatePic span strong {
+.page8 .required .updatePic span strong {
   font-weight: lighter;
 }
 
-.required .updatePic button {
+.page8 .required .updatePic button {
   float: right;
   width: 1.03125rem;
   height: 0.5625rem;
@@ -68,20 +259,14 @@ html, body {
   background: linear-gradient(#fbfbfb, #767377);
 }
 
-.required input {
+.page8 .required input {
   border: none;
   background: transparent;
   color: #fff;
   font-size: 0.3125rem;
 }
 
-#file {
-  position: absolute;
-  left: -15.625rem;
-  top: -15.625rem;
-}
-
-.selection {
+.page8 .selection {
   position: absolute;
   left: 0.46875rem;
   top: 6.84375rem;
@@ -95,7 +280,7 @@ html, body {
   font-size: 0.46875rem;
 }
 
-.selection p {
+.page8 .selection p {
   height: 0.59375rem;
   line-height: 0.59375rem;
   margin: 0.09375rem 0;
@@ -104,11 +289,11 @@ html, body {
   font-size: 0.28125rem;
 }
 
-.selection p span {
+.page8 .selection p span {
   margin-right: 0.78125rem;
 }
 
-.selection .radio {
+.page8 .selection .radio {
   width: 0.3125rem;
   height: 0.3125rem;
   margin-top: -0.07812rem;
@@ -116,34 +301,53 @@ html, body {
   border: 1px solid #fff;
 }
 
-.selection .checkbox {
+.page8 .selection .checkbox {
   width: 0.3125rem;
   height: 0.3125rem;
   vertical-align: middle;
   border: 1px solid #fff;
 }
 
-.selection input[checked="checked"] {
-  background: url("../images/tick.png") no-repeat;
+.page8 .selection input[checked="checked"] {
+  background: url("../images/page8_tick.png") no-repeat;
   background-size: 100% 100%;
 }
 
-.selection .invitecode input {
+.page8 .selection .invitecode input {
   background: transparent;
   border: none;
   color: #fff;
   border-bottom: 1px solid #fff;
 }
 
-.selection .submit {
+.page8 .selection .submit {
   text-align: center;
 }
 
-.selection .submit button {
+.page8 .selection .submit button {
   width: 2.8125rem;
   height: 0.82812rem;
   margin: 0.3125rem auto;
   border: none;
-  background: url("../images/submit.png") no-repeat;
+  background: url("../images/page8_submit.png") no-repeat;
   background-size: 100% 100%;
+}
+
+.page9 img {
+  position: absolute;
+}
+
+.page9 .logo {
+  top: 0.625rem;
+  left: 0.23438rem;
+  width: 5.35938rem;
+  height: 1.20312rem;
+}
+
+.page9 .content {
+  top: 2.8125rem;
+  left: 50%;
+  width: 9.625rem;
+  margin-left: -4.8125rem;
+  height: 9.90625rem;
 }
