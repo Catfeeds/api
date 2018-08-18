@@ -207,12 +207,6 @@ section {
     height: PX(76);
   }
 
-  #file {
-    position: absolute;
-    left: PX(-1000);
-    top: PX(-1000);
-  }
-
   .required {
     position: absolute;
     left: PX(42);
@@ -236,7 +230,7 @@ section {
       margin: 0;
       padding: 0;
       width: PX(454);
-      span {
+      .text {
         display: inline-block;
         padding: 0 0 0 PX(10);
         width: PX(370);
@@ -247,15 +241,48 @@ section {
           font-weight: lighter;
         }
       }
-      button {
+      .updateBox {
+        display: inline;
+        position: relative;
         float: right;
         width: PX(66);
         height: PX(36);
-        line-height: PX(36);
         text-align: center;
-        border: none;
-        background: linear-gradient( #fbfbfb , #767377);
+        overflow: hidden;
+        button {
+          position: absolute;
+          left: 0;
+          top: 0;
+          border: none;
+          width: PX(66);
+          height: PX(36);
+          line-height: PX(36);
+          font-size: PX(16);
+          background: linear-gradient( #fbfbfb , #767377);
+          pointer-events: none;
+        }
+        #file {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
       }
+      // button {
+      //   position: relative;
+      //   float: right;
+      //   width: PX(66);
+      //   height: PX(36);
+      //   line-height: PX(36);
+      //   text-align: center;
+      //   border: none;
+      //   background: linear-gradient( #fbfbfb , #767377);
+      //   overflow: hidden;
+      //   #file {
+      //     position: absolute;
+      //     left: 0;
+      //     top: 0;
+      //   }
+      // }
     }
     input {
       border: none;

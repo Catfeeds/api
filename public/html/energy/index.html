@@ -54,7 +54,6 @@
         <img src="images/arrow.png" class="arrow">
       </section>
       <section class="page8 swiper-slide">
-        <input type="file" id="file" accept="image/*">
         <img src="images/page8_logo.png" class="logo">
         <div class="required ani" swiper-animate-effect="bounceIn">
           <div class="title">*必填项:</div>
@@ -71,10 +70,13 @@
             <input type="type" class="email">
           </p>
           <p class="updatePic">
-            <span>照片：
+            <span class="text">照片：
               <strong class="photoid">(证件照, 2M以内, 600px以上)</strong>
             </span>
-            <button class="updatePic">上传</button>
+            <span class="updateBox">
+              <input type="file" id="file" accept="image/*">
+              <button>上传</button>
+            </span>
           </p>
         </div>
         <div class="selection ani" swiper-animate-effect="bounceIn">

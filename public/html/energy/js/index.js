@@ -12,10 +12,6 @@ $(function(){
     }
   }) 
 
-  // $('.content').addClass('ani')
-  // $('.content').attr('swiper-animate-effect', 'zoomIn')
-
-
   var photoid = ''
   var name = ''
   var mobile = ''
@@ -42,13 +38,7 @@ $(function(){
     $(this).find('.checkbox').attr('checked', true)
   })
 
-  // 上传照片
-  $('.updatePic').on('touchend', function(){
-    $('#file').click()
-  })
-
-
-  $('#file').on('input', function(){
+  $('#file').on('input change', function(){
     var file = $(this)[0].files[0]
     if (typeof (file) == "undefined" || file.size <= 0) {
       console.log('选择照片')

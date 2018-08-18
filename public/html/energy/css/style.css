@@ -201,12 +201,6 @@ section {
   height: 1.1875rem;
 }
 
-.page8 #file {
-  position: absolute;
-  left: -15.625rem;
-  top: -15.625rem;
-}
-
 .page8 .required {
   position: absolute;
   left: 0.65625rem;
@@ -236,7 +230,7 @@ section {
   width: 7.09375rem;
 }
 
-.page8 .required .updatePic span {
+.page8 .required .updatePic .text {
   display: inline-block;
   padding: 0 0 0 0.15625rem;
   width: 5.78125rem;
@@ -245,18 +239,37 @@ section {
   background: #464248;
 }
 
-.page8 .required .updatePic span strong {
+.page8 .required .updatePic .text strong {
   font-weight: lighter;
 }
 
-.page8 .required .updatePic button {
+.page8 .required .updatePic .updateBox {
+  display: inline;
+  position: relative;
   float: right;
   width: 1.03125rem;
   height: 0.5625rem;
-  line-height: 0.5625rem;
   text-align: center;
+  overflow: hidden;
+}
+
+.page8 .required .updatePic .updateBox button {
+  position: absolute;
+  left: 0;
+  top: 0;
   border: none;
+  width: 1.03125rem;
+  height: 0.5625rem;
+  line-height: 0.5625rem;
+  font-size: 0.25rem;
   background: linear-gradient(#fbfbfb, #767377);
+  pointer-events: none;
+}
+
+.page8 .required .updatePic .updateBox #file {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .page8 .required input {
