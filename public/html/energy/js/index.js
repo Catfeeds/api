@@ -47,7 +47,8 @@ $(function(){
     $('#file').click()
   })
 
-  $('#file').on('change', function(){
+
+  $('#file').on('input', function(){
     var file = $(this)[0].files[0]
     if (typeof (file) == "undefined" || file.size <= 0) {
       console.log('选择照片')
@@ -67,8 +68,6 @@ $(function(){
       },
     })
   })
-
-  
 
   $('.submit').on('touchend', function(){
     name = $('.username').val()

@@ -304,6 +304,7 @@ section {
       @include bg('../images/page8_tick.png')
     }
     .invitecode {
+      margin-top: PX(20);
       input {
         background: transparent;
         border: none;

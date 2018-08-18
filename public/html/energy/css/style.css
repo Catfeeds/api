@@ -313,6 +313,10 @@ section {
   background-size: 100% 100%;
 }
 
+.page8 .selection .invitecode {
+  margin-top: 0.3125rem;
+}
+
 .page8 .selection .invitecode input {
   background: transparent;
   border: none;
