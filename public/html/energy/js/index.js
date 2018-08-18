@@ -53,7 +53,6 @@ $(function(){
       processData: false,
       contentType: false, 
       success: function (result) {
-        console.log(result)
         photoid = result
         $('.photoid').text('上传成功')
       },
