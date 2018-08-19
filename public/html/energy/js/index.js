@@ -9,31 +9,12 @@ function firstTouch() {
 }
 
 $(function () {
-  var mySwiper = new Swiper('.swiper-container', {
-    direction: 'vertical',
-    // initialSlide: 1,
-    loop: true,
-    on: {
-      init: function () {
-        swiperAnimateCache(this); //隐藏动画元素 
-        swiperAnimate(this); //初始化完成开始动画
-      },
-      slideChangeTransitionEnd: function () {
-        swiperAnimateCache(this);
-        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
-      }
-    }
-  })
-
   var page3Container = new Swiper('.page3-container', {
     direction: 'horizontal',
     on: {
       init: function () {
         swiperAnimateCache(this); //隐藏动画元素 
         swiperAnimate(this); //初始化完成开始动画
-      },
-      slideChangeTransitionStart () {
-        console.log(213)
       },
       slideChangeTransitionStart: function () {
         swiperAnimateCache(this);
@@ -51,7 +32,32 @@ $(function () {
         swiperAnimate(this); //初始化完成开始动画
       },
       slideChangeTransitionEnd: function () {
+        swiperAnimateCache(this);
         swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+      }
+    }
+  })
+
+  var mySwiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    // initialSlide: 1,
+    loop: true,
+    on: {
+      init: function () {
+        swiperAnimateCache(this); //隐藏动画元素 
+        swiperAnimate(this); //初始化完成开始动画
+      },
+      slideChangeTransitionEnd: function () {
+        if (this.activeIndex !== 3 && this.activeIndex !== 4) {
+          swiperAnimateCache(this);
+          swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+        } 
+        if (this.activeIndex === 3) {
+          swiperAnimate(page3Container)
+        }
+        if (this.activeIndex === 4) {
+          swiperAnimate(page5Container)
+        }
       }
     }
   })

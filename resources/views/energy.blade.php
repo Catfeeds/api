@@ -45,7 +45,8 @@
                                 <div class="line-dottend ani" swiper-animate-effect="rubberBand" swiper-animate-delay="1.5s"></div>
                                 <img class="pm ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="1.8s" src="images/sep6_content_pm.png">
                             </div>
-                            <img src="images/arrowLeft.png" class="arrowLeft">
+                            <img src="images/arrowRight.png" class="arrowRight">
+                            
                         </div>
                         <div class="swiper-slide">
                             <div class="sep7">
@@ -54,7 +55,7 @@
                                 <div class="line-dottend ani" swiper-animate-effect="fadeInDown" swiper-animate-delay="0.6s"></div>
                                 <img class="pm ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.9s" src="images/sep7_content_pm.png">
                             </div>
-                            <img src="images/arrowRight.png" class="arrowRight">
+                            <img src="images/arrowLeft.png" class="arrowLeft">
                         </div>
                     </div>
                 </div>
