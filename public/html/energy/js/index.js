@@ -105,7 +105,7 @@ $(function () {
         data: data,
         success: function (result) {
           if (result.Success) {
-            mySwiper.slideTo(8)
+            mySwiper.slideTo(9)
           } else {
             alert('注册失败')
           }
