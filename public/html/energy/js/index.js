@@ -23,6 +23,20 @@ $(function () {
     }
   })
 
+  var page5Container = new Swiper('.page5-container', {
+    direction: 'horizontal',
+    loop: true,
+    on: {
+      init: function () {
+        swiperAnimateCache(this); //隐藏动画元素 
+        swiperAnimate(this); //初始化完成开始动画
+      },
+      slideChangeTransitionEnd: function () {
+        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+      }
+    }
+  })
+
   var photoid = ''
   var name = ''
   var mobile = ''

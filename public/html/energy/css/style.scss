@@ -38,6 +38,24 @@ section {
   height: PX(40);
   animation: jump 0.5s infinite alternate;
 }
+.arrowLeft {
+  position: absolute;
+  left: PX(20);
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  width: PX(40);
+  height: PX(47);
+  animation: move 0.5s infinite alternate;
+}
+.arrowRight {
+  position: absolute;
+  right: PX(20);
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  width: PX(40);
+  height: PX(47);
+  animation: move 0.5s infinite alternate;
+}
 
 @keyframes jump {
   0% {
@@ -45,6 +63,14 @@ section {
   }
   100% {
     transform: translate3d(-50%, -10px, 0)
+  }
+}
+@keyframes move {
+  0% {
+    transform: translate3d(0, -50%, 0)
+  }
+  100% {
+    transform: translate3d(-10px, -50%, 0)
   }
 }
 
@@ -149,50 +175,33 @@ section {
     width: PX(212);
     height: PX(76);
   }
+  .page5-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .avatar {
+      left: 50%;
+      top: 40%;
+      width: PX(200);
+      height: PX(200);
+      margin-left: PX(-100);
+      margin-top: PX(-100);
+    }
+    .desc {
+      position: absolute;
+      top: 60%;
+      width: 100%;
+      text-align: center;
+      font-size: PX(30);
+      color: #fff;
+    }
+  }
   .content {
     top: PX(210);
     left: 50%;
     width: PX(505);
     margin-left: PX(-253);
     height: PX(626);
-  }
-}
-
-.page6 {
-  img {
-    position: absolute;
-  }
-  .logo {
-    top: PX(40);
-    left: PX(15);
-    width: PX(212);
-    height: PX(76);
-  }
-  .content {
-    top: PX(210);
-    left: 50%;
-    width: PX(548);
-    margin-left: PX(-274);
-    height: PX(668);
-  }
-}
-
-.page7 {
-  img {
-    position: absolute;
-  }
-  .logo {
-    top: PX(40);
-    left: PX(15);
-    width: PX(212);
-    height: PX(76);
-  }
-  .content {
-    top: PX(210);
-    left: 50%;
-    width: PX(545);
-    margin-left: PX(-273);
-    height: PX(410);
   }
 }
 
@@ -362,11 +371,20 @@ section {
     width: PX(343);
     height: PX(77);
   }
-  .content {
+  #map {
+    position: absolute;
     top: PX(180);
+    left: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    width: PX(502);
+    height: PX(244);
+    margin-left: PX(-251);
+  }
+  .content {
+    top: PX(460);
     left: 50%;
     width: PX(616);
     margin-left: PX(-308);
-    height: PX(634);
+    height: PX(356);
   }
 }

@@ -44,18 +44,118 @@
         </section>
         <section class="page5 swiper-slide">
             <img src="images/page5_logo.png" class="logo">
-            <img src="images/page5_content.png" class="content ani" swiper-animate-effect="zoomIn">
+                <div class="page5-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar1.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                戴维·卡梅伦（David  Cameron)<br/>
+                                英国前首相
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar2.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                李俊峰<br/>
+                                中国能源研究会可再生能源<br/>
+                                专业委员会主任<br/>
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar3.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                张雷<br/>
+                                远景集团CEO
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar4.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                Christoph Ostermann<br/>
+                                sonnen 联合创始人兼CEO
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar5.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                丁民丞<br/>
+                                远景全球执行董事
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar6.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                高纪凡<br/>
+                                天合光能股份有限公司<br/>
+                                董事长兼首席执行官
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar7.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                瞿晓铧<br/>
+                                阿特斯阳光电力董事长首席执行官
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar8.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                司徒嘉德<br/>
+                                丹佛斯中国区总裁
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar9.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                沈晖<br/>
+                                现任威马汽车创始人董事长兼CEO
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar10.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                Thierry Lepercq<br/>
+                                ENGIE<br/>
+                                (苏伊士环能集团）执行副总裁
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar11.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                王永东<br/>
+                                现任微软全球资深副总裁<br/>
+                                微软(亚洲)互联网工程院院长<br/>
+                                兼任微软亚太研发集团首席技术官<br/>
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar12.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                尹正<br/>
+                                施耐德电气全球执行副总裁<br/>
+                                中国区总裁
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar13.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                张新胜<br/>
+                                壳牌中国集团主席
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="avatar ani" src="images/people/avatar14.png" swiper-animate-effect="flip">
+                            <span class="desc ani" swiper-animate-effect="tada">
+                                朱共山<br/>
+                                协鑫集团控股有限公司创始人<br/>
+                                首席执行官
+                            </span>
+                        </div>
+                    </div>
+                </div>
             <img src="images/arrow.png" class="arrow">
-        </section>
-        <section class="page6 swiper-slide">
-            <img src="images/page5_logo.png" class="logo">
-            <img src="images/page6_content.png" class="content ani" swiper-animate-effect="zoomIn">
-            <img src="images/arrow.png" class="arrow">
-        </section>
-        <section class="page7 swiper-slide">
-            <img src="images/page5_logo.png" class="logo">
-            <img src="images/page7_content.png" class="content ani" swiper-animate-effect="zoomIn">
-            <img src="images/arrow.png" class="arrow">
+            <img src="images/arrowLeft.png" class="arrowLeft">
+            <img src="images/arrowRight.png" class="arrowRight">
         </section>
         <section class="page8 swiper-slide">
             <img src="images/page8_logo.png" class="logo">
@@ -115,6 +215,7 @@
         </section>
         <section class="page9 swiper-slide">
             <img src="images/page9_logo.png" class="logo">
+            <div id="map"></div>
             <img src="images/page9_content.png" class="content animated bounce">
         </section>
     </div>
@@ -123,6 +224,20 @@
 <script src="js/swiper.min.js"></script>
 <script src="js/swiper.animate1.0.3.min.js"></script>
 <script src="js/index.js"></script>
+<script src="http://webapi.amap.com/maps?v=1.4.4&key=9919b3652eba25eb2e2ef0839e3b8692"></script>
+<script>
+  var map = new AMap.Map('map',{
+    resizeEnable: true,
+    zoom: 15,
+    center: [120.2018670000, 33.3679510000]
+  });
+  var marker = new AMap.Marker({
+    position: [120.2018670000, 33.3679510000],
+    title: '盐城迎宾馆',
+    map: map
+  });
+</script>
+
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
 <script type="application/javascript">
     wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
