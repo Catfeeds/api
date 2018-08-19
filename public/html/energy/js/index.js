@@ -11,6 +11,7 @@ function firstTouch() {
 $(function () {
   var mySwiper = new Swiper('.swiper-container', {
     direction: 'vertical',
+    loop: true,
     on: {
       init: function () {
         swiperAnimateCache(this); //隐藏动画元素 
