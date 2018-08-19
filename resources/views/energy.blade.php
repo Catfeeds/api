@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<audio src="media/music.mp3" id="bgm" autoplay loop></audio>
+<audio src="media/music1.mp3" id="bgm" autoplay loop></audio>
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <section class="page1 swiper-slide">
