@@ -1,16 +1,26 @@
-$(function(){
-  var mySwiper = new Swiper ('.swiper-container', {
+var BGM = $('#bgm')[0];
+document.addEventListener("WeixinJSBridgeReady", function () {
+  BGM.play();
+}, false);
+document.addEventListener('touchstart', firstTouch);
+function firstTouch() {
+  BGM.play();
+  document.removeEventListener('touchstart', firstTouch);
+}
+
+$(function () {
+  var mySwiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     on: {
-      init: function(){
+      init: function () {
         swiperAnimateCache(this); //隐藏动画元素 
         swiperAnimate(this); //初始化完成开始动画
-      }, 
-      slideChangeTransitionEnd: function(){ 
+      },
+      slideChangeTransitionEnd: function () {
         swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
       }
     }
-  }) 
+  })
 
   var photoid = ''
   var name = ''
@@ -23,35 +33,35 @@ $(function(){
 
 
   // 单选
-  $('.radioBox').on('touchend', function(){
+  $('.radioBox').on('touchend', function () {
     $('.radio').attr('checked', false)
     $(this).find('.radio').attr('checked', true)
   })
 
   // 多选
-  $('.checkbox1').on('touchend', function(){
+  $('.checkbox1').on('touchend', function () {
     $('.checkbox1').find('.checkbox').attr('checked', false)
     $(this).find('.checkbox').attr('checked', true)
   })
-  $('.checkbox2').on('touchend', function(){
+  $('.checkbox2').on('touchend', function () {
     $('.checkbox2').find('.checkbox').attr('checked', false)
     $(this).find('.checkbox').attr('checked', true)
   })
 
-  $('#file').on('input change', function(){
+  $('#file').on('input change', function () {
     var file = $(this)[0].files[0]
     if (typeof (file) == "undefined" || file.size <= 0) {
       console.log('选择照片')
       return;
     }
     var formFile = new FormData();
-    formFile.append("file", file);  
+    formFile.append("file", file);
     $.ajax({
       url: "http://yes-summit.com/API/upload.ashx",
       data: formFile,
       type: "POST",
       processData: false,
-      contentType: false, 
+      contentType: false,
       success: function (result) {
         photoid = result
         $('.photoid').text('上传成功')
@@ -59,7 +69,7 @@ $(function(){
     })
   })
 
-  $('.submit').on('touchend', function(){
+  $('.submit').on('touchend', function () {
     name = $('.username').val()
     mobile = $('.mobile').val()
     companyname = $('.companyname').val()
