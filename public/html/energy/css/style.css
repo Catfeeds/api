@@ -10,6 +10,8 @@ section {
   position: relative;
   width: 10rem;
   height: 16.25rem;
+  background: url("../images/bg.png") no-repeat;
+  background-size: 100% 100%;
 }
 
 .hide {
@@ -124,42 +126,122 @@ section {
   height: 8.73438rem;
 }
 
-.page3 img {
-  position: absolute;
-}
-
 .page3 .logo {
-  top: 0.625rem;
-  left: 0.23438rem;
-  width: 4.45312rem;
-  height: 1.20312rem;
-}
-
-.page3 .content {
-  top: 3.4375rem;
-  left: 50%;
-  width: 9.46875rem;
-  margin-left: -4.73438rem;
-  height: 9.10938rem;
-}
-
-.page4 img {
   position: absolute;
-}
-
-.page4 .logo {
   top: 0.625rem;
   left: 0.23438rem;
   width: 4.45312rem;
   height: 1.20312rem;
 }
 
-.page4 .content {
-  top: 3.4375rem;
+.page3 .rect {
+  display: inline-block;
+  margin-right: 0.15625rem;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  background: #de39bf;
+}
+
+.page3 .page3-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.page3 .page3-container .sep5 {
+  position: absolute;
+  width: 100%;
+  top: 2.34375rem;
+  color: #de39bf;
+  text-align: center;
+}
+
+.page3 .page3-container .sep5 .time {
+  font-size: 0.46875rem;
+}
+
+.page3 .page3-container .sep5 .content {
+  margin-top: 0.3125rem;
+  width: 2.34375rem;
+  height: 0.26562rem;
+}
+
+.page3 .page3-container .line-solid {
+  position: absolute;
+  top: 3.82812rem;
   left: 50%;
-  margin-left: -4.75rem;
-  width: 9.48438rem;
-  height: 3.26562rem;
+  margin-left: -3.90625rem;
+  width: 7.8125rem;
+  height: 1px;
+  background: #de39bf;
+}
+
+.page3 .page3-container .sep6 {
+  position: absolute;
+  width: 100%;
+  top: 4.0625rem;
+  color: #de39bf;
+  text-align: center;
+}
+
+.page3 .page3-container .sep6 .time {
+  font-size: 0.46875rem;
+}
+
+.page3 .page3-container .sep6 .am {
+  margin-top: 0.3125rem;
+  width: 6.59375rem;
+  height: 4.64062rem;
+}
+
+.page3 .page3-container .sep6 .line-dottend {
+  position: absolute;
+  top: 5.9375rem;
+  left: 50%;
+  margin-left: -3.90625rem;
+  width: 7.8125rem;
+  height: 1px;
+  border-bottom: 1px dashed #fff;
+}
+
+.page3 .page3-container .sep6 .pm {
+  margin-top: 1.09375rem;
+  width: 6.59375rem;
+  height: 2.46875rem;
+}
+
+.page3 .page3-container .sep7 {
+  position: absolute;
+  width: 100%;
+  top: 2.34375rem;
+  color: #de39bf;
+  text-align: center;
+}
+
+.page3 .page3-container .sep7 .time {
+  font-size: 0.46875rem;
+}
+
+.page3 .page3-container .sep7 .am {
+  margin-top: 0.78125rem;
+  width: 6.98438rem;
+  height: 2.04688rem;
+}
+
+.page3 .page3-container .sep7 .line-dottend {
+  position: absolute;
+  top: 4.21875rem;
+  left: 50%;
+  margin-left: -3.90625rem;
+  width: 7.8125rem;
+  height: 1px;
+  border-bottom: 1px dashed #fff;
+}
+
+.page3 .page3-container .sep7 .pm {
+  margin-top: 1.5625rem;
+  width: 6.98438rem;
+  height: 1.23438rem;
 }
 
 .page5 img {
@@ -387,7 +469,7 @@ section {
 }
 
 .page9 .content {
-  top: 7.1875rem;
+  top: 7.5rem;
   left: 50%;
   width: 9.625rem;
   margin-left: -4.8125rem;

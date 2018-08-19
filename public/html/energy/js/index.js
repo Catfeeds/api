@@ -11,6 +11,7 @@ function firstTouch() {
 $(function () {
   var mySwiper = new Swiper('.swiper-container', {
     direction: 'vertical',
+    // initialSlide: 1,
     loop: true,
     on: {
       init: function () {
@@ -18,6 +19,24 @@ $(function () {
         swiperAnimate(this); //初始化完成开始动画
       },
       slideChangeTransitionEnd: function () {
+        swiperAnimateCache(this);
+        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+      }
+    }
+  })
+
+  var page3Container = new Swiper('.page3-container', {
+    direction: 'horizontal',
+    on: {
+      init: function () {
+        swiperAnimateCache(this); //隐藏动画元素 
+        swiperAnimate(this); //初始化完成开始动画
+      },
+      slideChangeTransitionStart () {
+        console.log(213)
+      },
+      slideChangeTransitionStart: function () {
+        swiperAnimateCache(this);
         swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
       }
     }
@@ -36,6 +55,18 @@ $(function () {
       }
     }
   })
+
+  var date = new Date().getDate()
+  
+  if (date === 5) {
+    $('.sep5 .time').css('transform', 'scale(1.5)')
+  } else if (date === 6) {
+    $('.time').css('transform', '')
+    $('.sep6 .time').css('transform', 'scale(1.5)')
+  } else if (date === 7) {
+    $('.time').css('transform', '')
+    $('.sep7 .time').css('transform', 'scale(1.5)')
+  }
 
   var photoid = ''
   var name = ''

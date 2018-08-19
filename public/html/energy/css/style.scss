@@ -18,6 +18,7 @@ section {
   position: relative;
   width: PX(640);
   height: PX(1040);
+  @include bg('../images/bg.png');
 }
 
 .hide {
@@ -128,40 +129,113 @@ section {
 }
 
 .page3 {
-  img {
-    position: absolute;
-  }
   .logo {
+    position: absolute;
     top: PX(40);
     left: PX(15);
     width: PX(285);
     height: PX(77);
   }
-  .content {
-    top: PX(220);
-    left: 50%;
-    width: PX(606);
-    margin-left: PX(-303);
-    height: PX(583);
+  // .content {
+  //   top: PX(220);
+  //   left: 50%;
+  //   width: PX(606);
+  //   margin-left: PX(-303);
+  //   height: PX(583);
+  // }
+  .rect {
+    display: inline-block;
+    margin-right: PX(10);
+    width: PX(20);
+    height: PX(20);
+    background: #de39bf;
   }
-}
-
-.page4 {
-  img {
-    position: absolute;
-  }
-  .logo {
-    top: PX(40);
-    left: PX(15);
-    width: PX(285);
-    height: PX(77);
-  }
-  .content {
-    top: PX(220);
-    left: 50%;
-    margin-left: PX(-304);
-    width: PX(607);
-    height: PX(209);
+  .page3-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .sep5 {
+      position: absolute;
+      width: 100%;
+      top: PX(150);
+      color: #de39bf;
+      text-align: center;
+      .time {
+        font-size: PX(30);
+      }
+      .content {
+        margin-top: PX(20);
+        width: PX(150);
+        height: PX(17);
+      }
+    }
+    .line-solid {
+      position: absolute;
+      top: PX(245);
+      left: 50%;
+      margin-left: PX(-250);
+      width: PX(500);
+      height: 1px;
+      background: #de39bf;
+    }
+    .sep6 {
+      position: absolute;
+      width: 100%;
+      top: PX(260);
+      color: #de39bf;
+      text-align: center;
+      .time {
+        font-size: PX(30);
+      }
+      .am {
+        margin-top: PX(20);
+        width: PX(422);
+        height: PX(297);
+      }
+      .line-dottend {
+        position: absolute;
+        top: PX(380);
+        left: 50%;
+        margin-left: PX(-250);
+        width: PX(500);
+        height: 1px;
+        border-bottom: 1px dashed #fff;
+      }
+      .pm {
+        margin-top: PX(70);
+        width: PX(422);
+        height: PX(158);
+      }
+    }
+    .sep7 {
+      position: absolute;
+      width: 100%;
+      top: PX(150);
+      color: #de39bf;
+      text-align: center;
+      .time {
+        font-size: PX(30);
+      }
+      .am {
+        margin-top: PX(50);
+        width: PX(447);
+        height: PX(131);
+      }
+      .line-dottend {
+        position: absolute;
+        top: PX(270);
+        left: 50%;
+        margin-left: PX(-250);
+        width: PX(500);
+        height: 1px;
+        border-bottom: 1px dashed #fff;
+      }
+      .pm {
+        margin-top: PX(100);
+        width: PX(447);
+        height: PX(79);
+      }
+    }
   }
 }
 
@@ -381,7 +455,7 @@ section {
     margin-left: PX(-251);
   }
   .content {
-    top: PX(460);
+    top: PX(480);
     left: 50%;
     width: PX(616);
     margin-left: PX(-308);
