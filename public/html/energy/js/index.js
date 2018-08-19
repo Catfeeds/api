@@ -105,8 +105,7 @@ $(function () {
         data: data,
         success: function (result) {
           if (result.Success) {
-            $('.swiper-container').hide()
-            $('.page9').show()
+            mySwiper.slideTo(8)
           } else {
             alert('注册失败')
           }
