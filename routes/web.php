@@ -256,3 +256,11 @@ Route::get('tencent/share', function(\Illuminate\Http\Request $request) {
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
     Route::get('res/dettol/index', 'Dettol\DettolController@index');
 });
+
+/**
+ * 创新能源大会入口 20180907
+ */
+Route::get('html/energy/index', function () {
+    $js = EasyWeChat::js();
+    return view('energy', compact('js'));
+});
