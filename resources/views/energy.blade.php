@@ -118,9 +118,11 @@
                             </span>
                         </div>
                         <div class="swiper-slide">
-                            <img class="avatar ani" src="images/people/avatar9.png" swiper-animate-effect="fadeInDown">
+                            <img class="avatar ani" src="images/people/avatar15.png" swiper-animate-effect="fadeInDown">
                             <span class="desc ani" swiper-animate-effect="tada">
-                                沈晖<br/> 现任威马汽车创始人董事长兼CEO
+                                王玉锁<br/>
+                                新奥集团创始人<br/>
+                                新奥集团股份有限公司董事局主席
                             </span>
                         </div>
                         <div class="swiper-slide">
