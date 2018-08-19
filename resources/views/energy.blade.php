@@ -216,7 +216,7 @@
         <section class="page9 swiper-slide">
             <img src="images/page9_logo.png" class="logo">
             <div id="map"></div>
-            <img src="images/page9_content.png" class="content animated bounce">
+            <img src="images/page9_content.png" class="content ani" swiper-animate-effect="pulse">
         </section>
     </div>
 </div>
