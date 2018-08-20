@@ -12,6 +12,13 @@
     <meta name="x5-fullscreen" content="true"/>
     <meta name="360-fullscreen" content="true"/>
     <script>
+        //客户监测代码
+        (function(a, e, f, g, b, c, d) {a.ClickiTrackerName = b;
+            a[b] = a[b] || function() {(a[b].queue = a[b].queue || []).push(arguments)}; a[b].start = +new Date; c = e.createElement(f); d = e.getElementsByTagName(f)[0]; c.async = 1; c.src = g; d.parentNode.insertBefore(c, d)
+        })(window, document, 'script', '//stm-collect.cn.miaozhen.com/clicki.min.js', 'dc'); dc('create', 'dc-xxx', 'auto');
+        dc('send', 'pageview');
+
+        //百度统计代码
         var _hmt = _hmt || [];
         (function() {
             var hm = document.createElement("script");

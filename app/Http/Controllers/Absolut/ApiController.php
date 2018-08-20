@@ -37,11 +37,9 @@ class ApiController extends Controller
         }
         $base = Image::make(public_path('res/absolut/base_bg.png'));
         $img = Image::make($img)->resize(1767, 2473);
-
-        $base->insert($img, 'top-left', 154, 114)->save(public_path('upload/absolut/' . $uniqid . '.png'));
-
+        $base->insert($img, 'top-left', 154, 114);
+        $base->encode('png')->save(public_path('upload/absolut') . '/' . $uniqid . '.png', 60);
         $path = Storage::disk('oss')->putFileAs('absolut', new File(public_path('upload/absolut/' . $uniqid . '.png')), uniqid() . '.png');
-
 
         return config('filesystems.disks.oss.oss_url') . $path;
     }
