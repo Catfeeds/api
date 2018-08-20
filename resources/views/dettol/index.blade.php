@@ -102,6 +102,7 @@
             imgUrl: "https://api.shanghaichujie.com/res/dettol/resource/ui/share.png", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
+                stm_clicki('send', 'event', '分享朋友圈', '点击', '按钮');
             }
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
@@ -113,11 +114,13 @@
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
                 // 用户确认分享后执行的回调函数
+                stm_clicki('send', 'event', '分享好友', '点击', '按钮');
             }
         });
     });
     var clipboard = new ClipboardJS('.copy')
     clipboard.on('success', function (e) {
+        stm_clicki('send', 'event', '复制淘口令', '点击', '按钮');
         alert('复制成功')
         e.clearSelection();
     })
@@ -143,9 +146,12 @@
     var detailClick = function (score, dilu, xiju, distance, beatNum) {
         document.querySelector('.popup').style.display = "block"
         document.querySelector('.pannel').setAttribute('class', 'pannel ani')
-    }
+        stm_clicki('send', 'event', '打开探索宝箱', '点击', '按钮');
 
+    }
+    //
     var shootClick = function (score, dilu, xiju, distance, beatNum) {
+        stm_clicki('send', 'event', '我的标签', '点击', '按钮');
         var username = prompt('请输入您的名字');
         document.querySelector('.username').innerHTML = username
 
@@ -176,8 +182,9 @@
             }
         })
     }
-
+    // 再玩一次
     var againClick = function (score, dilu, xiju, distance, beatNum) {
+        stm_clicki('send', 'event', '再玩一次', '点击', '按钮');
         window.location.replace(this.updateUrl(window.location.href))
     }
 
