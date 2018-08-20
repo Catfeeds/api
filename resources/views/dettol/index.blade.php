@@ -13,8 +13,6 @@
     <meta name="360-fullscreen" content="true"/>
     <script>
         //客户监测代码
-        <
-        script >
         (function (a, e, f, g, b, c, d) {
             a.ClickiTrackerName = b;
             a[b] = a[b] || function () {
@@ -29,7 +27,6 @@
         })(window, document, 'script', ('https:' == document.location.protocol ? 'https://stm-collect' : 'http://stm-cdn') + '.cn.miaozhen.com/clicki.min.js', 'stm_clicki');
         stm_clicki('create', 'dc-2319', 'auto');
         stm_clicki('send', 'pageview');
-    </script>
 
     //百度统计代码
     var _hmt = _hmt || [];
