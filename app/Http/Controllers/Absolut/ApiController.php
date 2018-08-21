@@ -24,6 +24,7 @@ class ApiController extends Controller
         $platform = $request->platform; //区分平台
         $uniqid = uniqid();
 
+        $id = 0;
         if ($platform == 'pad') {
             //上传源文件
             Image::make($img)->save(public_path('upload/absolut/' . $uniqid . '.png'));
@@ -33,7 +34,7 @@ class ApiController extends Controller
             $item->locationId = $lid;
             $item->imgUrl = config('filesystems.disks.oss.oss_url') . $path;
             $item->save();
-
+            $id = $item->id;
         }
         $base = Image::make(public_path('res/absolut/base_bg.png'));
         $img = Image::make($img)->resize(1767, 2473);
@@ -41,7 +42,10 @@ class ApiController extends Controller
         $base->encode('png')->save(public_path('upload/absolut') . '/' . $uniqid . '.png', 60);
         $path = Storage::disk('oss')->putFileAs('absolut', new File(public_path('upload/absolut/' . $uniqid . '.png')), uniqid() . '.png');
 
-        return config('filesystems.disks.oss.oss_url') . $path;
+        return response()->json([
+            'id' => $id,
+            'path' => config('filesystems.disks.oss.oss_url') . $path
+        ]);
     }
 
     public function printImg(Request $request)
@@ -67,7 +71,7 @@ class ApiController extends Controller
 
     public function printConfirm(Request $request)
     {
-        $absolut = Absolut::where('imgUrl', $request->imgUrl)->first();
+        $absolut = Absolut::find($request->id);
         $absolut->status = 0;
         $absolut->save();
 
