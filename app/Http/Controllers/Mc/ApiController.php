@@ -15,6 +15,12 @@ use Validator;
 
 class ApiController extends Controller
 {
+    public function sign(Request $request)
+    {
+        $openid =$request->openid;
+        $mg = Mc::firstOrCreate(['openid' => $openid]);
+        return $mg;
+    }
     /**
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse

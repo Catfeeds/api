@@ -158,7 +158,8 @@ Route::post('mc/game/start', 'Mc\GameController@gameStart');
 Route::post('mc/game/over', 'Mc\GameController@gameOver');
 //查询游戏结果
 Route::post('mc/game/status', 'Mc\GameController@status');
-
+//简单注册用户
+Route::post('mc/user/new', 'Mc\ApiController@sign');
 /**
  * 天猫精品h5
  */
