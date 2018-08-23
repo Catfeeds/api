@@ -68,37 +68,37 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar1.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar1.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   戴维·卡梅伦（David Cameron)<br/> 英国前首相
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar2.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar2.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   杜祥琬<br/> 中国工程院原副院长、院士
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar3.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar3.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   李立浧<br/> 中国工程院院士
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar4.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar4.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   薛禹胜<br/> 中国工程院院士
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar5.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar5.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   李俊峰<br/> 中国能源研究会可再生能源 <br/> 专业委员会主任 <br/>
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar6.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar6.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   张雷<br/> 远景集团CEO
                 </p>
@@ -106,37 +106,37 @@
             </div>
             <div class="swiper-slide">
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar7.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar7.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   Anders Vedel<br/> 维斯塔斯风力技术（中国）<br/> 有限公司首席技术官
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar8.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar8.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   Christoph Ostermann<br/> sonnen 联合创始人兼CEO
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar9.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar9.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   褚景春<br/> 国电联合动力技术有限公司总经理
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar10.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar10.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   丁磊<br/> 华人运通技术有限公司创始人、董事长
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar11.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar11.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   丁民丞<br/> 远景全球执行董事
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar12.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar12.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   高纪凡<br/> 天合光能股份有限公司 <br/>董事长兼首席执行官
                 </p>
@@ -144,37 +144,37 @@
             </div>
             <div class="swiper-slide">
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar13.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar13.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                     黄群<br/>龙源电力集团股份有限公司<br/> 党委书记、副总经理
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar14.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar14.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                   刘汉元<br/> 通威集团董事局主席
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar15.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar15.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                     瞿晓铧<br/> 阿特斯阳光电力董事长<br/>首席执行官
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar16.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar16.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                     司徒嘉德<br/> 丹佛斯中国区总裁
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar17.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar17.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                     Thierry Lepercq<br/> 法国燃气苏伊士集团 <br/>(ENGIE) 研发技术及创新副总裁
                 </p>
               </div>
               <div class="people">
-                <img class="avatar ani" src="images/people/avatar18.png" swiper-animate-effect="fadeInDown">
+                <img class="avatar ani" src="images/people/energy_avatar18.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
                     王永东<br/> 现任微软全球资深副总裁 <br/>微软(亚洲)互联网工程院院长 <br/>兼任微软亚太研发集团首席技术官
                 </p>
@@ -182,37 +182,37 @@
             </div>
             <div class="swiper-slide">
                 <div class="people">
-                  <img class="avatar ani" src="images/people/avatar19.png" swiper-animate-effect="fadeInDown">
+                  <img class="avatar ani" src="images/people/energy_avatar19.png" swiper-animate-effect="fadeInDown">
                   <p class="desc ani" swiper-animate-effect="tada">
                       王玉锁<br/>新奥集团创始人<br/> 新奥集团股份有限公司董事局主席
                   </p>
                 </div>
                 <div class="people">
-                  <img class="avatar ani" src="images/people/avatar20.png" swiper-animate-effect="fadeInDown">
+                  <img class="avatar ani" src="images/people/energy_avatar20.png" swiper-animate-effect="fadeInDown">
                   <p class="desc ani" swiper-animate-effect="tada">
                       武钢<br/> 金风科技董事长
                   </p>
                 </div>
                 <div class="people">
-                  <img class="avatar ani" src="images/people/avatar21.png" swiper-animate-effect="fadeInDown">
+                  <img class="avatar ani" src="images/people/energy_avatar21.png" swiper-animate-effect="fadeInDown">
                   <p class="desc ani" swiper-animate-effect="tada">
                       谢长军<br/> 中国电力发展促进会可再生能源分会会长
                   </p>
                 </div>
                 <div class="people">
-                  <img class="avatar ani" src="images/people/avatar22.png" swiper-animate-effect="fadeInDown">
+                  <img class="avatar ani" src="images/people/energy_avatar22.png" swiper-animate-effect="fadeInDown">
                   <p class="desc ani" swiper-animate-effect="tada">
                       尹正<br/> 施耐德电气全球执行副总裁 <br/> 中国区总裁
                   </p>
                 </div>
                 <div class="people">
-                  <img class="avatar ani" src="images/people/avatar23.png" swiper-animate-effect="fadeInDown">
+                  <img class="avatar ani" src="images/people/energy_avatar23.png" swiper-animate-effect="fadeInDown">
                   <p class="desc ani" swiper-animate-effect="tada">
                       张新胜<br/> 壳牌中国集团主席
                   </p>
                 </div>
                 <div class="people">
-                  <img class="avatar ani" src="images/people/avatar24.png" swiper-animate-effect="fadeInDown">
+                  <img class="avatar ani" src="images/people/energy_avatar24.png" swiper-animate-effect="fadeInDown">
                   <p class="desc ani" swiper-animate-effect="tada">
                       朱共山<br/> 协鑫集团控股有限公司创始人 <br/>首席执行官 <br/>
                   </p>
