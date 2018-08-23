@@ -30,7 +30,7 @@ redis.on('message', function (channel, message) {
     }else if  (message.event === 'gameOver'){
         console.log('gameOver');
         //向指定用户发送游戏结束
-        io.sockets.socket(message.data.openid).emit('gameOver', {data: message.data});
+        io.sockets.sockets[message.data.openid].emit('gameOver', {data: message.data});
     }
 });
 
@@ -51,7 +51,7 @@ io.on('connection', function (socket) {
     socket.on('gameStatus', function (msg) {
         //告知指定用户准备游戏
         console.log(msg);
-        io.sockets.socket(msg.openid).emit('gameReady', {data: msg});
+        io.sockets.sockets[msg.openid].emit('gameReady', {data: msg});
     })
 });
 
