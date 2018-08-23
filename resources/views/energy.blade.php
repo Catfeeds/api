@@ -94,7 +94,7 @@
               <div class="people">
                 <img class="avatar ani" src="images/people/avatar5.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
-                  李俊峰<br/> 中国能源研究会可再生能源 <br/> 专业委员会主任 <br/> 巴拉拉手的
+                  李俊峰<br/> 中国能源研究会可再生能源 <br/> 专业委员会主任 <br/>
                 </p>
               </div>
               <div class="people">
