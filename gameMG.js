@@ -22,7 +22,7 @@ redis.subscribe('game');
 redis.on('message', function (channel, message) {
     message = JSON.parse(message);
     console.log(message);
-
+    io.sockets.socket[message.data.openid].emit('gameReady', 'sss');
     if (message.event === 'gameStart') {
         console.log('gameStart');
 
