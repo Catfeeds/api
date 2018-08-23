@@ -152,9 +152,12 @@ Route::get('mc/qrcode/scan', 'Mc\ApiController@qrcodeScan');
 Route::get('mc/goods', 'Mc\ApiController@goods');
 Route::get('mc/exchange', 'Mc\ApiController@exchange');
 Route::get('mc/openid', 'Mc\ApiController@openid');
+//游戏开始
 Route::post('mc/game/start', 'Mc\GameController@gameStart');
+//游戏结束
 Route::post('mc/game/over', 'Mc\GameController@gameOver');
-
+//查询游戏结果
+Route::post('mc/game/status', 'Mc\GameController@status');
 
 /**
  * 天猫精品h5

@@ -25,6 +25,8 @@ class CreateMcsTable extends Migration
             $table->boolean('ar')->default(0)->comment('AR');
             $table->boolean('car')->default(0)->comment('car');
             $table->boolean('show')->default(0)->comment('自我秀');
+            $table->integer('top_score')->default(-1)->comment('游戏最高分');
+            $table->integer('last_score')->default(-1)->comment('上次游戏积分');
             $table->timestamps();
         });
     }
