@@ -256,27 +256,62 @@ section {
 }
 
 .page5 .page5-container {
-  position: relative;
   width: 100%;
   height: 100%;
 }
 
-.page5 .page5-container .avatar {
-  left: 50%;
-  top: 40%;
-  width: 3.125rem;
-  height: 3.125rem;
-  margin-left: -1.5625rem;
-  margin-top: -1.5625rem;
+.page5 .page5-container .swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3.125rem;
+  height: 10.9375rem;
 }
 
-.page5 .page5-container .desc {
-  position: absolute;
-  top: 60%;
-  width: 100%;
+.page5 .page5-container .people {
+  flex: 0 0 4.6875rem;
+  width: 4.6875rem;
+  height: 3.59375rem;
+  overflow: hidden;
   text-align: center;
-  font-size: 0.46875rem;
+}
+
+.page5 .page5-container .people .avatar {
+  position: static;
+  margin-bottom: 0.3125rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+
+.page5 .page5-container .people .desc {
+  text-align: center;
+  font-size: 0.25rem;
   color: #fff;
+}
+
+.page5 .page5-container .p1 {
+  background: red;
+}
+
+.page5 .page5-container .p2 {
+  background: green;
+}
+
+.page5 .page5-container .p3 {
+  background: #e9aa59;
+}
+
+.page5 .page5-container .p4 {
+  background: #de39bf;
+}
+
+.page5 .page5-container .p5 {
+  background: #512568;
+}
+
+.page5 .page5-container .p6 {
+  background: #e9aa59;
 }
 
 .page5 .content {
