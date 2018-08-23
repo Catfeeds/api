@@ -20,8 +20,7 @@ class GameController extends Controller
             //上一局游戏尚未结束
             return 'false';
         }
-        //记录游戏状态
-        Redis::setex($request->openid, 120, 'true');
+
         //场地id、openid、头像
         event(new GameStart($request->id, $request->openid, $request->avatar));
 

@@ -51,6 +51,7 @@ io.on('connection', function (socket) {
     socket.on('gameStatus', function (msg) {
         //告知指定用户准备游戏
         console.log(msg);
+        redis::setex(msg.openid, 120, 'true');
         io.sockets.sockets[msg.openid].emit('gameReady', {data: msg});
     })
 });
