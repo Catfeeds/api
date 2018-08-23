@@ -264,3 +264,8 @@ Route::get('html/energy/index', function () {
     $js = EasyWeChat::js();
     return view('energy', compact('js'));
 });
+
+Route::get('html/energy/index2', function () {
+    $js = EasyWeChat::js();
+    return view('energy', compact('js'));
+});
