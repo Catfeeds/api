@@ -19,7 +19,7 @@ class ApiController extends Controller
     {
         $openid =$request->openid;
         $mg = Mc::firstOrCreate(['openid' => $openid]);
-        return $mg;
+        return 'true';
     }
     /**
      * @param Request $request
