@@ -269,6 +269,14 @@ section {
   height: 10.9375rem;
 }
 
+.page5 .page5-container .swiper-slide .arrowLeft {
+  top: 60%;
+}
+
+.page5 .page5-container .swiper-slide .arrowRight {
+  top: 60%;
+}
+
 .page5 .page5-container .people {
   flex: 0 0 4.6875rem;
   width: 4.6875rem;

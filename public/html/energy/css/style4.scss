@@ -259,6 +259,12 @@ section {
       align-items: center;
       padding-top: PX(130);
       height: PX(700);
+      .arrowLeft {
+        top: 60%;
+      }
+      .arrowRight {
+        top: 60%;
+      }
     }
     .people {
       flex: 0 0 PX(300);
