@@ -265,28 +265,27 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-top: 3.125rem;
+  padding-top: 2.03125rem;
   height: 10.9375rem;
 }
 
 .page5 .page5-container .people {
   flex: 0 0 4.6875rem;
   width: 4.6875rem;
-  height: 3.59375rem;
-  overflow: hidden;
+  height: 4.375rem;
   text-align: center;
 }
 
 .page5 .page5-container .people .avatar {
   position: static;
   margin-bottom: 0.3125rem;
-  width: 1.5625rem;
-  height: 1.5625rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .page5 .page5-container .people .desc {
   text-align: center;
-  font-size: 0.25rem;
+  font-size: 0.28125rem;
   color: #fff;
 }
 

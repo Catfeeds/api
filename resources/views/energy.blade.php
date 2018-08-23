@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/style3.css">
 </head>
 
 <body>
@@ -158,7 +158,7 @@
               <div class="people">
                 <img class="avatar ani" src="images/people/avatar15.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
-                    瞿晓铧<br/> 阿特斯阳光电力董事长首席执行官
+                    瞿晓铧<br/> 阿特斯阳光电力董事长<br/>首席执行官
                 </p>
               </div>
               <div class="people">
@@ -170,7 +170,7 @@
               <div class="people">
                 <img class="avatar ani" src="images/people/avatar17.png" swiper-animate-effect="fadeInDown">
                 <p class="desc ani" swiper-animate-effect="tada">
-                    Thierry LepercqENGIE<br/> (苏伊士环能集团）执行副总裁
+                    Thierry Lepercq<br/> 法国燃气苏伊士集团 <br/>(ENGIE) 研发技术及创新副总裁
                 </p>
               </div>
               <div class="people">
