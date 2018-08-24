@@ -2,7 +2,6 @@ var http = require('http').Server();
 var io = require('socket.io')(http);
 var Redis = require('ioredis');
 var redis = new Redis();
-
 //middleware 处理sockid
 io.use((socket, next) => {
    let clientId = socket.handshake.query.clientId;
@@ -21,37 +20,24 @@ io.use((socket, next) => {
 redis.subscribe('MG');
 redis.on('message', function (channel, message) {
     message = JSON.parse(message);
-    console.log(message);
     if (message.event === 'gameStart') {
-        console.log('gameStart');
 
         //向pc端发送游戏开始
         io.sockets.in('pc').emit('gameStart', {data: message.data})
     }else{
-        console.log(message.event);
         //向指定用户发送通知
         io.sockets.sockets[message.data.openid].emit(message.event, {data: message.data});
     }
 });
+let redis2 = new Redis();
 
 io.on('connection', function (socket) {
-        console.log(socket.id);
-        // var tweets = setInterval(function () {
-        //     io.sockets.sockets[socket.id].emit('gameReady', 'sss', function (data) {
-        //         console.log(data);
-        //         if (data) {
-        //             clearInterval(tweets);
-        //         }
-        //     });
-        // }, 1000);
         socket.on('disconnect', function () {
-            // clearInterval(tweets);
             console.log('user disconnected');
         });
     socket.on('gameStatus', function (msg) {
         //告知指定用户准备游戏
-        console.log(msg);
-        redis.setex(msg.openid, 120, 'true');
+        redis2.setex(msg.openid, 120, 'true');
         io.sockets.sockets[msg.openid].emit('gameReady', {data: msg});
     })
 });
