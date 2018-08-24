@@ -257,24 +257,29 @@ section {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      padding-top: PX(200);
+      padding-top: PX(130);
       height: PX(700);
+      .arrowLeft {
+        top: 60%;
+      }
+      .arrowRight {
+        top: 60%;
+      }
     }
     .people {
       flex: 0 0 PX(300);
       width: PX(300);
-      height: PX(230);
-      overflow: hidden;
+      height: PX(280);
       text-align: center;
       .avatar {
         position: static;
         margin-bottom: PX(20);
-        width: PX(100);
-        height: PX(100);
+        width: PX(160);
+        height: PX(160);
       }
       .desc {
         text-align: center;
-        font-size: PX(16);
+        font-size: PX(18);
         color: #fff;
       }
     }
