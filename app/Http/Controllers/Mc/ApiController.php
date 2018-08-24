@@ -342,7 +342,7 @@ class ApiController extends Controller
                             'result' => $item->name . '库存不足' . $item->count,
                         ]);
                     }
-                    $needcoin += $good->coin * $item;
+                    $needcoin += $good->coin * $item->count;
                 }
                 if ($user->coin < $needcoin) {
                     return response()->json([
@@ -365,7 +365,7 @@ class ApiController extends Controller
                 event(new QrcodeScan($openid));
                 return response()->json([
                     'code' => 1,
-                    'result' => $request->goodsList,
+                    'result' => '礼品兑换成功',
                 ]);
                 break;
 
