@@ -299,7 +299,10 @@ class ApiController extends Controller
                 break;
             case 'goods':
                 $goods = [];
-                return $request->goodsList;
+                return response()->json([
+                    'code' => 1,
+                    'result' => $request->goodsList,
+                ]);
                 break;
             default:
                 return response()->json([
