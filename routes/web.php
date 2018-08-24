@@ -12,7 +12,9 @@
 |
 */
 
-Route::get('test', 'Absolut\IndexController@test');
+Route::get('test', function () {
+
+});
 
 /*
  * 科思创项目

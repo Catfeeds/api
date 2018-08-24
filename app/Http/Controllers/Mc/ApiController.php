@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Mc;
 
+use App\Events\QrcodeScan;
 use App\Models\Goods;
 use App\Models\Mc;
 use App\Models\Mclog;
@@ -23,10 +24,11 @@ class ApiController extends Controller
      */
     public function sign(Request $request)
     {
-        $openid =$request->openid;
+        $openid = $request->openid;
         Mc::firstOrCreate(['openid' => $openid]);
         return 'true';
     }
+
     /**
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
@@ -197,13 +199,27 @@ class ApiController extends Controller
      */
     public function qrcodeScan(Request $request)
     {
+        $validate = Validator::make($request->all(), [
+            'type' => 'required',
+            'openid' => 'required',
+            'coin' => 'nullable|integer',
+            'goodsList' => 'nullable|json'
+        ]);
+        if ($validate->fails()) {
+            return response()->json([
+                'code' => 0,
+                'result' => '二维码错误!',
+            ]);
+        }
         $type = $request->type;
         $openid = $request->openid;
 
         $user = Mc::where('openid', $openid)->first();
         if (is_null($user)) {
-            $user = new Mc();
-            $user->openid = $openid;
+            return response()->json([
+                'code' => 0,
+                'result' => '查询不到该用户!',
+            ]);
         }
 
         switch ($type) {
@@ -238,6 +254,9 @@ class ApiController extends Controller
 
                 //记录积分变更
                 $this->log($openid, '赛车对爵', '增加', $request->coin);
+
+                //通知扫码成功
+                event(new QrcodeScan($openid));
                 return response()->json([
                     'code' => 1,
                     'result' => '赛车对爵扫码成功',
@@ -256,6 +275,9 @@ class ApiController extends Controller
 
                 //记录积分变更
                 $this->log($openid, '个性秀爵', '增加', config('gift_mc.show'));
+
+                //通知扫码成功
+                event(new QrcodeScan($openid));
                 return response()->json([
                     'code' => 1,
                     'result' => '个性秀爵扫码成功',
@@ -274,6 +296,8 @@ class ApiController extends Controller
 
                 //记录积分变更
                 $this->log($openid, '奇妙视爵', '增加', config('gift_mc.ar'));
+                //通知扫码成功
+                event(new QrcodeScan($openid));
                 return response()->json([
                     'code' => 1,
                     'result' => '奇妙视爵扫码成功',
@@ -292,23 +316,63 @@ class ApiController extends Controller
 
                 //记录积分变更
                 $this->log($openid, '透镜寻觅', '增加', config('gift_mc.discover'));
+                //通知扫码成功
+                event(new QrcodeScan($openid));
                 return response()->json([
                     'code' => 1,
                     'result' => '透镜寻觅扫码成功',
                 ]);
                 break;
             case 'goods':
-                $goods = [];
+                $goods = json_decode($request->goodsList);
+                if (is_null($goods) || empty($goods->data)) {
+                    return response()->json([
+                        'code' => 0,
+                        'result' => '兑换礼品列表为空',
+                    ]);
+                }
+
+                //为了查询兑换所需总积分，更好办法是放到配置文件里
+                $needcoin = 0;
+                foreach ($goods->data as $item) {
+                    $good = Goods::where('name', $item->name)->first();
+                    if ($good->amount < $item->count) {
+                        return response()->json([
+                            'code' => 0,
+                            'result' => $item->name . '库存不足' . $item->count,
+                        ]);
+                    }
+                    $needcoin += $good->coin * $item;
+                }
+                if ($user->coin < $needcoin) {
+                    return response()->json([
+                        'code' => 0,
+                        'result' => '当前积分'.$user->coin.'不足兑换，需要'.$needcoin,
+                    ]);
+                }
+
+                //再次查询录入
+                foreach ($goods->data as $item) {
+                    $good = Goods::where('name', $item->name)->first();
+                    $good->amount -= $item->count;
+                    $good->save();
+                }
+                $user->coin -= $needcoin;
+                $user->save();
+                //通知扫码成功
+                event(new QrcodeScan($openid));
                 return response()->json([
                     'code' => 1,
                     'result' => $request->goodsList,
                 ]);
                 break;
+
             default:
                 return response()->json([
                     'code' => 0,
                     'result' => "无法识别对应二维码",
                 ]);
+            //礼品兑换改为购物车形式兑换
 //                $goods = Goods::where('name', $type)->first();
 //                //判断异常情况
 //                if (is_null($goods)) {
@@ -374,11 +438,12 @@ class ApiController extends Controller
     {
         $code = $request->jscode;
         $client = new Client();
-        $appid= env('mc_appid');
-        $secret= env('mc_secret');
-        $res = $client->request('GET', 'https://api.weixin.qq.com/sns/jscode2session?appid='.$appid.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code');
+        $appid = env('mc_appid');
+        $secret = env('mc_secret');
+        $res = $client->request('GET', 'https://api.weixin.qq.com/sns/jscode2session?appid=' . $appid . '&secret=' . $secret . '&js_code=' . $code . '&grant_type=authorization_code');
         return $res->getBody();
     }
+
     /**
      * @param $openid
      * @param $type

@@ -18,7 +18,7 @@ io.use((socket, next) => {
    }
     return next(new Error('authentication error'));
 });
-redis.subscribe('game');
+redis.subscribe('MG');
 redis.on('message', function (channel, message) {
     message = JSON.parse(message);
     console.log(message);
@@ -27,10 +27,10 @@ redis.on('message', function (channel, message) {
 
         //向pc端发送游戏开始
         io.sockets.in('pc').emit('gameStart', {data: message.data})
-    }else if  (message.event === 'gameOver'){
-        console.log('gameOver');
-        //向指定用户发送游戏结束
-        io.sockets.sockets[message.data.openid].emit('gameOver', {data: message.data});
+    }else{
+        console.log(message.event);
+        //向指定用户发送通知
+        io.sockets.sockets[message.data.openid].emit(message.event, {data: message.data});
     }
 });
 

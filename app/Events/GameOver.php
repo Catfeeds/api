@@ -34,7 +34,7 @@ class GameOver implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('game');
+        return new Channel('MG');
     }
     public function broadcastAs()
     {

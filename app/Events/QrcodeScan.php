@@ -9,27 +9,18 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
-use Illuminate\Support\Facades\Redis;
 
-class GameStart implements ShouldBroadcast
+class QrcodeScan implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    /**
-     * Create a new event instance.
-     *
-     * @return void
-     */
-
-    public $id;
     public $openid;
-    public $avatar;
+    public $status = true;
 
-    public function __construct($id, $openid, $avatar)
+
+    public function __construct($openid)
     {
-        $this->id = $id;
         $this->openid = $openid;
-        $this->avatar = $avatar;
     }
 
     /**
@@ -41,9 +32,8 @@ class GameStart implements ShouldBroadcast
     {
         return new Channel('MG');
     }
-
     public function broadcastAs()
     {
-        return 'gameStart';
+        return 'qrcodeScan';
     }
 }
