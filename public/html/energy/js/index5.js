@@ -157,7 +157,11 @@ $(function () {
         data: data,
         success: function (result) {
           if (result.Success) {
-            mySwiper.slideTo(9)
+            $('.popup').show();
+            setTimeout(function(){
+              $('.popup').hide();
+              mySwiper.slideTo(6)
+            }, 3000)
           } else {
             alert('注册失败')
           }

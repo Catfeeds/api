@@ -494,3 +494,36 @@ section {
     height: PX(356);
   }
 }
+
+.popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 6666;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 6666;
+    padding: PX(20) PX(10);
+    width: 80%;
+    color: #fff;
+    font-size: PX(24);
+    border-radius: PX(10);
+    background: rgba(0, 0, 0,1);
+    animation: pop 0.5s;
+  }
+}
+@keyframes pop {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(0);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+}
