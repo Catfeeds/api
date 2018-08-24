@@ -359,6 +359,8 @@ class ApiController extends Controller
                 }
                 $user->coin -= $needcoin;
                 $user->save();
+                //存储积分变更
+                $this->log($openid, '礼品兑换', '减少', $needcoin);
                 //通知扫码成功
                 event(new QrcodeScan($openid));
                 return response()->json([
