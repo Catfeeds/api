@@ -15,10 +15,16 @@ use Validator;
 
 class ApiController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return string
+     *
+     * 因首页签到页取消，简单注册openid
+     */
     public function sign(Request $request)
     {
         $openid =$request->openid;
-        $mg = Mc::firstOrCreate(['openid' => $openid]);
+        Mc::firstOrCreate(['openid' => $openid]);
         return 'true';
     }
     /**
@@ -249,10 +255,10 @@ class ApiController extends Controller
                 $user->save();
 
                 //记录积分变更
-                $this->log($openid, '爵对自我秀', '增加', config('gift_mc.show'));
+                $this->log($openid, '个性秀爵', '增加', config('gift_mc.show'));
                 return response()->json([
                     'code' => 1,
-                    'result' => '自我秀扫码成功',
+                    'result' => '个性秀爵扫码成功',
                 ]);
                 break;
             case 'ar':
@@ -267,10 +273,10 @@ class ApiController extends Controller
                 $user->save();
 
                 //记录积分变更
-                $this->log($openid, '奇妙AR', '增加', config('gift_mc.ar'));
+                $this->log($openid, '奇妙视爵', '增加', config('gift_mc.ar'));
                 return response()->json([
                     'code' => 1,
-                    'result' => '奇妙AR扫码成功',
+                    'result' => '奇妙视爵扫码成功',
                 ]);
                 break;
             case 'discover':
@@ -291,40 +297,48 @@ class ApiController extends Controller
                     'result' => '透镜寻觅扫码成功',
                 ]);
                 break;
+            case 'goods':
+                $goods = [];
+                return $request->goodsList;
+                break;
             default:
-                $goods = Goods::where('name', $type)->first();
-                //判断异常情况
-                if (is_null($goods)) {
-                    return response()->json([
-                        'code' => 0,
-                        'result' => '未找到商品!',
-                    ]);
-                } elseif ($goods->amount == 0) {
-                    return response()->json([
-                        'code' => 0,
-                        'result' => '该商品库存不足!',
-                    ]);
-
-                } else {
-                    if ($user->coin < $goods->coin) {
-                        return response()->json([
-                            'code' => 0,
-                            'result' => '当前积分'. $user->coin .'不足以兑换该商品!',
-                        ]);
-                    }
-
-                    $user->coin -= $goods->coin;
-                    $user->save();
-                    $goods->amount -= 1;
-                    $goods->save();
-
-                    //记录积分变更
-                    $this->log($openid, $type, '减少', $goods->coin);
-                }
                 return response()->json([
-                    'code' => 1,
-                    'result' => "成功兑换{$type}",
+                    'code' => 0,
+                    'result' => "无法识别对应二维码",
                 ]);
+//                $goods = Goods::where('name', $type)->first();
+//                //判断异常情况
+//                if (is_null($goods)) {
+//                    return response()->json([
+//                        'code' => 0,
+//                        'result' => '未找到商品!',
+//                    ]);
+//                } elseif ($goods->amount == 0) {
+//                    return response()->json([
+//                        'code' => 0,
+//                        'result' => '该商品库存不足!',
+//                    ]);
+//
+//                } else {
+//                    if ($user->coin < $goods->coin) {
+//                        return response()->json([
+//                            'code' => 0,
+//                            'result' => '当前积分'. $user->coin .'不足以兑换该商品!',
+//                        ]);
+//                    }
+//
+//                    $user->coin -= $goods->coin;
+//                    $user->save();
+//                    $goods->amount -= 1;
+//                    $goods->save();
+//
+//                    //记录积分变更
+//                    $this->log($openid, $type, '减少', $goods->coin);
+//                }
+//                return response()->json([
+//                    'code' => 1,
+//                    'result' => "成功兑换{$type}",
+//                ]);
         }
     }
 
