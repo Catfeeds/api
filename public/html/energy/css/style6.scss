@@ -16,9 +16,11 @@ html, body {
 
 section {
   position: relative;
-  width: PX(640);
-  height: PX(1040);
-  @include bg('../images/bg.png');
+  width: 100%;
+  height: 100%;
+  // width: PX(640);
+  // height: PX(1040);
+  // @include bg('../images/bg.png');
 }
 
 .hide {
@@ -26,8 +28,21 @@ section {
 }
 
 .swiper-container {
-  width: PX(640);
+  // position: absolute;
+  // top: 50%;
+  // transform: translate3d(0, -50%, 0);
+  // width: PX(640);
+  // height: PX(1040);
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
   height: PX(1040);
+  transform: translate3d(0, -50%, 0);
 }
 
 .arrow {
@@ -419,7 +434,7 @@ section {
     color: #e9aa59;
     font-size: PX(30);
     p {
-      height: PX(38);
+      min-height: PX(38);
       line-height: PX(38);
       margin: PX(6) 0; 
       padding: 0 PX(10);
