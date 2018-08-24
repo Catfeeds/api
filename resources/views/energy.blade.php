@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/style4.css">
+  <link rel="stylesheet" href="css/style5.css">
 </head>
 
 <body>
@@ -387,10 +387,13 @@
       </section>
     </div>
   </div>
+  <div class="popup hide">
+    <p>我们已收到您的报名信息，<br/>会以短信通知您是否报名成功</p>
+  </div>
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/swiper.animate1.0.3.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/index5.js"></script>
   <script src="http://webapi.amap.com/maps?v=1.4.4&key=9919b3652eba25eb2e2ef0839e3b8692"></script>
   <script>
     var map = new AMap.Map('map', {
