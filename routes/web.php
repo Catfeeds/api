@@ -271,3 +271,10 @@ Route::get('html/energy/index2', function () {
     $js = EasyWeChat::js();
     return view('energy', compact('js'));
 });
+
+/**
+ * 名爵车展数据统计
+ */
+Route::get('mg/everyday', 'Mc\StatisticsController@everyday');
+Route::get('mg/setting', 'Mc\StatisticsController@setting');
+Route::get('mg/search', 'Mc\StatisticsController@searchIndex');

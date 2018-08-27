@@ -347,7 +347,7 @@ class ApiController extends Controller
                 if ($user->coin < $needcoin) {
                     return response()->json([
                         'code' => 0,
-                        'result' => '当前积分'.$user->coin.'不足兑换，需要'.$needcoin,
+                        'result' => '当前积分' . $user->coin . '不足兑换，需要' . $needcoin,
                     ]);
                 }
 
@@ -356,11 +356,10 @@ class ApiController extends Controller
                     $good = Goods::where('name', $item->name)->first();
                     $good->amount -= $item->count;
                     $good->save();
+                    $this->log($openid, $item->name, '礼品兑换', $good->coin, $item->count);
                 }
                 $user->coin -= $needcoin;
                 $user->save();
-                //存储积分变更
-                $this->log($openid, '礼品兑换', '减少', $needcoin);
                 //通知扫码成功
                 event(new QrcodeScan($openid));
                 return response()->json([
@@ -447,20 +446,22 @@ class ApiController extends Controller
     }
 
     /**
+     * 存储积分变更数据
+     *
      * @param $openid
      * @param $type
      * @param $handle
      * @param $coin
-     *
-     * 存储积分变更数据
+     * @param int $num
      */
-    public function log($openid, $type, $handle, $coin)
+    public function log($openid, $type, $handle, $coin, $num = 0)
     {
         $log = new Mclog();
         $log->openid = $openid;
         $log->type = $type;
         $log->handle = $handle;
         $log->coin = $coin;
+        $log->num = $num;
         $log->save();
     }
 }
