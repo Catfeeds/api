@@ -19,6 +19,7 @@ class CreateMclogsTable extends Migration
             $table->string('type');
             $table->string('handle');
             $table->integer('coin');
+            $table->integer('num')->comment('礼品兑换时的数量');
             $table->timestamps();
         });
     }

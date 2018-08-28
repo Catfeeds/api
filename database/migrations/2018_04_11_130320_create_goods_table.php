@@ -18,6 +18,7 @@ class CreateGoodsTable extends Migration
             $table->string('name')->comment('商品名称');
             $table->integer('coin')->default(0)->comment('兑换积分');
             $table->integer('amount')->default(0)->comment('数量');
+            $table->string('introduction')->comment('商品介绍');
             $table->text('img_url');
 
             $table->timestamps();

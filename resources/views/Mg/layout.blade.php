@@ -14,18 +14,15 @@
 <div id="app">
     <Row>
         <i-menu mode="horizontal" :theme="theme1" active-name="1">
-            <menu-item name="1">
+            <menu-item name="1" to="{{ url('mg/everyday') }}">
                 库存总览
             </menu-item>
 
-            <menu-item name="2">
+            <menu-item name="2" to="{{ url('mg/search') }}">
                 兑换数据
             </menu-item>
-            <menu-item name="3">
+            <menu-item name="3" to="{{ url('mg/setting') }}">
                 库存设置
-            </menu-item>
-            <menu-item name="3">
-                注销
             </menu-item>
         </i-menu>
     </Row>

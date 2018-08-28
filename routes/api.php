@@ -160,6 +160,8 @@ Route::post('mc/game/over', 'Mc\GameController@gameOver');
 Route::post('mc/game/status', 'Mc\GameController@status');
 //简单注册用户
 Route::post('mc/user/new', 'Mc\ApiController@sign');
+//根据手机号查询用户兑换数据
+Route::get('mc/search/phone', 'Mc\StatisticsController@searchUser');
 /**
  * 天猫精品h5
  */

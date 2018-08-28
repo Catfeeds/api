@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Mc;
 
 use App\Models\Goods;
+use App\Models\Mc;
 use App\Models\Mclog;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -54,5 +55,18 @@ class StatisticsController extends Controller
     public function searchIndex()
     {
         return view('Mg.search');
+    }
+
+    public function searchUser(Request $request)
+    {
+        $phone = $request->phone;
+        $user = Mc::where('phone', $phone)->first();
+        if (!is_null($user)){
+            $logs = Mclog::where('openid', $user->openid)
+                ->orderBy('created_at', 'desc')
+                ->get();
+            return response()->json($logs);
+        }
+        return response()->json([]);
     }
 }
