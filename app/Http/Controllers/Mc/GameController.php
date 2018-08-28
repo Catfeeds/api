@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Mc;
 use App\Events\GameOver;
 use App\Events\GameStart;
 use App\Models\Mc;
+use App\Models\Mclog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redis;
@@ -55,17 +56,28 @@ class GameController extends Controller
     {
         $openid = $request->openid;
         $score = $request->score;
-        event(new GameOver($openid, $score));
-        //注销游戏状态
-        Redis::del($openid);
 
         $mg = Mc::where('openid', $openid)->first();
+
         if($score > $mg->top_score) {
+            if ($mg->top_score == -1) {
+                $mg->coin += $score;
+                $log = new Mclog();
+                $log->openid = $openid;
+                $log->type = '激情对爵';
+                $log->handle = '增加';
+                $log->coin = $score;
+                $log->save();
+            }
             $mg->top_score = $score;
+
         }
         $mg->last_score = $score;
         $mg->save();
 
+        event(new GameOver($openid, $score));
+        //注销游戏状态
+        Redis::del($openid);
         return 'true';
     }
 }
