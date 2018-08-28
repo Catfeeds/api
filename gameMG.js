@@ -26,6 +26,7 @@ redis.on('message', function (channel, message) {
         io.sockets.in('pc').emit('gameStart', {data: message.data})
     }else{
         //向指定用户发送通知
+        console.log(message.data.openid + '/'+message.event+'/'+message.data);
         io.sockets.sockets[message.data.openid].emit(message.event, {data: message.data});
     }
 });
