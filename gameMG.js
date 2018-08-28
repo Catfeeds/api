@@ -20,6 +20,7 @@ io.use((socket, next) => {
 redis.subscribe('MG');
 redis.on('message', function (channel, message) {
     message = JSON.parse(message);
+    console.log(message);
     if (message.event === 'gameStart') {
 
         //向pc端发送游戏开始
