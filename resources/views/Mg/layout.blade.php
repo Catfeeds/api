@@ -13,7 +13,7 @@
 <body>
 <div id="app">
     <Row>
-        <i-menu mode="horizontal" :theme="theme1" active-name="1">
+        <i-menu mode="horizontal" :theme="theme1">
             <menu-item name="1" to="{{ url('mg/everyday') }}">
                 库存总览
             </menu-item>
