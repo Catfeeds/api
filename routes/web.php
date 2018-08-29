@@ -54,7 +54,7 @@ Route::any('/wechat', 'Wechat\WechatController@serve');
  * jc(吕)项目，用户显示上传的视频
  */
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
-    Route::get('/jc/video', 'Api\VideoController@show');
+//    Route::get('/jc/video', 'Api\VideoController@show');
 });
 
 /**
@@ -239,7 +239,7 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function
 /**
  * 阿玛尼视频上传显示
  */
-Route::get('armani/video', 'Armani\VideoController@show');
+//Route::get('armani/video', 'Armani\VideoController@show');
 
 /**
  * 联邦照片
