@@ -275,7 +275,7 @@ Route::get('html/energy/index2', function () {
 /**
  * 名爵车展数据统计
  */
-Route::group(['middleware'=> config('admin.route.middleware'),], function () {
+Route::group(['middleware'=> ['web', 'auth'],], function () {
     Route::get('mg/everyday', 'Mc\StatisticsController@everyday');
     Route::get('mg/setting', 'Mc\StatisticsController@setting');
     Route::get('mg/search', 'Mc\StatisticsController@searchIndex');
