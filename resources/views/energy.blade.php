@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>盐城绿色智慧能源大会</title>
+  <title>2018盐城绿色智慧能源会议</title>
   <script src="js/rem.js"></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/swiper.min.css">
@@ -19,7 +19,7 @@
     <div class="swiper-wrapper">
       <section class="page1 swiper-slide">
         <div class="container">
-          <img src="images/page1_logo.png" class="logo ani" swiper-animate-effect="fadeInDown">
+          <img src="images/page10_logo.png" class="logo ani" swiper-animate-effect="fadeInDown">
           <img src="images/page1_invitation.png" class="invitation ani" swiper-animate-effect="zoomIn" swiper-animate-delay="0.5s">
           <img src="images/page1_subTitle.png" class="subTitle ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="1s">
         </div>
@@ -426,7 +426,7 @@
     wx.ready(function () {
       // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
       wx.onMenuShareTimeline({
-        title: '邀请函|盐城绿色智慧能源大会', // 分享标题
+        title: '邀请函|2018盐城绿色智慧能源会议', // 分享标题
         link: "http://api.shanghaichujie.com/html/energy/index",
         imgUrl: "http://api.shanghaichujie.com/html/energy/images/share.png", // 分享图标
         success: function () {
@@ -435,7 +435,7 @@
       });
       // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
       wx.onMenuShareAppMessage({
-          title: '邀请函|盐城绿色智慧能源大会', // 分享标题
+          title: '邀请函|2018盐城绿色智慧能源会议', // 分享标题
         desc: "9月6日-7日，全球能源领袖在这里创见智慧能源未来", // 分享描述
         link: "http://api.shanghaichujie.com/html/energy/index",
         imgUrl: "http://api.shanghaichujie.com/html/energy/images/share.png", // 分享图标
