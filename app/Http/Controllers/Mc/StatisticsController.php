@@ -13,7 +13,7 @@ class StatisticsController extends Controller
 {
     public function everyday()
     {
-        $carbon = Carbon::create(2018, 8, 31, 0, 0, 0, 'Asia/Shanghai');
+        $carbon = Carbon::create(2018, 8, 27, 0, 0, 0, 'Asia/Shanghai');
         $goods = Goods::all();
         $lists = [];
         for ($i = 0; $i < 10; $i++) {
