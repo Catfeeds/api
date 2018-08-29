@@ -20,10 +20,10 @@
     <modal
         v-model="modal"
         title="设置可发礼品数量"
-        @on-ok="ok"
+        @on-ok="ok('formItem')"
         @on-cancel="cancel">
         <p>
-            <i-form :model="formItem" :label-width="80">
+            <i-form ref="formItem" :model="formItem" :label-width="80">
                 @foreach($surplus as $key =>$value)
                     @if(!$loop->first)
                         <form-item label="{{ $key }}">
@@ -37,6 +37,8 @@
 @endsection
 
 @section('script')
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <script>
 
         var Main = {
@@ -70,7 +72,16 @@
             },
             methods: {
                 ok() {
-
+                    let that = this;
+                    axios({
+                        method: 'post',
+                        url: "{{ url('api/mc/set') }}",
+                        data: {
+                            goods: JSON.stringify(that.formItem)
+                        }
+                    })
+                        .then(this.$Message.info('修改成功，请刷新页面'))
+                        .catch(res => console.log(res));
                 },
                 cancel() {
                     this.$Message.info('Clicked cancel');

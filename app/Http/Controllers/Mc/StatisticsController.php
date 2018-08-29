@@ -69,4 +69,17 @@ class StatisticsController extends Controller
         }
         return response()->json([]);
     }
+
+    public function setWait(Request $request)
+    {
+
+        $data = json_decode($request->goods);
+        $goods = Goods::all();
+        foreach ($goods as $good) {
+            $good->amount = $data->{$good->name};
+            $good->save();
+
+        }
+        return 'true';
+    }
 }
