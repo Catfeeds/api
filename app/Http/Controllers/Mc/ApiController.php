@@ -118,9 +118,9 @@ class ApiController extends Controller
 
                     //提交信息给客户系统
                     $client = new Client();
-                    $client->request('GET', 'http://cep.saicmg.com/cep/saic-sis-api?act=5&track_id=100457&username=' .
+                    $client->request('GET', 'http://cep.saicmg.com/cep/saic-sis-api?act=5&track_id=100636&username=' .
                         $request->username . '&mobile=' . $request->phone .
-                        "&brand=3362&terminal_type=1&lauch_id=100457&activity_num=1218041702&url=api.shanghaichujie.com&cartype=" . $request->intention);
+                        "&brand=3362&terminal_type=1&lauch_id=100636&activity_num=1218083001&url=api.shanghaichujie.com&cartype=" . $request->intention);
 
                     return response()->json([
                         'code' => 1,
