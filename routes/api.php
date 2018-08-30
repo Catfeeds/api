@@ -206,3 +206,8 @@ Route::post('dettol/rank', 'Dettol\DettolController@api');
  * 阿里云oss
  */
 Route::post('ali/oss/upload/image', 'Api\ImageController@aliOssUploadImage');
+
+/**
+ * coach 照片存储
+ */
+Route::post('coach/upload/image', 'Coach\CoachController@UploadImage');

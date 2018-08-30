@@ -280,4 +280,7 @@ Route::group(['middleware'=> ['web', 'auth'],], function () {
     Route::get('mg/setting', 'Mc\StatisticsController@setting');
     Route::get('mg/search', 'Mc\StatisticsController@searchIndex');
 });
-
+/*
+ * coach 取照片
+ */
+Route::get('coach/photo', 'Coach\CoachController@GetImage');
