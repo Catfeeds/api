@@ -289,3 +289,12 @@ Route::get('coach/photo', 'Coach\CoachController@GetImage');
  * 科莱丽人员信息
  */
 Route::get('res/clari/{id}', 'Clari\ClariController@index');
+
+/*
+ * 雪佛兰电音节h5入口
+ */
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
+    Route::get('res/chevy/index', function () {
+        return '雪佛兰电音节h5入口';
+    });
+});
