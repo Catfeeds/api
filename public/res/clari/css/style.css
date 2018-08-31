@@ -124,6 +124,6 @@ section .avatar {
   left: 50%;
   top: 10rem;
   transform: translate3d(-50%, 0, 0);
-  width: 4.26667rem;
-  height: 4.26667rem;
+  /*width: 4.26667rem;*/
+  height: 5.26667rem;
 }
