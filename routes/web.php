@@ -284,3 +284,8 @@ Route::group(['middleware'=> ['web', 'auth'],], function () {
  * coach 取照片
  */
 Route::get('coach/photo', 'Coach\CoachController@GetImage');
+
+/*
+ * 科莱丽人员信息
+ */
+Route::get('res/clari/{id}', 'Clari\ClariController@index');

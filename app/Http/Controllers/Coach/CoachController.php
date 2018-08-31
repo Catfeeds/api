@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Storage;
 
 class CoachController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return mixed
+     *
+     * coach 拍照互动（吕）20180907-1007
+     */
     public function UploadImage(Request $request)
     {
         $id = Redis::incr('coach');
@@ -16,6 +22,10 @@ class CoachController extends Controller
         return $id;
     }
 
+    /*
+     * 根据id获取照片
+     *
+     */
     public function GetImage()
     {
         return view('coach');

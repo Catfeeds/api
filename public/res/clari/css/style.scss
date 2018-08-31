@@ -1,0 +1,120 @@
+@mixin bg ($url) {
+  background: url($url) no-repeat;
+  background-size: 100% 100%;
+}
+
+@function PX ($px) {
+  @return $px / 750 * 10 * 1rem;
+}
+
+// 重置样式
+html{
+  /* 禁止选择文本 */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  /* 禁止文字自动调整大小*/
+  -webkit-text-size-adjust: 100%;
+}
+body{
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd{
+  margin: 0;
+}
+ul,ol{
+  padding: 0;
+  list-style: none;
+}
+img{
+  border: none;
+  vertical-align: top;
+}
+a{
+  text-decoration: none;
+}
+img,a{
+  /* 禁止长按页面弹出菜单 */
+  -webkit-touch-callout: none;
+}
+input,button{
+  outline: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+a,input,button{
+  /* 禁止IOS点击元素高亮 */
+  -webkit-tap-highlight-color: transparent;
+}
+/*隐藏滚轮*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.logo {
+  position: absolute;
+  z-index: 666;
+  top: PX(40);
+  right: PX(40);
+  width: PX(239);
+  height: PX(69);
+}
+section {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  width: PX(750);
+  height: PX(1220);
+  @include bg('../images/bg.png');
+  h2 {
+    margin-top: PX(133);
+    margin-bottom: PX(47);
+    color: #fff;
+    font-size: PX(50);
+    text-align: center;
+  }
+  p {
+    overflow: hidden;
+    width: PX(530);
+    height: PX(82);
+    margin: 0 auto PX(30);
+    border: 2px solid #666666;
+    border-radius: PX(15);
+    span{
+      display: inline-block;
+      width: PX(85);
+      height: PX(85);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    strong {
+      box-sizing: border-box;
+      display: inline-block;
+      float: right;
+      padding-left: PX(10);
+      width: PX(440);
+      height: PX(82);
+      line-height: PX(82);
+      color: #757575;
+      font-size: PX(30);
+      text-align: left;
+    }
+  }
+  .avatar {
+    position: absolute;
+    left: 50%;
+    top: PX(750);
+    transform: translate3d(-50%, 0, 0);
+    width: PX(320);
+    height: PX(320);
+  }
+}
