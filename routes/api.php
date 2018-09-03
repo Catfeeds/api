@@ -211,3 +211,8 @@ Route::post('ali/oss/upload/image', 'Api\ImageController@aliOssUploadImage');
  * coach 照片存储
  */
 Route::post('coach/upload/image', 'Coach\CoachController@UploadImage');
+
+/*
+ * 雪佛兰电音节
+ */
+Route::post('chevy/score', 'ChevyController@api');

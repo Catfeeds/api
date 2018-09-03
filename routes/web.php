@@ -293,8 +293,4 @@ Route::get('res/clari/{id}', 'Clari\ClariController@index');
 /*
  * 雪佛兰电音节h5入口
  */
-Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
-    Route::get('res/chevy/index', function () {
-        return '雪佛兰电音节h5入口';
-    });
-});
+Route::get('res/chevy/index', 'ChevyController@index');
