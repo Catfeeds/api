@@ -298,3 +298,4 @@ Route::get('res/chevy/index', 'ChevyController@index');
 /*
  * 复旦教师节
  */
+Route::get('res/fudan/index', 'FudanController@index');

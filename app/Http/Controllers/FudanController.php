@@ -19,4 +19,10 @@ class FudanController extends Controller
 
         return 'true';
     }
+
+    public function index()
+    {
+        $js = \EasyWeChat::js();
+        return view('fudan', compact('js'));
+    }
 }
