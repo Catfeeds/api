@@ -216,3 +216,8 @@ Route::post('coach/upload/image', 'Coach\CoachController@UploadImage');
  * 雪佛兰电音节
  */
 Route::post('chevy/score', 'ChevyController@api');
+
+/*
+ * 复旦教师节
+ */
+Route::get('fudan/user', 'FudanController@info');
