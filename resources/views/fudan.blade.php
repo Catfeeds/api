@@ -133,7 +133,7 @@
         wx.onMenuShareTimeline({
             title: '复旦大学教师节祝福', // 分享标题
             link: window.location.href,
-            imgUrl: "logo.jpg", // 分享图标
+            imgUrl: "{{ asset('res/fudan/logo.jpg') }}", // 分享图标
             success: function () {
             }
         });
@@ -142,7 +142,7 @@
             title: '复旦大学教师节祝福', // 分享标题
             desc: " ", // 分享描述
             link: window.location.href,
-            imgUrl: "logo.jpg", // 分享图标
+            imgUrl: "{{ asset('res/fudan/logo.jpg') }}", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
             }
