@@ -220,4 +220,4 @@ Route::post('chevy/score', 'ChevyController@api');
 /*
  * 复旦教师节
  */
-Route::get('fudan/user', 'FudanController@info');
+Route::post('fudan/user', 'FudanController@info');
