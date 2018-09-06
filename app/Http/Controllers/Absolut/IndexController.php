@@ -17,4 +17,9 @@ class IndexController extends Controller
 //        return $base->response('png');
 
     }
+
+    public function pad($id)
+    {
+        return view('absolut.pad', compact('id'));
+    }
 }
