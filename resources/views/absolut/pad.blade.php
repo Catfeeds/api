@@ -183,7 +183,7 @@
       <div class="print twinkle"></div>
       <div class="again twinkle"></div>
     </div>
-    <div class="qr_code"><img src="http://touchworld.oss-cn-shanghai.aliyuncs.com/absolut/pad/qr_codeTest.png"></div>
+    <div class="qr_code"><img src="http://touchworld.oss-cn-shanghai.aliyuncs.com/absolut/pad/qr_code{{$id}}.png"></div>
     <div class="popup_qrCode">
       <div class="qrText">扫描二维码保存</div>
       <div class="qrCode"><img></div>
