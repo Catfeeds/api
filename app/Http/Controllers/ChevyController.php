@@ -15,7 +15,7 @@ class ChevyController extends Controller
 
     public function api(Request $request)
     {
-        $score= $request->score;
+        $score = $request->score;
         $user = Chevy::where('openid', $request->openid)->first();
         if (is_null($user)) return 'false';
 
@@ -36,5 +36,18 @@ class ChevyController extends Controller
         $user->save();
 
         return 'true';
+    }
+
+    /*
+     * h5游戏结束跳转排行榜
+     */
+    public function h5rank(Request $request)
+    {
+        $user = Chevy::where('openid', $request->openid)->first();
+        $cb = Carbon::createFromFormat('Y-m-d H:i:s', $request->gameTime);
+        if ($cb < $user->updated_at) {
+            return 'true';
+        }
+        return 'false';
     }
 }
