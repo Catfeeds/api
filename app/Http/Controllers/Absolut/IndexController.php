@@ -8,18 +8,21 @@ use Intervention\Image\Facades\Image;
 
 class IndexController extends Controller
 {
-    public function test()
-    {
-        //合成基础图片
-//        $base = Image::make(public_path('res/absolut/base_bg.png'));
-//        $img = Image::make(public_path('res/absolut/test.png'))->resize(1767,2473);
-//        $base->insert($img, 'top-left', 154, 114);
-//        return $base->response('png');
-
-    }
-
     public function pad($id)
     {
         return view('absolut.pad', compact('id'));
+    }
+
+    public function phone()
+    {
+        $js = \EasyWeChat::js();
+        return view('absolut.phone', compact('js'));
+    }
+
+    public function share(Request $request)
+    {
+        $js = \EasyWeChat::js();
+        $path = $request->path;
+        return view('absolut.share', compact('path','js'));
     }
 }

@@ -304,3 +304,5 @@ Route::get('res/fudan/index', 'FudanController@index');
  * absolut
  */
 Route::get('res/absolut/pad/{id}', 'Absolut\IndexController@pad');
+Route::get('res/absolut/phone/index', 'Absolut\IndexController@phone');
+Route::get('res/absolut/share', 'Absolut\IndexController@share');
