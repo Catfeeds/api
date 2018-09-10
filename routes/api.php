@@ -16,8 +16,15 @@ use Illuminate\Http\Request;
 /**
  * 公共接口
  */
+
 //二维码生成接口
 Route::get('qrcode/generate', 'Api\QrcodeController@qrcode');
+
+/*
+ * 腾讯AI接口
+ */
+Route::post('face/cosmetic', 'Api\TencentAIController@faceCosmetic');
+Route::post('img/filter', 'Api\TencentAIController@imgFilter');
 
 //音频上传接口
 Route::post('audio/upload', 'Api\\AudioController@upload');
@@ -223,7 +230,3 @@ Route::post('chevy/redirect', 'ChevyController@h5rank');
  */
 Route::post('fudan/user', 'FudanController@info');
 
-/*
- * 欧莱雅api接口
- */
-Route::post('facecosmetic', 'Oreal\ApiController@faceCosmetic');
