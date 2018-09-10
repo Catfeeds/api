@@ -43,7 +43,7 @@
 
 <body>
 <section class="page1 hide">
-    <button id="checkJsApi">扫码</button>
+    <button id="">扫码</button>
 </section>
 <section class="page2">
     <p>是会员</p>
