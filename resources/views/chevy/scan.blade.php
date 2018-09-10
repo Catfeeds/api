@@ -109,28 +109,34 @@
         document.querySelector('#checkJsApi').onclick = function () {
             wx.checkJsApi({
                 jsApiList: [
-                    'getNetworkType',
-                    'previewImage'
+                    'scanQRCode',
                 ],
                 success: function (res) {
-                    console.log(JSON.stringify(res))
+                    alert(JSON.stringify(res))
                 }
             });
         };
 
         $('.page1 button').on('click', function () {
+            // wx.scanQRCode({
+            //     needResult: 1,
+            //     scanType: ["qrCode", "barCode"],
+            //     success: function (res) {
+            //         var vip = JSON.stringify(res.resultStr)
+            //         var vips = vipArr.join()
+            //         if (vips.indexOf(vip) > -1) {
+            //             $('.page2 p').text('是会员')
+            //         } else {
+            //             $('.page2 p').text('不是会员')
+            //         }
+            //         $('.page2').show().siblings('section').hide()
+            //     }
+            // });
             wx.scanQRCode({
                 needResult: 1,
-                scanType: ["qrCode", "barCode"],
+                desc: 'scanQRCode desc',
                 success: function (res) {
-                    var vip = JSON.stringify(res.resultStr)
-                    var vips = vipArr.join()
-                    if (vips.indexOf(vip) > -1) {
-                        $('.page2 p').text('是会员')
-                    } else {
-                        $('.page2 p').text('不是会员')
-                    }
-                    $('.page2').show().siblings('section').hide()
+                    alert(JSON.stringify(res));
                 }
             });
         })
