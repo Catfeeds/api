@@ -52,7 +52,7 @@
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
 <script type="application/javascript">
-    wx.config(<?php echo $js->config(array('scanQRCode'), false) ?>);
+    wx.config(<?php echo $js->config(array('scanQRCode'), true) ?>);
     var vipArr = [
         'a139480a-1f44-4081-92e7-11d223cf0cc3',
         '9abb4e9c-40a4-482e-9f78-0b272dbe14cb',
