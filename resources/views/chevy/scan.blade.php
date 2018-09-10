@@ -115,20 +115,20 @@
                     alert(JSON.stringify(res))
                 }
             });
-            // wx.scanQRCode({
-            //     needResult: 1,
-            //     scanType: ["qrCode", "barCode"],
-            //     success: function (res) {
-            //         var vip = JSON.stringify(res.resultStr)
-            //         var vips = vipArr.join()
-            //         if (vips.indexOf(vip) > -1) {
-            //             $('.page2 p').text('是会员')
-            //         } else {
-            //             $('.page2 p').text('不是会员')
-            //         }
-            //         $('.page2').show().siblings('section').hide()
-            //     }
-            // });
+            wx.scanQRCode({
+                needResult: 1,
+                scanType: ["qrCode", "barCode"],
+                success: function (res) {
+                    var vip = JSON.stringify(res.resultStr)
+                    var vips = vipArr.join()
+                    if (vips.indexOf(vip) > -1) {
+                        $('.page2 p').text('是会员')
+                    } else {
+                        $('.page2 p').text('不是会员')
+                    }
+                    $('.page2').show().siblings('section').hide()
+                }
+            });
         };
 
         $('.page1 button').on('click', function () {
