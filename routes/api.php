@@ -226,4 +226,4 @@ Route::post('fudan/user', 'FudanController@info');
 /*
  * 欧莱雅api接口
  */
-Route::post('facecosmetic', 'Oreal\ApiController@faceDecoration');
+Route::post('facecosmetic', 'Oreal\ApiController@faceCosmetic');
