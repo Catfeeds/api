@@ -111,10 +111,7 @@
                 needResult: 1,
                 scanType: ["qrCode", "barCode"],
                 success: function (res) {
-                    var vip = JSON.stringify(res.resultStr)
-                    alert(vip)
-                    // var vips = vipArr.join()
-                    if (vipArr.indexOf(vip) > -1) {
+                    if (vipArr.indexOf(res.resultStr) > -1) {
                         $('.page2 p').text('是会员')
                     } else {
                         $('.page2 p').text('不是会员')
