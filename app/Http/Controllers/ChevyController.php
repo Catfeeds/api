@@ -8,11 +8,47 @@ use Illuminate\Http\Request;
 
 class ChevyController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     *
+     * 雪佛兰首页，通过官方公众号授权回调
+     */
     public function index(Request $request)
     {
-        return '雪佛兰电音节h5入口';
+        $openid = $request->openid;
+        $nickname = $request->nickname;
+        $avatar = $request->headimage;
+
+        $user = Chevy::firstOrCreate(
+            ['openid' => $openid],[
+                'nickname' => $nickname,
+                'avatar' => $avatar,
+                'score' => 0,
+                'top' => 0,
+        ]);
+        return view('chevy.index', compact('user'));
     }
 
+    /*
+     * h5 排行榜
+     */
+    public function rank()
+    {
+        $rank = Chevy::orderBy('top', 'desc')->limit(100)->get();
+        return view('chevy.rank', compact('rank'));
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     *
+     * 扫码验证vip
+     */
+    public function scan()
+    {
+        $js = \EasyWeChat::js();
+        return view('chevy.scan', compact('js'));
+    }
     public function api(Request $request)
     {
         $score = $request->score;

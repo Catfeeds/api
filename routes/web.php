@@ -294,11 +294,12 @@ Route::get('res/clari/{id}', 'Clari\ClariController@index');
  * 雪佛兰电音节h5入口
  */
 Route::get('res/chevy/index', 'ChevyController@index');
-
+Route::get('res/chevy/rank/index', 'ChevyController@rank');
+Route::get('res/chevy/scan/index', 'ChevyController@scan');
 /*
- * 复旦教师节
+ * 复旦教师节(取消)
  */
-Route::get('res/fudan/index', 'FudanController@index');
+//Route::get('res/fudan/index', 'FudanController@index');
 
 /*
  * absolut

@@ -1,0 +1,159 @@
+@mixin bg ($url) {
+  background: url($url) no-repeat;
+  background-size: 100% 100%;
+}
+
+@function PX ($px) {
+  @return $px / 750 * 10 * 1rem;
+}
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include bg('../images/bg.jpg');
+}
+section {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  margin-top: PX(-610);
+  width: PX(750);
+  height: PX(1220);
+}
+.hide {
+  display: none;
+}
+@keyframes breathing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+.breathing {
+  animation: breathing 0.5s linear alternate infinite;
+}
+
+.page6 {
+  .rank_frame {
+    position: relative;
+    overflow: hidden;
+    width: PX(679);
+    height: PX(1126);
+    margin: PX(47) auto 0;
+    @include bg('../images/rank_frame.png');
+    .myInfo {
+      margin-left: PX(-50);
+      margin-top: PX(120);
+      text-align: center;
+      .avatar {
+        margin-right: PX(10);
+        width: PX(60);
+        height: PX(60);
+        border-radius: 50%;
+      }
+      span {
+        display: inline-block;
+        height: PX(60);
+        line-height: PX(60);
+        vertical-align: top;
+        font-size: PX(25);
+        color: #fff;
+      }
+    }
+    .rank {
+      overflow: scroll;
+      position: absolute;
+      top: PX(248);
+      left: PX(64);
+      width: PX(556);
+      height: PX(716);
+      color: #fff;
+      li {
+        display: flex;
+        flex-direction: row;
+        padding: PX(12) PX(32) PX(12) PX(48);
+        height: PX(94);
+        .avatar {
+          overflow: hidden;
+          box-sizing: border-box;
+          flex: 0 0 PX(90);
+          margin-top: PX(9);
+          img {
+            width: PX(77);
+            height: PX(77);
+            border-radius: 50%;
+          }
+        }
+        .info {
+          position: relative;
+          flex: 0 0 PX(154);
+          overflow: hidden;
+          box-sizing: border-box;
+          width: 100%;
+          font-size: PX(20);
+          span {
+            overflow: hidden;
+            position: absolute;
+            height: PX(30);
+            top: PX(18);
+            // white-space: nowrap;
+          }
+          time {
+            position: absolute;
+            top: PX(50);
+          }
+        }
+        .score {
+          box-sizing: border-box;
+          flex: 0 0 PX(135);
+          padding: 0 PX(10);
+          font-size: PX(20);
+          div {
+            margin-top: PX(25);
+            width: 100%;
+            height: PX(42);
+            line-height: PX(42);
+            background: linear-gradient(to right, #08539f , #1a1666);
+            text-align: center;
+            border-radius: PX(20);
+          }
+        }
+        .ranking {
+          flex: 0 0 PX(100);
+          img {
+            margin-top: PX(10);
+            margin-left: PX(14);
+            width: PX(74);
+            height: PX(68);
+          }
+          span {
+            display: block;
+            width: PX(46);
+            height: PX(46);
+            line-height: PX(46);
+            margin-top: PX(18);
+            margin-left: PX(25);
+            text-align: center;
+            color: #ff00ff;
+            font-size: PX(30);
+            border: 2px solid #ff00ff;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+  .btn_index {
+    position: absolute;
+    left: 50%;
+    top: PX(1030);
+    transform: translate3d(-50%, 0, 0);
+    z-index: 10;
+    width: PX(180);
+    height: PX(40);
+    @include bg('../images/btn_index.png');
+  }
+}
