@@ -46,7 +46,7 @@
 </section>
 <section class="page5 hide">
     <div class="page4_frame"></div>
-    <img class="qrCode" src="{{ url('api/qrcode/generate') }}?text={'openid':'{{ $user->openid }}'}">
+    <img class="qrCode" src='{{ url("api/qrcode/generate") }}?text={"openid":"{{ $user->openid }}"}'>
     <div class="btn_index breathing"></div>
 </section>
 <script>
