@@ -21,7 +21,7 @@
         <ul class="rank">
             @foreach($rank as $item)
                 <li>
-                    <div class="avatar"><img src="images/bg.jpg"></div>
+                    <div class="avatar"><img src="{{ $item->avatar }}"></div>
                     <div class="info">
                         <span>{{ $item->nickname }}</span>
                         <time>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $item->updated_at)->format('m-d H:i') }}</time>
