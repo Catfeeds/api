@@ -65,9 +65,7 @@ class ChevyController extends Controller
         //录入今日分数
         $today = Carbon::today();
         if ($user->updated_at > $today) {
-            if ($user->score < $score) {
                 $user->score = $score;
-            }
         } else {
             $user->score = $score;
         }
