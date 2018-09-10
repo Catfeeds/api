@@ -107,14 +107,14 @@
     ]
     wx.ready(function () {
         document.querySelector('#checkJsApi').onclick = function () {
-            wx.checkJsApi({
-                jsApiList: [
-                    'scanQRCode',
-                ],
-                success: function (res) {
-                    alert(JSON.stringify(res))
-                }
-            });
+            // wx.checkJsApi({
+            //     jsApiList: [
+            //         'scanQRCode',
+            //     ],
+            //     success: function (res) {
+            //         alert(JSON.stringify(res))
+            //     }
+            // });
             wx.scanQRCode({
                 needResult: 1,
                 scanType: ["qrCode", "barCode"],
