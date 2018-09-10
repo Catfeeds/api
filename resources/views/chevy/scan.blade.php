@@ -108,7 +108,7 @@
     wx.ready(function () {
         document.querySelector('#checkJsApi').onclick = function () {
             wx.scanQRCode({
-                needResult: 0,
+                needResult: 1,
                 scanType: ["qrCode", "barCode"],
                 success: function (res) {
                     var vip = JSON.stringify(res.resultStr)
