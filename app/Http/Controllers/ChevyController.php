@@ -39,6 +39,7 @@ class ChevyController extends Controller
         if ($request->openid) {
             $user = Chevy::where('openid', $request->openid)->first();
             $user->rank = Chevy::where('top', '>', $user->score)->count();
+            $user->rank += 1;
             return view('chevy.rank', compact('rank', 'user'));
 
         }
