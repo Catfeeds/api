@@ -260,7 +260,7 @@
 
     $(function () {
         $('.page5 .again').on('touchend', () => {
-            window.location.replace('{{ url('res/phone/index') }}') // H5入口地址
+            window.location.replace('{{ url('res/absolut/phone/index') }}') // H5入口地址
         })
         $('.page5 .share').on('touchend', () => {
             $('.page5 .shareBox').show()

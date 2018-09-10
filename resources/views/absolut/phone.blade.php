@@ -209,7 +209,7 @@
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: 'ABSOLUT 绝对创意', // 分享标题
-            desc: "DIY你的绝对创意小画作, 用创意打开世界!", // 分享描述
+            desc: "DIY你的绝对创意小画, 用创意打开世界!", // 分享描述
             link: window.location.href,
             imgUrl: "{{ url('res/absolut/share.png') }}", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
