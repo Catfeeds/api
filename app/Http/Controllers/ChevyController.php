@@ -33,9 +33,15 @@ class ChevyController extends Controller
     /*
      * h5 排行榜
      */
-    public function rank()
+    public function rank(Request $request)
     {
         $rank = Chevy::orderBy('top', 'desc')->limit(100)->get();
+        if ($request->openid) {
+            $user = Chevy::where('openid', $request->openid)->fist();
+            $user->rank = Chevy::where('top', '>', $user->top)->count();
+            return view('chevy.rank', compact('rank', 'user'));
+
+        }
         return view('chevy.rank', compact('rank'));
     }
 

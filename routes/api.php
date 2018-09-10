@@ -222,3 +222,8 @@ Route::post('chevy/redirect', 'ChevyController@h5rank');
  * 复旦教师节
  */
 Route::post('fudan/user', 'FudanController@info');
+
+/*
+ * 欧莱雅api接口
+ */
+Route::get('facecosmetic', 'Oreal\ApiController@faceDecoration');
