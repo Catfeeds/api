@@ -36,7 +36,7 @@ class ApiController extends Controller
     public function faceCosmetic(Request $request)
     {
         $image = $request->input('photo');
-
+        $id = $request->id;
         $image = str_replace('data:image/jpeg;base64,', '' , $image);
         $image = str_replace('data:image/png;base64,', '' , $image);
         $image = str_replace('data:image/jpg;base64,', '' , $image);
@@ -44,7 +44,7 @@ class ApiController extends Controller
         $params = array(
             'app_id'     => env('tencent-AI-AppId'),
             'image'      => $image,
-            'cosmetic'   => '1',
+            'cosmetic'   => $id,
             'time_stamp' => strval(time()),
             'nonce_str'  => strval(rand()),
             'sign'       => '',
