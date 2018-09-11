@@ -75,7 +75,7 @@
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: '雪佛兰电音节', // 分享标题
-            desc: " ", // 分享描述
+            desc: "当狂热电音遇见雪佛兰", // 分享描述
             link: 'https://m.chevrolet.com.cn/act/ultramusic/Auth.aspx?scope=snsapi_userinfo&redirect_uri=https://api.shanghaichujie.com/res/chevy/index',
             imgUrl: "{{ asset('res/chevy/share.png') }}", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
