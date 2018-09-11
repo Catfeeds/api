@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-    <title>雪佛兰</title>
+    <title>雪佛兰电音节排行榜</title>
     <script src="js/rem.js"></script>
     <link rel="stylesheet" href="css/index.css">
 </head>
