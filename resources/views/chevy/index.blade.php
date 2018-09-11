@@ -49,7 +49,7 @@
   </section>
   <section class="page5 hide">
     <div class="page4_frame"></div>
-    <img class="qrCode" src="https://qr.api.cli.im/qr?data=1&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=de32a4c489f3b70d8e9cc43ca476e2c8">
+    <img class="qrCode" src='{{ url("api/qrcode/generate") }}?text={"openid":"{{ $user->openid }}"}'>
     <div class="btn_index breathing"></div>
   </section>
   <script>
