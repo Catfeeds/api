@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\OrealUser;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class ApiController extends Controller
 {
     public function register(Request $request)
     {
