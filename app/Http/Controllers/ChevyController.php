@@ -27,7 +27,8 @@ class ChevyController extends Controller
             'score' => 0,
             'top' => 0,
         ]);
-        return view('chevy.index', compact('user'));
+        $js = \EasyWeChat::js();
+        return view('chevy.index', compact('user', 'js'));
     }
 
     /*
