@@ -12,9 +12,7 @@
 |
 */
 
-Route::get('test', function () {
-
-});
+Route::get('test', 'TestController@test');
 
 /*
  * 科思创项目

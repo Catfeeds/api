@@ -230,3 +230,7 @@ Route::post('chevy/redirect', 'ChevyController@h5rank');
  */
 Route::post('fudan/user', 'FudanController@info');
 
+/*
+ * 欧莱雅h5接口
+ */
+Route::post('oreal/user', 'Oreal\IndexController@register');
