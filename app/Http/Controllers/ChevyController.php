@@ -21,11 +21,11 @@ class ChevyController extends Controller
         $avatar = $request->headimage;
 
         $user = Chevy::firstOrCreate(
-            ['openid' => $openid],[
-                'nickname' => $nickname,
-                'avatar' => $avatar,
-                'score' => 0,
-                'top' => 0,
+            ['openid' => $openid], [
+            'nickname' => $nickname,
+            'avatar' => $avatar,
+            'score' => 0,
+            'top' => 0,
         ]);
         return view('chevy.index', compact('user'));
     }
@@ -35,7 +35,7 @@ class ChevyController extends Controller
      */
     public function rank(Request $request)
     {
-        $rank = Chevy::orderBy('top', 'desc')->limit(100)->get();
+        $rank = Chevy::where('top', '>', 0)->orderBy('top', 'desc')->limit(100)->get();
         if ($request->openid) {
             $user = Chevy::where('openid', $request->openid)->first();
             $user->rank = Chevy::where('top', '>', $user->score)->count();
@@ -56,6 +56,7 @@ class ChevyController extends Controller
         $js = \EasyWeChat::js();
         return view('chevy.scan', compact('js'));
     }
+
     public function api(Request $request)
     {
         $score = $request->score;
@@ -65,7 +66,7 @@ class ChevyController extends Controller
         //录入今日分数
         $today = Carbon::today();
         if ($user->updated_at > $today) {
-                $user->score = $score;
+            $user->score = $score;
         } else {
             $user->score = $score;
         }
