@@ -60,7 +60,7 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.hideMenuItems({
-            menuList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
+            menuList: ['menuItem:share:appMessage', 'menuItem:share:timeline','menuItem:share:qq','menuItem:share:weiboApp'] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
         });
     });
     var openid = '{{ $user->openid }}'
