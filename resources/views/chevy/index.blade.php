@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
   <title>雪佛兰</title>
   <script src="js/rem.js"></script>
-<link href="css/app.2e167.css?2e1675d09f25535aa7ee" rel="stylesheet"></head>
+<link href="css/app.9ae78.css?9ae78891641e82d87e73" rel="stylesheet"></head>
 
 <body>
   <div class="logo"></div>
@@ -56,6 +56,6 @@
     var openid = '{{ $user->openid }}'
     var gameTime = '{{ $user->updated_at }}'
   </script>
-<script type="text/javascript" src="js/app.2e167.js?2e1675d09f25535aa7ee"></script></body>
+<script type="text/javascript" src="js/app.9ae78.js?9ae78891641e82d87e73"></script></body>
 
 </html>
