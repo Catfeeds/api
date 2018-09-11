@@ -53,12 +53,6 @@
     <img class="qrCode" src='{{ url("api/qrcode/generate") }}?text={"openid":"{{ $user->openid }}"}'>
     <div class="btn_index breathing"></div>
 </section>
-<script>
-    var openid = '{{ $user->openid }}'
-    var gameTime = '{{ $user->updated_at }}'
-</script>
-<script type="text/javascript" src="js/app.9ae78.js?9ae78891641e82d87e73"></script>
-</body>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
 <script type="application/javascript">
     wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), true) ?>);
@@ -83,5 +77,9 @@
             }
         });
     });
+    var openid = '{{ $user->openid }}'
+    var gameTime = '{{ $user->updated_at }}'
 </script>
+<script type="text/javascript" src="js/app.9ae78.js?9ae78891641e82d87e73"></script>
+</body>
 </html>
