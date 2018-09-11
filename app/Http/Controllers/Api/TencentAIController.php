@@ -58,7 +58,7 @@ class TencentAIController extends Controller
         );
         $params['sign'] = $this->getReqSign($params);
         $client = new Client([
-            'timeout' => 5.0,
+            'timeout' => 20.0,
         ]);
         $response = $client->request('POST', 'https://api.ai.qq.com/fcgi-bin/ptu/ptu_facecosmetic', [
             'form_params' => $params
