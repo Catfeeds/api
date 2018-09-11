@@ -112,7 +112,7 @@ class TencentAIController extends Controller
 
         $params['sign'] = $this->getReqSign($params);
         $client = new Client([
-            'timeout' => 5.0,
+            'timeout' => 20.0,
         ]);
         $response = $client->request('POST', $url, [
             'form_params' => $params
