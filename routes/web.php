@@ -305,7 +305,7 @@ Route::get('res/chevy/scan/index', 'ChevyController@scan');
 Route::get('res/absolut/pad/{id}', 'Absolut\IndexController@pad');
 Route::get('res/absoult/phone', function () {
     return redirect(url('res/absolut/phone/index'));
-})
+});
 Route::get('res/absolut/phone/index', 'Absolut\IndexController@phone');
 Route::get('res/absolut/share', 'Absolut\IndexController@share');
 
