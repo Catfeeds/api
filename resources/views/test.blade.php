@@ -23,7 +23,7 @@
 
         <input-number :max="max" :min="1" v-model="id"></input-number>
 
-        <i-button type="primary" v-on:click="confirm" v-bind:disabled="bool">生成</i-button>
+        <i-button type="primary" v-on:click="confirm" v-show="bool">生成</i-button>
     </div>
 
 </div>
