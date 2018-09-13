@@ -17,7 +17,9 @@ class CoachController extends Controller
      */
     public function UploadImage(Request $request)
     {
-        $id = Redis::incr('coach');
+        Redis::setnx('coach', 100000);
+        $id = Redis::get('coach');
+        Redis::set('coach', $id + rand(10, 100));
         Storage::disk('unitytouch')->putFileAs('Fred/coach', $request->file('image'), $id . '.png');
         return $id;
     }
