@@ -7,7 +7,7 @@
   <meta name="msapplication-tap-highlight" content="no" />
   <title>ABSOLUT</title>
   <script type="text/javascript" src="js/rem.js"></script>
-<link href="css/app.9c8df.css?9c8dfde2ad9b9b9435e9" rel="stylesheet"></head>
+<link href="css/app.27537.css?27537ec76a2d68b1d9d5" rel="stylesheet"></head>
 <body>
   <section class="loading">
     <div class="logo"></div>
@@ -204,5 +204,5 @@
      */
     store = {{$id}}
   </script>
-<script type="text/javascript" src="js/app.9c8df.js?9c8dfde2ad9b9b9435e9"></script></body>
+<script type="text/javascript" src="js/app.27537.js?27537ec76a2d68b1d9d5"></script></body>
 </html>
