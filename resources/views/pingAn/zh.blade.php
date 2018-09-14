@@ -173,7 +173,7 @@
       wx.ready(function () {
           // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
           wx.onMenuShareTimeline({
-              title: '平安云加速器D-day', // 分享标题
+              title: '平安云加速器D-day邀请函', // 分享标题
               link: '{{ url('res/pingAn/en/index') }}',
               imgUrl: "{{ asset('res/pingAn/share.png') }}", // 分享图标
               success: function () {
@@ -181,7 +181,7 @@
           });
           // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
           wx.onMenuShareAppMessage({
-              title: '平安云加速器D-day', // 分享标题
+              title: '平安云加速器D-day邀请函', // 分享标题
               desc: "主题：创新 成长 创业 加速器", // 分享描述
               link: '{{ url('res/pingAn/en/index') }}',
               imgUrl: "{{ asset('res/pingAn/share.png') }}", // 分享图标
