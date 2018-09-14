@@ -174,7 +174,7 @@
           // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
           wx.onMenuShareTimeline({
               title: 'Ping An Cloud Accelerator D-Day', // 分享标题
-              link: window.location.href,
+              link: '{{ url('res/pingAn/en/index') }}',
               imgUrl: "{{ asset('res/pingAN/share.png') }}", // 分享图标
               success: function () {
               }
@@ -183,7 +183,7 @@
           wx.onMenuShareAppMessage({
               title: 'Ping An Cloud Accelerator D-Day', // 分享标题
               desc: "Innovation Development Start-up Accelerator", // 分享描述
-              link: window.location.href,
+              link: '{{ url('res/pingAn/en/index') }}',
               imgUrl: "{{ asset('res/pingAN/share.png') }}", // 分享图标
               type: 'link', // 分享类型,music、video或link，不填默认为link
               success: function () {
