@@ -234,3 +234,8 @@ Route::post('fudan/user', 'FudanController@info');
  * 欧莱雅h5接口
  */
 Route::post('oreal/user', 'Oreal\ApiController@register');
+
+/*
+ * 平安云加速器D-day
+ */
+Route::post('pingAn/user', 'PingAn\ApiController@user');
