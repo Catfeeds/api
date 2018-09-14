@@ -229,11 +229,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('tmail/admin', 'Tmail\AdminController@index');
-Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
-    Route::get('tmail/index', 'Tmail\IndexController@index');
-});
-
 /**
  * 阿玛尼视频上传显示
  */
@@ -313,3 +308,9 @@ Route::get('res/absolut/share', 'Absolut\IndexController@share');
  * 欧莱雅h5
  */
 Route::get('res/oreal/register/index', 'Oreal\IndexController@register');
+
+/*
+ * 平安加速器
+ */
+Route::get('res/pingAn/zh/index', 'PingAn\IndexController@zh');
+Route::get('res/pingAn/en/index', 'PingAn\IndexController@en');

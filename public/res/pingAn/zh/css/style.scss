@@ -1,0 +1,533 @@
+html{
+  /* 禁止选择文本 */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  /* 禁止文字自动调整大小*/
+  -webkit-text-size-adjust: 100%;
+}
+body{
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd{
+  margin: 0;
+}
+ul,ol{
+  padding: 0;
+  list-style: none;
+}
+img{
+  border: none;
+  vertical-align: top;
+}
+a{
+  text-decoration: none;
+}
+img,a{
+  /* 禁止长按页面弹出菜单 */
+  -webkit-touch-callout: none;
+}
+input,button,select, textarea{
+  box-sizing: border-box;
+  outline: none;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+a,input,button, textarea, img{
+  /* 禁止IOS点击元素高亮 */
+  -webkit-tap-highlight-color: transparent;
+}
+/*隐藏滚轮*/
+::-webkit-scrollbar {
+  display: none;
+}
+@mixin bg ($url) {
+  background: url($url) no-repeat;
+  background-size: 100% 100%;
+}
+
+@function PX ($px) {
+  @return $px / 750 * 10 * 1rem;
+}
+html{
+  /* 禁止选择文本 */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  /* 禁止文字自动调整大小*/
+  -webkit-text-size-adjust: 100%;
+}
+body{
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd{
+  margin: 0;
+}
+ul,ol{
+  padding: 0;
+  list-style: none;
+}
+img{
+  border: none;
+  vertical-align: top;
+}
+a{
+  text-decoration: none;
+}
+img,a{
+  /* 禁止长按页面弹出菜单 */
+  -webkit-touch-callout: none;
+}
+input,button,select, textarea{
+  box-sizing: border-box;
+  outline: none;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+a,input,button, textarea{
+  /* 禁止IOS点击元素高亮 */
+  -webkit-tap-highlight-color: transparent;
+}
+/*隐藏滚轮*/
+::-webkit-scrollbar {
+  display: none;
+}
+// @font-face{
+//   font-family: '华文行楷';
+//   src: url('../fonts/STXINGKA.ttf');
+// }
+html, body {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  @include bg('../images/bg.jpg');
+  .swiper-slide {
+    position: relative;
+  }
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  width: PX(750);
+  height: PX(1220);
+  // @include bg('../images/bg.jpg');
+}
+
+.logo {
+  position: absolute;
+  left: PX(50);
+  top: PX(70);
+  z-index: 100;
+  width: PX(203);
+  height: PX(39);
+  @include bg('../images/logo.png')
+}
+.hide {
+  display: none;
+}
+
+.page1 {
+  .container {
+    @include bg('../images/page1_bg.jpg');
+  }
+  .title {
+    position: absolute;
+    top: PX(290);
+    left: 50%;
+    margin-left: PX(-354);
+    width: PX(705);
+    height: PX(407);
+    @include bg('../images/page1_title.png')
+  }
+  .small-title {
+    position: absolute;
+    top: PX(730);
+    left: 50%;
+    margin-left: PX(-181);
+    width: PX(362);
+    height: PX(72);
+    @include bg('../images/page1_small_title.png')
+  }
+}
+
+.page2 {
+  color: #fff;
+  .title {
+    position: absolute;
+    top: PX(210);
+    left: 50%;
+    margin-left: PX(-134);
+    width: PX(269);
+    height: PX(66);
+    @include bg('../images/page2_title.png');
+  }
+  .content {
+    position: absolute;
+    top: PX(371);
+    left: 50%;
+    margin-left: PX(-305);
+    width: PX(611);
+    height: PX(566);
+    @include bg('../images/page2_content.png');
+  }
+  .content2 {
+    position: absolute;
+    top: PX(996);
+    left: 50%;
+    margin-left: PX(-305);
+    width: PX(611);
+    height: PX(76);
+    @include bg('../images/page2_content2.png');
+  }
+}
+
+.page3 {
+  .title {
+    position: absolute;
+    top: PX(183);
+    left: 50%;
+    margin-left: PX(-250);
+    width: PX(499);
+    height: PX(111);
+    @include bg('../images/page3_title.png')
+  }
+  .content {
+    position: absolute;
+    top: PX(335);
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    .people {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: PX(130);
+      margin-bottom: PX(50);
+      .avatar {
+        width: PX(126);
+        height: PX(126);
+        margin-right: PX(24);
+      }
+      .line {
+        width: 4px;
+        height: 100%;
+        margin-right: PX(24);
+        background: #4e8fab;
+      }
+      .desc {
+        height: PX(106);
+      }
+    }
+  }
+}
+
+.page4 {
+  .title {
+    position: absolute;
+    top: PX(183);
+    left: 50%;
+    margin-left: PX(-250);
+    width: PX(499);
+    height: PX(111);
+    @include bg('../images/page3_title.png')
+  }
+  .content {
+    position: absolute;
+    top: PX(335);
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    .people {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: PX(130);
+      margin-bottom: PX(50);
+      .avatar {
+        width: PX(126);
+        height: PX(126);
+        margin-right: PX(24);
+      }
+      .line {
+        width: 4px;
+        height: 100%;
+        margin-right: PX(24);
+        background: #4e8fab;
+      }
+      .desc {
+        height: PX(106);
+      }
+    }
+  }
+}
+
+.page5 {
+  .title {
+    position: absolute;
+    top: PX(200);
+    left: 50%;
+    margin-left: PX(-134);
+    width: PX(269);
+    height: PX(68);
+    @include bg('../images/page5_title.png');
+  }
+  .content {
+    box-sizing: border-box;
+    position: absolute;
+    top: PX(370);
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    width: 100%;
+    padding: 0 PX(120);
+    .line {
+      position: absolute;
+      top: PX(6);
+      left: PX(208);
+      width: PX(19);
+      height: PX(665);
+      @include bg('../images/page5_line.png');
+    }
+    .text1 {
+      width: PX(228);
+      height: PX(27);
+      @include bg('../images/page5_text1.png');
+    }
+    .text2 {
+      width: PX(438);
+      height: PX(67);
+      margin-top: PX(54);
+      @include bg('../images/page5_text2.png');
+    }
+    .text3 {
+      width: PX(496);
+      height: PX(95);
+      margin-top: PX(28);
+      @include bg('../images/page5_text3.png');
+    }
+    .text4 {
+      width: PX(493);
+      height: PX(63);
+      margin-top: PX(28);
+      @include bg('../images/page5_text4.png');
+    }
+    .text5 {
+      width: PX(494);
+      height: PX(62);
+      margin-top: PX(28);
+      @include bg('../images/page5_text5.png');
+    }
+    .text6 {
+      width: PX(547);
+      height: PX(64);
+      margin-top: PX(18);
+      @include bg('../images/page5_text6.png');
+    }
+    .text7 {
+      width: PX(229);
+      height: PX(27);
+      margin-top: PX(38);
+      @include bg('../images/page5_text7.png');
+    }
+    .text8{
+      width: PX(255);
+      height: PX(27);
+      margin-top: PX(50);
+      @include bg('../images/page5_text8.png');
+    }
+  }
+}
+
+.page6 {
+  .title {
+    position: absolute;
+    top: PX(200);
+    left: 50%;
+    margin-left: PX(-135);
+    width: PX(269);
+    height: PX(68);
+    @include bg('../images/page6_title.png');
+  }
+  .compass {
+    position: absolute;
+    top: PX(222);
+    left: PX(641);
+    width: PX(47);
+    height: PX(49);
+    @include bg('../images/page6_compass.png');
+  }
+  .map {
+    position: absolute;
+    top: PX(319);
+    left: 50%;
+    margin-left: PX(-290);
+    width: PX(581);
+    height: PX(530);
+    @include bg('../images/page6_map.png');
+  }
+  .tips {
+    position: absolute;
+    top: PX(860);
+    left: 50%;
+    margin-left: PX(-204);
+    width: PX(407);
+    height: PX(266);
+    @include bg('../images/page6_text.png');
+  }
+}
+
+.page7 {
+  .stage1 {
+    .title {
+      position: absolute;
+      top: PX(200);
+      left: 50%;
+      margin-left: PX(-168);
+      width: PX(336);
+      height: PX(112);
+      @include bg('../images/page7_stage1_title.png');
+    }
+    .content {
+      box-sizing: border-box;
+      position: absolute;
+      top: PX(355);
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+      width: 100%;
+      padding: 0 PX(120);
+      p {
+        margin: PX(15) 0;
+        input {
+          padding: PX(20) PX(40);
+          height: PX(86);
+          width: PX(540);
+          border: none;
+          border-radius: PX(30);
+          font-size: PX(30);
+          color: #333;
+        }
+      }
+      .text {
+        margin-top: PX(50);
+        font-size: PX(26);
+        color: #fff;
+      }
+      .updateImg {
+        box-sizing: border-box;
+        position: absolute;
+        left: 50%;
+        margin-left: PX(-175);
+        width: PX(350);
+        height: PX(79);
+        margin-top: PX(100);
+        text-align: center;
+        padding: PX(10);
+        font-size: 0;
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: PX(350);
+          height: PX(79);
+          pointer-events: none;
+        }
+        input {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .stage2 {
+    .title {
+      position: absolute;
+      top: PX(180);
+      left: 50%;
+      margin-left: PX(-168);
+      width: PX(336);
+      height: PX(131);
+      @include bg('../images/page7_stage2_title.png');
+    }
+    .content {
+      box-sizing: border-box;
+      position: absolute;
+      top: PX(300);
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+      width: 100%;
+      padding: 0 PX(100) 0 PX(150);
+      color: #fff;
+      font-size: PX(40);
+      p {
+        margin: PX(30) 0;
+        span {
+          margin-left: PX(30);
+        }
+        
+      }
+      .businessCard {
+        text-align: center;
+        img {
+          margin-left: PX(-50);
+          height: PX(200);
+        }
+      }
+      .submit {
+        margin: PX(80) 0 0 PX(50);
+        width: PX(350);
+        height: PX(78);
+        @include bg('../images/page7_submit.png')
+      }
+    }
+    .return {
+      position: absolute;
+      right: PX(50);
+      top: PX(70);
+      z-index: 100;
+      width: PX(154);
+      height: PX(38);
+      @include bg('../images/page7_return.png')
+    }
+  }
+  .stage3 {
+    .success {
+      position: absolute;
+      left: 50%;
+      margin-left: PX(-345);
+      top: PX(300);
+      width: PX(690);
+      height: PX(270);
+      @include bg('../images/page7_stage3_success.png')
+    }
+    .text {
+      position: absolute;
+      left: 50%;
+      margin-left: PX(-328);
+      top: PX(850);
+      width: PX(656);
+      height: PX(56);
+      @include bg('../images/page7_stage3_text.png')
+    }
+    .return {
+      position: absolute;
+      left: 50%;
+      margin-left: PX(-175);
+      top: PX(1000);
+      width: PX(350);
+      height: PX(78);
+      @include bg('../images/page7_stage3_return.png')
+    }
+  }
+}
