@@ -175,7 +175,7 @@
           wx.onMenuShareTimeline({
               title: 'Ping An Cloud Accelerator D-Day', // 分享标题
               link: '{{ url('res/pingAn/en/index') }}',
-              imgUrl: "{{ asset('res/pingAN/share.png') }}", // 分享图标
+              imgUrl: "{{ asset('res/pingAn/share.png') }}", // 分享图标
               success: function () {
               }
           });
@@ -184,7 +184,7 @@
               title: 'Ping An Cloud Accelerator D-Day', // 分享标题
               desc: "Innovation Development Start-up Accelerator", // 分享描述
               link: '{{ url('res/pingAn/en/index') }}',
-              imgUrl: "{{ asset('res/pingAN/share.png') }}", // 分享图标
+              imgUrl: "{{ asset('res/pingAn/share.png') }}", // 分享图标
               type: 'link', // 分享类型,music、video或link，不填默认为link
               success: function () {
               }

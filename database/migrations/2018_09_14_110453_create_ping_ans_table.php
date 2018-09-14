@@ -19,6 +19,8 @@ class CreatePingAnsTable extends Migration
             $table->string('company');
             $table->string('phone');
             $table->string('email');
+            $table->enum('type', ['短信','邮件'])->default('短信');
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }
