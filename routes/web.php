@@ -314,3 +314,8 @@ Route::get('res/oreal/register/index', 'Oreal\IndexController@register');
  */
 Route::get('res/pingAn/zh/index', 'PingAn\IndexController@zh');
 Route::get('res/pingAn/en/index', 'PingAn\IndexController@en');
+
+/*
+ * 天猫精灵活动战队
+ */
+Route::get('tmall/genie/sign', 'Tmall\GenieController@index');
