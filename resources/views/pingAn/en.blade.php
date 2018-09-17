@@ -8,7 +8,7 @@
   <title>Ping An Cloud Accelerator D-Day</title>
   <script src="js/rem.js"></script>
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/style3.css">
+  <link rel="stylesheet" href="css/style4.css">
 </head>
 
 <body>
@@ -145,12 +145,12 @@
           <div class="logo"></div>
           <div class="title ani" swiper-animate-effect="bounceInDown"></div>
           <div class="content">
-            <p class="username ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s">Name<span>空</span></p>
-            <p class="phone ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s">Phone<span>空</span></p>
-            <p class="email ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s">E-mail<span>空</span></p>
-            <p class="company ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s">Enterprise<span>空</span></p>
+            <p class="username ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">Name</span><span class="right">empty</span></p>
+            <p class="phone ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">Phone</span><span class="right">empty</span></p>
+            <p class="email ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">E-mail</span><span class="right">empty</span></p>
+            <p class="company ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">Enterprise</span><span class="right">empty</span></p>
             <p class="businessCard ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><img src="images/page1_bg.jpg"></p>
-            <div class="submit ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
+            <p class="submit ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></p>
           </div>
           <div class="return"></div>
         </div>
@@ -166,7 +166,7 @@
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/swiper-4.3.5.min.js"></script>
   <script src="js/swiper.animate1.0.3.min.js"></script>
-  <script src="js/index2.js"></script>
+  <script src="js/index4.js"></script>
   <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
   <script type="application/javascript">
       wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);

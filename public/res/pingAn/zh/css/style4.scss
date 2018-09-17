@@ -480,12 +480,19 @@ html, body {
       color: #fff;
       font-size: PX(40);
       p {
+        margin: PX(50) 0;
         word-break:break-all;
-        margin: PX(30) 0;
-        span {
-          margin-left: PX(30);
+        line-height: PX(50);
+        .left {
+          vertical-align: top;
+          display: inline-block;
+          width: PX(100);
         }
-        
+        .right {
+          vertical-align: top;
+          width: PX(400);
+          display: inline-block;
+        }
       }
       .businessCard {
         text-align: center;

@@ -11,7 +11,7 @@ $(function () {
 	var userInfo = {}
 	var mySwiper = new Swiper('.swiper-container', {
 		direction: 'vertical',
-		initialSlide: 0,
+		initialSlide: 6,
 		on: {
 			init: function () {
 				swiperAnimateCache(this)
@@ -23,12 +23,12 @@ $(function () {
 		}
 	})
 	$('.updateImg #file').on('change', (e) => {
-		let reader = new FileReader()
+		var reader = new FileReader()
 		reader.readAsDataURL(e.target.files[0])
 		reader.onload = function (e) {
 			userInfo.businessCard = reader.result
 			$('.businessCard img').attr('src', reader.result)
-			$('.businessCard img')[0].onload = () => {
+			if ($('.businessCard img').attr('src') === reader.result) {
 				$('.stage1').hide()
 				$('.stage2').show()
 				userInfo.username = $('.stage1 .username').val()
@@ -36,10 +36,24 @@ $(function () {
 				userInfo.email = $('.stage1 .email').val()
 				userInfo.company = $('.stage1 .company').val()
 				userInfo.image = reader.result
-				$('.stage2 .username span').text(userInfo.username)
-				$('.stage2 .phone span').text(userInfo.phone)
-				$('.stage2 .email span').text(userInfo.email)
-				$('.stage2 .company span').text(userInfo.company)
+				$('.stage2 .username .right').text(userInfo.username)
+				$('.stage2 .phone .right').text(userInfo.phone)
+				$('.stage2 .email .right').text(userInfo.email)
+				$('.stage2 .company .right').text(userInfo.company)
+			} else {
+				$('.businessCard img')[0].onload = () => {
+					$('.stage1').hide()
+					$('.stage2').show()
+					userInfo.username = $('.stage1 .username').val()
+					userInfo.phone = $('.stage1 .phone').val()
+					userInfo.email = $('.stage1 .email').val()
+					userInfo.company = $('.stage1 .company').val()
+					userInfo.image = reader.result
+					$('.stage2 .username .right').text(userInfo.username)
+					$('.stage2 .phone .right').text(userInfo.phone)
+					$('.stage2 .email .right').text(userInfo.email)
+					$('.stage2 .company .right').text(userInfo.company)
+				}
 			}
 		};
 	})
