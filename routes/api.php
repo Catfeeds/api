@@ -239,3 +239,9 @@ Route::post('oreal/user', 'Oreal\ApiController@register');
  * 平安云加速器D-day
  */
 Route::post('pingAn/user', 'PingAn\ApiController@user');
+
+/*
+ * 天猫精灵
+ */
+Route::post('genie/sign', 'Tmall\GenieController@sign');
+Route::get('genie/time', 'Tmall\GenieController@genieTime');
