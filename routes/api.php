@@ -245,3 +245,4 @@ Route::post('pingAn/user', 'PingAn\ApiController@user');
  */
 Route::post('genie/sign', 'Tmall\GenieController@sign');
 Route::get('genie/time', 'Tmall\GenieController@genieTime');
+Route::get('genie/confirm/{id}', 'Tmall\GenieController@confirm');
