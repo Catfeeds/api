@@ -74,15 +74,22 @@
       }
     }
 
+    $('.wrap_phone .btn_register button').on('click', register)
+    $('.wrap_pc .btn_register button').on('click', register)
 
-    $('.wrap_phone .btn_register button').on('click', function(){
-      var username = $('.wrap_phone .username').val()
-      var department = $('.wrap_phone .department').val()
-      var email = $('.wrap_phone .email').val()
-      var phone = $('.wrap_phone .phone').val()
-
+    function register () {
+      if  (window.innerWidth > 768) {
+        var username = $('.wrap_pc .username').val()
+        var department = $('.wrap_pc .department').val()
+        var email = $('.wrap_pc .email').val()
+        var phone = $('.wrap_pc .phone').val()
+      } else {
+        var username = $('.wrap_phone .username').val()
+        var department = $('.wrap_phone .department').val()
+        var email = $('.wrap_phone .email').val()
+        var phone = $('.wrap_phone .phone').val()
+      }
       var reg_email = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
-
       if (username === '') {
         alert('请输入姓名')
       } else if (department === '') {
@@ -107,49 +114,13 @@
           }
         }).done(function (res) {
           if (res.status) {
+            $('.wrap_phone .btn_register button').off('click', register)
+            $('.wrap_pc .btn_register button').off('click', register)
             alert('注册成功')
           }
         })
       }
-    })
-
-    $('.wrap_pc .btn_register button').on('click', function(){
-      var username = $('.wrap_pc .username').val()
-      var department = $('.wrap_pc .department').val()
-      var email = $('.wrap_pc .email').val()
-      var phone = $('.wrap_pc .phone').val()
-
-      var reg_email = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
-
-      if (username === '') {
-        alert('请输入姓名')
-      } else if (department === '') {
-        alert('请输入部门')
-      } else if (email === '') {
-        alert('请输入邮箱')
-      } else if (!reg_email.test(email)) {
-        alert('邮箱格式错误')
-      }else if (phone === '') {
-        alert('请输入电话')
-      } else if (phone.length !== 11) {
-        alert('请输入正确的手机号')
-      }else {
-        $.ajax({
-          method: 'POST',
-          url: 'https://api.shanghaichujie.com/api/oreal/user',
-          data: {
-            username: username,
-            department: department,
-            email: email,
-            phone: phone
-          }
-        }).done(function (res) {
-          if (res.status) {
-            alert('注册成功')
-          }
-        })
-      }
-    })
+    }
   </script>
 </body>
 </html>
