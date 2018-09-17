@@ -36,7 +36,8 @@ class GenieController extends Controller
         return response()->json([
             'code' => $genie ? 1 : 0,
             'genie' => $genie ? [
-                'name' => $genie->name,
+                'id' => $genie->id,
+                'name' => $genie->name . $genie->id,
                 'time' => intval($now->copy()->diffInSeconds($genie->created_at) / 60) . ':' . $now->copy()->diffInSeconds($genie->created_at) % 60
             ] : null,
         ]);
