@@ -8,7 +8,7 @@
   <title>平安云加速器D-day</title>
   <script src="js/rem.js"></script>
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
 </head>
 
 <body>
@@ -166,7 +166,7 @@
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/swiper-4.3.5.min.js"></script>
   <script src="js/swiper.animate1.0.3.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/index2.js"></script>
   <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
   <script type="application/javascript">
       wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
