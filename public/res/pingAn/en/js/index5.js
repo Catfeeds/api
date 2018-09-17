@@ -11,7 +11,7 @@ $(function () {
 	var userInfo = {}
 	var mySwiper = new Swiper('.swiper-container', {
 		direction: 'vertical',
-		initialSlide: 6,
+		initialSlide: 0,
 		on: {
 			init: function () {
 				swiperAnimateCache(this)
