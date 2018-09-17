@@ -194,12 +194,12 @@ html, body {
     left: 50%;
     margin-left: PX(-311);
     width: PX(622);
-    height: PX(772);
-    @include bg('../images/page2_content.png');
+    height: PX(638);
+    @include bg('../images/page2_content_new.png');
   }
   .content2 {
     position: absolute;
-    top: PX(1080);
+    top: PX(980);
     left: 50%;
     margin-left: PX(-305);
     width: PX(590);

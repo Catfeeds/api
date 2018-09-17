@@ -130,12 +130,9 @@ html, body {
 
 .loading {
   position: absolute;
-  left: 50%;
-  top: 50%;
   z-index: 9999;
-  transform: translate3d(-50%, -50%, 0);
-  width: PX(150);
-  height: PX(150);
+  width: 100%;
+  height: 100%;
   background: url('../images/loading.gif') no-repeat rgba(0, 0, 0, 0.5) center center;
   background-size: PX(124) PX(124);
 }
@@ -195,7 +192,7 @@ html, body {
     margin-left: PX(-305);
     width: PX(611);
     height: PX(566);
-    @include bg('../images/page2_content.png');
+    @include bg('../images/page2_content_new.png');
   }
   .content2 {
     position: absolute;

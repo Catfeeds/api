@@ -8,7 +8,7 @@
   <title>Ping An Cloud Accelerator D-Day</title>
   <script src="js/rem.js"></script>
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/style3.css">
 </head>
 
 <body>
