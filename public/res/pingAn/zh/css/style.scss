@@ -471,6 +471,7 @@ html, body {
       color: #fff;
       font-size: PX(40);
       p {
+        word-break:break-all;
         margin: PX(30) 0;
         span {
           margin-left: PX(30);

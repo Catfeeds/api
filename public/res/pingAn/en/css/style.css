@@ -533,6 +533,7 @@ html, body {
 }
 
 .page7 .stage2 .content p {
+  word-break: break-all;
   margin: 0.4rem 0;
 }
 

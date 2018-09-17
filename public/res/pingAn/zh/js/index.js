@@ -53,7 +53,7 @@ $(function () {
 			alert('邮箱地址不能为空')
 		} else if (userInfo.company === '') {
 			alert('企业名不能为空')
-		} else if (userInfo.phone.length !== 11) {
+		} else if ($.trim(userInfo.phone).length !== 11) {
 			alert('手机号错误')
 		} else if (!reg_email.test(userInfo.email)) {
 			alert('邮箱格式错误')

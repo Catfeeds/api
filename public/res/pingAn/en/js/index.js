@@ -53,7 +53,7 @@ $(function () {
 			alert('E-mail address can not be empty')
 		} else if (userInfo.company === '') {
 			alert('Enterprises can not be empty')
-		} else if (userInfo.phone.length !== 11) {
+		} else if ($.trim(userInfo.phone).length !== 11) {
 			alert('Wrong phone number')
 		} else if (!reg_email.test(userInfo.email)) {
 			alert('Error in mailbox format')
