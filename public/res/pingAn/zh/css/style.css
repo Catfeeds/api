@@ -139,6 +139,18 @@ html, body {
   height: 16.26667rem;
 }
 
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 9999;
+  transform: translate3d(-50%, -50%, 0);
+  width: 2rem;
+  height: 2rem;
+  background: url("../images/loading.gif") no-repeat rgba(0, 0, 0, 0.5) center center;
+  background-size: 1.65333rem 1.65333rem;
+}
+
 .logo {
   position: absolute;
   left: 0.66667rem;

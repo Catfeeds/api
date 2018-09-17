@@ -58,6 +58,7 @@ $(function () {
 		} else if (!reg_email.test(userInfo.email)) {
 			alert('邮箱格式错误')
 		} else {
+			$('.loading').show()
 			$.ajax({
 				method: 'POST',
 				url: 'https://api.shanghaichujie.com/api/pingAn/user',
@@ -70,6 +71,7 @@ $(function () {
 				}
 			}).done(function (res) {
 				if (res) {
+					$('.loading').hide()
 					$('.stage2').hide()
 					$('.stage3').show()
 				}

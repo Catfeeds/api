@@ -128,6 +128,18 @@ html, body {
   @include bg('../images/bg.jpg');
 }
 
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 9999;
+  transform: translate3d(-50%, -50%, 0);
+  width: PX(150);
+  height: PX(150);
+  background: url('../images/loading.gif') no-repeat rgba(0, 0, 0, 0.5) center center;
+  background-size: PX(124) PX(124);
+}
+
 .logo {
   position: absolute;
   left: PX(50);
