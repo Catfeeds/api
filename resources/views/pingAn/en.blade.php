@@ -129,7 +129,7 @@
         </div>
       </div>
       <div class="swiper-slide page7">
-        <div class="container stage1 hide">
+        <div class="container stage1">
           <div class="logo"></div>
           <div class="title ani" swiper-animate-effect="bounceInDown"></div>
           <div class="content">
@@ -156,7 +156,7 @@
           </div>
           <div class="return"></div>
         </div>
-        <div class="container stage3">
+        <div class="container stage3 hide">
           <div class="logo"></div>
           <div class="success ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
           <div class="text ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
