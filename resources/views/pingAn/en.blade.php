@@ -185,7 +185,7 @@
           // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
           wx.onMenuShareAppMessage({
               title: 'Ping An Cloud Accelerator D-Day Invitation Letter', // 分享标题
-              desc: "Innovation Development Start-up Accelerator", // 分享描述
+              desc: "Looking forward to seeing you on 17 October in Shenzhen, China!", // 分享描述
               link: '{{ url('res/pingAn/en/index') }}',
               imgUrl: "{{ asset('res/pingAn/share.png') }}", // 分享图标
               type: 'link', // 分享类型,music、video或link，不填默认为link
