@@ -1,0 +1,93 @@
+@function PX ($px) {
+  @return $px / 2048 * 10 * 1rem;
+}
+
+html, body {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/bg.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+
+.title {
+  position: absolute;
+  width: PX(820);
+  height: PX(213);
+  top: PX(190);
+  left: 52%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.team {
+  position: absolute;
+  top: PX(400);
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: PX(896);
+  height: PX(183);
+  background: url('../images/teamName.png') no-repeat;
+  background-size: 100% 100%;
+  .teamName {
+    width: PX(600);
+    height: PX(125);
+    line-height: PX(125);
+    margin: PX(30) 0 0 PX(148);
+    text-align: center;
+    color: #666;
+    font-size: PX(70);
+  }
+  .random {
+    position: absolute;
+    top: PX(30);
+    left: PX(750);
+    width: PX(124);
+    height: PX(124);
+  }
+}
+
+.teamPhone {
+  position: absolute;
+  top: PX(603);
+  left: 50%;
+  width: 90%;
+  transform: translate3d(-50%, 0, 0);
+  text-align: center;
+  font-size: 0;
+  .phone {
+    display: inline-block;
+    width: PX(698);
+    height: PX(125);
+    margin: PX(20);
+    background: url('../images/inputPhone.png') no-repeat;
+    background-size: 100% 100%;
+    text-align: left;
+    input {
+      box-sizing: border-box;
+      width: PX(580);
+      height: PX(82);
+      line-height: PX(82);
+      padding: 0 PX(20);
+      margin: PX(22) 0 0 PX(102);
+      border: none;
+      font-size: PX(40);
+      background: transparent;
+      color: #fff;
+    }
+    input::-webkit-input-placeholder {
+      color: #666;
+    }
+  }
+}
+
+.setout {
+  position: absolute;
+  top: PX(1000);
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: PX(990);
+  height: PX(136);
+}

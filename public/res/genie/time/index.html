@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>天猫精灵</title>
+  <script src="js/rem.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <img class="title" src="images/title.png">
+  <img class="complete" src="images/btn_complete.png">
+  <div class="infoWrap">
+    <p><span class="team"></span>&nbsp;&nbsp;<span class="time"></span></p>
+  </div>
+  <div class="popup">
+    <div class="wrap">
+      <p>任务完成</p>
+      <p class="team">战队名称</p>
+      <p class="time"><span>用时：00：00</span></p>
+    </div>
+  </div>
+
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    var id = ''
+
+    var timer = setInterval(runtime, 1000)
+    function runtime(){
+      $.ajax({
+        method: 'GET',
+        url: 'https://api.shanghaichujie.com/api/genie/time',
+      }).done(function (res) {
+        if (res.code === 1) {
+          id = res.genie.id
+          $('.infoWrap .team').text(res.genie.name)
+          $('.infoWrap .time').text(res.genie.time)
+        }
+      })
+    }
+
+
+    $('.complete').on('click', function () {
+      $.ajax({
+        method: 'GET',
+        url: 'https://api.shanghaichujie.com/api/genie/confirm/' + id,
+      }).done(function (res) {
+        $('.infoWrap .team').text('')
+        $('.infoWrap .time').text('')
+        if (res.code === 1) {
+          $('.popup .team').text(res.genie.name)
+          $('.popup .time').text('用时:' + res.genie.time)
+          $('.popup').show()
+          clearInterval(timer)
+          setTimeout(function(){
+            $('.popup').hide()
+            timer = setInterval(runtime, 1000)
+          }, 15000)
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>

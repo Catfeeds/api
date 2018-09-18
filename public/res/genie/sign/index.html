@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>天猫精灵</title>
+  <script src="js/rem.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <img class="title" src="images/title.png">
+  <div class="team">
+    <div class="teamName">请选择战队名称</div>
+    <div class="random"></div>
+  </div>
+  <div class="teamPhone">
+    <div class="phone phone1"><input type="text" placeholder="请输入手机号码"></div>
+    <div class="phone phone2"><input type="text" placeholder="请输入手机号码"></div>
+    <div class="phone phone3"><input type="text" placeholder="请输入手机号码"></div>
+    <div class="phone phone4"><input type="text" placeholder="请输入手机号码"></div>
+  </div>
+  <img class="setout" src="images/btn_setout.png">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    var teams = [
+      '天猫精灵方糖',
+      '智能生活',
+      '聚划算',
+        '亲测节',
+        '淘宝头条',
+        '乐心',
+        '科沃斯',
+        '移康智能',
+        '美的洗碗机',
+        '雷士照明',
+        '格兰仕',
+        '美的净水器',
+        '凯迪仕',
+        '海信',
+        '美的破壁机',
+        '美的',
+        '热水器',
+        '杜亚',
+        '亿健',
+        '超能战队',
+        '大悦城',
+        '淘宝天猫',
+        '阿里巴巴',
+        'BIG M'
+    ]
+
+    // 随机战队名
+    $('.random').on('click', function () {
+      var ranName = rand()
+      $('.teamName').text(ranName).css('color', '#fff')
+    })
+
+    function rand() {
+      var max = teams.length - 1
+      var ran = Math.floor(Math.random() * (max + 1))
+      var ranName = teams[ran]
+      if (ranName === $('.teamName').text()) {
+        ranName = rand()
+      }
+      return ranName
+    }
+
+    $('.setout').on('click', function () {
+      var phone1 = $('.phone1 input').val()
+      var phone2 = $('.phone2 input').val()
+      var phone3 = $('.phone3 input').val()
+      var phone4 = $('.phone4 input').val()
+      var phones = []
+
+      if ($('.teamName').text() === '请选择战队名称') {
+        alert('请选择战队名称')
+        return
+      }
+
+      if (phone1 !== '' && phone1.length !== 11 || phone2 !== '' && phone2.length !== 11 || phone3 !== '' && phone3.length !== 11 || phone4 !== '' && phone4.length !== 11) {
+        alert('手机号不正确')
+        return
+      }
+
+      var result
+      if (phone1 === '' || phone2 === '' || phone3 === '' || phone4 === '') {
+        result = confirm('不满足4人，是否确定出发')
+      } else {
+        result = confirm('确认出发')
+      }
+
+      if (result) {
+        if (phone1) { phones.push(phone1) }
+        if (phone2) { phones.push(phone2) }
+        if (phone3) { phones.push(phone3) }
+        if (phone4) { phones.push(phone4) }
+
+        $.ajax({
+          method: 'POST',
+          url: 'https://api.shanghaichujie.com/api/genie/sign',
+          data: {
+            name: $('.teamName').text(),
+            phones: JSON.stringify({phones: phones}),
+          }
+        }).done(function (res) {
+          $('.phone1 input').val('')
+          $('.phone1 input').val('')
+          $('.phone2 input').val('')
+          $('.phone3 input').val('')
+          $('.teamName').text('请选择战队名称').css('color', '#666')
+          alert('提交成功')
+        })
+      }
+    })
+  </script>
+</body>
+
+</html>

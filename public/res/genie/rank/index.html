@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>天猫精灵</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<ul class="teamName">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<ul class="teamTime">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    setTimeout(function () {
+        $.ajax({
+            method: 'get',
+            url: 'https://api.shanghaichujie.com/api/genie/rank',
+        }).done(function (res) {
+            console.log(res.data)
+            for (let i in Object.keys(res.data)) {
+                $('.teamName li').eq(i).text(res.data[i].name + res.data[i].id)
+                $('.teamTime li').eq(i).text(res.data[i].time)
+            }
+        })
+    }, 1000)
+</script>
+</body>
+
+</html>
