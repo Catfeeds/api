@@ -113,7 +113,7 @@ html, body {
 .swiper-container {
   width: 100%;
   height: 100%;
-  // @include bg('../images/bg.jpg');
+  @include bg('../images/bg.jpg');
   .swiper-slide {
     position: relative;
   }
@@ -125,7 +125,7 @@ html, body {
   transform: translate3d(0, -50%, 0);
   width: PX(750);
   height: PX(1220);
-  @include bg('../images/bg.jpg');
+  // @include bg('../images/bg.jpg');
 }
 
 .loading {
@@ -167,9 +167,9 @@ html, body {
     position: absolute;
     top: PX(730);
     left: 50%;
-    margin-left: PX(-181);
-    width: PX(402);
-    height: PX(110);
+    margin-left: PX(-199);
+    width: PX(397);
+    height: PX(153);
     @include bg('../images/page1_small_title.png')
   }
 }
@@ -190,9 +190,9 @@ html, body {
     top: PX(280);
     left: 50%;
     margin-left: PX(-311);
-    width: PX(622);
-    height: PX(638);
-    @include bg('../images/page2_content_new.png');
+    width: PX(717);
+    height: PX(671);
+    @include bg('../images/page2_content.png');
   }
   .content2 {
     position: absolute;
@@ -211,13 +211,13 @@ html, body {
     top: PX(183);
     left: 50%;
     margin-left: PX(-277);
-    width: PX(554);
+    width: PX(542);
     height: PX(81);
     @include bg('../images/page3_title.png')
   }
   .content {
     position: absolute;
-    top: PX(335);
+    top: PX(310);
     left: 50%;
     transform: translate3d(-50%, 0, 0);
     .people {
@@ -256,7 +256,7 @@ html, body {
   }
   .content {
     position: absolute;
-    top: PX(335);
+    top: PX(310);
     left: 50%;
     transform: translate3d(-50%, 0, 0);
     .people {
@@ -392,7 +392,7 @@ html, body {
     left: 50%;
     margin-left: PX(-201);
     width: PX(403);
-    height: PX(288);
+    height: PX(243);
     @include bg('../images/page6_text.png');
   }
 }
@@ -411,7 +411,7 @@ html, body {
     .content {
       box-sizing: border-box;
       position: absolute;
-      top: PX(300);
+      top: PX(260);
       left: 50%;
       transform: translate3d(-50%, 0, 0);
       width: 100%;
@@ -432,6 +432,10 @@ html, body {
         margin-top: PX(50);
         font-size: PX(26);
         color: #fff;
+        img {
+          width: PX(509);
+          height: PX(69);
+        }
       }
       .updateImg {
         box-sizing: border-box;
@@ -440,7 +444,7 @@ html, body {
         margin-left: PX(-175);
         width: PX(350);
         height: PX(79);
-        margin-top: PX(100);
+        margin-top: PX(60);
         text-align: center;
         padding: PX(10);
         font-size: 0;
@@ -476,7 +480,7 @@ html, body {
       left: 50%;
       transform: translate3d(-50%, 0, 0);
       width: 100%;
-      padding: 0 PX(80) 0 PX(80);
+      padding: 0 PX(50) 0 PX(80);
       color: #fff;
       font-size: PX(36);
       p {
@@ -490,19 +494,19 @@ html, body {
         }
         .right {
           vertical-align: top;
-          width: PX(350);
+          width: PX(400);
           display: inline-block;
         }
       }
       .businessCard {
         text-align: center;
         img {
-          margin-left: PX(-50);
+          margin-left: PX(-35);
           height: PX(200);
         }
       }
       .submit {
-        margin: PX(80) 0 0 PX(120);
+        margin: PX(60) 0 0 PX(120);
         width: PX(350);
         height: PX(78);
         @include bg('../images/page7_submit.png')
@@ -513,7 +517,7 @@ html, body {
       right: PX(50);
       top: PX(70);
       z-index: 100;
-      width: PX(206);
+      width: PX(146);
       height: PX(38);
       @include bg('../images/page7_return.png')
     }

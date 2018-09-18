@@ -31,12 +31,14 @@ $(function () {
 			if ($('.businessCard img').attr('src') === reader.result) {
 				$('.stage1').hide()
 				$('.stage2').show()
-				userInfo.username = $('.stage1 .username').val()
+				userInfo.firstName = $('.stage1 .firstName').val()
+				userInfo.lastName = $('.stage1 .lastName').val()
 				userInfo.phone = $('.stage1 .phone').val()
 				userInfo.email = $('.stage1 .email').val()
 				userInfo.company = $('.stage1 .company').val()
 				userInfo.image = reader.result
-				$('.stage2 .username .right').text(userInfo.username)
+				$('.stage2 .firstName .right').text(userInfo.firstName)
+				$('.stage2 .lastName .right').text(userInfo.lastName)
 				$('.stage2 .phone .right').text(userInfo.phone)
 				$('.stage2 .email .right').text(userInfo.email)
 				$('.stage2 .company .right').text(userInfo.company)
@@ -44,12 +46,14 @@ $(function () {
 				$('.businessCard img')[0].onload = () => {
 					$('.stage1').hide()
 					$('.stage2').show()
-					userInfo.username = $('.stage1 .username').val()
+					userInfo.firstName = $('.stage1 .firstName').val()
+					userInfo.lastName = $('.stage1 .lastName').val()
 					userInfo.phone = $('.stage1 .phone').val()
 					userInfo.email = $('.stage1 .email').val()
 					userInfo.company = $('.stage1 .company').val()
 					userInfo.image = reader.result
-					$('.stage2 .username .right').text(userInfo.username)
+					$('.stage2 .firstName .right').text(userInfo.firstName)
+					$('.stage2 .lastName .right').text(userInfo.lastName)
 					$('.stage2 .phone .right').text(userInfo.phone)
 					$('.stage2 .email .right').text(userInfo.email)
 					$('.stage2 .company .right').text(userInfo.company)
@@ -59,8 +63,10 @@ $(function () {
 	})
 	$('.stage2 .submit').on('touchend', () => {
 		var reg_email = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
-		if (userInfo.username === '') {
-			alert('Name should not be empty')
+		if (userInfo.firstName === '') {
+			alert('First Name should not be empty')
+		} else if (userInfo.lastName === '') {
+			alert('Last Name should not be empty')
 		} else if (userInfo.phone === '') {
 			alert('The phone number can not be empty')
 		} else if (userInfo.email === '') {
@@ -77,7 +83,7 @@ $(function () {
 				method: 'POST',
 				url: 'https://api.shanghaichujie.com/api/pingAn/user',
 				data: {
-					username: userInfo.username,
+					username: userInfo.firstName + ' ' + userInfo.lastName,
 					company: userInfo.company,
 					email: userInfo.email,
 					phone: userInfo.phone,

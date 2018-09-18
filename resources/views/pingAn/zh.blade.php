@@ -8,7 +8,7 @@
   <title>平安云加速器D-day</title>
   <script src="js/rem.js"></script>
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/style4.css">
+  <link rel="stylesheet" href="css/style5.css">
 </head>
 
 <body>
@@ -137,7 +137,7 @@
             <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="phone" type="text" placeholder="手机"></p>
             <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="email" type="text" placeholder="邮箱"></p>
             <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="company" type="text" placeholder="公司"></p>
-            <p class="text ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s">报名截止日期：10月8日<br/>期待您的到来！</p>
+            <p class="text ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s">报名截止日期：2018年10月8日<br/>期待您的到来！</p>
             <div class="updateImg ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><img src="images/page7_updateImg.png"><input id="file" type="file" accept="image/*"></div>
           </div>
         </div>
@@ -166,7 +166,7 @@
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/swiper-4.3.5.min.js"></script>
   <script src="js/swiper.animate1.0.3.min.js"></script>
-  <script src="js/index4.js"></script>
+  <script src="js/index5.js"></script>
   <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
   <script type="application/javascript">
       wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
