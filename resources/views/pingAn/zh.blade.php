@@ -182,7 +182,7 @@
           });
           // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
           wx.onMenuShareAppMessage({
-              title: '平安云加速器D-day邀请函', // 分享标题
+              title: '平安云加速器D-Day邀请函', // 分享标题
               desc: "10月17日期待您的到来", // 分享描述
               link: '{{ url('res/pingAn/zh/index') }}',
               imgUrl: "{{ asset('res/pingAn/share.png') }}", // 分享图标
