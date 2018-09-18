@@ -107,15 +107,15 @@
           <div class="logo"></div>
           <div class="title ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="2s"></div>
           <div class="content">
-            <div class="line ani"></div>
-            <div class="text1 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="1s"></div>
-            <div class="text2 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="1.5s"></div>
-            <div class="text3 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="2s"></div>
-            <div class="text4 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="2.5s"></div>
-            <div class="text5 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="3s"></div>
-            <div class="text6 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="3.5s"></div>
-            <div class="text7 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="4s"></div>
-            <div class="text8 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="4.5s"></div>
+            <div class="line ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="1s"></div>
+            <div class="text1 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="1s"></div>
+            <div class="text2 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="1.5s"></div>
+            <div class="text3 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2s"></div>
+            <div class="text4 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2.5s"></div>
+            <div class="text5 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3s"></div>
+            <div class="text6 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3.5s"></div>
+            <div class="text7 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4s"></div>
+            <div class="text8 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4.5s"></div>
           </div>
         </div>
       </div>
@@ -183,7 +183,7 @@
           // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
           wx.onMenuShareAppMessage({
               title: '平安云加速器D-day邀请函', // 分享标题
-              desc: "主题：创新 成长 创业 加速器", // 分享描述
+              desc: "10月7日中国深圳期待您的到来", // 分享描述
               link: '{{ url('res/pingAn/zh/index') }}',
               imgUrl: "{{ asset('res/pingAn/share.png') }}", // 分享图标
               type: 'link', // 分享类型,music、video或link，不填默认为link

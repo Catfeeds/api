@@ -107,15 +107,15 @@
           <div class="logo"></div>
           <div class="title ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="2s"></div>
           <div class="content">
-            <div class="line ani"></div>
-            <div class="text1 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="1s"></div>
-            <div class="text2 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="1.5s"></div>
-            <div class="text3 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="2s"></div>
-            <div class="text4 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="2.5s"></div>
-            <div class="text5 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="3s"></div>
-            <div class="text6 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="3.5s"></div>
-            <div class="text7 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="4s"></div>
-            <div class="text8 ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="4.5s"></div>
+            <div class="line ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="1s"></div>
+            <div class="text1 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="1s"></div>
+            <div class="text2 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="1.5s"></div>
+            <div class="text3 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2s"></div>
+            <div class="text4 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2.5s"></div>
+            <div class="text5 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3s"></div>
+            <div class="text6 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3.5s"></div>
+            <div class="text7 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4s"></div>
+            <div class="text8 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4.5s"></div>
           </div>
         </div>
       </div>
@@ -150,7 +150,7 @@
             <p class="lastName ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">Last Name</span><span class="right">empty</span></p>
             <p class="phone ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">Phone</span><span class="right">empty</span></p>
             <p class="email ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">E-mail</span><span class="right">empty</span></p>
-            <p class="company ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">Enterprise</span><span class="right">empty</span></p>
+            <p class="company ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">Company</span><span class="right">empty</span></p>
             <p class="businessCard ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><img src="images/page1_bg.jpg"></p>
             <p class="submit ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></p>
           </div>
