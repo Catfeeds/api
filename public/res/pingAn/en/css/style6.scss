@@ -312,49 +312,49 @@ html, body {
     .text1 {
       width: PX(281);
       height: PX(27);
-      @include bg('../images/page5_text1.png');
+      @include bg('../images/page5_text1_new.png');
     }
     .text2 {
       width: PX(493);
       height: PX(115);
       margin-top: PX(66);
-      @include bg('../images/page5_text2.png');
+      @include bg('../images/page5_text2_new.png');
     }
     .text3 {
       width: PX(647);
       height: PX(111);
       margin-top: PX(36);
-      @include bg('../images/page5_text3.png');
+      @include bg('../images/page5_text3_new.png');
     }
     .text4 {
       width: PX(594);
       height: PX(94);
       margin-top: PX(34);
-      @include bg('../images/page5_text4.png');
+      @include bg('../images/page5_text4_new.png');
     }
     .text5 {
       width: PX(529);
       height: PX(98);
       margin-top: PX(20);
-      @include bg('../images/page5_text5.png');
+      @include bg('../images/page5_text5_new.png');
     }
     .text6 {
       width: PX(538);
       height: PX(106);
       margin-top: PX(32);
-      @include bg('../images/page5_text6.png');
+      @include bg('../images/page5_text6_new.png');
     }
     .text7 {
       width: PX(218);
       height: PX(27);
       margin-top: PX(42);
-      @include bg('../images/page5_text7.png');
+      @include bg('../images/page5_text7_new.png');
     }
     .text8{
       width: PX(308);
       height: PX(27);
       margin-top: PX(48);
-      @include bg('../images/page5_text8.png');
+      @include bg('../images/page5_text8_new.png');
     }
   }
 }
