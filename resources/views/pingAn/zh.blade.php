@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-  <title>平安云加速器D-day</title>
+  <title>平安云加速器D-Day</title>
   <script src="js/rem.js"></script>
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/style5.css">
