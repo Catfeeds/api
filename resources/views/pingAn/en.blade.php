@@ -137,7 +137,7 @@
             <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="lastName" type="text" placeholder="Last Name"></p>
             <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="phone" type="text" placeholder="Phone"></p>
             <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="email" type="text" placeholder="E-mail"></p>
-            <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="company" type="text" placeholder="Enterprise"></p>
+            <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="company" type="text" placeholder="Company"></p>
             <p class="text ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><img src="images/page7_stage1.png"></p>
             <div class="updateImg ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><img src="images/page7_updateImg.png"><input id="file" type="file" accept="image/*"></div>
           </div>
