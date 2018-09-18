@@ -8,7 +8,7 @@
   <title>Ping An Cloud Accelerator D-Day</title>
   <script src="js/rem.js"></script>
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/style4.css">
+  <link rel="stylesheet" href="css/style7.css">
 </head>
 
 <body>
@@ -77,7 +77,7 @@
             <div class="people">
               <img class="avatar ani" src="images/people/people6_avatar.png" src="images/people/people5_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people6_desc.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
+              <img class="desc ani" src="images/people/people6_desc_new.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
             <div class="people">
               <img class="avatar ani" src="images/people/people7_avatar.png" src="images/people/people5_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
@@ -133,11 +133,12 @@
           <div class="logo"></div>
           <div class="title ani" swiper-animate-effect="bounceInDown"></div>
           <div class="content">
-            <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="username" type="text" placeholder="Name"></p>
+            <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="firstName" type="text" placeholder="First Name"></p>
+            <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="lastName" type="text" placeholder="Last Name"></p>
             <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="phone" type="text" placeholder="Phone"></p>
             <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="email" type="text" placeholder="E-mail"></p>
             <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><input class="company" type="text" placeholder="Enterprise"></p>
-            <p class="text ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s">Registration Deadline：8, Oct.<br/>Looking forward to seeing you！</p>
+            <p class="text ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><img src="images/page7_stage1.png"></p>
             <div class="updateImg ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><img src="images/page7_updateImg.png"><input id="file" type="file" accept="image/*"></div>
           </div>
         </div>
@@ -145,7 +146,8 @@
           <div class="logo"></div>
           <div class="title ani" swiper-animate-effect="bounceInDown"></div>
           <div class="content">
-            <p class="username ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">Name</span><span class="right">empty</span></p>
+            <p class="firstName ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">First Name</span><span class="right">empty</span></p>
+            <p class="lastName ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">Last Name</span><span class="right">empty</span></p>
             <p class="phone ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">Phone</span><span class="right">empty</span></p>
             <p class="email ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">E-mail</span><span class="right">empty</span></p>
             <p class="company ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s"><span class="left">Enterprise</span><span class="right">empty</span></p>
@@ -183,7 +185,7 @@
           // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
           wx.onMenuShareAppMessage({
               title: 'Ping An Cloud Accelerator D-Day Invitation Letter', // 分享标题
-              desc: "Innovation Development Start-up Accelerator", // 分享描述
+              desc: "Looking forward to seeing you on 17 October in Shenzhen, China!", // 分享描述
               link: '{{ url('res/pingAn/en/index') }}',
               imgUrl: "{{ asset('res/pingAn/share.png') }}", // 分享图标
               type: 'link', // 分享类型,music、video或link，不填默认为link
