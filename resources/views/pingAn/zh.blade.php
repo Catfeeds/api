@@ -77,7 +77,7 @@
             <div class="people">
               <img class="avatar ani" src="images/people/people6_avatar.png" src="images/people/people5_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people6_desc.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
+              <img class="desc ani" src="images/people/people6_desc_new.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
             <div class="people">
               <img class="avatar ani" src="images/people/people7_avatar.png" src="images/people/people5_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
