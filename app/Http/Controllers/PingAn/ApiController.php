@@ -11,12 +11,16 @@ class ApiController extends Controller
 {
     public function user(Request $request)
     {
+        $user = PingAn::where('phone', $request->phone)
+            ->orWhere('email', $request->email)->first();
+        if (is_null($user)) {
+            $user = new PingAn();
+        }
         $image = $request->input('image');
         $image = str_replace('data:image/jpeg;base64,', '' , $image);
         $image = str_replace('data:image/png;base64,', '' , $image);
         $image = str_replace('data:image/jpg;base64,', '' , $image);
         $image = base64_decode($image);
-        $user = new PingAn();
         $user->company = $request->company;
         $user->phone = $request->phone;
         $user->username = $request->username;
