@@ -309,6 +309,7 @@ Route::get('res/absolut/share', 'Absolut\IndexController@share');
  */
 Route::get('res/oreal/register/index', 'Oreal\IndexController@register');
 
+
 /*
  * 平安加速器
  */
@@ -319,3 +320,5 @@ Route::get('res/pingAn/en/index', 'PingAn\IndexController@en');
  * 天猫精灵活动战队
  */
 Route::get('tmall/genie/sign', 'Tmall\GenieController@index');
+Route::get('tmall/genie/control', 'Tmall\GenieController@control');
+Route::get('res/genie/album/index', 'Tmall\GenieController@album');

@@ -1,0 +1,62 @@
+@function PX ($px) {
+  @return $px / 2048 * 10 * 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+html, body {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/bg.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+
+.title {
+  position: absolute;
+  width: PX(1539);
+  height: PX(213);
+  top: PX(240);
+  left: 48%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.complete {
+  position: absolute;
+  width: PX(1138);
+  height: PX(255);
+  top: PX(580);
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.infoWrap {
+  position: absolute;
+  top: PX(900);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: PX(80);
+}
+
+.popup {
+  display: none;
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    font-size: PX(120);
+    text-align: center;
+  }
+}

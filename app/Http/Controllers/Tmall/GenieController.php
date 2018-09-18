@@ -6,6 +6,7 @@ use App\Models\TmallGenie;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class GenieController extends Controller
 {
@@ -111,5 +112,60 @@ class GenieController extends Controller
     public function control()
     {
         return view('tmall.control');
+    }
+
+    public function teams()
+    {
+        $teams = TmallGenie::where('end', null)->get();
+
+        foreach ($teams as $genie) {
+            $now = Carbon::now()->addMinutes($genie->punish);
+            $minutes = intval($now->copy()->diffInSeconds($genie->created_at) / 60);
+            $seconds = $now->copy()->diffInSeconds($genie->created_at) % 60;
+            if ($minutes < 10) {
+                $minutes = '0' . $minutes;
+            }
+            if ($seconds < 10) {
+                $seconds = '0' . $seconds;
+            }
+            $genie->time = $minutes . ':' . $seconds;
+        }
+        return response()->json($teams);
+    }
+
+    public function punish($id)
+    {
+        $genie = TmallGenie::find($id);
+        $genie->punish += 10;
+        $genie->save();
+
+        return 'true';
+    }
+
+    public function rank()
+    {
+        $users = TmallGenie::where('end', '!=', null)
+            ->where('created_at', '>', Carbon::today())
+            ->get();
+        foreach ($users as $user) {
+            $created_at = Carbon::createFromFormat('Y-m-d H:i:s', $user->created_at);
+            $end = Carbon::createFromFormat('Y-m-d H:i:s', $user->end)->addMinutes($user->punish);
+            $minutes = intval($created_at->copy()->diffInSeconds($end) / 60);
+            $seconds = $created_at->copy()->diffInSeconds($end) % 60;
+            $user->realtime = $created_at->copy()->diffInSeconds($end);
+            $user->time = $minutes . ':' . $seconds;
+        }
+
+        $col = $users->sortBy('realtime');
+        return response()->json([
+            'data' => $col->values()
+        ]);
+    }
+
+    public function album()
+    {
+        $ds = Storage::disk('unitytouch')->allFiles('Zzc/Projects/TianMaoCenterControl');
+        arsort($ds);
+        return view('tmall.album', compact('ds'));
     }
 }
