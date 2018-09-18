@@ -14,7 +14,7 @@ body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd{
   margin: 0;
 }
 ul,ol{
-  padding: 1;
+  padding: 0;
   list-style: none;
 }
 img{
@@ -189,10 +189,10 @@ html, body {
     position: absolute;
     top: PX(280);
     left: 50%;
-    margin-left: PX(-311);
-    width: PX(717);
-    height: PX(671);
-    @include bg('../images/page2_content.png');
+    margin-left: PX(-300);
+    width: PX(600);
+    height: PX(649);
+    @include bg('../images/page2_content_new.png');
   }
   .content2 {
     position: absolute;
