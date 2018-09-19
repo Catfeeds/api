@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>扫码程序</title>
+    <title>录音Demo</title>
     <link rel="stylesheet" href="css/normalize.css">
     <style>
        html,
@@ -66,7 +66,9 @@
               localId: localId, // 需要识别的音频的本地Id，由录音相关接口获得
               isShowProgressTips: 1, // 默认为1，显示进度提示
               success: function (res) {
-                document.querySelector('p').innerText = res.translateResult // 语音识别的结果
+                if (res.translateResult !== 'undifined') {
+                    document.querySelector('p').innerText = res.translateResult // 语音识别的结果
+                }
               }
             });
           }
