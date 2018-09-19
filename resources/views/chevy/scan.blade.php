@@ -51,6 +51,7 @@
 <body>
 <section class="page1">
     <p>请说出红、蓝、黄、绿中的一种颜色</p>
+    <div>识别内容</div>
     <button>长按录音</button>
 </section>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
