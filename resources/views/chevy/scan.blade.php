@@ -22,11 +22,17 @@
         }
 
         p {
-        position: absolute;
-        top: 30%;
-        width: 100%;
-        text-align: center;
-        }
+      position: absolute;
+      top: 20%;
+      width: 100%;
+      text-align: center;
+    }
+    div {
+      position: absolute;
+      top: 30%;
+      width: 100%;
+      text-align: center;
+    }
 
         button {
             position: absolute;
@@ -81,7 +87,7 @@
                     document.querySelector('.page1').style.background = 'green'
                     } else {
                     document.querySelector('.page1').style.background = 'white'
-                    // document.querySelector('p').innerText = res.translateResult // 语音识别的结果
+                    document.querySelector('div').innerText = res.translateResult // 语音识别的结果
                     }
                 }
               }
@@ -110,7 +116,7 @@
                   document.querySelector('.page1').style.background = 'green'
                 } else {
                   document.querySelector('.page1').style.background = 'white'
-                  // document.querySelector('p').innerText = res.translateResult // 语音识别的结果
+                  document.querySelector('div').innerText = res.translateResult // 语音识别的结果
                 }
               }
             }
