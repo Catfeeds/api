@@ -88,8 +88,8 @@
                     document.querySelector('.page1').style.background = 'green'
                     } else {
                     document.querySelector('.page1').style.background = 'white'
-                    document.querySelector('.content').innerText = res.translateResult // 语音识别的结果
                     }
+                    document.querySelector('.content').innerText = res.translateResult // 语音识别的结果
                 }
               }
             });
@@ -117,8 +117,8 @@
                   document.querySelector('.page1').style.background = 'green'
                 } else {
                   document.querySelector('.page1').style.background = 'white'
-                  document.querySelector('.content').innerText = res.translateResult // 语音识别的结果
                 }
+                  document.querySelector('.content').innerText = res.translateResult // 语音识别的结果
               }
             }
           });
