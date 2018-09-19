@@ -51,7 +51,7 @@
 <body>
 <section class="page1">
     <p>请说出红、蓝、黄、绿中的一种颜色</p>
-    <div>识别内容</div>
+    <div class="content">识别内容</div>
     <button>长按录音</button>
 </section>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -88,7 +88,7 @@
                     document.querySelector('.page1').style.background = 'green'
                     } else {
                     document.querySelector('.page1').style.background = 'white'
-                    document.querySelector('div').innerText = res.translateResult // 语音识别的结果
+                    document.querySelector('.content').innerText = res.translateResult // 语音识别的结果
                     }
                 }
               }
@@ -117,7 +117,7 @@
                   document.querySelector('.page1').style.background = 'green'
                 } else {
                   document.querySelector('.page1').style.background = 'white'
-                  document.querySelector('div').innerText = res.translateResult // 语音识别的结果
+                  document.querySelector('.content').innerText = res.translateResult // 语音识别的结果
                 }
               }
             }
