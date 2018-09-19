@@ -29,13 +29,15 @@
         }
 
         button {
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        width: 300px;
-        height: 50px;
-        transform: translate3d(-50%, 0, 0);
-        text-align: center;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            width: 300px;
+            height: 50px;
+            transform: translate3d(-50%, 0, 0);
+            text-align: center;
+            background: #fff;
+            border: 1px solid #000;
         }
     </style>
 </head>
@@ -43,7 +45,7 @@
 <body>
 <section class="page1">
     <p>显示内容</p>
-    <button>点击录音</button>
+    <button>长按录音</button>
 </section>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
@@ -52,13 +54,15 @@
 
     wx.ready(function () {
         // 点击录音
-      document.querySelector('button').addEventListener('touchstart', function () {
+      document.querySelector('button').addEventListener('touchstart', function (e) {
+        e.preventDefault()
         document.querySelector('button').innerText = "正在录音"
         wx.startRecord();
       })
       // 放手识别
-      document.querySelector('button').addEventListener('touchend', function () {
-        document.querySelector('button').innerText = "点击录音"
+      document.querySelector('button').addEventListener('touchend', function (e) {
+        e.preventDefault()
+        document.querySelector('button').innerText = "长按录音"
         wx.stopRecord({
           success: function (res) {
             var localId = res.localId;
@@ -78,7 +82,7 @@
       // 录音时间超过一分钟没有停止的时候会执行 complete 回调
       wx.onVoiceRecordEnd({
         complete: function (res) {
-          document.querySelector('button').innerText = "点击录音"
+          document.querySelector('button').innerText = "长按录音"
           var localId = res.localId;
           wx.translateVoice({
             localId: localId, // 需要识别的音频的本地Id，由录音相关接口获得
