@@ -44,7 +44,7 @@
 
 <body>
 <section class="page1">
-    <p>显示内容</p>
+    <p>请说出红、蓝、黄、绿中的一种颜色</p>
     <button>长按录音</button>
 </section>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -71,7 +71,18 @@
               isShowProgressTips: 1, // 默认为1，显示进度提示
               success: function (res) {
                 if (res.translateResult !== 'undifined') {
-                    document.querySelector('p').innerText = res.translateResult // 语音识别的结果
+                    if (res.translateResult.indexOf('红') > -1) {
+                    document.querySelector('.page1').style.background = 'red'
+                    } else if (res.translateResult.indexOf('蓝') > -1) {
+                    document.querySelector('.page1').style.background = 'blue'
+                    } else if (res.translateResult.indexOf('黄') > -1) {
+                    document.querySelector('.page1').style.background = 'yellow'
+                    } else if (res.translateResult.indexOf('绿') > -1) {
+                    document.querySelector('.page1').style.background = 'green'
+                    } else {
+                    document.querySelector('.page1').style.background = 'white'
+                    // document.querySelector('p').innerText = res.translateResult // 语音识别的结果
+                    }
                 }
               }
             });
@@ -88,7 +99,20 @@
             localId: localId, // 需要识别的音频的本地Id，由录音相关接口获得
             isShowProgressTips: 1, // 默认为1，显示进度提示
             success: function (res) {
-              document.querySelector('p').innerText = res.translateResult // 语音识别的结果
+                if (res.translateResult !== 'undifined') {
+                if (res.translateResult.indexOf('红') > -1) {
+                  document.querySelector('.page1').style.background = 'red'
+                } else if (res.translateResult.indexOf('蓝') > -1) {
+                  document.querySelector('.page1').style.background = 'blue'
+                } else if (res.translateResult.indexOf('黄') > -1) {
+                  document.querySelector('.page1').style.background = 'yellow'
+                } else if (res.translateResult.indexOf('绿') > -1) {
+                  document.querySelector('.page1').style.background = 'green'
+                } else {
+                  document.querySelector('.page1').style.background = 'white'
+                  // document.querySelector('p').innerText = res.translateResult // 语音识别的结果
+                }
+              }
             }
           });
         }
