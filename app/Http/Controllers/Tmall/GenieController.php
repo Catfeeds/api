@@ -63,6 +63,7 @@ class GenieController extends Controller
                 'code' => 1,
                 'genie' => [
                     'name' => $genie->name,
+                    'id' => $genie->id,
                     'time' => $minutes . ':' . $seconds
                 ],
             ]);
