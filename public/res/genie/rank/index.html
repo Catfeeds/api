@@ -28,7 +28,7 @@
 </ul>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script>
-    setTimeout(function () {
+    setInterval(function () {
         $.ajax({
             method: 'get',
             url: 'https://api.shanghaichujie.com/api/genie/rank',
@@ -39,7 +39,7 @@
                 $('.teamTime li').eq(i).text(res.data[i].time)
             }
         })
-    }, 1000)
+    }, 10000)
 </script>
 </body>
 
