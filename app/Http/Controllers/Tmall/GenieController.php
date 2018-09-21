@@ -159,7 +159,7 @@ class GenieController extends Controller
 
         $col = $users->sortBy('realtime');
         return response()->json([
-            'data' => $col->values()
+//            'data' => $col->values()
 //            'data' => [
 //                [
 //                    'name' => '',
@@ -182,7 +182,7 @@ class GenieController extends Controller
 //                    'id' => '',
 //                    'time' => ''
 //                ],
-            ]
+//            ]
         ]);
     }
 
