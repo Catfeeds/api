@@ -61,14 +61,10 @@ $(function () {
 		var reg_email = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
 		if (userInfo.username === '') {
 			alert('姓名不能为空')
-		} else if (userInfo.phone === '') {
-			alert('手机号不能为空')
 		} else if (userInfo.email === '') {
 			alert('邮箱地址不能为空')
 		} else if (userInfo.company === '') {
 			alert('企业名不能为空')
-		} else if ($.trim(userInfo.phone).length !== 11) {
-			alert('手机号错误')
 		} else if (!reg_email.test(userInfo.email)) {
 			alert('邮箱格式错误')
 		} else {
