@@ -146,17 +146,21 @@ class GenieController extends Controller
     public function rank()
     {
         $users = TmallGenie::where('end', '!=', null)
-            ->where('created_at', '>', Carbon::today())
+            ->where('created_at', '>=', Carbon::today())
             ->get();
-        foreach ($users as $user) {
-            $created_at = Carbon::createFromFormat('Y-m-d H:i:s', $user->created_at);
-            $end = Carbon::createFromFormat('Y-m-d H:i:s', $user->end)->addMinutes($user->punish);
+        foreach ($users as $key =>$value) {
+            $created_at = Carbon::createFromFormat('Y-m-d H:i:s', $users[$key]->created_at);
+            $end = Carbon::createFromFormat('Y-m-d H:i:s', $users[$key]->end)->addMinutes($users[$key]->punish);
             $minutes = intval($created_at->copy()->diffInSeconds($end) / 60);
-            $seconds = $created_at->copy()->diffInSeconds($end) % 60;
-            $user->realtime = $created_at->copy()->diffInSeconds($end);
-            $user->time = $minutes . ':' . $seconds;
-        }
+            if ($minutes <10) {
+                unset($users[$key]);
+            }else {
+                $seconds = $created_at->copy()->diffInSeconds($end) % 60;
+                $users[$key]->realtime = $created_at->copy()->diffInSeconds($end);
+                $users[$key]->time = $minutes . ':' . $seconds;
+            }
 
+        }
         $col = $users->sortBy('realtime');
         return response()->json([
             'data' => $col->values()
