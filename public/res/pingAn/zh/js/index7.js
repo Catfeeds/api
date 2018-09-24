@@ -44,14 +44,12 @@ $(function () {
 		if ($('.businessCard img').attr('src') === base64Img) {
 			$('.stage1').hide()
 			$('.stage2').show()
-			userInfo.firstName = $('.stage1 .firstName').val()
-			userInfo.lastName = $('.stage1 .lastName').val()
+			userInfo.username = $('.stage1 .username').val()
 			userInfo.phone = $('.stage1 .phone').val()
 			userInfo.email = $('.stage1 .email').val()
 			userInfo.company = $('.stage1 .company').val()
 			userInfo.image = base64Img
-			$('.stage2 .firstName .right').text(userInfo.firstName)
-			$('.stage2 .lastName .right').text(userInfo.lastName)
+			$('.stage2 .username .right').text(userInfo.username)
 			$('.stage2 .phone .right').text(userInfo.phone)
 			$('.stage2 .email .right').text(userInfo.email)
 			$('.stage2 .company .right').text(userInfo.company)
@@ -59,14 +57,12 @@ $(function () {
 			$('.businessCard img')[0].onload = () => {
 				$('.stage1').hide()
 				$('.stage2').show()
-				userInfo.firstName = $('.stage1 .firstName').val()
-				userInfo.lastName = $('.stage1 .lastName').val()
+				userInfo.username = $('.stage1 .username').val()
 				userInfo.phone = $('.stage1 .phone').val()
 				userInfo.email = $('.stage1 .email').val()
 				userInfo.company = $('.stage1 .company').val()
 				userInfo.image = base64Img
-				$('.stage2 .firstName .right').text(userInfo.firstName)
-				$('.stage2 .lastName .right').text(userInfo.lastName)
+				$('.stage2 .username .right').text(userInfo.username)
 				$('.stage2 .phone .right').text(userInfo.phone)
 				$('.stage2 .email .right').text(userInfo.email)
 				$('.stage2 .company .right').text(userInfo.company)
