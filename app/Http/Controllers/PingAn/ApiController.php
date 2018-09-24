@@ -11,8 +11,7 @@ class ApiController extends Controller
 {
     public function user(Request $request)
     {
-        $user = PingAn::where('phone', $request->phone)
-            ->orWhere('email', $request->email)->first();
+        $user = PingAn::orWhere('phone', $request->phone)->first();
         if (is_null($user)) {
             $user = new PingAn();
         }
