@@ -117,7 +117,8 @@ $(function () {
 					company: userInfo.company,
 					email: userInfo.email,
 					phone: userInfo.phone,
-					image: userInfo.image
+					image: userInfo.image,
+					type: '邮件'
 				}
 			}).done(function (res) {
 				if (res) {
