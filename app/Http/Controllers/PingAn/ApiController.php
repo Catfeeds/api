@@ -24,6 +24,11 @@ class ApiController extends Controller
         $user->phone = $request->phone;
         $user->username = $request->username;
         $user->email = $request->email;
+        if (is_null($request->type)) {
+            $user->type = '短信a';
+        } else {
+            $user->type = $request->type;
+        }
         $user->save();
         $res = Storage::disk('h5-touch')->put('pingAn/'. $user->id .'.png', $image);
 
