@@ -31,7 +31,7 @@
     <!-- <img src="images/pic.jpg">
     <img src="images/pic.jpg"> -->
     @for($i = 1;$i<= $pid; $i++)
-        <img src="https://oss-unity.touchworld-sh.com/ZhangChi/MultiAnglePhoto/{{ $timestamp }}-{{ $i }}.png" crossOrigin="Anonymous">
+        <img src="https://oss-unity.touchworld-sh.com/ZhangChi/MultiAnglePhoto/{{ $timestamp }}-{{ $i }}.png">
     @endfor
 </div>
 <div class="result"></div>
