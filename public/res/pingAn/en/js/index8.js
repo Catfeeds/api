@@ -1,4 +1,9 @@
 $(function () {
+	var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    if (isAndroid) {
+      $('#file').attr('capture', 'camera')
+    }
 	var BGM = $('#bgm')[0];
 	document.addEventListener("WeixinJSBridgeReady", function () {
 		BGM.play();

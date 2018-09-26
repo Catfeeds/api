@@ -12,11 +12,6 @@
 </head>
 
 <body>
-  <!-- <div class="logo"></div>
-  <section class="loading">
-    <p class="text">加载中</p>
-    <p class="progress"><span>0</span>%</p>
-  </section> -->
   <audio src="media/1.mp3" id="bgm" autoplay loop></audio>
   <div class="loading hide"></div>
   <section class="swiper-container">
@@ -165,11 +160,11 @@
       </div>
     </div>
   </section>
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
   <script src="js/swiper-4.3.5.min.js"></script>
   <script src="js/swiper.animate1.0.3.min.js"></script>
-  <script src="js/index7.js"></script>
-  <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/index8.js"></script>
+  <script src="js/wxjssdk.js" type="text/javascript" charset="utf-8"></script>
   <script type="application/javascript">
       wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
       // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在 页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready 函数中。
