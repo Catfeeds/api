@@ -29,7 +29,7 @@
 <!-- <div class="loading"></div> -->
 <div class="picBox">
     @for($i = 1;$i<= $pid; $i++)
-        <img src="https://oss-unity.touchworld-sh.com/ZhangChi/MultiAnglePhoto/{{ $timestamp }}-{{ $i }}.png">
+        <img src="https://oss-unity.touchworld-sh.com/ZhangChi/MultiAnglePhoto/{{ $timestamp }}-{{ $i }}.png" crossOrigin="Anonymous">
     @endfor
 
 </div>
