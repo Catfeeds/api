@@ -35,18 +35,22 @@ h2 {
 }
 
 .picBox {
+	width: PX(700);
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 50%;
+	margin: PX(25) PX(0) PX(0) PX(-350);
 	img {
 		width: 100%;
 	}
 }
 
 .result {
+	width: PX(700);
 	position: absolute;
-	left: 0;
 	top: 0;
+	left: 50%;
+	margin: PX(25) PX(0) PX(0) PX(-350);
 	img {
 		width: 100%;
 	}
