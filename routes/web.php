@@ -12,7 +12,7 @@
 |
 */
 
-Route::get('test', 'TestController@test');
+Route::get('test', 'TestController@socketTest');
 
 /*
  * 科思创项目
@@ -315,6 +315,7 @@ Route::get('res/oreal/register/index', 'Oreal\IndexController@register');
  */
 Route::get('res/pingAn/zh/index', 'PingAn\IndexController@zh');
 Route::get('res/pingAn/en/index', 'PingAn\IndexController@en');
+Route::get('res/pingAn/imgdemo/index', 'PingAn\IndexController@imgDemo');
 
 /*
  * 天猫精灵活动战队

@@ -19,4 +19,12 @@ class IndexController extends Controller
 //        $js = \EasyWeChat::js();
 //        return view('pingAn.en', compact('js'));
     }
+
+    public function imgDemo(Request $request)
+    {
+        $pid = $request->input('pid');
+        $timestamp = $request->input('timestamp');
+
+        return view('pingAn.img', compact('pid', 'timestamp'));
+    }
 }
