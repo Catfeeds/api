@@ -16,14 +16,27 @@ class TestController extends Controller
         return view('test');
     }
 
-    public function socketTest()
+    public function socketTest(Request $request)
     {
-        $host = '114.234.165.180';
+        $host = 'xz516.vicp.net';
+//        $host = '192.168.1.140';
         $port = '2000';
-        $num = Redis::incr('numTest');
-        $message ='A5 06 FF A0 FF FF FF EE 5A';
-        $ret = $this->send_udp_message($host, $port, $message);
-        dd($ret);
+        $message = '';
+        if ($request->input('color') == 'red') {
+            $message = 'A506FFA0FF0000EE5A';//红色
+        } elseif ($request->input('color') == 'blue') {
+            $message = 'A506FFA00000FFEE5A';//蓝色
+        } elseif ($request->input('color') == 'green') {
+            $message = 'A506FFA000FF00EE5A';//绿色
+        }
+
+        $mes = null;
+        for ($i = 0; $i < strlen($message); $i += 2) {
+            $mes .= hex2bin($message[$i] . $message[$i + 1]);
+        }
+
+        $ret = $this->send_udp_message($host, $port, $mes);
+        return (string)$ret;
     }
 
     function send_tcp_message($host, $port, $message)
@@ -33,16 +46,14 @@ class TestController extends Controller
 
         $num = 0;
         $length = strlen($message);
-        do
-        {
+        do {
             $buffer = substr($message, $num);
             $ret = @socket_write($socket, $buffer);
             $num += $ret;
         } while ($num < $length);
 
         $ret = '';
-        do
-        {
+        do {
             $buffer = @socket_read($socket, 1024, PHP_BINARY_READ);
             $ret .= $buffer;
         } while (strlen($buffer) == 1024);
@@ -59,13 +70,12 @@ class TestController extends Controller
 
         $num = 0;
         $length = strlen($message);
-        do
-        {
+        do {
             $buffer = substr($message, $num);
             $ret = @socket_write($socket, $buffer);
             $num += $ret;
         } while ($num < $length);
-
+//        $ret = @socket_write($socket, $message);
         socket_close($socket);
 
         // UDP 是一种无链接的传输层协议, 不需要也无法获取返回消息

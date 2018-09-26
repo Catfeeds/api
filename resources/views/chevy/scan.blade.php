@@ -79,12 +79,30 @@
               success: function (res) {
                 if (res.translateResult !== 'undifined') {
                     if (res.translateResult.indexOf('红') > -1) {
-                    document.querySelector('.page1').style.background = 'red'
+                        $.ajax({
+                            method: 'get',
+                            url: '{{ url('test') }}?color=red',
+                        }).done(function (res) {
+                            console.log(res);
+                        });
+                        document.querySelector('.page1').style.background = 'red'
                     } else if (res.translateResult.indexOf('蓝') > -1) {
+                        $.ajax({
+                            method: 'get',
+                            url: '{{ url('test') }}?color=blue',
+                        }).done(function (res) {
+                            console.log(res);
+                        });
                     document.querySelector('.page1').style.background = 'blue'
                     } else if (res.translateResult.indexOf('黄') > -1) {
                     document.querySelector('.page1').style.background = 'yellow'
                     } else if (res.translateResult.indexOf('绿') > -1) {
+                        $.ajax({
+                            method: 'get',
+                            url: '{{ url('test') }}?color=green',
+                        }).done(function (res) {
+                            console.log(res);
+                        });
                     document.querySelector('.page1').style.background = 'green'
                     } else {
                     document.querySelector('.page1').style.background = 'white'
