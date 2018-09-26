@@ -25,6 +25,8 @@ Route::get('qrcode/generate', 'Api\QrcodeController@qrcode');
  */
 Route::post('face/cosmetic', 'Api\TencentAIController@faceCosmetic');
 Route::post('img/filter', 'Api\TencentAIController@imgFilter');
+Route::post('face/identify', 'Api\TencentAIController@faceIdentify');
+Route::post('face/newperson', 'Api\TencentAIController@faceNewPerson');
 
 //音频上传接口
 Route::post('audio/upload', 'Api\\AudioController@upload');

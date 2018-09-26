@@ -68,6 +68,13 @@ class TencentAIController extends Controller
         return response()->json((string)$body);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * 腾讯AI 滤镜接口
+     */
     public function imgFilter(Request $request)
     {
         $type = $request->input('type');//上传类型，天天p图/AIlab
@@ -115,6 +122,81 @@ class TencentAIController extends Controller
             'timeout' => 20.0,
         ]);
         $response = $client->request('POST', $url, [
+            'form_params' => $params
+        ]);
+        $body = $response->getBody();
+
+        return response()->json((string)$body);
+    }
+
+    /*
+     * 人脸搜索
+     */
+    public function faceIdentify(Request $request)
+    {
+        $image = $request->input('photo');
+        $group_id = $request->input('group_id'); //个体组id, 测试group0
+        $topn = $request->input('topn'); //返回识别图数量
+
+        $image = str_replace('data:image/jpeg;base64,', '', $image);
+        $image = str_replace('data:image/png;base64,', '', $image);
+        $image = str_replace('data:image/jpg;base64,', '', $image);
+
+        $params = array(
+            'app_id' => env('tencent-AI-AppId'),
+            'image' => $image,
+            'group_id' => $group_id,
+            'time_stamp' => strval(time()),
+            'nonce_str' => strval(rand()),
+            'sign' => '',
+            'topn' => $topn,
+        );
+        $params['sign'] = $this->getReqSign($params);
+
+        $client = new Client([
+            'timeout' => 20.0,
+        ]);
+        $response = $client->request('POST', 'https://api.ai.qq.com/fcgi-bin/face/face_faceidentify', [
+            'form_params' => $params
+        ]);
+        $body = $response->getBody();
+
+        return response()->json((string)$body);
+    }
+
+    /*
+     * 个体创建
+     */
+    public function faceNewPerson(Request $request)
+    {
+        $image = $request->input('photo');
+        $group_id = $request->input('group_id'); //个体组id
+        $person_id = urlencode($request->input('person_id')); //id
+        $person_name = urlencode($request->input('person_name')); //姓名
+        $tag = urlencode($request->input('tag'));//备注
+
+        $image = str_replace('data:image/jpeg;base64,', '', $image);
+        $image = str_replace('data:image/png;base64,', '', $image);
+        $image = str_replace('data:image/jpg;base64,', '', $image);
+
+        $params = array(
+            'app_id' => env('tencent-AI-AppId'),
+            'group_ids' => $group_id,
+            'person_id' => $person_id,
+            'time_stamp' => strval(time()),
+            'nonce_str' => strval(rand()),
+            'tag' => $tag ?: '',
+            'person_name' => $person_name,
+            'sign' => '',
+            'image' => $image,
+        );
+        $params['sign'] = $this->getReqSign($params);
+
+//        dd($params);
+        $client = new Client([
+            'timeout' => 20.0,
+        ]);
+        $response = $client->request('POST', 'https://api.ai.qq.com/fcgi-bin/face/face_newperson', [
             'form_params' => $params
         ]);
         $body = $response->getBody();
