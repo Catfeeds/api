@@ -20,9 +20,11 @@ h2 {
 }
 
 .picBox {
+  width: 9.33333rem;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  margin: 0.33333rem 0rem 0rem -4.66667rem;
 }
 
 .picBox img {
@@ -30,9 +32,11 @@ h2 {
 }
 
 .result {
+  width: 9.33333rem;
   position: absolute;
-  left: 0;
   top: 0;
+  left: 50%;
+  margin: 0.33333rem 0rem 0rem -4.66667rem;
 }
 
 .result img {

@@ -28,10 +28,11 @@
 <body>
 <!-- <div class="loading"></div> -->
 <div class="picBox">
+    <!-- <img src="images/pic.jpg">
+    <img src="images/pic.jpg"> -->
     @for($i = 1;$i<= $pid; $i++)
-        <img src="https://oss-unity.touchworld-sh.com/ZhangChi/MultiAnglePhoto/{{ $timestamp }}-{{ $i }}.png" crossOrigin="Anonymous">
+        <img src="https://oss-unity.touchworld-sh.com/ZhangChi/MultiAnglePhoto/{{ $timestamp }}-{{ $i }}.png">
     @endfor
-
 </div>
 <div class="result"></div>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -39,18 +40,18 @@
 <script src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js"></script>
 <script>
 
-    window.onload = function () {
-        html2canvas($(".picBox")[0]).then(canvas => {
-            var img = new Image()
-            var imgURL = canvas.toDataURL("image/jpeg")
-            img.src = imgURL
-            img.onload = function () {
-                $(".result").append(img)
-                $('.loading').hide()
-            }
-            console.log(111);
-        });
-    }
+    // window.onload = function () {
+    //     html2canvas($(".picBox")[0]).then(canvas => {
+    //         var img = new Image()
+    //         var imgURL = canvas.toDataURL("image/jpeg")
+    //         img.src = imgURL
+    //         img.onload = function () {
+    //             $(".result").append(img)
+    //             $('.loading').hide()
+    //         }
+    //         console.log(111);
+    //     });
+    // }
 </script>
 </body>
 
