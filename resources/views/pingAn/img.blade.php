@@ -28,15 +28,17 @@
 <body>
 <!-- <div class="loading"></div> -->
 <div class="picBox">
-    @for($i = 1;$i< $id; $i++)
+    @for($i = 1;$i<= $pid; $i++)
         <img src="https://oss-unity.touchworld-sh.com/ZhangChi/MultiAnglePhoto/{{ $timestamp }}-{{ $i }}.png">
     @endfor
+
 </div>
 <div class="result"></div>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/html2canvas.js"></script>
 <script src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js"></script>
 <script>
+
     window.onload = function () {
         html2canvas($(".picBox")[0]).then(canvas => {
             var img = new Image()
@@ -46,6 +48,7 @@
                 $(".result").append(img)
                 $('.loading').hide()
             }
+            console.log(111);
         });
     }
 </script>
