@@ -17,7 +17,10 @@ class VideoController extends Controller
     public function oss(Request $request)
     {
         $filePath = $request->input('path');//存储路径
-        $path = Storage::disk('unitytouch')->putFileAs($filePath, $request->file('video'), uniqid() . '.mp4');
+        $filename = $request->input('filename');
+
+        $path = Storage::disk('unitytouch')
+            ->putFileAs($filePath, $request->file('video'), $filename ?: uniqid() . '.mp4');
         return 'https://oss-unity.touchworld-sh.com/'.$path;
     }
 }
