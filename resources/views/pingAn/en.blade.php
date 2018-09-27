@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <audio src="media/1.mp3" id="bgm" autoplay loop></audio>
+  <!-- <audio src="media/1.mp3" id="bgm" autoplay loop></audio> -->
   <div class="loading hide"></div>
   <section class="swiper-container">
     <div class="swiper-wrapper">
