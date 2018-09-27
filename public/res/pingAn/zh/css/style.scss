@@ -167,9 +167,9 @@ html, body {
     position: absolute;
     top: PX(730);
     left: 50%;
-    margin-left: PX(-199);
-    width: PX(397);
-    height: PX(153);
+    margin-left: PX(-181);
+    width: PX(362);
+    height: PX(72);
     @include bg('../images/page1_small_title.png')
   }
 }
@@ -178,29 +178,29 @@ html, body {
   color: #fff;
   .title {
     position: absolute;
-    top: PX(180);
+    top: PX(210);
     left: 50%;
-    margin-left: PX(-137);
-    width: PX(274);
-    height: PX(36);
+    margin-left: PX(-134);
+    width: PX(269);
+    height: PX(66);
     @include bg('../images/page2_title.png');
   }
   .content {
     position: absolute;
-    top: PX(280);
+    top: PX(371);
     left: 50%;
-    margin-left: PX(-300);
-    width: PX(600);
-    height: PX(649);
+    margin-left: PX(-305);
+    width: PX(611);
+    height: PX(566);
     @include bg('../images/page2_content_new.png');
   }
   .content2 {
     position: absolute;
-    top: PX(980);
+    top: PX(996);
     left: 50%;
     margin-left: PX(-305);
-    width: PX(590);
-    height: PX(89);
+    width: PX(611);
+    height: PX(76);
     @include bg('../images/page2_content2.png');
   }
 }
@@ -210,14 +210,14 @@ html, body {
     position: absolute;
     top: PX(183);
     left: 50%;
-    margin-left: PX(-277);
-    width: PX(542);
-    height: PX(81);
+    margin-left: PX(-250);
+    width: PX(499);
+    height: PX(111);
     @include bg('../images/page3_title.png')
   }
   .content {
     position: absolute;
-    top: PX(310);
+    top: PX(335);
     left: 50%;
     transform: translate3d(-50%, 0, 0);
     .people {
@@ -249,14 +249,14 @@ html, body {
     position: absolute;
     top: PX(183);
     left: 50%;
-    margin-left: PX(-277);
-    width: PX(554);
-    height: PX(81);
+    margin-left: PX(-250);
+    width: PX(499);
+    height: PX(111);
     @include bg('../images/page3_title.png')
   }
   .content {
     position: absolute;
-    top: PX(310);
+    top: PX(335);
     left: 50%;
     transform: translate3d(-50%, 0, 0);
     .people {
@@ -286,75 +286,75 @@ html, body {
 .page5 {
   .title {
     position: absolute;
-    top: PX(170);
+    top: PX(200);
     left: 50%;
-    margin-left: PX(-87);
-    width: PX(174);
-    height: PX(45);
+    margin-left: PX(-134);
+    width: PX(269);
+    height: PX(68);
     @include bg('../images/page5_title.png');
   }
   .content {
     box-sizing: border-box;
     position: absolute;
-    top: PX(280);
+    top: PX(370);
     left: 50%;
     transform: translate3d(-50%, 0, 0);
     width: 100%;
-    padding: 0 PX(80);
+    padding: 0 PX(120);
     .line {
       position: absolute;
-      top: PX(4);
-      left: PX(170);
-      width: PX(17);
-      height: PX(873);
-      @include bg('../images/page5_line.png');
+      top: PX(6);
+      left: PX(208);
+      width: PX(19);
+      height: PX(563);
+      @include bg('../images/page5_line_new.png');
     }
     .text1 {
-      width: PX(281);
+      width: PX(228);
       height: PX(27);
-      @include bg('../images/page5_text1_new.png');
+      @include bg('../images/page5_text1.png');
     }
     .text2 {
-      width: PX(493);
-      height: PX(115);
-      margin-top: PX(66);
-      @include bg('../images/page5_text2_new.png');
+      width: PX(438);
+      height: PX(67);
+      margin-top: PX(54);
+      @include bg('../images/page5_text2.png');
     }
     .text3 {
-      width: PX(647);
-      height: PX(111);
-      margin-top: PX(36);
-      @include bg('../images/page5_text3_new.png');
+      width: PX(496);
+      height: PX(95);
+      margin-top: PX(28);
+      @include bg('../images/page5_text3.png');
     }
     .text4 {
-      width: PX(594);
-      height: PX(94);
-      margin-top: PX(34);
+      width: PX(493);
+      height: PX(63);
+      margin-top: PX(28);
       @include bg('../images/page5_text4_new.png');
     }
     .text5 {
-      width: PX(529);
-      height: PX(98);
-      margin-top: PX(20);
-      @include bg('../images/page5_text5_new.png');
+      width: PX(494);
+      height: PX(62);
+      margin-top: PX(28);
+      @include bg('../images/page5_text5.png');
     }
     .text6 {
-      width: PX(538);
-      height: PX(106);
-      margin-top: PX(32);
-      @include bg('../images/page5_text6_new.png');
+      width: PX(547);
+      height: PX(64);
+      margin-top: PX(18);
+      @include bg('../images/page5_text6.png');
     }
     .text7 {
-      width: PX(218);
+      width: PX(229);
       height: PX(27);
-      margin-top: PX(42);
+      margin-top: PX(20);
       @include bg('../images/page5_text7_new.png');
     }
     .text8{
-      width: PX(308);
+      width: PX(255);
       height: PX(27);
-      margin-top: PX(48);
-      @include bg('../images/page5_text8_new.png');
+      margin-top: PX(44);
+      @include bg('../images/page5_text8.png');
     }
   }
 }
@@ -362,16 +362,16 @@ html, body {
 .page6 {
   .title {
     position: absolute;
-    top: PX(180);
+    top: PX(200);
     left: 50%;
-    margin-left: PX(-96);
-    width: PX(192);
-    height: PX(36);
+    margin-left: PX(-135);
+    width: PX(269);
+    height: PX(68);
     @include bg('../images/page6_title.png');
   }
   .compass {
     position: absolute;
-    top: PX(180);
+    top: PX(222);
     left: PX(641);
     width: PX(47);
     height: PX(49);
@@ -379,20 +379,20 @@ html, body {
   }
   .map {
     position: absolute;
-    top: PX(300);
+    top: PX(319);
     left: 50%;
     margin-left: PX(-290);
     width: PX(581);
-    height: PX(531);
+    height: PX(530);
     @include bg('../images/page6_map.png');
   }
   .tips {
     position: absolute;
     top: PX(860);
     left: 50%;
-    margin-left: PX(-201);
-    width: PX(403);
-    height: PX(243);
+    margin-left: PX(-204);
+    width: PX(407);
+    height: PX(266);
     @include bg('../images/page6_text.png');
   }
 }
@@ -403,15 +403,15 @@ html, body {
       position: absolute;
       top: PX(200);
       left: 50%;
-      margin-left: PX(-88);
-      width: PX(177);
-      height: PX(46);
+      margin-left: PX(-168);
+      width: PX(336);
+      height: PX(112);
       @include bg('../images/page7_stage1_title.png');
     }
     .content {
       box-sizing: border-box;
       position: absolute;
-      top: PX(260);
+      top: PX(355);
       left: 50%;
       transform: translate3d(-50%, 0, 0);
       width: 100%;
@@ -432,10 +432,6 @@ html, body {
         margin-top: PX(50);
         font-size: PX(26);
         color: #fff;
-        img {
-          width: PX(509);
-          height: PX(69);
-        }
       }
       .updateImg {
         box-sizing: border-box;
@@ -444,7 +440,7 @@ html, body {
         margin-left: PX(-175);
         width: PX(350);
         height: PX(79);
-        margin-top: PX(60);
+        margin-top: PX(100);
         text-align: center;
         padding: PX(10);
         font-size: 0;
@@ -468,9 +464,9 @@ html, body {
       position: absolute;
       top: PX(180);
       left: 50%;
-      margin-left: PX(-180);
-      width: PX(361);
-      height: PX(91);
+      margin-left: PX(-168);
+      width: PX(336);
+      height: PX(131);
       @include bg('../images/page7_stage2_title.png');
     }
     .content {
@@ -480,17 +476,17 @@ html, body {
       left: 50%;
       transform: translate3d(-50%, 0, 0);
       width: 100%;
-      padding: 0 PX(50) 0 PX(80);
+      padding: 0 PX(100) 0 PX(150);
       color: #fff;
-      font-size: PX(36);
+      font-size: PX(40);
       p {
-        margin: PX(30) 0;
+        margin: PX(50) 0;
         word-break:break-all;
         line-height: PX(50);
         .left {
           vertical-align: top;
           display: inline-block;
-          width: PX(200);
+          width: PX(100);
         }
         .right {
           vertical-align: top;
@@ -501,12 +497,12 @@ html, body {
       .businessCard {
         text-align: center;
         img {
-          margin-left: PX(-35);
+          margin-left: PX(-50);
           height: PX(200);
         }
       }
       .submit {
-        margin: PX(60) 0 0 PX(120);
+        margin: PX(80) 0 0 PX(50);
         width: PX(350);
         height: PX(78);
         @include bg('../images/page7_submit.png')
@@ -517,8 +513,8 @@ html, body {
       right: PX(50);
       top: PX(70);
       z-index: 100;
-      width: PX(146);
-      height: PX(38);
+      width: PX(102);
+      height: PX(37);
       @include bg('../images/page7_return.png')
     }
   }
@@ -526,20 +522,20 @@ html, body {
     .success {
       position: absolute;
       left: 50%;
-      margin-left: PX(-149);
+      margin-left: PX(-345);
       top: PX(300);
-      width: PX(259);
-      height: PX(291);
+      width: PX(690);
+      height: PX(270);
       @include bg('../images/page7_stage3_success.png')
     }
     .text {
       position: absolute;
       left: 50%;
-      margin-left: PX(-278);
+      margin-left: PX(-328);
       top: PX(850);
-      width: PX(556);
-      height: PX(70);
-      @include bg('../images/page7_stage3_text_new.png')
+      width: PX(656);
+      height: PX(56);
+      @include bg('../images/page7_stage3_text.png')
     }
     .return {
       position: absolute;

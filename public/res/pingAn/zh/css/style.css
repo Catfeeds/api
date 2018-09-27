@@ -183,9 +183,9 @@ html, body {
   position: absolute;
   top: 9.73333rem;
   left: 50%;
-  margin-left: -2.65333rem;
-  width: 5.29333rem;
-  height: 2.04rem;
+  margin-left: -2.41333rem;
+  width: 4.82667rem;
+  height: 0.96rem;
   background: url("../images/page1_small_title.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -196,33 +196,33 @@ html, body {
 
 .page2 .title {
   position: absolute;
-  top: 2.4rem;
+  top: 2.8rem;
   left: 50%;
-  margin-left: -1.82667rem;
-  width: 3.65333rem;
-  height: 0.48rem;
+  margin-left: -1.78667rem;
+  width: 3.58667rem;
+  height: 0.88rem;
   background: url("../images/page2_title.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page2 .content {
   position: absolute;
-  top: 3.73333rem;
+  top: 4.94667rem;
   left: 50%;
-  margin-left: -4rem;
-  width: 8rem;
-  height: 8.65333rem;
+  margin-left: -4.06667rem;
+  width: 8.14667rem;
+  height: 7.54667rem;
   background: url("../images/page2_content_new.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page2 .content2 {
   position: absolute;
-  top: 13.06667rem;
+  top: 13.28rem;
   left: 50%;
   margin-left: -4.06667rem;
-  width: 7.86667rem;
-  height: 1.18667rem;
+  width: 8.14667rem;
+  height: 1.01333rem;
   background: url("../images/page2_content2.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -231,16 +231,16 @@ html, body {
   position: absolute;
   top: 2.44rem;
   left: 50%;
-  margin-left: -3.69333rem;
-  width: 7.22667rem;
-  height: 1.08rem;
+  margin-left: -3.33333rem;
+  width: 6.65333rem;
+  height: 1.48rem;
   background: url("../images/page3_title.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page3 .content {
   position: absolute;
-  top: 4.13333rem;
+  top: 4.46667rem;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
 }
@@ -274,16 +274,16 @@ html, body {
   position: absolute;
   top: 2.44rem;
   left: 50%;
-  margin-left: -3.69333rem;
-  width: 7.38667rem;
-  height: 1.08rem;
+  margin-left: -3.33333rem;
+  width: 6.65333rem;
+  height: 1.48rem;
   background: url("../images/page3_title.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page4 .content {
   position: absolute;
-  top: 4.13333rem;
+  top: 4.46667rem;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
 }
@@ -315,11 +315,11 @@ html, body {
 
 .page5 .title {
   position: absolute;
-  top: 2.26667rem;
+  top: 2.66667rem;
   left: 50%;
-  margin-left: -1.16rem;
-  width: 2.32rem;
-  height: 0.6rem;
+  margin-left: -1.78667rem;
+  width: 3.58667rem;
+  height: 0.90667rem;
   background: url("../images/page5_title.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -327,100 +327,100 @@ html, body {
 .page5 .content {
   box-sizing: border-box;
   position: absolute;
-  top: 3.73333rem;
+  top: 4.93333rem;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
   width: 100%;
-  padding: 0 1.06667rem;
+  padding: 0 1.6rem;
 }
 
 .page5 .content .line {
   position: absolute;
-  top: 0.05333rem;
-  left: 2.26667rem;
-  width: 0.22667rem;
-  height: 11.64rem;
-  background: url("../images/page5_line.png") no-repeat;
+  top: 0.08rem;
+  left: 2.77333rem;
+  width: 0.25333rem;
+  height: 7.50667rem;
+  background: url("../images/page5_line_new.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page5 .content .text1 {
-  width: 3.74667rem;
+  width: 3.04rem;
   height: 0.36rem;
-  background: url("../images/page5_text1_new.png") no-repeat;
+  background: url("../images/page5_text1.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page5 .content .text2 {
-  width: 6.57333rem;
-  height: 1.53333rem;
-  margin-top: 0.88rem;
-  background: url("../images/page5_text2_new.png") no-repeat;
+  width: 5.84rem;
+  height: 0.89333rem;
+  margin-top: 0.72rem;
+  background: url("../images/page5_text2.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page5 .content .text3 {
-  width: 8.62667rem;
-  height: 1.48rem;
-  margin-top: 0.48rem;
-  background: url("../images/page5_text3_new.png") no-repeat;
+  width: 6.61333rem;
+  height: 1.26667rem;
+  margin-top: 0.37333rem;
+  background: url("../images/page5_text3.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page5 .content .text4 {
-  width: 7.92rem;
-  height: 1.25333rem;
-  margin-top: 0.45333rem;
+  width: 6.57333rem;
+  height: 0.84rem;
+  margin-top: 0.37333rem;
   background: url("../images/page5_text4_new.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page5 .content .text5 {
-  width: 7.05333rem;
-  height: 1.30667rem;
-  margin-top: 0.26667rem;
-  background: url("../images/page5_text5_new.png") no-repeat;
+  width: 6.58667rem;
+  height: 0.82667rem;
+  margin-top: 0.37333rem;
+  background: url("../images/page5_text5.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page5 .content .text6 {
-  width: 7.17333rem;
-  height: 1.41333rem;
-  margin-top: 0.42667rem;
-  background: url("../images/page5_text6_new.png") no-repeat;
+  width: 7.29333rem;
+  height: 0.85333rem;
+  margin-top: 0.24rem;
+  background: url("../images/page5_text6.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page5 .content .text7 {
-  width: 2.90667rem;
+  width: 3.05333rem;
   height: 0.36rem;
-  margin-top: 0.56rem;
+  margin-top: 0.26667rem;
   background: url("../images/page5_text7_new.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page5 .content .text8 {
-  width: 4.10667rem;
+  width: 3.4rem;
   height: 0.36rem;
-  margin-top: 0.64rem;
-  background: url("../images/page5_text8_new.png") no-repeat;
+  margin-top: 0.58667rem;
+  background: url("../images/page5_text8.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page6 .title {
   position: absolute;
-  top: 2.4rem;
+  top: 2.66667rem;
   left: 50%;
-  margin-left: -1.28rem;
-  width: 2.56rem;
-  height: 0.48rem;
+  margin-left: -1.8rem;
+  width: 3.58667rem;
+  height: 0.90667rem;
   background: url("../images/page6_title.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .page6 .compass {
   position: absolute;
-  top: 2.4rem;
+  top: 2.96rem;
   left: 8.54667rem;
   width: 0.62667rem;
   height: 0.65333rem;
@@ -430,11 +430,11 @@ html, body {
 
 .page6 .map {
   position: absolute;
-  top: 4rem;
+  top: 4.25333rem;
   left: 50%;
   margin-left: -3.86667rem;
   width: 7.74667rem;
-  height: 7.08rem;
+  height: 7.06667rem;
   background: url("../images/page6_map.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -443,9 +443,9 @@ html, body {
   position: absolute;
   top: 11.46667rem;
   left: 50%;
-  margin-left: -2.68rem;
-  width: 5.37333rem;
-  height: 3.24rem;
+  margin-left: -2.72rem;
+  width: 5.42667rem;
+  height: 3.54667rem;
   background: url("../images/page6_text.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -454,9 +454,9 @@ html, body {
   position: absolute;
   top: 2.66667rem;
   left: 50%;
-  margin-left: -1.17333rem;
-  width: 2.36rem;
-  height: 0.61333rem;
+  margin-left: -2.24rem;
+  width: 4.48rem;
+  height: 1.49333rem;
   background: url("../images/page7_stage1_title.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -464,7 +464,7 @@ html, body {
 .page7 .stage1 .content {
   box-sizing: border-box;
   position: absolute;
-  top: 3.46667rem;
+  top: 4.73333rem;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
   width: 100%;
@@ -491,11 +491,6 @@ html, body {
   color: #fff;
 }
 
-.page7 .stage1 .content .text img {
-  width: 6.78667rem;
-  height: 0.92rem;
-}
-
 .page7 .stage1 .content .updateImg {
   box-sizing: border-box;
   position: absolute;
@@ -503,7 +498,7 @@ html, body {
   margin-left: -2.33333rem;
   width: 4.66667rem;
   height: 1.05333rem;
-  margin-top: 0.8rem;
+  margin-top: 1.33333rem;
   text-align: center;
   padding: 0.13333rem;
   font-size: 0;
@@ -527,9 +522,9 @@ html, body {
   position: absolute;
   top: 2.4rem;
   left: 50%;
-  margin-left: -2.4rem;
-  width: 4.81333rem;
-  height: 1.21333rem;
+  margin-left: -2.24rem;
+  width: 4.48rem;
+  height: 1.74667rem;
   background: url("../images/page7_stage2_title.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -541,13 +536,13 @@ html, body {
   left: 50%;
   transform: translate3d(-50%, 0, 0);
   width: 100%;
-  padding: 0 0.66667rem 0 1.06667rem;
+  padding: 0 1.33333rem 0 2rem;
   color: #fff;
-  font-size: 0.48rem;
+  font-size: 0.53333rem;
 }
 
 .page7 .stage2 .content p {
-  margin: 0.4rem 0;
+  margin: 0.66667rem 0;
   word-break: break-all;
   line-height: 0.66667rem;
 }
@@ -555,7 +550,7 @@ html, body {
 .page7 .stage2 .content p .left {
   vertical-align: top;
   display: inline-block;
-  width: 2.66667rem;
+  width: 1.33333rem;
 }
 
 .page7 .stage2 .content p .right {
@@ -569,12 +564,12 @@ html, body {
 }
 
 .page7 .stage2 .content .businessCard img {
-  margin-left: -0.46667rem;
+  margin-left: -0.66667rem;
   height: 2.66667rem;
 }
 
 .page7 .stage2 .content .submit {
-  margin: 0.8rem 0 0 1.6rem;
+  margin: 1.06667rem 0 0 0.66667rem;
   width: 4.66667rem;
   height: 1.04rem;
   background: url("../images/page7_submit.png") no-repeat;
@@ -586,8 +581,8 @@ html, body {
   right: 0.66667rem;
   top: 0.93333rem;
   z-index: 100;
-  width: 1.94667rem;
-  height: 0.50667rem;
+  width: 1.36rem;
+  height: 0.49333rem;
   background: url("../images/page7_return.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -595,10 +590,10 @@ html, body {
 .page7 .stage3 .success {
   position: absolute;
   left: 50%;
-  margin-left: -1.98667rem;
+  margin-left: -4.6rem;
   top: 4rem;
-  width: 3.45333rem;
-  height: 3.88rem;
+  width: 9.2rem;
+  height: 3.6rem;
   background: url("../images/page7_stage3_success.png") no-repeat;
   background-size: 100% 100%;
 }
@@ -606,11 +601,11 @@ html, body {
 .page7 .stage3 .text {
   position: absolute;
   left: 50%;
-  margin-left: -3.70667rem;
+  margin-left: -4.37333rem;
   top: 11.33333rem;
-  width: 7.41333rem;
-  height: 0.93333rem;
-  background: url("../images/page7_stage3_text_new.png") no-repeat;
+  width: 8.74667rem;
+  height: 0.74667rem;
+  background: url("../images/page7_stage3_text.png") no-repeat;
   background-size: 100% 100%;
 }
 

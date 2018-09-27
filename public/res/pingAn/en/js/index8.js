@@ -115,8 +115,11 @@ $(function () {
 		} else {
 			$('.loading').show()
 			$.ajax({
+				headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token-1"]').attr('content')
+                },
 				method: 'POST',
-				url: 'https://api.shanghaichujie.com/api/pingAn/user',
+				url: 'http://xg.touchworld-sh.com/api/pingAn/user',
 				data: {
 					username: userInfo.firstName + ' ' + userInfo.lastName,
 					company: userInfo.company,
@@ -131,7 +134,9 @@ $(function () {
 					$('.stage2').hide()
 					$('.stage3').show()
 				}
-			})
+			}).fail(function (res) {
+				console.log(res)
+            })
 		}
 	})
 	$('.stage2 .return').on('touchend', () => {

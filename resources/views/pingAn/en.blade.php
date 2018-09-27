@@ -8,7 +8,7 @@
   <title>Ping An Cloud Accelerator D-Day</title>
   <script src="js/rem.js"></script>
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/style7.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -108,9 +108,8 @@
             <div class="text3 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2s"></div>
             <div class="text4 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2.5s"></div>
             <div class="text5 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3s"></div>
-            <div class="text6 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3.5s"></div>
-            <div class="text7 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4s"></div>
-            <div class="text8 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4.5s"></div>
+            <div class="text7 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3.5s"></div>
+            <div class="text8 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4s"></div>
           </div>
         </div>
       </div>
@@ -166,7 +165,7 @@
   <script src="js/index8.js"></script>
   <script src="js/wxjssdk.js" type="text/javascript" charset="utf-8"></script>
   <script type="application/javascript">
-      wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
+      wx.config(<?php echo $app->jssdk->buildConfig(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
       // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在 页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready 函数中。
       wx.ready(function () {
           // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口

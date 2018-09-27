@@ -8,7 +8,7 @@
   <title>平安云加速器D-Day</title>
   <script src="js/rem.js"></script>
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/style7.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -108,9 +108,8 @@
             <div class="text3 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2s"></div>
             <div class="text4 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2.5s"></div>
             <div class="text5 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3s"></div>
-            <div class="text6 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3.5s"></div>
-            <div class="text7 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4s"></div>
-            <div class="text8 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4.5s"></div>
+            <div class="text7 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3.5s"></div>
+            <div class="text8 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4s"></div>
           </div>
         </div>
       </div>
