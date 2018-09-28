@@ -39,27 +39,27 @@
             <div class="people">
               <img class="avatar ani" src="images/people/people1_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people1_desc.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
+              <img class="desc ani" src="images/people/1.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
             <div class="people">
               <img class="avatar ani" src="images/people/people2_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="3s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people2_desc_new.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
+              <img class="desc ani" src="images/people/2.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
             <div class="people">
               <img class="avatar ani" src="images/people/people3_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people3_desc.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
+              <img class="desc ani" src="images/people/3.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
             <div class="people">
               <img class="avatar ani" src="images/people/people4_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people4_desc.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
+              <img class="desc ani" src="images/people/4.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
             <div class="people">
               <img class="avatar ani" src="images/people/people5_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people5_desc_new.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
+              <img class="desc ani" src="images/people/5.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
           </div>
         </div>
@@ -72,28 +72,27 @@
             <div class="people">
               <img class="avatar ani" src="images/people/people6_avatar.png" src="images/people/people5_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people6_desc.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
-              <!-- <img class="desc ani" src="images/people/people6_desc_new.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s"> -->
+              <img class="desc ani" src="images/people/6.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
             <div class="people">
               <img class="avatar ani" src="images/people/people7_avatar.png" src="images/people/people5_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people7_desc.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
+              <img class="desc ani" src="images/people/7.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
             <div class="people">
               <img class="avatar ani" src="images/people/people8_avatar.png" src="images/people/people5_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people8_desc.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
+              <img class="desc ani" src="images/people/8.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
             <div class="people">
               <img class="avatar ani" src="images/people/people9_avatar.png" src="images/people/people5_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people9_desc.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
+              <img class="desc ani" src="images/people/9.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
             <div class="people">
               <img class="avatar ani" src="images/people/people10_avatar.png" src="images/people/people5_avatar.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s">
               <div class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"></div>
-              <img class="desc ani" src="images/people/people10_desc.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
+              <img class="desc ani" src="images/people/10.png" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">
             </div>
           </div>
         </div>
