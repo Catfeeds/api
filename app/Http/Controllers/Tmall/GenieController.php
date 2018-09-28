@@ -152,7 +152,7 @@ class GenieController extends Controller
             $created_at = Carbon::createFromFormat('Y-m-d H:i:s', $users[$key]->created_at);
             $end = Carbon::createFromFormat('Y-m-d H:i:s', $users[$key]->end)->addMinutes($users[$key]->punish);
             $minutes = intval($created_at->copy()->diffInSeconds($end) / 60);
-            if ($minutes <10) {
+            if ($minutes <9) {
                 unset($users[$key]);
             }else {
                 $seconds = $created_at->copy()->diffInSeconds($end) % 60;
