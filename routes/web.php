@@ -288,7 +288,7 @@ Route::get('res/clari/{id}', 'Clari\ClariController@index');
  */
 Route::get('res/chevy/index', 'ChevyController@index');
 Route::get('res/chevy/rank/index', 'ChevyController@rank');
-Route::get('res/chevy/scan/index', 'ChevyController@scan');
+Route::get('res/chevy/scan/index', 'ChevyController@scan');//先用做语音变换灯光
 /*
  * 复旦教师节(取消)
  */
