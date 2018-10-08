@@ -146,8 +146,8 @@ class GenieController extends Controller
     public function rank()
     {
         $users = TmallGenie::where('end', '!=', null)
-            ->where('created_at', '>=', '2018-10-06 00:29:11')
-            ->where('created_at', '<=','2018-10-07 00:29:11')
+            ->where('created_at', '>=', '2018-10-03 00:29:11')
+            ->where('created_at', '<=','2018-10-04 00:29:11')
             ->get();
         foreach ($users as $key =>$value) {
             $created_at = Carbon::createFromFormat('Y-m-d H:i:s', $users[$key]->created_at);
