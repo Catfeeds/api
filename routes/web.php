@@ -323,3 +323,10 @@ Route::get('res/pingAn/imgdemo/index', 'PingAn\IndexController@imgDemo');
 Route::get('tmall/genie/sign', 'Tmall\GenieController@index');
 Route::get('tmall/genie/control', 'Tmall\GenieController@control');
 Route::get('res/genie/album/index', 'Tmall\GenieController@album');
+
+/*
+ * 惠氏活动
+ */
+Route::get('res/wyeth/album/index', function () {
+   return '惠氏活动尚未开始';
+});
