@@ -328,5 +328,5 @@ Route::get('res/genie/album/index', 'Tmall\GenieController@album');
  * 惠氏活动
  */
 Route::get('res/wyeth/album/index', function () {
-   return '惠氏活动尚未开始';
+   return '活动尚未开始';
 });
