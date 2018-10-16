@@ -330,3 +330,8 @@ Route::get('res/genie/album/index', 'Tmall\GenieController@album');
 Route::get('res/wyeth/album/index', function () {
    return '活动尚未开始';
 });
+
+Route::get('res/abbott/index', function () {
+    $js = EasyWeChat::js();
+    return view('abbott.index', compact('js'));
+});
