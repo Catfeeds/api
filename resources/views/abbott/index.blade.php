@@ -22,13 +22,15 @@
 </div>
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide page1"><img src="./img/01_text.png" class="ani" swiper-animate-effect="fadeInDown"
-                                             swiper-animate-duration="1s" swiper-animate-delay="0.1s"></div>
-        <div class="swiper-slide page2"><img src="./img/02_text.png" class="ani" swiper-animate-effect="zoomIn"
-                                             swiper-animate-duration="1s" swiper-animate-delay="0.1s"></div>
-        <div class="swiper-slide page3"><img src="./img/03_text.png" class="ani" swiper-animate-effect="fadeInUp"
-                                             swiper-animate-duration="1s" swiper-animate-delay="0.1s"></div>
-        <div class="swiper-slide page4"></div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide page1"><img src="./img/01_text.png" class="ani" swiper-animate-effect="fadeInDown"
+          swiper-animate-duration="1s" swiper-animate-delay="0.1s"><img class="arrwo_bottom" src="./img/arrow_bottom.png"></div>
+      <div class="swiper-slide page2"><img src="./img/02_text.png" class="ani" swiper-animate-effect="zoomIn"
+          swiper-animate-duration="1s" swiper-animate-delay="0.1s"><img class="arrwo_bottom" src="./img/arrow_bottom.png"></div>
+      <div class="swiper-slide page3"><img src="./img/03_text.png" class="ani" swiper-animate-effect="fadeInUp"
+          swiper-animate-duration="1s" swiper-animate-delay="0.1s"><img class="arrwo_bottom" src="./img/arrow_bottom.png"></div>
+      <div class="swiper-slide page4"></div>
+    </div>
     </div>
 </div>
 

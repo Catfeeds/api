@@ -8,6 +8,25 @@ body {
   display: none;
 }
 
+.swiper-slide .arrwo_bottom {
+  position: absolute;
+  top: auto;
+  left: 50%;
+  bottom: 0.26667rem;
+  margin-left: -0.66667rem;
+  width: 1.33333rem;
+  animation: jump 1s infinite alternate;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0.53333rem;
+  }
+  100% {
+    bottom: 0.26667rem;
+  }
+}
+
 .loading {
   position: absolute;
   top: -0.4rem;
