@@ -40,7 +40,7 @@ body {
 
 .loading .logo {
   position: absolute;
-  top: 7.06667rem;
+  top: 5.33333rem;
   left: 50%;
   margin-left: -1.09333rem;
   width: 2.18667rem;
@@ -49,7 +49,7 @@ body {
 
 .loading .progress {
   position: absolute;
-  top: 9.33333rem;
+  top: 7.33333rem;
   left: 50%;
   margin-left: -3.4rem;
   width: 6.8rem;
@@ -66,7 +66,7 @@ body {
 
 .loading .loading-text {
   position: absolute;
-  top: 9.86667rem;
+  top: 8rem;
   left: 50%;
   margin-left: -0.8rem;
   width: 1.6rem;
