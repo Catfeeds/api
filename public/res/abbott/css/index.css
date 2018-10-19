@@ -12,7 +12,7 @@ body {
   position: absolute;
   top: auto;
   left: 50%;
-  bottom: 1.73333rem;
+  bottom: 0.66667rem;
   margin-left: -0.66667rem;
   width: 1.33333rem;
   animation: jump 1s infinite alternate;
@@ -20,10 +20,10 @@ body {
 
 @keyframes jump {
   0% {
-    bottom: 2rem;
+    bottom: 1.06667rem;
   }
   100% {
-    bottom: 1.73333rem;
+    bottom: 0.66667rem;
   }
 }
 
@@ -72,10 +72,12 @@ body {
 }
 
 .swiper-container {
+  overflow: hidden;
   position: absolute;
-  top: -0.4rem;
+  top: 50%;
+  margin-top: -8.13333rem;
   width: 10rem;
-  height: 17.78667rem;
+  height: 16.26667rem;
 }
 
 .page1 {
