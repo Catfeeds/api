@@ -84,7 +84,7 @@ body {
 
 .page1 {
   position: relative;
-  background: url(../img/01.jpg) no-repeat;
+  background: url(../img/01_new.jpg) no-repeat;
   background-size: 100% 100%;
 }
 
@@ -97,7 +97,7 @@ body {
 
 .page2 {
   position: relative;
-  background: url(../img/02.jpg) no-repeat;
+  background: url(../img/02_new.jpg) no-repeat;
   background-size: 100% 100%;
 }
 
@@ -110,7 +110,7 @@ body {
 
 .page3 {
   position: relative;
-  background: url(../img/03.jpg) no-repeat;
+  background: url(../img/03_new.jpg) no-repeat;
   background-size: 100% 100%;
 }
 
@@ -122,6 +122,6 @@ body {
 }
 
 .page4 {
-  background: url(../img/04.jpg) no-repeat;
+  background: url(../img/04_new.jpg) no-repeat;
   background-size: 100% 100%;
 }
