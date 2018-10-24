@@ -327,11 +327,11 @@ Route::get('res/genie/album/index', 'Tmall\GenieController@album');
 /*
  * 惠氏活动
  */
-Route::get('res/wyeth/album/index', function () {
-   return '活动尚未开始';
-});
+Route::redirect('res/wyeth/album/index', 'http://cs.touchworld-sh.com/lolo/album/');
 
 Route::get('res/abbott/index', function () {
     $js = EasyWeChat::js();
     return view('abbott.index', compact('js'));
 });
+
+Route::get('front/{v}', 'Front\IndexController@index')->where('v', '.*');
