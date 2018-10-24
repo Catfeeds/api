@@ -19,6 +19,10 @@ use Illuminate\Http\Request;
 
 //二维码生成接口
 Route::get('qrcode/generate', 'Api\QrcodeController@qrcode');
+/* 阿里云oss */
+Route::post('ali/oss/upload/image', 'Api\ImageController@aliOssUploadImage');
+Route::post('ali/oss/upload/video', 'Api\VideoController@oss');
+Route::get('ali/oss/files/all', 'Api\OssController@allFiles');
 
 /*
  * 腾讯AI接口
@@ -211,11 +215,7 @@ Route::get('absolut/print/confirm', 'Absolut\ApiController@printConfirm');
  */
 Route::post('dettol/rank', 'Dettol\DettolController@api');
 
-/**
- * 阿里云oss
- */
-Route::post('ali/oss/upload/image', 'Api\ImageController@aliOssUploadImage');
-Route::post('ali/oss/upload/video', 'Api\VideoController@oss');
+
 /**
  * coach 照片存储
  */
