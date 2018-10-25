@@ -91,29 +91,22 @@
     var u = navigator.userAgent;
 
     btn.onclick = function () {
-        if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
-            //安卓手机
-            var el_a = document.createElement('a');
-            el_a.href = '{{ $path }}';
-            el_a.download = '{{ $path }}';
-            el_a.click();
+
+        var email = prompt('请输入邮箱');
+        var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+        if (email === '') {
+            alert('输入内容不能为空')
+        } else if (!reg.test(email)) {
+            alert('邮箱格式错误')
         } else {
-            var email = prompt('请输入邮箱');
-            var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
-            if (email === '') {
-                alert('输入内容不能为空')
-            } else if (!reg.test(email)) {
-                alert('邮箱格式错误')
-            } else {
-                axios.post('https://api.shanghaichujie.com/api/newzealand/video/email', {
-                    email: email,
-                    path: '{{ $path }}'
-                }).then(function (res) {
-                    alert('邮件发送成功！');
-                }).catch(function  (res) {
-                    alert('很抱歉邮件发送失败！')
-                })
-            }
+            axios.post('https://api.shanghaichujie.com/api/newzealand/video/email', {
+                email: email,
+                path: '{{ $path }}'
+            }).then(function (res) {
+                alert('邮件发送成功！');
+            }).catch(function (res) {
+                alert('很抱歉邮件发送失败！')
+            })
         }
     }
 </script>
