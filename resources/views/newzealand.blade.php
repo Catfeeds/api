@@ -36,9 +36,10 @@
 
         video {
             margin-top: 40px;
-            width: 100%;
-            height: 30%;
+            width: 57%;
             background: #000;
+            display: block;
+            margin: 20px auto 0;
         }
 
         button {
@@ -56,7 +57,7 @@
 <body>
 <div class="wrap">
     <img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png">
-    <video src="{{ $path }}" controls webkit-playsinline="true" playsinline="true" download></video>
+    <video src="{{ $path }}" controls download></video>
     <button>下载</button>
 </div>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
