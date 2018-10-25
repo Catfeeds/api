@@ -37,7 +37,7 @@
         video {
             margin-top: 40px;
             width: 100%;
-            height: 100%;
+            height: 30%;
             background: #000;
         }
 
