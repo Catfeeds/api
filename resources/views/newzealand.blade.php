@@ -58,7 +58,7 @@
 <div class="wrap">
     <img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png">
     <video src="{{ $path }}" controls download></video>
-    <button>下载</button>
+    <button>视频下载</button>
 </div>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
@@ -109,9 +109,9 @@
                     email: email,
                     path: '{{ $path }}'
                 }).then(function (res) {
-                    if (res.code === 0) {
-                        alert('发送成功')
-                    }
+                    alert('邮件发送成功！');
+                }).catch(function  (res) {
+                    alert('很抱歉邮件发送失败！')
                 })
             }
         }
