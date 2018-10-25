@@ -337,7 +337,7 @@ Route::get('res/abbott/index', function () {
 /*
  * 进博会新西兰
  */
-Route::get('newzealand/share');
+Route::get('newzealand/share', 'Newzealand\IndexController@index');
 /**
  *  前后端分离重定向
  */
