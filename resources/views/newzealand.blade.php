@@ -106,10 +106,8 @@
                 alert('邮箱格式错误')
             } else {
                 axios.post('https://api.shanghaichujie.com/api/newzealand/video/email', {
-                    data: {
-                        email: email,
-                        path: '{{ $path }}'
-                    }
+                    email: email,
+                    path: '{{ $path }}'
                 }).then(function (res) {
                     if (res.code === 0) {
                         alert('发送成功')
