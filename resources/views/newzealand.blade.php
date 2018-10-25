@@ -94,8 +94,8 @@
         if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
             //安卓手机
             var el_a = document.createElement('a');
-            el_a.href = 'video.mp4';
-            el_a.download = 'video.mp4';
+            el_a.href = '{{ $path }}';
+            el_a.download = '{{ $path }}';
             el_a.click();
         } else {
             var email = prompt('请输入邮箱');
