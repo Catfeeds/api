@@ -334,4 +334,11 @@ Route::get('res/abbott/index', function () {
     return view('abbott.index', compact('js'));
 });
 
+/*
+ * 进博会新西兰
+ */
+Route::get('newzealand/share');
+/**
+ *  前后端分离重定向
+ */
 Route::get('front/{v}', 'Front\IndexController@index')->where('v', '.*');
