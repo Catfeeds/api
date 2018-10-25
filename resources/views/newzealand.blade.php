@@ -112,7 +112,7 @@
                     }
                 }).then(function (res) {
                     if (res.code === 0) {
-                        alert('下载成功')
+                        alert('发送成功')
                     }
                 })
             }
