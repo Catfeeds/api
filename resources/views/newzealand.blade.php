@@ -68,7 +68,7 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: '进口博览会-新西兰馆', // 分享标题
+            title: '刚刚我在新西兰，偶遇呆萌傻鸟!', // 分享标题
             link: window.location.href,
             imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png", // 分享图标
             success: function () {
@@ -77,8 +77,8 @@
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
-            title: '进口博览会-新西兰馆', // 分享标题
-            desc: "您有一份来自新西兰馆的专属视频", // 分享描述
+            title: '刚刚我在新西兰，偶遇呆萌傻鸟!', // 分享标题
+            desc: "快来看，我刚去了趟新西兰!", // 分享描述
             link: window.location.href,
             imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
