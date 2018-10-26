@@ -11,6 +11,7 @@ class IndexController extends Controller
     {
         $path = $request->input('path');
         $js= \EasyWeChat::js();
-        return view('newzealand', compact('path', 'js'));
+        $type = $request->input('type');
+        return view('newzealand', compact('path', 'js', 'type'));
     }
 }

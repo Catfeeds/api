@@ -68,7 +68,16 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
+            @if(isset($type))
+            @if($type == 'bird')
             title: '刚刚我在新西兰，偶遇呆萌傻鸟!', // 分享标题
+            @elseif($type == 'air')
+            title: '刚刚我在新西兰，偶遇呆萌傻鸟!', // 分享标题
+            @endif
+                    @else
+            title: '刚刚我在新西兰，偶遇呆萌傻鸟!', // 分享标题
+
+            @endif
             link: window.location.href,
             imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png", // 分享图标
             success: function () {
@@ -77,8 +86,18 @@
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
+            @if(isset($type))
+                    @if($type == 'bird')
             title: '刚刚我在新西兰，偶遇呆萌傻鸟!', // 分享标题
-            desc: "快来看，我刚去了趟新西兰!", // 分享描述
+            desc: "刚刚我在新西兰，偶遇呆萌傻鸟!", // 分享描述
+            @elseif($type == 'air')
+            title: '快来看，我刚去了趟新西兰!', // 分享标题
+            desc: "快来看，我刚去了趟新西兰!",
+            @endif
+                    @else
+            title: '刚刚我在新西兰，偶遇呆萌傻鸟!', // 分享标题
+            desc: "刚刚我在新西兰，偶遇呆萌傻鸟!", // 分享描述
+            @endif
             link: window.location.href,
             imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
