@@ -10,8 +10,7 @@ class IndexController extends Controller
     public function zh()
     {
         $js = \EasyWeChat::js();
-        return '很遗憾！报名已经截止';
-//        return view('pingAn.zh', compact('js'));
+        return view('pingAn.zh', compact('js'));
     }
 
     public function en()
