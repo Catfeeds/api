@@ -19,6 +19,6 @@ class UserController extends Controller
     {
         return redirect(env('APP_URL') . '/front/friso')
             ->cookie('openid', 'sss')
-            ->cookie('status', false);
+            ->cookie('status', 'false');
     }
 }
