@@ -14,4 +14,11 @@ class UserController extends Controller
 
         return $user;
     }
+
+    public function index()
+    {
+        return redirect(env('APP_URL') . '/front/friso')
+            ->cookie('openid', session('wechat.oauth_user.default.id'))
+            ->cookie('status', false);
+    }
 }
