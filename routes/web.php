@@ -218,6 +218,9 @@ Route::get('friso/pyj', 'Friso\PyjController@index');//显示派样机领奖包
 Route::get('friso/reward', 'Friso\PyjController@reward');
 Route::get('friso/h5/index', 'Friso\H5Controller@index');
 Route::post('friso/h5/draw', 'Friso\H5Controller@draw');
+/* 美素互动20181103 */
+
+
 /**
  * 2018腾讯大会评论互动
  */

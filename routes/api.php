@@ -256,3 +256,5 @@ Route::get('genie/rank', 'Tmall\GenieController@rank');
  * 新西兰展馆发送邮件下载视频
  */
 Route::post('newzealand/video/email', 'Newzealand\EmailController@seadEmail');
+
+Route::post('friso/user/store', 'Friso\UserController@store');
