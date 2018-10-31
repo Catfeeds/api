@@ -12,6 +12,12 @@
 |
 */
 
+/**
+ * oss 分享
+ */
+
+Route::get('oss/img/share', 'Api\OssController@imgShare');
+
 Route::get('test', 'TestController@socketTest');
 
 /*
@@ -338,6 +344,7 @@ Route::get('res/abbott/index', function () {
  * 进博会新西兰
  */
 Route::get('newzealand/share', 'Newzealand\IndexController@index');
+
 /**
  *  前后端分离重定向
  */
