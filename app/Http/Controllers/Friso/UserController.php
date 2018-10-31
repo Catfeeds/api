@@ -18,7 +18,7 @@ class UserController extends Controller
     public function index()
     {
         return redirect(env('APP_URL') . '/front/friso')
-            ->cookie('openid', session('wechat.oauth_user.default.id'))
+            ->cookie('openid', 'sss')
             ->cookie('status', false);
     }
 }
