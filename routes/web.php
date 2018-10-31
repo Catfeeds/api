@@ -342,6 +342,11 @@ Route::get('res/abbott/index', function () {
     return view('abbott.index', compact('js'));
 });
 
+Route::get('res/abbott/index2', function () {
+    $js = EasyWeChat::officialAccount();
+    return view('abbott.index2', compact('js'));
+});
+
 /*
  * 进博会新西兰
  */
