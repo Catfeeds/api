@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>雅培菁挚品牌博物馆</title>
+    <title>雅培菁挚感知博物馆</title>
     <script src="./js/amfe-flexible.js"></script>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
@@ -79,7 +79,7 @@
     wx.ready(function () {
         // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: '雅培菁挚品牌博物馆', // 分享标题
+            title: '雅培菁挚感知博物馆', // 分享标题
             link: window.location.href,
             imgUrl: "{{ url('res/abbott/share.png') }}", // 分享图标
             success: function () {
@@ -88,7 +88,7 @@
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
-            title: '雅培菁挚品牌博物馆', // 分享标题
+            title: '雅培菁挚感知博物馆', // 分享标题
             desc: "雅培菁挚诚邀您，与我们一起倡导亲子执手，去感知更大的世界", // 分享描述
             link: window.location.href,
             imgUrl: "{{ url('res/abbott/share.png') }}", // 分享图标
