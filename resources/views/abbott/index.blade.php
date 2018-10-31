@@ -18,7 +18,7 @@
     <div class="loading">
         <img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png" class="logo">
         <div class="progress"><span></span></div>
-        <img src="./img/loading.png" class="loading-text">
+        <img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/loading.png" class="loading-text">
     </div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
