@@ -20,6 +20,6 @@ class UserController extends Controller
 //        $user = FrisoUser::where('openid', session('wechat.oauth_user.default.id'));
         return redirect(env('APP_URL') . '/front/friso')
             ->cookie('openid', 'sss', 0, '', '', false, false)
-            ->cookie('status', false, 0, '', '', false, false);
+            ->cookie('status', 'false', 0, '', '', false, false);
     }
 }
