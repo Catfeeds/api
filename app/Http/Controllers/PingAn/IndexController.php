@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     public function zh()
     {
-        $js = \EasyWeChat::js();
+        $js = \EasyWeChat::officialAccount();
         return view('pingAn.zh', compact('js'));
     }
 
@@ -17,7 +17,7 @@ class IndexController extends Controller
     {
         return '很遗憾！报名已经截止';
 //        return redirect('http://xg.touchworld-sh.com/res/pingAn/en/index');
-//        $js = \EasyWeChat::js();
+//        $js = \EasyWeChat::officialAccount();
 //        return view('pingAn.en', compact('js'));
     }
 

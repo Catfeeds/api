@@ -18,4 +18,9 @@ class OssController extends Controller
             'list' => $files
         ]);
     }
+
+    public function imgShare(Request $request)
+    {
+
+    }
 }

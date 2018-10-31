@@ -10,7 +10,7 @@ class IndexController extends Controller
     public function index(Request $request)
     {
         $path = $request->input('path');
-        $js= \EasyWeChat::js();
+        $js= \EasyWeChat::officialAccount();
         $type = $request->input('type');
         return view('newzealand', compact('path', 'js', 'type'));
     }

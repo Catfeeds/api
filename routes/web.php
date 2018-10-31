@@ -66,7 +66,7 @@ Route::get('ali/show', function () {
 });
 
 Route::get('ali/bmShow', function () {
-    $js = EasyWeChat::js();
+    $js = EasyWeChat::officialAccount();
     return view('ali.bm', compact('js'));
 });
 /**
@@ -114,12 +114,12 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () 
  */
 //杭州
 Route::get('snf/hz', function () {
-    $js = EasyWeChat::js();
+    $js = EasyWeChat::officialAccount();
     return view('planet.hz', compact('js'));
 });
 //深圳
 Route::get('snf/sz', function () {
-    $js = EasyWeChat::js();
+    $js = EasyWeChat::officialAccount();
     return view('planet.sz', compact('js'));
 });
 
@@ -241,7 +241,7 @@ Route::get('fed/index', 'Fed\FedController@index');
 
 Route::get('tencent/share', function(\Illuminate\Http\Request $request) {
     $path = $request->path;
-    $js = EasyWeChat::js();
+    $js = EasyWeChat::officialAccount();
     return view('tencent', compact('js', 'path'));
 });
 
@@ -256,12 +256,12 @@ Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_base']], function () 
  * 创新能源大会入口 20180907
  */
 Route::get('html/energy/index', function () {
-    $js = EasyWeChat::js();
+    $js = EasyWeChat::officialAccount();
     return view('energy', compact('js'));
 });
 
 Route::get('html/energy/index2', function () {
-    $js = EasyWeChat::js();
+    $js = EasyWeChat::officialAccount();
     return view('energy', compact('js'));
 });
 
@@ -325,12 +325,12 @@ Route::get('tmall/genie/control', 'Tmall\GenieController@control');
 Route::get('res/genie/album/index', 'Tmall\GenieController@album');
 
 /*
- * 惠氏活动
+ * 雅培活动
  */
 Route::redirect('res/wyeth/album/index', 'http://cs.touchworld-sh.com/lolo/album/');
 
 Route::get('res/abbott/index', function () {
-    $js = EasyWeChat::js();
+    $js = EasyWeChat::officialAccount();
     return view('abbott.index', compact('js'));
 });
 

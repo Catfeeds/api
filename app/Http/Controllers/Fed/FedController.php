@@ -17,7 +17,7 @@ class FedController extends Controller
     public function index(Request $request)
     {
         $path = $request->path;
-        $js= \EasyWeChat::js();
+        $js= \EasyWeChat::officialAccount();
         return view('fed',compact('path','js'));
     }
 

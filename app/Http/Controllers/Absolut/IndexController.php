@@ -15,13 +15,13 @@ class IndexController extends Controller
 
     public function phone()
     {
-        $js = \EasyWeChat::js();
+        $js = \EasyWeChat::officialAccount();
         return view('absolut.phone', compact('js'));
     }
 
     public function share(Request $request)
     {
-        $js = \EasyWeChat::js();
+        $js = \EasyWeChat::officialAccount();
         $path = $request->path;
         return view('absolut.share', compact('path','js'));
     }

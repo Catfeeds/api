@@ -22,7 +22,7 @@ class FudanController extends Controller
 
     public function index()
     {
-        $js = \EasyWeChat::js();
+        $js = \EasyWeChat::officialAccount();
         return view('fudan', compact('js'));
     }
 }

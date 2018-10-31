@@ -27,7 +27,7 @@ class ChevyController extends Controller
             'score' => 0,
             'top' => 0,
         ]);
-        $js = \EasyWeChat::js();
+        $js = \EasyWeChat::officialAccount();
         return view('chevy.index', compact('user', 'js'));
     }
 
@@ -54,7 +54,7 @@ class ChevyController extends Controller
      */
     public function scan()
     {
-        $js = \EasyWeChat::js();
+        $js = \EasyWeChat::officialAccount();
         return view('chevy.scan', compact('js'));
     }
 

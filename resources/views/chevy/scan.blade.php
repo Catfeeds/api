@@ -57,7 +57,7 @@
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
 <script type="application/javascript">
-    wx.config(<?php echo $js->config(array('startRecord','stopRecord', 'onVoiceRecordEnd', 'translateVoice'), false) ?>);
+    wx.config(<?php echo $js->jssdk->buildConfig(array('startRecord','stopRecord', 'onVoiceRecordEnd', 'translateVoice'), false) ?>);
 
     wx.ready(function () {
         // 点击录音

@@ -12,7 +12,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $js = EasyWeChat::js();
+        $js = EasyWeChat::officialAccount();
         $wechatInfo = session('wechat.oauth_user');
 //        $user = Cowin::where('openid', $wechatInfo['id'])
 //            ->where('greeting', '!=', '')
@@ -27,7 +27,7 @@ class IndexController extends Controller
             'phone' => 'required',
         ]);
         $wechatInfo = session('wechat.oauth_user');
-        $js = EasyWeChat::js();
+        $js = EasyWeChat::officialAccount();
 
 
         $img = Image::make(public_path('res/cowin/images/greeting.jpeg'));
@@ -100,14 +100,14 @@ class IndexController extends Controller
     public function share($id)
     {
         $user = Cowin::find($id);
-        $js = EasyWeChat::js();
+        $js = EasyWeChat::officialAccount();
         $share = 1;
         return view('cowin.share', compact('user', 'js', 'share'));
     }
 
     public function guide()
     {
-        $js = EasyWeChat::js();
+        $js = EasyWeChat::officialAccount();
         $wechatInfo = session('wechat.oauth_user');
         $user = Cowin::where('openid', $wechatInfo['id'])
             ->where('confirm', 1)->first();

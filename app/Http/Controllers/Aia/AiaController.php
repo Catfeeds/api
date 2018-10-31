@@ -15,7 +15,7 @@ class AiaController extends Controller
     public function index()
     {
         $wechatInfo = session('wechat.oauth_user');
-        $js = EasyWeChat::js();
+        $js = EasyWeChat::officialAccount();
         $userInfo = Aia::firstOrCreate([
             'openid' => $wechatInfo['id']
         ], [
@@ -52,7 +52,7 @@ class AiaController extends Controller
 //            'score' => $score
 //        ]);
 
-        $js = EasyWeChat::js();
+        $js = EasyWeChat::officialAccount();
 
         return view('aia.custom', compact('scene', 'userInfo', 'time', 'score', 'wechatInfo', 'js'));
     }
@@ -79,7 +79,7 @@ class AiaController extends Controller
         $count = Aia::where('topScore', '<=', $userInfo->topScore)
             ->count();
         $rank = floor($count / $countAll * 100);
-        $js = EasyWeChat::js();
+        $js = EasyWeChat::officialAccount();
 
 
         return view('aia.record', compact('userInfo', 'userCount', 'score', 'rank', 'js'));

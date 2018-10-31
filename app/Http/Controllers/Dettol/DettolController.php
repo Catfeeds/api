@@ -10,7 +10,7 @@ class DettolController extends Controller
 {
     public function index()
     {
-        $js= \EasyWeChat::js();
+        $js= \EasyWeChat::officialAccount();
         $wechat = session('wechat.oauth_user');
         return view('dettol.index',compact('js', 'wechat'));
 //        return view('dettol.index');
