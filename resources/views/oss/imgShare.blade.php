@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>{{ isset($title) ? $tile : '' }}</title>
+    <title>{{ isset($title) ? $title : '' }}</title>
     <style>
         .img-box {
             padding-bottom: 100%;
