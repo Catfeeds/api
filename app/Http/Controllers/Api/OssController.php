@@ -37,7 +37,7 @@ class OssController extends Controller
         $title = $request->input('title');
         $desc = $request->input('desc');
         $logo = $request->input('input');
-        $js = EasyWeChat::officialAccount();
+        $js = \EasyWeChat::officialAccount();
 
         return view('oss.imgShare', compact('path', 'title', 'desc', 'logo', 'js'));
     }
