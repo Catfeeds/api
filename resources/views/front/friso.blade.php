@@ -3,11 +3,11 @@
       location.replace('https://api.shanghaichujie.com/friso/answer/index')
     } else {
       window.openid = serverData.openid
-    }
-    if (serverData.status === 'true') {
-      window.page = 'page_finish'
-    } else {
-      window.page = ''
+      if (serverData.status === 'true') {
+        window.page = 'page_finish'
+      } else {
+        window.page = ''
+      }
     }
 
     function cookie2Obj (cookie) {
