@@ -257,4 +257,6 @@ Route::get('genie/rank', 'Tmall\GenieController@rank');
  */
 Route::post('newzealand/video/email', 'Newzealand\EmailController@seadEmail');
 
+/* friso答题互动 */
 Route::post('friso/user/store', 'Friso\UserController@store');
+Route::get('friso/user/judge/{openid}', 'Friso\UserController@status');
