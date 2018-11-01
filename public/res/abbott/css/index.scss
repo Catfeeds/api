@@ -76,21 +76,38 @@ body {
   overflow: hidden;
   position: absolute;
   top: 50%;
-  margin-top: PX(-610);
-  width: PX(750);
-  height: PX(1220);
+  transform: translate3d(0, -50%, 0);
+  width: 100%;
+  height: 100%;
   .logo {
     margin-top: PX(30);
     margin-left: PX(30);
     width: PX(149);
     height: PX(78);
   }
+  .page_logo {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    text-align: center;
+    img {
+      width: PX(165);
+      height: PX(87);
+      position: static;
+    }
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    width: 100%;
+  }
 }
 
 .page1 {
   position: relative;
-  background: url('https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/01_new.jpg') no-repeat;
-  background-size: 100% 100%;
+  background: url('https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/01_new.jpg') no-repeat center center;
+  background-size: cover;
 
   img {
     position: absolute;
@@ -102,8 +119,8 @@ body {
 
 .page2 {
   position: relative;
-  background: url('https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/02_new.jpg') no-repeat;
-  background-size: 100% 100%;
+  background: url('https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/02_new.jpg') no-repeat center center;
+  background-size: cover;
 
   img {
     position: absolute;
@@ -115,8 +132,8 @@ body {
 
 .page3 {
   position: relative;
-  background: url('https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/03_new.jpg') no-repeat;
-  background-size: 100% 100%;
+  background: url('https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/03_new.jpg') no-repeat center center;
+  background-size: cover;
 
   img {
     position: absolute;
@@ -127,8 +144,20 @@ body {
 }
 
 .page4 {
-  background: url('https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/04_new.jpg') no-repeat;
+  background: url('https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/bg.jpg') no-repeat;
   background-size: 100% 100%;
+  .content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    text-align: center;
+    margin-top: PX(20);
+    img {
+      width: PX(689);
+      height: PX(1144);
+    }
+  }
 }
 
 .page5 {
@@ -173,6 +202,9 @@ body {
   
 .page7 {
   background: url('https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/bg.jpg') no-repeat;
+  .container {
+    height: PX(1100);
+  }
   .title {
     margin-top: PX(40);
     text-align: center;

@@ -23,21 +23,26 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide page1">
+                <div class="page_logo"><img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png"></div>
                 <img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/01_text.png" class="ani"
                     swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.1s">
                 <img class="arrwo_bottom" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/arrow_bottom.png">
             </div>
             <div class="swiper-slide page2">
+                <div class="page_logo"><img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png"></div>
                 <img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/02_text.png" class="ani"
                     swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.1s">
                 <img class="arrwo_bottom" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/arrow_bottom.png">
             </div>
             <div class="swiper-slide page3">
+                <div class="page_logo"><img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png"></div>
                 <img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/03_text.png" class="ani"
                     swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.1s">
                 <img class="arrwo_bottom" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/arrow_bottom.png">
             </div>
             <div class="swiper-slide page4">
+                <img class="logo" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo2.png">
+                <div class="content"><img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/04_content.png"></div>
                 <!-- <img class="arrwo_bottom" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/arrow_bottom.png"> -->
             </div>
             <!-- <div class="swiper-slide page5">
