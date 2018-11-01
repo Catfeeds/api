@@ -104,7 +104,7 @@
         title: '刚刚我在新西兰，偶遇呆萌傻鸟!', // 分享标题
       @endif
       link: window.location.href,
-      imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png", // 分享图标
+      imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/%E6%96%B0%E8%A5%BF%E5%85%B0LOGO.jpg", // 分享图标
       success: function () {
         // 用户确认分享后执行的回调函数
       }
@@ -124,7 +124,7 @@
       desc: "刚刚我在新西兰，偶遇呆萌傻鸟!", // 分享描述
     @endif
     link: window.location.href,
-    imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png", // 分享图标
+    imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/%E6%96%B0%E8%A5%BF%E5%85%B0LOGO.jpg", // 分享图标
     type: 'link', // 分享类型,music、video或link，不填默认为link
       success: function () {
         // 用户确认分享后执行的回调函数
