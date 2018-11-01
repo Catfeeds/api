@@ -15,7 +15,7 @@
 
 <body>
     <audio src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/bg.mp3" id="bgm" autoplay loop preload></audio>
-    <div class="loading hide">
+    <div class="loading">
         <img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo.png" class="logo">
         <div class="progress"><span></span></div>
         <img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/loading.png" class="loading-text">
