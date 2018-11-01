@@ -252,7 +252,7 @@ Route::get('genie/teams', 'Tmall\GenieController@teams');
 Route::get('genie/punish/{id}', 'Tmall\GenieController@punish');
 Route::get('genie/rank', 'Tmall\GenieController@rank');
 /* 天猫汽车 */
-Route::post('tmall/car/score', 'Tmall\CarController@store');
+Route::post('tmall/car/score', 'Tmall\CarController@upload');
 /*
  * 新西兰展馆发送邮件下载视频
  */

@@ -29,7 +29,7 @@ class CarController extends Controller
         $r->tmall_car_id = $request->input('id');
         $r->save();
 
-        return 'true';
+        return $r;
     }
 
     public function carRank()
