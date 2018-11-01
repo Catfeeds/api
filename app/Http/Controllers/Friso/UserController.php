@@ -17,9 +17,9 @@ class UserController extends Controller
 
     public function index()
     {
-//        $user = FrisoUser::where('openid', session('wechat.oauth_user.default.id'));
+        $user = FrisoUser::where('openid', session('wechat.oauth_user.default.id'))->first();
         return redirect(env('APP_URL') . '/front/friso')
-            ->cookie('openid', 'sss', 0, '', '', false, false)
-            ->cookie('status', 'false', 0, '', '', false, false);
+            ->cookie('openid', session('wechat.oauth_user.default.id'), 0, '', '', false, false)
+            ->cookie('status', is_null($user) ? 'false' : 'true', 0, '', '', false, false);
     }
 }

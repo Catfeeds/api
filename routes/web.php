@@ -331,6 +331,8 @@ Route::get('res/pingAn/imgdemo/index', 'PingAn\IndexController@imgDemo');
 Route::get('tmall/genie/sign', 'Tmall\GenieController@index');
 Route::get('tmall/genie/control', 'Tmall\GenieController@control');
 Route::get('res/genie/album/index', 'Tmall\GenieController@album');
+/* 天猫汽车 */
+Route::get('tmall/car', 'Tmall\CarController@register');
 
 /*
  * 雅培活动
