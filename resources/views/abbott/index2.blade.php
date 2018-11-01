@@ -40,6 +40,11 @@
                     swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.1s">
                 <img class="arrwo_bottom" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/arrow_bottom.png">
             </div>
+            <div class="swiper-slide page4">
+                <img class="logo" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo2.png">
+                <div class="content"><img class="content2" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/04_content2.png"></div>
+            </div>
+            
             <div class="swiper-slide page5">
                 <img class="logo" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/abbott/logo2.png">
                 <div class="container">
