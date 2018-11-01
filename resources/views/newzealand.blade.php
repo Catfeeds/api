@@ -77,7 +77,7 @@
 
 <body>
   <div class="header">
-    <img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/%E6%96%B0%E8%A5%BF%E5%85%B0LOGO.jpg">
+    <img src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/%E6%96%B0%E8%A5%BF%E5%85%B0%E9%A1%B5%E9%9D%A2logo.png">
   </div>
   <div class="container">
     <video src="{{ $path }}" controls webkit-playsinline="true" playsinline="true"></video>
