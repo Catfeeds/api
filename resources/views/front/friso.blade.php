@@ -2,6 +2,7 @@
     if (!serverData.openid) {
       location.replace('https://api.shanghaichujie.com/friso/answer/index')
     } else {
+      alert(document.cookie)
       window.openid = serverData.openid
       if (serverData.status === 'true') {
         window.page = 'page_finish'
@@ -19,4 +20,4 @@
         objCookie[arr[0]] = arr[1]
       }
       return objCookie
-    }</script><link href=/res/front/friso/css/app.a1cee311.css rel=preload as=style><link href=/res/front/friso/css/chunk-vendors.e3f0641a.css rel=preload as=style><link href=/res/front/friso/js/app.3d6dff29.js rel=preload as=script><link href=/res/front/friso/js/chunk-vendors.34610456.js rel=preload as=script><link href=/res/front/friso/css/chunk-vendors.e3f0641a.css rel=stylesheet><link href=/res/front/friso/css/app.a1cee311.css rel=stylesheet></head><body><noscript><strong>We're sorry but friso doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/res/front/friso/js/chunk-vendors.34610456.js></script><script src=/res/front/friso/js/app.3d6dff29.js></script></body></html>
+    }</script><link href=/res/front/friso/css/app.a1cee311.css rel=preload as=style><link href=/res/front/friso/css/chunk-vendors.e3f0641a.css rel=preload as=style><link href=/res/front/friso/js/app.bdfc573c.js rel=preload as=script><link href=/res/front/friso/js/chunk-vendors.34610456.js rel=preload as=script><link href=/res/front/friso/css/chunk-vendors.e3f0641a.css rel=stylesheet><link href=/res/front/friso/css/app.a1cee311.css rel=stylesheet></head><body><noscript><strong>We're sorry but friso doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/res/front/friso/js/chunk-vendors.34610456.js></script><script src=/res/front/friso/js/app.bdfc573c.js></script></body></html>
