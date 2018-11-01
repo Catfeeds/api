@@ -23,7 +23,11 @@ class CarController extends Controller
 
     public function upload(Request $request)
     {
-        TmallCarGame::create($request->all());
+        $r = new TmallCarGame();
+        $r->path = $request->input('path');
+        $r->score = $request->input('score');
+        $r->tmall_car_id = $request->input('id');
+        $r->save();
 
         return 'true';
     }
