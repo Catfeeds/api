@@ -87,6 +87,7 @@ class GameController extends Controller
             $filter->disableIdFilter();
             $filter->between('created_at', '游戏时间');
             $filter->equal('path', '场地');
+            $filter->like('phone', '手机号');
         });
         $grid->id('Id')->sortable();
         $grid->user()->name('姓名');
@@ -129,9 +130,9 @@ class GameController extends Controller
     {
         $form = new Form(new TmallCarGame);
 
-        $form->text('path', 'Path');
-        $form->number('score', 'Score');
-        $form->number('tmall_car_id', 'Tmall car id');
+        $form->display('path', 'Path');
+        $form->display('score', 'Score');
+        $form->display('tmall_car_id', 'Tmall car id');
 
         return $form;
     }
