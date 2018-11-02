@@ -88,13 +88,14 @@ class GameController extends Controller
             $filter->between('created_at', '游戏时间');
             $filter->equal('path', '场地');
         });
+        $grid->id('Id')->sortable();
         $grid->user()->name('姓名');
         $grid->user()->phone('手机号');
         $grid->user()->taobao('淘宝账号');
         $grid->user()->sex('性别');
         $grid->path('场地');
         $grid->score('Score')->sortable();
-        $grid->created_at('游戏时间');
+        $grid->created_at('游戏时间')->sortable();
 
         return $grid;
     }

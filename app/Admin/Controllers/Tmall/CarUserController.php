@@ -85,15 +85,15 @@ class CarUserController extends Controller
             $filter->disableIdFilter();
             $filter->like('phone', '手机号');
         });
+        $grid->model()->orderBy('created_at', 'desc');
         $grid->disableCreateButton();
-        $grid->id('Id');
+        $grid->id('Id')->sortable();
         $grid->name('Name');
         $grid->phone('Phone');
         $grid->taobao('Taobao');
         $grid->sex('Sex');
-        $grid->car('赛车游戏分数')->editable();
-        $grid->created_at('Created at');
-        $grid->updated_at('Updated at');
+        $grid->car('赛车游戏分数')->editable()->sortable();
+        $grid->created_at('Created at')->sortable();
 
         return $grid;
     }
