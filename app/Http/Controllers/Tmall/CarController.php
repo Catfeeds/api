@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Tmall;
 use App\Events\GameTmall;
 use App\Models\TmallCar;
 use App\Models\TmallCarGame;
+use App\Models\TmallCarTime;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -39,13 +40,27 @@ class CarController extends Controller
         return $r;
     }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     *
+     * 获取砍价排行榜
+     */
     public function carRank()
     {
-        
+        $rank = TmallCar::select(['name', 'car'])
+            ->where('car', '>', 0)
+            ->orderBy('car', 'desc')
+            ->get();
+        return response()->json([
+            'data' => $rank
+        ]);
     }
 
-    public function packetRank()
+    public function packetRank($path)
     {
-        
+        //场地配置
+        $city = TmallCarTime::where('path', $path)->first();
+
+        //genju
     }
 }
