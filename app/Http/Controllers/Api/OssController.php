@@ -21,7 +21,7 @@ class OssController extends Controller
         arsort($files);
 
         return response()->json([
-            'list' => $files
+            'list' => array_values($files)
         ]);
     }
 
