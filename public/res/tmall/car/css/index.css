@@ -1,0 +1,117 @@
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  position: absolute;
+  top: 0.33333rem;
+  width: 100%;
+  text-align: center;
+}
+
+.logo img {
+  width: 2.8rem;
+  height: 1.86667rem;
+}
+
+.container {
+  position: absolute;
+  top: 40%;
+  transform: translate3d(0, -50%, 0);
+  width: 100%;
+  height: 10.32rem;
+  background: url(../imgs/pannel.png) no-repeat center center;
+  background-size: 9.33333rem 10.32rem;
+}
+
+.container h2 {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.66667rem;
+  color: #fff;
+  font-weight: lighter;
+}
+
+.container p {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0.46667rem auto;
+  width: 7.4rem;
+  height: 0.82667rem;
+  line-height: 0.82667rem;
+  color: #fff;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 0;
+}
+
+.container p span {
+  flex: 0 0 1.73333rem;
+  padding: 0 0.13333rem;
+  width: 1.73333rem;
+  font-size: 0.4rem;
+  text-align: center;
+}
+
+.container p input, .container p select {
+  position: relative;
+  flex: 1;
+  padding: 0 0.13333rem;
+  height: 0.82667rem;
+  font-size: 0.4rem;
+  border: none;
+  color: #fff;
+  font-style: italic;
+  background: transparent;
+}
+
+.container .select_wrap {
+  position: relative;
+}
+
+.container .select_wrap .triangle {
+  position: absolute;
+  right: 0.26667rem;
+  top: 0.26667rem;
+  width: 0;
+  height: 0;
+  border: 0.26667rem solid rgba(255, 255, 255, 0.5);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.submit {
+  position: absolute;
+  top: 75%;
+  width: 100%;
+  text-align: center;
+}
+
+.submit img {
+  width: 3.97333rem;
+  height: 2.6rem;
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup img {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-left: -2.68rem;
+  width: 5.36rem;
+  height: 5.21333rem;
+}

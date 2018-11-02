@@ -333,8 +333,8 @@ Route::get('tmall/genie/sign', 'Tmall\GenieController@index');
 Route::get('tmall/genie/control', 'Tmall\GenieController@control');
 Route::get('res/genie/album/index', 'Tmall\GenieController@album');
 /* 天猫汽车 */
-Route::get('tmall/car', 'Tmall\CarController@register');
-
+Route::get('res/tmall/car/index', 'Tmall\CarController@register');
+Route::post('tmall/car/user/store', 'Tmall\CarController@store');
 /*
  * 雅培活动
  */

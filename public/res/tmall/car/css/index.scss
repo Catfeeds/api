@@ -1,0 +1,110 @@
+@function PX($px) {
+  @return $px / 750 * 10 * 1rem;
+}
+
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  position: absolute;
+  top: PX(25);
+  width: 100%;
+  text-align: center;
+  img {
+    width: PX(210);
+    height: PX(140);
+  }
+}
+.container {
+  position: absolute;
+  top: 40%;
+  transform: translate3d(0, -50%, 0);
+  width: 100%;
+  height: PX(774);
+  background: url(../imgs/pannel.png) no-repeat center center;
+  background-size: PX(700) PX(774);
+  h2 {
+    margin-top: PX(150);
+    text-align: center;
+    font-size: PX(50);
+    color: #fff;
+    font-weight: lighter;
+  }
+  p {
+    display: flex;
+    box-sizing: border-box;
+    margin: PX(35) auto;
+    width: PX(555);
+    height: PX(62);
+    line-height: PX(62);
+    color: #fff;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.25);
+    font-size: 0;
+    span {
+      flex: 0 0 PX(130);
+      padding: 0 PX(10);
+      width: PX(130);
+      font-size: PX(30);
+      text-align: center;
+    }
+    input, select {
+      position: relative;
+      flex: 1;
+      padding: 0 PX(10);
+      height: PX(62);
+      font-size: PX(30);
+      border: none;
+      color: #fff;
+      font-style: italic;
+      background: transparent;
+    }
+  }
+  .select_wrap {
+    position: relative;
+    .triangle {
+      position: absolute;
+      right: PX(20);
+      top: PX(20);
+      width: 0;
+      height: 0;
+      border: PX(20) solid rgba(255, 255, 255, .5);
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+    }
+  }
+}
+.submit {
+  position: absolute;
+  top: 75%;
+  width: 100%;
+  text-align: center;
+  img {
+    width: PX(298);
+    height: PX(195);
+  }
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+  img {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: PX(-201);
+    width: PX(402);
+    height: PX(391);
+  }
+}

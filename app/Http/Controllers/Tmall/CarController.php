@@ -3,22 +3,29 @@
 namespace App\Http\Controllers\Tmall;
 
 use App\Events\GameTmall;
+use App\Models\TmallCar;
 use App\Models\TmallCarGame;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class CarController extends Controller
 {
-    public function register()
+    public function register(Request $request)
     {
-        event(new GameTmall(1, 'test', 'suzhou'));
-
-        return 'true';
+        $path = $request->input('path');
+        return view('tmall.car', compact('path'));
     }
 
     public function store(Request $request)
     {
+        $user = TmallCar::firstOrCreate(['phone' => $request->input('phone')],[
+            'name' => $request->input('name'),
+            'sex' => $request->input('sex'),
+            'taobao' => $request->input('taobao')
+        ]);
+        event(new GameTmall($user->id, $request->input('name'), $request->input('path')));
 
+        return 'true';
     }
 
     public function upload(Request $request)
