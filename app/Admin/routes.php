@@ -21,4 +21,11 @@ Route::group([
     $router->resource('zyhx/comment', 'CommentController');
     $router->resource('friso/location', 'FrisolocController');
     $router->resource('friso/log', 'FrisologController');
+    $router->resource('tmall/car/user', 'Tmall\CarUserController', [
+        'except' => ['create', 'store']
+    ]);
+    $router->resource('tmall/car/time', 'Tmall\TimeController', [
+        'except' => ['create', 'edit']
+    ]);
+    $router->resource('tmall/car/game', 'Tmall\GameController');
 });
