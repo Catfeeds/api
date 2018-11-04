@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>苏州</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<ul>
+    <li>
+        <span class="rank"></span>
+        <span class="username"></span>
+        <span class="score"></span>
+        <span class="phone"></span>
+    </li>
+    <li>
+        <span class="rank"></span>
+        <span class="username"></span>
+        <span class="score"></span>
+        <span class="phone"></span>
+    </li>
+    <li>
+        <span class="rank"></span>
+        <span class="username"></span>
+        <span class="score"></span>
+        <span class="phone"></span>
+    </li>
+    <li>
+        <span class="rank"></span>
+        <span class="username"></span>
+        <span class="score"></span>
+        <span class="phone"></span>
+    </li>
+    <li>
+        <span class="rank"></span>
+        <span class="username"></span>
+        <span class="score"></span>
+        <span class="phone"></span>
+    </li>
+</ul>
+<!-- <img src="images/qrCode.jpg" style="position:absolute; right: 50px; bottom: 30px; width:200px;height: 200px; border: 5px solid rgb(4, 116, 200)"> -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    setInterval(function () {
+        $.ajax({
+            method: 'GET',
+            url: 'http://api.test/api/tmall/packet/rank?path=suzhou',
+        }).done(function (res) {
+            console.log(res)
+            if (res.status !== 0) {
+                //设置当前时间 res.time,需要修改
+
+                //更新排行榜
+                for (let i in res.data) {
+                    if (i === '0') {
+                        $('.rank').eq(i).text('第一名')
+                    } else if (i === '1') {
+                        $('.rank').eq(i).text('第二名')
+                    }else if (i === '2') {
+                        $('.rank').eq(i).text('第三名')
+                    }else if (i === '3') {
+                        $('.rank').eq(i).text('第四名')
+                    }else if (i === '4') {
+                        $('.rank').eq(i).text('第五名')
+                    }
+
+                    $('.username').eq(i).text(res.data[i].user.name)
+                    $('.score').eq(i).text(res.data[i].score)
+                    $('.phone').eq(i).text(res.data[i].user.phone)
+                }
+
+            }
+        })
+
+    }, 10000)
+</script>
+</body>
+
+</html>

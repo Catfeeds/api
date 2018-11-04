@@ -85,7 +85,7 @@ class GameController extends Controller
         $grid->disableExport();
         $grid->filter(function ($filter) {
             $filter->disableIdFilter();
-            $filter->between('created_at', '游戏时间');
+            $filter->between('created_at', '游戏时间')->datetime();
             $filter->equal('path', '场地');
             $filter->where(function ($query) {
                 $query->whereHas('user', function ($query){

@@ -45,9 +45,9 @@ html, body {
 
 .teamTime {
   position: absolute;
-  left: 1370px;
+  left: 1280px;
   top: 500px;
-  width: 270px;
+  width: 400px;
   font-size: 60px;
   color: #fff;
   text-align: left;

@@ -62,7 +62,6 @@ class CarController extends Controller
     {
         $path = $request->input('path');
         $now = Carbon::now();
-
         if ($now->gt(Carbon::today()->addHours(20))) {
             //不在时间段
             return response()->json([
@@ -83,7 +82,7 @@ class CarController extends Controller
             $data = $this->rank(16, 17, $path);
             return response()->json([
                 'status' => 1,
-                'time' => [18, 19],
+                'time' => [16, 17],
                 'data' => $data
             ]);
         } elseif ($now->gt(Carbon::today()->addHours(14))) {
@@ -123,6 +122,7 @@ class CarController extends Controller
             ->orderByDesc('score')
             ->get()
             ->unique('tmall_car_id')
+            ->values()
             ->take(5);
         return $data;
     }
