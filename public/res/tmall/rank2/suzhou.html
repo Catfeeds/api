@@ -61,11 +61,11 @@
                         $('.rank').eq(i).text('第一名')
                     } else if (i === '1') {
                         $('.rank').eq(i).text('第二名')
-                    }else if (i === '2') {
+                    } else if (i === '2') {
                         $('.rank').eq(i).text('第三名')
-                    }else if (i === '3') {
+                    } else if (i === '3') {
                         $('.rank').eq(i).text('第四名')
-                    }else if (i === '4') {
+                    } else if (i === '4') {
                         $('.rank').eq(i).text('第五名')
                     }
 
@@ -73,7 +73,13 @@
                     $('.score').eq(i).text(res.data[i].score)
                     $('.phone').eq(i).text(res.data[i].user.phone)
                 }
+            } else {
+                //设置当前时间为空,需要修改
 
+                $('.rank').eq(i).text('')
+                $('.username').eq(i).text('')
+                $('.score').eq(i).text('')
+                $('.phone').eq(i).text('')
             }
         })
 
