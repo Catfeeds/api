@@ -50,7 +50,7 @@
     setInterval(function () {
         $.ajax({
             method: 'GET',
-            url: 'http://api.test/api/tmall/packet/rank?path=chengdu',
+            url: 'https://api.shanghaichujie.com/api/tmall/packet/rank?path=chengdu',
         }).done(function (res) {
             console.log(res)
             if (res.status !== 0) {
