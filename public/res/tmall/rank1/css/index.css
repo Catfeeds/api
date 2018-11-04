@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@font-face {
+  font-family: '汉仪黑体';
+  src: url("../images/阿里智能汉仪黑体.TTF");
+}
+
+html, body {
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  background: url("../images/bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  font-family: '汉仪黑体';
+  font-style: italic;
+}
+
+.teamName {
+  position: absolute;
+  left: 580px;
+  top: 500px;
+  width: 700px;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+.teamName li {
+  overflow: hidden;
+  height: 74px;
+  line-height: 74px;
+}
+
+.teamName li:nth-child(4) {
+  height: 80px;
+  line-height: 80px;
+}
+
+.teamName li:nth-child(5) {
+  height: 86px;
+  line-height: 86px;
+}
+
+.teamTime {
+  position: absolute;
+  left: 1370px;
+  top: 500px;
+  width: 270px;
+  font-size: 60px;
+  color: #fff;
+  text-align: left;
+}
+
+.teamTime li {
+  overflow: hidden;
+  height: 74px;
+  line-height: 74px;
+}
+
+.teamTime li:nth-child(4) {
+  height: 80px;
+  line-height: 80px;
+}
+
+.teamTime li:nth-child(5) {
+  height: 86px;
+  line-height: 86px;
+}

@@ -254,7 +254,7 @@ Route::get('genie/rank', 'Tmall\GenieController@rank');
 /* 天猫汽车 */
 Route::post('tmall/car/score', 'Tmall\CarController@upload');
 Route::get('tmall/car/rank', 'Tmall\CarController@carRank');
-Route::get('tmall/packet/rank/{path}', 'Tmall\CarController@packetRank');
+Route::get('tmall/packet/rank', 'Tmall\CarController@packetRank');
 /*
  * 新西兰展馆发送邮件下载视频
  */

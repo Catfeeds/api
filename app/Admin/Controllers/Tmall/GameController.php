@@ -87,7 +87,12 @@ class GameController extends Controller
             $filter->disableIdFilter();
             $filter->between('created_at', '游戏时间');
             $filter->equal('path', '场地');
-            $filter->like('phone', '手机号');
+            $filter->where(function ($query) {
+                $query->whereHas('user', function ($query){
+                    $query->where('phone', 'like', "%{$this->input}%");
+                });
+
+            }, '输入手机号');
         });
         $grid->id('Id')->sortable();
         $grid->user()->name('姓名');

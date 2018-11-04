@@ -19,7 +19,7 @@ class CreateTmallCarsTable extends Migration
             $table->string('phone', 11)->unique();
             $table->string('taobao');
             $table->string('sex');
-            $table->integer('car')->default(0)->comment('赛车游戏积分');
+            $table->string('car')->default('00.00.000')->comment('赛车游戏积分');
             $table->timestamps();
         });
     }

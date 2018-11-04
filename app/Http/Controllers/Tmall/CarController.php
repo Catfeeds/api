@@ -6,6 +6,7 @@ use App\Events\GameTmall;
 use App\Models\TmallCar;
 use App\Models\TmallCarGame;
 use App\Models\TmallCarTime;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -19,7 +20,7 @@ class CarController extends Controller
 
     public function store(Request $request)
     {
-        $user = TmallCar::firstOrCreate(['phone' => $request->input('phone')],[
+        $user = TmallCar::firstOrCreate(['phone' => $request->input('phone')], [
             'name' => $request->input('name'),
             'sex' => $request->input('sex'),
             'taobao' => $request->input('taobao')
@@ -43,24 +44,86 @@ class CarController extends Controller
     /**
      * @return \Illuminate\Http\JsonResponse
      *
-     * 获取砍价排行榜
+     * 获取赛车游戏排行榜
      */
     public function carRank()
     {
         $rank = TmallCar::select(['name', 'car'])
-            ->where('car', '>', 0)
-            ->orderBy('car', 'desc')
+            ->where('car', '!=', '00.00.000')
+            ->orderBy('car')
+            ->limit(5)
             ->get();
         return response()->json([
             'data' => $rank
         ]);
     }
 
-    public function packetRank($path)
+    public function packetRank(Request $request)
     {
-        //场地配置
-        $city = TmallCarTime::where('path', $path)->first();
+        $path = $request->input('path');
+        $now = Carbon::now();
 
-        //genju
+        if ($now->gt(Carbon::today()->addHours(20))) {
+            //不在时间段
+            return response()->json([
+                'status' => 0,
+                'time' => [],
+                'data' => []
+            ]);
+        } elseif ($now->gt(Carbon::today()->addHours(18))) {
+            //18-19
+            $data = $this->rank(18, 19, $path);
+            return response()->json([
+                'status' => 1,
+                'time' => [18, 19],
+                'data' => $data
+            ]);
+        } elseif ($now->gt(Carbon::today()->addHours(16))) {
+            //16-17
+            $data = $this->rank(16, 17, $path);
+            return response()->json([
+                'status' => 1,
+                'time' => [18, 19],
+                'data' => $data
+            ]);
+        } elseif ($now->gt(Carbon::today()->addHours(14))) {
+            //14-15
+            $data = $this->rank(14, 15, $path);
+            return response()->json([
+                'status' => 1,
+                'time' => [14, 15],
+                'data' => $data
+            ]);
+        } elseif ($now->gt(Carbon::today()->addHours(12))) {
+            //12-13
+            $data = $this->rank(12, 13, $path);
+
+            return response()->json([
+                'status' => 1,
+                'time' => [12, 13],
+                'data' => $data
+            ]);
+        }
+
+        return response()->json([
+            'status' => 0,
+            'time' => [],
+            'data' => []
+        ]);
+    }
+
+    public function rank($start, $end, $path)
+    {
+        $data = TmallCarGame::with('user')
+            ->select(['tmall_car_id', 'score'])
+            ->whereBetween('created_at', [
+                Carbon::today()->addHours($start), Carbon::today()->addHours($end)
+            ])
+            ->where('path', $path)
+            ->orderByDesc('score')
+            ->get()
+            ->unique('tmall_car_id')
+            ->take(5);
+        return $data;
     }
 }

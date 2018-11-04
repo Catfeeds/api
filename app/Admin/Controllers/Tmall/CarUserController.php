@@ -83,7 +83,7 @@ class CarUserController extends Controller
         $grid = new Grid(new TmallCar);
         $grid->filter(function ($filter) {
             $filter->disableIdFilter();
-            $filter->like('phone', '手机号');
+            $filter->like('phone', '根据手机号查询');
         });
         $grid->model()->orderBy('created_at', 'desc');
         $grid->disableCreateButton();
@@ -92,7 +92,7 @@ class CarUserController extends Controller
         $grid->phone('Phone');
         $grid->taobao('Taobao');
         $grid->sex('Sex');
-        $grid->car('赛车游戏分数')->editable()->sortable();
+        $grid->car('赛车游戏时间')->sortable();
         $grid->created_at('Created at')->sortable();
 
         return $grid;
@@ -133,7 +133,7 @@ class CarUserController extends Controller
         $form->display('phone', 'Phone');
         $form->display('taobao', 'Taobao');
         $form->display('sex', 'Sex');
-        $form->number('car', 'Car');
+        $form->time('car', 'Car')->format('mm:ss:SSS');
 
         return $form;
     }

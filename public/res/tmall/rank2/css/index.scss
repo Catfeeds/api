@@ -1,0 +1,65 @@
+
+@font-face {
+  font-family: 'custom_font';
+  src: url('../images/custom_font.TTF');
+}
+
+html, body {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: url('../images/bg.jpg') no-repeat;
+  background-size: 100% 100%;
+  font-family: 'custom_font';
+}
+
+ul {
+  position: absolute;
+  left: 422px;
+  top: 187px;
+  width: 1420px;
+  height: 730px;
+  li {
+    display: flex;
+    height: 48px;
+    line-height: 48px;
+    font-size: 36px;
+    text-align: center;
+    font-style: italic;
+    color: #fff;
+    &:nth-child(odd) {
+      background: rgba(255, 255, 255, 0.5);
+    }
+    &:nth-child(11),&:nth-child(12),&:nth-child(13),&:nth-child(14),&:nth-child(15) {
+      // height: 35px;
+      // line-height: 35px;
+      font-size: 30px;
+      background: transparent;
+      span:nth-child(1) {
+        font-size: 26px;
+      }
+    }
+    span:nth-child(1) {
+      flex: 0 0 230px;
+      box-sizing: border-box;
+      padding-left: 60px;
+      text-align: left;
+      // background: red;
+    }
+    span:nth-child(2) {
+      flex: 0 0 430px;
+      // background: yellow;
+    }
+    span:nth-child(3) {
+      flex: 0 0 250px;
+      // background: green;
+    }
+    span:nth-child(4) {
+      flex: 1;
+      box-sizing: border-box;
+      padding-left: 100px;
+      text-align: left;
+      // background: pink;
+    }
+  }
+}
