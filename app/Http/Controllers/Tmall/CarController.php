@@ -49,7 +49,7 @@ class CarController extends Controller
     public function carRank()
     {
         $rank = TmallCar::select(['name', 'car'])
-            ->where('car', '!=', '00.00.000')
+            ->where('car', '!=', '00:00:000')
             ->orderBy('car')
             ->limit(5)
             ->get();
