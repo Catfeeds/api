@@ -114,14 +114,14 @@
     @if (isset($type))
       @if ($type == 'bird')
         title: '刚刚我在新西兰，偶遇呆萌傻鸟!', // 分享标题
-        desc: "中国国际进口博览会5.2H-G02，等你来哦", // 分享描述
+        desc: "新西兰国家馆5.2H-G02，等你来哦", // 分享描述
       @elseif($type == 'air')
         title: '快来看，我刚去了趟新西兰!', // 分享标题
-        desc: "中国国际进口博览会5.2H-G02，等你来哦",
+        desc: "新西兰国家馆5.2H-G02，等你来哦",
       @endif
     @else
       title: '刚刚我在新西兰，偶遇呆萌傻鸟!', // 分享标题
-      desc: "中国国际进口博览会5.2H-G02，等你来哦", // 分享描述
+      desc: "新西兰国家馆5.2H-G02，等你来哦", // 分享描述
     @endif
     link: window.location.href,
     imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/%E6%96%B0%E8%A5%BF%E5%85%B0LOGO.jpg", // 分享图标
