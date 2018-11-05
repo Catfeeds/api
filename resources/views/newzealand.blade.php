@@ -72,6 +72,19 @@
       background: #09bb07;
       font-size: 16px;
     }
+    .popup {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .popup_text {
+      margin-top: 30px;
+      width: 90%;
+    }
   </style>
 </head>
 
@@ -83,10 +96,24 @@
     <video src="{{ $path }}" controls webkit-playsinline="true" playsinline="true"></video>
   </div>
   <div class="footer">
-    <button>下载</button>
+    <button>分享</button>
+  </div>
+  <div class="popup">
+    <img class="popup_text" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/share.png">
   </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    var dom_btn = document.querySelector('button')
+    var dom_popup = document.querySelector('.popup')
+    dom_btn.onclick = function () {
+      dom_popup.style.display = 'block'
+    }
+    dom_popup.onclick = function () {
+      dom_popup.style.display = 'none'
+    }
+  </script>
 </body>
+
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
 <script type="application/javascript">
   wx.config(<?php echo $js->jssdk->buildConfig(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
@@ -132,26 +159,26 @@
     });
   });
 
-  var btn = document.querySelector('button')
-  btn.onclick = function() {
-    var u = navigator.userAgent;
-    var email = prompt('请输入邮箱');
-    var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
-    if (email === '') {
-      alert('输入内容不能为空')
-    } else if (!reg.test(email)) {
-      alert('邮箱格式错误')
-    } else {
-      axios.post('https://api.shanghaichujie.com/api/newzealand/video/email', {
-        email: email,
-        path: '{{ $path }}'
-      }).then(function(res) {
-        alert('邮件发送成功！');
-      }).catch(function(res) {
-        alert('很抱歉邮件发送失败！')
-      })
-    }
-  }
+  // var btn = document.querySelector('button')
+  // btn.onclick = function() {
+  //   var u = navigator.userAgent;
+  //   var email = prompt('请输入邮箱');
+  //   var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+  //   if (email === '') {
+  //     alert('输入内容不能为空')
+  //   } else if (!reg.test(email)) {
+  //     alert('邮箱格式错误')
+  //   } else {
+  //     axios.post('https://api.shanghaichujie.com/api/newzealand/video/email', {
+  //       email: email,
+  //       path: '{{ $path }}'
+  //     }).then(function(res) {
+  //       alert('邮件发送成功！');
+  //     }).catch(function(res) {
+  //       alert('很抱歉邮件发送失败！')
+  //     })
+  //   }
+  // }
 </script>
 
 </html>
