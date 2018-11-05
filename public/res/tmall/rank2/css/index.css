@@ -12,6 +12,15 @@ html, body {
   font-family: 'custom_font';
 }
 
+.time {
+  position: absolute;
+  top: 575px;
+  left: 80px;
+  font-size: 36px;
+  color: #fff;
+  text-shadow: 0 0 10px #9c235e;
+}
+
 ul {
   position: absolute;
   left: 422px;
