@@ -72,6 +72,7 @@ body {
 
 .container .select_wrap {
   position: relative;
+  margin: 0.46667rem auto 0.13333rem;
 }
 
 .container .select_wrap .triangle {
@@ -84,6 +85,16 @@ body {
   border-left-color: transparent;
   border-right-color: transparent;
   border-bottom-color: transparent;
+}
+
+.container .tips {
+  margin: 0 auto;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background: 0;
+  font-size: 0.32rem;
+  font-style: initial;
+  color: #fff;
 }
 
 .submit {
