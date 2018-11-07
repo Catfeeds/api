@@ -50,11 +50,12 @@
   </ul>
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script>
-    setInterval(function() {
+    var timeArr = []
+    setInterval(function () {
       $.ajax({
         method: 'GET',
         url: 'https://api.shanghaichujie.com/api/tmall/packet/rank?path=wuhan',
-      }).done(function(res) {
+      }).done(function (res) {
         if (res.status !== 0) {
           //设置当前时间 res.time,需要修改
           if (res.time.length > 0) {
@@ -63,24 +64,33 @@
           } else {
             $('.time').hide()
           }
-
-          //更新排行榜
-          for (let i in res.data) {
-            if (i === '0') {
-              $('.rank').eq(i).text('第一名')
-            } else if (i === '1') {
-              $('.rank').eq(i).text('第二名')
-            } else if (i === '2') {
-              $('.rank').eq(i).text('第三名')
-            } else if (i === '3') {
-              $('.rank').eq(i).text('第四名')
-            } else if (i === '4') {
-              $('.rank').eq(i).text('第五名')
+          if (res.time.length > 0) {
+            if (timeArr[0] !== res.time[0] || timeArr[1] !== res.time[1]) {
+              // 清空
+              $('.rank').text('')
+              $('.username').text('')
+              $('.score').text('')
+              $('.phone').text('')
+              $('.time').hide()
+              timeArr = res.time
             }
-
-            $('.username').eq(i).text(res.data[i].user.name)
-            $('.score').eq(i).text(res.data[i].score)
-            $('.phone').eq(i).text(res.data[i].user.phone.replace(/(\d{3})(\d{4})(\d{4})/,"$1****$3"))
+            //更新排行榜
+            for (let i in res.data) {
+              if (i === '0') {
+                $('.rank').eq(i).text('第一名')
+              } else if (i === '1') {
+                $('.rank').eq(i).text('第二名')
+              } else if (i === '2') {
+                $('.rank').eq(i).text('第三名')
+              } else if (i === '3') {
+                $('.rank').eq(i).text('第四名')
+              } else if (i === '4') {
+                $('.rank').eq(i).text('第五名')
+              }
+              $('.username').eq(i).text(res.data[i].user.name)
+              $('.score').eq(i).text(res.data[i].score)
+              $('.phone').eq(i).text(res.data[i].user.phone.replace(/(\d{3})(\d{4})(\d{4})/, "$1****$3"))
+            }
           }
 
         } else {
