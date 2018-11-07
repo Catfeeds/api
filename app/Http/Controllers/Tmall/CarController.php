@@ -44,10 +44,10 @@ class CarController extends Controller
                 'taobao' => $request->input('taobao'),
                 'path' => $path
             ]);
-            event(new GameTmall($user->id, $request->input('name'), $request->input('path')));
 
         }
 
+        event(new GameTmall($user->id, $request->input('name'), $request->input('path')));
 
         return 'true';
     }
