@@ -90,6 +90,11 @@ class CarUserController extends Controller
                 'wuhan' => 'wuhan',
                 'chengdu' => 'chengdu'
             ]);
+            $filter->notIn('car', '不包括')->multipleSelect([
+                '不过滤' => '',
+                '00.00.000' => '00.00.000',
+            ]);
+
 
         });
         $grid->model()->orderBy('created_at', 'desc');

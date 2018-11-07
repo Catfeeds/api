@@ -86,7 +86,12 @@ class GameController extends Controller
         $grid->filter(function ($filter) {
             $filter->disableIdFilter();
             $filter->between('created_at', '游戏时间')->datetime();
-            $filter->equal('path', '场地');
+            $filter->in('path', '场地')->multipleSelect([
+                'suzhou' => 'suzhou',
+                'hangzhou' => 'hangzhou',
+                'wuhan' => 'wuhan',
+                'chengdu' => 'chengdu'
+            ]);
             $filter->where(function ($query) {
                 $query->whereHas('user', function ($query){
                     $query->where('phone', 'like', "%{$this->input}%");
