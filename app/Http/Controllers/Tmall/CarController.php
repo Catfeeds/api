@@ -20,18 +20,51 @@ class CarController extends Controller
 
     public function store(Request $request)
     {
-        $user = TmallCar::firstOrCreate(['phone' => $request->input('phone')], [
-            'name' => $request->input('name'),
-            'sex' => $request->input('sex'),
-            'taobao' => $request->input('taobao')
-        ]);
-        event(new GameTmall($user->id, $request->input('name'), $request->input('path')));
+        $path = $request->input('path');
+        if ($path == 'wuhan' || $path == 'chengdu' || $path == 'suzhou' || $path == 'hangzhou') {
+            TmallCar::firstOrCreate(['phone' => $request->input('phone')], [
+                'name' => $request->input('name'),
+                'sex' => $request->input('sex'),
+                'taobao' => $request->input('taobao'),
+                'path' => $request->input('path')
+            ]);
+        } else {
+            if ($path == 'wuhan2'){
+                $path = 'wuhan';
+            } elseif ($path == 'chengdu2') {
+                $path = 'chengdu';
+            } elseif ($path == 'suzhou2') {
+                $path = 'suzhou';
+            } elseif ($path == 'hangzhou2') {
+                $path = 'hangzhou';
+            }
+            $user = TmallCar::firstOrCreate(['phone' => $request->input('phone')], [
+                'name' => $request->input('name'),
+                'sex' => $request->input('sex'),
+                'taobao' => $request->input('taobao'),
+                'path' => $path
+            ]);
+            event(new GameTmall($user->id, $request->input('name'), $request->input('path')));
+
+        }
+
 
         return 'true';
     }
 
     public function upload(Request $request)
     {
+        $path = $request->input('path');
+
+        if ($path == 'wuhan2'){
+            $path = 'wuhan';
+        } elseif ($path == 'chengdu2') {
+            $path = 'chengdu';
+        } elseif ($path == 'suzhou2') {
+            $path = 'suzhou';
+        } elseif ($path == 'hangzhou2') {
+            $path = 'hangzhou';
+        }
         $r = new TmallCarGame();
         $r->path = $request->input('path');
         $r->score = $request->input('score');

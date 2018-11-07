@@ -92,6 +92,7 @@ class CarUserController extends Controller
         $grid->phone('Phone');
         $grid->taobao('Taobao');
         $grid->sex('Sex');
+        $grid->path('Path');
         $grid->car('赛车游戏时间')->sortable();
         $grid->created_at('Created at')->sortable();
 
@@ -133,6 +134,7 @@ class CarUserController extends Controller
         $form->display('phone', 'Phone');
         $form->display('taobao', 'Taobao');
         $form->display('sex', 'Sex');
+        $form->display('path');
         $form->time('car', 'Car')->format('mm:ss:SSS');
 
         return $form;
