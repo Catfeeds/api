@@ -22,7 +22,7 @@ class CarController extends Controller
     {
         $path = $request->input('path');
         if ($path == 'wuhan' || $path == 'chengdu' || $path == 'suzhou' || $path == 'hangzhou') {
-            TmallCar::firstOrCreate(['phone' => $request->input('phone')], [
+            $user=TmallCar::firstOrCreate(['phone' => $request->input('phone')], [
                 'name' => $request->input('name'),
                 'sex' => $request->input('sex'),
                 'taobao' => $request->input('taobao'),
