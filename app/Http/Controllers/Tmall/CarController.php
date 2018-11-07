@@ -15,56 +15,29 @@ class CarController extends Controller
     public function register(Request $request)
     {
         $path = $request->input('path');
-        return view('tmall.car', compact('path'));
+        $game = $request->input('game') == 'packet' ? 'car' : 'packet';
+        return view('tmall.car', compact('path', 'game'));
     }
 
     public function store(Request $request)
     {
-        $path = $request->input('path');
-        if ($path == 'wuhan' || $path == 'chengdu' || $path == 'suzhou' || $path == 'hangzhou') {
-            $user=TmallCar::firstOrCreate(['phone' => $request->input('phone')], [
-                'name' => $request->input('name'),
-                'sex' => $request->input('sex'),
-                'taobao' => $request->input('taobao'),
-                'path' => $request->input('path')
-            ]);
-        } else {
-            if ($path == 'wuhan2'){
-                $path = 'wuhan';
-            } elseif ($path == 'chengdu2') {
-                $path = 'chengdu';
-            } elseif ($path == 'suzhou2') {
-                $path = 'suzhou';
-            } elseif ($path == 'hangzhou2') {
-                $path = 'hangzhou';
-            }
-            $user = TmallCar::firstOrCreate(['phone' => $request->input('phone')], [
-                'name' => $request->input('name'),
-                'sex' => $request->input('sex'),
-                'taobao' => $request->input('taobao'),
-                'path' => $path
-            ]);
-
+        $game = $request->input('game');
+        $user = TmallCar::firstOrCreate(['phone' => $request->input('phone')], [
+            'name' => $request->input('name'),
+            'sex' => $request->input('sex'),
+            'taobao' => $request->input('taobao'),
+            'path' => $request->input('path')
+        ]);
+        if ($game == 'packet') {
+            event(new GameTmall($user->id, $request->input('name'), $request->input('path')));
         }
-
-        event(new GameTmall($user->id, $request->input('name'), $request->input('path')));
 
         return 'true';
     }
 
     public function upload(Request $request)
     {
-        $path = $request->input('path');
 
-        if ($path == 'wuhan2'){
-            $path = 'wuhan';
-        } elseif ($path == 'chengdu2') {
-            $path = 'chengdu';
-        } elseif ($path == 'suzhou2') {
-            $path = 'suzhou';
-        } elseif ($path == 'hangzhou2') {
-            $path = 'hangzhou';
-        }
         $r = new TmallCarGame();
         $r->path = $request->input('path');
         $r->score = $request->input('score');
@@ -74,15 +47,12 @@ class CarController extends Controller
         return $r;
     }
 
-    /**
-     * @return \Illuminate\Http\JsonResponse
-     *
-     * 获取赛车游戏排行榜
-     */
-    public function carRank()
+
+    public function carRank(Request $request)
     {
         $rank = TmallCar::select(['name', 'car'])
             ->where('car', '!=', '00:00:000')
+            ->where('path', $request->input('path'))
             ->orderBy('car')
             ->limit(5)
             ->get();
