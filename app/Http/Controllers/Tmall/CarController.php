@@ -74,10 +74,10 @@ class CarController extends Controller
             ]);
         } elseif ($now->gt(Carbon::today()->addHours(18))) {
             //18-19
-            $data = $this->rank(18, 19, $path);
+            $data = $this->rank(19, 20, $path);
             return response()->json([
                 'status' => 1,
-                'time' => [18, 19],
+                'time' => [19, 20],
                 'data' => $data
             ]);
         } elseif ($now->gt(Carbon::today()->addHours(16))) {
