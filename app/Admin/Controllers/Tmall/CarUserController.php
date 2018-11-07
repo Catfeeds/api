@@ -90,8 +90,8 @@ class CarUserController extends Controller
                 'wuhan' => 'wuhan',
                 'chengdu' => 'chengdu'
             ]);
-            $filter->notIn('car', '不包括')->multipleSelect([
-                '不过滤' => '',
+            $filter->notIn('car', '过滤掉')->multipleSelect([
+                '不过滤' => '0',
                 '00.00.000' => '00.00.000',
             ]);
 
