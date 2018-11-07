@@ -31,7 +31,7 @@
     setInterval(function () {
         $.ajax({
             method: 'GET',
-            url: 'https://api.shanghaichujie.com/api/tmall/car/rank',
+            url: 'https://api.shanghaichujie.com/api/tmall/car/rank?path={{$path}}',
         }).done(function (res) {
             console.log(res.data[0])
             for (let i in res.data) {

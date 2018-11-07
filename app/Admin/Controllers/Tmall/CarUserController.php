@@ -84,6 +84,13 @@ class CarUserController extends Controller
         $grid->filter(function ($filter) {
             $filter->disableIdFilter();
             $filter->like('phone', '根据手机号查询');
+            $filter->in('path', '场地')->multipleSelect([
+                'suzhou' => 'suzhou',
+                'hangzhou' => 'hangzhou',
+                'wuhan' => 'wuhan',
+                'chengdu' => 'chengdu'
+            ]);
+
         });
         $grid->model()->orderBy('created_at', 'desc');
         $grid->disableCreateButton();

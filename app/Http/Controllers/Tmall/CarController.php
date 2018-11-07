@@ -19,6 +19,13 @@ class CarController extends Controller
         return view('tmall.car', compact('path', 'game'));
     }
 
+    public function carIndex(Request $request)
+    {
+        $path = $request->input('path');
+
+        return view('tmall.rank', compact('path'));
+    }
+
     public function store(Request $request)
     {
         $game = $request->input('game');
