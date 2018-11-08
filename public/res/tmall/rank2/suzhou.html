@@ -59,6 +59,7 @@
         if (res.status !== 0) {
           //设置当前时间 res.time,需要修改
           if (res.time.length > 0) {
+            $('.time').show()
             $('.time1').text(res.time[0])
             $('.time2').text(res.time[1])
             if (timeArr[0] !== res.time[0] || timeArr[1] !== res.time[1]) {
