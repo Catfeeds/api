@@ -91,7 +91,7 @@ class CarUserController extends Controller
                 'chengdu' => 'chengdu'
             ]);
             $filter->notIn('car', '过滤掉')->multipleSelect([
-                '00.00.000' => '00.00.000',
+                '00:00:000' => '00:00:000',
             ]);
 
 
