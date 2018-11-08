@@ -61,10 +61,6 @@
           if (res.time.length > 0) {
             $('.time1').text(res.time[0])
             $('.time2').text(res.time[1])
-          } else {
-            $('.time').hide()
-          }
-          if (res.time.length > 0) {
             if (timeArr[0] !== res.time[0] || timeArr[1] !== res.time[1]) {
               // 清空
               $('.rank').text('')
@@ -91,6 +87,8 @@
               $('.score').eq(i).text(res.data[i].score)
               $('.phone').eq(i).text(res.data[i].user.phone.replace(/(\d{3})(\d{4})(\d{4})/, "$1****$3"))
             }
+          } else {
+            $('.time').hide()
           }
 
         } else {
