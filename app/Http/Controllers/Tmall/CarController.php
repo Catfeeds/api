@@ -38,7 +38,6 @@ class CarController extends Controller
         if ($game == 'packet') {
             event(new GameTmall($user->id, $request->input('name'), $request->input('path')));
         }
-        event(new GameTmall($user->id, $request->input('name'), $request->input('path')));
 
         return 'true';
     }
