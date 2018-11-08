@@ -72,7 +72,7 @@ class CarController extends Controller
     {
         $path = $request->input('path');
         $now = Carbon::now();
-        if ($now->gt(Carbon::today()->addHours(20))) {
+        if ($now->gt(Carbon::today()->addHours(21))) {
             //不在时间段
             return response()->json([
                 'status' => 0,
