@@ -15,7 +15,7 @@ class CarController extends Controller
     public function register(Request $request)
     {
         $path = $request->input('path');
-        $game = $request->input('game') == 'packet' ? 'car' : 'packet';
+        $game = $request->input('game') == 'packet' ? 'packet' : 'car';
         return view('tmall.car', compact('path', 'game'));
     }
 
