@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>天猫精灵</title>
+    <title>天猫汽车</title>
     <script src="js/rem.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
@@ -31,7 +31,7 @@
     setInterval(function () {
         $.ajax({
             method: 'GET',
-            url: 'https://api.shanghaichujie.com/api/tmall/car/rank',
+            url: 'https://api.shanghaichujie.com/api/tmall/car/rank?path={{$path}}',
         }).done(function (res) {
             console.log(res.data[0])
             for (let i in res.data) {

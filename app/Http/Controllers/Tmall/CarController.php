@@ -15,23 +15,36 @@ class CarController extends Controller
     public function register(Request $request)
     {
         $path = $request->input('path');
-        return view('tmall.car', compact('path'));
+        $game = $request->input('game') == 'packet' ? 'packet' : 'car';
+        return view('tmall.car', compact('path', 'game'));
+    }
+
+    public function carIndex(Request $request)
+    {
+        $path = $request->input('path');
+
+        return view('tmall.rank', compact('path'));
     }
 
     public function store(Request $request)
     {
+        $game = $request->input('game');
         $user = TmallCar::firstOrCreate(['phone' => $request->input('phone')], [
             'name' => $request->input('name'),
             'sex' => $request->input('sex'),
-            'taobao' => $request->input('taobao')
+            'taobao' => $request->input('taobao'),
+            'path' => $request->input('path')
         ]);
-        event(new GameTmall($user->id, $request->input('name'), $request->input('path')));
+        if ($game == 'packet') {
+            event(new GameTmall($user->id, $request->input('name'), $request->input('path')));
+        }
 
         return 'true';
     }
 
     public function upload(Request $request)
     {
+
         $r = new TmallCarGame();
         $r->path = $request->input('path');
         $r->score = $request->input('score');
@@ -41,15 +54,12 @@ class CarController extends Controller
         return $r;
     }
 
-    /**
-     * @return \Illuminate\Http\JsonResponse
-     *
-     * 获取赛车游戏排行榜
-     */
-    public function carRank()
+
+    public function carRank(Request $request)
     {
         $rank = TmallCar::select(['name', 'car'])
-            ->where('car', '!=', '00.00.000')
+            ->where('car', '!=', '00:00:000')
+            ->where('path', $request->input('path'))
             ->orderBy('car')
             ->limit(5)
             ->get();
@@ -62,7 +72,7 @@ class CarController extends Controller
     {
         $path = $request->input('path');
         $now = Carbon::now();
-        if ($now->gt(Carbon::today()->addHours(20))) {
+        if ($now->gt(Carbon::today()->addHours(21))) {
             //不在时间段
             return response()->json([
                 'status' => 0,
@@ -71,10 +81,10 @@ class CarController extends Controller
             ]);
         } elseif ($now->gt(Carbon::today()->addHours(18))) {
             //18-19
-            $data = $this->rank(18, 19, $path);
+            $data = $this->rank(19, 20, $path);
             return response()->json([
                 'status' => 1,
-                'time' => [18, 19],
+                'time' => [19, 20],
                 'data' => $data
             ]);
         } elseif ($now->gt(Carbon::today()->addHours(16))) {

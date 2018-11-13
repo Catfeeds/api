@@ -84,6 +84,17 @@ class CarUserController extends Controller
         $grid->filter(function ($filter) {
             $filter->disableIdFilter();
             $filter->like('phone', '根据手机号查询');
+            $filter->in('path', '场地')->multipleSelect([
+                'suzhou' => 'suzhou',
+                'hangzhou' => 'hangzhou',
+                'wuhan' => 'wuhan',
+                'chengdu' => 'chengdu'
+            ]);
+            $filter->notIn('car', '过滤掉')->multipleSelect([
+                '00:00:000' => '00:00:000',
+            ]);
+
+
         });
         $grid->model()->orderBy('created_at', 'desc');
         $grid->disableCreateButton();
@@ -92,6 +103,7 @@ class CarUserController extends Controller
         $grid->phone('Phone');
         $grid->taobao('Taobao');
         $grid->sex('Sex');
+        $grid->path('Path');
         $grid->car('赛车游戏时间')->sortable();
         $grid->created_at('Created at')->sortable();
 
@@ -133,6 +145,7 @@ class CarUserController extends Controller
         $form->display('phone', 'Phone');
         $form->display('taobao', 'Taobao');
         $form->display('sex', 'Sex');
+        $form->display('path');
         $form->time('car', 'Car')->format('mm:ss:SSS');
 
         return $form;

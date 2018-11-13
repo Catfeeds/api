@@ -335,6 +335,7 @@ Route::get('res/genie/album/index', 'Tmall\GenieController@album');
 /* 天猫汽车 */
 Route::get('res/tmall/car/index', 'Tmall\CarController@register');
 Route::post('tmall/car/user/store', 'Tmall\CarController@store');
+Route::get('res/tmall/rank1/index', 'Tmall\CarController@carIndex');
 /*
  * 雅培活动
  */

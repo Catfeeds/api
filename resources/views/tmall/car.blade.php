@@ -28,6 +28,8 @@
                 <option value="女">女</option>
             </select>
         </p>
+        <p class="tips">*该信息仅限于领取奖品核对身份信息使用。</p>
+        <p class="tips">*参与者年龄需满12周岁。</p>
     </div>
     <div class="submit"><img src="./imgs/submit.png"></div>
 </section>
@@ -43,7 +45,8 @@
             phone: phone,
             taobao: taobao,
             sex: sex,
-            path: '{{ $path }}'
+            path: '{{ $path }}',
+            game: '{{ $game }}'
         }, {
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
@@ -53,7 +56,6 @@
         }).catch(function () {
             alert('很抱歉上传失败')
         })
-
     }
 </script>
 </body>

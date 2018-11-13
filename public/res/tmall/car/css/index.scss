@@ -68,6 +68,7 @@ body {
   }
   .select_wrap {
     position: relative;
+    margin: PX(35) auto PX(10);
     .triangle {
       position: absolute;
       right: PX(20);
@@ -79,6 +80,15 @@ body {
       border-right-color: transparent;
       border-bottom-color: transparent;
     }
+  }
+  .tips {
+    margin:0 auto;
+    height: PX(30);
+    line-height: PX(30);
+    background: 0;
+    font-size: PX(24);
+    font-style: initial;
+    color: #fff;
   }
 }
 .submit {
