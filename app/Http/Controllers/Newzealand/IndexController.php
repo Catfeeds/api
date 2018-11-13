@@ -12,6 +12,13 @@ class IndexController extends Controller
         $path = $request->input('path');
         $js= \EasyWeChat::officialAccount();
         $type = $request->input('type');
-        return view('newzealand', compact('path', 'js', 'type'));
+        return view('ciie.newzealand', compact('path', 'js', 'type'));
+    }
+
+    public function panoramic()
+    {
+        $js= \EasyWeChat::officialAccount();
+
+        return view('ciie.panoramic', compact('js'));
     }
 }

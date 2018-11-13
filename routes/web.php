@@ -241,14 +241,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 /**
  * 阿玛尼视频上传显示
  */
-//Route::get('armani/video', 'Armani\VideoController@show');
+Route::get('armani/video', 'Armani\VideoController@show');
 
 /**
  * 联邦照片
  */
 Route::get('fed/index', 'Fed\FedController@index');
 
-Route::get('tencent/share', function(\Illuminate\Http\Request $request) {
+Route::get('tencent/share', function (\Illuminate\Http\Request $request) {
     $path = $request->path;
     $js = EasyWeChat::officialAccount();
     return view('tencent', compact('js', 'path'));
@@ -277,7 +277,7 @@ Route::get('html/energy/index2', function () {
 /**
  * 名爵车展数据统计
  */
-Route::group(['middleware'=> ['web', 'auth'],], function () {
+Route::group(['middleware' => ['web', 'auth'],], function () {
     Route::get('mg/everyday', 'Mc\StatisticsController@everyday');
     Route::get('mg/setting', 'Mc\StatisticsController@setting');
     Route::get('mg/search', 'Mc\StatisticsController@searchIndex');
@@ -339,12 +339,10 @@ Route::post('tmall/car/user/store', 'Tmall\CarController@store');
  * 雅培活动
  */
 Route::redirect('res/wyeth/album/index', 'http://cs.touchworld-sh.com/lolo/album/');
-
 Route::get('res/abbott/index', function () {
     $js = EasyWeChat::officialAccount();
     return view('abbott.index', compact('js'));
 });
-
 Route::get('res/abbott/index2', function () {
     $js = EasyWeChat::officialAccount();
     return view('abbott.index2', compact('js'));
@@ -354,6 +352,12 @@ Route::get('res/abbott/index2', function () {
  * 进博会新西兰
  */
 Route::get('newzealand/share', 'Newzealand\IndexController@index');
+Route::get('res/ciie/panoramic', 'Newzealand\IndexController@panoramic');
+
+/**
+ * 上海马拉松
+ */
+Route::get('shangma', 'ShangmaController@index');
 
 /**
  *  前后端分离重定向

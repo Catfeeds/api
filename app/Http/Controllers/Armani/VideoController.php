@@ -5,21 +5,10 @@ namespace App\Http\Controllers\Armani;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
-use EasyWeChat\Foundation\Application;
 
 
 class VideoController extends Controller
 {
-    public $js;
-
-    /**
-     * ConverseController constructor.
-     * @param $app
-     */
-    public function __construct(Application $app)
-    {
-        $this->js = $app->js;
-    }
 
     public function upload(Request $request)
     {
@@ -36,7 +25,7 @@ class VideoController extends Controller
 
     public function show(Request $request)
     {
-        $js = $this->js;
+        $js= \EasyWeChat::officialAccount();
         $path = $request->path;
         $url = env('APP_URL') . '/armani/video?path=' . $path;
         $videoPath = env('APP_URL') . '/upload/' . $path;
