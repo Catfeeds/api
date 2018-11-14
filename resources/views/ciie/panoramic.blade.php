@@ -140,7 +140,7 @@
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: '新西兰国家馆全景', // 分享标题
-            desc: "", // 分享描述
+            desc: "新西兰国家馆5.2H-G02，等你来哦", // 分享描述
             link: window.location.href,
             imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/%E6%96%B0%E8%A5%BF%E5%85%B0LOGO.jpg", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
