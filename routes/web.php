@@ -313,11 +313,10 @@ Route::get('res/absoult/phone', function () {
 Route::get('res/absolut/phone/index', 'Absolut\IndexController@phone');
 Route::get('res/absolut/share', 'Absolut\IndexController@share');
 
-/*
- * 欧莱雅h5
- */
+/* oreal第一次 */
 Route::get('res/oreal/register/index', 'Oreal\IndexController@register');
-
+/* oreal第二次注册 20181113 */
+Route::redirect('res/oreal/register/second', url('/'). '/res/oreal/oreal_register/register.html');
 
 /*
  * 平安加速器
