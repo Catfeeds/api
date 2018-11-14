@@ -18,7 +18,7 @@ class CreateOrealUsersTable extends Migration
             $table->string('username');
             $table->string('department');
             $table->string('email');
-            $table->string('phone');
+            $table->string('date');
             $table->timestamps();
         });
     }

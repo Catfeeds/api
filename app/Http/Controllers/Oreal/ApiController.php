@@ -15,7 +15,7 @@ class ApiController extends Controller
         $user->username = $request->username;
         $user->department = $request->department;
         $user->email = $request->email;
-        $user->phone = $request->phone;
+        $user->date = $request->date;
         $user->save();
         return response()->json([
             'status' => true,
