@@ -97,7 +97,7 @@
           wx.onMenuShareTimeline({
               title: '上马之嘉', // 分享标题
               link: window.location.href,
-              imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/logo/%E4%B8%8A%E6%B5%B7%E9%A9%AC%E6%8B%89%E6%9D%BE.png", // 分享图标
+              imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/logo/%E4%B8%8A%E6%B5%B7%E9%A9%AC%E6%8B%89%E6%9D%BElogo.png", // 分享图标
               success: function () {
                   // 用户确认分享后执行的回调函数
               }
@@ -107,7 +107,7 @@
               title: '上马之嘉', // 分享标题
               desc: "  ", // 分享描述
               link: window.location.href,
-              imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/logo/%E4%B8%8A%E6%B5%B7%E9%A9%AC%E6%8B%89%E6%9D%BE.png", // 分享图标
+              imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/logo/%E4%B8%8A%E6%B5%B7%E9%A9%AC%E6%8B%89%E6%9D%BElogo.png", // 分享图标
               type: 'link', // 分享类型,music、video或link，不填默认为link
               success: function () {
                   // 用户确认分享后执行的回调函数
