@@ -10,6 +10,6 @@ class ShangmaController extends Controller
     {
         $path = $request->input('path');
         $js = \EasyWeChat::officialAccount();
-        return view('shangma', compact('path'));
+        return view('shangma', compact('path', 'js'));
     }
 }
