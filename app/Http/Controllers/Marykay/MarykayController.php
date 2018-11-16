@@ -27,7 +27,7 @@ class MarykayController extends Controller
             $type == 3 ? $count = 50 : (
             $type == 4 ? $count = 100 : $count = 0)));
             if ($count != 0) {
-                $users = Marykay::all()->random($count);
+                $users = Marykay::where('reward', 0)->get()->random($count);
                 foreach ($users as $user) {
                     $user->reward = $type;
                 }
