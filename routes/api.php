@@ -272,3 +272,4 @@ Route::get('friso/user/judge/{openid}', 'Friso\UserController@status');
 Route::get('marykay/special', 'Marykay\MarykayController@special');
 Route::get('marykay/draw', 'Marykay\MarykayController@draw');
 Route::get('marykay/reset', 'Marykay\MarykayController@reset');
+Route::get('marykay/rank', 'Marykay\MarykayController@rank');

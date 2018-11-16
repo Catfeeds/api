@@ -13,6 +13,12 @@ class MarykayController extends Controller
         return '活动尚未开始';
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * 
+     * 抽取普通奖，1234
+     */
     public function draw(Request $request)
     {
         $type = $request->input('type');
@@ -41,6 +47,10 @@ class MarykayController extends Controller
         ]);
     }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     * 抽取特等奖
+     */
     public function special()
     {
         $lucky = Marykay::where('special', 1)->first();
@@ -64,6 +74,28 @@ class MarykayController extends Controller
         ]);
     }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     *
+     * 投票排行榜
+     */
+    public function rank()
+    {
+        $rank = Marykay::selectRaw('`show`, count(*) as count')
+            ->where('show', '!=', null)
+            ->groupBy('show')
+            ->orderBy('show')
+            ->get();
+
+        return response()->json([
+            'data' => $rank
+        ]);
+    }
+    /**
+     * @return string
+     * 
+     * 重置抽奖数据
+     */
     public function reset()
     {
         Marykay::where('special', '!=', 0)
