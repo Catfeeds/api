@@ -360,6 +360,11 @@ Route::get('res/ciie/panoramic', 'Newzealand\IndexController@panoramic');
 Route::get('shangma', 'ShangmaController@index');
 
 /**
+ * 玫凯琳
+ */
+Route::get('res/marykay/register', 'Marykay\MarykayController@index');
+
+/**
  *  前后端分离重定向
  */
 Route::get('front/{v}', 'Front\IndexController@index')->where('v', '.*');
