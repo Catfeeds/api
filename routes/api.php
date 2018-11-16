@@ -263,3 +263,12 @@ Route::post('newzealand/video/email', 'Newzealand\EmailController@seadEmail');
 /* friso答题互动 */
 Route::post('friso/user/store', 'Friso\UserController@store');
 Route::get('friso/user/judge/{openid}', 'Friso\UserController@status');
+
+/**
+ * 玫凯琳年会抽奖
+ *
+ * 幸运奖、普通奖、现场投票情况
+ */
+Route::get('marykay/special', 'Marykay\MarykayController@special');
+Route::get('marykay/draw', 'Marykay\MarykayController@draw');
+Route::get('marykay/reset', 'Marykay\MarykayController@reset');
