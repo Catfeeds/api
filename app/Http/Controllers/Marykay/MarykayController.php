@@ -30,8 +30,8 @@ class MarykayController extends Controller
                 $users = Marykay::where('reward', 0)->get()->random($count);
                 foreach ($users as $user) {
                     $user->reward = $type;
+                    $user->save();
                 }
-                $users->save();
             }
         }
 
