@@ -98,6 +98,7 @@ class MarykayController extends Controller
     {
         $rank = Marykay::selectRaw('`show`, count(*) as count')
             ->where('show', '2018抖音金曲串烧')
+            ->groupBy('show')
             ->get();
 
         return response()->json([
