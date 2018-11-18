@@ -273,3 +273,4 @@ Route::get('marykay/special', 'Marykay\MarykayController@special');
 Route::get('marykay/draw', 'Marykay\MarykayController@draw');
 Route::get('marykay/reset', 'Marykay\MarykayController@reset');
 Route::get('marykay/rank', 'Marykay\MarykayController@rank');
+Route::get('marykay/top', 'Marykay\MarykayController@top');

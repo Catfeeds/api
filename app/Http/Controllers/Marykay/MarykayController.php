@@ -33,7 +33,9 @@ class MarykayController extends Controller
             $type == 3 ? $count = 50 : (
             $type == 4 ? $count = 100 : $count = 0)));
             if ($count != 0) {
-                $users = Marykay::where('reward', 0)->get()->random($count);
+                $users = Marykay::where('reward', 0)
+                    ->where('openid', null)
+                    ->get()->random($count);
                 foreach ($users as $user) {
                     $user->reward = $type;
                     $user->save();
@@ -84,13 +86,36 @@ class MarykayController extends Controller
         $rank = Marykay::selectRaw('`show`, count(*) as count')
             ->where('show', '!=', null)
             ->groupBy('show')
-            ->orderBy('show')
+            ->orderBy('count')
             ->get();
 
         return response()->json([
             'data' => $rank
         ]);
     }
+
+    public function top()
+    {
+        $rank = Marykay::selectRaw('`show`, count(*) as count')
+            ->where('show', '2018抖音金曲串烧')
+            ->get();
+
+        return response()->json([
+            'data' => [$rank]
+        ]);
+    }
+
+    public function userStore(Request $request)
+    {
+        $user = new Marykay();
+        $user->username = $request->input('username');
+        $user->phone = $request->input('phone');
+        $user->show = $request->input('show');
+        $user->openid = $request->input('openid');
+        $user->save();
+
+    }
+
     /**
      * @return string
      * 
