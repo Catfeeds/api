@@ -102,7 +102,7 @@ class MarykayController extends Controller
             ->get();
 
         return response()->json([
-            'data' => [$rank]
+            'data' => $rank
         ]);
     }
 
