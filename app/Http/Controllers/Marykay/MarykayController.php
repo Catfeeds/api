@@ -115,6 +115,7 @@ class MarykayController extends Controller
         $user->openid = $request->input('openid');
         $user->save();
 
+        return 'true';
     }
 
     /**
