@@ -362,7 +362,7 @@ Route::get('shangma', 'ShangmaController@index');
 /**
  * 玫凯琳
  */
-Route::get('res/marykay/register', 'Marykay\MarykayController@index');
+Route::get('res/marykay/register', 'Marykay\MarykayController@index')->middleware('wechat.oauth:snsapi_base');
 
 /**
  *  前后端分离重定向
