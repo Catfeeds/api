@@ -11,7 +11,6 @@ class MarykayController extends Controller
     public function index()
     {
         $wechat = session('wechat.oauth_user.default');
-        dd($wechat);
         $user = Marykay::where('openid', $wechat['id'])->first();
         return view('marykay_register', compact('wechat', 'user'));
     }
