@@ -10,7 +10,10 @@ class MarykayController extends Controller
 {
     public function index()
     {
-        return '活动尚未开始';
+        $wechat = session('wechat.oauth_user.default');
+        dd($wechat);
+        $user = Marykay::where('openid', $wechat['id'])->first();
+        return view('marykay_register', compact('wechat', 'user'));
     }
 
     /**
@@ -58,14 +61,8 @@ class MarykayController extends Controller
         $lucky = Marykay::where('special', 1)->first();
 
         if (!$lucky) {
-            //根据投票结果，从投票最多的组中随机抽取一个人
-            $result = Marykay::selectRaw('`show`, count(*) as count')
-                ->where('show', '!=', null)
-                ->groupBy('show')
-                ->orderByDesc('count')
-                ->first();
-
-            $lucky = Marykay::where('show', $result->show)->get()->random();
+            //现场老板决定从哪个组里抽取
+            $lucky = Marykay::where('show', '2018抖音金曲串烧')->get()->random();
 
             $lucky->special = 1;
             $lucky->save();
@@ -94,6 +91,11 @@ class MarykayController extends Controller
         ]);
     }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     *
+     * 根据现场老板决定排行榜显示
+     */
     public function top()
     {
         $rank = Marykay::selectRaw('`show`, count(*) as count')
@@ -106,6 +108,12 @@ class MarykayController extends Controller
         ]);
     }
 
+    /**
+     * @param Request $request
+     * @return string
+     *
+     * 节目投票
+     */
     public function userStore(Request $request)
     {
         $user = new Marykay();
