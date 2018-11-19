@@ -66,7 +66,7 @@
 </section>
 @else
 <section class="registered">
-    <p>已经注册过</p>
+    <p>您已经参与过投票</p>
 </section>
 @endif
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
