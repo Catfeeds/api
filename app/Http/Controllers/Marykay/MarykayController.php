@@ -142,4 +142,18 @@ class MarykayController extends Controller
 
         return '重置成功';
     }
+
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     *
+     * 返回所有人列表
+     */
+    public function all()
+    {
+        $users = Marykay::where('openid', null)->get();
+
+        return response()->json([
+            'data' => $users
+        ]);
+    }
 }

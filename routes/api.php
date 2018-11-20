@@ -275,3 +275,4 @@ Route::get('marykay/reset', 'Marykay\MarykayController@reset');
 Route::get('marykay/rank', 'Marykay\MarykayController@rank');
 Route::get('marykay/top', 'Marykay\MarykayController@top');
 Route::post('marykay/user/store', 'Marykay\MarykayController@userStore');
+Route::get('marykay/all', 'Marykay\MarykayController@all');
