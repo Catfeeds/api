@@ -150,7 +150,8 @@ class MarykayController extends Controller
      */
     public function all()
     {
-        $users = Marykay::where('openid', null)->get();
+        $users = Marykay::select(['username', 'num'])
+            ->where('openid', null)->get();
 
         return response()->json([
             'data' => $users
