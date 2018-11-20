@@ -30,7 +30,7 @@ class MarykayController extends Controller
         if ($users->isEmpty()) {
 
             //根据奖项抽取不同人数
-            $type == 1 ? $count = 5 : (
+            $type == 1 ? $count = 4 : (
             $type == 2 ? $count = 10 : (
             $type == 3 ? $count = 50 : (
             $type == 4 ? $count = 100 : $count = 0)));
