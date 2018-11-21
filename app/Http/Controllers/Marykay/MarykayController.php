@@ -61,7 +61,7 @@ class MarykayController extends Controller
 
         if (!$lucky) {
             //现场老板决定从哪个组里抽取
-            $lucky = Marykay::where('show', '稻香')->get()->random();
+            $lucky = Marykay::where('show', '旅行')->get()->random();
 
             $lucky->special = 1;
             $lucky->save();
@@ -98,7 +98,7 @@ class MarykayController extends Controller
     public function top()
     {
         $rank = Marykay::selectRaw('`show`, count(*) as count')
-            ->where('show', '稻香')
+            ->where('show', '旅行')
             ->groupBy('show')
             ->get();
 
