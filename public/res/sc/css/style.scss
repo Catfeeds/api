@@ -98,8 +98,17 @@ section {
           top: 50%;
           left: 50%;
           transform: translate3d(-50%, -50%, 0);
-          width: PX(119);
-          height: PX(158);
+          width: PX(120);
+          height: PX(120);
+        }
+        p {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          margin-top: PX(100);
+          color: #fff;
+          font-size: PX(30);
         }
       }
     }

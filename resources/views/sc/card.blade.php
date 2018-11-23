@@ -33,17 +33,26 @@
   </section>
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script>
+    var playURL = './imgs/play.png'
+    var pauseURL = './imgs/pause.png'
     $('.content_btn').on('touchend', function () {
-      $('.audio1')[0].load()
-      $('.audio2')[0].load()
-      $('.audio1')[0].play()
-      $('.audio2')[0].play()
-      $('.content_btn').hide()
+      if ($(this).attr('src') === playURL) {
+        // 播放
+        $(this).attr('src', pauseURL)
+        $('.audio1')[0].load()
+        $('.audio2')[0].load()
+        $('.audio1')[0].play()
+        $('.audio2')[0].play()
+      } else if ($(this).attr('src') === pauseURL) {
+        // 暂停
+        $(this).attr('src', playURL)
+        $('.audio1')[0].pause()
+        $('.audio2')[0].pause()
+      }
     })
     $('.audio2').on('ended', function () {
       $('.audio1')[0].pause()
       $('.audio2')[0].pause()
-      $('.content_btn').show()
     })
   </script>
 </body>
