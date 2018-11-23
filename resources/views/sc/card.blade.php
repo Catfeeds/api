@@ -24,6 +24,7 @@
                 <audio class="audio2" src="{{ $path }}" preload></audio>
                 <!-- 模板end -->
                 <img class="content_btn" src="./imgs/play.png">
+                <p>点击播放</p>
             </div>
         </div>
     </div>
