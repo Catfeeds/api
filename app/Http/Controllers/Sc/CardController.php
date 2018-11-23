@@ -10,7 +10,7 @@ class CardController extends Controller
     public function card(Request $request)
     {
         $path = $request->input('path');
-        $type = $request->input('type');
+        $type = $request->input('type') + 1;
 
         return view('sc.card', compact('path', 'type'));
     }
