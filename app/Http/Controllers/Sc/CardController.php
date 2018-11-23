@@ -20,9 +20,9 @@ class CardController extends Controller
             $country = '法国';
         } elseif ($type == 4) {
             $country = '马尔代夫';
-        } elseif ($type = 5) {
+        } elseif ($type == 5) {
             $country = '美国';
-        } elseif ($type = 6) {
+        } elseif ($type == 6) {
             $country = '希腊';
         }
         $js = \EasyWeChat::officialAccount();
