@@ -319,12 +319,13 @@ Route::get('res/oreal/register/index', 'Oreal\IndexController@register');
 Route::redirect('res/oreal/register/second', url('/'). '/res/oreal/oreal_register/register.html');
 
 /*
- * 平安加速器
+ * 平安
  */
 Route::get('res/pingAn/zh/index', 'PingAn\IndexController@zh');
 Route::get('res/pingAn/en/index', 'PingAn\IndexController@en');
 Route::get('res/pingAn/imgdemo/index', 'PingAn\IndexController@imgDemo');
-
+/* 郑-图片分享 20181123 */
+Route::get('pingAn/img/share', 'PingAn\ImgShareController@index');
 /*
  * 天猫精灵活动战队
  */
