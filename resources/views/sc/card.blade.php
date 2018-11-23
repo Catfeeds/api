@@ -77,6 +77,7 @@
       }
     })
     $('.audio2').on('ended', function () {
+      $(this).attr('src', playURL)
       $('.audio1')[0].pause()
       $('.audio2')[0].pause()
     })
