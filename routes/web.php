@@ -366,6 +366,10 @@ Route::get('shangma', 'ShangmaController@index');
 Route::get('res/marykay/register', 'Marykay\MarykayController@index')->middleware('wechat.oauth:snsapi_base');
 
 /**
+ * 渣打银行
+ */
+Route::get('res/sc/card', 'Sc\CardController@card'); //梦想留言机
+/**
  *  前后端分离重定向
  */
 Route::get('front/{v}', 'Front\IndexController@index')->where('v', '.*');
