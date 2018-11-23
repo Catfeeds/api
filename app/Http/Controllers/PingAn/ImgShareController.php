@@ -10,7 +10,7 @@ class ImgShareController extends Controller
     public function index(Request $request)
     {
         $path = $request->input('path');
-
-        return view('pingAn.pingan_share_img', compact('path'));
+        $js = \EasyWeChat::officialAccount();
+        return view('pingAn.pingan_share_img', compact('path','js'));
     }
 }
