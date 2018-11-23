@@ -20,8 +20,8 @@
         <div class="content">
           <!-- 模板start -->
           <img class="content_bg" src="./imgs/{{ $type }}.jpg">
-          <audio class="audio1" src="./media/{{ $type }}.mp3" preload loop></audio>
-          <audio class="audio2" src="{{ $path }}" preload loop></audio>
+          <audio class="audio1" src="./media/{{ $type }}.mp3" preload></audio>
+          <audio class="audio2" src="{{ $path }}" preload></audio>
           <!-- 模板end -->
           <img class="content_btn" src="./imgs/play.png">
         </div>
@@ -37,6 +37,11 @@
       $('.audio1')[0].play()
       $('.audio2')[0].play()
       $('.content_btn').hide()
+    })
+    $('.audio2').on('ended', function () {
+      $('.audio1')[0].pause()
+      $('.audio2')[0].pause()
+      $('.content_btn').show()
     })
   </script>
 </body>
