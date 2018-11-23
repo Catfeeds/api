@@ -34,6 +34,8 @@
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script>
     $('.content_btn').on('touchend', function () {
+      $('.audio1')[0].load()
+      $('.audio2')[0].load()
       $('.audio1')[0].play()
       $('.audio2')[0].play()
       $('.content_btn').hide()
