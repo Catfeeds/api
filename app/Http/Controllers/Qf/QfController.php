@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Qf;
 use App\Models\Qifu_user;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use EasyWeChat\Foundation\Application;
 
 class QfController extends Controller
 {
@@ -15,9 +14,9 @@ class QfController extends Controller
      * QfController constructor.
      * @param $app
      */
-    public function __construct(Application $app)
+    public function __construct()
     {
-        $this->js = $app->js;
+        $this->js = \EasyWeChat::officialAccount();
     }
 
     public function sign()
