@@ -24,6 +24,7 @@
                 <audio class="audio2" src="{{ $path }}" preload></audio>
                 <!-- 模板end -->
                 <img class="content_btn" src="./imgs/play.png">
+                <p>点击播放</p>
             </div>
         </div>
     </div>
@@ -58,17 +59,27 @@
             }
         });
     });
+    var playURL = './imgs/play.png'
+    var pauseURL = './imgs/pause.png'
     $('.content_btn').on('touchend', function () {
+      if ($(this).attr('src') === playURL) {
+        // 播放
+        $(this).attr('src', pauseURL)
         $('.audio1')[0].load()
         $('.audio2')[0].load()
         $('.audio1')[0].play()
         $('.audio2')[0].play()
-        $('.content_btn').hide()
-    })
-    $('.audio2').on('ended', function () {
+      } else if ($(this).attr('src') === pauseURL) {
+        // 暂停
+        $(this).attr('src', playURL)
         $('.audio1')[0].pause()
         $('.audio2')[0].pause()
-        $('.content_btn').show()
+      }
+    })
+    $('.audio2').on('ended', function () {
+      $('.content_btn').attr('src', playURL)
+      $('.audio1')[0].pause()
+      $('.audio2')[0].pause()
     })
 </script>
 </body>
