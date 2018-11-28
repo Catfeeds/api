@@ -67,7 +67,7 @@ class QfController extends Controller
     public function pasture()
     {
         //获取微信用户信息
-        $user_info = session('wechat.oauth_user');
+        $user_info = session('wechat.oauth_user.default');
 
         $qf_user = Qifu_user::where('openid', $user_info['id'])
             ->orWhere('nickname', $user_info->nickname)
@@ -133,7 +133,7 @@ class QfController extends Controller
     public function vr()
     {
         //获取微信用户信息
-        $user_info = session('wechat.oauth_user');
+        $user_info = session('wechat.oauth_user.default');
 
         $qf_user = Qifu_user::where('openid', $user_info['id'])
             ->orWhere('nickname', $user_info->nickname)
@@ -197,7 +197,7 @@ class QfController extends Controller
 
     public function share()
     {
-        $user_info = session('wechat.oauth_user');
+        $user_info = session('wechat.oauth_user.default');
         $js = $this->js;
         $qf_user = Qifu_user::where('openid', $user_info['id'])
             ->orWhere('nickname', $user_info->nickname)
