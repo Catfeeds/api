@@ -22,7 +22,7 @@ class QfController extends Controller
     public function sign()
     {
         //获取微信用户信息
-        $user_info = session('wechat.oauth_user');
+        $user_info = session('wechat.oauth_user.default');
 
         $qf_user = Qifu_user::where('openid', $user_info['id'])
             ->orWhere('nickname', $user_info->nickname)
