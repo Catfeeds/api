@@ -84,14 +84,18 @@ section {
       background: url(../imgs/container.png) no-repeat center center;
       background-size: 100% 100%;
       .content {
+        overflow: hidden;
         position: relative;
-        top: PX(160);
+        top: PX(150);
         left: 50%;
-        margin-left: PX(-268);
-        width: PX(520);
-        height: PX(295);
+        margin-left: PX(-285);
+        width: PX(550);
+        height: PX(330);
         .content_bg {
           width: 100%;
+          height: 100%;
+          object-fit: cover;
+          background: red;
         }
         .content_btn {
           position: absolute;
