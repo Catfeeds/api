@@ -232,6 +232,8 @@ Route::post('chevy/redirect', 'ChevyController@h5rank');
  */
 Route::post('fudan/user/sign', 'Fudan\MeetController@sign');
 Route::get('fudan/queue/print', 'Fudan\MeetController@queue');
+Route::get('fudan/user/all', 'Fudan\MeetController@all');
+
 /*
  * 欧莱雅h5接口
  */

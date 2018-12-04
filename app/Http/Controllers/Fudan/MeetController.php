@@ -74,6 +74,19 @@ class MeetController extends Controller
             'status' => $status,
             'data' => $a
         ]);
+    }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     *
+     * 返回所有已经签到的人用于抽奖
+     */
+    public function all()
+    {
+        $a = FudanSmall::where('sign', 1)->get();
+
+        return response()->json([
+            'data' => $a
+        ]);
     }
 }
