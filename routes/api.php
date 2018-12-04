@@ -228,10 +228,10 @@ Route::post('chevy/score', 'ChevyController@api');
 Route::post('chevy/redirect', 'ChevyController@h5rank');
 
 /*
- * 复旦教师节
+ * 复旦项目相关接口
  */
-Route::post('fudan/user', 'FudanController@info');
-
+Route::post('fudan/user/sign', 'Fudan\MeetController@sign');
+Route::get('fudan/queue/print', 'Fudan\MeetController@queue');
 /*
  * 欧莱雅h5接口
  */

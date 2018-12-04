@@ -369,6 +369,7 @@ Route::get('res/marykay/register', 'Marykay\MarykayController@index')->middlewar
  * 渣打银行
  */
 Route::get('res/sc/card', 'Sc\CardController@card'); //梦想留言机
+
 /**
  *  前后端分离重定向
  */
