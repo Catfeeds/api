@@ -6,12 +6,48 @@ use App\Models\FudanLog;
 use App\Models\FudanSmall;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Overtrue\EasySms;
 
 class MeetController extends Controller
 {
-    public function meeting()
+    public function sendMessage()
     {
-        return 'https://api.shanghaichujie.com/api/qrcode/generate?text';
+        $config = [
+            // HTTP 请求的超时时间（秒）
+            'timeout' => 5.0,
+
+            // 默认发送配置
+            'default' => [
+                // 网关调用策略，默认：顺序调用
+//                'strategy' => \Overtrue\EasySms\Strategies\OrderStrategy::class,
+
+                // 默认可用的发送网关
+                'gateways' => [
+                    'yunpian',
+                ],
+            ],
+            // 可用的网关配置
+            'gateways' => [
+                'yunpian' => [
+                    'api_key' => env('yunpian_key')
+                ]
+            ],
+        ];
+
+        $easySms = new EasySms\EasySms($config);
+        $user = FudanSmall::where('message', 0)->fisrt();
+
+        while (!is_null($user)) {
+            $easySms->send($user->phone, [
+                'content' => '【复旦大学EMBA】感谢您报名参加复旦大学EMBA2018中国企业家高峰论坛暨同学会年会！请您于12月8日8:30莅临上海国际会议中心7楼上海厅（上海市浦东新区滨江大道2727号）。本短信仅限本人签到入场，无法二次识别，转发截屏无效，请善存！本人现场签到二维码请点击此链接：https://api.shanghaichujie.com/api/qrcode/generate?text='.$user->phone,
+            ]);
+            $user->message = '1';
+            $user->save();
+
+            $user = FudanSmall::where('message', 0)->fisrt();
+        }
+
+        return 'true';
     }
 
     /**
