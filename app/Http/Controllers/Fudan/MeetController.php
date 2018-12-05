@@ -35,7 +35,7 @@ class MeetController extends Controller
         ];
 
         $easySms = new EasySms\EasySms($config);
-        $user = FudanSmall::where('message', 0)->fisrt();
+        $user = FudanSmall::where('message', 0)->first();
 
         while (!is_null($user)) {
             $easySms->send($user->phone, [
@@ -44,7 +44,7 @@ class MeetController extends Controller
             $user->message = '1';
             $user->save();
 
-            $user = FudanSmall::where('message', 0)->fisrt();
+            $user = FudanSmall::where('message', 0)->first();
         }
 
         return 'true';
