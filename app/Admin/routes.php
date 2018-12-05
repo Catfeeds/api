@@ -28,4 +28,9 @@ Route::group([
         'except' => ['create', 'edit']
     ]);
     $router->resource('tmall/car/game', 'Tmall\GameController');
+
+    //复旦大学EMBA同学会后台
+    $router->resource('fudan/big', 'Fudan\BigController')->except('destroy');
+    $router->resource('fudan/small', 'Fudan\SmallController');
+    $router->resource('fudan/log', 'Fudan\LogController');
 });
