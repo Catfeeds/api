@@ -298,9 +298,11 @@ Route::get('res/clari/{id}', 'Clari\ClariController@index');
 Route::get('res/chevy/index', 'ChevyController@index');
 Route::get('res/chevy/rank/index', 'ChevyController@rank');
 Route::get('res/chevy/scan/index', 'ChevyController@scan');//先用做语音变换灯光
-/*
- * 复旦教师节(取消)
+/**
+ * 复旦项目
  */
+Route::get('fudan/send/message', 'Fudan\MeetController@sendMessage');
+/* 复旦教师节(取消) */
 //Route::get('res/fudan/index', 'FudanController@index');
 
 /*
