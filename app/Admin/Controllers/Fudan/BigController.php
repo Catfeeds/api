@@ -23,7 +23,7 @@ class BigController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('大名单')
+            ->header('总名单')
             ->description('查询往届学生')
             ->body($this->grid());
     }
@@ -92,6 +92,7 @@ class BigController extends Controller
             // 在这里添加字段过滤器
             $filter->like('project', '项目名');
             $filter->like('username', '姓名');
+            $filter->like('phone', '手机号');
             $filter->like('grade', '班级');
             $filter->like('en_name', '英文名');
             $filter->like('sign_h5', '报名方式');
@@ -103,11 +104,12 @@ class BigController extends Controller
         $grid->project('项目名');
         $grid->username('姓名');
         $grid->grade('班级');
+        $grid->phone('手机号');
         $grid->en_name('英文名');
         $grid->sign_h5('报名方式');
         $grid->sign_class('报名班级');
         $grid->color('吊牌颜色');
-
+        $grid->sign('是否签到')->using(['0'=>'否','1'=>'是']);
         return $grid;
     }
 
@@ -142,14 +144,14 @@ class BigController extends Controller
     {
         $form = new Form(new FudanBig);
 
-        $form->text('project', '项目名');
         $form->text('username', '姓名');
         $form->text('grade', '班级');
-        $form->text('en_name', '英文名');
-        $form->text('sign_h5', '报名方式');
-        $form->text('sign_class', '报名班级');
-        $form->color('color', '颜色');
-
+        $form->mobile('phone', '手机号');
+        $form->switch('print', '是否手动打印');
+        $form->hidden('user');
+        $form->submitted(function (Form $form) {
+            $form->user = \Admin::user()->name;
+        });
         return $form;
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Fudan;
 
+use App\Models\FudanBig;
 use App\Models\FudanLog;
 use App\Models\FudanSmall;
 use Illuminate\Http\Request;
@@ -72,8 +73,7 @@ class MeetController extends Controller
     public function queue(Request $request)
     {
         $user = $request->input('user');
-
-        $a = FudanSmall::where('user', $user)
+        $a = FudanBig::where('user', $user)
             ->where('print', 1)
             ->first();
 
@@ -83,6 +83,13 @@ class MeetController extends Controller
             $status = 1;
             $a->print = 0;
             $a->save();
+
+            //记录日志
+            $log = new FudanLog();
+            $log->username = $a->username;
+            $log->type = '打印';
+            $log->grade = $a->grade;
+            $log->save();
         }
         return response()->json([
             'status' => $status,
