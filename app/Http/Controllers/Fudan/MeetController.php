@@ -36,7 +36,9 @@ class MeetController extends Controller
         ];
 
         $easySms = new EasySms\EasySms($config);
-        $user = FudanSmall::where('message', 0)->first();
+        $user = FudanSmall::where('message', 0)
+            ->where('phone', '!=', null)
+            ->first();
 
         while (!is_null($user)) {
             $user->message = '1';
@@ -107,7 +109,7 @@ class MeetController extends Controller
     {
         $phone = $request->input('phone');
         $type = $request->input('type');
-        $a = FudanSmall::where('phone', $phone)->first();
+        $a = FudanBig::where('phone', $phone)->first();
 
         $status = 0; //0为查不到数据，1为签到成功，2为重复签到
 
@@ -139,7 +141,7 @@ class MeetController extends Controller
      */
     public function all()
     {
-        $a = FudanSmall::where('sign', 1)->get();
+        $a = FudanBig::where('sign', 1)->get();
 
         return response()->json([
             'data' => $a
