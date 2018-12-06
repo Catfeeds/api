@@ -60,7 +60,9 @@ class MeetController extends Controller
 
             ]);
 
-            $user = FudanSmall::where('message', 0)->first();
+            $user = FudanSmall::where('message', 0)
+                ->where('phone', '!=', null)
+                ->first();
         }
 
         return 'true';
