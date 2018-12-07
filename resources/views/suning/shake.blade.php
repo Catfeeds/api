@@ -24,10 +24,10 @@
     <div class="foot"><img src="imgs/foot.png"></div>
 </section>
 </body>
-<script src="//api.shanghaichujie.com:3001/socket.io/socket.io.js"></script>
+<script src="http://api.touchworld-sh.com:3001/socket.io/socket.io.js"></script>
 
 <script>
-    var socket = io('api.shanghaichujie.com:3001');
+    var socket = io('http://api.touchworld-sh.com:3001');
     socket.emit('shake', '{"openid":"{{ $wechat['id'] }}"}');
     var shake = 4000,
         last_update = 0,
