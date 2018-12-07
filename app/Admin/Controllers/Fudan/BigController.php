@@ -104,6 +104,7 @@ class BigController extends Controller
         $grid->project('项目名');
         $grid->username('姓名');
         $grid->grade('班级');
+        $grid->noon_seat('就餐点');
         $grid->phone('手机号');
         $grid->en_name('英文名');
         $grid->sign_h5('报名方式');
