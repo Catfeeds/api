@@ -24,11 +24,11 @@
     <div class="foot"><img src="imgs/foot.png"></div>
 </section>
 </body>
-<script src="//192.168.1.106:3000/socket.io/socket.io.js"></script>
+<script src="//api.shanghaichujie.com:3000/socket.io/socket.io.js"></script>
 
 <script>
-    var socket = io('192.168.1.106:3000');
-    socket.emit('shake', '{"openid":"test1"}');
+    var socket = io('api.shanghaichujie.com:3000');
+    socket.emit('shake', '{"openid":"{{ $wechat['id'] }}"}');
     var shake = 4000,
         last_update = 0,
         x = y = z = last_x = last_y = last_z = 0;
