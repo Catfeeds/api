@@ -44,10 +44,10 @@ class MeetController extends Controller
         $phone = '';//防止重发
 
         while (!is_null($user)) {
-            $user->message = '1';
-            $user->save();
 
             if ($phone != $user->phone) {
+                $user->message = '1';
+                $user->save();
                 $easySms->send($user->phone, [
                     //二维码短信
                     'content' => '【复旦大学EMBA】感谢您报名参加复旦大学EMBA2018中国企业家高峰论坛暨同学会年会！请您于12月8日8:30莅临上海国际会议中心7楼上海厅（上海市浦东新区滨江大道2727号）。本短信仅限本人签到入场，无法二次识别，转发截屏无效，请善存！本人现场签到二维码请点击此链接：https://api.shanghaichujie.com/api/qrcode/generate?text=' . $user->phone,
@@ -63,6 +63,9 @@ class MeetController extends Controller
 //                'content' => '【复旦大学EMBA】2018复旦大学EMBA同学会年会圆满结束，感谢您的倾情参与，请携带好随身物品，有序离开会场。如需返回复旦管理学院，我们已安排大巴接送，大巴将于21:30准时发车，请至上海国际会议中心1楼正门上车。祝您旅途愉快，我们明年再见！',
 
                 ]);
+            }else {
+                $user->message = '2';
+                $user->save();
             }
 
             $phone = $user->phone;
