@@ -100,17 +100,17 @@ class BigController extends Controller
             $filter->like('color', '吊牌颜色');
 
         });
-        $grid->id('Id');
+        $grid->id('Id')->sortable();
         $grid->project('项目名');
         $grid->username('姓名');
         $grid->grade('班级');
         $grid->noon_seat('就餐点');
-        $grid->phone('手机号');
+        $grid->phone('手机号')->sortable();
         $grid->en_name('英文名');
         $grid->sign_h5('报名方式');
         $grid->sign_class('报名班级');
         $grid->color('吊牌颜色');
-        $grid->sign('是否签到')->using(['0'=>'否','1'=>'是']);
+        $grid->sign('是否签到')->using(['0'=>'否','1'=>'是'])->sortable();
         return $grid;
     }
 
