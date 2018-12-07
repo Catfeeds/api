@@ -73,7 +73,7 @@
         }
     }
 
-    setTimeout(function () {
+    setInterval(function () {
         socket.emit('shake', `{"openid":"{{ $wechat['id'] }}","speed":${num}}`);
     }, 1000)
 </script>
