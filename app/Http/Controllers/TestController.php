@@ -13,7 +13,8 @@ class TestController extends Controller
 {
     public function test(Request $request)
     {
-        return view('test');
+        $num = Redis::incr('fudan');
+        dd($num%10);
     }
 
     public function socketTest(Request $request)

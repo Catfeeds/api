@@ -18,7 +18,7 @@
 
 Route::get('oss/img/share', 'Api\OssController@imgShare');
 
-Route::get('test', 'TestController@socketTest');
+Route::get('test', 'TestController@test');
 
 /*
  * 科思创项目

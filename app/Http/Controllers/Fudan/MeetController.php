@@ -7,6 +7,7 @@ use App\Models\FudanLog;
 use App\Models\FudanSmall;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redis;
 use Overtrue\EasySms;
 
 class MeetController extends Controller
@@ -46,7 +47,7 @@ class MeetController extends Controller
 
             $easySms->send($user->phone, [
                 //二维码短信
-                'content' => '【复旦大学EMBA】感谢您报名参加复旦大学EMBA2018中国企业家高峰论坛暨同学会年会！请您于12月8日8:30莅临上海国际会议中心7楼上海厅（上海市浦东新区滨江大道2727号）。本短信仅限本人签到入场，无法二次识别，转发截屏无效，请善存！本人现场签到二维码请点击此链接：https://api.shanghaichujie.com/api/qrcode/generate?text='.$user->phone,
+                'content' => '【复旦大学EMBA】感谢您报名参加复旦大学EMBA2018中国企业家高峰论坛暨同学会年会！请您于12月8日8:30莅临上海国际会议中心7楼上海厅（上海市浦东新区滨江大道2727号）。本短信仅限本人签到入场，无法二次识别，转发截屏无效，请善存！本人现场签到二维码请点击此链接：https://api.shanghaichujie.com/api/qrcode/generate?text=' . $user->phone,
                 //8：00
 //                'content' => '【复旦大学EMBA】欢迎您来到复旦大学EMBA2018中国企业家高峰论坛，大会将于9:00准时开始，请您在7楼上海厅门口签到处及时办理签到入场。签到时请出示手机短信二维码，若无法提供二维码，请向工作人员告知您的姓名和班级，工作人员将会在现场帮您办理签到。二维码仅限本人签到使用，无法二次识别。',
                 //12：30
@@ -84,6 +85,17 @@ class MeetController extends Controller
         $status = 0;
 
         if (!is_null($a)) {
+            //对应上中午的餐厅
+            if (is_null($a->noon_seat)) {
+                $num = Redis::incr('fudan_seat');
+                if ($num % 9 < 3) {
+                    $a->noon_seat = '1楼滨江厅';
+                } elseif ($num % 9 < 6) {
+                    $a->noon_seat = '1楼西餐厅';
+                } elseif ($num % 9 < 9) {
+                    $a->noon_seat = '7楼明珠厅';
+                }
+            }
             $status = 1;
             $a->print = 0;
             $a->save();
@@ -116,6 +128,19 @@ class MeetController extends Controller
         $status = 0; //0为查不到数据，1为签到成功，2为重复签到
 
         if (!is_null($a)) {
+
+            //对应上中午的餐厅
+            if (is_null($a->noon_seat)) {
+                $num = Redis::incr('fudan_seat');
+                if ($num % 9 < 3) {
+                    $a->noon_seat = '1楼滨江厅';
+                } elseif ($num % 9 < 6) {
+                    $a->noon_seat = '1楼西餐厅';
+                } elseif ($num % 9 < 9) {
+                    $a->noon_seat = '7楼明珠厅';
+                }
+             }
+
             $status = 2;
             if ($a->sign === 0) {
                 $a->sign = 1;

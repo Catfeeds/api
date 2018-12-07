@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>苏宁聚物展</title>
+    <title>苏宁巨物展</title>
     <script src="js/amfe-flexible.js"></script>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
