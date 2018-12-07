@@ -41,11 +41,11 @@ class MeetController extends Controller
             ->where('phone', '!=', null)
             ->orderBy('phone')
             ->first();
-        $phone = '';//防止重发
+        $t = '';//防止重发
 
         while (!is_null($user)) {
 
-            if ($phone != $user->phone) {
+            if ($t != $user->phone) {
                 $user->message = '1';
                 $user->save();
                 $easySms->send($user->phone, [
@@ -68,7 +68,7 @@ class MeetController extends Controller
                 $user->save();
             }
 
-            $phone = $user->phone;
+            $t = $user->phone;
 
             $user = FudanSmall::where('message', 0)
                 ->where('phone', '!=', null)
