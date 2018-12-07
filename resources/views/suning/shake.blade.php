@@ -28,7 +28,7 @@
 
 <script>
     var socket = io('http://api.touchworld-sh.com:3001');
-    socket.emit('shake', '{"openid":"{{ $wechat['id'] }}"}');
+
     var shake = 4000,
         last_update = 0,
         x = y = z = last_x = last_y = last_z = 0;
@@ -51,7 +51,7 @@
             var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000
             if (speed > shake) {
                 ani();
-
+                socket.emit('shake', '{"openid":"{{ $wechat['id'] }}"}');
             }
             last_x = x;
             last_y = y;
