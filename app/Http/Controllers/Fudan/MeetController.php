@@ -46,7 +46,6 @@ class MeetController extends Controller
         while (!is_null($user)) {
 
             if ($t != $user->phone) {
-                dd($user);
                 $user->message = '1';
                 $user->save();
                 $easySms->send($user->phone, [
