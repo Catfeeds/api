@@ -17,6 +17,7 @@ io.on('connection', function(socket){
         console.log('user disconnected');
     });
     socket.on('shake', function (data) {
+        data = JSON.parse(data);
         console.log(data);
         io.emit('suningShake', data)
     })
