@@ -61,6 +61,7 @@
 
     ani()
     var status = 1;
+
     function ani() {
         if (status) {
             status = 0;
@@ -75,6 +76,7 @@
 
     setInterval(function () {
         socket.emit('shake', `{"openid":"{{ $wechat['id'] }}","speed":${num}}`);
+        num = 0
     }, 1000)
 </script>
 
