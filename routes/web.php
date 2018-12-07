@@ -373,6 +373,13 @@ Route::get('res/marykay/register', 'Marykay\MarykayController@index')->middlewar
 Route::get('res/sc/card', 'Sc\CardController@card'); //梦想留言机
 
 /**
+ * 苏宁
+ */
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
+    Route::get('suning/game/index', 'Suning\GameController@index');
+});
+
+/**
  *  前后端分离重定向
  */
 Route::get('front/{v}', 'Front\IndexController@index')->where('v', '.*');
