@@ -110,6 +110,7 @@ class BigController extends Controller
         $grid->sign_h5('报名方式');
         $grid->sign_class('报名班级');
         $grid->color('吊牌颜色');
+        $grid->type('参会类型');
         $grid->sign('是否签到')->using(['0'=>'否','1'=>'是'])->sortable();
         return $grid;
     }
