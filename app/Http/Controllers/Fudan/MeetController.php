@@ -45,7 +45,7 @@ class MeetController extends Controller
 
         while (!is_null($user)) {
 
-            if ($t != $user->phone) {
+            if ($t != $user->phone && strpos($user->seat, '高峰论坛')) {
                 $user->message = '1';
                 $user->save();
                 $easySms->send($user->phone, [
