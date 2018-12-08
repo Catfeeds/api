@@ -182,6 +182,7 @@ class MeetController extends Controller
         $a = FudanBig::where('sign', 1)
             ->where('grade', 'like', '20%')
             ->where('username', '!=', null)
+            ->take(200)
             ->get();
 
         return response()->json([
