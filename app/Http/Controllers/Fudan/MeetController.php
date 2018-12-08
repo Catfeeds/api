@@ -179,7 +179,10 @@ class MeetController extends Controller
      */
     public function all()
     {
-        $a = FudanBig::where('sign', 1)->get();
+        $a = FudanBig::where('sign', 1)
+            ->where('grade', 'like', '20%')
+            ->where('username', '!=', null)
+            ->get();
 
         return response()->json([
             'data' => $a
