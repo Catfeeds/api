@@ -17,9 +17,9 @@ class AliController extends Controller
      * @param Application $app
      */
 
-    public function __construct(Application $app)
+    public function __construct()
     {
-        $this->js = $app->js;
+        $this->js = \EasyWeChat::officialAccount();;
     }
 
     /**
