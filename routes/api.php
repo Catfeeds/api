@@ -234,10 +234,12 @@ Route::post('fudan/user/sign', 'Fudan\MeetController@sign');
 Route::get('fudan/queue/print', 'Fudan\MeetController@queue');
 Route::get('fudan/user/all', 'Fudan\MeetController@all');
 
-/*
- * 欧莱雅h5接口
- */
+/* oreal h5接口*/
 Route::post('oreal/user', 'Oreal\ApiController@register');
+/* oreal 游戏接口 20190108 */
+Route::get('oreal/game/rank', 'Oreal\GameController@rank');
+Route::post('oreal/game/upload', 'Oreal\GameController@game');
+Route::post('oreal/game/check', 'Oreal\GameController@check');
 
 /*
  * 平安云加速器D-day
