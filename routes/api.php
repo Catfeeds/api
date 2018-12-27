@@ -240,7 +240,7 @@ Route::post('oreal/user', 'Oreal\ApiController@register');
 Route::get('oreal/game/rank', 'Oreal\GameController@rank');
 Route::post('oreal/game/upload', 'Oreal\GameController@game');
 Route::post('oreal/game/check', 'Oreal\GameController@check');
-Route::post('oreal/game/register', 'Oreal\ApiController@register');
+Route::post('oreal/game/register', 'Oreal\GameController@register');
 Route::post('oreal/game/exchange', 'Oreal\GameController@exchange');
 
 /*
