@@ -15,7 +15,7 @@ class GameController extends Controller
             ->where('cost', '>', 0)
             ->orderByDesc('score')
             ->orderBy('cost')
-            ->take(5)
+            ->take(10)
             ->get();
 
         return response()->json([
