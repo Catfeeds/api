@@ -10,7 +10,8 @@ class NhController extends Controller
 {
     public function index()
     {
+        $js = \EasyWeChat::officialAccount();
         $num = Redis::get('tmall_nh_share');
-        return view('tmall.nh', compact('num'));
+        return view('tmall.nh', compact('num', 'js'));
     }
 }
