@@ -1,0 +1,184 @@
+
+@function PX($px) {
+    @return $px / 750 * 10 * 1rem;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+#splash {
+    background: url(../imgs/bg.jpg) no-repeat center center;
+    background-size: cover;
+    z-index: 99999;
+    .progress-bar {
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        background-color: rgb(81, 40, 37) !important;
+        span {
+            background-color: rgb(228, 200, 124) !important;  
+        }
+    }
+}
+
+.pageStart {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: url(../imgs/bg.jpg) no-repeat center center;
+    background-size: cover;
+    #startVideo {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        width: PX(314);
+        height: PX(137);
+        transform: translate3d(-50%, 0, 0);
+        text-align: center;
+        background: url(../imgs/start.png) no-repeat center center;
+        background-size: PX(314) PX(137);
+        border: none;
+    }
+}
+
+.pageVideo {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: url(../imgs/bg.jpg) no-repeat center center;
+    background-size: cover;
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+}
+
+.pageEnd {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: url(../imgs/bg_end.jpg) no-repeat center center;
+    background-size: cover;
+    #startGame {
+        position: absolute;
+        bottom: PX(10);
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+        width: PX(400);
+        height: PX(200);
+        text-align: center;
+        background: url(../imgs/startGame.png) no-repeat center center;
+        background-size: PX(400) PX(200);
+        border: none;
+    }
+}
+
+.GameCanvas {
+    display: none;
+}
+
+.popup_success {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+    .success {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: PX(700);
+        height: PX(237);
+        background: url(../imgs/success.png) no-repeat center center;
+        background-size: cover;
+        img {
+            position: absolute;
+            right: PX(30);
+            top: PX(117);
+            width: PX(177);
+            height: PX(41);
+        }
+    }
+}
+
+.popup_error {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+    .error {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: PX(700);
+        height: PX(237);
+        background: url(../imgs/error.png) no-repeat center center;
+        background-size: cover;
+        img {
+            position: absolute;
+            right: PX(30);
+            top: PX(117);
+            width: PX(177);
+            height: PX(41);
+        }
+    }
+}
+
+.popup_share {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: PX(700);
+        height: PX(99);
+    }
+}
+
+.scale1 {
+    animation: scale1 .5s;
+}
+
+@keyframes scale1 {
+    0% {
+        transform: translate3d(-50%, -50%, 0) scale(0);
+    }
+    100%{
+        transform: translate3d(-50%, -50%, 0) scale(1);
+    }
+}

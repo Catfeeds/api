@@ -340,6 +340,8 @@ Route::get('res/genie/album/index', 'Tmall\GenieController@album');
 Route::get('res/tmall/car/index', 'Tmall\CarController@register');
 Route::post('tmall/car/user/store', 'Tmall\CarController@store');
 Route::get('res/tmall/rank1/index', 'Tmall\CarController@carIndex');
+/* 天猫年货节 */
+Route::get('res/tmall/nh/index', 'Tmall\NhController@index');
 /*
  * 雅培活动
  */
