@@ -67,6 +67,10 @@
         $('.popup_share').hide()
       })
 
+      $('.popup_share_success').on('touchend', function() {
+        $('.popup_share_success').hide()
+      })
+
       /* 前半部分ui展示 */
       var video = document.querySelector('#video')
       var startGameBtn = document.querySelector('#startGame')
@@ -123,6 +127,9 @@
   <div class="popup_share">
     <img src="imgs/share_text.png">
   </div>
+  <div class="popup_share_success">
+    <img src="imgs/share_success.png">
+  </div>
   <script src="src/settings.f0d8c.js" charset="utf-8"></script>
   <script src="main.df237.js" charset="utf-8"></script>
   <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
@@ -139,7 +146,7 @@
                 // 用户确认分享后执行的回调函数
               {{ \Illuminate\Support\Facades\Redis::incr('tmall_nh_share') }}
               $('.popup_share').on('touchend', function () {
-                $('.popup_share').show()
+                $('.popup_share_success').show()
               })
             }
         });
@@ -154,7 +161,7 @@
                 // 用户确认分享后执行的回调函数
               {{ \Illuminate\Support\Facades\Redis::incr('tmall_nh_share') }}
               $('.popup_share').on('touchend', function () {
-                $('.popup_share').show()
+                $('.popup_share_success').show()
               })
             }
         });
