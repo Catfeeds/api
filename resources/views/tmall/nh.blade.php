@@ -97,6 +97,7 @@
 </head>
 <body>
   <audio id="audio" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/20190105_tmall/music.mp3" loop></audio>
+  <div style="display: none">年货节品牌大街</div>
   <div id="splash">
     <div class="loading_box">
       <div class="progress-bar stripes">
