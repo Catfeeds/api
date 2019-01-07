@@ -8,7 +8,7 @@
   <!--http://www.html5rocks.com/en/mobile/mobifying/-->
   <meta name="viewport"
         content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
-  <meta name=”description” content="玩转年货节 宝盒寻不停">
+  <meta name=”description” content="农村淘宝年货节20条品牌大街品牌下沉">
 
   <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -168,7 +168,7 @@
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: '年货节品牌大街', // 分享标题
-            desc: "玩转年货节 宝盒寻不停", // 分享描述
+            desc: "农村淘宝年货节20条品牌大街品牌下沉", // 分享描述
             link: window.location.href,
             imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/logo/tmall_nh.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
