@@ -9,14 +9,31 @@ html, body {
   z-index: 99999;
 }
 
-#splash .progress-bar {
+#splash .loading_box {
+  position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
   transform: translate3d(-50%, -50%, 0);
+}
+
+#splash .loading_box .loading_text {
+  width: 100%;
+  text-align: center;
+}
+
+#splash .loading_box .loading_text img {
+  width: 3.14667rem;
+  height: 0.50667rem;
+}
+
+#splash .loading_box .progress-bar {
+  position: static;
+  margin: 0 auto;
   background-color: #512825 !important;
 }
 
-#splash .progress-bar span {
+#splash .loading_box .progress-bar span {
   background-color: #e4c87c !important;
 }
 
@@ -88,6 +105,25 @@ html, body {
   background: url(../imgs/startGame.png) no-repeat center center;
   background-size: 5.33333rem 2.66667rem;
   border: none;
+}
+
+.pageEnd .hand {
+  position: absolute;
+  bottom: 0.4rem;
+  left: 52%;
+  transform: translate3d(-50%, 0, 0);
+  width: 0.8rem;
+  height: 1.02667rem;
+  animation: scale 1s ease infinite alternate;
+}
+
+@keyframes scale {
+  0% {
+    transform: translate3d(-50%, 0, 0) scale(0.8);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0) scale(1);
+  }
 }
 
 .arrow {

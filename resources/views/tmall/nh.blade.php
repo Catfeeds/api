@@ -98,8 +98,11 @@
 <body>
   <audio id="audio" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/20190105_tmall/music.mp3" loop></audio>
   <div id="splash">
-    <div class="progress-bar stripes">
-      <span style="width: 0%"></span>
+    <div class="loading_box">
+      <div class="progress-bar stripes">
+        <span style="width: 0%"></span>
+      </div>
+      <div class="loading_text"><img src="imgs/loading_text.png"></div>
     </div>
   </div>
   <div class="pageStart">
@@ -112,6 +115,7 @@
   </div>
   <div class="pageEnd">
     <button id="startGame"></button>
+    <img class="hand" src="imgs/hand.png">
   </div>
   <div class="arrow"><img src="imgs/arrow.png"></div>
   <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
