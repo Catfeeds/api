@@ -106,7 +106,7 @@
 </head>
 <body>
   <audio id="audio" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/20190105_tmall/music.mp3" loop></audio>
-  <div style="display: none">玩转年货节 宝盒寻不停</div>
+  <div style="display: none">20个县域品牌下沉</div>
   <div id="splash">
     <div class="loading_box">
       <div class="progress-bar stripes">
