@@ -115,6 +115,7 @@ html, body {
   width: 0.8rem;
   height: 1.02667rem;
   animation: scale 1s ease infinite alternate;
+  opacity: 0.8;
 }
 
 @keyframes scale {
