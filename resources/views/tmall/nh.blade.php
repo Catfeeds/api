@@ -34,6 +34,7 @@
   <!--fix fireball/issues/3568 -->
   <!--<meta name="browsermode" content="application">-->
   <meta name="x5-page-mode" content="app">
+  <meta name=”description” content="年货节品牌大街">
 
   <!--<link rel="apple-touch-icon" href=".png" />-->
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
