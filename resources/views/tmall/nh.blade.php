@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
 
   <title>年货节品牌大街</title>
 
   <!--http://www.html5rocks.com/en/mobile/mobifying/-->
-  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
+  <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
 
   <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,19 +15,19 @@
   <meta name="format-detection" content="telephone=no">
 
   <!-- force webkit on 360 -->
-  <meta name="renderer" content="webkit" />
-  <meta name="force-rendering" content="webkit" />
+  <meta name="renderer" content="webkit"/>
+  <meta name="force-rendering" content="webkit"/>
   <!-- force edge on IE -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="msapplication-tap-highlight" content="no">
 
   <!-- force full screen on some browser -->
-  <meta name="full-screen" content="yes" />
-  <meta name="x5-fullscreen" content="true" />
-  <meta name="360-fullscreen" content="true" />
-
+  <meta name="full-screen" content="yes"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  
   <!-- force screen orientation on some browser -->
-  <meta name="screen-orientation" content="" />
+  <meta name="screen-orientation" content=""/>
   <meta name="x5-orientation" content="">
 
   <!--fix fireball/issues/3568 -->
@@ -38,7 +38,7 @@
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
 
   <script src="js/amfe-flexible.js"></script>
-  <link rel="stylesheet" type="text/css" href="style-mobile.72851.css" />
+  <link rel="stylesheet" type="text/css" href="style-mobile.72851.css"/>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script>
@@ -95,7 +95,6 @@
     })
   </script>
 </head>
-
 <body>
   <audio id="audio" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/20190105_tmall/music.mp3" loop></audio>
   <div id="splash">
@@ -132,9 +131,9 @@
   <div class="popup_share_success">
     <img src="imgs/share_success.png">
   </div>
-  <script src="src/settings.605ef.js" charset="utf-8"></script>
+  <script src="src/settings.64a99.js" charset="utf-8"></script>
 
-  <script src="main.1b133.js" charset="utf-8"></script>
+  <script src="main.191f0.js" charset="utf-8"></script>
   <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
   <script type="application/javascript">
     wx.config(<?php echo $js->jssdk->buildConfig(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
@@ -169,5 +168,4 @@
     });
   </script>
 </body>
-
 </html>
