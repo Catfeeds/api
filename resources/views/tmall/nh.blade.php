@@ -90,7 +90,6 @@
         $('.pageVideo').hide()
         $('#audio')[0].play()
       })
-
     })
   </script>
 </head>
@@ -145,9 +144,8 @@
             success: function () {
                 // 用户确认分享后执行的回调函数
               {{ \Illuminate\Support\Facades\Redis::incr('tmall_nh_share') }}
-              $('.popup_share').on('touchend', function () {
-                $('.popup_share_success').show()
-              })
+              $('.popup_share').hide()
+              $('.popup_share_success').show()
             }
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
@@ -160,9 +158,8 @@
             success: function () {
                 // 用户确认分享后执行的回调函数
               {{ \Illuminate\Support\Facades\Redis::incr('tmall_nh_share') }}
-              $('.popup_share').on('touchend', function () {
-                $('.popup_share_success').show()
-              })
+              $('.popup_share').hide()
+              $('.popup_share_success').show()
             }
         });
     });
