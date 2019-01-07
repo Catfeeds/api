@@ -89,6 +89,33 @@ html, body {
     }
 }
 
+.arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    img {
+        position: absolute;
+        bottom: PX(10);
+        left: 50%;
+        margin-left: PX(-32);
+        width: PX(64);
+        height: PX(58);
+        animation: jump 1s infinite alternate;
+    }
+}
+
+@keyframes jump{
+    0% {
+        bottom: PX(10);
+    }
+    100% {
+        bottom: PX(50);
+    }
+}
 // .GameCanvas {
 //     display: none;
 // }

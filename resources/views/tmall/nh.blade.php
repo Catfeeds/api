@@ -42,10 +42,10 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script>
-    $(function() {
+    $(function () {
       window.peopleNum = {{$num}} // 领取人数赋值
 
-      window.clickBox = function(state) {
+      window.clickBox = function (state) {
         if (state) {
           $('.popup_success').show().find('.success').addClass('scale1')
         } else {
@@ -54,20 +54,20 @@
       }
 
       // 优惠券
-      $('.popup_error .close').on('touchend', function() {
+      $('.popup_error .close').on('touchend', function () {
         $('.popup_error').hide()
       })
 
-      $('.popup_success .share').on('touchend', function() {
+      $('.popup_success .share').on('touchend', function () {
         $('.popup_success').hide()
         $('.popup_share').show()
       })
 
-      $('.popup_share').on('touchend', function() {
+      $('.popup_share').on('touchend', function () {
         $('.popup_share').hide()
       })
 
-      $('.popup_share_success').on('touchend', function() {
+      $('.popup_share_success').on('touchend', function () {
         $('.popup_share_success').hide()
       })
 
@@ -75,20 +75,22 @@
       var video = document.querySelector('#video')
       var startGameBtn = document.querySelector('#startGame')
       // 开始画面
-      $('#startVideo').on('touchend', function() {
+      $('#startVideo').on('touchend', function () {
         $('.pageStart').hide()
         $('.pageVideo').show()
         $('#video')[0].play()
+        $('#audio')[0].play()
       })
       // 视频画面
-      video.addEventListener('ended', function() {
+      video.addEventListener('ended', function () {
         $('.pageEnd').show()
       })
+
       // 游戏开始画面
-      startGameBtn.addEventListener('touchend', function() {
+      startGameBtn.addEventListener('touchend', function () {
         $('.pageEnd').hide()
         $('.pageVideo').hide()
-        $('#audio')[0].play()
+        // $('#audio')[0].play()
       })
     })
   </script>
@@ -112,6 +114,7 @@
   <div class="pageEnd">
     <button id="startGame"></button>
   </div>
+  <div class="arrow"><img src="imgs/arrow.png"></div>
   <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
   <div class="popup_success">
     <div class="success">
@@ -129,8 +132,9 @@
   <div class="popup_share_success">
     <img src="imgs/share_success.png">
   </div>
-  <script src="src/settings.f0d8c.js" charset="utf-8"></script>
-  <script src="main.df237.js" charset="utf-8"></script>
+  <script src="src/settings.3784b.js" charset="utf-8"></script>
+
+  <script src="main.cde81.js" charset="utf-8"></script>
   <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
   <script type="application/javascript">
     wx.config(<?php echo $js->jssdk->buildConfig(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
@@ -164,6 +168,7 @@
         });
     });
   </script>
+  
 </body>
 
 </html>
