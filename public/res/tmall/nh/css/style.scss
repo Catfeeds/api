@@ -9,7 +9,7 @@ html, body {
 }
 #splash {
     background: url(../imgs/bg.jpg) no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     z-index: 99999;
     .progress-bar {
         top: 50%;
@@ -29,9 +29,9 @@ html, body {
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 9999;
+    z-index: 9998;
     background: url(../imgs/bg.jpg) no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     #startVideo {
         position: absolute;
         bottom: 10%;
@@ -56,7 +56,7 @@ html, body {
     bottom: 0;
     z-index: 9999;
     background: url(../imgs/bg.jpg) no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     video{
         width: 100%;
         height: 100%;
@@ -74,7 +74,7 @@ html, body {
     bottom: 0;
     z-index: 9999;
     background: url(../imgs/bg_end.jpg) no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     #startGame {
         position: absolute;
         bottom: PX(10);
@@ -89,9 +89,9 @@ html, body {
     }
 }
 
-.GameCanvas {
-    display: none;
-}
+// .GameCanvas {
+//     display: none;
+// }
 
 .popup_success {
     display: none;
