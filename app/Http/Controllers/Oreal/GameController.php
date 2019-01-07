@@ -8,6 +8,16 @@ use App\Http\Controllers\Controller;
 
 class GameController extends Controller
 {
+    public function index()
+    {
+        $wechat = session('wechat.oauth_user.default');
+        return view('oreal.game', compact('wechat'));
+    }
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     * 
+     * 排行榜
+     */
     public function rank()
     {
         $users = OrealGame::select(['username', 'score', 'cost'])

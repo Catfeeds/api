@@ -320,7 +320,7 @@ Route::get('res/oreal/register/index', 'Oreal\IndexController@register');
 /* oreal第二次注册 20181113 */
 Route::redirect('res/oreal/register/second', url('/'). '/res/oreal/oreal_register/register.html');
 /* oreal 第三次 游戏 20190108 */
-
+Route::get('res/oreal/game/index', 'Oreal\GameController@index');
 
 /*
  * 平安
