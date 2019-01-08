@@ -11,13 +11,27 @@ html, body {
     background: url(../imgs/bg.jpg) no-repeat center center;
     background-size: 100% 100%;
     z-index: 99999;
-    .progress-bar {
+    .loading_box {
+        position: absolute;
         top: 50%;
         left: 50%;
+        width: 100%;
         transform: translate3d(-50%, -50%, 0);
-        background-color: rgb(81, 40, 37) !important;
-        span {
-            background-color: rgb(228, 200, 124) !important;  
+        .loading_text {
+            width: 100%;
+            text-align: center;
+            img {
+                width: PX(236);
+                height: PX(38);
+            }
+        }
+        .progress-bar {
+            position: static;
+            margin: 0 auto;
+            background-color: rgb(81, 40, 37) !important;
+            span {
+                background-color: rgb(228, 200, 124) !important;  
+            }
         }
     }
 }
@@ -87,8 +101,54 @@ html, body {
         background-size: PX(400) PX(200);
         border: none;
     }
+    .hand {
+        position: absolute;
+        bottom: PX(30);
+        left: 52%;
+        transform: translate3d(-50%, 0, 0);
+        width: PX(60);
+        height: PX(77);
+        animation: scale 1s ease infinite alternate;
+        opacity: 0.8;
+    }
 }
 
+@keyframes scale {
+    0% {
+        transform: translate3d(-50%, 0, 0) scale(0.8);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0) scale(1);
+    }
+}
+
+.arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    img {
+        position: absolute;
+        bottom: PX(10);
+        left: 50%;
+        margin-left: PX(-32);
+        width: PX(64);
+        height: PX(58);
+        animation: jump 1s infinite alternate;
+    }
+}
+
+@keyframes jump{
+    0% {
+        bottom: PX(10);
+    }
+    100% {
+        bottom: PX(50);
+    }
+}
 // .GameCanvas {
 //     display: none;
 // }
