@@ -157,8 +157,8 @@
   <div class="popup_share_success">
     <img src="imgs/share_success.png">
   </div>
-  <script src="src/settings.3d700.js" charset="utf-8"></script>
-  <script src="main.e94b0.js" charset="utf-8"></script>
+  <script src="src/settings.2d67d.js" charset="utf-8"></script>
+  <script src="main.cbdf4.js" charset="utf-8"></script>
   <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
   <script type="application/javascript">
     wx.config(<?php echo $js->jssdk->buildConfig(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
