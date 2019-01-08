@@ -36,6 +36,7 @@
 
   <!--<link rel="apple-touch-icon" href=".png" />-->
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
   <script src="js/amfe-flexible.js"></script>
   <link rel="stylesheet" type="text/css" href="style-mobile.72851.css"/>
   <link rel="stylesheet" href="css/style.css">
@@ -156,8 +157,8 @@
   <div class="popup_share_success">
     <img src="imgs/share_success.png">
   </div>
-  <script src="src/settings.64a99.js" charset="utf-8"></script>
-  <script src="main.a5c3b.js" charset="utf-8"></script>
+  <script src="src/settings.3d700.js" charset="utf-8"></script>
+  <script src="main.e94b0.js" charset="utf-8"></script>
   <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
   <script type="application/javascript">
     wx.config(<?php echo $js->jssdk->buildConfig(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
