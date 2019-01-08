@@ -50,7 +50,7 @@
     })();
     $(function () {
       window.peopleNum = {{$num}} // 领取人数赋值
-      window.endTime = new Date(2019, 0, 10, 0, 0).getTime()
+      window.endTime = new Date(2019, 0, 10, 10, 0, 0).getTime()
 
       window.clickBox = function (state) {
         if (state) {
@@ -104,7 +104,7 @@
 </head>
 <body>
   <audio id="audio" src="https://h5-touch.oss-cn-shanghai.aliyuncs.com/20190105_tmall/music.mp3" loop></audio>
-  <div style="display: none">20个县域品牌下沉</div>
+  <div style="display: none">年货节祥云宝盒下凡，降福品牌大街快猛戳！！！</div>
   <div id="splash">
     <div class="loading_box">
       <div class="progress-bar stripes">
@@ -165,7 +165,7 @@
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: '年货节品牌大街', // 分享标题
-            desc: "20个县域品牌下沉", // 分享描述
+            desc: "年货节祥云宝盒下凡，降福品牌大街快猛戳！！！", // 分享描述
             link: window.location.href,
             imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/logo/tmall_nh.png", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
