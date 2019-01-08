@@ -8,7 +8,6 @@
   <!--http://www.html5rocks.com/en/mobile/mobifying/-->
   <meta name="viewport"
         content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
-  <meta name=”description” content="20个县域品牌下沉">
 
   <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -37,7 +36,6 @@
 
   <!--<link rel="apple-touch-icon" href=".png" />-->
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
-
   <script src="js/amfe-flexible.js"></script>
   <link rel="stylesheet" type="text/css" href="style-mobile.72851.css"/>
   <link rel="stylesheet" href="css/style.css">
@@ -50,9 +48,9 @@
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-
-  $(function () {
+    $(function () {
       window.peopleNum = {{$num}} // 领取人数赋值
+      window.endTime = new Date(2019, 0, 10, 0, 0).getTime()
 
       window.clickBox = function (state) {
         if (state) {
@@ -146,8 +144,7 @@
     <img src="imgs/share_success.png">
   </div>
   <script src="src/settings.64a99.js" charset="utf-8"></script>
-
-  <script src="main.191f0.js" charset="utf-8"></script>
+  <script src="main.a5c3b.js" charset="utf-8"></script>
   <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
   <script type="application/javascript">
     wx.config(<?php echo $js->jssdk->buildConfig(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
