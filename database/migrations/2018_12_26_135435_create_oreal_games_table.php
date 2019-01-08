@@ -24,7 +24,7 @@ class CreateOrealGamesTable extends Migration
             $table->smallInteger('game2')->default(0)->comment('是否玩过游戏2');
             $table->smallInteger('game3')->default(0)->comment('是否玩过游戏3-张');
             $table->smallInteger('game4')->default(0)->comment('是否玩过游戏4-郑');
-
+            $table->string('exchange')->nullable();
             $table->timestamps();
         });
     }
