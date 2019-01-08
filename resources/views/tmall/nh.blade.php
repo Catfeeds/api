@@ -79,6 +79,19 @@
       })
 
       /* 前半部分ui展示 */
+      // 进度条
+      var timeIndex = 0
+      var timer = setInterval(function () {
+        if (timeIndex === 100) {
+          clearInterval(timer)
+          $('#splash').hide()
+        } else {
+          timeIndex += 5
+          $('.progress-bar span').css('width', timeIndex + '%')
+        }
+      },10)
+
+
       var video = document.querySelector('#video')
       var startGameBtn = document.querySelector('#startGame')
       // 开始画面
