@@ -34,8 +34,11 @@ App.prototype = {
   init: function() {
     var _this = this
 
-    $('input').on('blur', function() {
-      $('body').scrollTop(0)
+    $('input').on('focus', function(){
+      $('body').css('position', 'static')
+    }).on('blur', function() {
+      $('body').css({'position': 'fixed', 'top': '0'})
+      // $('body').scrollTop(0)
     })
     $('input').on('input', function() {
       if ($(this).val()) {
@@ -189,7 +192,6 @@ App.prototype = {
     var _this = this
     this.time = 0
     var millisecond = 0
-    console.log(millisecond)
     this.timer = setInterval(function() {
       millisecond += 1
       _this.time = millisecond / 10
@@ -268,7 +270,7 @@ App.prototype = {
 
   completePage: function() {
     var _this = this
-    var qr_code = 'https://api.shanghaichujie.com/api/qrcode/generate?text=' + encodeURIComponent('openid=' + this.openid)
+    var qr_code = 'https://api.shanghaichujie.com/api/qrcode/generate?text=' + encodeURIComponent(this.openid)
     $('.complete .complete_qrcode').attr('src', qr_code)
     $('.complete .btn_rank').on('touchend', function() {
       _this.updateRank()
