@@ -86,10 +86,10 @@
           clearInterval(timer)
           $('#splash').hide()
         } else {
-          timeIndex += 5
+          timeIndex++
           $('.progress-bar span').css('width', timeIndex + '%')
         }
-      },10)
+      },50)
 
 
       var video = document.querySelector('#video')
