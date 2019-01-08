@@ -149,6 +149,9 @@ App.prototype = {
     var _this = this
     var initData = _this[this.currentPage].data
     var questionData = [].concat(initData)
+    // 初始化页面
+    $('.h5 .popup_time').show()
+    this.timingEnd()
 
     this.showQuestion(questionData)
     $('.h5 .btn_submit').off('touchend', this.h5_submit.bind(this))
@@ -186,6 +189,7 @@ App.prototype = {
     var _this = this
     this.time = 0
     var millisecond = 0
+    console.log(millisecond)
     this.timer = setInterval(function() {
       millisecond += 1
       _this.time = millisecond / 10
@@ -195,6 +199,7 @@ App.prototype = {
 
   timingEnd: function () {
     clearInterval(this.timer)
+    $('.completion .time').text(this.formatTime(0))
   },
 
   h5_submit: function(questionData) {
@@ -337,8 +342,11 @@ App.prototype = {
       },
       success: function(res) {
         if (res.data) {
-          _this.successPage(gameType)
-          // _this.router('home')
+          if (res.data.game1 === 1 && res.data.game2 === 1 && res.data.game3 === 1 && res.data.game4 === 1) {
+            _this.router('complete')
+          } else {
+            _this.successPage(gameType)
+          }
         }
       },
       error: function(err) {
