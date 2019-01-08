@@ -90,7 +90,7 @@
           timeIndex++
           $('.progress-bar span').css('width', timeIndex + '%')
         }
-      },50)
+      },20)
 
 
       var video = document.querySelector('#video')
