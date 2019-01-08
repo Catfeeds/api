@@ -103,7 +103,7 @@ class GameController extends Controller
         if ($user) {
             if (!is_null($user->exchange)) {
                 return response()->json([
-                    'res' => '兑换失败！您已经兑换过了' . $user->exchange,
+                    'res' => '您在' . $user->updated_at . '已经兑换过了' . $user->exchange,
                 ]);
             }
             if (!($user->game1 && $user->game2 && $user->game3 && $user->game4)) {
