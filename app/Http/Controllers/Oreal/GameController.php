@@ -108,7 +108,7 @@ class GameController extends Controller
             }
             if (!($user->game1 && $user->game2 && $user->game3 && $user->game4)) {
                 return response()->json([
-                    'res' => '兑换失败！请先完成现场活动',
+                    'res' => '请先完成现场活动',
                 ]);
             }
             $rewards = OrealGameReward::first();
@@ -137,7 +137,7 @@ class GameController extends Controller
                 ]);
             }
             return response()->json([
-                'res' => '兑换失败！礼品库存不足',
+                'res' => '礼品库存不足',
             ]);
         }
         return response()->json([
