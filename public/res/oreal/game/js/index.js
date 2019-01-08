@@ -23,6 +23,7 @@ var App = function() {
     score: 0,
     cost: 0
   },
+  this.unityTimer = null
   this.timer = null
   this.time = 0
   this.startTime = 0
@@ -38,7 +39,6 @@ App.prototype = {
       $('body').css('position', 'static')
     }).on('blur', function() {
       $('body').css({'position': 'fixed', 'top': '0'})
-      // $('body').scrollTop(0)
     })
     $('input').on('input', function() {
       if ($(this).val()) {
@@ -74,7 +74,7 @@ App.prototype = {
     $('.register .btn_submit').on('touchend', function() {
       var username = $('#username').val().trim()
       var mobile = $('#mobile').val().trim()
-
+      $('input').blur()
       if (username === '') {
         alert('姓名不能为空')
       } else if (!_this.validateMobile(mobile)) {
@@ -89,7 +89,6 @@ App.prototype = {
             phone: mobile
           },
           success: function(res) {
-            console.log(res)
             _this.router('home')
           },
           error: function(err) {
@@ -137,6 +136,10 @@ App.prototype = {
         _this.router('h5')
       }
     })
+
+    // h5页面事件
+    $('.h5 .btn_submit').on('touchend', this.h5_submit.bind(this))
+    $('.h5 .popup_time').on('touchend', this.start_game.bind(this))
   },
 
   unityPage: function() {
@@ -144,33 +147,25 @@ App.prototype = {
     var qr_code = 'https://api.shanghaichujie.com/api/qrcode/generate?text=' + encodeURIComponent(this.openid)
     $('.game_qrcode').attr('src', qr_code)
     $('.unity .btn_home').on('touchend', function() {
-      _this.router('home')
+      _this.checkGameStatus(function(){
+        if (_this.gameStatus.compliance && _this.gameStatus.claritication && _this.gameStatus.simplitication && _this.gameStatus.formalization) {
+          _this.router('complete')
+        } else {
+          _this.router('home')
+        }
+      })
+      
     })
   },
 
   h5Page: function() {
     var _this = this
     var initData = _this[this.currentPage].data
-    var questionData = [].concat(initData)
+    this.questionData = [].concat(initData)
     // 初始化页面
     $('.h5 .popup_time').show()
     this.timingEnd()
-
-    this.showQuestion(questionData)
-    $('.h5 .btn_submit').off('touchend', this.h5_submit.bind(this))
-    $('.h5 .btn_submit').on('touchend', this.h5_submit.bind(this, questionData))
-
-    // $('.h5 .popup').on('touchend', function() {
-    //   $(this).css('display', 'none')
-    //   _this.showQuestion(questionData)
-
-    //   if (!_this.currentAnswer.haveQuestion) {
-    //     _this.updateScore()
-    //   }
-    // })
-
-    $('.h5 .popup_time').off('touchend', this.start_game.bind(this))
-    $('.h5 .popup_time').on('touchend', this.start_game.bind(this))
+    this.showQuestion()
   },
 
   successPage: function(gameType) {
@@ -204,10 +199,11 @@ App.prototype = {
     $('.completion .time').text(this.formatTime(0))
   },
 
-  h5_submit: function(questionData) {
+  h5_submit: function() {
     var _this = this
     var answer = $('#answer').val().toLowerCase()
     var clue = $('#clue').val().toLowerCase()
+    $('input').blur()
 
     if (_this.currentAnswer.haveQuestion) {
       // 有题目
@@ -222,16 +218,17 @@ App.prototype = {
         } else {
           // 答对题数小于2题
           console.log('正确')
-          _this.showQuestion(questionData)
+          _this.showQuestion()
         }
       } else {
         // 错误
+        console.log('错误')
         $('.h5 .popup .answerText').text(_this.currentAnswer.answer)
         $('.h5 .popup .clueText').text(_this.currentAnswer.clue)
         $('.h5 .popup').css('display', 'flex')
         setTimeout(function() {
           $('.h5 .popup').css('display', 'none')
-          _this.showQuestion(questionData)
+          _this.showQuestion()
           if (!_this.currentAnswer.haveQuestion) {
             _this.updateScore()
           }
@@ -245,6 +242,7 @@ App.prototype = {
   },
 
   showQuestion: function(questionData) {
+    var questionData = this.questionData
     $('#clue').val('').addClass($('#clue').attr('id'))
     $('#answer').val('').addClass($('#answer').attr('id'))
     if (questionData.length <= 0) {
@@ -256,6 +254,7 @@ App.prototype = {
       var question = this.randomQuestion(questionData)
       this.currentAnswer.answer = question.answer
       this.currentAnswer.clue = question.clue
+      console.log(this.currentAnswer.answer, this.currentAnswer.clue)
     }
   },
 
@@ -301,7 +300,8 @@ App.prototype = {
         }
       },
       error: function(err) {
-        alert('获取数据失败，提交失败，请检查网络并重试')
+        console.log(err)
+        // alert('获取数据失败，提交失败，请检查网络并重试')
       }
     })
   },
@@ -315,12 +315,6 @@ App.prototype = {
     minutes = minutes < 10 ? '0' + minutes : minutes
     return minutes + ":" + seconds
   },
-
-  // calcCost: function() {
-  //   var startTime = this.startTime
-  //   var endTime = new Date()
-  //   return ((endTime - startTime) / 300).toFixed(1)
-  // },
 
   updateScore: function() {
     var _this = this
@@ -368,13 +362,20 @@ App.prototype = {
 
   playingWatch: function(gameName) {
     var _this = this
-    gameType = gameName === 'compliance' ? 1 : 3
-    var timer = setInterval(function() {
-      _this.checkGameStatus()
-      if (_this.gameStatus[gameName]) {
-        _this.successPage(gameType)
-        clearInterval(timer)
-      }
+    var gameType = gameName === 'compliance' ? 1 : 3
+    clearInterval(this.unityTimer)
+    this.unityTimer = setInterval(function() {
+      _this.checkGameStatus(function(){
+        console.log(_this.gameStatus[gameName])
+        if (_this.gameStatus[gameName]) {
+          if (_this.gameStatus.compliance && _this.gameStatus.claritication && _this.gameStatus.simplitication && _this.gameStatus.formalization) {
+            _this.router('complete')
+          } else {
+            _this.successPage(gameType)
+          }
+          clearInterval(_this.unityTimer)
+        }
+      })
     }, 1000)
   },
 
