@@ -63,7 +63,7 @@ html, body, section {
 }
 
 body {
-  position: relative;
+  position: absolute;
   top: 0;
 }
 

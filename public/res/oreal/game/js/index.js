@@ -34,11 +34,8 @@ App.prototype = {
   init: function() {
     var _this = this
 
-    $('input').on('focus', function(){
-      $('body').css('position', 'static')
-    }).on('blur', function() {
-      $('body').css({'position': 'fixed', 'top': '0'})
-      // $('body').scrollTop(0)
+    $('input').on('blur', function() {
+      $('body').scrollTop(0)
     })
     $('input').on('input', function() {
       if ($(this).val()) {
