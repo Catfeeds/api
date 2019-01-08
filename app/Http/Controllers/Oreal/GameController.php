@@ -137,11 +137,11 @@ class GameController extends Controller
                 ]);
             }
             return response()->json([
-                'res' => '很遗憾！礼品库存不足',
+                'res' => '兑换失败！礼品库存不足',
             ]);
         }
         return response()->json([
-            'res' => '兑换失败！二维码错误'
+            'res' => '二维码错误'
         ]);
 
     }
