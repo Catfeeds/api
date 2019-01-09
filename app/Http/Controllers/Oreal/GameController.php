@@ -25,13 +25,65 @@ class GameController extends Controller
         $users = OrealGame::select(['username', 'score', 'cost'])
             ->where('score', '>', 0)
             ->where('cost', '>', 0)
+
             ->orderByDesc('score')
             ->orderBy('cost')
             ->take(10)
             ->get();
 
         return response()->json([
-            'data' => $users
+            'data' => json_decode('[
+{
+"username": "陈乐",
+"score": 210,
+"cost": 454
+},
+{
+"username": "Miya.li",
+"score": 210,
+"cost": 465.38
+},
+{
+"username": "陈东镇",
+"score": 210,
+"cost": 593.11
+},
+{
+"username": "强之光",
+"score": 210,
+"cost": 636.09
+},
+{
+"username": "Melanie Hu",
+"score": 210,
+"cost": 641.68
+},
+{
+"username": "Lesley",
+"score": 210,
+"cost": 645.14
+},
+{
+"username": "Jack",
+"score": 210,
+"cost": 727.32
+},
+{
+"username": "郁轶纯",
+"score": 210,
+"cost": 5787.88
+},
+{
+"username": "ada.cao",
+"score": 180,
+"cost": 259
+},
+{
+"username": "王卓",
+"score": 170,
+"cost": 333
+}
+]'),
         ]);
 
     }
