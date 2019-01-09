@@ -35,10 +35,17 @@ App.prototype = {
   init: function() {
     var _this = this
 
-    $('input').on('focus', function(){
-      $('body').css('position', 'static')
-    }).on('blur', function() {
-      $('body').css({'position': 'fixed', 'top': '0'})
+    $('input').on('blur', function() {
+      var count = 0;
+      var screenHeight = window.screen.height;
+      var blurInterval = setInterval(function () {
+          $('body').css('min-height', (screenHeight-=10)+'px');
+          if (count >= 10) {
+              clearInterval(blurInterval);
+              $('body').css('min-height', '');
+          }
+          count++;
+      }, 10)
     })
     $('input').on('input', function() {
       if ($(this).val()) {
