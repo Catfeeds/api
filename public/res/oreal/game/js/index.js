@@ -220,6 +220,9 @@ App.prototype = {
       if (_this.currentAnswer.answer.toLowerCase() === answer.toLowerCase() && _this.currentAnswer.clue.toLowerCase() === clue.toLowerCase()) {
         _this[_this.currentPage].score += 10
         if (_this[_this.currentPage].score >= 20) {
+          _this[_this.currentPage].score = 20
+        }
+        if (_this[_this.currentPage].score >= 20) {
           console.log('2题都正确')
           _this.updateScore()
         } else {
