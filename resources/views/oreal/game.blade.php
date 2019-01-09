@@ -40,9 +40,9 @@
         <img src="imgs/title.png">
     </div>
     <div class="container">
-        <div id="box1" class="box"><img id="project1" class="project" src="imgs/project1.png"></div>
+        <div id="box1" class="box"><img id="project1" class="project" src="imgs/project3.png"></div>
         <div id="box2" class="box"><img id="project2" class="project" src="imgs/project2.png"></div>
-        <div id="box3" class="box"><img id="project3" class="project" src="imgs/project3.png"></div>
+        <div id="box3" class="box"><img id="project3" class="project" src="imgs/project1.png"></div>
         <div id="box4" class="box"><img id="project4" class="project" src="imgs/project4.png"></div>
         <p class="text">
             前往10楼约吧<br/>
