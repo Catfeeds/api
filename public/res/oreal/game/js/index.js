@@ -327,6 +327,7 @@ App.prototype = {
   },
 
   updateScore: function() {
+    clearInterval(this.timer)
     var _this = this
     var cost = this.time
     var type = this.currentPage === 'claritication' ? 'game2' : 'game1'
