@@ -68,10 +68,12 @@ class GameController extends Controller
         $type = $request->input('type');
 
         $user = OrealGame::where('openid', $openid)->first();
-        $user->{$type} = 1;
-        $user->score += $score;
-        $user->cost += (double)$cost;
-        $user->save();
+        if ($user->{$type} != 1) {
+            $user->{$type} = 1;
+            $user->score += $score;
+            $user->cost += (double)$cost;
+            $user->save();
+        }
 
         return response()->json([
             'data' => $user
