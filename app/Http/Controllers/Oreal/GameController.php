@@ -25,7 +25,6 @@ class GameController extends Controller
         $users = OrealGame::select(['username', 'score', 'cost'])
             ->where('score', '>', 0)
             ->where('cost', '>', 0)
-            ->where('updated_at', '<=', '2019-01-09 15:33:27')
             ->orderByDesc('score')
             ->orderBy('cost')
             ->take(10)
