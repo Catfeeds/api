@@ -106,7 +106,7 @@
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: '亚航三周年庆典', // 分享标题
-            desc: "诚信相伴，鼎力护航", // 分享描述
+            desc: "亚航周年庆典留念照", // 分享描述
             link: window.location.href,
             imgUrl: "https://h5-touch.oss-cn-shanghai.aliyuncs.com/logo/%E5%A4%A7%E8%BF%9E%E4%BA%9A%E8%88%AA.jpeg", // 分享图标
             type: 'link', // 分享类型,music、video或link，不填默认为link
