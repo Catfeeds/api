@@ -14,7 +14,7 @@
 
 <body>
 <!-- 摇一摇 -->
-<section>
+<section @if($user->status) style="display: none" @endif>
     <div class="head"></div>
     <div class="container">
         <div class="border">
@@ -26,7 +26,7 @@
     <div class="foot"><img src="imgs/foot.png"></div>
 </section>
 <!-- 重复参与 -->
-<section class="repeat"></section>
+<section class="repeat" @if(!$user->status) style="display: none" @endif></section>
 <script src="http://api.touchworld-sh.com:3001/socket.io/socket.io.js"></script>
 
 <script>
