@@ -34,9 +34,4 @@ class GameController extends Controller
         return view('test');
     }
 
-    public function testSend()
-    {
-        $id = rand(1, 110);
-
-    }
 }
