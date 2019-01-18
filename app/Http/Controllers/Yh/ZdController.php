@@ -17,6 +17,6 @@ class ZdController extends Controller
     {
         $path = $request->input('path');
         $js = \EasyWeChat::officialAccount();
-        return view('', compact('path', 'js'));
+        return view('yh.zdsj', compact('path', 'js'));
     }
 }
