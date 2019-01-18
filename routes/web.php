@@ -390,6 +390,9 @@ Route::get('suning/test', 'Suning\GameController@testUser');
  * 大连亚航
  */
 Route::get('dlyh/zdsj', 'Yh\ZdController@index');
+Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
+    Route::get('res/dlyh/shake/index', 'Yh\ShakeController@shake');
+});
 
 /**
  *  前后端分离重定向
