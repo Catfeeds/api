@@ -384,6 +384,12 @@ Route::get('res/sc/card', 'Sc\CardController@card'); //梦想留言机
 Route::group(['middleware' => ['web', 'wechat.oauth:snsapi_userinfo']], function () {
     Route::get('res/suning/game/index', 'Suning\GameController@index');
 });
+Route::get('suning/test', 'Suning\GameController@testUser');
+
+/**
+ * 大连亚航
+ */
+Route::get('dlyh/zdsj', 'Yh\ZdController@index');
 
 /**
  *  前后端分离重定向
