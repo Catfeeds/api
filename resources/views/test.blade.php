@@ -14,11 +14,11 @@
         let r;
         v = setInterval(function () {
 
-            r = getRandomInt(1, 30)
+            r = getRandomInt(0, 30)
             socket.emit('shake', `{"openid":"id${i}","speed":${r}}`);
             console.log(`{"openid":"id${i}","speed":${r}}`);
             i++;
-            if (i > 1000) {
+            if (i > 100) {
                 i = 1;
             }
 

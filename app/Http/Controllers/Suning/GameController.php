@@ -26,7 +26,7 @@ class GameController extends Controller
     public function testUser()
     {
         $id = 1;
-        while ($id <= 10) {
+        while ($id <= 100) {
             event(new GameSuning('id' . $id, 'http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKibH9TSb1cKvlGFeT9pAR2twhhqat5ohaVlFafxiaoJIWYgvjP74ppRsCpBHibxhMSr3JYXCEK7oLMA/132', 'name'.$id));
             $id++;
             usleep(500000);
