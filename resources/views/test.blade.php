@@ -4,9 +4,9 @@
 <button onclick="f1()">停止</button>
 
 </body>
-<script src="http://127.0.0.1:3001/socket.io/socket.io.js"></script>
+<script src="http://api.touchworld-sh.com:3001/socket.io/socket.io.js"></script>
 <script>
-    let socket = io('http://127.0.0.1:3001');
+    let socket = io('http://api.touchworld-sh.com:3001');
     let v;
 
     function f() {
