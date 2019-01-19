@@ -18,7 +18,7 @@
             socket.emit('shake', `{"openid":"id${i}","speed":${r}}`);
             console.log(`{"openid":"id${i}","speed":${r}}`);
             i++;
-            if (i > 100) {
+            if (i > 102) {
                 i = 1;
             }
 
